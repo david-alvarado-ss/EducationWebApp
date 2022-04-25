@@ -1,0 +1,30 @@
+<section>
+    <div class="rt-container">
+        <div class="col-rt-12">
+            <div>
+                <!-- Help Form Popup HTML -->
+                <label for="modal-toggle">Ayuda</label>
+                <input id="modal-toggle" type="checkbox">
+                <label class="modal-backdrop" for="modal-toggle"></label>
+                <div class="modal-content">
+                    <label class="modal-close-btn" for="modal-toggle" (onclick)="limpiarAll()">
+                    <svg width="30" height="30">
+                      <line x1="5" y1="5" x2="20" y2="20"/>
+                      <line x1="20" y1="5" x2="5" y2="20"/>
+                    </svg>
+                    </label>
+                    <h1 class="section-title"><span>B</span>ienvenido a <span>C</span>omp <span>G</span>raf</h1>
+                    <div>
+                        <div class="video-responsive">
+                            <iframe  [src]="safeSrc" width="560" height="315" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        </div>
+                        <a href="https://drive.google.com/uc?id=1ndmjWcASgfTJQFOsu_9kE7HPpjPKzGAf&export=download" download="Capitulo12021">
+                            <mat-icon>cloud_download</mat-icon>Descargar Manual de Usuario
+                        </a>
+                    </div>
+                </div>
+                <!-- partial -->
+            </div>
+        </div>
+    </div>
+</section>

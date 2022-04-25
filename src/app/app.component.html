@@ -1,0 +1,7 @@
+<div *ngIf="isLogged">
+    <app-navbar [propagaruserCompGraf]="userCompGraf"></app-navbar>
+    <app-footer></app-footer>
+</div>
+<div *ngIf="!isLogged">
+    <app-principal (propagar2)="procesaPropagar($event)"></app-principal>
+</div>
