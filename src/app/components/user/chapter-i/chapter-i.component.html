@@ -43,8 +43,6 @@
                   la manipulación de objetos y la combinación de los paradigmas
                   de programación estructurada y orientada a objetos, lo que le constituye
                   en un lenguaje híbrido (Stroustrup, B., 1997). </p>
-                    <img src="./assets/images/Capitulos/I/media/image001.jpg" style="display:block; margin:auto; "><br>
-                <h5><strong>Figura 1. </strong>Capítulo I.</h5><br>
             </ng-template>
         </mat-tab>
         <mat-tab label="Objetivos">
@@ -52,21 +50,387 @@
                 <br>
                 <h1>Objetivos</h1>
                 <ul>
-                    <li>Revisar los principales conceptos en torno a algoritmos para la solución de problemas de gráficas por computadora, enfocados a figuras geométricas.</li>
-                    <li>Entender cómo trabajan los algoritmos y las gráficas por computadora con el lenguaje C# en la construcción de programas, enfocados a figuras geométricas. </li>
-                    <li>Aprender a crear algoritmos de gráficas por computadora en Pseudocódigo y en el lenguaje C#, enfocados a figuras geométricas.</li>
-                    <li>Diseñar y crear programas con gráficas por computadora en el lenguaje C# y programación orientada a objetos con interfaces gráficas de usuario, enfocados a figuras geométricas.</li>
-                    <li>Resolver casos de estudio y pracniques con algoritmos y programación orientada a objetos aplicados a los fundamentos de la Computación Gráfica.</li>
+                    <li>Crear, compilar, enlazar y ejecutar programas básicos en C/C++.</li>
+                    <li>Entender la estructura básica de un programa en C/C++.</li>
+                    <li>Aprender el funcionamiento de las funciones básicas de entrada y salida de datos.</li>
+                    <li>Entender el concepto de variable y tipos de datos.</li>
+                    <li>Revisar los operadores aritméticos, relacionales y lógicos que maneja el lenguaje C/C++.</li>
+                    <li>Revisar las principales fórmulas matemáticas que maneja el lenguaje C/C++.</li>
+                    <li>Diseñar y crear programas en lenguaje C/C++ utilizando operadores aritméticos, relacionales y lógicos.</li>
                 </ul>
             </ng-template>
         </mat-tab>
-        <mat-tab label="Teoría">
+      <mat-tab label="Creación de un Programa">
+        <ng-template matTabContent>
+          <mat-tab-group>
+            <!-- <mat-tab *ngFor="let tab of asyncTabs | async"> -->
+            <mat-tab  label="Introducción">
+              <br>
+              <h2>Creación de un Programa en Lenguaje C/C++</h2>
+              <br>
+              <p>Un programa es una lista de instrucciones debidamente estructuradas para que la computadora ejecute una serie de operaciones o cumpla un propósito. Una operación podría ser la suma de dos números, el perímetro y el área de un círculo, el volumen de un cilindro o la impresión de algunos datos en la pantalla de la computadora. (Ver Figura 1.1).</p>
+              <img src="./assets/images/Capitulos/I/media/figura1.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Figura 1. </strong>Capítulo I.</h5><br>
+            </mat-tab>
+
+            <mat-tab  label="1.1 Herramienta de Programación ">
+              <br>
+              <h2>Utilización de una Herramienta de Programación para el Lenguaje C/C++</h2>
+              <br>
+              <p>Existe una gran variedad de herramientas de software para
+                programar en lenguaje C, tales como: Visual C++ .NET, Borland C/C++, DEV C++,
+                Code::Blocks, entre otras. En la presente sección vamos a aprender paso a paso,
+                como crear, compilar, enlazar y ejecutar un programa en lenguaje C/C++ utilizando Visual C++
+                .NET que viene en el paquete de desarrollo de Visual Studio Community (edición 2017 o 2019),
+                que es de libre distribución para plataformas Microsoft. (Ver Figura 1.2).</p>
+              <img src="./assets/images/Capitulos/I/media/figura1.2.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Figura 1.2. </strong>Pantalla de Presentación de la Herramienta de Desarrollo Visual Studio.</h5><br>
+            </mat-tab>
+
+            <mat-tab  label="1.2. Creación de un Proyecto">
+                <br>
+                <h2>Creación de un Proyecto</h2>
+                <br>
+                <p>Después de cargarse la pantalla de presentación de Visual Studio, aparece el cuadro de diálogo
+                  de Tareas iniciales, donde se debe seleccionar la tarea:
+                  Crear un proyecto, como se muestra en la Figura 1.3.</p>
+                <img src="./assets/images/Capitulos/I/media/figura1.3.png" style="display:block; margin:auto; "><br>
+                <h5><strong>Figura 1.3. </strong>Tareas iniciales de Visual Studio.</h5><br>
+                <p>En el cuadro de diálogo de Crear un proyecto se debe seleccionar el IDE Visual C++ de la
+                  lista de selección del lado izquierdo, ubicado debajo de la opción
+                  de Buscar plantillas, como se muestra en la Figura 1.4.</p>
+                <img src="./assets/images/Capitulos/I/media/figura1.4.png" style="display:block; margin:auto; "><br>
+                <h5><strong>Figura 1.4. </strong>Selección del IDE Visual C++ .NET para el Lenguaje C/C++.</h5><br>
+                <p>A continuación, se debe seleccionar la opción de Proyecto vacío (C++, Windows, Consola),
+                  para empezar de cero con C++ para Windows. (Ver Figura 1.5).</p>
+                <img src="./assets/images/Capitulos/I/media/figura1.5.png" style="display:block; margin:auto; "><br>
+                <h5><strong>Figura 1.5. </strong>Seleccionar Proyecto vacío (C++, Windows, Consola).</h5><br>
+                <p>En el cuadro de diálogo de Configure su nuevo proyecto,
+                  ingrese un nombre que usted escoja para el proyecto como en este
+                  caso WinConsolaPrograma_1_1 y seleccione la ubicación del
+                  proyecto donde se va a almacenar como el siguiente
+                  C:\Users\cxvil\OneDrive\Documentos\Visual Studio 2019\Code Snippets\Visual C++\.
+                  Luego presione el botón de Crear, como se puede ver en la Figura 1.6.
+                </p>
+                <img src="./assets/images/Capitulos/I/media/figura1.6.png" style="display:block; margin:auto; "><br>
+                <h5><strong>Figura 1.6. </strong>Cuadro de diálogo de Configure su nuevo proyecto.</h5><br>
+                <p>En este punto nosotros hemos creado exitosamente un proyecto en Lenguaje C/C++
+                  correspondiente a un Proyecto de aplicación de consola,
+                  como se puede ver en la Figura 1.7. El siguiente paso es añadir un archivo de código
+                  fuente (.CPP) al proyecto, es decir, un archivo con el cual nosotros
+                  a continuación escribiremos nuestro código en lenguaje C/C++.
+                </p>
+                <img src="./assets/images/Capitulos/I/media/figura1.7.png" style="display:block; margin:auto; "><br>
+                <h5><strong>Figura 1.7. </strong>Proyecto de aplicación de consola.</h5><br>
+              </mat-tab>
+
+            <mat-tab  label="1.3. Archivo .CPP ">
+              <br>
+              <h2>Añadiendo un Archivo .CPP al Proyecto</h2>
+              <br>
+              <p>Para añadir un archivo .CPP a su proyecto, seleccione la carpeta Archivos de origen y
+                luego haga un clic derecho sobre esta carpeta y
+                seleccione Agregar -> Nuevo elemento… como se muestra en la Figura 1.8.</p>
+              <img src="./assets/images/Capitulos/I/media/figura1.8.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Figura 1.8. </strong>Agregando un nuevo elemento al proyecto.</h5><br>
+              <p>A continuación, aparece la caja de diálogo de Agregar nuevo elemento,
+                como se puede ver en la Figura 1.9. Aquí se debe seleccionar un Archivo C++ (.cpp) y
+                se debe colocar un nombre al archivo .CPP, como en este caso programa.cpp y
+                presione el botón de Agregar.
+                Un archivo .CPP vacío aparecerá automáticamente y será abierto en Visual C++ .NET.</p>
+              <img src="./assets/images/Capitulos/I/media/figura1.9.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Figura 1.9. </strong>Cuadro de Diálogo de Agregar nuevo elemento.</h5><br>
+            </mat-tab>
+
+            <mat-tab  label="1.4. Código">
+              <br>
+              <h2>Escribiendo el Código del Programa</h2>
+              <p>Usted a continuación verá un archivo .CPP en blanco,
+                donde nosotros podemos comenzar a escribir nuestro código del programa.
+                Escriba o copie el código siguiente en lenguaje C/C++,
+                exactamente tal y como está, dentro de su archivo .CPP.</p>
+
+              <h4><strong>Ejercicio 1.1: </strong></h4>
+              <p>Escribir un programa que imprima un mensaje de "Hola mundo."
+                otro que diga "Bienvenidos al Lenguaje C/C++.",
+                utilizando la función de salida de datos “cout”.</p>
+              <h5><strong>Programa 1.1 </strong>Código del programa.</h5><br>
+              <pre><code [highlight]="prefTab[0].tablaDatos2" (highlighted)="onHighlight($event)" [lineNumbers]="true"></code></pre>
+              <br>
+              <h5><strong>Salida 1.1 </strong>Salida del programa.</h5><br>
+              <img src="./assets/images/Capitulos/I/media/salida1.1.png" style="display:block; margin:auto; "><br>
+              <p>Como se puede ver en este programa, nosotros desplegamos el texto: "Hola mundo." en la
+                consola mediante la función cout y el operador <<,seguido de un salto de línea utilizando el
+                comando endl, como se indica en la siguiente instrucción:.</p>
+              <pre><code [highlight]="prefTab[0].linea1ej1" (highlighted)="onHighlight($event)" [lineNumbers]="true"></code></pre>
+              <br>
+              <p>Luego nosotros desplegamos el texto: "Bienvenidos al Lenguaje C/C++." en la consola mediante la función cout y el operador <<, seguido de un salto de línea utilizando el comando endl, como se indica en la siguiente instrucción:</p>
+              <pre><code [highlight]="prefTab[0].linea2ej1" (highlighted)="onHighlight($event)" [lineNumbers]="true"></code></pre>
+              <br>
+              <p>Finalmente incorporamos una pausa en el programa utilizando la función:
+              </p>
+              <pre><code [highlight]="prefTab[0].linea3ej1" (highlighted)="onHighlight($event)" [lineNumbers]="true"></code></pre>
+              <br>
+
+              <h4><strong>Ejercicio 1.2: </strong></h4>
+              <p>Escribir un programa que imprima un mensaje de “Hola mundo” y otro que diga “Bienvenidos al Lenguaje C/C++.”, utilizando la función de salida de datos “printf”.</p>
+              <h5><strong>Programa 1.2 </strong>Código del programa.</h5><br>
+              <pre><code [highlight]="prefTab[0].tablaDatos3" (highlighted)="onHighlight($event)" [lineNumbers]="true"></code></pre>
+              <br>
+              <h5><strong>Salida 1.2 </strong>Salida del programa.</h5><br>
+              <img src="./assets/images/Capitulos/I/media/salida1.2.png" style="display:block; margin:auto; "><br>
+              <p>Como se puede ver en este programa, nosotros desplegamos el texto: "Hola mundo." en la consola mediante la función printf, seguido de un salto de línea utilizando la secuencia de escape "\n", como se indica en la siguiente instrucción:</p>
+              <pre><code [highlight]="prefTab[0].linea1ej2" (highlighted)="onHighlight($event)" [lineNumbers]="true"></code></pre>
+              <br>
+              <p>Luego nosotros desplegamos el texto: "Bienvenidos al Lenguaje C/C++." en la consola mediante la función printf, seguido de un salto de línea utilizando la secuencia de escape "\n", como se indica en la siguiente instrucción:</p>
+              <pre><code [highlight]="prefTab[0].linea2ej2" (highlighted)="onHighlight($event)" [lineNumbers]="true"></code></pre>
+              <br>
+              <p>Finalmente incorporamos una pausa en el programa utilizando la función:
+              </p>
+              <pre><code [highlight]="prefTab[0].linea3ej2" (highlighted)="onHighlight($event)" [lineNumbers]="true"></code></pre>
+              <br>
+            </mat-tab>
+
+            <mat-tab  label="1.5. Compilación, Enlazamiento y Ejecución">
+              <br>
+              <h2>Compilación, Enlazamiento y Ejecución</h2>
+              <br>
+              <p>Después de que el código de un programa en lenguaje C/C++ está completado, éste debe ser traducido a lenguaje máquina que es el lenguaje que entiende la computadora. Para ser ejecutado un programa se cumplen con dos pasos en este proceso de traducción:
+              </p>
+              <p>1)	Compilación</p>
+              <p>2)	Enlazamiento</p>
+              <img src="./assets/images/Capitulos/I/media/figura1.10.gif" style="display:block; margin:auto; "><br>
+              <h5><strong>Figura 1.10. </strong>Proceso de Compilación, Enlazamiento y Ejecución.</h5><br>
+
+              <p>En el primer paso que es la compilación, el compilador compila cada archivo de código fuente (.CPP) de un proyecto. Hay casos de proyectos complejos que contienen más de un archivo de código fuente y se generan los archivos objeto (.OBJ) por cada archivo de código fuente. Se dice que un archivo objeto contiene el código objeto. (Ver Figura 1.10)..</p>
+              <p>En el segundo paso que es el enlazamiento, el enlazador combina todos los archivos objeto y cualquier otro archivo de librería (.LIB), para producir un archivo ejecutable (.EXE). Este archivo ejecutable es el que correrá en una plataforma (Luna, F., 2004).</p>
+              <p>Para compilar un programa en Visual C++ .NET, como, por ejemplo, el Programa 1.1, se debe seleccionar de la barra de menús la opción de Depurar -> Iniciar depuración. Una ventana de resultados de la compilación se desplegará como la que se muestra en la Figura 1.11.
+              </p>
+              <p>Observe que cuando no se tiene ningún error, ni ninguna advertencia (warning), esto significa que hemos escrito código legal en C/C++ y, por lo tanto, nuestro programa ha sido compilado exitosamente.</p>
+             <p>En cambio, cuando se escribe código ilegal en C que significa que el programa tiene errores como, por ejemplo, puntuación incorrecta; así es el caso de que en el programa falte un punto y coma ‘;’ se produce un error y a continuación el siguiente mensaje se presenta: error C2146: error de sintaxis: falta ';' delante del identificador 'cout'. Usted puede utilizar este mensaje de error para localizar con precisión el problema dentro de su código del programa y corregirlo. (Ver Figura 1.12).</p>
+
+              <img src="./assets/images/Capitulos/I/media/figura1.11.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Figura 1.11. </strong>Salida de la compilación.</h5><br>
+              <img src="./assets/images/Capitulos/I/media/figura1.12.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Figura 1.12. </strong>Salida de la compilación.</h5><br>
+            </mat-tab>
+
+            <mat-tab  label="1.6. Uso de Comentarios">
+              <br>
+              <h2>Uso de Comentarios en un Programa</h2>
+              <br>
+                <p>El lenguaje C/C++, maneja dos tipos de comentarios: </p>
+              <p>a)	Cuando se quiere comentar más de una línea de código, se utiliza la instrucción ‘/* … */’, como consta en el Programa 1.1, donde se tiene el siguiente ejemplo:</p>
+              <pre><code [highlight]="prefTab[0].comment1" (highlighted)="onHighlight($event)" [lineNumbers]="true"></code></pre>
+              <p>b)	Cuando se quiere comentar una sola línea de código, se utiliza la instrucción ‘//’, como consta en el Programa 1.1, donde se tienen los siguientes ejemplos:</p>
+              <pre><code [highlight]="prefTab[0].comment2" (highlighted)="onHighlight($event)" [lineNumbers]="true"></code></pre>
+              <p>Los comentarios son textos o cadenas de caracteres que son ignoradas por el compilador. Cuando el compilador compila el programa, se salta cualquier comentario y no lo toma en cuenta. </p>
+              <p>Escribir comentarios claros resulta especialmente importante cuando se trabaja en equipos de trabajo, donde otros programadores necesitarán leer y modificar su código. Los “buenos comentarios” son claros, concisos, y fáciles de entender, contrario a los “malos comentarios” que son inconsistentes, fuera de fecha, ambiguos, vagos, superfluos y no los puede entender cualquiera. En el libro de “The C++ Programming Language. Special Edition” de Bjarne Stroustrup, el autor menciona que: “Escribir buenos comentarios puede ser tan difícil como escribir el programa. Esto es un arte que vale la pena cultivarlo” (Stroustrup, B., 1997).</p>
+              <br>
+            </mat-tab>
+
+            <mat-tab  label="1.6. Uso de Espacios">
+              <br>
+              <h2>Uso de Espacios en Blanco</h2>
+              <br>
+              <p>El programa 1.1 tiene en varias partes del programa espacios en blanco. Por ejemplo, entre los ‘comentarios iniciales’ y las ‘directivas include’, se tiene una línea en blanco. Las líneas en blanco y los espacios se conocen como ‘espacios en blanco’ (white space). El compilador ignora el momento de la compilación, todos los espacios en blanco. Se puede tener múltiples espacios en blanco, entre todas las instrucciones de C/C++ (Granizo, E., 2016). A continuación, se redefine el programa 1.1 con varios espacios en blanco, en el programa 1.3. También, se redefine el programa 1.2 con varios espacios en blanco, en el programa 1.4.</p>
+              <h4><strong>Ejercicio 1.3: </strong></h4>
+              <p>Reescribir el programa 1.1 de tal manera que utilice varios espacios en blanco.</p>
+              <h5><strong>Programa 1.3 </strong>Código del programa.</h5><br>
+              <pre><code [highlight]="prefTab[0].tablaDatos4" (highlighted)="onHighlight($event)" [lineNumbers]="true"></code></pre>
+              <br>
+              <h5><strong>Salida 1.3 </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/I/media/salida1.3.png" style="display:block; margin:auto; "><br>
+              <p>Luego se puede compilar este programa y se va a poder observar que éste trabaja correctamente.</p>
+              <p>Nótese que no hay espacios dentro de una cadena de caracteres o texto, ya que los espacios entre las cadenas de caracteres no son ignorados por el compilador. El lenguaje C/C++ no permite que las palabras clave (keywords) sean rotas o separadas en sub-palabras. </p>
+              <p>Por ejemplo, no se puede escribir la instrucción:</p>
+              <pre><code [highlight]="prefTab[0].linea1ej3" (highlighted)="onHighlight($event)" [lineNumbers]="true"></code></pre>
+              <br>
+              <p>de la siguiente manera: </p>
+              <pre><code [highlight]="prefTab[0].linea2ej3" (highlighted)="onHighlight($event)" [lineNumbers]="true"></code></pre>
+              <br>
+              <p>Los símbolos y palabras reservadas que tienen un significado actual deben ser mantenidos intactos, así como originalmente fueron definidos</p>
+              <p>Finalmente se recomienda utilizar tabulación entre instrucción e instrucción para organizar de mejor manera el código del programa. A este proceso se conoce como indentación (indentation) y ayuda a corregir posibles errores dentro de un programa y a realizar mantenimiento al mismo.</p>
+
+              <h4><strong>Ejercicio 1.4: </strong></h4>
+              <p>Reescribir el programa 1.2 de tal manera que utilice varios espacios en blanco.</p>
+              <h5><strong>Programa 1.4 </strong>Código del programa.</h5><br>
+              <pre><code [highlight]="prefTab[0].tablaDatos4" (highlighted)="onHighlight($event)" [lineNumbers]="true"></code></pre>
+              <br>
+              <h5><strong>Salida 1.4 </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/I/media/salida1.4.png" style="display:block; margin:auto; "><br>
+              <p>Luego se puede compilar este programa y se va a poder observar que éste trabaja correctamente.</p>
+              <p>Nótese que no hay espacios dentro de una cadena de caracteres o texto, ya que los espacios entre las cadenas de caracteres no son ignorados por el compilador. El lenguaje C/C++ no permite que las palabras clave (keywords) sean rotas o separadas en sub-palabras. </p>
+              <p>Por ejemplo, no se puede escribir la instrucción:</p>
+              <pre><code [highlight]="prefTab[0].linea3ej3" (highlighted)="onHighlight($event)" [lineNumbers]="true"></code></pre>
+              <br>
+              <p>de la siguiente manera: </p>
+              <pre><code [highlight]="prefTab[0].linea4ej3" (highlighted)="onHighlight($event)" [lineNumbers]="true"></code></pre>
+              <br>
+              <p>Los símbolos y palabras reservadas que tienen un significado actual deben ser mantenidos intactos así como originalmente fueron definidos.</p>
+              <br>
+            </mat-tab>
+          <!--  <mat-tab  label="1.4. Código">
+              <img src="./assets/images/Capitulos/I/media/figura1.8.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Figura 1.8. </strong>Agregando un nuevo elemento al proyecto.</h5><br>
+              <p>A continuación, aparece la caja de diálogo de Agregar nuevo elemento,
+                como se puede ver en la Figura 1.9. Aquí se debe seleccionar un Archivo C++ (.cpp) y
+                se debe colocar un nombre al archivo .CPP, como en este caso programa.cpp y
+                presione el botón de Agregar.
+                Un archivo .CPP vacío aparecerá automáticamente y será abierto en Visual C++ .NET.</p>
+              <img src="./assets/images/Capitulos/I/media/figura1.9.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Figura 1.9. </strong>Cuadro de Diálogo de Agregar nuevo elemento.</h5><br>
+              <pre><code [highlight]="tab.tablaDatos2" (highlighted)="onHighlight($event)" [lineNumbers]="true"></code></pre>
+
+              <h4><strong>B.2) Diagrama de Entrada-Salida</strong></h4>
+              <p>{{tab.diagramaES}}</p>
+              <img src="{{tab.imagen2}}" style="display:block; margin:auto; width: 75%;"><br>
+              <h5><strong>{{tab.figuraNum2}}</strong>{{tab.figura2}}</h5><br>
+              <h4><strong>B.3) Diagrama de Clases</strong></h4>
+              <p>{{tab.diagramaC1}}</p>
+              <p>{{tab.diagramaC2}}</p>
+              <img src="{{tab.imagen3}}" style="display:block; margin:auto; width: 75%;"><br>
+              <h5><strong>{{tab.figuraNum3}}</strong>{{tab.figura3}}</h5><br>
+              <h3><strong>C)   Diseño</strong></h3>
+              <p>{{tab.diseno}}</p>
+              <ul *ngFor="let item of tab.algoritmos">
+                <h4><strong>{{item.t}}</strong></h4>
+                <p>{{item.a}}</p>
+                <p>{{item.b}}</p>
+                <p>{{item.c}}</p>
+                <p>{{item.d}}</p>
+                <p>{{item.e}}</p>
+                <p>{{item.f}}</p>
+                <p>{{item.g}}</p>
+                <p>{{item.h}}</p>
+                <p>{{item.i}}</p>
+                <p>{{item.j}}</p>
+                <p>{{item.k}}</p>
+              </ul>
+              <h3><strong>{{tab.tituloGeometria}}</strong></h3>
+              <ul *ngFor="let item of tab.geometria">
+                <ul *ngFor="let x of item.p">
+                  <h4><strong>{{x.t}}</strong></h4>
+                  <p>{{x.d}}</p>
+                  <ul *ngFor="let itemFotos of x.i">
+                    <img src="{{itemFotos.path}}" style="display:block; margin:auto;"><br>
+                    <h5><strong>{{itemFotos.titulo}}</strong>{{itemFotos.descriptitulo}}</h5><br>
+                  </ul>
+                </ul>
+                <ul *ngFor="let x of item.s">
+                  <h4><strong>{{x.t}}</strong></h4>
+                  <ul *ngFor="let itemPasos of x.pasos">
+                    <p>{{itemPasos.d}}</p>
+                    <ul *ngFor="let k of itemPasos.formulas">
+                      <mathjax [content]=k class='box'></mathjax><br>
+                    </ul>
+                  </ul>
+                </ul>
+              </ul>
+              <h3><strong>D)   Implementación</strong></h3>
+              <p>{{tab.implementacion1}}</p>
+              <p>{{tab.implementacion2}}</p>
+              <img src="{{tab.imagen4}}" style="display:block; margin:auto; width: 75%;"><br>
+              <h5><strong>{{tab.figuraNum4}}</strong>{{tab.figura4}}</h5><br>
+              <p>{{tab.implementacion3}}</p>
+              <img src="{{tab.imagen5}}" style="display:block; margin:auto; width: 75%;"><br>
+              <h5><strong>{{tab.figuraNum5}}</strong>{{tab.figura5}}</h5><br>
+              <p>{{tab.implementacion4}}</p>
+              <img src="{{tab.imagen6}}" style="display:block; margin:auto; width: 75%;"><br>
+              <h5><strong>{{tab.figuraNum6}}</strong>{{tab.figura6}}</h5><br>
+              <p>{{tab.implementacion5}}</p>
+              <img src="{{tab.imagen7}}" style="display:block; margin:auto; width: 75%;"><br>
+              <h5><strong>{{tab.figuraNum7}}</strong>{{tab.figura7}}</h5><br>
+              <p>{{tab.implementacion6}}</p>
+              <img src="{{tab.imagen8}}" style="display:block; margin:auto; width: 75%;"><br>
+              <h5><strong>{{tab.figuraNum8}}</strong>{{tab.figura8}}</h5><br>
+              <p>{{tab.implementacion7}}</p>
+              <img src="{{tab.imagen9}}" style="display:block; margin:auto; width: 75%;"><br>
+              <h5><strong>{{tab.figuraNum9}}</strong>{{tab.figura9}}</h5><br>
+              <p>{{tab.implementacion8}}</p>
+              <h5><strong>{{tab.tabla1}}</strong>{{tab.tabladetalle1}}</h5><br>
+              <TABLE BORDER WIDTH="100%" CELLPADDING=1 CELLSPACING=0 class="mat-elevation-z8">
+                <TR>
+                  <TH>Objeto</TH>
+                  <TH>Propiedad</TH>
+                  <TH>Valor</TH>
+                </TR>
+                <tbody *ngFor="let item of tab.tablaDatos1">
+                <TR ALIGN=center>
+                  <TD>
+                    <mathjax [content]=item.Objeto class='box'></mathjax>
+
+                  </TD>
+                  <TD>
+                    <ul *ngFor="let i of item.Propiedad" style="list-style-type: none;">
+                      <li>{{i}}</li>
+                    </ul>
+                  </TD>
+                  <TD>
+                    <ul *ngFor="let i of item.Valor" style="list-style-type: none;">
+                      <li>{{i}}</li>
+                    </ul>
+                  </TD>
+                </TR>
+                </tbody>
+              </TABLE><br>
+              <p>{{tab.implementacion9}}</p>
+              <img src="{{tab.imagen10}}" style="display:block; margin:auto; width: 75%;"><br>
+              <h5><strong>{{tab.figuraNum10}}</strong>{{tab.figura10}}</h5><br>
+              <p>{{tab.implementacion10}}</p>
+              <p>{{tab.implementacion11}}</p>
+              <p>{{tab.implementacion12}}</p>
+              <ul *ngFor="let item of tab.metodos">
+                <h4><strong>{{item.t}}</strong></h4>
+                <p>{{item.a}}</p>
+                <pre><code [highlight]="item.b" (highlighted)="onHighlight($event)" [lineNumbers]="true"></code></pre>
+              </ul>
+              <h4><strong>Tips de Programación...</strong>
+                <mat-icon>wb_incandescent</mat-icon>
+                <mat-icon>laptop_windows</mat-icon>
+              </h4>
+              <hr>
+              <ul *ngFor="let item of tab.tipsProgramacion">
+                <p>
+                  <mat-icon>check_circle_outline</mat-icon>{{item.tip}}
+                </p>
+              </ul>
+              <hr>
+              <p>{{tab.implementacion13}}</p>
+              <h5><strong>{{tab.tabla2}}</strong>{{tab.tabladetalle2}}</h5><br>
+              <pre><code [highlight]="tab.tablaDatos2" (highlighted)="onHighlight($event)" [lineNumbers]="true"></code></pre>
+              <p>{{tab.implementacion13}}</p>
+              <h5><strong>{{tab.tabla3}}</strong>{{tab.tabladetalle3}}</h5><br>
+              <pre><code [highlight]="tab.tablaDatos3" (highlighted)="onHighlight($event)" [lineNumbers]="true"></code></pre>
+              <br>
+              <p>{{tab.implementacion15}}</p>
+              <p>{{tab.implementacion16}}</p>
+              <p>{{tab.implementacion17}}</p>
+              <img src="{{tab.imagen11}}" style="display:block; margin:auto; "><br>
+              <h5><strong>{{tab.figuraNum11}}</strong>{{tab.figura11}}</h5><br>
+              <img src="{{tab.imagen12}}" style="display:block; margin:auto; width: 75%;"><br>
+              <h5><strong>{{tab.figuraNum12}}</strong>{{tab.figura12}}</h5><br>
+              <h3><strong>E)   Pruebas</strong></h3>
+              <p>{{tab.implementacion18}}</p>
+              <img src="{{tab.imagen13}}" style="display:block; margin:auto; width: 75%;"><br>
+              <h5><strong>{{tab.figuraNum13}}</strong>{{tab.figura13}}</h5><br>
+
+            </mat-tab>-->
+          </mat-tab-group>
+        </ng-template>
+      </mat-tab>
+
+
+
+
+      <mat-tab label="Teoría">
             <ng-template matTabContent>
                 <br>
-                <h1>1.1. Píxeles, Coordenadas y Figuras Geométricas</h1>
-                <p>La forma más conveniente de especificar un segmento de línea en la pantalla de una computadora es proporcionando las coordenadas de sus dos puntos finales. En matemáticas, las coordenadas son números reales, pero las rutinas primitivas
-                    de dibujo de líneas pueden requerir que sean enteros. Este es el caso, por ejemplo, en el lenguaje C#, que se utilizará a lo largo de este libro. El componente o subsistema GDI (Graphics Device Interface) trabaja junto con el núcleo
-                    y la API de Windows (Steeb, W.H., Hardy, A., 2008). Esta interfaz de programación de aplicaciones se encarga del control gráfico de los dispositivos de salida, como los monitores o las impresoras. Las tareas más comunes de GDI son:</p>
+                <h1>1.1.   Creación de un Programa en Lenguaje C/C++</h1>
+                <p>Un programa es una lista de instrucciones debidamente estructuradas para que la computadora ejecute una serie de operaciones o cumpla un propósito. Una operación podría ser la suma de dos números, el perímetro y el área de un círculo, el volumen de un cilindro
+                  o la impresión de algunos datos en la pantalla de la computadora. (Ver Figura 1.1).</p>
+              <img src="./assets/images/Capitulos/I/media/figura1.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Figura 1. </strong>Capítulo I.</h5><br>
                 <ul>
                     <li>El dibujo de líneas, curvas, polígonos;</li>
                     <li>El relleno de cuadros, círculos, polígonos, etcétera;</li>
