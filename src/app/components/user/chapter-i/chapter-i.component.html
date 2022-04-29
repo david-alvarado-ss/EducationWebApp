@@ -45,6 +45,7 @@
                   en un lenguaje híbrido (Stroustrup, B., 1997). </p>
             </ng-template>
         </mat-tab>
+
         <mat-tab label="Objetivos">
             <ng-template matTabContent>
                 <br>
@@ -60,6 +61,7 @@
                 </ul>
             </ng-template>
         </mat-tab>
+
       <mat-tab label="Creación de un Programa">
         <ng-template matTabContent>
           <mat-tab-group>
@@ -155,39 +157,39 @@
                 otro que diga "Bienvenidos al Lenguaje C/C++.",
                 utilizando la función de salida de datos “cout”.</p>
               <h5><strong>Programa 1.1 </strong>Código del programa.</h5><br>
-              <pre><code [highlight]="prefTab[0].tablaDatos2" (highlighted)="onHighlight($event)" [lineNumbers]="true"></code></pre>
+              <pre><code [highlight]="prefTab[0].tablaDatos2"  [lineNumbers]="true"></code></pre>
               <br>
               <h5><strong>Salida 1.1 </strong>Salida del programa.</h5><br>
               <img src="./assets/images/Capitulos/I/media/salida1.1.png" style="display:block; margin:auto; "><br>
               <p>Como se puede ver en este programa, nosotros desplegamos el texto: "Hola mundo." en la
                 consola mediante la función cout y el operador <<,seguido de un salto de línea utilizando el
                 comando endl, como se indica en la siguiente instrucción:.</p>
-              <pre><code [highlight]="prefTab[0].linea1ej1" (highlighted)="onHighlight($event)" [lineNumbers]="true"></code></pre>
+              <pre><code [highlight]="prefTab[0].linea1ej1"  [lineNumbers]="true"></code></pre>
               <br>
               <p>Luego nosotros desplegamos el texto: "Bienvenidos al Lenguaje C/C++." en la consola mediante la función cout y el operador <<, seguido de un salto de línea utilizando el comando endl, como se indica en la siguiente instrucción:</p>
-              <pre><code [highlight]="prefTab[0].linea2ej1" (highlighted)="onHighlight($event)" [lineNumbers]="true"></code></pre>
+              <pre><code [highlight]="prefTab[0].linea2ej1"  [lineNumbers]="true"></code></pre>
               <br>
               <p>Finalmente incorporamos una pausa en el programa utilizando la función:
               </p>
-              <pre><code [highlight]="prefTab[0].linea3ej1" (highlighted)="onHighlight($event)" [lineNumbers]="true"></code></pre>
+              <pre><code [highlight]="prefTab[0].linea3ej1"  [lineNumbers]="true"></code></pre>
               <br>
 
               <h4><strong>Ejercicio 1.2: </strong></h4>
               <p>Escribir un programa que imprima un mensaje de “Hola mundo” y otro que diga “Bienvenidos al Lenguaje C/C++.”, utilizando la función de salida de datos “printf”.</p>
               <h5><strong>Programa 1.2 </strong>Código del programa.</h5><br>
-              <pre><code [highlight]="prefTab[0].tablaDatos3" (highlighted)="onHighlight($event)" [lineNumbers]="true"></code></pre>
+              <pre><code [highlight]="prefTab[0].tablaDatos3"  [lineNumbers]="true"></code></pre>
               <br>
               <h5><strong>Salida 1.2 </strong>Salida del programa.</h5><br>
               <img src="./assets/images/Capitulos/I/media/salida1.2.png" style="display:block; margin:auto; "><br>
               <p>Como se puede ver en este programa, nosotros desplegamos el texto: "Hola mundo." en la consola mediante la función printf, seguido de un salto de línea utilizando la secuencia de escape "\n", como se indica en la siguiente instrucción:</p>
-              <pre><code [highlight]="prefTab[0].linea1ej2" (highlighted)="onHighlight($event)" [lineNumbers]="true"></code></pre>
+              <pre><code [highlight]="prefTab[0].linea1ej2"  [lineNumbers]="true"></code></pre>
               <br>
               <p>Luego nosotros desplegamos el texto: "Bienvenidos al Lenguaje C/C++." en la consola mediante la función printf, seguido de un salto de línea utilizando la secuencia de escape "\n", como se indica en la siguiente instrucción:</p>
-              <pre><code [highlight]="prefTab[0].linea2ej2" (highlighted)="onHighlight($event)" [lineNumbers]="true"></code></pre>
+              <pre><code [highlight]="prefTab[0].linea2ej2"  [lineNumbers]="true"></code></pre>
               <br>
               <p>Finalmente incorporamos una pausa en el programa utilizando la función:
               </p>
-              <pre><code [highlight]="prefTab[0].linea3ej2" (highlighted)="onHighlight($event)" [lineNumbers]="true"></code></pre>
+              <pre><code [highlight]="prefTab[0].linea3ej2"  [lineNumbers]="true"></code></pre>
               <br>
             </mat-tab>
 
@@ -221,9 +223,9 @@
               <br>
                 <p>El lenguaje C/C++, maneja dos tipos de comentarios: </p>
               <p>a)	Cuando se quiere comentar más de una línea de código, se utiliza la instrucción ‘/* … */’, como consta en el Programa 1.1, donde se tiene el siguiente ejemplo:</p>
-              <pre><code [highlight]="prefTab[0].comment1" (highlighted)="onHighlight($event)" [lineNumbers]="true"></code></pre>
+              <pre><code [highlight]="prefTab[0].comment1"  [lineNumbers]="true"></code></pre>
               <p>b)	Cuando se quiere comentar una sola línea de código, se utiliza la instrucción ‘//’, como consta en el Programa 1.1, donde se tienen los siguientes ejemplos:</p>
-              <pre><code [highlight]="prefTab[0].comment2" (highlighted)="onHighlight($event)" [lineNumbers]="true"></code></pre>
+              <pre><code [highlight]="prefTab[0].comment2"  [lineNumbers]="true"></code></pre>
               <p>Los comentarios son textos o cadenas de caracteres que son ignoradas por el compilador. Cuando el compilador compila el programa, se salta cualquier comentario y no lo toma en cuenta. </p>
               <p>Escribir comentarios claros resulta especialmente importante cuando se trabaja en equipos de trabajo, donde otros programadores necesitarán leer y modificar su código. Los “buenos comentarios” son claros, concisos, y fáciles de entender, contrario a los “malos comentarios” que son inconsistentes, fuera de fecha, ambiguos, vagos, superfluos y no los puede entender cualquiera. En el libro de “The C++ Programming Language. Special Edition” de Bjarne Stroustrup, el autor menciona que: “Escribir buenos comentarios puede ser tan difícil como escribir el programa. Esto es un arte que vale la pena cultivarlo” (Stroustrup, B., 1997).</p>
               <br>
@@ -237,17 +239,17 @@
               <h4><strong>Ejercicio 1.3: </strong></h4>
               <p>Reescribir el programa 1.1 de tal manera que utilice varios espacios en blanco.</p>
               <h5><strong>Programa 1.3 </strong>Código del programa.</h5><br>
-              <pre><code [highlight]="prefTab[0].tablaDatos4" (highlighted)="onHighlight($event)" [lineNumbers]="true"></code></pre>
+              <pre><code [highlight]="prefTab[0].tablaDatos4"  [lineNumbers]="true"></code></pre>
               <br>
               <h5><strong>Salida 1.3 </strong>Salida del programa.</h5>
               <img src="./assets/images/Capitulos/I/media/salida1.3.png" style="display:block; margin:auto; "><br>
               <p>Luego se puede compilar este programa y se va a poder observar que éste trabaja correctamente.</p>
               <p>Nótese que no hay espacios dentro de una cadena de caracteres o texto, ya que los espacios entre las cadenas de caracteres no son ignorados por el compilador. El lenguaje C/C++ no permite que las palabras clave (keywords) sean rotas o separadas en sub-palabras. </p>
               <p>Por ejemplo, no se puede escribir la instrucción:</p>
-              <pre><code [highlight]="prefTab[0].linea1ej3" (highlighted)="onHighlight($event)" [lineNumbers]="true"></code></pre>
+              <pre><code [highlight]="prefTab[0].linea1ej3"  [lineNumbers]="true"></code></pre>
               <br>
               <p>de la siguiente manera: </p>
-              <pre><code [highlight]="prefTab[0].linea2ej3" (highlighted)="onHighlight($event)" [lineNumbers]="true"></code></pre>
+              <pre><code [highlight]="prefTab[0].linea2ej3"  [lineNumbers]="true"></code></pre>
               <br>
               <p>Los símbolos y palabras reservadas que tienen un significado actual deben ser mantenidos intactos, así como originalmente fueron definidos</p>
               <p>Finalmente se recomienda utilizar tabulación entre instrucción e instrucción para organizar de mejor manera el código del programa. A este proceso se conoce como indentación (indentation) y ayuda a corregir posibles errores dentro de un programa y a realizar mantenimiento al mismo.</p>
@@ -255,17 +257,17 @@
               <h4><strong>Ejercicio 1.4: </strong></h4>
               <p>Reescribir el programa 1.2 de tal manera que utilice varios espacios en blanco.</p>
               <h5><strong>Programa 1.4 </strong>Código del programa.</h5><br>
-              <pre><code [highlight]="prefTab[0].tablaDatos4" (highlighted)="onHighlight($event)" [lineNumbers]="true"></code></pre>
+              <pre><code [highlight]="prefTab[0].tablaDatos4"  [lineNumbers]="true"></code></pre>
               <br>
               <h5><strong>Salida 1.4 </strong>Salida del programa.</h5>
               <img src="./assets/images/Capitulos/I/media/salida1.4.png" style="display:block; margin:auto; "><br>
               <p>Luego se puede compilar este programa y se va a poder observar que éste trabaja correctamente.</p>
               <p>Nótese que no hay espacios dentro de una cadena de caracteres o texto, ya que los espacios entre las cadenas de caracteres no son ignorados por el compilador. El lenguaje C/C++ no permite que las palabras clave (keywords) sean rotas o separadas en sub-palabras. </p>
               <p>Por ejemplo, no se puede escribir la instrucción:</p>
-              <pre><code [highlight]="prefTab[0].linea3ej3" (highlighted)="onHighlight($event)" [lineNumbers]="true"></code></pre>
+              <pre><code [highlight]="prefTab[0].linea3ej3"  [lineNumbers]="true"></code></pre>
               <br>
               <p>de la siguiente manera: </p>
-              <pre><code [highlight]="prefTab[0].linea4ej3" (highlighted)="onHighlight($event)" [lineNumbers]="true"></code></pre>
+              <pre><code [highlight]="prefTab[0].linea4ej3"  [lineNumbers]="true"></code></pre>
               <br>
               <p>Los símbolos y palabras reservadas que tienen un significado actual deben ser mantenidos intactos así como originalmente fueron definidos.</p>
               <br>
@@ -280,7 +282,7 @@
                 Un archivo .CPP vacío aparecerá automáticamente y será abierto en Visual C++ .NET.</p>
               <img src="./assets/images/Capitulos/I/media/figura1.9.png" style="display:block; margin:auto; "><br>
               <h5><strong>Figura 1.9. </strong>Cuadro de Diálogo de Agregar nuevo elemento.</h5><br>
-              <pre><code [highlight]="tab.tablaDatos2" (highlighted)="onHighlight($event)" [lineNumbers]="true"></code></pre>
+              <pre><code [highlight]="tab.tablaDatos2"  [lineNumbers]="true"></code></pre>
 
               <h4><strong>B.2) Diagrama de Entrada-Salida</strong></h4>
               <p>{{tab.diagramaES}}</p>
@@ -383,7 +385,7 @@
               <ul *ngFor="let item of tab.metodos">
                 <h4><strong>{{item.t}}</strong></h4>
                 <p>{{item.a}}</p>
-                <pre><code [highlight]="item.b" (highlighted)="onHighlight($event)" [lineNumbers]="true"></code></pre>
+                <pre><code [highlight]="item.b"  [lineNumbers]="true"></code></pre>
               </ul>
               <h4><strong>Tips de Programación...</strong>
                 <mat-icon>wb_incandescent</mat-icon>
@@ -398,10 +400,10 @@
               <hr>
               <p>{{tab.implementacion13}}</p>
               <h5><strong>{{tab.tabla2}}</strong>{{tab.tabladetalle2}}</h5><br>
-              <pre><code [highlight]="tab.tablaDatos2" (highlighted)="onHighlight($event)" [lineNumbers]="true"></code></pre>
+              <pre><code [highlight]="tab.tablaDatos2"  [lineNumbers]="true"></code></pre>
               <p>{{tab.implementacion13}}</p>
               <h5><strong>{{tab.tabla3}}</strong>{{tab.tabladetalle3}}</h5><br>
-              <pre><code [highlight]="tab.tablaDatos3" (highlighted)="onHighlight($event)" [lineNumbers]="true"></code></pre>
+              <pre><code [highlight]="tab.tablaDatos3"  [lineNumbers]="true"></code></pre>
               <br>
               <p>{{tab.implementacion15}}</p>
               <p>{{tab.implementacion16}}</p>
@@ -421,119 +423,879 @@
       </mat-tab>
 
 
+      <mat-tab label="Estructura Básica">
+        <ng-template matTabContent>
+          <mat-tab-group>
+            <mat-tab  label="Introducción">
+              <br>
+              <h2>Estructura Básica de un Programa en C/C++</h2>
+              <br>
+              <p>En general la estructura básica de un programa en C/C++ (Granizo, E., 2016), consta de las siguientes partes:</p>
+              <p>a)	Directivas include.</p>
+              <p>b)	Directivas define o macros.</p>
+              <p>c)	La función principal.</p>
+              <p>La Figura 1.13 muestra la estructura básica de un programa en lenguaje C/C++ donde constan las librerías de encabezado (directivas include, directivas define) y la función principal con la lógica del programa.
+              </p>
+
+              <img src="./assets/images/Capitulos/I/media/figura1.13.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Figura 1.13. </strong>Estructura básica de un programa en Lenguaje C/C++.</h5><br>
+            </mat-tab>
+
+            <mat-tab  label="1.2.1 Directivas include ">
+              <br>
+              <h2>Directivas include </h2>
+              <br>
+              <p>En el programa 1.1 se necesitó utilizar algo de código que no fue escrito por nosotros mismos. En este curso, la mayor parte de este “código útil”, representado por funciones, lo encontraremos en las librerías de encabezado de C/C++ (Luna, F., 2004), que es un conjunto de código que se envía al compilador enlazado con el programa. Algunos ejemplos de este “código útil” se mencionan a continuación en la Tabla 1.1:.</p>
+              <h5><strong>Tabla 1.1. </strong>Librerías básicas de C/C++.</h5><br>
+
+              <TABLE BORDER WIDTH="100%" CELLPADDING=1 CELLSPACING=0 class="mat-elevation-z8">
+                <TR>
+                  <TH>Librería</TH>
+                  <TH>Descripción</TH>
+                </TR>
+                <tbody *ngFor="let item of prefTab[1].tablaDatos1">
+                <TR style="text-align: left">
+                  <TD>
+                    <ul *ngFor="let i of item.Propiedad" style="list-style-type: none;">
+                      <li>{{i}}</li>
+                    </ul>
+                  </TD>
+                  <TD>
+                    <ul *ngFor="let i of item.Valor" style="list-style-type: none;">
+                      <li>{{i}}</li>
+                    </ul>
+                  </TD>
+                </TR>
+                </tbody>
+              </TABLE><br>
+              <p>En el Programa 1.1, se invoca a dos directivas include:</p>
+              <pre><code [highlight]="prefTab[1].linea1ej1"  [lineNumbers]="true"></code></pre>
+              <p>En el Programa 1.2, se invoca a dos directivas include:</p>
+              <pre><code [highlight]="prefTab[1].linea2ej1"  [lineNumbers]="true"></code></pre>
+              <p>Cada una de estas directivas van encerradas entre los símbolos de “menor que” y “mayor que” y le informa al compilador que debe tomar estos códigos e incluirlos en nuestro archivo .CPP. </p>
+              <p>Nótese que al incluir los archivos de las librerías de encabezado de C/C++, su programa se enlaza a estos archivos de librerías estándar; sin embargo, esto se lo hace automáticamente cuando el proyecto es creado en C/C++.</p>
+            </mat-tab>
+
+            <mat-tab  label="1.2.2. Namespaces">
+              <br>
+              <h2>Espacios de nombre (Namespaces)</h2>
+              <br>
+              <p>Algunas veces se puede necesitar utilizar sentencias de preprocesador o macros que se crean con un nombre simbólico (identificador) y esta macro levanta algún conjunto de código (Luna, F., 2004). Por ejemplo, en el programa 1.1 se pudo haber definido una macro llamada IMPRIMIRMENSAJEHOLA, la cual ejecuta la sentencia: </p>
+              <pre><code [highlight]="prefTab[1].code1"  [lineNumbers]="true"></code></pre>
+              <br><p>como se muestra a continuación:</p>
+              <pre><code [highlight]="prefTab[1].code2"  [lineNumbers]="true"></code></pre>
+              <br><p>A continuación, se redefine nuevamente el programa 1.1 con directivas define o macros en el programa 1.5.</p>
+              <h5><strong>Ejercicio 1.5: </strong>Reescribir el programa 1.1 de tal manera que utilice directivas define o macros.</h5>
+              <h5><strong>Programa 1.5. </strong>Código del programa.</h5>
+              <pre><code [highlight]="prefTab[1].tablaDatos5"  [lineNumbers]="true"></code></pre>
+              <br><h5><strong>Salida 1.5: </strong>Salida del programa.</h5><br>
+              <img src="./assets/images/Capitulos/I/media/salida1.5.png" style="display:block; margin:auto; "><br>
+              <p>Nótese que el carácter punto y coma (;) ya está incluido en la definición de la macro, por lo que no es necesario colocar otro punto y como (;) en la llamada a la macro.</p>
+              <p>Cuando el compilador compila el código fuente y encuentra una macro, internamente se reemplaza el símbolo de la macro con el código que fue definida.</p>
+              <p>A continuación se redefine nuevamente el programa 1.2 con directivas define o macros en el programa 1.6.</p>
+              <p>Reescribir el programa 1.1 de tal manera que utilice directivas define o macros. </p>
+              <h5><strong>Ejercicio 1.6: </strong>Reescribir el programa 1.2 de tal manera que utilice directivas define o macros.</h5>
+              <h5><strong>Programa 1.6. </strong>Código del programa.</h5>
+              <pre><code [highlight]="prefTab[1].tablaDatos6"  [lineNumbers]="true"></code></pre>
+              <br><h5><strong>Salida 1.6: </strong>Salida del programa.</h5><br>
+              <img src="./assets/images/Capitulos/I/media/salida1.6.png" style="display:block; margin:auto; "><br>
+              <p>Nótese que el carácter punto y coma (;) ya está incluido en la definición de la macro, por lo que no es necesario colocar otro punto y como (;) en la llamada a la macro.</p>
+              <p>Cuando el compilador compila el código fuente y encuentra una macro, internamente se reemplaza el símbolo de la macro con el código que fue definida.</p>
+            </mat-tab>
+
+            <mat-tab  label="1.2.4. La Función Principal ">
+              <br>
+              <h2>La Función Principal</h2>
+              <br>
+              <p>La función main(…) es especial porque es el punto de entrada para cada programa en C/C++, es decir, cada programa en C/C++ comienza ejecutando su main. Consecuentemente, cada programa en C/C++ debe tener una función main (Joyanes, L., Zahonero, I., 2005). El código correspondiente a la función main va encerrado entre llaves y se lo conoce como el cuerpo de la función o la definición de la función. Estos conceptos y otros serán profundizados en el Capítulo 3, referente a Funciones</p>
+              <p>En C/C++, las llaves {{ "{}" }} son utilizadas para definir el inicio y el fin de una unidad de código lógico. Por ejemplo, en el programa 1.1, la llave abierta {{ "{" }}, denota el inicio de un código de bloque, y la llave cerrada ‘}’, denota el fin del código de bloque. Un par de llaves deben siempre ir juntas en la función principal. En la Figura 1.14 se muestra un logo de la función principal y lo que ella significa.</p>
+              <img src="./assets/images/Capitulos/I/media/figura1.14.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Figura 1.14. </strong>Función principal en C/C++.</h5><br>
+            </mat-tab>
+
+          </mat-tab-group>
+        </ng-template>
+      </mat-tab>
+
+      <mat-tab label="Entrada y Salida de Datos">
+        <ng-template matTabContent>
+          <mat-tab-group>
+            <!-- <mat-tab *ngFor="let tab of asyncTabs | async"> -->
+            <mat-tab  label="Introducción">
+              <br>
+              <h2>Funciones de Entrada y Salida de Datos</h2>
+              <br>
+              <p>El archivo de la librería de encabezado ‘iostream’ contiene un sinnúmero de funciones para entrada y salida de datos. Entre las funciones más importantes para esta sección están la función ‘cout <<’ que es una función de salida de datos; y la función ‘cin >>’ que es una función para entrada de datos.</p>
+              <p>El archivo de la librería de encabezado ‘stdio.h’ también contiene un sinnúmero de funciones para entrada y salida de datos. Entre las funciones más importantes para esta sección están la función printf() que es una función de salida de datos; y la función scanf() que es una función para entrada de datos. En la Figura 1.15 se muestra un ícono que representa a las funciones de entrada y salida de datos.</p>
+              <img src="./assets/images/Capitulos/I/media/figura1.15.jpg" style="display:block; margin:auto; "><br>
+              <h5><strong>Figura 1.15. </strong>Funciones de Entrada y Salida de Datos.</h5><br>
+            </mat-tab>
+
+            <mat-tab  label="1.3.1. Función cout <<">
+              <br>
+              <h2>Función de Salida cout <<</h2>
+              <br>
+              <p>El programa 1.1 es capaz de desplegar datos desde la ventana de la consola. Al examinar el código del programa 1.1 se observa que se invoca dos veces a la función ‘cout <<’ para imprimir mensajes de texto. Entonces, la función ‘cout <<’ permite imprimir cadenas de caracteres o texto (Luna, F., 2004). </p>
+              <p>El símbolo ‘<<’ se lo conoce como operador de inserción y toma sentido cuando se considera que este símbolo es utilizado para insertar una salida dentro de un flujo de salida de datos.</p>
+            </mat-tab>
+
+            <mat-tab  label="1.3.2. Función cin >>">
+              <br>
+              <h2>Función de Entrada cin >></h2>
+              <br>
+              <p>La función ‘cin >>’, es una función de entrada de datos por consola, que lee todos los tipos de datos definidos en C/C++, convirtiendo automáticamente al formato interno apropiado de acuerdo a los diferentes tipos de datos (Luna, F., 2004). </p>
+              <p>El símbolo ‘>>’ se lo conoce como operador de extracción y toma sentido cuando se considera que este símbolo es utilizado para extraer una entrada dentro de un flujo de entrada de datos.</p>
+              <h5><strong>Ejercicio 1.7:  </strong>Escribir un programa que permita preguntarle al usuario su primer nombre y donde luego la computadora responda Hola usuario XYZ.</h5>
+              <h5><strong>Programa 1.7:  </strong>Código del programa.</h5>
+              <pre><code [highlight]="prefTab[1].tablaDatos7"  [lineNumbers]="true"></code></pre>
+              <br><h5><strong>Salida 1.7: </strong>Salida del programa.</h5><br>
+              <img src="./assets/images/Capitulos/I/media/salida1.7.png" style="display:block; margin:auto; "><br>
+              <br><p>Como se puede ver en este programa, nosotros desplegamos el texto: “Ingrese su primer nombre y presione INTRO: ” en la consola con la siguiente instrucción:</p>
+              <pre><code [highlight]="prefTab[1].linea1ej2"  [lineNumbers]="true"></code></pre>
+              <br> <p>Luego nosotros le pedimos al usuario que ingrese su primer nombre con la siguiente instrucción:</p>
+              <pre><code [highlight]="prefTab[1].linea2ej2"  [lineNumbers]="true"></code></pre>
+              <br><p>Finalmente nosotros desplegamos el mensaje “Hola, ” seguido de un valor string almacenado en la variable primerNombre y seguido de un salto de línea “endl”, con la siguiente instrucción:</p>
+              <pre><code [highlight]="prefTab[1].linea3ej2"  [lineNumbers]="true"></code></pre>
+            </mat-tab>
+
+            <mat-tab  label="1.3.3. Función printf()">
+              <br>
+              <h2>Función de Salida printf()</h2>
+              <br>
+              <p>El programa 1.2 es capaz de desplegar datos desde la ventana de la consola. Al examinar el código del programa 1.2 se observa que se invoca dos veces a la función ‘printf()’ para imprimir mensajes de texto. Entonces, la función ‘printf()’ permite imprimir cadenas de caracteres o texto. El prototipo o la declaración de la función ‘printf()’ es el siguiente:</p>
+              <pre><code [highlight]="prefTab[1].code3"  [lineNumbers]="true"></code></pre>
+              <br><p>La función ‘printf()’, como se puede ver en la declaración tiene dos tipos de elementos, el primero es la cadena de caracteres o texto (char *formato) que se va a imprimir por pantalla; y el segundo elemento contiene especificadores de formato, que definen la forma en que se muestran los argumentos.
+              </p>
+            </mat-tab>
+
+            <mat-tab  label="1.3.4. Especificadores de Formato">
+              <br>
+              <h2>Especificadores de Formato</h2>
+              <br>
+              <p>El formato de las cadenas de texto contiene símbolos de formateo de distintos tipos de datos. Estos símbolos son reemplazados por valores almacenados en variables, como se muestra en el programa 1.13. Los principales especificadores de formato que maneja el lenguaje C/C++ son los que se muestran en la Tabla 2.1.</p>
+              <h5><strong>Tabla 2.1. </strong>Especificadores de Formato.</h5>
+              <TABLE BORDER WIDTH="100%" CELLPADDING=1 CELLSPACING=0 class="mat-elevation-z8">
+                <TR>
+                  <TH>Código</TH>
+                  <TH>Descripción</TH>
+                </TR>
+                <tbody *ngFor="let item of prefTab[1].tablaDatos9">
+                <TR style="text-align: left">
+                  <TD>
+                    <ul *ngFor="let i of item.Propiedad" style="list-style-type: none;">
+                      <li>{{i}}</li>
+                    </ul>
+                  </TD>
+                  <TD>
+                    <ul *ngFor="let i of item.Valor" style="list-style-type: none;">
+                      <li>{{i}}</li>
+                    </ul>
+                  </TD>
+                </TR>
+                </tbody>
+              </TABLE><br>
+            </mat-tab>
+
+            <mat-tab  label="1.3.5. Secuencias de Escape">
+              <br>
+              <h2>Secuencias de Escape</h2>
+              <br>
+              <p>Existen caracteres especiales, llamados secuencias de escape o caracteres de escape. Una secuencia de escape está simbolizada con un backslash ‘\’ seguido por un caracter(es) común. Por lo tanto, en el programa 1.8, el caracter de nueva línea está simbolizado por ‘\n’. La Tabla 2.2 muestra las secuencias de escape más utilizadas:</p>
+              <h5><strong>Tabla 2.2. </strong>Secuencias de Escape.</h5>
+              <TABLE BORDER WIDTH="100%" CELLPADDING=1 CELLSPACING=0 class="mat-elevation-z8">
+                <TR>
+                  <TH>Código</TH>
+                  <TH>Descripción</TH>
+                </TR>
+                <tbody *ngFor="let item of prefTab[1].tablaDatos10">
+                <TR style="text-align: left">
+                  <TD>
+                    <ul *ngFor="let i of item.Propiedad" style="list-style-type: none;">
+                      <li>{{i}}</li>
+                    </ul>
+                  </TD>
+                  <TD>
+                    <ul *ngFor="let i of item.Valor" style="list-style-type: none;">
+                      <li>{{i}}</li>
+                    </ul>
+                  </TD>
+                </TR>
+                </tbody>
+              </TABLE><br>
+              <h5><strong>Ejercicio 1.8:  </strong> Escribir un programa que permita demostrar el uso de secuencias de escape.</h5>
+              <h5><strong>Programa 1.8:  </strong>Código del programa.</h5>
+              <pre><code [highlight]="prefTab[1].tablaDatos11"  [lineNumbers]="true"></code></pre>
+              <br><h5><strong>Salida 1.8:  </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/I/media/salida1.8.png" style="display:block; margin:auto; "><br>
+            </mat-tab>
+
+            <mat-tab  label="1.3.6. Función scanf()">
+              <br>
+              <h2>Función de Entrada scanf()</h2>
+              <br>
+              <p>La función scanf(), es una función de entrada de datos por consola, que lee todos los tipos de datos definidos en C/C++, convirtiendo automáticamente al formato interno apropiado de acuerdo a los especificadores de formato. El prototipo o la declaración de la función ‘scanf()’ es el siguiente:</p>
+              <pre><code [highlight]="prefTab[1].code5"  [lineNumbers]="true"></code></pre>
+              <br><p>La función ‘scanf()’, como se puede ver en la declaración tiene dos tipos de elementos, el primero es la cadena de caracteres o texto (char *formato) que se va a leer por pantalla con su respectivo especificador de formato; y el segundo elemento contiene las direcciones de memoria de las variables que se van a leer.</p>
+
+              <h5><strong>Ejercicio 1.9: </strong>Escribir un programa que permita preguntarle al usuario su primer nombre y donde luego la computadora responda Hola usuario XYZ.</h5>
+              <h5><strong>Programa 1.9: </strong>Código del programa.</h5>
+              <pre><code [highlight]="prefTab[1].tablaDatos12"  [lineNumbers]="true"></code></pre>
+              <br><h5><strong>Salida 1.9: </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/I/media/salida1.9.png" style="display:block; margin:auto; "><br>
+              <p>Como se puede ver en este programa, nosotros desplegamos el texto: “Ingrese una letra: ” en la consola con la siguiente instrucción:</p>
+              <pre><code [highlight]="prefTab[1].linea1ej3"  [lineNumbers]="true"></code></pre>
+              <br><p>Luego nosotros le pedimos al usuario que ingrese una letra con la siguiente instrucción:</p>
+              <pre><code [highlight]="prefTab[1].linea2ej3"  [lineNumbers]="true"></code></pre>
+              <br><p>Finalmente nosotros desplegamos el mensaje “La letra ingresada fue: ” seguido por el especificador de formato “%c” para imprimir el valor de una variable de tipo char (carácter) y luego se imprime un salto de línea con la secuencia de escape “\n”, con la siguiente instrucción:</p>
+              <pre><code [highlight]="prefTab[1].linea3ej3"  [lineNumbers]="true"></code></pre>
+            </mat-tab>
+
+            <mat-tab  label="1.3.7. Funciones de Utilidades Generales">
+              <br>
+              <h2>Funciones de Utilidades Generales Estándar</h2>
+              <br>
+              <p>El archivo de la librería de utilidades estándar “cstdlib” contiene un sinnúmero de funciones para gestionar la memoria dinámica, para la comunicación con el ambiente, entre otras. Una de las funciones más importantes de esta librería es la función system que permite invocar al procesador de comandos para ejecutar un comando y la función system(“pause”) permite incorporar una pausa en el programa.</p>
+                   </mat-tab>
+          </mat-tab-group>
+        </ng-template>
+      </mat-tab>
+
+      <mat-tab label="Variables">
+        <ng-template matTabContent>
+          <mat-tab-group>
+            <mat-tab  label="Introducción">
+              <br>
+              <h2>Introducción a las variables</h2>
+              <br>
+              <p>En el programa 1.7, le pedimos al usuario que ingrese su nombre. Luego el programa dice “Hola, ” a aquel usuario, escribiendo su nombre. La computadora sabe a qué nombre debe decirle “Hola, ” debido a que nosotros guardamos el nombre del usuario con la siguiente instrucción: </p>
+              <pre><code [highlight]="prefTab[2].code1"  [lineNumbers]="true"></code></pre>
+              <br><p>El comando cin >> espera que el usuario ingrese un texto que corresponde a su nombre y luego el programa guarda en una variable de tipo string llamada primerNombre. Debido a que el nombre del usuario fue guardado en una variable, nosotros podemos desplegar el valor de la variable que contiene un nombre con la siguiente línea de código:</p>
+              <pre><code [highlight]="prefTab[2].code2"  [lineNumbers]="true"></code></pre>
+              <br><p>En el programa 1.9, le pedimos al usuario que ingrese una letra. Luego el programa dice “La letra ingresada fue: ” al usuario, escribiendo una letra. La computadora sabe qué letra ingresó el usuario, debido a que nosotros guardamos la letra en una variable con la siguiente instrucción:</p>
+              <pre><code [highlight]="prefTab[2].code3"  [lineNumbers]="true"></code></pre>
+              <br><p>El comando scanf espera que el usuario ingrese una letra y luego el programa guarda un valor en una variable de tipo char llamada letra. Debido a que la letra que ingresó el usuario fue guardada en una variable, nosotros podemos desplegar el valor de la variable que contiene la letra con la siguiente línea de código:</p>
+              <pre><code [highlight]="prefTab[2].code4"  [lineNumbers]="true"></code></pre>
+
+            </mat-tab>
+
+            <mat-tab  label="1.4.1. Definición de Variable">
+              <br>
+              <h2>Definición de Variable</h2>
+              <br>
+              <p>Una variable se define como un elemento que ocupa una región física del sistema de memoria de acceso aleatorio (RAM) y almacena un valor de algún tipo (Ceballos, F.J., 2007). En el lenguaje C/C++ se debe declarar las variables previamente antes de usarlas, porque en la compilación del programa se asigna el espacio de memoria a las variables de acuerdo a su tipo de dato. La dirección de memoria donde se ubica una variable se representa en formato hexadecimal (hex). Por cuestiones didácticas vamos a utilizar valores en formato decimal (dec) para representar las direcciones de memoria de las variables. En la Figura 1.16 se muestra un ejemplo de una variable llamada ‘c’ de tipo entero, cuyo valor almacenado es el número ‘7’ en la dirección de memoria hex 1000.</p>
+              <img src="./assets/images/Capitulos/I/media/figura1.16.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Figura 1.16.  </strong>Representación gráfica de la variable ‘c’.</h5><br>
+            </mat-tab>
+
+            <mat-tab  label="1.4.2. Tipos de Datos">
+              <br>
+              <h2>Tipos de Datos en C/C++</h2>
+              <br>
+              <p>El tipo de dato define un conjunto de valores que puede tener una variable, junto con un conjunto de operaciones que se pueden realizar sobre esa variable (Granizo, E., 2016). Los tipos de datos comunes son los enteros, números reales y caracteres alfanuméricos. La Tabla 1.2 resume todos los tipos de datos que soporta el lenguaje C/C++.</p>
+              <h5><strong>Tabla 1.2.  </strong>Tipos de Datos.</h5>
+              <TABLE BORDER WIDTH="100%" CELLPADDING=1 CELLSPACING=0 class="mat-elevation-z8">
+                <tbody>
+                <tr>
+                  <td width="111" valign="top">
+                    <p>
+                      <strong>Tipo de Dato</strong>
+                    </p>
+                  </td>
+                  <td width="198" valign="top">
+                    <p>
+                      <strong>Descripción</strong>
+                    </p>
+                  </td>
+                  <td width="161" valign="top">
+                    <p>
+                      <strong>Rango</strong>
+                    </p>
+                  </td>
+                  <td width="151" valign="top">
+                    <p>
+                      <strong>Tamaño en Bytes</strong>
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="111" valign="top">
+                    <p>
+                      char
+                    </p>
+                  </td>
+                  <td width="198" valign="top">
+                    <p>
+                      Utilizado para almacenar un simple carácter tales como:
+                      ‘a’, ‘b’, ‘c’, etc.
+                    </p>
+                  </td>
+                  <td width="161" valign="top">
+                    <p>
+                      [-128, 127]
+                    </p>
+                  </td>
+                  <td width="151" valign="top">
+                    <p>
+                      1
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="111" valign="top">
+                    <p>
+                      short
+                    </p>
+                  </td>
+                  <td width="198" valign="top">
+                    <p>
+                      Utilizado para almacenar valores enteros pequeños.
+                    </p>
+                  </td>
+                  <td width="161" valign="top">
+                    <p>
+                      [-32768, 32767]
+                    </p>
+                  </td>
+                  <td width="151" valign="top">
+                    <p>
+                      2
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="111" valign="top">
+                    <p>
+                      int
+                    </p>
+                  </td>
+                  <td width="198" valign="top">
+                    <p>
+                      Utilizado para almacenar valores enteros.
+                    </p>
+                  </td>
+                  <td width="161" valign="top">
+                    <p>
+                      <a name="OLE_LINK1"></a>
+                      <a name="OLE_LINK2">[-2147483648, 2147483647]</a>
+                    </p>
+                  </td>
+                  <td width="151" valign="top">
+                    <p>
+                      4
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="111" valign="top">
+                    <p>
+                      long
+                    </p>
+                  </td>
+                  <td width="198" valign="top">
+                    <p>
+                      Utilizado para almacenar valores enteros grandes.
+                    </p>
+                  </td>
+                  <td width="161" valign="top">
+                    <p>
+                      [-2147483648, 2147483647]
+                    </p>
+                  </td>
+                  <td width="151" valign="top">
+                    <p>
+                      4
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="111" valign="top">
+                    <p>
+                      float
+                    </p>
+                  </td>
+                  <td width="198" valign="top">
+                    <p>
+                      Utilizado para almacenar valores de números con coma
+                      flotante.
+                    </p>
+                  </td>
+                  <td width="161" valign="top">
+                    <p>
+                      ±[1.2 x 10<sup>-38</sup>, 3.4 x 10<sup>38</sup>]
+                    </p>
+                  </td>
+                  <td width="151" valign="top">
+                    <p>
+                      4
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="111" valign="top">
+                    <p>
+                      double
+                    </p>
+                  </td>
+                  <td width="198" valign="top">
+                    <p>
+                      Utilizado para almacenar valores de números con coma
+                      flotante grandes o de doble precisión.
+                    </p>
+                  </td>
+                  <td width="161" valign="top">
+                    <p>
+                      ± [2.2 x 10<sup>-308</sup>, 1.8 x 10<sup>308</sup>]
+                    </p>
+                  </td>
+                  <td width="151" valign="top">
+                    <p>
+                      8
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="111" valign="top">
+                    <p>
+                      bool
+                    </p>
+                  </td>
+                  <td width="198" valign="top">
+                    <p>
+                      Utilizado para almacenar valores de verdad que pueden ser
+                      verdadero (true) y falso (false). Cabe notar que el valor
+                      de cero es considerado falso y cualquier otro valor que no
+                      se cero es considerado verdadero.
+                    </p>
+                  </td>
+                  <td width="161" valign="top">
+                    <p>
+                      [0, 1]
+                    </p>
+                  </td>
+                  <td width="151" valign="top">
+                    <p>
+                      1
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="111" valign="top">
+                    <p>
+                      string
+                    </p>
+                  </td>
+                  <td width="198" valign="top">
+                    <p>
+                      Utilizado para almacenar variables de tipo de cadenas de
+                      caracteres. Cabe notar que para utilizar este tipo de dato
+                      se debe utilizar el espacio de nombre ‘std’.
+                    </p>
+                  </td>
+                  <td width="161" valign="top">
+                    <p>
+                      [0, 2000 millones de caracteres]
+                    </p>
+                  </td>
+                  <td width="151" valign="top">
+                    <p>
+                      1 Byte por caracter
+                    </p>
+                  </td>
+                </tr>
+                </tbody>
+              </TABLE>
+              <br>
+              <p>El tamaño en bytes de los tipos de datos, dependen de la plataforma. Por ejemplo, si usted asume en su código que un char ocupa 1 Byte en una plataforma de 16-bits, y luego se mueve a una plataforma de desarrollo de 32-bits, puede ser que haya ajustes en los tamaños de los datos.</p>
+            </mat-tab>
+
+            <mat-tab  label="1.4.3. Declaración y Definición de Variables">
+              <br>
+              <h2>Declaración y Definición de Variables</h2>
+              <br>
+              <p>Una variable se declara de acuerdo con la siguiente sintaxis:</p>
+                <table style="width: 500px"  >
+                <tbody>
+                <tr>
+                  <td style="width: 40px;">Tipo_de_Dato</td>
+                  <td style="width: 40px;">Nombre_de_la_Variable;</td>
+                </tr>
+                </tbody>
+              </table>
+              <br>
+              <table style="width: 500px">
+                <tbody>
+                <tr>
+                  <td style="width: 50px;">Tipo_de_Dato</td>
+                  <td style="width: 50px;">Tipo de dato definido por el lenguaje C/C++.</td>
+                </tr>
+                <tr>
+                  <td style="width: 50px;">Nombre_de_la_Variable</td>
+                  <td style="width: 50px;">Identificador de la variable</td>
+
+                      </tr>
+                      </tbody>
+                    </table>
+              <br><p>Por ejemplo:</p>
+              <pre><code [highlight]="prefTab[2].code5"  [lineNumbers]="true"></code></pre>
+              <br><p>Conforme a este ejemplo se puede ver que se han declarado tres variables, cada una con un nombre específico y con un tipo de dato. Sin embargo, estas variables que han sido declaradas no están definidas, es decir, el valor de almacenamiento de cada una de ellas es desconocido. Consecuentemente, es común decir que estas variables contienen basura (garbage).</p>
+              <h5><strong>Ejercicio 1.10:  </strong>Escribir un programa que permita declarar tres variables, una de tipo caracter, otra de tipo entero y otra de tipo flotante; y luego se imprima el valor asignado por defecto a esas variables, utilizando las funciones ‘cout’ y ‘cin’. </h5>
+              <h5><strong>Programa 1.10:  </strong>Código del programa.</h5>
+              <pre><code [highlight]="prefTab[2].tablaDatos1"  [lineNumbers]="true"></code></pre>
+              <br><h5><strong>Salida 1.10:  </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/I/media/salida1.10.png" style="display:block; margin:auto; "><br>
+              <p>En el programa 1.10 se utiliza la función ‘cout’ que como se indicó en la sección 1.3.1, sirve para imprimir mensajes de texto y datos (salida por consola). En este caso para imprimir los contenidos de las variables que tienen valores por defecto, después de haber sido declaradas e inicializadas, se utiliza el operador de inserción ‘<<’ para imprimir tanto mensajes de texto como para imprimir los valores de las variables.</p>
+              <h5><strong>Ejercicio 1.11:  </strong>Escribir un programa que permita declarar tres variables, una de tipo caracter, otra de tipo entero y otra de tipo flotante; y luego se imprima el valor asignado por defecto a esas variables, utilizando las funciones printf y scanf. </h5>
+              <h5><strong>Programa 1.11:  </strong>Código del programa.</h5>
+              <pre><code [highlight]="prefTab[2].tablaDatos2"  [lineNumbers]="true"></code></pre>
+              <br><h5><strong>Salida 1.11:  </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/I/media/salida1.11.png" style="display:block; margin:auto; "><br>
+              <p>En el programa 1.11 se utiliza la función printf() que como se indicó en la sección 1.3.3, sirve para imprimir mensajes de texto y datos (salida por consola). En este caso para imprimir los contenidos de las variables que tienen valores por defecto, después de haber sido declaradas e inicializadas, se utilizan especificadores de formato, para imprimir cada tipo de dato (char, int, float), que como se muestra en la Figura 1.17, el especificador de formato correspondiente a un tipo de dato específico, se reemplaza por el valor almacenado en una variable.</p>
+              <img src="./assets/images/Capitulos/I/media/figura1.17.png" style="display:block; margin:auto; "><br>
+              <br><h5><strong>Figura 1.17:  </strong>Utilización de especificadores de formato en la función printf().</h5>
+              <p>Como se puede ver en la salida del programa 1.11, se imprimen valores por defecto y no basura (garbage), ya que las variables han sido declaradas y luego inicializadas.
+              </p>
+              <p>Cuando se asigna un valor a una variable, se dice que estamos definiendo o inicializando la variable. Por ejemplo:</p>
+              <pre><code [highlight]="prefTab[2].code6"  [lineNumbers]="true"></code></pre>
+              <br><img src="./assets/images/Capitulos/I/media/figura1.18.png" style="display:block; margin:auto; "><br>
+              <br><h5><strong>Figura 1.18:  </strong>Representación gráfica de tres variables.</h5>
+              <p>La representación gráfica de cada una estas tres variables en la memoria RAM se muestra en la Figura 1.18, como son: a) variable ‘letra’ de tipo ‘char’, cuyo valor almacenado es el caracter ‘M’ en la dirección de memoria hex 2000; b) variable ‘num_entero’ de tipo ‘int’, cuyo valor almacenado es el numero ‘20’ en la dirección de memoria hex 3000; c) variable ‘num_flotante’ de tipo ‘float’, cuyo valor almacenado es el número real ‘17.23’ en la dirección de memoria hex 4000.</p>
+            </mat-tab>
+
+            <mat-tab  label="1.4.4. Operador Igual (=)">
+              <br>
+              <h2>Operador de Asignación Igual (=)</h2>
+              <br>
+              <p>El símbolo ‘=’, en C/C++, se conoce como el operador de asignación, que permite asignar valores a las variables y a fórmulas matemáticas (Joyanes, L., Zahonero, I., 2005). Este operador no tiene nada que ver con el operador de igualdad que se utiliza para comparación, donde el símbolo que se ha definido en C/C++ para la comparación es el ‘==’. </p>
+              <p>Se puede declarar y definir una variable al mismo tiempo en C/C++. Por ejemplo:</p>
+              <pre><code [highlight]="prefTab[2].code6"  [lineNumbers]="true"></code></pre>
+              <br><p>Debido a que en la declaración de las variables se almacena basura, se recomienda siempre definir o inicializar las variables después de la declaración con algún valor por defecto. Generalmente, se utiliza el valor de cero para inicializar valores numéricos y un carácter en blanco (‘ ‘) para valores de caracteres.</p>
+              <p>Se puede hacer múltiples declaraciones y/o definiciones en una sola instrucción utilizando el operador coma (,). Por ejemplo:</p>
+              <pre><code [highlight]="prefTab[2].code7"  [lineNumbers]="true"></code></pre>
+              <br><p>Se recomienda hacer una declaración o definición por línea, para detectar más fácilmente errores.</p>
+              <p>Finalmente se puede también enlazar asignaciones juntas. El flujo de los valores asignados va desde la derecha hacia la izquierda. Por ejemplo:</p>
+              <pre><code [highlight]="prefTab[2].code8"  [lineNumbers]="true"></code></pre>
+              <br><h5><strong>Ejercicio 1.12:  </strong>Escribir un programa que permita leer e imprimir un dato de tipo caracter, un dato de tipo entero y un dato de tipo flotante, declarando y definiendo las variables previamente, utilizando las funciones ‘cout’ y ‘cin’. </h5>
+              <h5><strong>Programa 1.12:  </strong>Código del programa.</h5>
+              <pre><code [highlight]="prefTab[2].tablaDatos3"  [lineNumbers]="true"></code></pre>
+              <br><h5><strong>Salida 1.12:  </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/I/media/salida1.12.png" style="display:block; margin:auto; "><br>
+              <p>Primeramente, en el programa 1.12, se declaran y se definen tres variables: a) letra, de tipo caracter (char), inicializada con el valor de un espacio en blanco (‘ ‘); b) num_entero, de tipo entero (int), inicializada con el valor de cero (0); c) num_flotante, de tipo flotante (float), inicializada con el valor de cero (0.0f).</p>
+              <p>Luego, en este programa se utiliza la función ‘cin >>’ que como se indicó en la sección 1.3.2, sirve para leer datos (entrada por consola). En este caso se leen tres datos, uno de tipo char, otro de tipo int y otro de tipo float, cuyas variables van a ser modificadas en su contenido con valores que el usuario ingresa por teclado a la consola.</p>
+              <p>Finalmente, se utiliza la función ‘cout <<’ que como se indicó en la sección 1.3.1, sirve para imprimir mensajes de texto y datos (salida por consola). En este caso, esta función se utilizó para imprimir los tres datos leídos por teclado. </p>
+              <h5><strong>Ejercicio 1.13:  </strong>Escribir un programa que permita leer e imprimir un dato de tipo caracter, un dato de tipo entero y un dato de tipo flotante, declarando y definiendo las variables previamente, utilizando las funciones ‘printf’ y ‘scanf’. </h5>
+              <h5><strong>Programa 1.13:  </strong>Código del programa.</h5>
+              <pre><code [highlight]="prefTab[2].tablaDatos4"  [lineNumbers]="true"></code></pre>
+              <br><h5><strong>Salida 1.13:  </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/I/media/salida1.13.png" style="display:block; margin:auto; "><br>
+              <p>Primeramente, en el programa 1.13, se declaran y se definen tres variables: a) letra, de tipo carácter (char), inicializada con el valor de un espacio en blanco (‘ ‘); b) num_entero, de tipo entero (int), inicializada con el valor de cero (0); c) num_flotante, de tipo flotante (float), inicializada con el valor de cero (0.0f).
+                Luego, en este programa se utiliza la función scanf() que como se indicó en la sección 1.3.6, sirve para leer datos (entrada por consola). En este caso se leen tres datos, uno de tipo char, otro de tipo int y otro de tipo float, donde los argumentos que se envían a la función son: a) el especificador de formato, que indica que la variable que se envía corresponde a un tipo de dato específico, por ejemplo char, int, float, etc.; b) la dirección de la variable que va a ser modificada en su contenido, con un valor que el usuario ingresa por teclado a la consola; como se muestra en la Figura 1.19.
+              </p>
+              <br><img src="./assets/images/Capitulos/I/media/figura1.19.png" style="display:block; margin:auto; "><br>
+              <br><h5><strong>Figura 1.19:  </strong>Utilización de especificadores de formato en la función scanf().</h5>
+              <p>Finalmente, en este programa se utiliza la función printf() que como se indicó en la sección 1.3.3, sirve para imprimir mensajes de texto y datos (salida por consola). En este caso para imprimir los tres datos leídos, se utilizan especificadores de formato, para imprimir cada tipo de dato (char, int, float), que como se muestra en Figura 1.20, el especificador de formato correspondiente a un tipo de dato específico, se reemplaza por el valor almacenado en una variable.</p>
+              <br><img src="./assets/images/Capitulos/I/media/figura1.20.png" style="display:block; margin:auto; "><br>
+              <br><h5><strong>Figura 1.20:  </strong>Utilización de especificadores de formato en la función printf().</h5>
+            </mat-tab>
+
+            <mat-tab  label="1.4.5. Nombres de Variables">
+              <br>
+              <h2>Nombres de Variables</h2>
+              <br>
+              <p>Como se mostró en el programa 1.10, cuando se declaran y/o se definen variables, nosotros debemos ponerles un nombre a éstas (identificador), para podernos referir a cada una de las variables dentro del programa (Jones, B., Aitken, P., 2003). Los nombres de las variables pueden tener cualquier cosa, con algunas excepciones, como se mencionan a continuación:
+              </p>
+              <ol>
+                <li>Los nombres de las variables deben comenzar con una letra. El nombre de la variable 5MiVariable es ilegal. Sin embargo, el caracter gui&oacute;n bajo (underscore) se lo considera una letra, y por lo tanto, el identificador _MiVariable es legal.</li>
+                <li>Los nombres de las variables pueden incluir el caracter gui&oacute;n bajo o underscore (&lsquo;_&rsquo;), letras, y n&uacute;meros, pero no s&iacute;mbolos. Por lo que, usted no puede utilizar s&iacute;mbolos como: &lsquo;!&rsquo;, &lsquo;&rdquo;&rsquo;, &lsquo;#&rsquo;, &lsquo;$&rsquo;, &lsquo;%&rsquo;, &lsquo;&amp;&rsquo;, `/`, etc., en los nombres de las variables.</li>
+                <li>Los nombres de las variables no pueden ser palabras reservadas de C/C++, como: char, int, float, cout, cin, _getch, etc. Por ejemplo, usted no puede nombrarle a una variable como &ldquo;float&rdquo;, ya que es una palabra reservada de C que especifica el tipo de dato float.</li>
+                <li>Los nombres de las variables no pueden tener espacios en blanco entre ellas. Por ejemplo, el nombre de la variable &ldquo;_ M i _ Variable&rdquo; es ilegal, lo correcto ser&iacute;a tener el siguiente nombre: &ldquo;_Mi_Variable&rdquo;.</li>
+              </ol>
+              <hr>
+              <h4><strong>Tips de Programación...</strong>
+                <mat-icon>wb_incandescent</mat-icon>
+                <mat-icon>laptop_windows</mat-icon>
+              </h4>
+              <ul *ngFor="let item of prefTab[2].tipsProgramacion">
+                <p>
+                  <mat-icon style="font-size: 15px">check_circle_outline</mat-icon>{{item.tip}}
+                </p>
+              </ul>
+              <hr>
+            </mat-tab>
+
+          </mat-tab-group>
+        </ng-template>
+      </mat-tab>
+
+      <mat-tab label="Operadores Aritméticos">
+        <ng-template matTabContent>
+          <mat-tab-group>
+            <mat-tab  label="Introducción">
+              <br>
+              <h2>1.5. Operadores Aritméticos</h2>
+              <br>
+              <p>Adicionalmente a la declaración, definición, lectura e impresión de variables de diferentes tipos de datos que maneja el lenguaje C/C++, nosotros podemos ejecutar operaciones aritméticas básicas entre ellas.</p>
+            </mat-tab>
+
+            <mat-tab  label="1.5.1. Operadores Aritméticos Binarios">
+              <br>
+              <h2>Operadores Aritméticos Binarios</h2>
+              <br>
+              <p>El lenguaje C/C++ maneja cinco operadores aritméticos binarios:</p>
+              <ol>
+                <li>
+                  <ol>
+                    <li>Operador Suma (+).</li>
+                    <li>Operador Resta (-).</li>
+                    <li>Operador de Multiplicaci&oacute;n (*).</li>
+                    <li>Operador de Divisi&oacute;n (/).</li>
+                    <li>Operador de M&oacute;dulo (%).</li>
+                  </ol>
+                </li>
+              </ol>
+              <p>Las operaciones de suma, resta, multiplicación y división están definidas para todos los tipos de datos numéricos. El operador de módulo está definido sólo para operaciones con enteros (Davies, P., 1995). El programa 1.14 muestra el uso de estos operadores.
+              </p>
+              <h5><strong>Ejercicio 1.14:  </strong>Escribir un programa que permita presentar el uso de los operadores aritméticos binarios con los tipos de datos enteros de C/C++, utilizando las funciones ‘cout’ y ‘cin’.  </h5>
+              <h5><strong>Programa 1.14:  </strong>Código del programa.</h5>
+              <pre><code [highlight]="prefTab[3].tablaDatos1" [lineNumbers]="true"></code></pre>
+              <br><h5><strong>Salida 1.14:  </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/I/media/salida1.14.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Ejercicio 1.15:  </strong>: Escribir un programa que permita presentar el uso de los operadores aritméticos binarios con los tipos de datos enteros de C/C++, utilizando las funciones ‘printf’ y ‘scanf’.</h5>
+              <h5><strong>Programa 1.15:  </strong>Código del programa.</h5>
+              <pre><code [highlight]="prefTab[3].tablaDatos2"  [lineNumbers]="true"></code></pre>
+              <br><h5><strong>Salida 1.15:  </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/I/media/salida1.15.png" style="display:block; margin:auto; "><br>
+            </mat-tab>
+
+            <mat-tab  label="1.5.2. El Operador de Módulo">
+              <br>
+              <h2>El Operador de Módulo</h2>
+              <br>
+              <p>El lenguaje C/C++ maneja un operador especial que es el de módulo, que retorna el resto de una división entera. Por ejemplo, al dividir la fracción 7 / 2, el resto de la división es 1; al dividir la fracción 7 / 13, el resto de la división es 7; y al dividir la fracción 23 / 8, el resto de esta división es 7 que a su vez es el numerador de la fracción 7 / 8 que forma parte de la fracción impropia
+                2 (7/8), como se muestra a continuación:
+              </p>
+              <br><img src="./assets/images/Capitulos/I/media/math1.png" style="display:block; margin:auto; width: 900px" ><br>
+               </mat-tab>
+
+            <mat-tab  label="1.5.3. Expresiones Aritméticas Compuestas">
+              <br>
+              <h2>Expresiones Aritméticas Compuestas</h2>
+              <br>
+              <p>El lenguaje C/C++ define las siguientes expresiones aritméticas compuestas que utilizan un operador aritmético y el operador de asignación junto a dos operandos (Davies, P., 1995). La Tabla 1.3 resume lo expuesto:</p>
+              <h5><strong>Tabla 1.3. </strong>Expresiones Aritméticas Compuestas.</h5>
+              <table border="1" cellspacing="0" cellpadding="0" width="100%">
+                <tbody>
+                <tr>
+                  <td width="215" valign="top">
+                    <p>
+                      <strong>Expresión Aritmética Compuesta</strong>
+                    </p>
+                  </td>
+                  <td width="208" valign="top">
+                    <p>
+                      <strong>Descripción</strong>
+                    </p>
+                  </td>
+                  <td width="189" valign="top">
+                    <p>
+                      <strong>Ejemplo</strong>
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="215" valign="top">
+                    <p>
+                      x = x + y;
+                    </p>
+                  </td>
+                  <td width="208" valign="top">
+                    <p>
+                      Asigna el valor de x + y en la misma variable x.
+                    </p>
+                  </td>
+                  <td width="189" valign="top">
+                    <p>
+                      int x = 5;
+                    </p>
+                    <p>
+                      int y = 7;
+                    </p>
+                    <p>
+                      x = x + y; // x = 12
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="215" valign="top">
+                    <p>
+                      x = x - y;
+                    </p>
+                  </td>
+                  <td width="208" valign="top">
+                    <p>
+                      Asigna el valor de x - y en la misma variable x.
+                    </p>
+                  </td>
+                  <td width="189" valign="top">
+                    <p>
+                      int x = 5;
+                    </p>
+                    <p>
+                      int y = 7;
+                    </p>
+                    <p>
+                      x = x - y; // x = -2
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="215" valign="top">
+                    <p>
+                      x = x * y;
+                    </p>
+                  </td>
+                  <td width="208" valign="top">
+                    <p>
+                      Asigna el valor de x * y en la misma variable x.
+                    </p>
+                  </td>
+                  <td width="189" valign="top">
+                    <p>
+                      int x = 5;
+                    </p>
+                    <p>
+                      int y = 7;
+                    </p>
+                    <p>
+                      x = x * y; // x = 35
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="215" valign="top">
+                    <p>
+                      x = x / y;
+                    </p>
+                  </td>
+                  <td width="208" valign="top">
+                    <p>
+                      Asigna el valor de x / y en la misma variable x.
+                    </p>
+                  </td>
+                  <td width="189" valign="top">
+                    <p>
+                      int x = 5;
+                    </p>
+                    <p>
+                      int y = 7;
+                    </p>
+                    <p>
+                      x = x / y; // x = 0
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="215" valign="top">
+                    <p>
+                      x = x % y;
+                    </p>
+                  </td>
+                  <td width="208" valign="top">
+                    <p>
+                      Asigna el valor de x % y en la misma variable x.
+                    </p>
+                  </td>
+                  <td width="189" valign="top">
+                    <p>
+                      int x = 5;
+                    </p>
+                    <p>
+                      int y = 7;
+                    </p>
+                    <p>
+                      x = x % y; // x = 5
+                    </p>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+              <h5><strong>Ejercicio 1.16:  </strong>Escribir un programa que permita probar el uso de las cinco expresiones aritméticas compuestas, con dos números enteros leídos desde el teclado, utilizando las funciones ‘cout’ y ‘cin’.</h5>
+              <h5><strong>Programa 1.16:  </strong>Código del programa.</h5>
+              <pre><code [highlight]="prefTab[3].tablaDatos5"  [lineNumbers]="true"></code></pre>
+              <br><h5><strong>Salida 1.16:  </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/I/media/salida1.16.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Ejercicio 1.17:  </strong>Escribir un programa que permita probar el uso de las cinco expresiones aritméticas compuestas, con dos números enteros leídos desde el teclado, utilizando las funciones ‘printf’ y ‘scanf’. </h5>
+              <h5><strong>Programa 1.17:  </strong>Código del programa.</h5>
+              <pre><code [highlight]="prefTab[3].tablaDatos6"  [lineNumbers]="true"></code></pre>
+              <br><h5><strong>Salida 1.17:  </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/I/media/salida1.17.png" style="display:block; margin:auto; "><br>
+            </mat-tab>
+
+            <mat-tab  label="1.4.4. Operador Igual (=)">
+              <br>
+              <h2>Operador de Asignación Igual (=)</h2>
+              <br>
+              <p>El símbolo ‘=’, en C/C++, se conoce como el operador de asignación, que permite asignar valores a las variables y a fórmulas matemáticas (Joyanes, L., Zahonero, I., 2005). Este operador no tiene nada que ver con el operador de igualdad que se utiliza para comparación, donde el símbolo que se ha definido en C/C++ para la comparación es el ‘==’. </p>
+              <p>Se puede declarar y definir una variable al mismo tiempo en C/C++. Por ejemplo:</p>
+              <pre><code [highlight]="prefTab[2].code6"  [lineNumbers]="true"></code></pre>
+              <br><p>Debido a que en la declaración de las variables se almacena basura, se recomienda siempre definir o inicializar las variables después de la declaración con algún valor por defecto. Generalmente, se utiliza el valor de cero para inicializar valores numéricos y un carácter en blanco (‘ ‘) para valores de caracteres.</p>
+              <p>Se puede hacer múltiples declaraciones y/o definiciones en una sola instrucción utilizando el operador coma (,). Por ejemplo:</p>
+              <pre><code [highlight]="prefTab[2].code7"  [lineNumbers]="true"></code></pre>
+              <br><p>Se recomienda hacer una declaración o definición por línea, para detectar más fácilmente errores.</p>
+              <p>Finalmente se puede también enlazar asignaciones juntas. El flujo de los valores asignados va desde la derecha hacia la izquierda. Por ejemplo:</p>
+              <pre><code [highlight]="prefTab[2].code8"  [lineNumbers]="true"></code></pre>
+              <br><h5><strong>Ejercicio 1.12:  </strong>Escribir un programa que permita leer e imprimir un dato de tipo caracter, un dato de tipo entero y un dato de tipo flotante, declarando y definiendo las variables previamente, utilizando las funciones ‘cout’ y ‘cin’. </h5>
+              <h5><strong>Programa 1.12:  </strong>Código del programa.</h5>
+              <pre><code [highlight]="prefTab[2].tablaDatos3"  [lineNumbers]="true"></code></pre>
+              <br><h5><strong>Salida 1.12:  </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/I/media/salida1.12.png" style="display:block; margin:auto; "><br>
+              <p>Primeramente, en el programa 1.12, se declaran y se definen tres variables: a) letra, de tipo caracter (char), inicializada con el valor de un espacio en blanco (‘ ‘); b) num_entero, de tipo entero (int), inicializada con el valor de cero (0); c) num_flotante, de tipo flotante (float), inicializada con el valor de cero (0.0f).</p>
+              <p>Luego, en este programa se utiliza la función ‘cin >>’ que como se indicó en la sección 1.3.2, sirve para leer datos (entrada por consola). En este caso se leen tres datos, uno de tipo char, otro de tipo int y otro de tipo float, cuyas variables van a ser modificadas en su contenido con valores que el usuario ingresa por teclado a la consola.</p>
+              <p>Finalmente, se utiliza la función ‘cout <<’ que como se indicó en la sección 1.3.1, sirve para imprimir mensajes de texto y datos (salida por consola). En este caso, esta función se utilizó para imprimir los tres datos leídos por teclado. </p>
+              <h5><strong>Ejercicio 1.13:  </strong>Escribir un programa que permita leer e imprimir un dato de tipo caracter, un dato de tipo entero y un dato de tipo flotante, declarando y definiendo las variables previamente, utilizando las funciones ‘printf’ y ‘scanf’. </h5>
+              <h5><strong>Programa 1.13:  </strong>Código del programa.</h5>
+              <pre><code [highlight]="prefTab[2].tablaDatos4"  [lineNumbers]="true"></code></pre>
+              <br><h5><strong>Salida 1.13:  </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/I/media/salida1.13.png" style="display:block; margin:auto; "><br>
+              <p>Primeramente, en el programa 1.13, se declaran y se definen tres variables: a) letra, de tipo carácter (char), inicializada con el valor de un espacio en blanco (‘ ‘); b) num_entero, de tipo entero (int), inicializada con el valor de cero (0); c) num_flotante, de tipo flotante (float), inicializada con el valor de cero (0.0f).
+                Luego, en este programa se utiliza la función scanf() que como se indicó en la sección 1.3.6, sirve para leer datos (entrada por consola). En este caso se leen tres datos, uno de tipo char, otro de tipo int y otro de tipo float, donde los argumentos que se envían a la función son: a) el especificador de formato, que indica que la variable que se envía corresponde a un tipo de dato específico, por ejemplo char, int, float, etc.; b) la dirección de la variable que va a ser modificada en su contenido, con un valor que el usuario ingresa por teclado a la consola; como se muestra en la Figura 1.19.
+              </p>
+              <br><img src="./assets/images/Capitulos/I/media/figura1.19.png" style="display:block; margin:auto; "><br>
+              <br><h5><strong>Figura 1.19:  </strong>Utilización de especificadores de formato en la función scanf().</h5>
+              <p>Finalmente, en este programa se utiliza la función printf() que como se indicó en la sección 1.3.3, sirve para imprimir mensajes de texto y datos (salida por consola). En este caso para imprimir los tres datos leídos, se utilizan especificadores de formato, para imprimir cada tipo de dato (char, int, float), que como se muestra en Figura 1.20, el especificador de formato correspondiente a un tipo de dato específico, se reemplaza por el valor almacenado en una variable.</p>
+              <br><img src="./assets/images/Capitulos/I/media/figura1.20.png" style="display:block; margin:auto; "><br>
+              <br><h5><strong>Figura 1.20:  </strong>Utilización de especificadores de formato en la función printf().</h5>
+            </mat-tab>
+
+            <mat-tab  label="1.4.5. Nombres de Variables">
+              <br>
+              <h2>Nombres de Variables</h2>
+              <br>
+              <p>Como se mostró en el programa 1.10, cuando se declaran y/o se definen variables, nosotros debemos ponerles un nombre a éstas (identificador), para podernos referir a cada una de las variables dentro del programa (Jones, B., Aitken, P., 2003). Los nombres de las variables pueden tener cualquier cosa, con algunas excepciones, como se mencionan a continuación:
+              </p>
+              <ol>
+                <li>Los nombres de las variables deben comenzar con una letra. El nombre de la variable 5MiVariable es ilegal. Sin embargo, el caracter gui&oacute;n bajo (underscore) se lo considera una letra, y por lo tanto, el identificador _MiVariable es legal.</li>
+                <li>Los nombres de las variables pueden incluir el caracter gui&oacute;n bajo o underscore (&lsquo;_&rsquo;), letras, y n&uacute;meros, pero no s&iacute;mbolos. Por lo que, usted no puede utilizar s&iacute;mbolos como: &lsquo;!&rsquo;, &lsquo;&rdquo;&rsquo;, &lsquo;#&rsquo;, &lsquo;$&rsquo;, &lsquo;%&rsquo;, &lsquo;&amp;&rsquo;, `/`, etc., en los nombres de las variables.</li>
+                <li>Los nombres de las variables no pueden ser palabras reservadas de C/C++, como: char, int, float, cout, cin, _getch, etc. Por ejemplo, usted no puede nombrarle a una variable como &ldquo;float&rdquo;, ya que es una palabra reservada de C que especifica el tipo de dato float.</li>
+                <li>Los nombres de las variables no pueden tener espacios en blanco entre ellas. Por ejemplo, el nombre de la variable &ldquo;_ M i _ Variable&rdquo; es ilegal, lo correcto ser&iacute;a tener el siguiente nombre: &ldquo;_Mi_Variable&rdquo;.</li>
+              </ol>
+              <hr>
+              <h4><strong>Tips de Programación...</strong>
+                <mat-icon>wb_incandescent</mat-icon>
+                <mat-icon>laptop_windows</mat-icon>
+              </h4>
+              <ul *ngFor="let item of prefTab[2].tipsProgramacion">
+                <p>
+                  <mat-icon style="font-size: 15px">check_circle_outline</mat-icon>{{item.tip}}
+                </p>
+              </ul>
+              <hr>
+            </mat-tab>
+
+          </mat-tab-group>
+        </ng-template>
+      </mat-tab>
 
 
-      <mat-tab label="Teoría">
-            <ng-template matTabContent>
-                <br>
-                <h1>1.1.   Creación de un Programa en Lenguaje C/C++</h1>
-                <p>Un programa es una lista de instrucciones debidamente estructuradas para que la computadora ejecute una serie de operaciones o cumpla un propósito. Una operación podría ser la suma de dos números, el perímetro y el área de un círculo, el volumen de un cilindro
-                  o la impresión de algunos datos en la pantalla de la computadora. (Ver Figura 1.1).</p>
-              <img src="./assets/images/Capitulos/I/media/figura1.png" style="display:block; margin:auto; "><br>
-              <h5><strong>Figura 1. </strong>Capítulo I.</h5><br>
-                <ul>
-                    <li>El dibujo de líneas, curvas, polígonos;</li>
-                    <li>El relleno de cuadros, círculos, polígonos, etcétera;</li>
-                    <li>Se encarga del renderizado de fuentes y textos;</li>
-                    <li>Se encarga del manejo de paletas de colores.</li>
-                </ul>
-                <h2>Graficación de Líneas</h2>
-                <p>El componente GDI proporciona la clase Graphics que contiene el método DrawLine, que se lo utiliza de la siguiente manera para dibujar el segmento de línea que conecta A y B:</p>
-                <mathjax [content]='"$g.DrawLine\\left(xA, yA, xB, yB\\right);$"' class='box'></mathjax><br>
-                <p>El contexto gráfico g delante del método normalmente se proporciona como un parámetro del método de dibujo en el programa, y los cuatro argumentos de DrawLine son enteros, que van desde cero hasta algún valor máximo (Ammeraal, L., Zhang,
-                    K., 2017). La llamada anterior a DrawLine produce exactamente la misma salida en la pantalla que esta, donde se conecta B y A:</p>
-                <mathjax [content]='"$g.DrawLine\\left(xB, yB, xA, yA\\right);$"' class='box'></mathjax><br>
-                <img src="./assets/images/Capitulos/I/media/image2.png" style="display:block; margin:auto; "><br>
-                <h5><strong>Figura 1.1. </strong>Dibujo de una línea a través de dos puntos.</h5><br>
-                <h2>Graficación de Rectángulos</h2>
-                <p>Para graficar un rectángulo se utiliza el contexto g con la función DrawRectangle, y se pueden utilizar cinco parámetros como son la pluma de dibujo, las coordenadas iniciales a partir de donde se grafica el rectángulo, el valor del ancho
-                    y el largo del rectángulo (Ammeraal, L., Zhang, K., 2017).</p>
-                <mathjax [content]='"$g.DrawRectangle\\left(Pen, 0, 0, Width, Height\\right);$"' class='box'></mathjax><br>
-                <img src="./assets/images/Capitulos/I/media/image3.png" style="display:block; margin:auto; "><br>
-                <h5><strong>Figura 1.2. </strong>Dibujo de un rectángulo.</h5><br>
-                <h2>Graficación de Cuadrados</h2>
-                <p>Para graficar un cuadrado se utiliza el contexto g con la función DrawRectangle, y se pueden utilizar cinco parámetros como son la pluma de dibujo, las coordenadas iniciales a partir de donde se grafica el cuadrado (Lengyel, E., 2011).
-                    En este caso el valor del ancho y del largo son iguales, por lo que se coloca en ambos parámetros el valor del lado del cuadrado, puesto que el cuadrado es un caso especial del rectángulo.</p>
-                <mathjax [content]='"$g.DrawRectangle\\left(Pen, 0, 0, Side, Side\\right);$"' class='box'></mathjax><br>
-                <img src="./assets/images/Capitulos/I/media/image4.png" style="display:block; margin:auto; "><br>
-                <h5><strong>Figura 1.3. </strong>Dibujo de un cuadrado a partir de un rectángulo.</h5><br>
-                <h2>Graficación de Elipses</h2>
-                <p>Para graficar una elipse se utiliza el contexto g con la función DrawEllipse, y se pueden utilizar cinco parámetros como son la pluma de dibujo, las coordenadas iniciales a partir de donde se grafica la elipse, el valor del ancho y el
-                    largo de la elipse (Ammeraal, L., Zhang, K., 2017).</p>
-                <mathjax [content]='"$g.DrawEllipse\\left(Pen, 0, 0, Width, Height\\right);$"' class='box'></mathjax><br>
-                <img src="./assets/images/Capitulos/I/media/image5.png" style="display:block; margin:auto; "><br>
-                <h5><strong>Figura 1.4. </strong>Dibujo de una elipse.</h5><br>
-                <h2>Graficación de Círculos</h2>
-                <p>Para graficar un círculo se utiliza el contexto g con la función DrawEllipse, y se pueden utilizar cinco parámetros como son la pluma de dibujo, las coordenadas iniciales a partir de donde se grafica el círculo (Lengyel, E., 2011). En
-                    este caso el valor del ancho y del largo de la elipse son iguales y equivalentes al diámetro del círculo, por lo que se coloca en ambos parámetros el valor del diámetro del círculo, puesto que el círculo es un caso especial de la elipse.</p>
-                <mathjax [content]='"$g.DrawEllipse\\left(Pen, 0, 0, Diameter, Diameter\\right);$"' class='box'></mathjax><br>
-                <img src="./assets/images/Capitulos/I/media/image6.png" style="display:block; margin:auto; "><br>
-                <h5><strong>Figura 1.5. </strong>Dibujo de un círculo a partir de una elipse.</h5><br>
-                <h2>Ejes Coordenados por Pantalla</h2>
-                <p>El eje de coordenadas por pantalla del mundo de la computación gráfica es un eje en el cual se conserva el eje positivo de las ‘x’ hacia la derecha tal y como el del mundo real, pero el eje positivo de las ‘y’ es hacia abajo, debido a
-                    que el estándar de fabricación de los monitores y pantallas se basa en el movimiento de los electrones desde arriba hacia abajo y desde la izquierda hacia la derecha aplicando los principios de la energía potencial eléctrica, donde
-                    el origen de coordenadas C(0,0) está en la esquina superior izquierda.</p>
-                <img src="./assets/images/Capitulos/I/media/image7.png" style="display:block; margin:auto; width: 100%;"><br>
-                <h5><strong>Figura 1.6. </strong>Eje de coordenadas del mundo real y del mundo de la Computación Gráfica. </h5><br>
-                <br>
-                <h1>1.2. Pinceles y Relleno de Figuras en GDI+</h1>
-                <p>La interfaz de programación de aplicaciones GDI+, proporciona una serie de clases de pincel (brush) para rellenar los interiores de figuras geométricas cerradas como: círculos, elipses, rectángulos, cuadrados, triángulos y polígonos. Una
-                    figura cerrada consta de un entorno (outline) y un interior, donde el contorno se dibuja con un bolígrafo (pen) y el interior se rellena con un pincel (brush). Para el relleno de figuras cerradas se pueden utilizar las clases: SolidBrush,
-                    HatchBrush, TextureBrush, LinearGradientBrush y PathGradientBrush, donde todas estas clases se derivan de la clase Brush (Steeb, W.H., Hardy, A., 2008). La Figura 1.7 muestra un rectángulo relleno con un pincel sólido y una elipse
-                    rellena con un pincel de sombreado.</p>
-                <img src="./assets/images/Capitulos/I/media/image008.gif" style="display:block; margin:auto;"><br>
-                <h5><strong>Figura 1.7. </strong>Rectángulo relleno y elipse rellena.</h5><br>
-                <p>Una figura cerrada, como un rectángulo o una elipse, consta de un contorno y un interior. El contorno se dibuja con un bolígrafo (pen) y el interior se rellena con un pincel (brush). GDI+ proporciona varias clases de pincel para rellenar
-                    los interiores de formas cerradas: SolidBrush, HatchBrush, TextureBrush, LinearGradientBrush y PathGradientBrush. Todas estas clases heredan de la clase Brush. La siguiente ilustración muestra un rectángulo relleno con un pincel sólido
-                    y una elipse rellena con un pincel de sombreado.</p>
-                <h2>Pinceles Sólidos (Solid Brushes)</h2>
-                <p>Para rellenar una figura geométrica cerrada se debe utilizar un objeto de la clase Graphics y un pincel de la clase Brush. El objeto de la clase Graphics proporciona métodos como: FillRectangle, FillEllipse y FillPolygon (Steeb, W.H.,
-                    Hardy, A., 2008). El objeto de la clase Brush almacena los atributos del relleno como el color. El objeto pincel (brush) se envía como uno de los argumentos a los parámetros de la función: FillRectangle, FillEllipse y FillPolygon.
-                    El siguiente código de ejemplo muestra cómo rellenar un rectángulo con un color azul sólido:</p>
-                <pre *ngFor="let formula of introduccion"><code [highlight]="formula.f1" (highlighted)="onHighlight($event)" [lineNumbers]="true"></code></pre><br>
-                <h2>Pinceles de Sombreado o de Escotilla (Hatch Brushes)</h2>
-                <p>Para rellenar una figura geométrica con un pincel de sombreado, se debe especificar un color de primer plano, un color de fondo y un estilo de sombreado, donde el color de primer plano es el color de la trama (hatching). La interfaz de
-                    programación de aplicaciones GDI+, proporciona más de 50 estilos de sombreado (Steeb, W.H., Hardy, A., 2008). Un código de ejemplo se muestra a continuación con un estilo de sombreado Vertical:</p>
-                <pre *ngFor="let formula of introduccion"><code [highlight]="formula.f2" (highlighted)="onHighlight($event)" [lineNumbers]="true"></code></pre><br>
-                <p>La Figura 1.8 muestra tres ejemplos de pinceles de sombreado: Horizontal, Diagonal hacia adelante (ForwardDiagonal) y Cruz (Cross).</p>
-                <img src="./assets/images/Capitulos/I/media/image009.gif" style="display:block; margin:auto;"><br>
-                <h5><strong>Figura 1.8. </strong>Ejemplos de pinceles de sombreado.</h5><br>
-                <h2>Pinceles de Textura (Texture Brushes)</h2>
-                <p>Para rellenar una figura geométrica con una textura almacenada en un mapa de bits (bitmap), se puede utilizar un pincel de textura (Steeb, W.H., Hardy, A., 2008). Así, por ejemplo, si se tiene una imagen almacenada en un archivo en el
-                    disco duro llamado MyTexture.bmp, se puede asignar a una elipse un relleno con esta imagen. El siguiente código de ejemplo muestra lo expuesto:</p>
-                <pre *ngFor="let formula of introduccion"><code [highlight]="formula.f3" (highlighted)="onHighlight($event)" [lineNumbers]="true"></code></pre><br>
-                <p>La Figura 1.9 muestra la elipse rellena con una imagen de un archivo de mapa de bits.</p>
-                <table>
-                    <tr>
-                        <td>
-                            <img src="./assets/images/Capitulos/I/media/image010.gif" style="display:block; margin:auto; width: 45%;"><br>
-                            <h5><strong>a) </strong>Imagen MyTexture.bmp</h5><br>
-                        </td>
-                        <td></td>
-                        <td></td>
-                        <td>
-                            <img src="./assets/images/Capitulos/I/media/image011.gif" style="display:block; margin:auto;"><br>
-                            <h5><strong>b) </strong>Elipse rellena con una imagen</h5><br>
-                        </td>
-                    </tr>
-                </table>
-                <h5><strong>Figura 1.9. </strong>Ejemplo de relleno de una elipse con una imagen.</h5><br>
-                <h2>Pinceles de Degradado (Gradient Brushes)</h2>
-                <p>Para rellenar una figura geométrica con un pincel de degradado, se debe especificar un primer color de plano que cambia gradualmente a un segundo color de plano a medida que se mueve a lo largo de la figura geométrica de manera horizontal,
-                    vertical o diagonalmente (Steeb, W.H., Hardy, A., 2008). La interfaz de programación de aplicaciones GDI+, proporciona dos tipos de pinceles de degradado que son el lineal y el de ruta. El siguiente código de ejemplo muestra cómo rellenar
-                    una elipse con un pincel de degradado horizontal que cambia de azul a verde a medida que se mueve desde el borde izquierdo de la elipse al borde derecho.</p>
-                <pre *ngFor="let formula of introduccion"><code [highlight]="formula.f4" (highlighted)="onHighlight($event)" [lineNumbers]="true"></code></pre><br>
-                <p>La Figura 1.10 muestra la elipse rellena con un pincel de degradado.</p>
-                <img src="./assets/images/Capitulos/I/media/image012.gif" style="display:block; margin:auto;"><br>
-                <h5><strong>Figura 1.10. </strong>Ejemplo de relleno de una elipse con un pincel de degradado.</h5><br>
-                <h2>Relleno de  Polígono (Fill Polygon)</h2>
-                <p>Para rellenar un polígono se debe cumplir con los siguientes pasos: 1) Crear un objeto de tipo pincel (brush) con un color de relleno; 2) Crear un arreglo de puntos (Point/PointF) para definir un polígono; 3) Rellenar el área poligonal
-                    correspondiente al polígono pintado en la pantalla, utilizando la función FillPolygon (Steeb, W.H., Hardy, A., 2008). El siguiente código de ejemplo está diseñado para su uso con Windows Forms y requiere un objeto ‘e’ de tipo PaintEventArgs,
-                    que es un parámetro del controlador del evento Paint.</p>
-                <pre *ngFor="let formula of introduccion"><code [highlight]="formula.f5" (highlighted)="onHighlight($event)" [lineNumbers]="true"></code></pre><br>
-
-            </ng-template>
-        </mat-tab>
         <mat-tab label="Video Tutorial">
             <ng-template matTabContent>
                 <br>
@@ -572,318 +1334,6 @@
             </ng-template>
         </mat-tab>
 
-        <mat-tab label="Casos de Estudio">
-            <ng-template matTabContent>
-                <mat-tab-group>
-                    <!-- <mat-tab *ngFor="let tab of asyncTabs | async"> -->
-                    <mat-tab *ngFor="let tab of prefTabs" label="{{tab.label}}">
-                        <br>
-                        <h2>{{tab.title}}</h2>
-                        <a href="{{tab.link}}" download="ProgramaCasos">
-                            <mat-icon>save_alt</mat-icon><strong>Descargar {{tab.label}} CompGraf.zip</strong>
-                        </a>
-                        <br><br>
-                        <h3><strong>A)   Problema</strong></h3>
-                        <p>{{tab.problema}}</p>
-                        <ul *ngFor="let item of tab.formulaA">
-                            <li>
-                                <mathjax [content]=item class='box'></mathjax>
-                            </li>
-                        </ul>
-                        <img src="{{tab.imagenCaso5}}" style="display:block; margin:auto; width: 75%;"><br>
-                        <img src="{{tab.imagen1}}" style="display:block; margin:auto; "><br>
-                        <h5><strong>{{tab.figuraNum1}}</strong>{{tab.figura1}}</h5><br>
-                        <h3><strong>B)   Análisis</strong></h3>
-                        <p>{{tab.analisis}}</p>
-                        <h4><strong>B.1)   Requerimiento de los Datos</strong></h4>
-                        <table>
-                            <tbody *ngFor="let item of tab.requerimientosDatos">
-                                <tr>
-                                    <h4><strong>{{item.t}}</strong></h4>
-                                    <td>
-                                        <mathjax [content]=item.a class='box'></mathjax>
-                                    </td>
-                                    <td>
-                                        <mathjax [content]=item.b class='box'></mathjax>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <h4><strong>B.2) Diagrama de Entrada-Salida</strong></h4>
-                        <p>{{tab.diagramaES}}</p>
-                        <img src="{{tab.imagen2}}" style="display:block; margin:auto; width: 75%;"><br>
-                        <h5><strong>{{tab.figuraNum2}}</strong>{{tab.figura2}}</h5><br>
-                        <h4><strong>B.3) Diagrama de Clases</strong></h4>
-                        <p>{{tab.diagramaC1}}</p>
-                        <p>{{tab.diagramaC2}}</p>
-                        <img src="{{tab.imagen3}}" style="display:block; margin:auto; width: 75%;"><br>
-                        <h5><strong>{{tab.figuraNum3}}</strong>{{tab.figura3}}</h5><br>
-                        <h3><strong>C)   Diseño</strong></h3>
-                        <p>{{tab.diseno}}</p>
-                        <ul *ngFor="let item of tab.algoritmos">
-                            <h4><strong>{{item.t}}</strong></h4>
-                            <p>{{item.a}}</p>
-                            <p>{{item.b}}</p>
-                            <p>{{item.c}}</p>
-                            <p>{{item.d}}</p>
-                            <p>{{item.e}}</p>
-                            <p>{{item.f}}</p>
-                            <p>{{item.g}}</p>
-                            <p>{{item.h}}</p>
-                            <p>{{item.i}}</p>
-                            <p>{{item.j}}</p>
-                            <p>{{item.k}}</p>
-                        </ul>
-                        <h3><strong>{{tab.tituloGeometria}}</strong></h3>
-                        <ul *ngFor="let item of tab.geometria">
-                            <ul *ngFor="let x of item.p">
-                                <h4><strong>{{x.t}}</strong></h4>
-                                <p>{{x.d}}</p>
-                                <ul *ngFor="let itemFotos of x.i">
-                                    <img src="{{itemFotos.path}}" style="display:block; margin:auto;"><br>
-                                    <h5><strong>{{itemFotos.titulo}}</strong>{{itemFotos.descriptitulo}}</h5><br>
-                                </ul>
-                            </ul>
-                            <ul *ngFor="let x of item.s">
-                                <h4><strong>{{x.t}}</strong></h4>
-                                <ul *ngFor="let itemPasos of x.pasos">
-                                    <p>{{itemPasos.d}}</p>
-                                    <ul *ngFor="let k of itemPasos.formulas">
-                                        <mathjax [content]=k class='box'></mathjax><br>
-                                    </ul>
-                                </ul>
-                            </ul>
-                        </ul>
-                        <h3><strong>D)   Implementación</strong></h3>
-                        <p>{{tab.implementacion1}}</p>
-                        <p>{{tab.implementacion2}}</p>
-                        <img src="{{tab.imagen4}}" style="display:block; margin:auto; width: 75%;"><br>
-                        <h5><strong>{{tab.figuraNum4}}</strong>{{tab.figura4}}</h5><br>
-                        <p>{{tab.implementacion3}}</p>
-                        <img src="{{tab.imagen5}}" style="display:block; margin:auto; width: 75%;"><br>
-                        <h5><strong>{{tab.figuraNum5}}</strong>{{tab.figura5}}</h5><br>
-                        <p>{{tab.implementacion4}}</p>
-                        <img src="{{tab.imagen6}}" style="display:block; margin:auto; width: 75%;"><br>
-                        <h5><strong>{{tab.figuraNum6}}</strong>{{tab.figura6}}</h5><br>
-                        <p>{{tab.implementacion5}}</p>
-                        <img src="{{tab.imagen7}}" style="display:block; margin:auto; width: 75%;"><br>
-                        <h5><strong>{{tab.figuraNum7}}</strong>{{tab.figura7}}</h5><br>
-                        <p>{{tab.implementacion6}}</p>
-                        <img src="{{tab.imagen8}}" style="display:block; margin:auto; width: 75%;"><br>
-                        <h5><strong>{{tab.figuraNum8}}</strong>{{tab.figura8}}</h5><br>
-                        <p>{{tab.implementacion7}}</p>
-                        <img src="{{tab.imagen9}}" style="display:block; margin:auto; width: 75%;"><br>
-                        <h5><strong>{{tab.figuraNum9}}</strong>{{tab.figura9}}</h5><br>
-                        <p>{{tab.implementacion8}}</p>
-                        <h5><strong>{{tab.tabla1}}</strong>{{tab.tabladetalle1}}</h5><br>
-                        <TABLE BORDER WIDTH="100%" CELLPADDING=1 CELLSPACING=0 class="mat-elevation-z8">
-                            <TR>
-                                <TH>Objeto</TH>
-                                <TH>Propiedad</TH>
-                                <TH>Valor</TH>
-                            </TR>
-                            <tbody *ngFor="let item of tab.tablaDatos1">
-                                <TR ALIGN=center>
-                                    <TD>
-                                        <mathjax [content]=item.Objeto class='box'></mathjax>
-
-                                    </TD>
-                                    <TD>
-                                        <ul *ngFor="let i of item.Propiedad" style="list-style-type: none;">
-                                            <li>{{i}}</li>
-                                        </ul>
-                                    </TD>
-                                    <TD>
-                                        <ul *ngFor="let i of item.Valor" style="list-style-type: none;">
-                                            <li>{{i}}</li>
-                                        </ul>
-                                    </TD>
-                                </TR>
-                            </tbody>
-                        </TABLE><br>
-                        <p>{{tab.implementacion9}}</p>
-                        <img src="{{tab.imagen10}}" style="display:block; margin:auto; width: 75%;"><br>
-                        <h5><strong>{{tab.figuraNum10}}</strong>{{tab.figura10}}</h5><br>
-                        <p>{{tab.implementacion10}}</p>
-                        <p>{{tab.implementacion11}}</p>
-                        <p>{{tab.implementacion12}}</p>
-                        <ul *ngFor="let item of tab.metodos">
-                            <h4><strong>{{item.t}}</strong></h4>
-                            <p>{{item.a}}</p>
-                            <pre><code [highlight]="item.b" (highlighted)="onHighlight($event)" [lineNumbers]="true"></code></pre>
-                        </ul>
-                        <h4><strong>Tips de Programación...</strong>
-                            <mat-icon>wb_incandescent</mat-icon>
-                            <mat-icon>laptop_windows</mat-icon>
-                        </h4>
-                        <hr>
-                        <ul *ngFor="let item of tab.tipsProgramacion">
-                            <p>
-                                <mat-icon>check_circle_outline</mat-icon>{{item.tip}}
-                            </p>
-                        </ul>
-                        <hr>
-                        <p>{{tab.implementacion13}}</p>
-                        <h5><strong>{{tab.tabla2}}</strong>{{tab.tabladetalle2}}</h5><br>
-                        <pre><code [highlight]="tab.tablaDatos2" (highlighted)="onHighlight($event)" [lineNumbers]="true"></code></pre>
-                        <p>{{tab.implementacion13}}</p>
-                        <h5><strong>{{tab.tabla3}}</strong>{{tab.tabladetalle3}}</h5><br>
-                        <pre><code [highlight]="tab.tablaDatos3" (highlighted)="onHighlight($event)" [lineNumbers]="true"></code></pre>
-                        <br>
-                        <p>{{tab.implementacion15}}</p>
-                        <p>{{tab.implementacion16}}</p>
-                        <p>{{tab.implementacion17}}</p>
-                        <img src="{{tab.imagen11}}" style="display:block; margin:auto; "><br>
-                        <h5><strong>{{tab.figuraNum11}}</strong>{{tab.figura11}}</h5><br>
-                        <img src="{{tab.imagen12}}" style="display:block; margin:auto; width: 75%;"><br>
-                        <h5><strong>{{tab.figuraNum12}}</strong>{{tab.figura12}}</h5><br>
-                        <h3><strong>E)   Pruebas</strong></h3>
-                        <p>{{tab.implementacion18}}</p>
-                        <img src="{{tab.imagen13}}" style="display:block; margin:auto; width: 75%;"><br>
-                        <h5><strong>{{tab.figuraNum13}}</strong>{{tab.figura13}}</h5><br>
-
-                    </mat-tab>
-                </mat-tab-group>
-            </ng-template>
-        </mat-tab>
-        <mat-tab label="Casos Propustos">
-            <ng-template matTabContent>
-                <mat-tab-group>
-                    <!-- <mat-tab *ngFor="let tab of asyncTabs | async"> -->
-                    <mat-tab *ngFor="let tab of casosPropuesto" label="{{tab.label}}">
-                        <br>
-                        <table>
-                            <tr>
-                                <td>
-                                    <h2 style="color:green;"><strong>{{tab.tituloN}}</strong></h2>
-                                </td>
-                                <td>
-                                    <h2>{{tab.titulo}}</h2>
-                                </td>
-                            </tr>
-                        </table>
-                        <h3><strong>{{tab.subtitulo}}</strong></h3>
-                        <p>{{tab.problema}}</p>
-                        <p>{{tab.tareaDescrip}}</p>
-                        <ul *ngFor="let item of tab.tareas">
-                            <p>{{item.tarea}}</p>
-                        </ul>
-                        <img src="{{tab.fotoPath}}" style="display:block; margin:auto; width: 50%;"><br>
-                        <h5><strong>{{tab.fotoN}}</strong>{{tab.fotoDescrip}}</h5><br>
-                    </mat-tab>
-                </mat-tab-group>
-            </ng-template>
-        </mat-tab>
-        <mat-tab label="Pracniques">
-            <ng-template matTabContent>
-                <mat-tab-group>
-                    <!-- <mat-tab *ngFor="let tab of asyncTabs | async"> -->
-                    <mat-tab *ngFor="let tab of praqnique" label="{{tab.label}}">
-                        <br>
-                        <table>
-                            <tr>
-                                <td>
-                                    <h2 style="color:green;"><strong>{{tab.tituloN}}</strong></h2>
-                                </td>
-                                <td>
-                                    <h2>{{tab.titulo}}</h2>
-                                </td>
-                            </tr>
-                        </table>
-                        <TABLE BORDER WIDTH="100%" CELLPADDING=1 CELLSPACING=0 class="mat-elevation-z8">
-                            <TR>
-                                <TABLE>
-                                    <TR><strong>SINOPSIS</strong></TR>
-                                    <TR>{{tab.sinopsisDescrip}}</TR>
-                                </TABLE>
-                            </TR>
-                            <TR>
-                                <TABLE BORDER WIDTH="100%" CELLPADDING=1 CELLSPACING=0 class="mat-elevation-z8">
-                                    <TR *ngFor="let item of tab.sinopsis">
-                                        <TD><strong>{{item.titulo}}</strong>{{item.descrip}}</TD>
-                                    </TR>
-                                </TABLE>
-                            </TR>
-                        </TABLE><br>
-                        <a href="{{tab.link}}" download="ProgramaPracnique">
-                            <mat-icon>save_alt</mat-icon><strong>Descargar {{tab.tituloN}} PracniqueCompGraf.zip</strong>
-                        </a>
-                        <br><br>
-                        <h3><strong>{{tab.A.subtitulo}}</strong></h3>
-                        <p>{{tab.A.problema}}</p>
-                        <img src="{{tab.A.fotoPath}}" style="display:block; margin:auto; width: 50%;"><br>
-                        <h5><strong>{{tab.A.fotoN}}</strong>{{tab.A.fotoDescrip}}</h5><br>
-                        <h3><strong>{{tab.B.subtitulo}}</strong></h3>
-                        <p>{{tab.B.problema}}</p>
-                        <img src="{{tab.B.fotoPath}}" style="display:block; margin:auto; width: 50%;"><br>
-                        <h5><strong>{{tab.B.fotoN}}</strong>{{tab.B.fotoDescrip}}</h5><br>
-                        <ul *ngFor="let itemPasos of tab.B.listaB">
-                            <p>{{itemPasos.parrafo}}</p>
-                            <TABLE BORDER CELLPADDING=1 CELLSPACING=0 class="mat-elevation-z8">
-                                <TR *ngFor="let t of itemPasos.tabla">
-                                    <TD><img src="{{t.fotoPath}}" style="display:block; margin:auto; "></TD>
-                                    <TD>
-                                        <ul *ngFor="let f of t.formulas">
-                                            <mathjax [content]=f class='box'></mathjax><br>
-                                        </ul>
-                                    </TD>
-                                </TR>
-                            </TABLE>
-                            <h4><strong>{{itemPasos.teorema}}</strong></h4>
-                            <ul *ngFor="let k of itemPasos.formulas">
-                                <mathjax [content]=k class='box'></mathjax><br>
-                            </ul>
-                        </ul>
-                        <h3><strong>{{tab.C.subtitulo}}</strong></h3>
-                        <dl *ngFor="let itemAlgoritmos of tab.C.algoritmosC">
-                            <dt>{{itemAlgoritmos.titulo}}</dt>
-                            <dd>
-                                <ol *ngFor="let p of itemAlgoritmos.pasos; index as i">
-                                    <li value="{{i+1}}">{{p}}</li>
-                                </ol>
-                                <ol *ngFor="let p of itemAlgoritmos.pasosFormulas; index as i">
-                                    <li value="{{i+1}}">{{p}}</li>
-                                </ol>
-                            </dd>
-                        </dl>
-                        <h3><strong>{{tab.D.subtitulo}}</strong></h3>
-                        <div *ngFor="let itemCodigos of tab.D.listaCodigo">
-                            <p>{{itemCodigos.problema}}</p>
-                            <h5><strong>{{itemCodigos.tablaN}}</strong>{{itemCodigos.tablaDescrip}}</h5><br>
-                            <pre><code [highlight]="itemCodigos.tablaDatos" (highlighted)="onHighlight($event)" [lineNumbers]="true"></code></pre><br>
-                        </div>
-                        <h3><strong>{{tab.E.subtitulo}}</strong></h3>
-                        <p>{{tab.E.problema}}</p>
-                        <img src="{{tab.E.fotoPath}}" style="display:block; margin:auto; width: 75%;"><br>
-                        <h5><strong>{{tab.E.fotoN}}</strong>{{tab.E.fotoDescrip}}</h5><br>
-                    </mat-tab>
-                </mat-tab-group>
-            </ng-template>
-        </mat-tab>
-        <mat-tab label="Pracniques Propuestos">
-            <ng-template matTabContent>
-                <mat-tab-group>
-                    <!-- <mat-tab *ngFor="let tab of asyncTabs | async"> -->
-                    <mat-tab *ngFor="let tab of praqniquePropuesto" label="{{tab.label}}">
-                        <br>
-                        <table>
-                            <tr>
-                                <td>
-                                    <h2 style="color:green;"><strong>{{tab.tituloN}}</strong></h2>
-                                </td>
-                                <td>
-                                    <h2>{{tab.titulo}}</h2>
-                                </td>
-                            </tr>
-                        </table>
-                        <h3><strong>{{tab.subtitulo}}</strong></h3>
-                        <p>{{tab.problema}}</p>
-                        <img src="{{tab.fotoPath}}" style="display:block; margin:auto; width: 50%;"><br>
-                        <h5><strong>{{tab.fotoN}}</strong>{{tab.fotoDescrip}}</h5><br>
-                    </mat-tab>
-                </mat-tab-group>
-            </ng-template>
-        </mat-tab>
         <mat-tab label="Evaluación">
             <ng-template matTabContent>
                 <div class="Evaluacion">
