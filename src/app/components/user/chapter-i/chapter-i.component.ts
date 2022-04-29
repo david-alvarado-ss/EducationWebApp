@@ -262,8 +262,7 @@ export class ChapterIComponent implements OnInit {
               ObjForm.Close();
           }`}
         ],
-        tipsProgramacion:[{tip:'Se utiliza la función float.Parse() para convertir un tipo de dato carácter o cadena a tipo flotante.'},
-          {tip:'Se utiliza la función ToString() para convertir un tipo de dato numérico a tipo carácter o cadena.'}],
+        tipsProgramacion:[{tip:'El operador de incremento ++ utilizado en notación postfija del ejemplo anterior es equivalente a: x=x+1; mientras que el operador de decremento--utilizado en notación postfija del ejemplo anterior es equivalente a: y=y-1.'},],
         implementacion13: 'La implementación de la clase CRectangle, se presenta a continuación en la Tabla 1.1.2, que contiene datos miembro y funciones miembro que realizan diferentes operaciones.',
         linea1ej1:`cout << "Hola mundo." << endl;`,
         linea2ej1:`cout << "Bienvenidos al Lenguaje C/C++." << endl;`,
@@ -1069,6 +1068,22 @@ int main()
         ],
       },
       { label: 'Caso 1.4',
+        code1:`int x = 7 + 2 * 6 / 3 -1;`,
+        code2:`int x = 7 + 2 * 6 / 3 - 1;
+      = 7 + 12 / 3 - 1;
+      = 7 + 4 - 1;
+      = 11 - 1;
+      = 10;
+`, code3:`int x = (7 + 2) * 6 / (3 - 1);
+      = 9 * 6 / 2;
+      = 54 / 2;
+      = 27;`,
+        code4:`int x = (((7 + 3) / 2) * (6 - 2)) - (18 / (7 + 2));
+      = ((10 / 2) * 4) - (18 / 9);
+      = (5 * 4) - 2;
+      = 20 - 2;
+      = 18;
+`,
          tablaDatos1:`/*******************************************************
  WinConsolaPrograma_1_14
 *******************************************************/
@@ -1236,6 +1251,289 @@ void main()
 	system("pause");
 }
 `,
+        tablaDatos13:`/*******************************************************
+ WinConsolaPrograma_1_18
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
+
+// Función principal.
+void main()
+{
+	// Uso de los operadores aritméticos unarios en expresiones simples.
+	cout << "Uso de los operadores aritméticos unarios";
+	cout << " en expresiones simples." << endl;
+	cout << endl;
+
+	// Operador de negación.
+	cout << "Uso del operador de negación." << endl;
+	int a = 5;
+	cout << "El valor de a = " << a << endl;
+	int b = -a; // b = -5
+	cout << "El valor de b = " << b << endl;
+	cout << endl;
+
+	// Operador de incremento.
+	cout << "Uso del operador de incremento." << endl;
+	int x = 5;
+	cout << "El valor de x = " << x << endl;
+	++x; // x = 6 (prefijo)
+	cout << "El valor de ++x = " << x << endl;
+	x++; // x = 7 (postfijo)
+	cout << "El valor de x++ = " << x << endl;
+	cout << endl;
+
+	// Operador de decremento.
+	cout << "Uso del operador de decremento." << endl;
+	int y = 5;
+	cout << "El valor de y = " << y << endl;
+	--y; // y = 4 (prefijo)
+	cout << "El valor de --y = " << y << endl;
+	y--; // y = 3 (postfijo)
+	cout << "El valor de y-- = " << y << endl;
+	cout << endl;
+
+	// Incorporar una pausa en el programa.
+	system("pause");
+}`,
+        tablaDatos14:`/*******************************************************
+ WinConsolaPrograma_1_19
+*******************************************************/
+
+// Librerías.
+#include <stdio.h>
+#include <cstdlib>
+
+// Función principal.
+int main()
+{
+	// Uso de los operadores aritméticos unarios en expresiones simples.
+	printf("Uso de los operadores aritméticos unarios");
+	printf(" en expresiones simples.\n");
+	printf("\n");
+
+	// Operador de negación.
+	printf("Uso del operador de negación.\n");
+	int a = 5;
+	printf("El valor de a = %d\n", a);
+	int b = -a; // b = -5
+	printf("El valor de b = %d\n", b);
+	printf("\n");
+
+	// Operador de incremento.
+	printf("Uso del operador de incremento.\n");
+	int x = 5;
+	printf("El valor de x = %d\n", x);
+	++x; // x = 6 (prefijo)
+	printf("El valor de ++x = %d\n", x);
+	x++; // x = 7 (postfijo)
+	printf("El valor de x++ = %d\n", x);
+	printf("\n");
+
+	// Operador de decremento.
+	printf("Uso del operador de decremento.\n");
+	int y = 5;
+	printf("El valor de y = %d\n", y);
+	--y; // y = 4 (prefijo)
+	printf("El valor de --y = %d\n", y);
+	y--; // y = 3 (postfijo)
+	printf("El valor de y-- = %d\n", y);
+	printf("\n");
+
+	// Incorporar una pausa en el programa.
+	system("pause");
+}`,
+      tablaDatos15:`/*******************************************************
+ WinConsolaPrograma_1_20
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
+
+// Función principal.
+int main()
+{
+	// Declaración de variables.
+	int a, b, c, d;
+	int x, y, z, w;
+
+	// Paso 1.
+	a = 5; b = 2; c = 0; d = 0;
+	x = -3; y = -4; z = 1; w = -1;
+
+	cout << "Uso de los operadores aritméticos unarios";
+	cout << " en expresiones complejas." << endl;
+	cout << endl;
+	cout << "a = " << a << ", b = " << b << ", c = " << c << ", d = " << d << endl;
+	// a = 5; b = 2; c = 0; d = 0;
+	cout << endl;
+	cout << "x = " << x<< ", y = " << y << ", z = " << z << ", w = " << w << endl;
+	// x = -3; y = -4; z = 1; w = -1;
+	cout << endl;
+
+	// Paso 2.
+	y = (++y) * (b--); // y = -3 * 2; y = -6;
+	cout << "y = " << y << endl;
+	// Paso 3.
+	x = (a++) * (--x); // x = 5 * (-4); x = -20;
+	cout << "x = " << x << endl;
+	// Paso 4.
+	z = (x++) + (++y); // z = (-20) + (-5); z = -25
+	cout << "z = " << z << endl;
+	cout << endl;
+	cout << "x = " << x << ", y = " << y << ", z = " << z << endl;
+	// x = -19; y = -5; z = -25
+	cout << endl;
+	// Paso 5.
+	c = (--a) - (b++); // z = 5 - 1; z = 4;
+	cout << "c = " << c << endl;
+	// Paso 6.
+	d = (z++) / (--c); // z = (-25) / 3; z = -8;
+	cout << "d = " << d << endl;
+	// Paso 7.
+	w = (a++) % (++b); // w = 5 % 3; w = 2;
+	cout << "w = " << w << endl;
+	// Paso 8.
+	z = (++x) + (y--) + (++z); // z = (-18) + (-5) + (-23); z = -46
+	cout << "z = " << z << endl;
+	cout << endl;
+
+	// Paso 9.
+	cout << "a = " << a << ", b = " << b << ", c = " << c << ", d = " << d << endl;
+	// a = 6; b = 3; c = 3; d = -8;
+	cout << endl;
+	// Paso 10.
+	cout << "x = " << x << ", y = " << y << ", z = " << z << ", w = " << w << endl;
+	// x = -18; y = -6; z = -46; w = 2;
+	cout << endl;
+
+	// Incorporar una pausa en el programa.
+	system("pause");
+}`,
+        tablaDatos16:`/*******************************************************
+ WinConsolaPrograma_1_21
+*******************************************************/
+
+// Librerías.
+#include <stdio.h>
+#include <cstdlib>
+
+// Función principal.
+int main()
+{
+	int a, b, c, d;
+	int x, y, z, w;
+
+	// Paso 1.
+	a = 5; b = 2; c = 0; d = 0;
+	x = -3; y = -4; z = 1; w = -1;
+
+	printf("Uso de los operadores aritméticos unarios");
+	printf(" en expresiones complejas.\n");
+	printf("\n");
+	printf("a = %d, b = %d, c = %d, d = %d\n", a, b, c, d);
+	// a = 5; b = 2; c = 0; d = 0;
+	printf("\n");
+	printf("x = %d, y = %d, z = %d, w = %d\n", x, y, z, w);
+	// x = -3; y = -4; z = 1; w = -1;
+	printf("\n");
+
+	// Paso 2.
+	y = (++y) * (b--); // y = -3 * 2; y = -6;
+	printf("y = %d\n", y);
+	// Paso 3.
+	x = (a++) * (--x); // x = 5 * (-4); x = -20;
+	printf("x = %d\n", x);
+	// Paso 4.
+	z = (x++) + (++y); // z = (-20) + (-5); z = -25
+	printf("z = %d\n", z);
+	printf("\n");
+	printf("x = %d, y = %d, z = %d\n", x, y, z);
+	// x = -19; y = -5; z = -25
+	printf("\n");
+	// Paso 5.
+	c = (--a) - (b++); // z = 5 - 1; z = 4;
+	printf("c = %d\n", c);
+	// Paso 6.
+	d = (z++) / (--c); // z = (-25) / 3; z = -8;
+	printf("d = %d\n", d);
+	// Paso 7.
+	w = (a++) % (++b); // w = 5 % 3; w = 2;
+	printf("w = %d\n", w);
+	// Paso 8.
+	z = (++x) + (y--) + (++z); // z = (-18) + (-5) + (-23); z = -46
+	printf("z = %d\n", z);
+	printf("\n");
+
+	// Paso 9.
+	printf("a = %d, b = %d, c = %d, d = %d\n", a, b, c, d);
+	// a = 6; b = 3; c = 3; d = -8;
+	printf("\n");
+	// Paso 10.
+	printf("x = %d, y = %d, z = %d, w = %d\n", x, y, z, w);
+	// x = -18; y = -6; z = -46; w = 2;
+	printf("\n");
+
+	// Incorporar una pausa en el programa.
+	system("pause");
+}`,
+        tablaDatos17:`/*******************************************************
+ WinConsolaPrograma_1_22
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
+
+// Función principal.
+void main()
+{
+	// Declaración de variables y definición de expresiones.
+	int x = 7 + 2 * 6 / 3 - 1;
+	int y = (7 + 2) * 6 / (3 - 1);
+	int z = (((7 + 3) / 2) * (6 - 2)) - (18 / (7 + 2));
+
+	// Imprimir los valores de las expresiones numéricas.
+	cout << "x = " << x << endl;
+	cout << "y = " << y << endl;
+	cout << "z = " << z << endl;
+
+	// Incorporar una pausa en el programa.
+	system("pause");
+}`,
+        tablaDatos18:`/*******************************************************
+ WinConsolaPrograma_1_23
+*******************************************************/
+
+// Librerías.
+#include <stdio.h>
+#include <cstdlib>
+
+// Función principal.
+void main()
+{
+	// Declaración de variables y definición de expresiones.
+	int x = 7 + 2 * 6 / 3 - 1;
+	int y = (7 + 2) * 6 / (3 - 1);
+	int z = (((7 + 3) / 2) * (6 - 2)) - (18 / (7 + 2));
+
+	// Imprimir los valores de las expresiones numéricas.
+	printf("x = %d\n", x);
+	printf("y = %d\n", y);
+	printf("z = %d\n", z);
+
+	// Incorporar una pausa en el programa.
+	system("pause");
+}`,
         math1: '$P=2a+2b$',
         implementacion14: 'La implementación de la clase frmTriangle, se presenta a continuación en la Tabla 1.4.3, que es la clase que representa a la interfaz gráfica de usuario de la figura geométrica conocida como Triángulo.',
         tabla3:'Tabla 1.4.3. ',
@@ -1251,6 +1549,9 @@ x = x + y; // x = 12
           {Objeto:'x = x % y;',Propiedad:['Asigna el valor de x % y en la misma variable x.'],Valor:['Librería de Tiempo (C Time Library). Esta librería contiene funciones para manipular y formatear la fecha y hora del sistema.']},
           {Objeto:'',Propiedad:['#include <string>'],Valor:['Librería de Cadenas de Caracteres (String Library). Esta librería contiene la definición de macros, constantes, funciones y tipos de utilidad para trabajar con cadenas de caracteres y algunas operaciones de manipulación de memoria.']},
         ],
+        tipsProgramacion:[{tip:'El operador de incremento ++ utilizado en notación postfija del ejemplo anterior es equivalente a: x=x+1; mientras que el operador de decremento--utilizado en notación postfija del ejemplo anterior es equivalente a: y=y-1.'},],
+        tipsProgramacion1:[{tip:'Observe que los operadores aritméticos se utilizan para evaluar un valor numérico, que se conoce como expresión numérica. Generalizando, algo que evalúa a algo más se considera una expresión. En el siguiente capítulo veremos que también existen expresiones lógicas (expresiones con operadores lógicos), las cuales evalúan valores de veracidad o falsedad.'},],
+
         implementacion15: 'La clase frmTriangle tiene como datos miembro un objeto de tipo CTriangle llamado ObjTriangle, el cual es el encargado de acceder a las funciones públicas de la clase CTriangle para realizar diferentes cálculos y operaciones. ',
         implementacion16: 'En el evento Load del formulario, cuyo procedimiento se llama frmTriangle_Load(), se utiliza el objeto ObjTriangle, para llamar a la función pública InitializeData(), que se encarga de inicializar los datos y controles del formulario. En el evento Click del botón btnCalculate, cuyo procedimiento se llama btnCalculate_Click(), se utiliza el objeto ObjTriangle, para llamar a las funciones públicas: ReadData(), CheckTriangle, PerimeterRectangle(), AreaRectangle(), PrintData() y PlotShape(). En el evento Click del botón btnReset, cuyo procedimiento se llama btnReset_Click(), se utiliza el objeto ObjTriangle, para llamar a la función pública InitializeData(). En el evento Click del botón btnClose, cuyo procedimiento se llama btnClose_Click(), se utiliza el objeto ObjTriangle, para llamar a la función pública CloseForm(), que permite cerrar el formulario.',
         implementacion17: '',
