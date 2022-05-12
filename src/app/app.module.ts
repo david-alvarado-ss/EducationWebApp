@@ -59,7 +59,7 @@ import {MatSortModule} from '@angular/material/sort';
 import {MatTableModule} from '@angular/material/table';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { TestCompGrafComponent } from './components/user/test-comp-graf/test-comp-graf.component'; 
+import { TestCompGrafComponent } from './components/user/test-comp-graf/test-comp-graf.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatRadioModule} from '@angular/material/radio';
 import { PopupEmailComponent } from './components/user/popup-email/popup-email.component';
@@ -123,7 +123,7 @@ import { PopupEmailComponent } from './components/user/popup-email/popup-email.c
     AngularFireDatabaseModule,
     AngularFireStorageModule,
     ReactiveFormsModule,
-    HighlightModule, 
+    HighlightModule,
     MatNativeDateModule,
     MatRippleModule,
     MatSortModule,
@@ -132,7 +132,7 @@ import { PopupEmailComponent } from './components/user/popup-email/popup-email.c
     MatFormFieldModule,
     MatInputModule,
     MatCheckboxModule,
-    MatRadioModule 
+    MatRadioModule
   ],
   providers: [NavService, AngularFireAuth, AngularFirestore,
     {
@@ -140,7 +140,7 @@ import { PopupEmailComponent } from './components/user/popup-email/popup-email.c
       useValue: {
         fullLibraryLoader: () => import('highlight.js'),
         lineNumbersLoader: () => import('highlightjs-line-numbers.js'), // Optional, only if you want the line numbers
-       
+
       }
     }],
   bootstrap: [AppComponent]

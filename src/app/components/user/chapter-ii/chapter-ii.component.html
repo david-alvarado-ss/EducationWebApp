@@ -5,7 +5,8 @@
     <table>
         <tr>
             <td>
-                <h1><b> CAPÍTULO II: Geometría Aplicada </b></h1>
+                <h1><b> CAPÍTULO 2 ALGORITMOS Y ESTRUCTURAS DE CONTROL EN LENGUAJE C/C++
+                </b></h1>
             </td>
             <td></td>
             <td>
@@ -19,314 +20,288 @@
     <mat-tab-group [selectedIndex]="selectedIndex.value" (selectedIndexChange)="selectedIndex.setValue($event)">
         <mat-tab label="Introducción">
             <ng-template matTabContent>
-                <br>
-                <h1>Introducción</h1>
-                <p>Un punto es el objeto geométrico elemental más simple. A partir de varios puntos se pueden definir líneas, planos, vectores, cajas, y todo tipo de figuras geométricas en 2D como triángulos, cuadriláteros y círculos, entre otras. De hecho, no se puede definir una figura geométria solo con un punto sino siempre como un conjunto de puntos. Los puntos son los bloques básicos de la construcción de objetos geométricos, demostraciones de teoremas, definición de lugares geométricos y funciones matemáticas. Además, a partir de puntos y polígonos se pueden definir figuras geométricas más complejas como curvas, superficies y sólidos geométricos en 3D como cubos, paralelepípedos, prismas, pirámides, etc., donse se utilizan ecuaciones para definir lugares geométricos y este tipo de figuras complejas. Otro de los elementos matemáticos más utilizado en la Computación Gráfica son los vectores muy utilizados en procesos de graficación, animación y donde se requiere aplicar la Física como ciencia y como parte de la Ingeniería, así por ejemplo la física de partículas y las colisiones muy utilizadas en los videojuegos y en efectos especiales de películas. Con estos elementos matemáticos se puede analizar y cuantificar propiedades y relaciones de cuerpos y sólidos geométricos. En la actualidad, una de las tecnologías más importantes desarrolladas como es la Computación Gráfica y los Modelos Geométricos 3D utilizan de una manera indispensable a los puntos y a los vectores para graficar.
-                </p>
-                <img src="./assets/images/Capitulos/II/media/3.jpg" style="display:block; margin:auto; width: 50%;"><br>
-                <h5><strong>Figura 3. </strong>Capítulo II.</h5><br>
-                <p>Los profesores Leen Ammeraal y Kang Zhang son autores de uno de los mejores libros de Computación Gráfica donde se abordan varios de los temas referentes a la Geometría Aplicada a la Computación Gráfica. El título de este libro es Computer Graphics for Java Programmers, el cual está escrito utilizando el lenguaje de programación Java, cuyos ejercicios son prácticos, útiles y fáciles de entender. El código de las aplicaciones de este libro en Java puede ser reutilizado en el lenguaje C# realizando pequeñas modificaciones en el código fuente, ya que C# se basa en C/C++, Java y Visual Basic. (Ver Figura 3.1).</p>
-                <img src="./assets/images/Capitulos/II/media/4.jpg" style="display:block; margin:auto; width: 50%;"><br>
-                <h5><strong>Figura 3.1. </strong>Libro de Computación Gráfica Básico (Ammeraal, L., Zhang, K., 2017).</h5><br>
-                <p>En este capítulo, se discute la definición de conjuntos de puntos, sus relaciones para construir aplicaciones de Geometría Aplicada como: a) Línes y puntos notables de un triángulo; b) Operaciones con Vectores 2D; c) Operaciones con Vectores 3D; d) Traslación y Rotación de Figuras.</p>
             </ng-template>
         </mat-tab>
         <mat-tab label="Objetivos">
             <ng-template matTabContent>
-                <br>
-                <h1>Objetivos</h1>
-                <ul>
-                    <li>Revisar los principales conceptos en torno a algoritmos para la solución de problemas de gráficas por computadora, enfocados a geometría aplicada.</li>
-                    <li>Entender cómo trabajan los algoritmos y las gráficas por computadora con el lenguaje C# en la construcción de programas, enfocados a geometría aplicada. </li>
-                    <li>Aprender a crear algoritmos de gráficas por computadora en Pseudocódigo y en el lenguaje C#, enfocados a geometría aplicada.</li>
-                    <li>Diseñar y crear programas con gráficas por computadora en el lenguaje C# y programación orientada a objetos con interfaces gráficas de usuario, enfocados a geometría aplicada.</li>
-                    <li>Resolver pracniques con algoritmos y programación orientada a objetos enfocados a geometría aplicada.</li>
-                </ul>
-            </ng-template>
+                  </ng-template>
         </mat-tab>
-        <mat-tab label="Teoría">
-            <ng-template matTabContent>
-                <br>
-                <h1>3.1. Puntos, Líneas y Vectores</h1>
-                <p>La forma más conveniente de especificar un segmento de línea en la pantalla de una computadora es proporcionando las coordenadas de sus dos puntos finales. En matemáticas, las coordenadas son números reales, pero las rutinas primitivas de dibujo de líneas pueden requerir que sean enteros. Este es el caso, por ejemplo, en el lenguaje C#, que se utilizará a lo largo de este libro. El componente o subsistema GDI (Graphics Device Interface) trabaja junto con el núcleo y la API de Windows (Steeb, W.H., Hardy, A., 2008). Esta interfaz de programación de aplicaciones se encarga del control gráfico de los dispositivos de salida, como los monitores o las impresoras. Las tareas más comunes de GDI son:</p>
-                <ul>
-                    <li>El dibujo de líneas, curvas, polígonos;</li>
-                    <li>El relleno de cuadros, círculos, polígonos, etcétera;</li>
-                    <li>Se encarga del renderizado de fuentes y textos;</li>
-                    <li>Se encarga del manejo de paletas de colores.</li>
-                </ul>
-                <h1>3.1.1.	Puntos</h1>
-                <p>Un punto es el objeto geométrico más simple y elemental. El punto permite representar líneas, planos, vectores y todo tipo de figuras geométricas complejas en 2D y 3D como curvas, superficies y sólidos. </p>
-                <p>Un punto en el plano 2D se puede representar a través de dos coordenadas x e y. En el lenguaje C# existen dos estructuras de datos básicas para representar un punto en el plano:</p>
-                <p><strong>A)	Estructura Point (Point Struct): </strong>Representa un par ordenado de coordenadas x e y enteras que define un punto en un plano bidimensional. Por ejemplo, en el siguiente código se crea una estructura de tipo Point y se asigna a cada campo un valor de tipo entero que corresponden al centro de un lienzo o canvas:</p>
-                <pre *ngFor="let formula of introduccion"><code [highlight]="formula.f1" (highlighted)="onHighlight($event)" [lineNumbers]="true"></code></pre><br>
-                <p><strong>B)	Estructura PointF (PointF Struct): </strong>Representa un par ordenado de coordenadas x e y de punto flotante que define un punto en un plano bidimensional. Por ejemplo, en el siguiente código se crea una estructura de tipo PointF y se asigna a cada campo una expresión matemática que se compone de funciones trigonométrícas:</p>
-                <pre *ngFor="let formula of introduccion"><code [highlight]="formula.f2" (highlighted)="onHighlight($event)" [lineNumbers]="true"></code></pre><br>
-                <h1>3.1.1.1.	Arreglos de Puntos</h1>
-                <p>Cuando se necesita trabajar con varios puntos para graficar una Figura Geométrica como un polígono o una curva se puede utilizar un arreglo de puntos. El arreglo de puntos almacena valores en los dos campos o componentes de la estuctura que son X e Y. Se puede utilizar un bucle y un contador o iterador para moverse dentro del array de puntos y almacenar o recuperar valores de la misma.</p>
-                <h1>3.1.1.2.	Traslación y Rotación de Puntos</h1>
-                <p>Un punto se puede mover desde una localidad a otra de dos maneras: a) Primero, se puede trasladar un punto desde su posición actual a una nueva; b) Segundo, se puede rotar ese punto con respecto a otro en el plano o en los ejes dentro de un espacio a una nueva posición.</p>
-                <p>Las ecuaciones de traslación de un punto a otro en el mundo real son:</p>
-                <div *ngFor="let tab of introduccion">
-                    <ul *ngFor="let item of tab.formuA">
-                        <li>
-                            <mathjax [content]=item class='box'></mathjax>
-                        </li>
-                    </ul>
-                </div>
-               <p>Donde <mathjax [content]='"$(x^´,y^´)$"' class='box'></mathjax> son las coordenadas de una nueva localidad y los valores de <mathjax [content]='"$(x_T, y_T)$"' class='box'></mathjax>, son las coordenadas donde se desea que se mueva el punto original.</p>
-                <p>Las ecuaciones de traslación de un punto a otro en el mundo de la Computación Gráfica son:</p>
-                <div *ngFor="let tab of introduccion">
-                    <ul *ngFor="let item of tab.formuB">
-                        <li>
-                            <mathjax [content]=item class='box'></mathjax>
-                        </li>
-                    </ul>
-                </div>
-                <p>Donde <mathjax [content]='"$(x^´,y^´)$"' class='box'></mathjax> efectivamente siguen siendo las coordenadas de una nueva localidad y los valores de <mathjax [content]='"$(x_T, y_T)$"' class='box'></mathjax>, son las coordenadas del nuevo centro de coordenadas trasladado en base al cual se va a graficar una figura geométrica o un vector en el plano o en el espacio. Además, se utiliza un factor de escalamiento (Scale Factor – SF) para realizar un proceso de acercamiento (Zoom-In) o alejamiento (Zoom-Out) de la figura geométrica que se quiere representar a través de dos o más puntos. Finalmente, el valor de <mathjax [content]='"$y^´$"' class='box'></mathjax>, se obtiene multiplicando el valor de y por (-1), porque el eje y+ en el mundo de la Computación Gráfica, está hacia abajo y si se quiere graficar de acuerdo a como se lo hace en el mundo real, se utiliza este factor de conversión de ejes.</p>
-                <h1>3.1.1.3.	Rectángulo (Rectangle)</h1>
-                <p>El rectángulo (Rectangle) es una estructura (struct) que almacena un conjunto de cuatro enteros que representan la localización y el tamaño de un rectángulo en un lienzo o canvas. Con un objeto de tipo rectangle se puede obtener entonces el ancho y el largo de un lienzo o canvas que puede ser representado por un pictureBox. En la Tabla 2.1, se muestra un ejemplo del código de una función que inicializa los valores del centro de un lienzo o canvas del pictureBox llamado picCanvas, utilizando un objeto de tipo Rectangle.</p>
-                <h5><strong>Tabla 3.1. </strong>Código de ejemplo de una función que utiliza un objeto de tipo Rectangle.</h5><br>
-                <pre *ngFor="let formula of introduccion"><code [highlight]="formula.f3" (highlighted)="onHighlight($event)" [lineNumbers]="true"></code></pre><br>
-                <h1>3.1.2.	 Vectores: <mathjax [content]='"$2D - R^2$"' class='box'></mathjax></h1>
-                <div *ngFor="let tab of introduccion">
-                    <div *ngFor="let item of tab.vectores2D">
-                        <p><strong>{{item.numero}}</strong>&nbsp;&nbsp;{{item.parrafo}}</p>
-                        <ul *ngFor="let x of item.formulas">
-                            <div>
-                                <mathjax [content]=x class='box'></mathjax>
-                            </div>
-                        </ul>
-                    </div>
-                </div>
-                <h1>3.1.3.	 Vectores: <mathjax [content]='"$3D$"' class='box'></mathjax></h1>
-                <div *ngFor="let tab of introduccion">
-                    <div *ngFor="let item of tab.vectores3D">
-                        <p><strong>{{item.numero}}</strong>&nbsp;&nbsp;{{item.parrafo}}</p>
-                        <ul *ngFor="let x of item.formulas">
-                            <div>
-                                <mathjax [content]=x class='box'></mathjax>
-                            </div>
-                        </ul>
-                    </div>
-                </div>
-            </ng-template>
-        </mat-tab>
-        <mat-tab label="Video Tutorial">
-            <ng-template matTabContent>
-                <br>
-                <div class="social-item">
-                    <h2><b><u>Pracnique 3.1 - Líneas y Puntos Notables de un Triángulo <a href="https://youtu.be/EVA1NNPc1Sg" target="_blank"><img src="https://img.icons8.com/bubbles/100/000000/youtube.png" width="50px" height="50px"/></a></u></b></h2>
-                </div>
-                <div class="video-responsive">
-                    <div class="video-responsive">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/EVA1NNPc1Sg?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                </div>
-                <br>
-<!--            <div class="social-item">
-                    <h2><b><u>Pracnique 3.2 - Operaciones entre Vectores 2D <a href="#" target="_blank"><img src="https://img.icons8.com/bubbles/100/000000/youtube.png" width="50px" height="50px"/></a></u></b></h2>
-                </div>
-                <div class="video-responsive">
-                    <div class="video-responsive">
-                        <video controls preload="auto">
-                            <source src="https://drive.google.com/uc?export=download&id=1Tq3Vu004_iBChLVLFPoKo2gXWZQAfVXn#t=1" type="video/mp4" />
-                                Tu navegador no soporta HTML5 Video
-                            </video>
-                    </div>
-                </div>
+      <mat-tab label="Algoritmo">
+        <ng-template matTabContent>
+          <mat-tab-group>
+            <!-- <mat-tab *ngFor="let tab of asyncTabs | async"> -->
+            <mat-tab  label="2.1.1. Definición de Algoritmo">
+            </mat-tab>
+            <mat-tab  label="2.1.2. Características de los Algoritmos">
+            </mat-tab>
 
-                <br>
-                <div class="social-item">
-                    <h2><b><u>Pracnique 3.3 - Operaciones entre Vectores 3D <a href="#" target="_blank"><img src="https://img.icons8.com/bubbles/100/000000/youtube.png" width="50px" height="50px"/></a></u></b></h2>
-                </div>
-                <div class="video-responsive">
-                    <div class="video-responsive">
-                        <video controls preload="auto">
-                            <source src="https://drive.google.com/uc?export=download&id=1Tq3Vu004_iBChLVLFPoKo2gXWZQAfVXn#t=1" type="video/mp4" />
-                                Tu navegador no soporta HTML5 Video
-                            </video>
-                    </div>
-                </div>
--->             <br>
-            </ng-template>
-        </mat-tab>
+            <mat-tab  label="2.1.3. Etapas para la Solución de un Problema">
+            </mat-tab>
 
-        <mat-tab label="Pracniques">
-            <ng-template matTabContent>
-                <mat-tab-group>
-                    <!-- <mat-tab *ngFor="let tab of asyncTabs | async"> -->
-                    <mat-tab *ngFor="let tab of praqnique" label="{{tab.label}}">
-                        <br>
-                        <table>
-                            <tr>
-                                <td>
-                                    <h2 style="color:green;"><strong>{{tab.tituloN}}</strong></h2>
-                                </td>
-                                <td>
-                                    <h2>{{tab.titulo}}</h2>
-                                </td>
-                            </tr>
-                        </table>
-                        <TABLE BORDER WIDTH="100%" CELLPADDING=1 CELLSPACING=0 class="mat-elevation-z8">
-                            <TR>
-                                <TABLE>
-                                    <TR><strong>SINOPSIS</strong></TR>
-                                    <TR>{{tab.sinopsisDescrip}}</TR>
-                                </TABLE>
-                            </TR>
-                            <TR>
-                                <TABLE BORDER WIDTH="100%" CELLPADDING=1 CELLSPACING=0 class="mat-elevation-z8">
-                                    <TR *ngFor="let item of tab.sinopsis">
-                                        <TD><strong>{{item.titulo}}</strong>{{item.descrip}}</TD>
-                                    </TR>
-                                </TABLE>
-                            </TR>
-                        </TABLE><br>
-                        <a href="{{tab.link}}" download="ProgramaPracnique">
-                            <mat-icon>save_alt</mat-icon><strong>Descargar {{tab.tituloN}} PracniqueCompGraf.zip</strong>
-                        </a>
-                        <br><br>
-                        <h3><strong>{{tab.A.subtitulo}}</strong></h3>
-                        <p>{{tab.A.problema}}</p>
-                        <img src="{{tab.A.fotoPath}}" style="display:block; margin:auto;"><br>
-                        <h5><strong>{{tab.A.fotoN}}</strong>{{tab.A.fotoDescrip}}</h5><br>
-                        <p>{{tab.A.problema1}}</p>
-                        <ul *ngFor="let x of tab.A.problemalist">
-                            <div>{{x}}</div>
-                        </ul>
-                        <h3><strong>{{tab.B.subtitulo}}</strong></h3>
-                        <div *ngFor="let itemPasos of tab.B.pasosB">
-                            <h3><strong>{{itemPasos.subtitulo2}}</strong></h3>
-                            <p><strong>{{itemPasos.tituloproblema}}</strong></p>
-                            <p>{{itemPasos.parrafo}}</p>
-                            <img src="{{itemPasos.fotoPath}}" style="display:block; margin:auto; ">
-                            <p>{{itemPasos.parrafo2}}</p>
-                            <p>{{itemPasos.parrafo3}}</p>
-                            <p><strong>{{itemPasos.titulosolucion}}</strong></p>
-                            <div *ngFor="let item of itemPasos.solucion">
-                                <mathjax [content]=item.parrafo class='box'></mathjax>
-                                <img src="{{item.fotoPath}}" style="display:block; margin:auto; ">    
-                            </div>
-                        </div>
-                        <h3><strong>{{tab.C.subtitulo}}</strong></h3>
-                        <dl *ngFor="let itemAlgoritmos of tab.C.algoritmosC">
-                            <dt>{{itemAlgoritmos.titulo}}</dt>
-                            <dd>
-                                <ul *ngFor="let p of itemAlgoritmos.pasos; index as i">
-                                    <div value="{{i+1}}">{{p}}</div>
-                                </ul>
-                                <ul *ngFor="let p of itemAlgoritmos.pasosFormulas; index as i">
-                                    <div value="{{i+1}}">{{p}}</div>
-                                </ul>
-                            </dd>
-                        </dl>
-                        <h3><strong>{{tab.D.subtitulo}}</strong></h3>
-                        <div *ngFor="let itemCodigos of tab.D.listaCodigo">
-                            <p>{{itemCodigos.problema}}</p>
-                            <h5><strong>{{itemCodigos.tablaN}}</strong>{{itemCodigos.tablaDescrip}}</h5><br>
-                            <pre><code [highlight]="itemCodigos.tablaDatos" (highlighted)="onHighlight($event)" [lineNumbers]="true"></code></pre><br>
-                        </div>
-                        <h3><strong>{{tab.E.subtitulo}}</strong></h3>
-                        <div *ngFor="let item of tab.E.listaPrueba">
-                            <p>{{item.problema}}</p>
-                            <img src="{{item.fotoPath}}" style="display:block; margin:auto; width: 75%;"><br>
-                            <h5><strong>{{item.fotoN}}</strong>{{item.fotoDescrip}}</h5><br>    
-                        </div>
-                    </mat-tab>
-                </mat-tab-group>
-            </ng-template>
-        </mat-tab>
-        <mat-tab label="Pracniques Propuestos">
-            <ng-template matTabContent>
-                <mat-tab-group>
-                    <!-- <mat-tab *ngFor="let tab of asyncTabs | async"> -->
-                    <mat-tab *ngFor="let tab of praqniquePropuesto" label="{{tab.label}}">
-                        <br>
-                        <table>
-                            <tr>
-                                <td>
-                                    <h2 style="color:green;"><strong>{{tab.tituloN}}</strong></h2>
-                                </td>
-                                <td>
-                                    <h2>{{tab.titulo}}</h2>
-                                </td>
-                            </tr>
-                        </table>
-                        <h3><strong>{{tab.subtitulo}}</strong></h3>
-                        <div *ngFor="let item of tab.listaGeneral">
-                            <div *ngFor="let i of item.listaParrafoFotos">
-                                <mathjax [content]=i.problema class='box'></mathjax><br>
-                                <img src="{{i.fotoPath}}" style="display:block; margin:auto; width: 50%;"><br>
-                                <h5><strong>{{i.fotoN}}</strong>{{i.fotoDescrip}}</h5><br>        
-                            </div>
-                            <div *ngFor="let i of item.listaParrafos">
-                                <mathjax [content]=i.problema class='box'></mathjax><br>
-                            </div>
-                            <div *ngFor="let i of item.listaFotos">
-                                <img src="{{i.fotoPath}}" style="display:block; margin:auto; width: 50%;"><br>
-                                <h5><strong>{{i.fotoN}}</strong>{{i.fotoDescrip}}</h5><br>        
-                            </div>
-                        </div>
-                        <a href="{{tab.linkAnexo}}" download="Anexo">
-                            <mat-icon>{{tab.iconodescarga}}</mat-icon><strong>{{tab.tituloAnexo}}</strong>
-                        </a>
-                    </mat-tab>
-                </mat-tab-group>
-            </ng-template>
-        </mat-tab>
-        <mat-tab label="Evaluación">
-            <ng-template matTabContent>
-                <div class="Evaluacion">
-                    <app-quiz [propagarNumCapitulo]="num_capitulo"></app-quiz>
-                </div>
-            </ng-template>
-        </mat-tab>
-        <mat-tab label="Juegos">
-            <ng-template matTabContent>
-                <div class="Snake">
-                    <app-snake></app-snake>
-                </div>
-            </ng-template>
+            <mat-tab  label="2.1.4. Programas y Algoritmos">
+            </mat-tab>
 
-        </mat-tab>
-        <mat-tab label="Resumen">
-            <ng-template matTabContent>
-                <br>
-                <h1>Resumen</h1>
-                <ul>
-                    <li>La forma más conveniente de especificar un segmento de línea en la pantalla de una computadora es proporcionan.</li>
-                    <li>El componente o subsistema GDI (Graphics Device Interface) trabaja junto con el núcleo y la API de Windows do las coordenadas de sus dos puntos finales.</li>
-                    <li>Un punto es el objeto geométrico más simple y elemental, que permite representar líneas, planos, vectores y todo tipo de figuras geométricas complejas en 2D y 3D como curvas, superficies y sólidos.</li>
-                    <li>La estructura Point (Point Struct), representa un par ordenado de coordenadas x e y enteras que define un punto en un plano bidimensional.</li>
-                    <li>La estructura PointF (PointF Struct), representa un par ordenado de coordenadas x e y de punto flotante que define un punto en un plano bidimensional.</li>
-                    <li>Cuando se necesita trabajar con varios puntos para graficar una Figura Geométrica como un polígono o una curva se puede utilizar un arreglo de puntos.</li>
-                    <li>Un punto se puede mover desde una localidad a otra de dos maneras: a) Primero, se puede trasladar un punto desde su posición actual a una nueva; b) Segundo, se puede rotar ese punto con respecto a otro en el plano o en los ejes dentro de un espacio a una nueva posición.</li>
-                    <li>El rectángulo (Rectangle) es una estructura (struct) que almacena un conjunto de cuatro enteros que representan la localización y el tamaño de un rectángulo en un lienzo o canvas.</li>
-                    <li>Un vector es un ente matemático que tiene módulo (magnitud), dirección y sentido.</li>
-                    <li>Se pueden graficar las líneas y puntos notables de un triángulo utilizando Geometría Aplicada y utilizando las ecuaciones de traslación de un punto a otro en el mundo de la Computación Gráfica.</li>
-                    <li>Un vector 2D tiene dos componentes en el plano (x,y) que se lo puede representar gráficamente utilizando líneas con puntos y con flechas, aplicando Geometría Aplicada y utilizando las ecuaciones de traslación de un punto a otro en el mundo de la Computación Gráfica.</li>
-                    <li>Un vector 3D tiene tres componentes en el plano (x,y,z) que se lo puede representar gráficamente utilizando líneas con puntos y con flechas, aplicando Geometría Aplicada y utilizando las ecuaciones de traslación de un punto a otro en el mundo de la Computación Gráfica.</li>
-                </ul>
-            </ng-template>
-        </mat-tab>
-        <mat-tab label="Bibliografía">
-            <ng-template matTabContent>
-                <br>
-                <h1>Bibliografía</h1>
-                <ul>
-                    <li>Ammeraal, L., Zhang, K., 2017. Computer Graphics for Java Programmers. Springer. Third Edition.</li>
-                    <li>Lengyel, E., 2011. Mathematics for 3D Game Programming and Computer Graphics. Charles River Media. Third Edition.</li>
-                    <li>Steeb, W.H., Hardy, A., 2008. Mathematical Tools in Computer Graphics with C# Implementations. World Scientific Pub. Co. Inc. First Edition.</li>
-                    <li>Spiegel, M., Lipschutz, S., Spellman, D., 2011. Análisis Vectorial. 2° edición. SCHAUM, McGraw-Hill, Interamericana Editores, S.A., México. ISBN: 978-607-15-0550-7.</li>
-                    <li>Kimberling, C., 1994. Encyclopedia of Triangle Centers. Evansville University. Disponible en: https://faculty.evansville.edu/ck6/encyclopedia/ETC.html</li>
-                    <li>Beer, F., Jhonston, E.R., Mazurek, D., Eisenberg, E., 2010. Mecánica Vectorial para Ingenieros. Estática. Novena Edición. McGraw-Hill/Interamericana Editores, S.A., México. ISBN: 978-607-15-0277-3.</li>
-                </ul>
-            </ng-template>
-        </mat-tab>
+            <mat-tab  label="2.1.5. Pseudocódigo como Técnica de Representación de un Algoritmo">
+            </mat-tab>
+
+            <mat-tab  label="2.1.6. Diseño Conceptual de Procesos Aplicado a Programas">
+            </mat-tab>
+
+            <mat-tab  label="2.1.7. Aplicaciones de Algoritmos en la Vida Cotidiana">
+            </mat-tab>
+
+            <mat-tab  label="2.1.8. Estructuras de Control en Lenguaje C/C++">
+            </mat-tab>
+          </mat-tab-group>
+        </ng-template>
+      </mat-tab>
+
+      <mat-tab label="Estructuras de Control Secuenciales">
+        <ng-template matTabContent>
+          <mat-tab-group>
+            <!-- <mat-tab *ngFor="let tab of asyncTabs | async"> -->
+            <mat-tab  label="2.2.1. Escritura">
+            </mat-tab>
+            <mat-tab  label="2.2.2. Lectura">
+            </mat-tab>
+            <mat-tab  label="2.2.3. Asignación">
+            </mat-tab>
+          </mat-tab-group>
+        </ng-template>
+      </mat-tab>
+
+      <mat-tab label="Estructuras de Control de Selección">
+        <ng-template matTabContent>
+          <mat-tab-group>
+            <!-- <mat-tab *ngFor="let tab of asyncTabs | async"> -->
+            <mat-tab  label="2.3.1. La sentencia if">
+            </mat-tab>
+            <mat-tab  label="2.3.2. La sentencia if-else">
+            </mat-tab>
+
+            <mat-tab  label="2.3.3. Sentencias if-else Anidadas">
+            </mat-tab>
+
+            <mat-tab  label="2.3.4. Secuencia de Sentencias if">
+            </mat-tab>
+
+            <mat-tab  label="2.3.5. Secuencia de Sentencias if-else">
+            </mat-tab>
+
+            <mat-tab  label="2.3.6. Sentencia de Control switch">
+            </mat-tab>
+          </mat-tab-group>
+        </ng-template>
+      </mat-tab>
+
+      <mat-tab label="Estructuras de Control Repetitivas o Bucles">
+        <ng-template matTabContent>
+          <mat-tab-group>
+            <!-- <mat-tab *ngFor="let tab of asyncTabs | async"> -->
+            <mat-tab  label="2.4.1. La sentencia while">
+            </mat-tab>
+            <mat-tab  label="2.4.2. La sentencia do-while">
+            </mat-tab>
+
+            <mat-tab  label="2.4.3. La sentencia for">
+            </mat-tab>
+
+            <mat-tab  label="2.4.4. Bucles anidados">
+            </mat-tab>
+          </mat-tab-group>
+        </ng-template>
+      </mat-tab>
+
+      <mat-tab label="Resumen">
+        <ng-template matTabContent>
+
+        </ng-template>
+      </mat-tab>
+      <mat-tab label="Ejercicios Propuestos">
+        <ng-template matTabContent>
+
+        </ng-template>
+      </mat-tab>
+      <mat-tab label="Bibliografía">
+        <ng-template matTabContent>
+
+        </ng-template>
+      </mat-tab>
     </mat-tab-group>
-
-    <button mat-button (click)="selectTabNext()" *ngIf="positionCurrentNext">{{titleNext}} <mat-icon>navigate_next</mat-icon></button>
+  <button mat-button (click)="selectTabNext()" *ngIf="positionCurrentNext">{{titleNext}} <mat-icon>navigate_next</mat-icon></button>
     <button mat-button (click)="selectTabBefore()" *ngIf="positionCurrentBefore"><mat-icon>navigate_before</mat-icon> Atras  &nbsp; &nbsp; &nbsp;&nbsp;</button>
 
 </div>
+<!-- EXAMPLES
+<mat-tab label="Pracniques">
+  <ng-template matTabContent>
+    <mat-tab-group>
+      &lt;!&ndash; <mat-tab *ngFor="let tab of asyncTabs | async"> &ndash;&gt;
+      <mat-tab *ngFor="let tab of praqnique" label="{{tab.label}}">
+        <br>
+        <table>
+          <tr>
+            <td>
+              <h2 style="color:green;"><strong>{{tab.tituloN}}</strong></h2>
+            </td>
+            <td>
+              <h2>{{tab.titulo}}</h2>
+            </td>
+          </tr>
+        </table>
+        <TABLE BORDER WIDTH="100%" CELLPADDING=1 CELLSPACING=0 class="mat-elevation-z8">
+          <TR>
+            <TABLE>
+              <TR><strong>SINOPSIS</strong></TR>
+              <TR>{{tab.sinopsisDescrip}}</TR>
+            </TABLE>
+          </TR>
+          <TR>
+            <TABLE BORDER WIDTH="100%" CELLPADDING=1 CELLSPACING=0 class="mat-elevation-z8">
+              <TR *ngFor="let item of tab.sinopsis">
+                <TD><strong>{{item.titulo}}</strong>{{item.descrip}}</TD>
+              </TR>
+            </TABLE>
+          </TR>
+        </TABLE><br>
+        <a href="{{tab.link}}" download="ProgramaPracnique">
+          <mat-icon>save_alt</mat-icon><strong>Descargar {{tab.tituloN}} PracniqueCompGraf.zip</strong>
+        </a>
+        <br><br>
+        <h3><strong>{{tab.A.subtitulo}}</strong></h3>
+        <p>{{tab.A.problema}}</p>
+        <img src="{{tab.A.fotoPath}}" style="display:block; margin:auto;"><br>
+        <h5><strong>{{tab.A.fotoN}}</strong>{{tab.A.fotoDescrip}}</h5><br>
+        <p>{{tab.A.problema1}}</p>
+        <ul *ngFor="let x of tab.A.problemalist">
+          <div>{{x}}</div>
+        </ul>
+        <h3><strong>{{tab.B.subtitulo}}</strong></h3>
+        <div *ngFor="let itemPasos of tab.B.pasosB">
+          <h3><strong>{{itemPasos.subtitulo2}}</strong></h3>
+          <p><strong>{{itemPasos.tituloproblema}}</strong></p>
+          <p>{{itemPasos.parrafo}}</p>
+          <img src="{{itemPasos.fotoPath}}" style="display:block; margin:auto; ">
+          <p>{{itemPasos.parrafo2}}</p>
+          <p>{{itemPasos.parrafo3}}</p>
+          <p><strong>{{itemPasos.titulosolucion}}</strong></p>
+          <div *ngFor="let item of itemPasos.solucion">
+            <mathjax [content]=item.parrafo class='box'></mathjax>
+            <img src="{{item.fotoPath}}" style="display:block; margin:auto; ">
+          </div>
+        </div>
+        <h3><strong>{{tab.C.subtitulo}}</strong></h3>
+        <dl *ngFor="let itemAlgoritmos of tab.C.algoritmosC">
+          <dt>{{itemAlgoritmos.titulo}}</dt>
+          <dd>
+            <ul *ngFor="let p of itemAlgoritmos.pasos; index as i">
+              <div value="{{i+1}}">{{p}}</div>
+            </ul>
+            <ul *ngFor="let p of itemAlgoritmos.pasosFormulas; index as i">
+              <div value="{{i+1}}">{{p}}</div>
+            </ul>
+          </dd>
+        </dl>
+        <h3><strong>{{tab.D.subtitulo}}</strong></h3>
+        <div *ngFor="let itemCodigos of tab.D.listaCodigo">
+          <p>{{itemCodigos.problema}}</p>
+          <h5><strong>{{itemCodigos.tablaN}}</strong>{{itemCodigos.tablaDescrip}}</h5><br>
+          <pre><code [highlight]="itemCodigos.tablaDatos" (highlighted)="onHighlight($event)" [lineNumbers]="true"></code></pre><br>
+        </div>
+        <h3><strong>{{tab.E.subtitulo}}</strong></h3>
+        <div *ngFor="let item of tab.E.listaPrueba">
+          <p>{{item.problema}}</p>
+          <img src="{{item.fotoPath}}" style="display:block; margin:auto; width: 75%;"><br>
+          <h5><strong>{{item.fotoN}}</strong>{{item.fotoDescrip}}</h5><br>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+  </ng-template>
+</mat-tab>
+<mat-tab label="Pracniques Propuestos">
+  <ng-template matTabContent>
+    <mat-tab-group>
+      &lt;!&ndash; <mat-tab *ngFor="let tab of asyncTabs | async"> &ndash;&gt;
+      <mat-tab *ngFor="let tab of praqniquePropuesto" label="{{tab.label}}">
+        <br>
+        <table>
+          <tr>
+            <td>
+              <h2 style="color:green;"><strong>{{tab.tituloN}}</strong></h2>
+            </td>
+            <td>
+              <h2>{{tab.titulo}}</h2>
+            </td>
+          </tr>
+        </table>
+        <h3><strong>{{tab.subtitulo}}</strong></h3>
+        <div *ngFor="let item of tab.listaGeneral">
+          <div *ngFor="let i of item.listaParrafoFotos">
+            <mathjax [content]=i.problema class='box'></mathjax><br>
+            <img src="{{i.fotoPath}}" style="display:block; margin:auto; width: 50%;"><br>
+            <h5><strong>{{i.fotoN}}</strong>{{i.fotoDescrip}}</h5><br>
+          </div>
+          <div *ngFor="let i of item.listaParrafos">
+            <mathjax [content]=i.problema class='box'></mathjax><br>
+          </div>
+          <div *ngFor="let i of item.listaFotos">
+            <img src="{{i.fotoPath}}" style="display:block; margin:auto; width: 50%;"><br>
+            <h5><strong>{{i.fotoN}}</strong>{{i.fotoDescrip}}</h5><br>
+          </div>
+        </div>
+        <a href="{{tab.linkAnexo}}" download="Anexo">
+          <mat-icon>{{tab.iconodescarga}}</mat-icon><strong>{{tab.tituloAnexo}}</strong>
+        </a>
+      </mat-tab>
+    </mat-tab-group>
+  </ng-template>
+</mat-tab>
+<mat-tab label="Evaluación">
+  <ng-template matTabContent>
+    <div class="Evaluacion">
+      <app-quiz [propagarNumCapitulo]="num_capitulo"></app-quiz>
+    </div>
+  </ng-template>
+</mat-tab>
+<mat-tab label="Juegos">
+  <ng-template matTabContent>
+    <div class="Snake">
+      <app-snake></app-snake>
+    </div>
+  </ng-template>
+
+</mat-tab>
+<mat-tab label="Resumen">
+  <ng-template matTabContent>
+    <br>
+    <h1>Resumen</h1>
+    <ul>
+      <li>La forma más conveniente de especificar un segmento de línea en la pantalla de una computadora es proporcionan.</li>
+      <li>El componente o subsistema GDI (Graphics Device Interface) trabaja junto con el núcleo y la API de Windows do las coordenadas de sus dos puntos finales.</li>
+      <li>Un punto es el objeto geométrico más simple y elemental, que permite representar líneas, planos, vectores y todo tipo de figuras geométricas complejas en 2D y 3D como curvas, superficies y sólidos.</li>
+      <li>La estructura Point (Point Struct), representa un par ordenado de coordenadas x e y enteras que define un punto en un plano bidimensional.</li>
+      <li>La estructura PointF (PointF Struct), representa un par ordenado de coordenadas x e y de punto flotante que define un punto en un plano bidimensional.</li>
+      <li>Cuando se necesita trabajar con varios puntos para graficar una Figura Geométrica como un polígono o una curva se puede utilizar un arreglo de puntos.</li>
+      <li>Un punto se puede mover desde una localidad a otra de dos maneras: a) Primero, se puede trasladar un punto desde su posición actual a una nueva; b) Segundo, se puede rotar ese punto con respecto a otro en el plano o en los ejes dentro de un espacio a una nueva posición.</li>
+      <li>El rectángulo (Rectangle) es una estructura (struct) que almacena un conjunto de cuatro enteros que representan la localización y el tamaño de un rectángulo en un lienzo o canvas.</li>
+      <li>Un vector es un ente matemático que tiene módulo (magnitud), dirección y sentido.</li>
+      <li>Se pueden graficar las líneas y puntos notables de un triángulo utilizando Geometría Aplicada y utilizando las ecuaciones de traslación de un punto a otro en el mundo de la Computación Gráfica.</li>
+      <li>Un vector 2D tiene dos componentes en el plano (x,y) que se lo puede representar gráficamente utilizando líneas con puntos y con flechas, aplicando Geometría Aplicada y utilizando las ecuaciones de traslación de un punto a otro en el mundo de la Computación Gráfica.</li>
+      <li>Un vector 3D tiene tres componentes en el plano (x,y,z) que se lo puede representar gráficamente utilizando líneas con puntos y con flechas, aplicando Geometría Aplicada y utilizando las ecuaciones de traslación de un punto a otro en el mundo de la Computación Gráfica.</li>
+    </ul>
+  </ng-template>
+</mat-tab>
+<mat-tab label="Bibliografía">
+  <ng-template matTabContent>
+    <br>
+    <h1>Bibliografía</h1>
+    <ul>
+      <li>Ammeraal, L., Zhang, K., 2017. Computer Graphics for Java Programmers. Springer. Third Edition.</li>
+      <li>Lengyel, E., 2011. Mathematics for 3D Game Programming and Computer Graphics. Charles River Media. Third Edition.</li>
+      <li>Steeb, W.H., Hardy, A., 2008. Mathematical Tools in Computer Graphics with C# Implementations. World Scientific Pub. Co. Inc. First Edition.</li>
+      <li>Spiegel, M., Lipschutz, S., Spellman, D., 2011. Análisis Vectorial. 2° edición. SCHAUM, McGraw-Hill, Interamericana Editores, S.A., México. ISBN: 978-607-15-0550-7.</li>
+      <li>Kimberling, C., 1994. Encyclopedia of Triangle Centers. Evansville University. Disponible en: https://faculty.evansville.edu/ck6/encyclopedia/ETC.html</li>
+      <li>Beer, F., Jhonston, E.R., Mazurek, D., Eisenberg, E., 2010. Mecánica Vectorial para Ingenieros. Estática. Novena Edición. McGraw-Hill/Interamericana Editores, S.A., México. ISBN: 978-607-15-0277-3.</li>
+    </ul>
+  </ng-template>
+</mat-tab>-->

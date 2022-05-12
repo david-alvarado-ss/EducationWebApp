@@ -1,9 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-
 import { Observable, Observer } from 'rxjs';
-import { MatTabsModule } from '@angular/material/tabs';
 import { FormControl } from '@angular/forms';
-import { Url } from 'url';
 
 export interface ExampleTab {
   label: string;
@@ -20,7 +17,7 @@ export class ChapterIIComponent implements OnInit {
   prefTabs: any;
   introduccion: any;
   praqnique: any;
-  praqniquePropuesto: any; 
+  praqniquePropuesto: any;
   casosPropuesto: any;
   selectedIndex = new FormControl(0); // define a FormControl with value 0. Value means index.
   numberTabs = 10;
@@ -30,17 +27,7 @@ export class ChapterIIComponent implements OnInit {
   num_capitulo = 2;
 
   constructor() {
-    /*   this.asyncTabs = Observable.create((observer: Observer<ExampleTab[]>) => {
-      setTimeout(() => {
-        observer.next([
-          {label: 'Problema 1', content: 'Content 1'},
-          {label: 'Problema 2', content: 'Content 2'},
-          {label: 'Problema 3', content: 'Content 3'},
-        ]);
-      }, 1000);
-    });
-  */
-    this.introduccion=[{
+      this.introduccion=[{
         f1:
         `
         Point O;
@@ -54,7 +41,7 @@ export class ChapterIIComponent implements OnInit {
         `,
         f3:
         `
-        // Función que inicializa los valores del centro del lienzo o canvas. 
+        // Función que inicializa los valores del centro del lienzo o canvas.
         public void InitializeData(PictureBox picCanvas)
         {
             d = new Rectangle();
@@ -62,11 +49,11 @@ export class ChapterIIComponent implements OnInit {
             d.Y = picCanvas.Height;
 
             maxX = d.X - 1; maxY = d.Y - 1;
-            xCenter = maxX / 2; yCenter = maxY / 2;            
+            xCenter = maxX / 2; yCenter = maxY / 2;
         }
         `,
         formuA: ['$x^´=x+x_T\\Rightarrow(1)$',
-                '$y^´=y+y_T\\Rightarrow(2)$'],      
+                '$y^´=y+y_T\\Rightarrow(2)$'],
         formuB: ['$x^´=x*SF+x_T\\Rightarrow(3)$',
                 '$y^´=(-1)y*SF+y_T\\Rightarrow(4)$'],
         vectores2D:[
@@ -160,7 +147,7 @@ export class ChapterIIComponent implements OnInit {
             '$(26)\\overrightarrow{V}_n=(\\frac{V_x}{|\\overrightarrow{V}|} ,\\frac{V_y}{|\\overrightarrow{V}|})$',
             '$(27)\\overrightarrow{V}=|\\overrightarrow{V}| \\overrightarrow{u}_V$',
             '$(28)\\overrightarrow{V}=Vλ$',
-            '$(29)\\overrightarrow{V}=|\\overrightarrow{V}| \\overrightarrow{V}_n$' 
+            '$(29)\\overrightarrow{V}=|\\overrightarrow{V}| \\overrightarrow{V}_n$'
           ]
         },
         {
@@ -353,7 +340,7 @@ export class ChapterIIComponent implements OnInit {
               '$(14)\\overrightarrow{V}=(V\\sin(θ_y )\\cos(φ),V\\cos(θ_y ),V\\sin(θ_y )\\sin(φ))$',
               '$(15)\\overrightarrow{V}=(V\\sin(θ_y )\\cos(φ)i,V\\cos(θ_y )j,V\\sin(θ_y )\\sin(φ)k)$',
               '$(16)\\overrightarrow{V}=(V\\sin(θ_y )\\cos(φ)+V\\cos(θ_y )+V\\sin(θ_y )\\sin(φ))$',
-              '$(17)\\overrightarrow{V}=(V\\sin(θ_y )\\cos(φ)i+V\\cos(θ_y )j+V\\sin(θ_y )\\sin(φ)k)$'              
+              '$(17)\\overrightarrow{V}=(V\\sin(θ_y )\\cos(φ)i+V\\cos(θ_y )j+V\\sin(θ_y )\\sin(φ)k)$'
             ]
           },
           {
@@ -554,7 +541,7 @@ export class ChapterIIComponent implements OnInit {
     this.praqnique=[
         {
           link:'https://drive.google.com/uc?id=1egwN2u9pFA5YksGGot1bBMFel3bpc8I6&export=download',
-          label: 'Pracnique 3.1', 
+          label: 'Pracnique 3.1',
          tituloN:'Pracnique 3.1: ',
          titulo:'Líneas y Puntos Notables de un Triángulo',
          sinopsisDescrip:'Este pracnique explora la creación de un programa de gráficos por computadora para graficar un triángulo cualquiera y sus puntos y líneas notables.',
@@ -587,63 +574,63 @@ export class ChapterIIComponent implements OnInit {
                 tituloproblema:'Problema:',
                 parrafo:'Dados los tres lados de un triángulo, encontrar los valores de los vértices en coordenadas rectangulares y graficar las líneas del triángulo, considerando que uno de sus lados se encuentra sobre el eje de las ‘x’ y uno de sus vértices es el origen. (Ver Figura 3.1.2 y 3.1.3). ',
                 fotoPath:'./assets/images/Capitulos/II/media/i2.png',
-                titulosolucion:'Solución:',  
-                solucion:[                  
+                titulosolucion:'Solución:',
+                solucion:[
                   {
                     parrafo:'Dados los siguientes puntos:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i3.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i3.png',
                   },
                   {
                     parrafo:'Calculamos la distancia $AB$:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i4.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i4.png',
                   },
                   {
                     parrafo:'Por lo tanto, las coordenadas del punto $P_1$ y $P_2$ son:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i5.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i5.png',
                   },
                   {
                     parrafo:'Para calcular el valor del ángulo $A$, se utilizando la Ley de Cosenos:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i6.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i6.png',
                   },
                   {
                     parrafo:'Calculamos el valor de la pendiente $AC$:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i7.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i7.png',
                   },
                   {
                     parrafo:'Despejamos el valor de $y_3$ donde obtenemos la siguiente ecuación:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i8.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i8.png',
                   },
                   {
                     parrafo:'Calculamos la distancia $AC$:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i9.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i9.png',
                   },
                   {
                     parrafo:'Reemplazamos el valor de $y_3$ de la ecuación (4) en la ecuación (5) y calculamos el valor de $x_3$:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i10.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i10.png',
                   },
                   {
                     parrafo:'Despejamos el valor de $x_3$ y luego racionalizamos la expresión:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i11.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i11.png',
                   },
                   {
                     parrafo:'Reemplazamos el valor de $x_3$ de la ecuación (6) en la ecuación (4) y calculamos el valor de $y_3$:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i12.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i12.png',
                   },
                   {
                     parrafo:'Por lo tanto, las coordenadas del punto $P_3$ son:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i13.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i13.png',
                   },
                   {
                     parrafo:'Aplicando las siguientes identidades trigonométricas:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i14.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i14.png',
                   },
                   {
                     parrafo:'Se simplicifica la ecuación (8) de la siguiente manera:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i15.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i15.png',
                   },
                   {
                     parrafo:'Finalmente, se obtiene las coordenadas del punto $P_3$ en función de senos y cosenos:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i16.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i16.png',
                   }
                 ]
                },
@@ -652,23 +639,23 @@ export class ChapterIIComponent implements OnInit {
                 tituloproblema:'Problema:',
                 parrafo:'Dados los tres lados de un triángulo ABC cualquiera, calcular los valores de los vértices de las medianas. (Ver Figura 2.1.4). ',
                 fotoPath:'./assets/images/Capitulos/II/media/i17.png',
-                titulosolucion:'Solución:',  
-                solucion:[                  
+                titulosolucion:'Solución:',
+                solucion:[
                   {
                     parrafo:'Dados los siguientes puntos:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i18.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i18.png',
                   },
                   {
                     parrafo:'El baricentro (centroide) de un triángulo G es el punto donde concurren las tres medianas del triángulo. Además, el baricentro es la media aritmética de las coordenadas del triángulo, por lo tanto, sus valores son:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i19.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i19.png',
                   },
                   {
                     parrafo:'Las medianas: $m_a$, $m_b$, $m_c$, son los segmentos que unen uno de los vértices del triángulo con el centro del lado opuesto. Cada mediana divide a un lado en dos partes iguales, por lo tanto, utilizamos la fórmula del punto medio para calcular el valor de las coordenadas de las medianas:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i20.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i20.png',
                   },
                   {
                     parrafo:'Entonces, las ecuaciones de las coordenadas de cada una de las medianas son:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i21.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i21.png',
                   }
                 ]
                },
@@ -677,50 +664,50 @@ export class ChapterIIComponent implements OnInit {
                 tituloproblema:'Problema:',
                 parrafo:'Dados los tres lados de un triángulo ABC cualquiera, calcular los valores de los vértices de las mediatrices. (Ver Figura 2.1.5). ',
                 fotoPath:'./assets/images/Capitulos/II/media/i22.png',
-                titulosolucion:'Solución:',  
-                solucion:[                  
+                titulosolucion:'Solución:',
+                solucion:[
                   {
                     parrafo:'Dados los siguientes puntos:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i23.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i23.png',
                   },
                   {
                     parrafo:'El circuncentro de un triángulo P es el punto donde concurren las tres mediatrices del triángulo. Además, el circuncentro es el valor del radio del círculo circunscrito al triángulo, ya que la distancia desde cada uno de los vértices al circuncentro son iguales entre sí:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i24.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i24.png',
                   },
                   {
                     parrafo:'Considerando la ecuación (4) se puede calcular el valor del circuncentro $O(x_O,y_O )=P_4 (x_4,y_4)$, de la siguiente manera:'
                   },
                   {
                     parrafo:'1.	Se calcula la distancia $AP$:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i25.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i25.png',
                   },
                   {
                     parrafo:'2.	Se calcula la distancia $BP$:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i26.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i26.png',
                   },
                   {
                     parrafo:'3.	Se igualan las ecuaciones (5) y (6):',
-                    fotoPath:'./assets/images/Capitulos/II/media/i27.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i27.png',
                   },
                   {
                     parrafo:'4.	Se calcula la distancia $CP$:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i28.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i28.png',
                   },
                   {
                     parrafo:'5.	Se igualan las ecuaciones (5) y (8):',
-                    fotoPath:'./assets/images/Capitulos/II/media/i29.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i29.png',
                   },
                   {
                     parrafo:'6.	Se reemplaza el valor de $x_4$ de la ecuación (7) en la ecuación (9):',
-                    fotoPath:'./assets/images/Capitulos/II/media/i30.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i30.png',
                   },
                   {
                     parrafo:'Finalmente se obtiene el valor del circuncentro $O(x_O,y_O )=P_4 (x_4,y_4)$:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i31.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i31.png',
                   },
                   {
                     parrafo:'	Para calcular el valor del radio del círculo circunscrito R al triángulo, utilizamos la ecuación (5), donde $P_4 (x_4,y_4 )=O(x_O,y_O )$:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i32.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i32.png',
                   }
                 ]
                },
@@ -729,130 +716,130 @@ export class ChapterIIComponent implements OnInit {
                 tituloproblema:'Problema:',
                 parrafo:'Dados los tres lados de un triángulo ABC cualquiera, calcular los valores de los vértices de las alturas, el triángulo órtico el radio del círculo inscrito al mismo. (Ver Figura 2.1.6). ',
                 fotoPath:'./assets/images/Capitulos/II/media/i33.png',
-                titulosolucion:'Solución:',  
-                solucion:[                  
+                titulosolucion:'Solución:',
+                solucion:[
                   {
                     parrafo:'Dados los siguientes puntos:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i34.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i34.png',
                   },
                   {
                     parrafo:'El ortocentro de un triángulo H es el punto donde concurren las tres alturas del triángulo. Además, el ortocentro es el valor del radio del círculo inscrito del triángulo órtico, que se forma uniendo con líneas los vértices de las tres alturas.'
                   },
                   {
                     parrafo:'Calculamos el valor del ángulo A del triángulo, utilizando la Ley de Cosenos:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i35.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i35.png',
                   },
                   {
                     parrafo:'Vértice $H_3$'
                   },
                   {
                     parrafo:'Calculamos el valor de la pendiente $AB$:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i36.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i36.png',
                   },
                   {
                     parrafo:'Donde, el valor de la pendiente $CH_3$ es:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i37.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i37.png',
                   },
                   {
                     parrafo:'Entonces:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i38.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i38.png',
                   },
                   {
                     parrafo:'Por lo tanto, el valor del vértice $H_3$ es:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i39.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i39.png',
                   },
                   {
                     parrafo:'Finalmente, la ecuación de la altura ${CH}_3$ es:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i40.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i40.png',
                   },
                   {
                     parrafo:'Vértice $H_2$'
                   },
                   {
                     parrafo:'Calculamos el valor de la pendiente $AC$:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i41.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i41.png',
                   },
                   {
                     parrafo:'Calculamos el valor de la pendiente $BH_2$, que es perpendicular a la pendiente $AC$:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i42.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i42.png',
                   },
                   {
                     parrafo:'Luego, calculamos la ecuación de la recta $AC$ es:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i43.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i43.png',
                   },
                   {
                     parrafo:'Reemplazamos el valor de la pendiente $AC$ de la ecuación (7) en la ecuación (9) para obtener la ecuación de la recta $AC$:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i44.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i44.png',
                   },
                   {
                     parrafo:'Luego, calculamos la ecuación de la recta $BH_2$ es:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i45.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i45.png',
                   },
                   {
                     parrafo:'Reemplazamos el valor de la pendiente $BH_2$ de la ecuación (8) en la ecuación (11) para obtener la ecuación de la recta $BH_2$:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i46.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i46.png',
                   },
                   {
                     parrafo:'Luego igualamos las ecuaciones (9) y (11) para calcular las coordenadas del vértice $H_2$:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i47.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i47.png',
                   },
                   {
                     parrafo:'Reemplazamos el valor de x de la ecuación (13) en la ecuación (10) y calculamos el valor de $y$:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i48.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i48.png',
                   },
                   {
                     parrafo:'Aplicando la siguiente identidad trigonométrica:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i49.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i49.png',
                   },
                   {
                     parrafo:'Se simplicifica la ecuación (15) de la siguiente manera:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i50.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i50.png',
                   },
                   {
                     parrafo:'Finalmente, se obtiene las coordenadas del vértice $H_2$:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i51.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i51.png',
                   },
                   {
                     parrafo:'Vértice $H$'
                   },
                   {
                     parrafo:'Reemplazamos el valor de x de la ecuación (6) en la ecuación (12) y calculamos el valor de $y$:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i52.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i52.png',
                   },
                   {
                     parrafo:'Finalmente, se obtiene las coordenadas del vértice $H$:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i53.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i53.png',
                   },
                   {
                     parrafo:'Vértice $H_1$'
                   },
                   {
                     parrafo:'Calculamos el valor de la pendiente $BC$:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i54.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i54.png',
                   },
                   {
                     parrafo:'Calculamos el valor de la pendiente $AH_1$, que es perpendicular a la pendiente $BC$:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i55.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i55.png',
                   },
                   {
                     parrafo:'Calculamos la ecuación de la recta $BC$ es:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i56.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i56.png',
                   },
                   {
                     parrafo:'Calculamos la ecuación de la recta $AH_1$ es:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i57.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i57.png',
                   },
                   {
                     parrafo:'Luego igualamos las ecuaciones (20) y (21) para calcular las coordenadas del vértice $H_1$:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i58.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i58.png',
                   },
                   {
                     parrafo:'Reemplazamos el valor de $x$ de la ecuación (22) en la ecuación (21) y calculamos el valor de $y$:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i59.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i59.png',
                   },
                   {
                     parrafo:'Finalmente, se obtiene las coordenadas del vértice $H_1$:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i60.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i60.png',
                   },
                   {
                     parrafo:'Triángulo $Órtico$'
@@ -865,35 +852,35 @@ export class ChapterIIComponent implements OnInit {
                   },
                   {
                     parrafo:'Calculamos el valor de la pendiente $H_2H_3$:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i61.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i61.png',
                   },
                   {
                     parrafo:'Calculamos el valor de la pendiente $HT_1$, que es perpendicular a la pendiente $H_2H_3$:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i62.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i62.png',
                   },
                   {
                     parrafo:'Calculamos la ecuación de la recta $H_2H_3$ es:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i63.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i63.png',
                   },
                   {
                     parrafo:'Calculamos la ecuación de la recta $HT_1$ es:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i64.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i64.png',
                   },
                   {
                     parrafo:'Luego igualamos las ecuaciones (27) y (28) para calcular las coordenadas del vértice $T_1$:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i65.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i65.png',
                   },
                   {
                     parrafo:'De la ecuación (27) se obtiene que y_(T_1 ) es igual a:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i66.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i66.png',
                   },
                   {
                     parrafo:'Finalmente, se obtiene las coordenadas del vértice $T_1$:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i67.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i67.png',
                   },
                   {
                     parrafo:'Para calcular el valor del radio $r_O$ del círculo del triángulo órtico, utilizamos la ecuación de la distancia entre el punto $T_1 (x_(T_1 );y_(T_1 ) )$ de la ecuación (17) y el punto $H(x_H;y_H )$ de la ecuación (30):',
-                    fotoPath:'./assets/images/Capitulos/II/media/i68.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i68.png',
                   }
                 ]
                },
@@ -902,55 +889,55 @@ export class ChapterIIComponent implements OnInit {
                 tituloproblema:'Problema:',
                 parrafo:'Dados los tres lados de un triángulo, encontrar los valores de los vértices en coordenadas rectangulares y graficar las líneas del triángulo, considerando que uno de sus lados se encuentra sobre el eje de las ‘x’ y uno de sus vértices es el origen. (Ver Figura 3.1.2 y 3.1.3). ',
                 fotoPath:'./assets/images/Capitulos/II/media/i69.png',
-                titulosolucion:'Solución:',  
-                solucion:[                  
+                titulosolucion:'Solución:',
+                solucion:[
                   {
                     parrafo:'Dados los siguientes puntos:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i70.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i70.png',
                   },
                   {
                     parrafo:'Las coordenadas cartesianas del incentro a partir de las de los tres vértices del triángulo A, B y C son:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i71.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i71.png',
                   },
                   {
                     parrafo:'Calculamos el valor del semiperímetro del triangulo:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i72.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i72.png',
                   },
                   {
                     parrafo:'Calculamos el valor del radio $r_a$ del primer círculo exinscrito:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i73.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i73.png',
                   },
                   {
                     parrafo:'Calculamos el valor del radio $r_b$ del segundo círculo exinscrito:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i74.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i74.png',
                   },
                   {
                     parrafo:'Calculamos el valor del radio $r_c$ del tercer círculo exinscrito:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i75.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i75.png',
                   },
                   {
                     parrafo:'Calculamos los valores de los ángulos del triángulo, utilizando las Leyes de Cosenos:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i76.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i76.png',
                   },
                   {
                     parrafo:'Calculamos los valores de los ángulos externos del triángulo:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i77.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i77.png',
                   },
                   {
                     parrafo:'Calculamos el valor del segmento $LA$ en el triángulo rectángulo $ELA$:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i78.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i78.png',
                   },
                   {
                     parrafo:'Calculamos el valor del segmento $BQ$ en el triángulo rectángulo $BQD$:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i79.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i79.png',
                   },
                   {
                     parrafo:'Calculamos el valor del segmento $AK$ en el triángulo rectángulo $AKF$:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i80.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i80.png',
                   },
                   {
                     parrafo:'Finalmente, obtenemos los vértices D, E y F del triángulo DEF que pasa por los vértices del triángulo ABC y une los radios de los tres círculos exinscritos:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i81.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i81.png',
                   },
                   {
                     parrafo:'Para calcular el valor del radio r del círculo inscrito al triángulo, se debe:'
@@ -965,11 +952,11 @@ export class ChapterIIComponent implements OnInit {
                   },
                   {
                     parrafo:'d.	Por lo tanto, el punto $T_3$ es:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i82.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i82.png',
                   },
                   {
                     parrafo:'e.	Luego calculamos la distancia entre el incento $I$ y el punto de tangencia $T_3$, para encontrar el radio $r$ del círculo inscrito al triángulo:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i83.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i83.png',
                   }
                 ]
                },
@@ -980,32 +967,32 @@ export class ChapterIIComponent implements OnInit {
                 fotoPath:'./assets/images/Capitulos/II/media/i84.png',
                 parrafo2:'La recta de Euler es una recta que pasa por el Ortocentro (H), el Baricentro (G) y el Circuncentro. Esta recta fue descubierta en 1765 por Leonhard Euler quien demostró la colinealidad de estos tres puntos notables de un triángulo. Además, esta recta pasa por el punto de Exeter y por el centro de la circunferencia de los bueve puntos notables de un triángulo escaleno, conocida como la circunferencia de Feuerbach (Fauring, P., et al., 2000).',
                 parrafo3:'Fauring, P., Gutiérrez, F., Pedraza, J., 2000. Problemas de Entrenamiento 1. Red Olímpica, Buenos Aires. ISBN 987-9072-31-6.',
-                titulosolucion:'Solución:',  
-                solucion:[                  
+                titulosolucion:'Solución:',
+                solucion:[
                   {
                     parrafo:'Dados los tres lados de un triángulo cualquiera, se obtienen los siguientes tres puntos:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i85.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i85.png',
                   },
                   {
                     parrafo:'Luego se utilizan las fórmulas de los puntos del baricentro, circuncentro y ortocentro ya calculadas anteriormente para unir esos puntos con líneas:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i86.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i86.png',
                   },
                   {
                     parrafo:'Luego, se grafican dos de las tres medianas del triángulo, en función de los puntos $G_1$ y $G_3$: ',
-                    fotoPath:'./assets/images/Capitulos/II/media/i87.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i87.png',
                   },
                   {
                     parrafo:'Después, se grafican dos de las tres mediatrices del triángulo, en función de los puntos $G_1$, $G_3$ y $O$:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i88.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i88.png',
                   },
                   {
                     parrafo:'Finalmente, se grafican dos de las tres alturas del triángulo, en función de los puntos $H_1$ y $H_3$; y también en función de las pendientes $m_BC$ y $m_(AH_1 )$:',
-                    fotoPath:'./assets/images/Capitulos/II/media/i89.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/i89.png',
                   }
                 ]
                }
 
-             ]               
+             ]
            },
          C:{
             subtitulo:'C)	Algoritmos',
@@ -1015,7 +1002,7 @@ export class ChapterIIComponent implements OnInit {
                     pasos:[
                       '1.	Leer el lado 1 del triángulo.',
                       '2.	Leer el lado 2 del triángulo.',
-                      '3.	Leer el lado 3 del triángulo.'                      
+                      '3.	Leer el lado 3 del triángulo.'
                     ]
                 },
                 {
@@ -1042,7 +1029,7 @@ export class ChapterIIComponent implements OnInit {
                     titulo:'3.1.5. Algoritmo de la Función AreaTriangle()',
                     pasos:[
                       '1.	Calcular el área.',
-                      '1.1.	Asignar el valor de la raíz cuadrada del semi-perímetro multiplicado por la diferencia entre el semi-perímetro por cada uno de los lados del triángulo, a la variable ‘area’.'                    
+                      '1.1.	Asignar el valor de la raíz cuadrada del semi-perímetro multiplicado por la diferencia entre el semi-perímetro por cada uno de los lados del triángulo, a la variable ‘area’.'
                     ]
                 },
                 {
@@ -1233,16 +1220,16 @@ export class ChapterIIComponent implements OnInit {
                     tablaN:'Tabla 3.1.1. ',
                     tablaDescrip:'Código de la clase CTriangle del programa.',
                     tablaDatos:
-                    ` 
+                    `
                     /*
                     * Copyright (CC) 2021 César Villacís, Margarita Zambrano,
                     * Edwin Cuichan, Kevin Sanipatín.
                     * Creative Commons: BY-NC-ND 4.0 International license.
-                    * 
-                    * Except where otherwise noted, content on this program is licensed 
-                    * under a Creative Commons BY-NC-ND 4.0 International license. 
+                    *
+                    * Except where otherwise noted, content on this program is licensed
+                    * under a Creative Commons BY-NC-ND 4.0 International license.
                     * Source Code by the developers.
-                    * 
+                    *
                     * Unless required by applicable law or agreed to in writing, software
                     * distributed under the License is distributed on an "AS IS" BASIS,
                     * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -1262,7 +1249,7 @@ export class ChapterIIComponent implements OnInit {
                     {
                         class CTriangle
                         {
-                            #region Atributes of the class        
+                            #region Atributes of the class
                             /// <summary>
                             /// Member Data
                             /// </summary>
@@ -1450,11 +1437,11 @@ export class ChapterIIComponent implements OnInit {
                                 txtSideA.Text = ""; txtSideB.Text = ""; txtSideC.Text = "";
                                 txtPerimeter.Text = ""; txtArea.Text = "";
                                 // Mantiene el cursor titilando en una caja de texto.
-                                txtSideA.Focus();            
+                                txtSideA.Focus();
                                 picCanvas.Refresh();
                             }
 
-                            // Función que inicializa los valores del centro del lienzo o canvas. 
+                            // Función que inicializa los valores del centro del lienzo o canvas.
                             public void InitializeData(PictureBox picCanvas)
                             {
                                 d = new Rectangle();
@@ -1462,7 +1449,7 @@ export class ChapterIIComponent implements OnInit {
                                 d.Y = picCanvas.Height;
 
                                 maxX = d.X - 1; maxY = d.Y - 1;
-                                xCenter = maxX / 2; yCenter = maxY / 2;            
+                                xCenter = maxX / 2; yCenter = maxY / 2;
                             }
 
                             // Función que grafica los ejes coordenados 'x' e 'y'.
@@ -1476,14 +1463,14 @@ export class ChapterIIComponent implements OnInit {
                                 P2.X = maxX; P2.Y = yCenter;
                                 mGraph.DrawLine(mPen, P1.X, P1.Y, P2.X, P2.Y);
 
-                                // Dibujar el eje vertical (y).            
+                                // Dibujar el eje vertical (y).
                                 P1.X = xCenter; P1.Y = 0;
                                 P2.X = xCenter; P2.Y = maxY;
 
                                 mGraph.DrawLine(mPen, P1.X, P1.Y, P2.X, P2.Y);
                             }
 
-                            // Función que calcula el ángulo A, B y C del triángulo, 
+                            // Función que calcula el ángulo A, B y C del triángulo,
                             // utilizando la Ley de Cosenos para cada ángulo.
                             private void CalculateAngles()
                             {
@@ -1513,12 +1500,12 @@ export class ChapterIIComponent implements OnInit {
 
                                 CalculateVertex();
 
-                                mGraph.DrawLine(mPen, A.X * SF + xCenter, yCenter + (-1) * A.Y * SF, 
+                                mGraph.DrawLine(mPen, A.X * SF + xCenter, yCenter + (-1) * A.Y * SF,
                                                       B.X * SF + xCenter, yCenter + (-1) * B.Y * SF);
-                                mGraph.DrawLine(mPen, A.X * SF + xCenter, yCenter + (-1) * A.Y * SF, 
+                                mGraph.DrawLine(mPen, A.X * SF + xCenter, yCenter + (-1) * A.Y * SF,
                                                       C.X * SF + xCenter, yCenter + (-1) * C.Y * SF);
-                                mGraph.DrawLine(mPen, B.X * SF + xCenter, yCenter + (-1) * B.Y * SF, 
-                                                      C.X * SF + xCenter, yCenter + (-1) * C.Y * SF);            
+                                mGraph.DrawLine(mPen, B.X * SF + xCenter, yCenter + (-1) * B.Y * SF,
+                                                      C.X * SF + xCenter, yCenter + (-1) * C.Y * SF);
                             }
 
                             // Función que calcula el valor del Baricentro G de un triángulo.
@@ -1542,11 +1529,11 @@ export class ChapterIIComponent implements OnInit {
                                 G3.X = c / 2.0f;
                                 G3.Y = 0.0f;
 
-                                mGraph.DrawLine(mPen, G1.X * SF + xCenter, yCenter + (-1) * G1.Y * SF, 
+                                mGraph.DrawLine(mPen, G1.X * SF + xCenter, yCenter + (-1) * G1.Y * SF,
                                                       A.X * SF + xCenter, yCenter + (-1) * A.Y * SF);
-                                mGraph.DrawLine(mPen, G2.X * SF + xCenter, yCenter + (-1) * G2.Y * SF, 
+                                mGraph.DrawLine(mPen, G2.X * SF + xCenter, yCenter + (-1) * G2.Y * SF,
                                                       B.X * SF + xCenter, yCenter + (-1) * B.Y * SF);
-                                mGraph.DrawLine(mPen, G3.X * SF + xCenter, yCenter + (-1) * G3.Y * SF, 
+                                mGraph.DrawLine(mPen, G3.X * SF + xCenter, yCenter + (-1) * G3.Y * SF,
                                                       C.X * SF + xCenter, yCenter + (-1) * C.Y * SF);
                             }
 
@@ -1576,21 +1563,21 @@ export class ChapterIIComponent implements OnInit {
                                 G2.Y = b * (float)Math.Sin(angleA) / 2.0f;
 
                                 G3.X = c / 2.0f;
-                                G3.Y = 0.0f;            
+                                G3.Y = 0.0f;
 
-                                mGraph.DrawLine(mPen, O.X * SF + xCenter, yCenter + (-1) * O.Y * SF, 
+                                mGraph.DrawLine(mPen, O.X * SF + xCenter, yCenter + (-1) * O.Y * SF,
                                                       G1.X * SF + xCenter, yCenter + (-1) * G1.Y * SF);
-                                mGraph.DrawLine(mPen, O.X * SF + xCenter, yCenter + (-1) * O.Y * SF, 
+                                mGraph.DrawLine(mPen, O.X * SF + xCenter, yCenter + (-1) * O.Y * SF,
                                                       G2.X * SF + xCenter, yCenter + (-1) * G2.Y * SF);
-                                mGraph.DrawLine(mPen, O.X * SF + xCenter, yCenter + (-1) * O.Y * SF, 
+                                mGraph.DrawLine(mPen, O.X * SF + xCenter, yCenter + (-1) * O.Y * SF,
                                                       G3.X * SF + xCenter, yCenter + (-1) * G3.Y * SF);
-                                
+
                                 // Calcular el radio R del círculo circunscrito al triángulo.
                                 float R = (float)Math.Sqrt(O.X * O.X + O.Y * O.Y);
 
                                 ObjCircle.PlotCircle(picCanvas, Color.Red, R, O.X * SF + xCenter,
                                                     (-1) * O.Y * SF + yCenter);
-                                mGraph.DrawLine(mPen, O.X * SF + xCenter, yCenter + (-1) * O.Y * SF, 
+                                mGraph.DrawLine(mPen, O.X * SF + xCenter, yCenter + (-1) * O.Y * SF,
                                                 A.X * SF + xCenter, yCenter + (-1) * A.Y * SF);
                             }
 
@@ -1598,7 +1585,7 @@ export class ChapterIIComponent implements OnInit {
                             private void CalculateOrthocenter()
                             {
                                 H.X = b * (float)Math.Cos(angleA);
-                                H.Y = c * (1.0f / (float)Math.Tan(angleA)) - b 
+                                H.Y = c * (1.0f / (float)Math.Tan(angleA)) - b
                                         * (float)Math.Cos(angleA) * (1.0f / (float)Math.Tan(angleA));
                             }
 
@@ -1609,53 +1596,53 @@ export class ChapterIIComponent implements OnInit {
                                 mPen = new Pen(Color.Green, 3);
 
                                 mBC = (b * (float)Math.Sin(angleA)) / (b * (float)Math.Cos(angleA) - c);
-                                float mAH1 = (-1.0f) * (b * (float)Math.Cos(angleA) - c) / 
+                                float mAH1 = (-1.0f) * (b * (float)Math.Cos(angleA) - c) /
                                             (b * (float)Math.Sin(angleA));
 
                                 H1.X = c * mBC / (mBC - mAH1); H1.Y = mAH1 * c * mBC / (mBC - mAH1);
-                                H2.X = (c * (1.0f / (float)Math.Tan(angleA))) / 
+                                H2.X = (c * (1.0f / (float)Math.Tan(angleA))) /
                                       ((float)Math.Tan(angleA) + (1.0f / (float)Math.Tan(angleA)));
                                 H2.Y = c / ((float)Math.Tan(angleA) + (1.0f / (float)Math.Tan(angleA)));
                                 H3.X = b * (float)Math.Cos(angleA); H3.Y = 0.0f;
 
-                                mGraph.DrawLine(mPen, A.X * SF + xCenter, yCenter + (-1) * A.Y * SF, 
+                                mGraph.DrawLine(mPen, A.X * SF + xCenter, yCenter + (-1) * A.Y * SF,
                                                 H1.X * SF + xCenter, yCenter + (-1) * H1.Y * SF);
-                                mGraph.DrawLine(mPen, B.X * SF + xCenter, yCenter + (-1) * B.Y * SF, 
+                                mGraph.DrawLine(mPen, B.X * SF + xCenter, yCenter + (-1) * B.Y * SF,
                                                 H2.X * SF + xCenter, yCenter + (-1) * H2.Y * SF);
-                                mGraph.DrawLine(mPen, C.X * SF + xCenter, yCenter + (-1) * C.Y * SF, 
+                                mGraph.DrawLine(mPen, C.X * SF + xCenter, yCenter + (-1) * C.Y * SF,
                                                 H3.X * SF + xCenter, yCenter + (-1) * H3.Y * SF);
 
                                 // Graficar el triángulo órtico.
                                 mPen = new Pen(Color.Coral, 3);
-                                mGraph.DrawLine(mPen, H1.X * SF + xCenter, yCenter + (-1) * H1.Y * SF, 
+                                mGraph.DrawLine(mPen, H1.X * SF + xCenter, yCenter + (-1) * H1.Y * SF,
                                                 H2.X * SF + xCenter, yCenter + (-1) * H2.Y * SF);
-                                mGraph.DrawLine(mPen, H1.X * SF + xCenter, yCenter + (-1) * H1.Y * SF, 
+                                mGraph.DrawLine(mPen, H1.X * SF + xCenter, yCenter + (-1) * H1.Y * SF,
                                                 H3.X * SF + xCenter, yCenter + (-1) * H3.Y * SF);
-                                mGraph.DrawLine(mPen, H2.X * SF + xCenter, yCenter + (-1) * H2.Y * SF, 
+                                mGraph.DrawLine(mPen, H2.X * SF + xCenter, yCenter + (-1) * H2.Y * SF,
                                                 H3.X * SF + xCenter, yCenter + (-1) * H3.Y * SF);
 
                                 H.X = b * (float)Math.Cos(angleA);
-                                H.Y = c * (1.0f / (float)Math.Tan(angleA)) - b * (float)Math.Cos(angleA) 
+                                H.Y = c * (1.0f / (float)Math.Tan(angleA)) - b * (float)Math.Cos(angleA)
                                         * (1.0f / (float)Math.Tan(angleA));
-                                
-                                float mH2H3 = (H3.Y - H2.Y) / (H3.X - H2.X);
-                                float mHT1 = -(H3.X - H2.X) / (H3.Y - H2.Y);            
 
-                                T1.X = (b * (float)Math.Cos(angleA) * (mH2H3 - mHT1) 
+                                float mH2H3 = (H3.Y - H2.Y) / (H3.X - H2.X);
+                                float mHT1 = -(H3.X - H2.X) / (H3.Y - H2.Y);
+
+                                T1.X = (b * (float)Math.Cos(angleA) * (mH2H3 - mHT1)
                                     + c * (1.0f / (float)Math.Tan(angleA))
                                     - b * (float)Math.Cos(angleA) * (1.0f / (float)Math.Tan(angleA)))
                                     / (mH2H3 - mHT1);
-                                            
+
                                 T1.Y = mH2H3 * T1.X - mH2H3 * b * (float)Math.Cos(angleA);
-                                
+
                                 // Calcular el radio ro del triángulo órtico.
-                                float ro = (float)Math.Sqrt((float)Math.Pow((T1.X - H.X), 2) 
+                                float ro = (float)Math.Sqrt((float)Math.Pow((T1.X - H.X), 2)
                                         + (float)Math.Pow((T1.Y - H.Y), 2));
 
-                                ObjCircle.PlotCircle(picCanvas, Color.Red, ro, H.X * SF + xCenter, 
+                                ObjCircle.PlotCircle(picCanvas, Color.Red, ro, H.X * SF + xCenter,
                                                     yCenter + (-1) * H.Y * SF);
                                 mPen = new Pen(Color.Red, 3);
-                                mGraph.DrawLine(mPen, H.X * SF + xCenter, yCenter + (-1) * H.Y * SF, 
+                                mGraph.DrawLine(mPen, H.X * SF + xCenter, yCenter + (-1) * H.Y * SF,
                                                 T1.X * SF + xCenter, yCenter + (-1) * T1.Y * SF);
                             }
 
@@ -1671,22 +1658,22 @@ export class ChapterIIComponent implements OnInit {
                             // inscrito y los tres círculos exinscritos del triángulo.
                             public void PlotBisectors(PictureBox picCanvas)
                             {
-                                mGraph = picCanvas.CreateGraphics();            
+                                mGraph = picCanvas.CreateGraphics();
 
                                 CalculateIncenter();
 
                                 // Calcular el radio r del círculo inscrito al triángulo.
-                                float r = (a * A.Y + b * B.Y + c * C.Y) / (a + b + c);            
-                                
+                                float r = (a * A.Y + b * B.Y + c * C.Y) / (a + b + c);
+
                                 T3.X = (a * A.X + b * B.X + c * C.X) / (a + b + c);
                                 T3.Y = 0;
 
                                 ObjCircle.PlotCircle(picCanvas, Color.Red, r, I.X * SF + xCenter,
                                                     yCenter + (-1) * I.Y * SF);
                                 mPen = new Pen(Color.Red, 3);
-                                mGraph.DrawLine(mPen, I.X * SF + xCenter, yCenter + (-1) * I.Y * SF, 
+                                mGraph.DrawLine(mPen, I.X * SF + xCenter, yCenter + (-1) * I.Y * SF,
                                                 T3.X * SF + xCenter, yCenter + (-1) * T3.Y * SF);
-                                                        
+
                                 PerimeterTriangle();
                                 float p = perimeter;
                                 float s = SemiperimeterTriangle();
@@ -1705,36 +1692,36 @@ export class ChapterIIComponent implements OnInit {
                                 BQ = Ra / (float)Math.Tan(Beta);
                                 LA = Rb / (float)Math.Tan(Alpha);
                                 AK = Rc / (float)Math.Tan(Alpha);
-                                
+
                                 D.X = c + BQ; D.Y = Ra;
                                 E.X = (-1) * LA; E.Y = Rb;
                                 F.X = AK; F.Y = (-1) * Rc;
 
                                 // Graficar el triángulo DEF.
                                 mPen = new Pen(Color.Maroon, 3);
-                                mGraph.DrawLine(mPen, D.X * SF + xCenter, yCenter + (-1) * D.Y * SF, 
+                                mGraph.DrawLine(mPen, D.X * SF + xCenter, yCenter + (-1) * D.Y * SF,
                                                 E.X * SF + xCenter, yCenter + (-1) * E.Y * SF);
-                                mGraph.DrawLine(mPen, D.X * SF + xCenter, yCenter + (-1) * D.Y * SF, 
+                                mGraph.DrawLine(mPen, D.X * SF + xCenter, yCenter + (-1) * D.Y * SF,
                                                 F.X * SF + xCenter, yCenter + (-1) * F.Y * SF);
-                                mGraph.DrawLine(mPen, E.X * SF + xCenter, yCenter + (-1) * E.Y * SF, 
+                                mGraph.DrawLine(mPen, E.X * SF + xCenter, yCenter + (-1) * E.Y * SF,
                                                 F.X * SF + xCenter, yCenter + (-1) * F.Y * SF);
 
-                                ObjCircle.PlotCircle(picCanvas, Color.DarkMagenta, Ra, D.X * SF + xCenter, 
+                                ObjCircle.PlotCircle(picCanvas, Color.DarkMagenta, Ra, D.X * SF + xCenter,
                                                     yCenter + (-1) * D.Y * SF);
-                                ObjCircle.PlotCircle(picCanvas, Color.DarkMagenta, Rb, E.X * SF + xCenter, 
+                                ObjCircle.PlotCircle(picCanvas, Color.DarkMagenta, Rb, E.X * SF + xCenter,
                                                     yCenter + (-1) * E.Y * SF);
-                                ObjCircle.PlotCircle(picCanvas, Color.DarkMagenta, Rc, F.X * SF + xCenter, 
+                                ObjCircle.PlotCircle(picCanvas, Color.DarkMagenta, Rc, F.X * SF + xCenter,
                                                     yCenter + (-1) * F.Y * SF);
 
                                 // Graficar las bisectrices del triángulo ABC.
                                 mPen = new Pen(Color.DarkSalmon, 3);
-                                mGraph.DrawLine(mPen, A.X * SF + xCenter, yCenter + (-1) * A.Y * SF, 
+                                mGraph.DrawLine(mPen, A.X * SF + xCenter, yCenter + (-1) * A.Y * SF,
                                                 D.X * SF + xCenter, yCenter + (-1) * D.Y * SF);
-                                mGraph.DrawLine(mPen, B.X * SF + xCenter, yCenter + (-1) * B.Y * SF, 
+                                mGraph.DrawLine(mPen, B.X * SF + xCenter, yCenter + (-1) * B.Y * SF,
                                                 E.X * SF + xCenter, yCenter + (-1) * E.Y * SF);
-                                mGraph.DrawLine(mPen, C.X * SF + xCenter, yCenter + (-1) * C.Y * SF, 
+                                mGraph.DrawLine(mPen, C.X * SF + xCenter, yCenter + (-1) * C.Y * SF,
                                                 F.X * SF + xCenter, yCenter + (-1) * F.Y * SF);
-                                                      
+
                                 float X1, Y1;
                                 mAB = 0.0f; mAC = (float)Math.Tan(angleA);
                                 mBC = (b * (float)Math.Sin(angleA)) / (b * (float)Math.Cos(angleA) - c);
@@ -1757,9 +1744,9 @@ export class ChapterIIComponent implements OnInit {
                                 CalculateCircumcenter();
                                 CalculateOrthocenter();
 
-                                mGraph.DrawLine(mPen, G.X * SF + xCenter, yCenter + (-1) * G.Y * SF, 
+                                mGraph.DrawLine(mPen, G.X * SF + xCenter, yCenter + (-1) * G.Y * SF,
                                                 O.X * SF + xCenter, yCenter + (-1) * O.Y * SF);
-                                mGraph.DrawLine(mPen, G.X * SF + xCenter, yCenter + (-1) * G.Y * SF, 
+                                mGraph.DrawLine(mPen, G.X * SF + xCenter, yCenter + (-1) * G.Y * SF,
                                                 H.X * SF + xCenter, yCenter + (-1) * H.Y * SF);
                             }
 
@@ -1822,7 +1809,7 @@ export class ChapterIIComponent implements OnInit {
 
                             // Función que cierra un formulario.
                             public void CloseForm(Form ObjForm)
-                            {            
+                            {
                                 ObjForm.Close();
                             }
 
@@ -1842,36 +1829,36 @@ export class ChapterIIComponent implements OnInit {
                     * Copyright (CC) 2021 César Villacís, Margarita Zambrano,
                     * Edwin Cuichan, Kevin Sanipatín.
                     * Creative Commons: BY-NC-ND 4.0 International license.
-                    * 
-                    * Except where otherwise noted, content on this program is licensed 
-                    * under a Creative Commons BY-NC-ND 4.0 International license. 
+                    *
+                    * Except where otherwise noted, content on this program is licensed
+                    * under a Creative Commons BY-NC-ND 4.0 International license.
                     * Source Code by the developers.
-                    * 
+                    *
                     * Unless required by applicable law or agreed to in writing, software
                     * distributed under the License is distributed on an "AS IS" BASIS,
                     * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
                     * See the License for the specific language governing permissions and
                     * limitations under the License.
-                    */          
+                    */
                     using System;
                     using System.Collections.Generic;
                     using System.Linq;
                     using System.Text;
                     using System.Threading.Tasks;
-                    
+
                     using System.Drawing;
                     using System.Windows.Forms;
-                    
+
                     namespace WinAppTriangle
                     {
                         class CCircle
                         {
-                            #region Atributes of the class        
+                            #region Atributes of the class
                             /// <summary>
                             /// Member Data
-                            /// </summary>         
-                            
-                            // Activar el modo gráfico de Windows con GDI+ 
+                            /// </summary>
+
+                            // Activar el modo gráfico de Windows con GDI+
                             // GDI+ (Graphic Device Interface with COM+ Technology).
                             private Graphics mGraph;
                             // Factor de escalamiento para hacer un Zoom In/Zoom Out.
@@ -1887,27 +1874,27 @@ export class ChapterIIComponent implements OnInit {
                             // Intervalos de la función (Dominio-x).
                             private float I1, I2;
                             #endregion
-                    
+
                             #region Constructors of the class
                             ///<summary>
                             /// Constructor Functions.
                             ///</summary>
-                    
+
                             // Constructor sin parámetros.
                             public CCircle()
                             {
                                 mX = 0.0f; mY = 0.0f;
                                 mXp = 0.0f; mYp = 0.0f;
                             }
-                    
+
                             #endregion
-                    
+
                             #region Methods of the class
                             ///<summary>
                             /// Funciones Miembro (Métodos).
-                            ///</summary>        
-                    
-                            //Función para evaluar la función en coordenadas rectangulares 
+                            ///</summary>
+
+                            //Función para evaluar la función en coordenadas rectangulares
                             // del círculo, con cinco parámetros.
                             public void EvaluateFunction(float r, float xCenter, float yCenter,
                                                          float iX, float iY)
@@ -1915,11 +1902,11 @@ export class ChapterIIComponent implements OnInit {
                                 float i; // Contador para controlar el valor del ángulo theta de la función.
                                 int j;   // Contador para controlar el arreglo de puntos.
                                 // Dominio (theta) de la función: [0, 360]
-                                // Tamaño de paso o delta theta: h = 1 grado = (1*PI/180) rad            
+                                // Tamaño de paso o delta theta: h = 1 grado = (1*PI/180) rad
                                 I1 = 0.0f; I2 = 2 * (float)Math.PI;
                                 for (i = I1, j = 0; i <= I2; i += (float)Math.PI / 180.0f, j++)
                                 {
-                                    // Tabla de valores del mundo real.                
+                                    // Tabla de valores del mundo real.
                                     // Fórmulas de transformación de coordenadas polares a rectangulares.
                                     mX = r * (float)Math.Cos(i);
                                     mY = r * (float)Math.Sin(i);
@@ -1932,19 +1919,19 @@ export class ChapterIIComponent implements OnInit {
                                     mP[j] = new PointF(mXp, mYp);
                                 }
                             }
-                    
-                            //Función para evaluar la función en coordenadas rectangulares 
+
+                            //Función para evaluar la función en coordenadas rectangulares
                             // del círculo, con tres parámetros.
                             public void EvaluateFunction(float r, float xCenter, float yCenter)
                             {
                                 float i; // Contador para controlar el valor del ángulo theta de la función.
                                 int j;   // Contador para controlar el arreglo de puntos.
                                 // Dominio (theta) de la función: [0, 360]
-                                // Tamaño de paso o delta theta: h = 1 grado = (1*PI/180) rad            
+                                // Tamaño de paso o delta theta: h = 1 grado = (1*PI/180) rad
                                 I1 = 0.0f; I2 = 2 * (float)Math.PI;
                                 for (i = I1, j = 0; i <= I2; i += (float)Math.PI / 180.0f, j++)
                                 {
-                                    // Tabla de valores del mundo real.                
+                                    // Tabla de valores del mundo real.
                                     // Fórmulas de transformación de coordenadas polares a rectangulares.
                                     mX = r * (float)Math.Cos(i);
                                     mY = r * (float)Math.Sin(i);
@@ -1955,7 +1942,7 @@ export class ChapterIIComponent implements OnInit {
                                     mP[j] = new PointF(mXp, mYp);
                                 }
                             }
-                    
+
                             // Función para graficar la curva.
                             public void PlotCircle(PictureBox picCanvas, Color color,
                                                    float r, float xCenter, float yCenter)
@@ -1963,12 +1950,12 @@ export class ChapterIIComponent implements OnInit {
                                 mGraph = picCanvas.CreateGraphics();
                                 ObjPen = new Pen(color, 3);
                                 mP = new PointF[361];
-                    
+
                                 EvaluateFunction(r, xCenter, yCenter);
-                    
+
                                 mGraph.DrawCurve(ObjPen, mP);
                             }
-                    
+
                             // Función para graficar la curva.
                             public void PlotCircle(PictureBox picCanvas, Color color,
                                                    float r, float xCenter, float yCenter,
@@ -1977,22 +1964,22 @@ export class ChapterIIComponent implements OnInit {
                                 mGraph = picCanvas.CreateGraphics();
                                 ObjPen = new Pen(color, 3);
                                 mP = new PointF[361];
-                    
+
                                 EvaluateFunction(r, xCenter, yCenter, iX, iY);
-                    
+
                                 mGraph.DrawCurve(ObjPen, mP);
                             }
-                    
+
                             // Función para inicializar los datos miembro de la clase.
                             public void InitializeData()
                             {
                                 mX = 0.0f; mY = 0.0f;
                                 mXp = 0.0f; mYp = 0.0f;
                             }
-                    
+
                             #endregion
                         }
-                    }                    
+                    }
                     `
                 },
                 {
@@ -2005,11 +1992,11 @@ export class ChapterIIComponent implements OnInit {
                     * Copyright (CC) 2021 César Villacís, Margarita Zambrano,
                     * Edwin Cuichan, Kevin Sanipatín.
                     * Creative Commons: BY-NC-ND 4.0 International license.
-                    * 
-                    * Except where otherwise noted, content on this program is licensed 
-                    * under a Creative Commons BY-NC-ND 4.0 International license. 
+                    *
+                    * Except where otherwise noted, content on this program is licensed
+                    * under a Creative Commons BY-NC-ND 4.0 International license.
                     * Source Code by the developers.
-                    * 
+                    *
                     * Unless required by applicable law or agreed to in writing, software
                     * distributed under the License is distributed on an "AS IS" BASIS,
                     * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -2021,20 +2008,20 @@ export class ChapterIIComponent implements OnInit {
                     using System.Linq;
                     using System.Text;
                     using System.Threading.Tasks;
-                    
+
                     using System.Drawing;
                     using System.Windows.Forms;
-                    
+
                     namespace WinAppTriangle
                     {
                         class CLine
                         {
-                            #region Atributes of the class        
+                            #region Atributes of the class
                             /// <summary>
                             /// Member Data
-                            /// </summary>  
-                    
-                            // Activar el modo gráfico de Windows con GDI+ 
+                            /// </summary>
+
+                            // Activar el modo gráfico de Windows con GDI+
                             // GDI+ (Graphic Device Interface with COM+ Technology).
                             private Graphics mGraph;
                             // Factor de escalamiento para hacer un Zoom In/Zoom Out.
@@ -2049,35 +2036,35 @@ export class ChapterIIComponent implements OnInit {
                             private float mXp, mYp;
                             // Intervalos de la función (Dominio-x).
                             private float I1, I2;
-                    
+
                             #endregion
-                    
+
                             #region Constructors of the class
                             ///<summary>
                             /// Constructor Functions.
                             ///</summary>
-                    
-                            // Constructor sin parámetros.        
+
+                            // Constructor sin parámetros.
                             public CLine()
-                            {            
+                            {
                                 mX = 0.0f; mY = 0.0f; mXp = 0.0f; mYp = 0.0f;
                             }
-                    
+
                             #endregion
-                    
+
                             #region Methods of the class
                             ///<summary>
                             /// Funciones Miembro (Métodos).
                             ///</summary>
-                    
-                            //Función para evaluar una función lineal.        
+
+                            //Función para evaluar una función lineal.
                             public void EvaluateFunction(float m, float X1, float Y1,
                                                          float xCenter, float yCenter)
                             {
                                 float i; // Contador para controlar el valor de x de la función.
-                                int j;   // Contador para controlar el arreglo de puntos.  
+                                int j;   // Contador para controlar el arreglo de puntos.
                                 // Dominio (x) de la función D:[-10, 10]
-                                // Tamaño de paso o delta x: h = 1           
+                                // Tamaño de paso o delta x: h = 1
                                 I1 = -30; I2 = 30;
                                 for (i = I1, j = 0; i <= I2; i++, j++)
                                 {
@@ -2091,30 +2078,30 @@ export class ChapterIIComponent implements OnInit {
                                     mP[j] = new PointF(mXp, mYp);
                                 }
                             }
-                    
+
                             // Función para graficar la curva.
-                            public void PlotLine(PictureBox picCanvas, Color color, float m, 
+                            public void PlotLine(PictureBox picCanvas, Color color, float m,
                                                  float X1, float Y1, float xCenter, float yCenter)
                             {
                                 mGraph = picCanvas.CreateGraphics();
                                 ObjPen = new Pen(color, 3);
-                    
+
                                 mP = new PointF[61];
-                    
+
                                 EvaluateFunction(m, X1, Y1, xCenter, yCenter);
-                    
+
                                 mGraph.DrawCurve(ObjPen, mP);
                             }
-                    
+
                             // Función para inicializar los datos miembro de la clase.
                             public void InitializeData()
                             {
                                 mX = 0.0f; mY = 0.0f; mXp = 0.0f; mYp = 0.0f;
                             }
-                    
+
                             #endregion
                         }
-                    }                    
+                    }
                     `
                 },
                 {
@@ -2127,11 +2114,11 @@ export class ChapterIIComponent implements OnInit {
                     * Copyright (CC) 2021 César Villacís, Margarita Zambrano,
                     * Edwin Cuichan, Kevin Sanipatín.
                     * Creative Commons: BY-NC-ND 4.0 International license.
-                    * 
-                    * Except where otherwise noted, content on this program is licensed 
-                    * under a Creative Commons BY-NC-ND 4.0 International license. 
+                    *
+                    * Except where otherwise noted, content on this program is licensed
+                    * under a Creative Commons BY-NC-ND 4.0 International license.
                     * Source Code by the developers.
-                    * 
+                    *
                     * Unless required by applicable law or agreed to in writing, software
                     * distributed under the License is distributed on an "AS IS" BASIS,
                     * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -2147,19 +2134,19 @@ export class ChapterIIComponent implements OnInit {
                     using System.Text;
                     using System.Threading.Tasks;
                     using System.Windows.Forms;
-                    
+
                     namespace WinAppTriangle
                     {
                         public partial class frmTriangle : Form
                         {
                             // Definición de un objeto de tipo CTriangle.
                             private CTriangle ObjCTriangle = new CTriangle();
-                    
+
                             public frmTriangle()
                             {
-                                InitializeComponent();            
+                                InitializeComponent();
                             }
-                    
+
                             private void frmTriangle_Load(object sender, EventArgs e)
                             {
                                 // Inicialización de los datos y controles.
@@ -2167,7 +2154,7 @@ export class ChapterIIComponent implements OnInit {
                                 ObjCTriangle.InitializeData(txtSideA, txtSideB, txtSideC,
                                                             txtPerimeter, txtArea, picCanvas);
                             }
-                    
+
                             private void btnCalculate_Click(object sender, EventArgs e)
                             {
                                 // Declaración de una variable boolena.
@@ -2181,7 +2168,7 @@ export class ChapterIIComponent implements OnInit {
                                 // Verificación de la existencia de un triángulo.
                                 // Llamada a la función CheckTriangle.
                                 Validate = ObjCTriangle.CheckTriangle();
-                    
+
                                 // Si el valor de la variable booleana es verdadero,
                                 // entonce existe y se realizan algunos cálculos.
                                 if (Validate == true)
@@ -2202,7 +2189,7 @@ export class ChapterIIComponent implements OnInit {
                                     ObjCTriangle.PlotAxis(picCanvas);
                                     // Graficación de un triángulo.
                                     // Llamada a la función PlotShape.
-                                    ObjCTriangle.PlotShape(picCanvas);                
+                                    ObjCTriangle.PlotShape(picCanvas);
                                 }
                                 // Caso Contrario, el triángulo no existe.
                                 else // !(Validate == true)
@@ -2211,7 +2198,7 @@ export class ChapterIIComponent implements OnInit {
                                                     "Mensaje de error");
                                 }
                             }
-                    
+
                             private void btnReset_Click(object sender, EventArgs e)
                             {
                                 // Inicialización de los datos y controles.
@@ -2219,14 +2206,14 @@ export class ChapterIIComponent implements OnInit {
                                 ObjCTriangle.InitializeData(txtSideA, txtSideB, txtSideC,
                                                             txtPerimeter, txtArea, picCanvas);
                             }
-                    
+
                             private void btnExit_Click(object sender, EventArgs e)
                             {
                                 // Cierre de un formulario.
                                 // Llamada a la función CloseForm.
-                                ObjCTriangle.CloseForm(this);            
+                                ObjCTriangle.CloseForm(this);
                             }
-                    
+
                             private void btnMedians_Click(object sender, EventArgs e)
                             {
                                 // Borrar el lienzo o canvas.
@@ -2241,7 +2228,7 @@ export class ChapterIIComponent implements OnInit {
                                 // Llamada a la función PlotMedians.
                                 ObjCTriangle.PlotMedians(picCanvas);
                             }
-                    
+
                             private void btnPerpendicularBisectors_Click(object sender, EventArgs e)
                             {
                                 // Borrar el lienzo o canvas.
@@ -2256,7 +2243,7 @@ export class ChapterIIComponent implements OnInit {
                                 // Llamada a la función PlotPerpendicularBisectors.
                                 ObjCTriangle.PlotPerpendicularBisectors(picCanvas);
                             }
-                    
+
                             private void btnAltitudes_Click(object sender, EventArgs e)
                             {
                                 // Borrar el lienzo o canvas.
@@ -2271,15 +2258,15 @@ export class ChapterIIComponent implements OnInit {
                                 // Llamada a la función PlotAltitudes.
                                 ObjCTriangle.PlotAltitudes(picCanvas);
                             }
-                    
+
                             private void btnBisectors_Click(object sender, EventArgs e)
                             {
                                 // Borrar el lienzo o canvas.
                                 picCanvas.Refresh();
                                 // Graficación de los ejes coordenados.
                                 // Llamada a la función PlotAxis.
-                                ObjCTriangle.PlotAxis(picCanvas);            
-                                // Graficación de las bisectrices y de los círculos 
+                                ObjCTriangle.PlotAxis(picCanvas);
+                                // Graficación de las bisectrices y de los círculos
                                 // exinscritos e inscrito de un triángulo.
                                 // Llamada a la función PlotBisectors.
                                 ObjCTriangle.PlotBisectors(picCanvas);
@@ -2287,7 +2274,7 @@ export class ChapterIIComponent implements OnInit {
                                 // Llamada a la función PlotShape.
                                 ObjCTriangle.PlotShape(picCanvas);
                             }
-                    
+
                             private void btnEulersLine_Click(object sender, EventArgs e)
                             {
                                 // Borrar el lienzo o canvas.
@@ -2312,9 +2299,9 @@ export class ChapterIIComponent implements OnInit {
                                 ObjCTriangle.PlotEulersLine(picCanvas);
                             }
                         }
-                    }                    
+                    }
                     `
-                } 
+                }
             ]
          },
           E:{
@@ -2361,7 +2348,7 @@ export class ChapterIIComponent implements OnInit {
          },
          {
           link:'https://drive.google.com/uc?id=1rqz2QCg86nSAIM0XqNLV2Sd63zl6ZLBh&export=download',
-          label: 'Pracnique 3.2', 
+          label: 'Pracnique 3.2',
          tituloN:'Pracnique 3.2: ',
          titulo:'Operaciones entre Vectores 2D',
          sinopsisDescrip:'Este pracnique explora la creación de un programa de gráficos por computadora para graficar vectores 2D y realizar diferentes operaciones entre ellos.',
@@ -2385,43 +2372,43 @@ export class ChapterIIComponent implements OnInit {
                 subtitulo2:'B.1.) Suma de Vectores',
                 tituloproblema:'Problema:',
                 parrafo:'Dados dos vectores 2D en el plano, calcular y graficar el vector resultante de la suma entre ellos. Utilizar el método del paralelogramo para realizar la representación gráfica de los tres vectores 2D en el plano.',
-                titulosolucion:'Solución:',  
-                solucion:[                  
+                titulosolucion:'Solución:',
+                solucion:[
                   {
                     parrafo:'Dados los siguientes vectores en el plano:',
-                    fotoPath:'./assets/images/Capitulos/II/media/cap2i2.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i2.png',
                   },
                   {
                     parrafo:'La suma entre los vectores A y B se obtiene utilizando la ecuación (54) de la sección 2.1.2.13:',
-                    fotoPath:'./assets/images/Capitulos/II/media/cap2i3.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i3.png',
                   },
                   {
                     parrafo:'En la representación gráfica de la Suma de dos Vectores, se forma un paralelogramo, donde el Vector $\\overrightarrow{C}$ es el Vector Resultante $\\overrightarrow{R}$. La Figura 3.2.2 muestra estos vectores en el plano del mundo real.',
-                    fotoPath:'./assets/images/Capitulos/II/media/cap2i4.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i4.png',
                   },
                   {
                     parrafo:'Para poder representar gráficamente estos vectores en el mundo de la Computación Gráfica es necesario utilizar las ecuaciones (3) y (4) de la sección 2.1.1.2 referentes a la traslación de un punto a otro que son:',
-                    fotoPath:'./assets/images/Capitulos/II/media/cap2i5.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i5.png',
                   },
                   {
                     parrafo:'Si se considera un lienzo o canvas de 400x300, entonces el centro de esta área en análisis es: ',
-                    fotoPath:'./assets/images/Capitulos/II/media/cap2i6.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i6.png',
                   },
                   {
                     parrafo:'Donde, este valor obtenido corresponde al nuevo centro trasladado. Entonces:',
-                    fotoPath:'./assets/images/Capitulos/II/media/cap2i7.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i7.png',
                   },
                   {
                     parrafo:'Si se aplica un factor de escalamiento (SF) igual a 20 y considerando los valores de los vértices de los extremos de los vectores A, B y C:',
-                    fotoPath:'./assets/images/Capitulos/II/media/cap2i8.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i8.png',
                   },
                   {
                     parrafo:'Entonces los valores de los vértices de los extremos de los vectores en el mundo de la Computación Gráfica se calculan de la siguiente manera, para obtener los nuevos vectores A, B y C:',
-                    fotoPath:'./assets/images/Capitulos/II/media/cap2i9.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i9.png',
                   },
                   {
                     parrafo:'Finalmente, la gráfica de los vectores A, B y C en el mundo de la Computación Gráfica se muestra en la Figura 3.2.3:',
-                    fotoPath:'./assets/images/Capitulos/II/media/cap2i10.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i10.png',
                   }
                 ]
                },
@@ -2429,47 +2416,47 @@ export class ChapterIIComponent implements OnInit {
                 subtitulo2:'B.2.) Resta de Vectores',
                 tituloproblema:'Problema:',
                 parrafo:'Dados dos vectores 2D en el plano, calcular y graficar el vector resultante de la resta entre ellos. Utilizar el método del paralelogramo para realizar la representación gráfica de los tres vectores 2D en el plano.',
-                titulosolucion:'Solución:',  
-                solucion:[                  
+                titulosolucion:'Solución:',
+                solucion:[
                   {
                     parrafo:'Dados los siguientes vectores en el plano:',
-                    fotoPath:'./assets/images/Capitulos/II/media/cap2i11.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i11.png',
                   },
                   {
                     parrafo:'La resta entre los vectores A y B se obtiene utilizando la ecuación (58) de la sección 2.1.2.13:',
-                    fotoPath:'./assets/images/Capitulos/II/media/cap2i12.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i12.png',
                   },
                   {
                     parrafo:'En la representación gráfica de la Resta de dos Vectores, se forma un paralelogramo, donde el Vector \\overrightarrow{B} es opuesto al Vector \\overrightarrow{-B}, que es igual al Vector \\overrightarrow{D}, osea:',
-                    fotoPath:'./assets/images/Capitulos/II/media/cap2i13.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i13.png',
                   },
                   {
                     parrafo:'La Figura 3.2.4 muestra estos vectores en el plano del mundo real.',
-                    fotoPath:'./assets/images/Capitulos/II/media/cap2i14.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i14.png',
                   },
                   {
                     parrafo:'Para poder representar gráficamente estos vectores en el mundo de la Computación Gráfica es necesario utilizar las ecuaciones (3) y (4) de la sección 2.1.1.2 referentes a la traslación de un punto a otro que son:',
-                    fotoPath:'./assets/images/Capitulos/II/media/cap2i15.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i15.png',
                   },
                   {
                     parrafo:'Si se considera un lienzo o canvas de 400x300, entonces el centro de esta área en análisis es: ',
-                    fotoPath:'./assets/images/Capitulos/II/media/cap2i16.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i16.png',
                   },
                   {
                     parrafo:'Donde, este valor obtenido corresponde al nuevo centro trasladado. Entonces:',
-                    fotoPath:'./assets/images/Capitulos/II/media/cap2i17.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i17.png',
                   },
                   {
                     parrafo:'Si se aplica un factor de escalamiento (SF) igual a 20 y considerando los valores de los vértices de los extremos de los vectores A, B y C:',
-                    fotoPath:'./assets/images/Capitulos/II/media/cap2i18.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i18.png',
                   },
                   {
                     parrafo:'Entonces los valores de los vértices de los extremos de los vectores en el mundo de la Computación Gráfica se calculan de la siguiente manera, para obtener los nuevos vectores A, -B y C:',
-                    fotoPath:'./assets/images/Capitulos/II/media/cap2i19.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i19.png',
                   },
                   {
                     parrafo:'Finalmente, la gráfica de los vectores A, -B y C en el mundo de la Computación Gráfica se muestra en la Figura 3.2.5:',
-                    fotoPath:'./assets/images/Capitulos/II/media/cap2i20.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i20.png',
                   }
                 ]
                },
@@ -2477,107 +2464,107 @@ export class ChapterIIComponent implements OnInit {
                 subtitulo2:'B.3.) Proyección de un Vector sobre otro Vector',
                 tituloproblema:'Problema:',
                 parrafo:'Dados dos vectores 2D en el plano, calcular y graficar el vector proyección del Vector A sobre el Vector B y el Vector Perpendicular entre ellos. Utilizar las ecuaciones de la sección 3.1.2.19 y 3.1.2.20.',
-                titulosolucion:'Solución:',  
-                solucion:[                  
+                titulosolucion:'Solución:',
+                solucion:[
                   {
                     parrafo:'Dados los siguientes vectores en el plano:',
-                    fotoPath:'./assets/images/Capitulos/II/media/cap2i21.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i21.png',
                   },
                   {
                     parrafo:'La proyección del vector A sobre el vector B se obtiene utilizando la ecuación (68) de la sección 3.1.2.19:',
-                    fotoPath:'./assets/images/Capitulos/II/media/cap2i22.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i22.png',
                   },
                   {
                     parrafo:'Primero se calcula el módulo o magnitud del vector B con la ecuación (13) de la sección 3.1.2.4:',
-                    fotoPath:'./assets/images/Capitulos/II/media/cap2i23.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i23.png',
                   },
                   {
                     parrafo:'Como segundo paso, se calcula el vector unitario o normalizado del vector B, utilizando la ecuación (26) de la sección 3.1.2.8:',
-                    fotoPath:'./assets/images/Capitulos/II/media/cap2i24.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i24.png',
                   },
                   {
                     parrafo:'Como tercer paso, se calcula el producto punto entre el vector A con el vector unitario o normalizado del vector B:',
-                    fotoPath:'./assets/images/Capitulos/II/media/cap2i25.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i25.png',
                   },
                   {
                     parrafo:'Finalmente, se calcula el producto entre un vector por un escalar, donde el vector representa al vector unitario de B y el escalar representa al producto punto calculado en el paso anterior:',
-                    fotoPath:'./assets/images/Capitulos/II/media/cap2i26.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i26.png',
                   },
                   {
                     parrafo:'Entonces, el vector proyección de A sobre el vector B es el vector C:',
-                    fotoPath:'./assets/images/Capitulos/II/media/cap2i27.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i27.png',
                   },
                   {
                     parrafo:'La Figura 3.2.6 muestra la proyección del vector A sobre el vector B.'
                   },
                   {
                     parrafo:'Para poder representar gráficamente estos vectores en el mundo de la Computación Gráfica es necesario utilizar las ecuaciones (3) y (4) de la sección 3.1.1.2 referentes a la traslación de un punto a otro que son:',
-                    fotoPath:'./assets/images/Capitulos/II/media/cap2i28.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i28.png',
                   },
                   {
                     parrafo:'Si se considera un lienzo o canvas de 400x300, entonces el centro de esta área en análisis es: ',
-                    fotoPath:'./assets/images/Capitulos/II/media/cap2i29.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i29.png',
                   },
                   {
                     parrafo:'Donde, este valor obtenido corresponde al nuevo centro trasladado. Entonces:',
-                    fotoPath:'./assets/images/Capitulos/II/media/cap2i30.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i30.png',
                   },
                   {
                     parrafo:'Si se aplica un factor de escalamiento (SF) igual a 20 y considerando los valores de los vértices de los extremos de los vectores A, B y C:',
-                    fotoPath:'./assets/images/Capitulos/II/media/cap2i31.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i31.png',
                   },
                   {
                     parrafo:'Entonces los valores de los vértices de los extremos de los vectores en el mundo de la Computación Gráfica se calculan de la siguiente manera, para obtener los nuevos vectores A, B y C:',
-                    fotoPath:'./assets/images/Capitulos/II/media/cap2i32.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i32.png',
                   },
                   {
-                    fotoPath:'./assets/images/Capitulos/II/media/cap2i33.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i33.png',
                   },
                   {
                     parrafo:'Finalmente, la gráfica de los vectores A, B y C en el mundo de la Computación Gráfica se muestra en la Figura 3.2.7:',
-                    fotoPath:'./assets/images/Capitulos/II/media/cap2i34.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i34.png',
                   },
                   {
                     parrafo:'El vector perpendicular formado por la proyección del vector A sobre el vector B se obtiene utilizando la ecuación (71) de la sección 3.1.2.20:',
-                    fotoPath:'./assets/images/Capitulos/II/media/cap2i35.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i35.png',
                   },
                   {
                     parrafo:'En esta ecuación se realiza una resta de vectores entre el vector A con el vector proyección de A sobre el vector B:',
-                    fotoPath:'./assets/images/Capitulos/II/media/cap2i36.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i36.png',
                   },
                   {
                     parrafo:'Entonces, el vector perpendicular resultante es D:',
-                    fotoPath:'./assets/images/Capitulos/II/media/cap2i37.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i37.png',
                   },
                   {
                     parrafo:'La Figura 3.2.8 muestra el vector perpendicular a otro vector.'
                   },
                   {
                     parrafo:'Para poder representar gráficamente estos vectores en el mundo de la Computación Gráfica es necesario utilizar las ecuaciones (3) y (4) de la sección 3.1.1.2 referentes a la traslación de un punto a otro que son:',
-                    fotoPath:'./assets/images/Capitulos/II/media/cap2i38.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i38.png',
                   },
                   {
                     parrafo:'Si se considera un lienzo o canvas de 400x300, entonces el centro de esta área en análisis es: ',
-                    fotoPath:'./assets/images/Capitulos/II/media/cap2i39.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i39.png',
                   },
                   {
                     parrafo:'Donde, este valor obtenido corresponde al nuevo centro trasladado. Entonces:',
-                    fotoPath:'./assets/images/Capitulos/II/media/cap2i40.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i40.png',
                   },
                   {
                     parrafo:'Si se aplica un factor de escalamiento (SF) igual a 20 y considerando los valores de los vértices de los extremos de los vectores A, B, C y D:',
-                    fotoPath:'./assets/images/Capitulos/II/media/cap2i41.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i41.png',
                   },
                   {
                     parrafo:'Entonces los valores de los vértices de los extremos de los vectores en el mundo de la Computación Gráfica se calculan de la siguiente manera, para obtener los nuevos vectores A, B y C:',
-                    fotoPath:'./assets/images/Capitulos/II/media/cap2i42.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/cap2i42.png',
                   },
                   {
                     parrafo:'Finalmente, la gráfica de los vectores A, B, C y D en el mundo de la Computación Gráfica se muestra en la Figura 3.2.9.'
                   }
                 ]
                }
-             ]               
+             ]
            },
          C:{
             subtitulo:'C)	Algoritmos',
@@ -2586,7 +2573,7 @@ export class ChapterIIComponent implements OnInit {
                     titulo:'3.2.1. Algoritmo de la Función ReadData()',
                     pasos:[
                       '1.	Leer el valor de la componente ‘X’ del vector 2D.',
-                      '2.	Leer el valor de la componente ‘Y’ del vector 2D.'  
+                      '2.	Leer el valor de la componente ‘Y’ del vector 2D.'
                     ]
                 },
                 {
@@ -2740,16 +2727,16 @@ export class ChapterIIComponent implements OnInit {
                     tablaN:'Tabla 3.2.1. ',
                     tablaDescrip:'Código de la clase CVector2D del programa.',
                     tablaDatos:
-                    ` 
+                    `
                     /*
                     * Copyright (CC) 2021 César Villacís, Margarita Zambrano,
                     * Edwin Cuichan, Kevin Sanipatín.
                     * Creative Commons: BY-NC-ND 4.0 International license.
-                    * 
-                    * Except where otherwise noted, content on this program is licensed 
-                    * under a Creative Commons BY-NC-ND 4.0 International license. 
+                    *
+                    * Except where otherwise noted, content on this program is licensed
+                    * under a Creative Commons BY-NC-ND 4.0 International license.
                     * Source Code by the developers.
-                    * 
+                    *
                     * Unless required by applicable law or agreed to in writing, software
                     * distributed under the License is distributed on an "AS IS" BASIS,
                     * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -2770,7 +2757,7 @@ export class ChapterIIComponent implements OnInit {
                     {
                         class CVector2D
                         {
-                            #region Atributes of the class        
+                            #region Atributes of the class
                             /// <summary>
                             /// Member Data
                             /// </summary>
@@ -2796,7 +2783,7 @@ export class ChapterIIComponent implements OnInit {
                             // Dato que representa al valor de y del centro del lienzo.
                             private int yCenter;
                             // Objeto Punto que representa a un punto cualquiera P1.
-                            private PointF P1;        
+                            private PointF P1;
                             // Objeto Punto que representa a un punto cualquiera P2.
                             private PointF P2;
 
@@ -2827,23 +2814,23 @@ export class ChapterIIComponent implements OnInit {
                             ///<summary>
                             /// Constructor Functions.
                             ///</summary>
-                            
+
                             // Constructor sin parámetros.
                             public CVector2D()
                             {
                                 mX = 0.0f; mY = 0.0f;
-                            }        
+                            }
 
                             // Constructor con dos parámetros.
                             public CVector2D(float x, float y)
-                            {            
+                            {
                                 mX = x; mY = y;
-                            }       
+                            }
 
                             // Constructor copia.
                             public CVector2D(CVector2D V)
-                            {           
-                                mX = V.X; mY = V.Y;            
+                            {
+                                mX = V.X; mY = V.Y;
                             }
 
                             #endregion
@@ -2854,17 +2841,17 @@ export class ChapterIIComponent implements OnInit {
                             ///</summary>
 
                             // Función que lee las componentes 'X' e 'Y' del vector 2D.
-                            public void ReadData(NumericUpDown nudXVectorV, 
+                            public void ReadData(NumericUpDown nudXVectorV,
                                                 NumericUpDown nudYVectorV)
-                            {            
+                            {
                                 mX = (float)(nudXVectorV.Value);
                                 mY = (float)(nudYVectorV.Value);
                             }
 
                             // Función que imprime las componentes 'X' e 'Y' del vector 2D.
                             public void PrintData(TextBox txtXVectorV, TextBox txtYVectorV)
-                            {            
-                                txtXVectorV.Text = mX.ToString();            
+                            {
+                                txtXVectorV.Text = mX.ToString();
                                 txtYVectorV.Text = mY.ToString();
                             }
 
@@ -2907,7 +2894,7 @@ export class ChapterIIComponent implements OnInit {
                                 return (new CVector2D(mX - V.mX, mY - V.mY));
                             }
 
-                            // Función que inicializa los valores del centro del lienzo o canvas. 
+                            // Función que inicializa los valores del centro del lienzo o canvas.
                             public void InitializeData(PictureBox picCanvas)
                             {
                                 picCanvas.Refresh();
@@ -2917,7 +2904,7 @@ export class ChapterIIComponent implements OnInit {
                                 d.Y = picCanvas.Height;
 
                                 maxX = d.X - 1; maxY = d.Y - 1;
-                                xCenter = maxX / 2; yCenter = maxY / 2;            
+                                xCenter = maxX / 2; yCenter = maxY / 2;
                             }
 
                             // Función que grafica los ejes coordenados 'x' e 'y'.
@@ -2931,13 +2918,13 @@ export class ChapterIIComponent implements OnInit {
                                 P2.X = maxX; P2.Y = yCenter;
                                 mGraph.DrawLine(mPen, P1.X, P1.Y, P2.X, P2.Y);
 
-                                // Dibujar el eje vertical (y).            
+                                // Dibujar el eje vertical (y).
                                 P1.X = xCenter; P1.Y = 0;
                                 P2.X = xCenter; P2.Y = maxY;
 
                                 mGraph.DrawLine(mPen, P1.X, P1.Y, P2.X, P2.Y);
                             }
-                                                
+
                             // Función que convierte un punto del mundo real a un punto de coordenadas en
                             // pantalla (mundo de la Computación Gráfica), utilizando un parámetro.
                             public PointF VectorToPointF(CVector2D V)
@@ -2948,28 +2935,28 @@ export class ChapterIIComponent implements OnInit {
                             // Función que grafica un vector definido con un color específico, que tiene
                             // como parámetros el vector y el color del mismo.
                             public void DrawVector(CVector2D V, Color color, PictureBox picCanvas)
-                            {            
+                            {
                                 mGraph = picCanvas.CreateGraphics();
                                 mPen = new Pen(color, 4);
                                 mPen.StartCap = LineCap.RoundAnchor;
-                                mPen.EndCap = LineCap.ArrowAnchor; 
-                                
-                                PointF origin = VectorToPointF(new CVector2D(0, 0));            
+                                mPen.EndCap = LineCap.ArrowAnchor;
+
+                                PointF origin = VectorToPointF(new CVector2D(0, 0));
                                 PointF end = VectorToPointF(V);
 
                                 mGraph.DrawLine(mPen, origin, end);
                             }
 
                             // Función que grafica un vector definido con un color específico, que tiene
-                            // como parámetros el color del vector. 
+                            // como parámetros el color del vector.
                             public void DrawVector(Color color, PictureBox picCanvas)
                             {
                                 mGraph = picCanvas.CreateGraphics();
                                 mPen = new Pen(color, 4);
                                 mPen.StartCap = LineCap.RoundAnchor;
-                                mPen.EndCap = LineCap.ArrowAnchor;            
-                                
-                                PointF origin = VectorToPointF(new CVector2D(0, 0));            
+                                mPen.EndCap = LineCap.ArrowAnchor;
+
+                                PointF origin = VectorToPointF(new CVector2D(0, 0));
                                 PointF end = VectorToPointF(this);
 
                                 mGraph.DrawLine(mPen, origin, end);
@@ -2982,12 +2969,12 @@ export class ChapterIIComponent implements OnInit {
                                 float[] dashValues = { 2,1,2,1 };
                                 mGraph = picCanvas.CreateGraphics();
                                 mPen = new Pen(color, 4);
-                                mPen.DashPattern = dashValues;            
+                                mPen.DashPattern = dashValues;
 
                                 PointF origin = VectorToPointF(U);
                                 PointF end = VectorToPointF(V);
-                                mGraph.DrawLine(mPen, origin, end);            
-                            }       
+                                mGraph.DrawLine(mPen, origin, end);
+                            }
 
                             // Función que calcula el módulo o la magnitud de un vector 2D.
                             public float Magnitude()
@@ -3001,14 +2988,14 @@ export class ChapterIIComponent implements OnInit {
                                 return (new CVector2D(mX / Magnitude(), mY / Magnitude()));
                             }
 
-                            // Función que calcula el Producto Punto entre dos vectores, 
+                            // Función que calcula el Producto Punto entre dos vectores,
                             // utilizando dos parámetros.
                             public float DotProduct(CVector2D U, CVector2D V)
                             {
                                 return (U.mX * V.mX + U.mY * V.mY);
                             }
 
-                            // Función que calcula el Producto Punto entre dos vectores, 
+                            // Función que calcula el Producto Punto entre dos vectores,
                             // utilizando un parámetro.
                             public float DotProduct(CVector2D V)
                             {
@@ -3030,21 +3017,21 @@ export class ChapterIIComponent implements OnInit {
                             // Función que calcula el producto entre un vector y un escalar,
                             // utilizando un parámetro y el objeto this.
                             public CVector2D VectorEscalarProduct(float escalar)
-                            {            
-                                return (new CVector2D(mX * escalar, mY * escalar));            
+                            {
+                                return (new CVector2D(mX * escalar, mY * escalar));
                             }
 
                             // Función que calcula el vector Proyección de un vector sobre otro,
                             // utilizando dos parámetros.
                             public CVector2D Projection(CVector2D U, CVector2D V)
-                            {            
+                            {
                                 CVector2D Proj = new CVector2D();
                                 CVector2D Nv = new CVector2D();
                                 float escalar;
 
                                 Nv = V.Normalize();
-                                escalar = DotProduct(U, Nv);            
-                                Proj = VectorEscalarProduct(Nv, escalar);            
+                                escalar = DotProduct(U, Nv);
+                                Proj = VectorEscalarProduct(Nv, escalar);
 
                                 return (Proj);
                             }
@@ -3052,7 +3039,7 @@ export class ChapterIIComponent implements OnInit {
                             // Función que calcula el vector Proyección de un vector sobre otro,
                             // utilizando un parámetro y el objeto this.
                             public CVector2D Projection(CVector2D V)
-                            {            
+                            {
                                 CVector2D Nv = new CVector2D(V.Normalize());
                                 float escalar = this.DotProduct(Nv);
                                 //float escalar = DotProduct(Nv);
@@ -3071,7 +3058,7 @@ export class ChapterIIComponent implements OnInit {
                             // a otro vector, utilizando un parámetro y el objeto this.
                             public CVector2D Perpendicular(CVector2D V)
                             {
-                                return (new CVector2D(this.Subtraction(V)));         
+                                return (new CVector2D(this.Subtraction(V)));
                             }
 
                             #endregion
@@ -3090,11 +3077,11 @@ export class ChapterIIComponent implements OnInit {
                     * Copyright (CC) 2021 César Villacís, Margarita Zambrano,
                     * Edwin Cuichan, Kevin Sanipatín.
                     * Creative Commons: BY-NC-ND 4.0 International license.
-                    * 
-                    * Except where otherwise noted, content on this program is licensed 
-                    * under a Creative Commons BY-NC-ND 4.0 International license. 
+                    *
+                    * Except where otherwise noted, content on this program is licensed
+                    * under a Creative Commons BY-NC-ND 4.0 International license.
                     * Source Code by the developers.
-                    * 
+                    *
                     * Unless required by applicable law or agreed to in writing, software
                     * distributed under the License is distributed on an "AS IS" BASIS,
                     * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -3116,11 +3103,11 @@ export class ChapterIIComponent implements OnInit {
                     {
                         public partial class frmVectors2D : Form
                         {
-                            // Definición de cuatro objetos de tipo CVector2D.        
+                            // Definición de cuatro objetos de tipo CVector2D.
                             CVector2D A = new CVector2D();
                             CVector2D B = new CVector2D();
                             CVector2D C = new CVector2D();
-                            CVector2D D = new CVector2D();        
+                            CVector2D D = new CVector2D();
 
                             // Constructor del formulario frmVector2D.
                             public frmVectors2D()
@@ -3165,7 +3152,7 @@ export class ChapterIIComponent implements OnInit {
                                 C = A.Addition(B);
                                 // Impresión de datos.
                                 // Llamada a la función PrintData con el objeto C.
-                                C.PrintData(txtXVectorC, txtYVectorC);            
+                                C.PrintData(txtXVectorC, txtYVectorC);
                                 // Llamada a la función InitializeData.
                                 InitializeData();
                                 // Graficación de los ejes coordenados.
@@ -3244,7 +3231,7 @@ export class ChapterIIComponent implements OnInit {
                                 D = D.Perpendicular(A, C);
                                 // Impresión de datos.
                                 // Llamada a la función PrintData con el objeto D.
-                                D.PrintData(txtXVectorPer, txtYVectorPer);            
+                                D.PrintData(txtXVectorPer, txtYVectorPer);
                                 // Llamada a la función InitializeData.
                                 InitializeData();
                                 // Graficación de los ejes coordenados.
@@ -3257,7 +3244,7 @@ export class ChapterIIComponent implements OnInit {
                                 // Llamada a la función DrawVector.
                                 B.DrawVector(B, Color.Blue, picCanvas);
                                 // Graficación del vector proyección.
-                                // Llamada a la función DrawVector.            
+                                // Llamada a la función DrawVector.
                                 C.DrawVector(C, Color.ForestGreen, picCanvas);
                                 // Graficación del vector perpendicular.
                                 // Llamada a la función DrawVector.
@@ -3275,7 +3262,7 @@ export class ChapterIIComponent implements OnInit {
                     }
 
                     `
-                } 
+                }
             ]
          },
           E:{
@@ -3304,7 +3291,7 @@ export class ChapterIIComponent implements OnInit {
          },
          {
           link:'https://drive.google.com/uc?id=1qXzTyckEquZYTH26v_pTbBulHIqBKxd0&export=download',
-          label: 'Pracnique 3.3', 
+          label: 'Pracnique 3.3',
          tituloN:'Pracnique 3.3: ',
          titulo:'Operaciones entre Vectores 3D',
          sinopsisDescrip:'Este pracnique explora la creación de un programa de gráficos por computadora para graficar vectores 3D y realizar diferentes operaciones entre ellos.',
@@ -3326,18 +3313,18 @@ export class ChapterIIComponent implements OnInit {
              pasosB:[
               {
                 subtitulo2:'B.1.) Inicialización del Punto Central',
-                solucion:[                  
+                solucion:[
                   {
                     parrafo:'Dado el punto $O$ que representa al centro de los ejes coordenados de un plano en el mundo real:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+2.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+2.png',
                   },
                   {
                     parrafo:'Si se considera un lienzo o canvas representado por un rectángulo de 400x300, donde el ancho (width) del rectángulo es igual a 400 y el largo (height) es igual a 300, entonces el punto $O$ se calcula diviendo para dos tanto el ancho como el largo del rectángulo:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+3.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+3.png',
                   },
                   {
                     parrafo:'Estos valores permiten representar al punto $O$ como el nuevo centro trasladado en un sistema de coordenadas cartesianas en el plano, de acuerdo al mundo de la Computación Gráfica:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+4.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+4.png',
                   }
                 ]
                },
@@ -3346,119 +3333,119 @@ export class ChapterIIComponent implements OnInit {
                 tituloproblema:'Problema:',
                 parrafo:'Problema: Graficar un sistema de coordenadas cartesianas en el espacio formado por los siguientes elementos: a) tres ejes concurrentes en un punto O (origen de coordenadas); b) eje ‘x’; c) eje ‘y’; d) eje ‘z’, como se muestra en la Figura 3.2.2. ',
                 fotoPath:'./assets/images/Capitulos/II/media/+5.png',
-                titulosolucion:'Solución:',  
-                solucion:[                  
+                titulosolucion:'Solución:',
+                solucion:[
                   {
                     parrafo:'Para graficar un sistema de coordenadas cartesianas en el espacio, se va a utilizar una proyección isométrica, que es un dibujo tridimensional con los ejes inclinados formando un ángulo de 30° con la horizontal. (Ver Figura 3.2.3).',
-                    fotoPath:'./assets/images/Capitulos/II/media/+6.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+6.png',
                   },
                   {
                     parrafo:'Considerando este sistema de coordenadas cartesianas en el espacio, se construyen los tres ejes (x, y, z) y considerando el valor del ángulo central igual a 30°, se construye el triángulo rectángulo AGO, como se muestra en la Figura 3.2.4.',
-                    fotoPath:'./assets/images/Capitulos/II/media/+7.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+7.png',
                   },
                   {
                     parrafo:'Calculamos el valor del segmento ‘a’, sabiendo que el segmento ‘b’ es igual a 8u, en el triángulo rectángulo AGO:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+8.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+8.png',
                   },
                   {
                     parrafo:'Luego obtenemos los siguientes puntos:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+9.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+9.png',
                   },
                   {
                     parrafo:'Para poder representar gráficamente estos puntos en el mundo de la Computación Gráfica es necesario utilizar las ecuaciones (3) y (4) de la sección 2.1.1.2 referentes a la traslación de un punto a otro que son:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+10.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+10.png',
                   },
                   {
                     parrafo:'Si se considera un lienzo o canvas de 400x300, entonces el centro de esta área en análisis es: ',
-                    fotoPath:'./assets/images/Capitulos/II/media/+11.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+11.png',
                   },
                   {
                     parrafo:'Si se aplica un factor de escalamiento (SF) igual a 20 y considerando los valores de las coordenadas de los puntos A, B, C y D:',
-                    fotoPath:'./assets/images/Capitulos/II/media/#12.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/#12.png',
                   },
                   {
                     parrafo:'Entonces los valores de las coordenadas de los puntos en el mundo de la Computación Gráfica se calculan de la siguiente manera, para obtener los nuevos puntos A, B, C y D:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+13.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+13.png',
                   },
                   {
                     parrafo:'Finalmente se unen con una línea los puntos A y D y también se unen con una línea los puntos B y C, para obtener el sistema de coordenadas en el espacio de acuerdo al mundo de la Computación Gráfica, como se muestra en la Figura 3.2.5.',
-                    fotoPath:'./assets/images/Capitulos/II/media/+14.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+14.png',
                   }
                 ]
                },
                {
                 subtitulo2:'B.2.) Graficación de un plano en el espacio',
-                solucion:[                  
+                solucion:[
                   {
                     parrafo:'Para graficar un plano en el espacio de acuerdo a una proyección isométrica se debe considerar que la figura que representa al plano es un rombo ABCD cuyos cuatro lados son de igual longitud y dos de sus ángulos son menores que los otros dos.'
                   },
                   {
                     parrafo:'Para encontrar los vértices del rombo se divide esta figura en cuatro triángulos rectángulos congruentes, como se muestra en la Figura 3.2.4.',
-                    fotoPath:'./assets/images/Capitulos/II/media/+15.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+15.png',
                   },
                   {
                     parrafo:'Luego calculamos el valor del segmento ‘a’, sabiendo que el segmento ‘b’ es igual a 4u, en el triángulo rectángulo AOB:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+16.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+16.png',
                   },
                   {
                     parrafo:'Luego obtenemos los siguientes puntos:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+17.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+17.png',
                   },
                   {
                     parrafo:'Para poder representar gráficamente estos puntos en el mundo de la Computación Gráfica es necesario utilizar las ecuaciones (3) y (4) de la sección 2.1.1.2 referentes a la traslación de un punto a otro que son:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+18.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+18.png',
                   },
                   {
                     parrafo:'Si se considera un lienzo o canvas de 400x300, entonces el centro de esta área en análisis es: ',
-                    fotoPath:'./assets/images/Capitulos/II/media/+19.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+19.png',
                   },
                   {
                     parrafo:'Si se aplica un factor de escalamiento (SF) igual a 20 y considerando los valores de las coordenadas de los puntos A, B, C y D:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+20.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+20.png',
                   },
                   {
                     parrafo:'Entonces los valores de las coordenadas de los puntos en el mundo de la Computación Gráfica se calculan de la siguiente manera, para obtener los nuevos puntos A, B, C y D:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+21.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+21.png',
                   },
                   {
                     parrafo:'Finalmente se unen con una línea: a) los puntos A y B; b) los puntos A y D; c) los puntos B y C; d) los puntos C y D; para obtener el plano en el espacio representado por el rombo ABCD de acuerdo al mundo de la Computación Gráfica, como se muestra en la Figura 3.2.5.',
-                    fotoPath:'./assets/images/Capitulos/II/media/+22.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+22.png',
                   },
                   {
                     parrafo:'Para dibujar los segmentos del rombo ABCD, se toma como base uno de sus rombos pequeños, como por ejemplo el rombo AIJK. Para encontrar los vértices del rombo pequeño AIJK, se divide esta figura en cuatro triángulos rectángulos congruentes, como se muestra en la Figura 3.2.4.',
-                    fotoPath:'./assets/images/Capitulos/II/media/+23.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+23.png',
                   },
                   {
                     parrafo:'Luego calculamos el valor del segmento ‘q’, sabiendo que el segmento ‘p’ es igual a 0.25u, en el triángulo rectángulo ALI:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+24.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+24.png',
                   },
                   {
                     parrafo:'Con los valores de los segmentos a, b, p, q, que son:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+25.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+25.png',
                   },
                   {
                     parrafo:'Se calculan los valores de los 15 puntos que forman parte del lado BA del rombo ABCD, utilizando las siguientes ecuaciones y el arreglo de puntos P[15], para almacenar los valores de las coordenadas:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+26.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+26.png',
                   },
                   {
                     parrafo:'Luego, se calculan los valores de los 15 puntos que forman parte del lado DC del rombo ABCD, utilizando las siguientes ecuaciones y el arreglo de puntos Q[15], para almacenar los valores de las coordenadas:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+27.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+27.png',
                   },
                   {
                     parrafo:'Con estas ecuaciones se obtienen los siguientes puntos que forman parte del arreglo de puntos P[15] y Q[15] del mundo real, que se muestra en la Figura 3.2.5.',
-                    fotoPath:'./assets/images/Capitulos/II/media/+28.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+28.png',
                   },
                   {
                     parrafo:'Para poder representar gráficamente estos puntos en el mundo de la Computación Gráfica es necesario utilizar las ecuaciones (3) y (4) de la sección 2.1.1.2 referentes a la traslación de un punto a otro que son:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+29.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+29.png',
                   },
                   {
                     parrafo:'Si se considera un lienzo o canvas de 400x300, entonces el centro de esta área en análisis es: ',
-                    fotoPath:'./assets/images/Capitulos/II/media/+30.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+30.png',
                   },
                   {
                     parrafo:'Si se aplica un factor de escalamiento (SF) igual a 20 y considerando los valores de las coordenadas de los arreglos de puntos P[15] y Q[15] del mundo real, se obtienen dos nuevos arreglos de puntos P[15] y Q[15] del mundo de la Computación Gráfica, como se muestra en la Figura 3.2.6.',
-                    fotoPath:'./assets/images/Capitulos/II/media/+31.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+31.png',
                   },
                   {
                     parrafo:'Luego, se unen con líneas los arreglos de puntos P[15] y Q[15] del mundo de la Computación Gráfica. Para unir los puntos con líneas se sigue el siguiente procedimiento: a) El primer punto P[0] del arreglo de puntos se une con el último punto Q[14] del otro arreglo de puntos; b) El segundo punto P[1] del arreglo de puntos se une con el penúltimo punto Q[13] del otro arreglo de puntos; c) El tercer punto P[2] del arreglo de puntos se une con el antepenúltimo punto Q[12] del otro arreglo de puntos; d) Este procedimiento continúa hasta que el último punto P[14] del arreglo de puntos se une con el primer punto Q[0] del otro arreglo de puntos. '
@@ -3471,35 +3458,35 @@ export class ChapterIIComponent implements OnInit {
                   },
                   {
                     parrafo:'Finalmente, se puede concluir que este primer grupo de 15 líneas graficadas en base a los puntos P[15] y Q[15], son paralelas entre sí y también son paralelas con los segmentos DA y CB del rombo ABCD, como se muestra en la Figura 3.2.7.     ',
-                    fotoPath:'./assets/images/Capitulos/II/media/+32.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+32.png',
                   },
                   {
                     parrafo:'Con los valores de los segmentos a, b, p, q, que son:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+33.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+33.png',
                   },
                   {
                     parrafo:'Se calculan los valores de los 15 puntos que forman parte del lado DA del rombo ABCD, utilizando las siguientes ecuaciones y el arreglo de puntos P[15], para almacenar los valores de las coordenadas:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+34.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+34.png',
                   },
                   {
                     parrafo:'Luego, se calculan los valores de los 15 puntos que forman parte del lado BC del rombo ABCD, utilizando las siguientes ecuaciones y el arreglo de puntos Q[15], para almacenar los valores de las coordenadas:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+35.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+35.png',
                   },
                   {
                     parrafo:'Con estas ecuaciones se obtienen los siguientes puntos que forman parte del arreglo de puntos P[15] y Q[15] del mundo real, que se muestra en la Figura 3.2.5.',
-                    fotoPath:'./assets/images/Capitulos/II/media/+36.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+36.png',
                   },
                   {
                     parrafo:'Para poder representar gráficamente estos puntos en el mundo de la Computación Gráfica es necesario utilizar las ecuaciones (3) y (4) de la sección 2.1.1.2 referentes a la traslación de un punto a otro que son:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+37.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+37.png',
                   },
                   {
                     parrafo:'Si se considera un lienzo o canvas de 400x300, entonces el centro de esta área en análisis es: ',
-                    fotoPath:'./assets/images/Capitulos/II/media/+38.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+38.png',
                   },
                   {
                     parrafo:'Si se aplica un factor de escalamiento (SF) igual a 20 y considerando los valores de las coordenadas de los arreglos de puntos P[15] y Q[15] del mundo real, se obtienen dos nuevos arreglos de puntos P[15] y Q[15] del mundo de la Computación Gráfica, como se muestra en la Figura 3.2.6.',
-                    fotoPath:'./assets/images/Capitulos/II/media/+39.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+39.png',
                   },
                   {
                     parrafo:'Luego, se unen con líneas los arreglos de puntos P[15] y Q[15] del mundo de la Computación Gráfica. Para unir los puntos con líneas se sigue el siguiente procedimiento: a) El primer punto P[0] del arreglo de puntos se une con el último punto Q[14] del otro arreglo de puntos; b) El segundo punto P[1] del arreglo de puntos se une con el penúltimo punto Q[13] del otro arreglo de puntos; c) El tercer punto P[2] del arreglo de puntos se une con el antepenúltimo punto Q[12] del otro arreglo de puntos; d) Este procedimiento continúa hasta que el último punto P[14] del arreglo de puntos se une con el primer punto Q[0] del otro arreglo de puntos. '
@@ -3512,7 +3499,7 @@ export class ChapterIIComponent implements OnInit {
                   },
                   {
                     parrafo:'Finalmente, se puede concluir que este primer grupo de 15 líneas graficadas en base a los puntos P[15] y Q[15], son paralelas entre sí y también son paralelas con los segmentos DC y AB del rombo ABCD, como se muestra en la Figura 3.2.7.     ',
-                    fotoPath:'./assets/images/Capitulos/II/media/+40.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+40.png',
                   }
                 ]
                },
@@ -3520,181 +3507,181 @@ export class ChapterIIComponent implements OnInit {
                 subtitulo2:'B.3.) Representación de un Vector en el Espacio dentro de una Caja',
                 tituloproblema:'Problema:',
                 parrafo:'Dado un vector 3D en el espacio, dibujar el vector y la caja que encierra al vector.',
-                titulosolucion:'Solución:',  
-                solucion:[                  
+                titulosolucion:'Solución:',
+                solucion:[
                   {
                     parrafo:'Dado el siguiente vector en el espacio:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+41.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+41.png',
                   },
                   {
                     parrafo:'Dado el punto $O$ que representa al centro de los ejes coordenados de un plano en el mundo real:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+42.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+42.png',
                   },
                   {
                     parrafo:'Lo primero que se hace es cambiar la escala del vector V de 1u a 0.5 u, de acuerdo a los valores del plano, para lo cual se divide a cada una de las componentes del vector para dos y se obtienen las siguientes ecuaciones:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+43.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+43.png',
                   },
                   {
                     parrafo:'Los segmentos ‘a’, ‘b’, ‘c’, representan a las componentes ‘x’, ‘y’, ‘z’ del vector V respectivamente. Para calcular las coordenadas de los vértices A, B y C se aplica una solución geométrica, como se muestra en la Figura 3.2.7.',
-                    fotoPath:'./assets/images/Capitulos/II/media/+44.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+44.png',
                   },
                   {
                     parrafo:'Dados los siguientes puntos:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+45.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+45.png',
                   },
                   {
-                    parrafo:'Dado el valor del ángulo A, por ejemplo: A=30°'  
+                    parrafo:'Dado el valor del ángulo A, por ejemplo: A=30°'
                   },
                   {
                     parrafo:'Calculamos el valor de la pendiente OB que en este caso es negativa, debido a que el segmento de la recta OB se encuentra en el cuarto cuadrante:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+46.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+46.png',
                   },
                   {
                     parrafo:'Despejamos el valor de $y_2$ donde obtenemos la siguiente ecuación:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+47.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+47.png',
                   },
                   {
                     parrafo:'Calculamos la distancia $OB$:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+48.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+48.png',
                   },
                   {
                     parrafo:'Reemplazamos el valor de $y_2$  de la ecuación (6) en la ecuación (7) y calculamos el valor de $x_2$:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+49.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+49.png',
                   },
                   {
                     parrafo:'Despejamos el valor de $x_2$ y luego racionalizamos la expresión:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+50.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+50.png',
                   },
                   {
                     parrafo:'Reemplazamos el valor de $x_2$ de la ecuación (8) en la ecuación (6) y calculamos el valor de $y_3$:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+51.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+51.png',
                   },
                   {
                     parrafo:'Por lo tanto, las coordenadas del punto $P_3$ son:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+52.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+52.png',
                   },
                   {
                     parrafo:'Aplicando las siguientes identidades trigonométricas:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+53.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+53.png',
                   },
                   {
                     parrafo:'Se simplicifica la ecuación (10) de la siguiente manera:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+54.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+54.png',
                   },
                   {
                     parrafo:'Entonces, se obtienen las coordenadas del punto $P_2$ en función de senos y cosenos:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+55.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+55.png',
                   },
                   {
                     parrafo:'Luego, se calculan las coordenadas del punto $P_1$ en función del punto $P_2$, donde analizando el gráfico se puede observar que la coordenada $x_1=x_2$:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+56.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+56.png',
                   },
                   {
                     parrafo:'Calculamos la distancia $BA$:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+57.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+57.png',
                   },
                   {
                     parrafo:'Despejamos el valor de $y_1$ y obtenemos la expresión:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+58.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+58.png',
                   },
                   {
                     parrafo:'Entonces, se obtienen las coordenadas del punto $P_1=A$:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+59.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+59.png',
                   },
                   {
                     parrafo:'Por construcción, obtenemos los puntos M, N y P que permiten formar los triángulos rectángulos BMO, OND y APD. Además, se forma el trapecio OMPD. (Ver Figura 3.2.7).',
-                    fotoPath:'./assets/images/Capitulos/II/media/+60.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+60.png',
                   },
                   {
                     parrafo:'Luego resolvemos el triángulo rectángulo BMO, para calcular el valor de los segmentos BM y OM.',
-                    fotoPath:'./assets/images/Capitulos/II/media/+61.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+61.png',
                   },
                   {
                     parrafo:'Después, resolvemos el triángulo rectángulo DPA, para calcular el valor de los segmentos AP y DP.',
-                    fotoPath:'./assets/images/Capitulos/II/media/+62.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+62.png',
                   },
                   {
                     parrafo:'Finalmente, calculamos los valores de los segmentos PM, NM y ON del trapecio OMPD:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+63.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+63.png',
                   },
                   {
                     parrafo:'Entonces, se obtienen las coordenadas del punto $P_3$:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+64.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+64.png',
                   },
                   {
                     parrafo:'Conociendo el Punto O y el Punto D, ya se puede dibujar el vector V, utilizando una línea.'
                   },
                   {
                     parrafo:'Para dibujar la caja completa que contiene al vector V es necesario calcular los valores de las coordenadas de los puntos (ver Figura 3.2.8):',
-                    fotoPath:'./assets/images/Capitulos/II/media/+65.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+65.png',
                   },
                   {
                     parrafo:'',
-                    fotoPath:'./assets/images/Capitulos/II/media/+66.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+66.png',
                   },
                   {
                     parrafo:'A continuación, se calculan las coordenadas del punto $P_4$ en función del punto $P_3$, donde analizando el gráfico se puede observar que la coordenada $x_4=x_3$:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+67.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+67.png',
                   },
                   {
                     parrafo:'Calculamos la distancia $CD$:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+68.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+68.png',
                   },
                   {
                     parrafo:'Despejamos el valor de $y_4$ y obtenemos la expresión:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+69.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+69.png',
                   },
                   {
                     parrafo:'Entonces, se obtienen las coordenadas del punto $P_4=C$:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+70.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+70.png',
                   },
                   {
                     parrafo:'Luego resolvemos el triángulo rectángulo OJK, para calcular el valor de los segmentos OJ y KJ.',
-                    fotoPath:'./assets/images/Capitulos/II/media/+71.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+71.png',
                   },
                   {
                     parrafo:'Entonces, se obtienen las coordenadas del vértice K:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+72.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+72.png',
                   },
                   {
                     parrafo:'Considerando que los triángulos rectángulos OJK y EHO son iguales y además el triángulo rectángulo EHO se encuentra ubicado en el tercer cuadrante, debido a que la recta l auxiliar construida, atraviesa por el centro de todos los ejes coordenados (x, y, z). (Ver Figura 3.2.8).',
-                    fotoPath:'./assets/images/Capitulos/II/media/+73.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+73.png',
                   },
                   {
                     parrafo:'Entonces, los valores de los segmentos DP y AP son negativos, es decir: ',
-                    fotoPath:'./assets/images/Capitulos/II/media/+74.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+74.png',
                   },
                   {
                     parrafo:'Finalmente, se obtienen las coordenadas del punto $P_5=E$:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+75.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+75.png',
                   },
                   {
                     parrafo:'Luego resolvemos el triángulo rectángulo FIG, para calcular el valor de los segmentos FI y GI.',
-                    fotoPath:'./assets/images/Capitulos/II/media/+76.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+76.png',
                   },
                   {
                     parrafo:'Considerando que los triángulos rectángulos EOH y FGI son iguales y además el triángulo rectángulo FGI se encuentra ubicado en el segundo cuadrante, debido a que la recta l auxiliar construida, atraviesa por el centro de todos los ejes coordenados (x, y, z). (Ver Figura 3.2.8).',
-                    fotoPath:'./assets/images/Capitulos/II/media/+77.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+77.png',
                   },
                   {
                     parrafo:'Entonces, el valor del segmento DP es negativo y el valor del segmento AP es positivo, es decir: ',
-                    fotoPath:'./assets/images/Capitulos/II/media/+78.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+78.png',
                   },
                   {
                     parrafo:'Finalmente, se obtienen las coordenadas del punto $P_6=F$:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+79.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+79.png',
                   },
                   {
                     parrafo:'A continuación, se calculan las coordenadas del punto $P_7$ en función del punto $P_0$, donde analizando el gráfico se puede observar que la coordenada $x_7=x_0$:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+80.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+80.png',
                   },
                   {
                     parrafo:'Calculamos la distancia $OG$:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+81.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+81.png',
                   },
                   {
                     parrafo:'Entonces, se obtienen las coordenadas del punto $P_7=G$:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+82.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+82.png',
                   },
                   {
                     parrafo:'Finalmente, se unen con líneas entre cortadas los puntos OB, AB, AD, CD, BC, OE, CE, OG, AG, FG, FD, EF. Además, se grafica con línea continua el vector V uniendo los puntos OD. '
@@ -3705,42 +3692,42 @@ export class ChapterIIComponent implements OnInit {
                 subtitulo2:'B.4.) Suma de Vectores',
                 tituloproblema:'Problema:',
                 parrafo:'Dados dos vectores 3D en el espacio, calcular y graficar el vector resultante de la suma entre ellos. Utilizar el método del paralelogramo para realizar la representación gráfica de los tres vectores 3D en el espacio.',
-                titulosolucion:'Solución:',  
-                solucion:[                  
+                titulosolucion:'Solución:',
+                solucion:[
                   {
                     parrafo:'Dados los siguientes vectores en el espacio:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+83.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+83.png',
                   },
                   {
                     parrafo:'La suma entre los vectores A y B se obtiene utilizando la ecuación (51) de la sección 3.1.3.10:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+84.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+84.png',
                   },
                   {
                     parrafo:'En la representación gráfica de la Suma de dos Vectores, se forma un paralelogramo en el espacio, donde el Vector $\\overrightarrow{C}$ es el Vector Resultante $\\overrightarrow{R}$. La Figura 3.2.2 muestra estos vectores en el espacio 3D del mundo real.',
-                    fotoPath:'./assets/images/Capitulos/II/media/+85.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+85.png',
                   },
                   {
                     parrafo:'1.	Representación Geométrica del Vector A:'
                   },
                   {
                     parrafo:'Dados los puntos:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+86.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+86.png',
                   },
                   {
                     parrafo:'Se calculan los valores de los segmentos a, b, c:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+87.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+87.png',
                   },
                   {
                     parrafo:'Se calculan los valores de los segmentos BM, OM, DP, AP, PM, NM y ON:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+88.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+88.png',
                   },
                   {
                     parrafo:'Entonces, se obtienen las coordenadas del punto D:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+89.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+89.png',
                   },
                   {
                     parrafo:'Para poder representar gráficamente este vector en el mundo de la Computación Gráfica es necesario utilizar las ecuaciones (3) y (4) de la sección 2.1.1.2 referentes a la traslación de un punto a otro que son:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+90.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+90.png',
                   },
                   {
                     parrafo:'Si se considera un lienzo o canvas de 400x300, entonces el centro de esta área en análisis es:',
@@ -3748,137 +3735,137 @@ export class ChapterIIComponent implements OnInit {
                   },
                   {
                     parrafo:'Donde, este valor obtenido corresponde al nuevo centro trasladado. Entonces:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+92.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+92.png',
                   },
                   {
                     parrafo:'Si se aplica un factor de escalamiento (SF) igual a 20 y considerando el valor del vértice del extremo del vector A, que es el punto $D(-6.5,5.75)$, se obtiene $D^{\'}(x_{D^{\'}},y_{D^{\'}})$:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+93.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+93.png',
                   },
                   {
                     parrafo:'Conociendo el Punto $O^{\'}$ y el Punto $D^{\'}$, ya se puede dibujar el vector V en el espacio, utilizando una línea.'
                   },
                   {
-                    parrafo:'2.	Representación Geométrica del Vector B:'    
+                    parrafo:'2.	Representación Geométrica del Vector B:'
                   },
                   {
                     parrafo:'Dados los puntos:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+94.png',     
+                    fotoPath:'./assets/images/Capitulos/II/media/+94.png',
                   },
                   {
                     parrafo:'Se calculan los valores de los segmentos a, b, c:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+95.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+95.png',
                   },
                   {
                     parrafo:'Se calculan los valores de los segmentos BM, OM, DP, AP, PM, NM y ON:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+96.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+96.png',
                   },
                   {
                     parrafo:'Entonces, se obtienen las coordenadas del punto D:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+97.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+97.png',
                   },
                   {
                     parrafo:'Para poder representar gráficamente este vector en el mundo de la Computación Gráfica es necesario utilizar las ecuaciones (3) y (4) de la sección 2.1.1.2 referentes a la traslación de un punto a otro que son:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+98.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+98.png',
                   },
                   {
                     parrafo:'Si se considera un lienzo o canvas de 400x300, entonces el centro de esta área en análisis es:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+99.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+99.png',
                   },
                   {
                     parrafo:'Donde, este valor obtenido corresponde al nuevo centro trasladado. Entonces:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+100.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+100.png',
                   },
                   {
                     parrafo:'Si se aplica un factor de escalamiento (SF) igual a 20 y considerando el valor del vértice del extremo del vector A, que es el punto $D(-4.76,3.25)$, se obtiene $D^{\'}(x_{D^{\'}},y_{D^{\'}})$:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+101.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+101.png',
                   },
                   {
                     parrafo:'Conociendo el Punto $O^{\'}$ y el Punto $D^{\'}$, ya se puede dibujar el vector V en el espacio, utilizando una línea.'
                   },
                   {
-                    parrafo:'3.	Representación Geométrica del Vector C:'    
+                    parrafo:'3.	Representación Geométrica del Vector C:'
                   },
                   {
                     parrafo:'Dados los puntos:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+102.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+102.png',
                   },
                   {
                     parrafo:'Se calculan los valores de los segmentos a, b, c:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+103.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+103.png',
                   },
                   {
                     parrafo:'Se calculan los valores de los segmentos BM, OM, DP, AP, PM, NM y ON:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+104.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+104.png',
                   },
                   {
                     parrafo:'Entonces, se obtienen las coordenadas del punto D:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+105.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+105.png',
                   },
                   {
                     parrafo:'Para poder representar gráficamente este vector en el mundo de la Computación Gráfica es necesario utilizar las ecuaciones (3) y (4) de la sección 2.1.1.2 referentes a la traslación de un punto a otro que son:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+106.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+106.png',
                   },
                   {
                     parrafo:'Si se considera un lienzo o canvas de 400x300, entonces el centro de esta área en análisis es:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+107.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+107.png',
                   },
                   {
                     parrafo:'Donde, este valor obtenido corresponde al nuevo centro trasladado. Entonces:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+108.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+108.png',
                   },
                   {
                     parrafo:'Si se aplica un factor de escalamiento (SF) igual a 20 y considerando el valor del vértice del extremo del vector A, que es el punto $D(-11.25,9)$, se obtiene $D^{\'}(x_{D^{\'}},y_{D^{\'}})$:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+109.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+109.png',
                   },
                   {
                     parrafo:'Conociendo el Punto $O^{\'}$ y el Punto $D^{\'}$, ya se puede dibujar el vector V en el espacio, utilizando una línea.'
                   },
                   {
                     parrafo:'Finalmente, la gráfica de los vectores A, B y C en el mundo de la Computación Gráfica se muestra en la Figura 3.2.3:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+110.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+110.png',
                   }
                 ]
                },
                {
                 subtitulo2:'B.5.) Resta de Vectores',
                 tituloproblema:'Problema:',
-                parrafo:'Dados dos vectores 3D en el espacio, calcular y graficar el vector resultante de la resta entre ellos. Utilizar el método del paralelogramo para realizar la representación gráfica de los tres vectores 3D en el espacio.',                
-                titulosolucion:'Solución:',  
-                solucion:[                  
+                parrafo:'Dados dos vectores 3D en el espacio, calcular y graficar el vector resultante de la resta entre ellos. Utilizar el método del paralelogramo para realizar la representación gráfica de los tres vectores 3D en el espacio.',
+                titulosolucion:'Solución:',
+                solucion:[
                   {
                     parrafo:'Dados los siguientes vectores en el espacio:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+111.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+111.png',
                   },
                   {
                     parrafo:'La resta entre los vectores A y B se obtiene utilizando la ecuación (51) de la sección 3.1.3.10:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+112.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+112.png',
                   },
                   {
                     parrafo:'En la representación gráfica de la Resta de dos Vectores, se forma un paralelogramo en el espacio, donde el Vector $\\overrightarrow{B}$ es opuesto al Vector $\\overrightarrow{-B}$, que es igual al Vector $\\overrightarrow{E}, es decir:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+113.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+113.png',
                   },
                   {
                     parrafo:'La Figura 3.2.4 muestra estos vectores en el espacio 3D del mundo real.',
-                    fotoPath:'./assets/images/Capitulos/II/media/+114.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+114.png',
                   },
                   {
-                    parrafo:'1.	Representación Geométrica del Vector A:'   
+                    parrafo:'1.	Representación Geométrica del Vector A:'
                   },
                   {
                     parrafo:'Dados los puntos:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+115.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+115.png',
                   },
                   {
                     parrafo:'Se obtienen las coordenadas del punto D:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+116.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+116.png',
                   },
                   {
                     parrafo:'Considera un lienzo o canvas de 400x300, entonces el centro de esta área en análisis es:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+117.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+117.png',
                   },
                   {
                     parrafo:'Conociendo el punto D, se puede calcular el punto $D^{\'}$, aplicando las ecuaciones (3) y (4) de la sección 2.1.1.2 referentes a la traslación de un punto a otro:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+118.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+118.png',
                   },
                   {
                     parrafo:'Conociendo el Punto $O^{\'}$ y el Punto $D^{\'}$, ya se puede dibujar el vector V en el espacio, utilizando una línea.'
@@ -3888,84 +3875,84 @@ export class ChapterIIComponent implements OnInit {
                   },
                   {
                     parrafo:'Dados los puntos:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+119.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+119.png',
                   },
                   {
                     parrafo:'Se calculan las coordenadas del punto $E$ que corresponde al vector opuesto $\\overrightarrow{E }$:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+120.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+120.png',
                   },
                   {
                     parrafo:'Se calculan los valores de los segmentos a, b, c:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+121.png',        
+                    fotoPath:'./assets/images/Capitulos/II/media/+121.png',
                   },
                   {
                     parrafo:'Se calculan los valores de los segmentos BM, OM, DP, AP, PM, NM y ON:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+122.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+122.png',
                   },
                   {
                     parrafo:'Entonces, se obtienen las coordenadas del punto D:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+123.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+123.png',
                   },
                   {
                     parrafo:'Para poder representar gráficamente este vector en el mundo de la Computación Gráfica es necesario utilizar las ecuaciones (3) y (4) de la sección 2.1.1.2 referentes a la traslación de un punto a otro que son:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+124.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+124.png',
                   },
                   {
                     parrafo:'Si se considera un lienzo o canvas de 400x300, entonces el centro de esta área en análisis es:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+125.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+125.png',
                   },
                   {
                     parrafo:'Donde, este valor obtenido corresponde al nuevo centro trasladado. Entonces:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+126.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+126.png',
                   },
                   {
                     parrafo:'Si se aplica un factor de escalamiento (SF) igual a 20 y considerando el valor del vértice del extremo del vector A, que es el punto $D(4.76,-3.25)$, se obtiene $D^{\'}(x_{D^{\'}},y_{D^{\'}})$: ',
-                    fotoPath:'./assets/images/Capitulos/II/media/+127.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+127.png',
                   },
                   {
                     parrafo:'Conociendo el Punto $O^{\'}$ y el Punto $D^{\'}$, ya se puede dibujar el vector V en el espacio, utilizando una línea.'
                   },
                   {
-                    parrafo:'3.	Representación Geométrica del Vector C:'    
+                    parrafo:'3.	Representación Geométrica del Vector C:'
                   },
                   {
                     parrafo:'Dados los puntos:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+128.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+128.png',
                   },
                   {
                     parrafo:'Se calculan los valores de los segmentos a, b, c:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+129.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+129.png',
                   },
                   {
                     parrafo:'Se calculan los valores de los segmentos BM, OM, DP, AP, PM, NM y ON:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+130.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+130.png',
                   },
                   {
                     parrafo:'Entonces, se obtienen las coordenadas del punto D:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+131.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+131.png',
                   },
                   {
                     parrafo:'Para poder representar gráficamente este vector en el mundo de la Computación Gráfica es necesario utilizar las ecuaciones (3) y (4) de la sección 2.1.1.2 referentes a la traslación de un punto a otro que son:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+132.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+132.png',
                   },
                   {
                     parrafo:'Si se considera un lienzo o canvas de 400x300, entonces el centro de esta área en análisis es:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+133.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+133.png',
                   },
                   {
                     parrafo:'Donde, este valor obtenido corresponde al nuevo centro trasladado. Entonces:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+134.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+134.png',
                   },
                   {
                     parrafo:'Si se aplica un factor de escalamiento (SF) igual a 20 y considerando el valor del vértice del extremo del vector A, que es el punto $D(-1.74,2.5)$, se obtiene $D^{\'}(x_{D^{\'}},y_{D^{\'}})$:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+135.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+135.png',
                   },
                   {
                     parrafo:'Conociendo el Punto $O^{\'}$ y el Punto $D^{\'}$, ya se puede dibujar el vector V en el espacio, utilizando una línea.'
                   },
                   {
                     parrafo:'Finalmente, la gráfica de los vectores A, -B y C en el mundo de la Computación Gráfica se muestra en la Figura 3.2.3:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+136.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+136.png',
                   }
                 ]
                },
@@ -3973,134 +3960,134 @@ export class ChapterIIComponent implements OnInit {
                 subtitulo2:'B.6.) Proyección de un Vector sobre otro Vector',
                 tituloproblema:'Problema:',
                 parrafo:'Dados dos vectores 3D en el espacio, calcular y graficar el vector proyección del Vector A  sobre el Vector B  y el Vector Perpendicular entre ellos. Utilizar las ecuaciones de la sección 3.1.3.17 y 3.1.3.18.',
-                titulosolucion:'Solución:',  
-                solucion:[                  
+                titulosolucion:'Solución:',
+                solucion:[
                   {
                     parrafo:'Dados los siguientes vectores en el espacio:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+137.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+137.png',
                   },
                   {
                     parrafo:'La proyección del vector A sobre el vector B se obtiene utilizando la ecuación (71) de la sección 3.1.3.17:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+138.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+138.png',
                   },
                   {
                     parrafo:'Primero se calcula el módulo o magnitud del vector B con la ecuación (18) de la sección 3.1.3.4:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+139.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+139.png',
                   },
                   {
                     parrafo:'Como segundo paso, se calcula el vector unitario o normalizado del vector B, utilizando la ecuación (32) de la sección 3.1.3.8:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+140.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+140.png',
                   },
                   {
                     parrafo:'Como tercer paso, se calcula el producto punto entre el vector A con el vector unitario o normalizado del vector B:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+141.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+141.png',
                   },
                   {
                     parrafo:'Finalmente, se calcula el producto entre un vector por un escalar, donde el vector representa al vector unitario de B y el escalar representa al producto punto calculado en el paso anterior:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+142.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+142.png',
                   },
                   {
                     parrafo:'Entonces, el vector proyección de A sobre el vector B es el vector C:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+143.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+143.png',
                   },
                   {
                     parrafo:'La Figura 3.2.6 muestra la proyección del vector A sobre el vector B.',
-                    fotoPath:'./assets/images/Capitulos/II/media/+144.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+144.png',
                   },
                   {
-                    parrafo:'4.	Representación Geométrica del Vector A:'    
+                    parrafo:'4.	Representación Geométrica del Vector A:'
                   },
                   {
                     parrafo:'Dados los puntos:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+145.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+145.png',
                   },
                   {
                     parrafo:'Se obtienen las coordenadas del punto D:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+146.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+146.png',
                   },
                   {
                     parrafo:'Considera un lienzo o canvas de 400x300, entonces el centro de esta área en análisis es:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+147.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+147.png',
                   },
                   {
                     parrafo:'Conociendo el punto D, se puede calcular el punto $D^{\'}$, aplicando las ecuaciones (3) y (4) de la sección 2.1.1.2 referentes a la traslación de un punto a otro:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+148.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+148.png',
                   },
                   {
                     parrafo:'Conociendo el Punto $O^{\'}$ y el Punto $D^{\'}$, ya se puede dibujar el vector V en el espacio, utilizando una línea.'
                   },
                   {
-                    parrafo:'1.	Representación Geométrica del Vector B:'   
+                    parrafo:'1.	Representación Geométrica del Vector B:'
                   },
                   {
                     parrafo:'Dados los puntos:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+149.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+149.png',
                   },
                   {
                     parrafo:'Se obtienen las coordenadas del punto D:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+150.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+150.png',
                   },
                   {
                     parrafo:'Considera un lienzo o canvas de 400x300, entonces el centro de esta área en análisis es:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+151.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+151.png',
                   },
                   {
                     parrafo:'Conociendo el punto $D$, se puede calcular el punto $D^{\'}$, aplicando las ecuaciones (3) y (4) de la sección 2.1.1.2 referentes a la traslación de un punto a otro:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+152.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+152.png',
                   },
                   {
                     parrafo:'Conociendo el Punto $O^{\'}$ y el Punto $D^{\'}$, ya se puede dibujar el vector V en el espacio, utilizando una línea.'
                   },
                   {
                     parrafo:'2.	Representación Geométrica del Vector $\\overrightarrow{C}=\\overrightarrow{V_{A/B}}$:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+153.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+153.png',
                   },
                   {
                     parrafo:'Se calculan los valores de los segmentos a, b, c:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+154.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+154.png',
                   },
                   {
                     parrafo:'Se calculan los valores de los segmentos BM, OM, DP, AP, PM, NM y ON:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+155.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+155.png',
                   },
                   {
                     parrafo:'Entonces, se obtienen las coordenadas del punto D:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+156.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+156.png',
                   },
                   {
                     parrafo:'Para poder representar gráficamente este vector en el mundo de la Computación Gráfica es necesario utilizar las ecuaciones (3) y (4) de la sección 2.1.1.2 referentes a la traslación de un punto a otro que son:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+157.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+157.png',
                   },
                   {
                     parrafo:'Si se considera un lienzo o canvas de 400x300, entonces el centro de esta área en análisis es:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+158.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+158.png',
                   },
                   {
                     parrafo:'Donde, este valor obtenido corresponde al nuevo centro trasladado. Entonces:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+159.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+159.png',
                   },
                   {
                     parrafo:'Si se aplica un factor de escalamiento (SF) igual a 20 y considerando el valor del vértice del extremo del vector A, que es el punto $D(-7.01,4.78)$, se obtiene $D^{\'}(x_{D^{\'}},y_{D^{\'}})$:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+160.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+160.png',
                   },
                   {
                     parrafo:'Conociendo el Punto $O^{\'}$ y el Punto $D^{\'}$, ya se puede dibujar el vector V en el espacio, utilizando una línea.'
                   },
                   {
                     parrafo:'Finalmente, la gráfica de los vectores A, B y C en el mundo de la Computación Gráfica se muestra en la Figura 3.2.3:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+161.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+161.png',
                   },
                   {
                     parrafo:'El vector perpendicular formado por la proyección del vector A sobre el vector B se obtiene utilizando la ecuación (75) de la sección 3.1.3.18:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+162.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+162.png',
                   },
                   {
                     parrafo:'En esta ecuación se realiza una resta de vectores entre el vector A con el vector proyección de A sobre el vector B:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+163.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+163.png',
                   },
                   {
                     parrafo:'Entonces, el vector perpendicular resultante es $\\overrightarrow{D} $:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+164.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+164.png',
                   },
                   {
                     parrafo:'La representación geométrica del punto D en coordenadas por pantalla no es necesario realizar puesto que este vector perpendicular se grafica uniendo con una línea los puntos C y D.'
@@ -4114,27 +4101,27 @@ export class ChapterIIComponent implements OnInit {
                 subtitulo2:'B.7.) Reflexiones sobre los ejes y Vectores Opuestos',
                 tituloproblema:'Problema:',
                 parrafo:'Dado un vector 3D en el espacio, calcular y graficar las reflexiones del vector en los tres planos y obtener los vectores opuestos de cada reflexión en los cuatro planos.',
-                titulosolucion:'Solución:',  
-                solucion:[                  
+                titulosolucion:'Solución:',
+                solucion:[
                   {
                     parrafo:'Dado el siguiente vector en el espacio:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+165.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+165.png',
                   },
                   {
                     parrafo:'Las reflexiones del vector A en los tres planos son:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+166.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+166.png',
                   },
                   {
                     parrafo:'Entonces las fórmulas para encontrar las reflexiones de un vector V cualquiera son:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+167.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+167.png',
                   },
                   {
                     parrafo:'Los vectores opuestos de cada reflexión y el vector opuesto del vector original son:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+168.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+168.png',
                   },
                   {
                     parrafo:'Entonces las fórmulas para encontrar los vectores opuestos de las reflexiones de un vector V cualquiera y el vector opuesto del vector original son:',
-                    fotoPath:'./assets/images/Capitulos/II/media/+169.png',    
+                    fotoPath:'./assets/images/Capitulos/II/media/+169.png',
                   },
                   {
                     parrafo:'$\\color{red} {\\bf{Conjetura Vectorial de Villacís-Zambrano}}$: Considerando un espacio vectorial $R^2$, se puede aseverar que hay una reflexión de un vector y 2 vectores opuestos formados. Considerando un espacio vectorial $R^3$, se puede aseverar que hay 3 reflexiones de un vector y 4 vectores opuestos formados. Entonces en un espacio vectorial $R^n$, habría $2^{n-1}-1$ reflexiones de un vector y $2^{n-1}$ vectores opuestos formados. Así, por ejemplo, en un espacio vectorial $R^4$, habría 7 reflexiones de un vector y 8 vectores opuestos formados, donde: $7=2^{4-1}-1.$'
@@ -4142,7 +4129,7 @@ export class ChapterIIComponent implements OnInit {
                 ]
                }
 
-             ]               
+             ]
            },
          C:{
             subtitulo:'C)	Algoritmos',
@@ -4310,16 +4297,16 @@ export class ChapterIIComponent implements OnInit {
                     tablaN:'Tabla 3.2.1. ',
                     tablaDescrip:'Código de la clase CVector3D del programa.',
                     tablaDatos:
-                    ` 
+                    `
                     /*
                     * Copyright (CC) 2021 César Villacís, Margarita Zambrano,
                     * Edwin Cuichan, Kevin Sanipatín.
                     * Creative Commons: BY-NC-ND 4.0 International license.
-                    * 
-                    * Except where otherwise noted, content on this program is licensed 
-                    * under a Creative Commons BY-NC-ND 4.0 International license. 
+                    *
+                    * Except where otherwise noted, content on this program is licensed
+                    * under a Creative Commons BY-NC-ND 4.0 International license.
                     * Source Code by the developers.
-                    * 
+                    *
                     * Unless required by applicable law or agreed to in writing, software
                     * distributed under the License is distributed on an "AS IS" BASIS,
                     * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -4340,7 +4327,7 @@ export class ChapterIIComponent implements OnInit {
                     {
                         class CVector3D
                         {
-                            #region Atributes of the class        
+                            #region Atributes of the class
                             /// <summary>
                             /// Member Data
                             /// </summary>
@@ -4397,7 +4384,7 @@ export class ChapterIIComponent implements OnInit {
                             ///<summary>
                             /// Getters and Setters.
                             ///</summary>
-                                    
+
                             // Descriptores de acceso get/set del punto D que define a un Vector 3D.
                             public PointF R { get => D; set => D = value; }
                             // Descriptores de acceso get/set de la Componente X del Vector 3D.
@@ -4434,7 +4421,7 @@ export class ChapterIIComponent implements OnInit {
                             public void ReadData(NumericUpDown nudXVectorV,
                                                 NumericUpDown nudYVectorV,
                                                 NumericUpDown nudZVectorV)
-                            {            
+                            {
                                 mX = (float)(nudXVectorV.Value);
                                 mY = (float)(nudYVectorV.Value);
                                 mZ = (float)(nudZVectorV.Value);
@@ -4446,9 +4433,9 @@ export class ChapterIIComponent implements OnInit {
                                 d = new Rectangle();
                                 d.X = picCanvas.Width;
                                 d.Y = picCanvas.Height;
-                                
-                                maxX = d.X - 1; maxY = d.Y - 1;            
-                                xCenter = maxX / 2; yCenter = maxY / 2;            
+
+                                maxX = d.X - 1; maxY = d.Y - 1;
+                                xCenter = maxX / 2; yCenter = maxY / 2;
                                 O.X = xCenter; O.Y = yCenter;
                             }
 
@@ -4468,7 +4455,7 @@ export class ChapterIIComponent implements OnInit {
                                 P2.X = xCenter; P2.Y = maxY;
                                 mGraph.DrawLine(mPen, P1.X, P1.Y, P2.X, P2.Y);
                                 // Ubicar el punto central de los ejes coordenados.
-                                O.X = xCenter; O.Y = yCenter;                     
+                                O.X = xCenter; O.Y = yCenter;
 
                                 // Resolver el Triángulo Rectángulo AOG del Rectángulo ABCD.
                                 b = 8.0f;
@@ -4494,9 +4481,9 @@ export class ChapterIIComponent implements OnInit {
                                 ///////////////////////////////////////
                                 // Dibujar el contorno del Rombo ABCD.
                                 ///////////////////////////////////////
-                                mPen = new Pen(Color.Gray);            
+                                mPen = new Pen(Color.Gray);
                                 O.X = xCenter; O.Y = yCenter;
-                                // Calcular los segmentos 'a' y 'b' del Triángulo Rectángulo ABO 
+                                // Calcular los segmentos 'a' y 'b' del Triángulo Rectángulo ABO
                                 // del Rombo ABCD.
                                 b = 4.0f;
                                 a = b / (float)Math.Tan(mAngle);
@@ -4515,67 +4502,67 @@ export class ChapterIIComponent implements OnInit {
                                 // Dibujar los segmentos internos del Rombo ABCD.
                                 //////////////////////////////////////////////////
                                 mPen = new Pen(Color.Gray);
-                                // Calcular los segmentos 'p' y 'q' del Triángulo Rectángulo AIL 
+                                // Calcular los segmentos 'p' y 'q' del Triángulo Rectángulo AIL
                                 // del Rombo ABCD.
                                 p = 0.25f;
-                                q = p / (float)Math.Tan(mAngle);            
+                                q = p / (float)Math.Tan(mAngle);
                                 int i, j;
-                                // Calcular los puntos del arreglo P[] que cruzan por el segmento BA            
+                                // Calcular los puntos del arreglo P[] que cruzan por el segmento BA
                                 // El cálculo de la coordenada 'x' va desde la derecha hacia el
                                 // centro. Mientras que el cálculo de la coordenada 'y' va desde
-                                // abajo hacia arriba.            
+                                // abajo hacia arriba.
                                 for (i = 1, j = 0; i <= 15; i++, j++)
                                 {
                                     x = (float)(a - i * q);
                                     y = (float)(i * p);
                                     Xp = (float)(x * SF + xCenter);
-                                    Yp = (float)((-1) * y * SF + yCenter);               
+                                    Yp = (float)((-1) * y * SF + yCenter);
                                     P[j] = new PointF(Xp, Yp);
                                 }
-                                // Calcular los puntos del arreglo Q[] que cruzan por el segmento DC            
+                                // Calcular los puntos del arreglo Q[] que cruzan por el segmento DC
                                 // El cálculo de la coordenada 'x' va desde la izquierda hacia el
                                 // centro. Mientras que el cálculo de la coordenada 'y' va desde
-                                // arriba hacia abajo.            
+                                // arriba hacia abajo.
                                 for (i = 1, j = 0; i <= 15; i++, j++)
                                 {
                                     x = (float)((-1) * (a - i * q));
                                     y = (float)(-1)*((i * p));
                                     Xp = (float)(x * SF + xCenter);
-                                    Yp = (float)((-1) * y * SF + yCenter);                
+                                    Yp = (float)((-1) * y * SF + yCenter);
                                     Q[j] = new PointF(Xp, Yp);
                                 }
-                                // Dibujar una línea que permite unir el primer punto del arreglo P[] 
+                                // Dibujar una línea que permite unir el primer punto del arreglo P[]
                                 // con el último punto del arreglo Q[], hasta unir el último punto del
                                 // arreglo P[] con el primer punto del arreglo Q[].
                                 for (i = 0, j = 14; i < 15; i++, j--)
                                 {
                                     mGraph.DrawLine(mPen, P[i], Q[j]);
                                 }
-                                // Calcular los puntos del arreglo P[] que cruzan por el segmento DA            
+                                // Calcular los puntos del arreglo P[] que cruzan por el segmento DA
                                 // El cálculo de la coordenada 'x' va desde la izquierda hacia el
                                 // centro. Mientras que el cálculo de la coordenada 'y' va desde
-                                // abajo hacia arriba.              
+                                // abajo hacia arriba.
                                 for (i = 1, j = 0; i <= 15; i++, j++)
                                 {
                                     x = (float)((-1) * (a - i * q));
                                     y = (float)((i * p));
                                     Xp = (float)(x * SF + xCenter);
-                                    Yp = (float)((-1) * y * SF + yCenter);                
+                                    Yp = (float)((-1) * y * SF + yCenter);
                                     P[j] = new PointF(Xp, Yp);
                                 }
-                                // Calcular los puntos del arreglo Q[] que cruzan por el segmento BC            
+                                // Calcular los puntos del arreglo Q[] que cruzan por el segmento BC
                                 // El cálculo de la coordenada 'x' va desde la derecha hacia el
                                 // centro. Mientras que el cálculo de la coordenada 'y' va desde
-                                // arriba hacia abajo.  
+                                // arriba hacia abajo.
                                 for (i = 1, j = 0; i <= 15; i++, j++)
                                 {
                                     x = (float)(a - i * q);
                                     y = (float)((-1) * i * p);
                                     Xp = (float)(x * SF + xCenter);
-                                    Yp = (float)((-1) * y * SF + yCenter);                
+                                    Yp = (float)((-1) * y * SF + yCenter);
                                     Q[j] = new PointF(Xp, Yp);
                                 }
-                                // Dibujar una línea que permite unir el primer punto del arreglo P[] 
+                                // Dibujar una línea que permite unir el primer punto del arreglo P[]
                                 // con el último punto del arreglo Q[], hasta unir el último punto del
                                 // arreglo P[] con el primer punto del arreglo Q[].
                                 for (i = 0, j = 14; i < 15; i++, j--)
@@ -4586,8 +4573,8 @@ export class ChapterIIComponent implements OnInit {
 
                             // Función que dibuja un vector 3D y la caja que encierra al vector.
                             public void PlotBox(PictureBox picCanvas, Color colorVector, Color colorBox)
-                            {            
-                                // Asignar la funcionalidad de crear gráficos del picCanvas 
+                            {
+                                // Asignar la funcionalidad de crear gráficos del picCanvas
                                 // al objeto mGraph.
                                 mGraph = picCanvas.CreateGraphics();
                                 // Crear un patrón de línea de puntos para dibujarlo con un esferográfico.
@@ -4597,8 +4584,8 @@ export class ChapterIIComponent implements OnInit {
                                 // Escalar al vector V a la mitad.
                                 float a = mX / 2.0f;
                                 float b = mY / 2.0f;
-                                float c = mZ / 2.0f;                        
-                                // Calcular el valor del vértice B y del vértice A, utilizando 
+                                float c = mZ / 2.0f;
+                                // Calcular el valor del vértice B y del vértice A, utilizando
                                 // fórmulas de Geometría Analítica y Trigonometría.
                                 B.X = a * (float)Math.Cos(mAngle);
                                 B.Y = (-1) * a * (float)Math.Sin(mAngle);
@@ -4608,7 +4595,7 @@ export class ChapterIIComponent implements OnInit {
                                 // de la caja que encierra al vector V, utilizando las fórmulas de
                                 // traslación de un punto a otro en el mundo de la Computación Gráfica.
                                 B.X = B.X * SF + xCenter; B.Y = yCenter + ((-1) * B.Y * SF);
-                                A.X = A.X * SF + xCenter; A.Y = yCenter + ((-1) * A.Y * SF); 
+                                A.X = A.X * SF + xCenter; A.Y = yCenter + ((-1) * A.Y * SF);
                                 // Dibujar una línea que una el punto O con el punto B.
                                 mGraph.DrawLine(mPen, O, B);
                                 // Dibujar una línea que una el punto A con el punto B.
@@ -4623,41 +4610,41 @@ export class ChapterIIComponent implements OnInit {
                                 float PM = b - BM - AP;
                                 float NM = DP;
                                 float ON = OM - DP;
-                                // Calcular las coordenadas de los puntos D, C, E, G y F que forman 
-                                // parte de la caja que encierra al vector V, utilizando las fórmulas 
-                                // de traslación de un punto a otro en el mundo de la Computación 
+                                // Calcular las coordenadas de los puntos D, C, E, G y F que forman
+                                // parte de la caja que encierra al vector V, utilizando las fórmulas
+                                // de traslación de un punto a otro en el mundo de la Computación
                                 // Gráfica y dibujar las líneas que unen dichos puntos.
-                                D.X = ON * SF + xCenter; D.Y = yCenter + ((-1) * PM * SF);            
+                                D.X = ON * SF + xCenter; D.Y = yCenter + ((-1) * PM * SF);
                                 mGraph.DrawLine(mPen, A, D);
-                                C.X = ON * SF + xCenter; C.Y = yCenter + ((-1) * (PM - b) * SF);            
+                                C.X = ON * SF + xCenter; C.Y = yCenter + ((-1) * (PM - b) * SF);
                                 mGraph.DrawLine(mPen, C, D);
                                 mGraph.DrawLine(mPen, B, C);
-                                E.X = (-1) * DP * SF + xCenter; E.Y = yCenter + ((-1) * (-1) * AP * SF);            
+                                E.X = (-1) * DP * SF + xCenter; E.Y = yCenter + ((-1) * (-1) * AP * SF);
                                 mGraph.DrawLine(mPen, O, E);
                                 mGraph.DrawLine(mPen, C, E);
-                                G.X = 0 * SF + xCenter; G.Y = yCenter + ((-1) * b * SF);            
+                                G.X = 0 * SF + xCenter; G.Y = yCenter + ((-1) * b * SF);
                                 mGraph.DrawLine(mPen, O, G);
                                 mGraph.DrawLine(mPen, A, G);
-                                F.X = (-1) * DP * SF + xCenter; F.Y = yCenter + ((-1) * (b - AP) * SF);            
+                                F.X = (-1) * DP * SF + xCenter; F.Y = yCenter + ((-1) * (b - AP) * SF);
                                 mGraph.DrawLine(mPen, F, G);
                                 mGraph.DrawLine(mPen, F, D);
                                 mGraph.DrawLine(mPen, E, F);
-                                // Crear una línea con flecha y base redondeada para dibujarla con un 
+                                // Crear una línea con flecha y base redondeada para dibujarla con un
                                 // esferográfico.
                                 mPen = new Pen(colorVector, 2);
                                 mPen.StartCap = LineCap.RoundAnchor;
                                 mPen.EndCap = LineCap.ArrowAnchor;
                                 // Dibujar una línea que una el punto O con el punto D, que representa
                                 // al vector V.
-                                mGraph.DrawLine(mPen, O, D);                      
+                                mGraph.DrawLine(mPen, O, D);
                             }
 
                             // Función que dibuja un vector 3D.
                             public void PlotVector(PictureBox picCanvas, Color colorVector, Color colorBox)
                             {
-                                // Asignar la funcionalidad de crear gráficos del picCanvas 
+                                // Asignar la funcionalidad de crear gráficos del picCanvas
                                 // al objeto mGraph.
-                                mGraph = picCanvas.CreateGraphics();            
+                                mGraph = picCanvas.CreateGraphics();
                                 // Escalar al vector V a la mitad.
                                 float a = mX / 2.0f;
                                 float b = mY / 2.0f;
@@ -4672,18 +4659,18 @@ export class ChapterIIComponent implements OnInit {
                                 float PM = b - BM - AP;
                                 float NM = DP;
                                 float ON = OM - DP;
-                                // Calcular las coordenadas del punto D que define al vector V, 
-                                // utilizando las fórmulas de traslación de un punto a otro en el 
+                                // Calcular las coordenadas del punto D que define al vector V,
+                                // utilizando las fórmulas de traslación de un punto a otro en el
                                 // mundo de la Computación Gráfica.
                                 D.X = ON * SF + xCenter; D.Y = yCenter + ((-1) * PM * SF);
-                                // Crear una línea con flecha y base redondeada para dibujarla con un 
+                                // Crear una línea con flecha y base redondeada para dibujarla con un
                                 // esferográfico.
                                 mPen = new Pen(colorVector, 2);
                                 mPen.StartCap = LineCap.RoundAnchor;
                                 mPen.EndCap = LineCap.ArrowAnchor;
                                 // Dibujar una línea que una el punto O con el punto D, que representa
                                 // al vector V.
-                                mGraph.DrawLine(mPen, O, D);                       
+                                mGraph.DrawLine(mPen, O, D);
                             }
 
                             // Función que grafica el vector Proyección de un vector sobre otro.
@@ -4691,8 +4678,8 @@ export class ChapterIIComponent implements OnInit {
                                           CVector3D U, CVector3D V)
                             {
                                 mGraph = picCanvas.CreateGraphics();
-                                mPen = new Pen(Color.Violet, 2);            
-                                mGraph.DrawLine(mPen, U.R, V.R);            
+                                mPen = new Pen(Color.Violet, 2);
+                                mGraph.DrawLine(mPen, U.R, V.R);
                             }
 
                             // Función que grafica el paralelogramo correspondiente a la suma
@@ -4701,9 +4688,9 @@ export class ChapterIIComponent implements OnInit {
                                           CVector3D U, CVector3D V, CVector3D W)
                             {
                                 mGraph = picCanvas.CreateGraphics();
-                                mPen = new Pen(Color.Red, 2);            
+                                mPen = new Pen(Color.Red, 2);
                                 mGraph.DrawLine(mPen, V.R, W.R);
-                                mPen = new Pen(Color.DarkBlue, 2);            
+                                mPen = new Pen(Color.DarkBlue, 2);
                                 mGraph.DrawLine(mPen, U.R, W.R);
                             }
 
@@ -4713,7 +4700,7 @@ export class ChapterIIComponent implements OnInit {
                             {
                                 CVector3D Temp = new CVector3D();
                                 Temp.mX = U.mX + V.mX;
-                                Temp.mY = U.mY + V.mY; 
+                                Temp.mY = U.mY + V.mY;
                                 Temp.mZ = U.mZ + V.mZ;
                                 return (Temp);
                             }
@@ -4730,10 +4717,10 @@ export class ChapterIIComponent implements OnInit {
                             }
 
                             // Función que imprime las componentes 'X', 'Y' y 'Z' del vector 3D.
-                            public void PrintData(TextBox txtXVectorV, 
+                            public void PrintData(TextBox txtXVectorV,
                                                   TextBox txtYVectorV,
                                                   TextBox txtZVectorV)
-                            {            
+                            {
                                 txtXVectorV.Text = mX.ToString();
                                 txtYVectorV.Text = mY.ToString();
                                 txtZVectorV.Text = mZ.ToString();
@@ -4755,7 +4742,7 @@ export class ChapterIIComponent implements OnInit {
                                 return (Temp);
                             }
 
-                            // Función que calcula el Producto Punto entre dos vectores, 
+                            // Función que calcula el Producto Punto entre dos vectores,
                             // utilizando dos parámetros.
                             public float DotProduct(CVector3D U, CVector3D V)
                             {
@@ -4781,7 +4768,7 @@ export class ChapterIIComponent implements OnInit {
                                 CVector3D Nv = new CVector3D();
                                 float escalar;
                                 Nv = V.Normalize();
-                                escalar = DotProduct(U, Nv);                      
+                                escalar = DotProduct(U, Nv);
                                 Proj = Nv.VectorEscalarProduct(escalar);
                                 return (Proj);
                             }
@@ -4809,11 +4796,11 @@ export class ChapterIIComponent implements OnInit {
                                 {
                                     mListTextBoxVectorRef[i].Text = VR[j].X.ToString();
                                     mListTextBoxVectorRef[i + 1].Text = VR[j].Y.ToString();
-                                    mListTextBoxVectorRef[i + 2].Text = VR[j].Z.ToString();                
+                                    mListTextBoxVectorRef[i + 2].Text = VR[j].Z.ToString();
                                 }
                             }
 
-                            // Función que calcula los tres vectores opuestos de cada uno de tres vectores 
+                            // Función que calcula los tres vectores opuestos de cada uno de tres vectores
                             // reflejados y el vector opuesto del original en otro plano.
                             public void OppositeVectors(CVector3D[] VR, CVector3D[] VO,
                                                         List<TextBox> mListTextBoxVectorOpp)
@@ -4846,11 +4833,11 @@ export class ChapterIIComponent implements OnInit {
                     * Copyright (CC) 2021 César Villacís, Margarita Zambrano,
                     * Edwin Cuichan, Kevin Sanipatín.
                     * Creative Commons: BY-NC-ND 4.0 International license.
-                    * 
-                    * Except where otherwise noted, content on this program is licensed 
-                    * under a Creative Commons BY-NC-ND 4.0 International license. 
+                    *
+                    * Except where otherwise noted, content on this program is licensed
+                    * under a Creative Commons BY-NC-ND 4.0 International license.
                     * Source Code by the developers.
-                    * 
+                    *
                     * Unless required by applicable law or agreed to in writing, software
                     * distributed under the License is distributed on an "AS IS" BASIS,
                     * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -4901,37 +4888,37 @@ export class ChapterIIComponent implements OnInit {
                             // de los vectores reflejados y de los vectores opuestos.
                             private void InsertDataList()
                             {
-                                mListTextBoxVectorRef.Add(txtXVectorVR1); 
-                                mListTextBoxVectorRef.Add(txtYVectorVR1); 
+                                mListTextBoxVectorRef.Add(txtXVectorVR1);
+                                mListTextBoxVectorRef.Add(txtYVectorVR1);
                                 mListTextBoxVectorRef.Add(txtZVectorVR1);
-                                mListTextBoxVectorRef.Add(txtXVectorVR2); 
-                                mListTextBoxVectorRef.Add(txtYVectorVR2); 
+                                mListTextBoxVectorRef.Add(txtXVectorVR2);
+                                mListTextBoxVectorRef.Add(txtYVectorVR2);
                                 mListTextBoxVectorRef.Add(txtZVectorVR2);
-                                mListTextBoxVectorRef.Add(txtXVectorVR3); 
-                                mListTextBoxVectorRef.Add(txtYVectorVR3); 
+                                mListTextBoxVectorRef.Add(txtXVectorVR3);
+                                mListTextBoxVectorRef.Add(txtYVectorVR3);
                                 mListTextBoxVectorRef.Add(txtZVectorVR3);
-                                mListTextBoxVectorRef.Add(txtXVectorVR4); 
-                                mListTextBoxVectorRef.Add(txtYVectorVR4); 
+                                mListTextBoxVectorRef.Add(txtXVectorVR4);
+                                mListTextBoxVectorRef.Add(txtYVectorVR4);
                                 mListTextBoxVectorRef.Add(txtZVectorVR4);
 
-                                mListTextBoxVectorOpp.Add(txtXVectorVO1); 
-                                mListTextBoxVectorOpp.Add(txtYVectorVO1); 
+                                mListTextBoxVectorOpp.Add(txtXVectorVO1);
+                                mListTextBoxVectorOpp.Add(txtYVectorVO1);
                                 mListTextBoxVectorOpp.Add(txtZVectorVO1);
-                                mListTextBoxVectorOpp.Add(txtXVectorVO2); 
-                                mListTextBoxVectorOpp.Add(txtYVectorVO2); 
+                                mListTextBoxVectorOpp.Add(txtXVectorVO2);
+                                mListTextBoxVectorOpp.Add(txtYVectorVO2);
                                 mListTextBoxVectorOpp.Add(txtZVectorVO2);
-                                mListTextBoxVectorOpp.Add(txtXVectorVO3); 
-                                mListTextBoxVectorOpp.Add(txtYVectorVO3); 
+                                mListTextBoxVectorOpp.Add(txtXVectorVO3);
+                                mListTextBoxVectorOpp.Add(txtYVectorVO3);
                                 mListTextBoxVectorOpp.Add(txtZVectorVO3);
-                                mListTextBoxVectorOpp.Add(txtXVectorVO4); 
-                                mListTextBoxVectorOpp.Add(txtYVectorVO4); 
+                                mListTextBoxVectorOpp.Add(txtXVectorVO4);
+                                mListTextBoxVectorOpp.Add(txtYVectorVO4);
                                 mListTextBoxVectorOpp.Add(txtZVectorVO4);
-                            }        
+                            }
 
                             // Función del evento de carga del formulario frmVectors3D.
                             private void frmVectors3D_Load(object sender, EventArgs e)
                             {
-                                
+
                             }
 
                             // Función del evento Click del botón btnAddition.
@@ -5180,7 +5167,7 @@ export class ChapterIIComponent implements OnInit {
                                 D.PrintData(txtXVectorPer, txtYVectorPer, txtZVectorPer);
                                 // Graficación del vector perpendicular D en 3D.
                                 // Llamada a la función PlotProjection con el objeto D.
-                                D.PlotProjection(picCanvas, C, A);           
+                                D.PlotProjection(picCanvas, C, A);
                             }
 
                             // Función del evento Click del botón btnBoxProjection.
@@ -5248,14 +5235,14 @@ export class ChapterIIComponent implements OnInit {
                                 // Lectura de datos.
                                 // Llamada a la función ReadData con el objeto A.
                                 A.ReadData(nudXVectorA, nudYVectorA, nudZVectorA);
-                                // Bucle que permite crear los objetos internos de cada uno de 
+                                // Bucle que permite crear los objetos internos de cada uno de
                                 // los arreglos de objetos VR y VO.
                                 for (i = 0; i < VR.Length; i++)
                                 {
                                     VR[i] = new CVector3D();
                                     VO[i] = new CVector3D();
                                 }
-                                // Bucle que permite inicializar los objetos internos de cada 
+                                // Bucle que permite inicializar los objetos internos de cada
                                 // uno de los arreglos de objetos VR y VO.
                                 for (i = 0; i < VR.Length; i++)
                                 {
@@ -5265,9 +5252,9 @@ export class ChapterIIComponent implements OnInit {
                                 // Bucle que permite graficar los planos y los ejes coordenados de los
                                 // objetos internos de cada uno de los arreglos de objetos VR y VO.
                                 for (i = 0; i < VR.Length; i++)
-                                {                
+                                {
                                     VR[i].PlotPlane(picCanvas);
-                                    VR[i].PlotAxis(picCanvas);                
+                                    VR[i].PlotAxis(picCanvas);
                                     VO[i].PlotPlane(picCanvas);
                                     VO[i].PlotAxis(picCanvas);
                                 }
@@ -5276,14 +5263,14 @@ export class ChapterIIComponent implements OnInit {
                                 A.ReflectionsOverAxis(A, VR, mListTextBoxVectorRef);
                                 // Calcular los vectores opuestos.
                                 // Llamada a la función OppositeVectors con el objeto A.
-                                A.OppositeVectors(VR, VO, mListTextBoxVectorOpp);            
-                                // Bucle que permite graficar los vectores de los objetos internos 
+                                A.OppositeVectors(VR, VO, mListTextBoxVectorOpp);
+                                // Bucle que permite graficar los vectores de los objetos internos
                                 // de cada uno de los arreglos de objetos VR y VO.
                                 for (i = 0; i < VR.Length; i++)
                                 {
                                     VR[i].PlotVector(picCanvas, Color.Red, Color.Maroon);
                                     VO[i].PlotVector(picCanvas, Color.Red, Color.Maroon);
-                                }            
+                                }
                             }
 
                             // Función del evento Click del botón btnBoxSetVectorsA.
@@ -5295,14 +5282,14 @@ export class ChapterIIComponent implements OnInit {
                                 // Lectura de datos.
                                 // Llamada a la función ReadData con el objeto A.
                                 A.ReadData(nudXVectorA, nudYVectorA, nudZVectorA);
-                                // Bucle que permite crear los objetos internos de cada uno de 
+                                // Bucle que permite crear los objetos internos de cada uno de
                                 // los arreglos de objetos VR y VO.
                                 for (i = 0; i < VR.Length; i++)
                                 {
                                     VR[i] = new CVector3D();
                                     VO[i] = new CVector3D();
                                 }
-                                // Bucle que permite inicializar los objetos internos de cada 
+                                // Bucle que permite inicializar los objetos internos de cada
                                 // uno de los arreglos de objetos VR y VO.
                                 for (i = 0; i < VR.Length; i++)
                                 {
@@ -5312,9 +5299,9 @@ export class ChapterIIComponent implements OnInit {
                                 // Bucle que permite graficar los planos y los ejes coordenados de los
                                 // objetos internos de cada uno de los arreglos de objetos VR y VO.
                                 for (i = 0; i < VR.Length; i++)
-                                {                
+                                {
                                     VR[i].PlotPlane(picCanvas);
-                                    VR[i].PlotAxis(picCanvas);                
+                                    VR[i].PlotAxis(picCanvas);
                                     VO[i].PlotPlane(picCanvas);
                                     VO[i].PlotAxis(picCanvas);
                                 }
@@ -5325,8 +5312,8 @@ export class ChapterIIComponent implements OnInit {
                                 // Llamada a la función OppositeVectors con el objeto A.
                                 A.OppositeVectors(VR, VO, mListTextBoxVectorOpp);
                                 // Bucle que permite graficar los vectores y las cajas que encierran
-                                // a los vectores 3D de los objetos internos, de cada uno de los 
-                                // arreglos de objetos VR y VO.            
+                                // a los vectores 3D de los objetos internos, de cada uno de los
+                                // arreglos de objetos VR y VO.
                                 for (i = 0; i < VR.Length; i++)
                                 {
                                     VR[i].PlotBox(picCanvas, Color.Red, Color.Maroon);
@@ -5343,14 +5330,14 @@ export class ChapterIIComponent implements OnInit {
                                 // Lectura de datos.
                                 // Llamada a la función ReadData con el objeto B.
                                 B.ReadData(nudXVectorB, nudYVectorB, nudZVectorB);
-                                // Bucle que permite crear los objetos internos de cada uno de 
+                                // Bucle que permite crear los objetos internos de cada uno de
                                 // los arreglos de objetos VR y VO.
                                 for (i = 0; i < VR.Length; i++)
                                 {
                                     VR[i] = new CVector3D();
                                     VO[i] = new CVector3D();
                                 }
-                                // Bucle que permite inicializar los objetos internos de cada 
+                                // Bucle que permite inicializar los objetos internos de cada
                                 // uno de los arreglos de objetos VR y VO.
                                 for (i = 0; i < VR.Length; i++)
                                 {
@@ -5360,9 +5347,9 @@ export class ChapterIIComponent implements OnInit {
                                 // Bucle que permite graficar los planos y los ejes coordenados de los
                                 // objetos internos de cada uno de los arreglos de objetos VR y VO.
                                 for (i = 0; i < VR.Length; i++)
-                                {                
+                                {
                                     VR[i].PlotPlane(picCanvas);
-                                    VR[i].PlotAxis(picCanvas);                
+                                    VR[i].PlotAxis(picCanvas);
                                     VO[i].PlotPlane(picCanvas);
                                     VO[i].PlotAxis(picCanvas);
                                 }
@@ -5372,13 +5359,13 @@ export class ChapterIIComponent implements OnInit {
                                 // Calcular los vectores opuestos.
                                 // Llamada a la función OppositeVectors con el objeto B.
                                 B.OppositeVectors(VR, VO, mListTextBoxVectorOpp);
-                                // Bucle que permite graficar los vectores de los objetos internos 
+                                // Bucle que permite graficar los vectores de los objetos internos
                                 // de cada uno de los arreglos de objetos VR y VO.
                                 for (i = 0; i < VR.Length; i++)
                                 {
                                     VR[i].PlotVector(picCanvas, Color.DarkBlue, Color.Blue);
                                     VO[i].PlotVector(picCanvas, Color.DarkBlue, Color.Blue);
-                                }            
+                                }
                             }
 
                             // Función del evento Click del botón btnBoxSetVectorsB.
@@ -5390,14 +5377,14 @@ export class ChapterIIComponent implements OnInit {
                                 // Lectura de datos.
                                 // Llamada a la función ReadData con el objeto A.
                                 B.ReadData(nudXVectorB, nudYVectorB, nudZVectorB);
-                                // Bucle que permite crear los objetos internos de cada uno de 
+                                // Bucle que permite crear los objetos internos de cada uno de
                                 // los arreglos de objetos VR y VO.
                                 for (i = 0; i < VR.Length; i++)
                                 {
                                     VR[i] = new CVector3D();
                                     VO[i] = new CVector3D();
                                 }
-                                // Bucle que permite inicializar los objetos internos de cada 
+                                // Bucle que permite inicializar los objetos internos de cada
                                 // uno de los arreglos de objetos VR y VO.
                                 for (i = 0; i < VR.Length; i++)
                                 {
@@ -5407,9 +5394,9 @@ export class ChapterIIComponent implements OnInit {
                                 // Bucle que permite graficar los planos y los ejes coordenados de los
                                 // objetos internos de cada uno de los arreglos de objetos VR y VO.
                                 for (i = 0; i < VR.Length; i++)
-                                {                
+                                {
                                     VR[i].PlotPlane(picCanvas);
-                                    VR[i].PlotAxis(picCanvas);                
+                                    VR[i].PlotAxis(picCanvas);
                                     VO[i].PlotPlane(picCanvas);
                                     VO[i].PlotAxis(picCanvas);
                                 }
@@ -5420,8 +5407,8 @@ export class ChapterIIComponent implements OnInit {
                                 // Llamada a la función OppositeVectors con el objeto B.
                                 B.OppositeVectors(VR, VO, mListTextBoxVectorOpp);
                                 // Bucle que permite graficar los vectores y las cajas que encierran
-                                // a los vectores 3D de los objetos internos, de cada uno de los 
-                                // arreglos de objetos VR y VO.  
+                                // a los vectores 3D de los objetos internos, de cada uno de los
+                                // arreglos de objetos VR y VO.
                                 for (i = 0; i < VR.Length; i++)
                                 {
                                     VR[i].PlotBox(picCanvas, Color.DarkBlue, Color.Blue);
@@ -5437,7 +5424,7 @@ export class ChapterIIComponent implements OnInit {
                         }
                     }
                     `
-                } 
+                }
             ]
          },
           E:{
@@ -5711,7 +5698,7 @@ export class ChapterIIComponent implements OnInit {
                 fotoPath:'./assets/images/Capitulos/II/media/+195.png',
                 fotoN:'Figura 3.10.3.  ',
                 fotoDescrip:'Tensiones en cables y placas.'
-              }      
+              }
             ]
           }
         ]
