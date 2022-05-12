@@ -1,9 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-
 import { Observable, Observer } from 'rxjs';
-import { MatTabsModule } from '@angular/material/tabs';
 import { FormControl } from '@angular/forms';
-import { Url } from 'url';
 
 
 export interface ExampleTab {
@@ -1568,166 +1565,72 @@ x = x + y; // x = 12
 
       },
       { label: 'Caso 1.5',
-        link:'https://drive.google.com/uc?id=17GUBj_CzW7L3A1Ib9EAJIZeaDm2R0Zva&export=download',
-        title: 'Graficar un grupo de líneas utilizando el ratón.',
-        problema: 'Escribir un programa para graficar un grupo de líneas continuas, donde cada línea se dibuja en función de dos puntos, utilizando el clic izquierdo del ratón. La línea inicial parte desde el origen O(0,0) y la segunda línea comienza en donde terminó la primera, la tercera línea comienza en donde terminó la segunda y así sucesivamente. Además, se debe considerar utilizar dos círculos pequeños o dos rectángulos pequeños para representar graficamente los dos puntos que tiene cada línea. (Ver Figura 1.5.1).',
-        formulaA: [],
-        imagenCaso5: './assets/images/Capitulos/I/media/image39.png',
-        figuraNum1: 'Figura 1.5.1. ',
-        figura1: 'Líneas utilizando el ratón.',
-        analisis: 'Claramente, se puede ver que las entradas del problema son los dos puntos que conforman la línea, es decir, el punto inicial y el punto final. Hay una sola salida requerida que es un objeto de tipo Graphics que permite dibujar una línea uniendo los dos puntos y dibujar un círculo o rectángulo que representan a los dos puntos que definen una línea. Los datos auxiliares del problema son los mismos dos puntos que se pueden reutilizar para graficar una nueva línea y además se necesitan dos bolígrafos para dibujo.',
-        requerimientosDatos: [
-          {t:'Entradas del Problema',a:'',b:''},
-          {t:'',a:'$StartPoint$',b:'/* objeto de tipo Point */'},
-          {t:'',a:'$EndPoint$',b:'/* objeto de tipo Point */'},
-          {t:'Salidas del Problema',a:'',b:''},
-          {t:'',a:'$graph$',b:'/* objeto que activa el modo gráfico y que se lo utiliza para dibujar una línea, un círculo o de un rectángulo */'},
-          {t:'Auxiliares del Problema',a:'',b:''},
-          {t:'',a:'$StartPoint$',b:'/* objeto de tipo Point */'},
-          {t:'',a:'$EndPoint$',b:'/* objeto de tipo Point */'},
-          {t:'',a:'$LinePen$',b:'/* bolígrafo utilizado para dibujar una línea */'},
-          {t:'',a:'$EllipsePen$',b:'/* bolígrafo utilizado para dibujar un círculo o un rectángulo */'},
-        ],
-        diagramaES: 'En la Figura 1.5.2 se muestra el diagrama de Entrada-Salida del programa donde se identifican y se diagraman las entradas y salidas del problema como son: a) Entradas: los objetos StartPoint y EndPoint de tipo Point; b) Salidas: un objeto graph de tipo Graphics; c) Auxiliares: los objetos StartPoint y EndPoint de tipo Point y los bolígrafos para dibujo LinePen y EllipsePen de tipo Pen.',
-        imagen2: './assets/images/Capitulos/I/media/image40.png',
-        figuraNum2: 'Figura 1.5.2. ',
-        figura2: 'Diagrama de Entrada-Salida del Programa.',
-        diagramaC1: 'El diagrama de clases de esta aplicación se muestra en la Figura 1.3.3 con notación UML. En este diagrama se puede ver que la aplicación está compuesta por seis clases, donde la clase Program se compone por la clase frmLines que resulta ser una clase derivada de la clase Form. La clase frmLines se compone de un objeto de tipo CLine. ',
-        diagramaC2: 'La clase CLinese compone de un objeto de tipo Graphics llamado mGraph, que maneja el modo gráfico de la aplicación y de dos objetos de tipo Pen llamados mLinePen, y mEllipsePen para dibujar sobre un lienzo representado por un pictureBox cuyo identificador es picCanvas. Los otros atributos que se tienen en la clase CLine son los puntos que representan a una línea llamados mStartPoint y mEndPoint de tipo Point. ',
-        imagen3: './assets/images/Capitulos/I/media/image41.png',
-        figuraNum3: 'Figura 1.5.3. ',
-        figura3: 'Diagrama de clases del Caso de Estudio 1.5.',
-        diseno: 'Una vez que se conoce las entradas y las salidas del problema, se deben listar los pasos necesarios para resolver el problema, es decir, el algoritmo.',
-        algoritmos: [{t:'3.1.1. Algoritmo de la Función InitializeData()',a:'1.	Inicializar los el punto inicial y final con el valor de cero en las coordenadas ‘x’ e ‘y’.',b:'2.	Borrar el contenido de la caja de imagen picCanvas.',c:'3.	Asignar con el valor booleano de false a la caja de verificación chkPoint.',d:'',e:'',f:'',g:'',h:'',i:''},
-          {t:'3.1.2. Algoritmo de la Función DrawLineMouse()',a:'1.	Si se ha seleccionado el botón izquierdo del ratón, entonces:',b:'1.1.	Asignar la funcionalidad de crear gráficos al objeto mGraph.',c:'1.2.	Asignar el valor del punto final al punto inicial.',d:'1.3.	Asignar al punto final el valor de las coordenadas del ratón en ‘x’ e ‘y’.',e:'1.4.	Dibujar una línea desde el punto actual hasta el nuevo punto.',f:'',g:'',h:'',i:'1.5.	Dibujar un círculo para representa a un punto en el plano.',j:'1.6.	Desechar los dos objetos bolígrafo de tipo Pen.',k:'1.7. Desechar el objeto graph de tipo Graphics.'},
-        ],
-        implementacion1: '',
-        implementacion2: '',
-        imagen4: '',
-        figuraNum4: '',
-        figura4: '',
-        implementacion3: 'Para implementar la solución, se deben escribir los algoritmos como una Aplicación para Windows con C# .NET que contenga toda la información necesaria para completar la solución de dicho problema y pueda la aplicación ser ejecutada desde Visual Studio .NET.',
-        imagen5: '',
-        figuraNum5: '',
-        figura5: '',
-        implementacion4: 'Para comenzar la construcción de esta aplicación, se debe seleccionar la opción de Crear un proyecto y la Plantilla (template) correspondiente a la Aplicación de Windows Forms con el lenguaje C#. En el cuadro de diálogo configure su proyecto con el nombre de WinAppLines y luego guarde el mismo en el disco duro.',
-        imagen6: '',
-        figuraNum6: '',
-        figura6: '',
-        implementacion5: 'Ahora que ya se ha guardado el proyecto, acceda al Explorador de Soluciones (Solution Explorer) y modifique el nombre del archivo del formulario a frmLines.cs, cuyo nombre por defecto es Form1.cs y que consta dentro de la Aplicación de Windows Forms con el nombre de WinAppLines, como se muestra en la Figura 1.5.4. Además, cree la clase llamada CLine con la cual va a trabajar el formulario frmLines, aplicando el concepto de Composición y Agregación.',
-        imagen7: '',
-        figuraNum7: '',
-        figura7: '',
-        implementacion6: '',
-        imagen8: './assets/images/Capitulos/I/media/image42.png',
-        figuraNum8: 'Figura 1.5.4. ',
-        figura8: 'Solución WinAppLines.',
-        implementacion7: 'Se necesita añadir al Formulario (Form) dos Cajas de Grupo (GroupBoxes), dos Botones (Buttons), una Caja de Imagen (PictureBox) y una Caja de Verificación (Check Box), dispuestos de la siguiente manera: a) La primera Caja de Grupo (GroupBox), contiene dos Botones (Button) y la Caja de Verificación (Check Box); b) la segunda Caja de Grupo (GroupBox), contiene un Caja de Imagen (PictureBox).',
-        imagen9: '',
-        figuraNum9: '',
-        figura9: '',
-        implementacion8: 'Utilice la Tabla 1.5.1, para modificar las propiedades restantes de cada objeto. ',
-        tabla1:'Tabla 1.5.1. ',
-        tabladetalle1:'Objetos y sus Propiedades. ',
-        tablaDatos1: [
-          {Objeto:'Form',Propiedad:['Name','Text','StartUpPosition'],Valor:['frmLines','Líneas','CenterScreen ']},
-          {Objeto:'GroupBox',Propiedad:['Name','Text'],Valor:['grbProcess','Proceso']},
-          {Objeto:'Button',Propiedad:['Name','Text'],Valor:['btnReset','Resetear']},
-          {Objeto:'Button',Propiedad:['Name','Text'],Valor:['btnExit','Salir']},
-          {Objeto:'GroupBox',Propiedad:['Name','Text','Checked'],Valor:['chkPoint','Rectángulo','False']},
-          {Objeto:'GroupBox',Propiedad:['Name','Text','Font'],Valor:['grbCanvas','Gráfico','MS Sans Serif, Bold, 8']},
-          {Objeto:'PictureBox',Propiedad:['Name'],Valor:['picCanvas']}
-        ],
-        implementacion9: 'Una vez modificadas las propiedades del formulario y de sus controles queda configurado de la siguiente manera, como se puede ver en la Figura 1.5.5.',
-        imagen10: './assets/images/Capitulos/I/media/image43.png',
-        figuraNum10: 'Figura 1.5.5. ',
-        figura10: 'El Formulario y sus controles modificados sus propiedades. ',
-        implementacion10: 'Esta aplicación desplegará los gráficos de las líneas consecutivas en una Caja de Imagen (PictureBox).',
-        implementacion11: 'La clase CLine tiene los siguientes datos miembro: a) un objeto mGraph de tipo Graphics; b) Dos objetos de tipo Point llamados mStartPoint y mEndPoint, que representan a dos puntos en el plano; c) Dos bolígrafos de tipo Pen llamados mLinePen y mEllipsePen para graficar los dos puntos que conforman una línea sea con círculos o con rectángulos.',
-        implementacion12: 'Esta clase también posee un grupo de métodos de acuerdo a las acciones que puede hacer y que básicamente serán funciones para poder representar y operar un triángulo en el plano, entre las más importantes están las siguientes:',
-        metodos: [{t:'a)	Constructor sin argumentos',a:'Este método inicializa los primeros objetos de tipo Point de la clase CLine con el valor de cero en sus coordenadas ‘x’ e ‘y’.',
-          b:
-            `
-        // Constructor sin parámetros.
-        public CLine()
-        {
-           mStartPoint = new Point(0, 0);
-           mEndPoint = new Point(0, 0);
-        }
+        link: 'a',
+        tablaDatos1: `/*******************************************************
+ WinConsolaPrograma_1_24
+*******************************************************/
 
-        `
-        },
-          {t:'b)	Función miembro InitializeData. ',a:'Esta función permite inicializar los datos miembro y los controles del formulario con valores por defecto, como en el caso de la caja de verificación (CheckBox) con el valor booleano de false. Para inicializar la caja de imagen (picCanvas) se utiliza la función Refresh que significa refrescar o borrar.',
-            b:
-              `
-        // Función que inicializa los datos y controles de la clase.
-        public void InitializeData(PictureBox picCanvas, CheckBox chkPoint)
-        {
-            mStartPoint.X = 0; mStartPoint.Y = 0;
-            mEndPoint.X = 0; mEndPoint.Y = 0;
+// Librerías.
+#include <iostream>
+#include <cstdlib>
 
-            picCanvas.Refresh();
-            chkPoint.Checked = false;
-        }
-        `
-          },
-          {t:'c)	Función miembro DrawLineMouse. ',a:'Esta función permite dibujar una línea con el clic izquierdo del ratón (mouse), para lo cual se valida que se haya seleccionado dicho botón y luego se procede a crear dos bolígrafos de tipo Pen, uno de color verde para dibujar las líneas y otro de color azúl para dibujar los círculos/rectángulos que representan a los dos puntos que conforman una línea. Constantemente, se actualiza el valor del punto inicial con el valor del punto final y el valor del punto final con el valor de las coordenadas ‘x’ e ‘y’ del ratón, para poder graficar líneas continuas.',
-            b:
-              `
-          // Función que permite dibujar una línea con el clic izquierdo
-          // del ratón.
-          public void DrawLineMouse(MouseEventArgs e, PictureBox picCanvas,
-                                    CheckBox chkPoint)
-          {
-              // Si se ha seleccionado el botón izquierdo del ratón, entonces
-              if (e.Button == MouseButtons.Left)
-              {
-                  // Asignar la funcionalidad de crear gráficos al objeto mGraph.
-                  mGraph = picCanvas.CreateGraphics();
+using namespace std;
 
-                  // Crear dos bolígrafos
-                  mLinePen = new Pen(Color.Green, 1);
-                  mEllipsePen = new Pen(Color.Red, 1);
+// Función principal.
+void main()
+{
+	// declaración de variables.
+	int a = 0, b = 0;
 
-                  // Asignar el punto final al punto inicial.
-                  mStartPoint = mEndPoint;
-                  // Asignar al punto final la coordenada del ratón.
-                  mEndPoint = new Point(e.X, e.Y);
+	bool EsIgual;
+	bool EsDesigual;
+	bool EsMayor;
+	bool EsMenor;
+	bool EsMayorOigual;
+	bool EsMenorOigual;
 
-                  // Dibujar una línea desde el punto actual hasta
-                  // el nuevo punto.
-                  mGraph.DrawLine(mLinePen, mStartPoint, mEndPoint);
+	// Imprimir un mensaje de información.
+	cout << "Uso de los operadores relacionales." << endl;
+	cout << endl;
 
-                  // Si la casilla de verificación del check box está marcada,
-                  // dibujar un rectángulo para representar a un punto.
-                  if (chkPoint.Checked)
-                  {
-                      mGraph.DrawRectangle(mEllipsePen, e.X - 2, e.Y - 2, 4, 4);
-                  }
-                  // Dibujar un círculo para representar un punto.
-                  else
-                  {
-                      mGraph.DrawEllipse(mEllipsePen, e.X - 2, e.Y - 2, 4, 4);
-                  }
-                  // Desechar los objetos
-                  mLinePen.Dispose();
-                  mEllipsePen.Dispose();
-                  mGraph.Dispose();
-              }
-          }
-          `
-          },
-          {t:'d)	Función miembro CloseForm. ',a:'Esta función permite cerrar un formulario utilizando la función Close(), que es llamada por el objeto ObjForm el cual es un parámetro de la función que recibe un objeto de tipo Form.',
-            b:
-              `
-          // Función que cierra un formulario.
-          public void CloseForm(Form ObjForm)
-          {
-              ObjForm.Close();
-          }
+	// Imprimir un mensaje y leer un dato de tipo entero.
+	cout << "Ingrese el primer número: "; // Salida.
+	cin >> a;			           // Entrada.
 
-          `}
-        ],
+	// Imprimir un mensaje y leer un dato de tipo entero.
+	cout << "Ingrese el segundo número: "; // Salida.
+	cin >> b;			            // Entrada.
+
+	// Imprimir un salto de línea (INTRO).
+	cout << endl;
+
+	// Almacenar en las variables booleanas las diferentes comparaciones.
+	EsIgual = a == b;
+	EsDesigual = a != b;
+	EsMayor = a > b;
+	EsMenor = a < b;
+	EsMayorOigual = a >= b;
+	EsMenorOigual = a <= b;
+
+	// Imprimir los valores de verdad o de falsedad de
+	   // las diferentes comparaciones.
+	cout << "¿El número " << a << " es igual al número " << b << "? ";
+	cout << EsIgual << endl;
+	cout << "¿El número " << a << " no es igual al número " << b << "? ";
+	cout << EsDesigual << endl;
+	cout << "¿El número " << a << " es mayor al número " << b << "? ";
+	cout << EsMayor << endl;
+	cout << "¿El número " << a << " es menor al número " << b << "? ";
+	cout << EsMenor << endl;
+	cout << "¿El número " << a << " es mayor o igual al número " << b << "? ";
+	cout << EsMayorOigual << endl;
+	cout << "¿El número " << a << " es menor o igual al número " << b << "? ";
+	cout << EsMenorOigual << endl;
+
+	// Incorporar una pausa en el programa.
+	system("pause");
+}`,
+
         tipsProgramacion:[{tip:'Se utiliza la función float.Parse() para convertir un tipo de dato carácter o cadena a tipo flotante.'},
           {tip:'Se utiliza la función ToString() para convertir un tipo de dato numérico a tipo carácter o cadena.'},
         ],
@@ -1735,173 +1638,162 @@ x = x + y; // x = 12
         tabla2:'Tabla 1.5.2. ',
         tabladetalle2:'Código de la clase CLine del programa.',
         tablaDatos2:
-          `using System;
-        using System.Collections.Generic;
-        using System.Linq;
-        using System.Text;
-        using System.Threading.Tasks;
-        using System.Drawing;
-        using System.Windows.Forms;
+          `/*******************************************************
+ WinConsolaPrograma_1_25
+*******************************************************/
 
-        namespace WinAppLines
-        {
-            class CLine
-            {
-                // Datos Miembro (Atributos).
+// Librerías.
+#include <stdio.h>
+#include <cstdlib>
 
-                // Objeto que activa el modo gráfico.
-                private Graphics mGraph;
-                // Objeto Punto que representa al punto inicial de
-                // graficación de una línea.
-                private Point mStartPoint;
-                // Objeto Punto que representa al punto final de
-                // graficación de una línea.
-                private Point mEndPoint;
-                // Objeto bolígrafo que dibuja o escribe una línea.
-                Pen mLinePen;
-                // Objeto bolígrafo que dibuja o escribe una elipse.
-                Pen mEllipsePen;
+// Función principal.
+void main()
+{
+	// declaración de variables.
+	int a = 0, b = 0;
 
-                // Funciones Miembro (Métodos).
+	int EsIgual;
+	int EsDesigual;
+	int EsMayor;
+	int EsMenor;
+	int EsMayorOigual;
+	int EsMenorOigual;
 
-                // Constructor sin parámetros.
-                public CLine()
-                {
-                    mStartPoint = new Point(0, 0);
-                    mEndPoint = new Point(0, 0);
-                }
+	// Imprimir un mensaje de información.
+	printf("Uso de los operadores relacionales.\n");
+	printf("\n");
 
-                // Función que inicializa los datos y controles de la clase.
-                public void InitializeData(PictureBox picCanvas, CheckBox chkPoint)
-                {
-                    mStartPoint.X = 0; mStartPoint.Y = 0;
-                    mEndPoint.X = 0; mEndPoint.Y = 0;
+	// Imprimir un mensaje y leer un dato de tipo entero.
+	printf("Ingrese el primer número: "); // Salida.
+	scanf_s("%d", &a); // Entrada.
 
-                    picCanvas.Refresh();
-                    chkPoint.Checked = false;
-                }
+	// Imprimir un mensaje y leer un dato de tipo entero.
+	printf("Ingrese el segundo número: "); // Salida.
+	scanf_s("%d", &b); // Entrada.
 
-                // Función que permite dibujar una línea con el clic izquierdo
-                // del ratón.
-                public void DrawLineMouse(MouseEventArgs e, PictureBox picCanvas,
-                                          CheckBox chkPoint)
-                {
-                    // Si se ha seleccionado el botón izquierdo del ratón, entonces
-                    if (e.Button == MouseButtons.Left)
-                    {
-                        // Asignar la funcionalidad de crear gráficos al objeto mGraph.
-                        mGraph = picCanvas.CreateGraphics();
+	// Imprimir un salto de línea (INTRO).
+	printf("\n");
 
-                        // Crear dos bolígrafos
-                        mLinePen = new Pen(Color.Green, 1);
-                        mEllipsePen = new Pen(Color.Red, 1);
+	// Almacenar en las variables booleanas las diferentes comparaciones.
+	EsIgual = a == b;
+	EsDesigual = a != b;
+	EsMayor = a > b;
+	EsMenor = a < b;
+	EsMayorOigual = a >= b;
+	EsMenorOigual = a <= b;
 
-                        // Asignar el punto final al punto inicial.
-                        mStartPoint = mEndPoint;
-                        // Asignar al punto final la coordenada del ratón.
-                        mEndPoint = new Point(e.X, e.Y);
+	// Imprimir los valores de verdad o de falsedad de
+	   // las diferentes comparaciones.
+	printf("¿El número %d es igual al número %d? ", a, b);
+	printf("%d\n", EsIgual);
+	printf("¿El número %d no es igual al número %d? ", a, b);
+	printf("%d\n", EsDesigual);
+	printf("¿El número %d es mayor al número %d? ", a, b);
+	printf("%d\n", EsMayor);
+	printf("¿El número %d es menor al número %d? ", a, b);
+	printf("%d\n", EsMenor);
+	printf("¿El número %d es mayor o igual al número %d? ", a, b);
+	printf("%d\n", EsMayorOigual);
+	printf("¿El número %d es menor o igual al número %d? ", a, b);
+	printf("%d\n", EsMenorOigual);
 
-                        // Dibujar una línea desde el punto actual hasta
-                        // el nuevo punto.
-                        mGraph.DrawLine(mLinePen, mStartPoint, mEndPoint);
+	// Incorporar una pausa en el programa.
+	system("pause");
+}`,
+      },
+      { label: 'Caso 1.6',
+        link: 'a',
+        tablaDatos1: `/*******************************************************
+ WinConsolaPrograma_1_26
+*******************************************************/
 
-                        // Si la casilla de verificación del check box está
-                        // marcada, dibujar un rectángulo que representa un punto.
-                        if (chkPoint.Checked)
-                        {
-                            mGraph.DrawRectangle(mEllipsePen, e.X - 2, e.Y - 2, 4, 4);
-                        }
-                        // Dibujar un círculo para representar un punto.
-                        else
-                        {
-                            mGraph.DrawEllipse(mEllipsePen, e.X - 2, e.Y - 2, 4, 4);
-                        }
-                        // Desechar los objetos
-                        mLinePen.Dispose();
-                        mEllipsePen.Dispose();
-                        mGraph.Dispose();
-                    }
-                }
-                // Función que cierra un formulario.
-                public void CloseForm(Form ObjForm)
-                {
-                    ObjForm.Close();
-                }
-            }
-        }
-        `,
-        implementacion14: 'La implementación de la clase frmLines, se presenta a continuación en la Tabla 1.5.3, que es la clase que representa a la interfaz gráfica de usuario de la figura geométrica conocida como Triángulo.',
-        tabla3:'Tabla 1.5.3. ',
-        tabladetalle3:'Código de la clase frmLines del programa.',
-        tablaDatos3:
-          `
-        using System;
-        using System.Collections.Generic;
-        using System.ComponentModel;
-        using System.Data;
-        using System.Drawing;
-        using System.Linq;
-        using System.Text;
-        using System.Threading.Tasks;
-        using System.Windows.Forms;
+// Librerías.
+#include <iostream>
+#include <cstdlib>
 
-        namespace WinAppLines
-        {
-            public partial class frmLines : Form
-            {
-                // Definición de un objeto de tipo CLine.
-                private CLine ObjLine = new CLine();
+using namespace std;
 
-                public frmLines()
-                {
-                    InitializeComponent();
-                }
+// Función principal.
+void main()
+{
+	// declaración de variables.
+	bool A = false;
+	bool B = false;
 
-                private void frmLines_Load(object sender, EventArgs e)
-                {
-                    // Inicialización de los datos y controles.
-                    // Llamada a la función InitializeData.
-                    ObjLine.InitializeData(picCanvas, chkPoint);
-                }
+	// Imprimir un mensaje de información.
+	cout << "Uso de la compuerta lógica XOR." << endl;
+	cout << endl;
 
-                private void picCanvas_MouseDown(object sender, MouseEventArgs e)
-                {
-                    // Graficación de una línea utilizando el ratón.
-                    // Llamada a la función DrawLineMouse.
-                    ObjLine.DrawLineMouse(e, picCanvas, chkPoint);
-                }
+	// Imprimir un mensaje y leer un dato de tipo bool.
+	cout << "Ingrese 0 para falso o 1 para verdadero: "; // Salida.
+	cin >> A;						      // Entrada.
 
-                private void btnReset_Click(object sender, EventArgs e)
-                {
-                    // Inicialización de los datos y controles.
-                    // Llamada a la función InitializeData.
-                    ObjLine.InitializeData(picCanvas, chkPoint);
-                }
+	// Imprimir un mensaje y leer un dato de tipo bool.
+	cout << "Ingrese 0 para falso o 1 para verdadero: "; // Salida.
+	cin >> B;						      // Entrada.
 
-                private void btnExit_Click(object sender, EventArgs e)
-                {
-                    // Cierre de un formulario.
-                    // Llamada a la función CloseForm.
-                    ObjLine.CloseForm(this);
-                }
-            }
-        }
+	// Imprimir un salto de línea (INTRO).
+	cout << endl;
 
-        `,
-        implementacion15: 'La clase frmLines tiene como datos miembro un objeto de tipo CLine llamado ObjLine, el cual es el encargado de acceder a las funciones públicas de la clase CLine para realizar diferentes cálculos y operaciones. ',
-        implementacion16: 'En el evento Load del formulario, cuyo procedimiento se llama frmTriangle_Load(), se utiliza el objeto ObjLine, para llamar a la función pública InitializeData(), que se encarga de inicializar los datos y controles del formulario. En el evento MouseDown de la Caja de Imagen picCanvas, cuyo procedimiento se llama picCanvas_MouseDown(), se utiliza el objeto ObjLine, para llamar a la función pública DrawLineMouse(), que permite dibujar líneas continuas. En el evento Click del botón btnClose, cuyo procedimiento se llama btnClose_Click(), se utiliza el objeto ObjLine, para llamar a la función pública CloseForm(), que permite cerrar el formulario. ',
-        implementacion17: 'Finalmente, para poder trabajar con el evento MouseDown de la Caja de Imagen picCanvas, se debe activar dicho evento en la ventana de propiedades seleccionando el botón de Eventos y haciendo clic en el evento MouseDown (ver Figura 1), lo cual permite registrar este evento en el Designer del formulario (ver en la Figura 1) y luego puede ser utilizado para ser programado.',
-        imagen11: './assets/images/Capitulos/I/media/image44.png',
-        figuraNum11: 'Figura 1.5.6. ',
-        figura11: 'Activación de eventos del picCanvas.',
-        imagen12: './assets/images/Capitulos/I/media/image45.png',
-        figuraNum12: 'Figura 1.5.7. ',
-        figura12: 'Registro del evento en el Designer del formulario.',
-        implementacion18: 'Para correr la aplicación basta con presionar la tecla F5 o el botón Start de ejecución de la barra de menús de Visual Studio .NET. La Figura 1.5.8 muestra un ejemplo de la corrida de este programa. Para verificar que el programa funciona adecuadamente, se deberá dibujar varias líneas dentro de la Caja de Imagen (picCanvas), haciendo un clic con el botón izquierdo del ratón para definir cada par de puntos que se utilizarán para graficar una línea entre esos dos puntos.',
-        imagen13: './assets/images/Capitulos/I/media/image46.png',
-        figuraNum13: 'Figura 1.5.8. ',
-        figura13: 'Ejemplo de la Corrida del Programa. ',
+	// Evaluar la expresión algebraica equivalente al XOR
+	bool isXOR = (A || B) && (!A || !B);
 
+	// Imprimir el resultado obtenido según la tabla de verdad del XOR.
+	cout << "A, B, A XOR B" << endl;
+	cout << A << ", " << B << ", " << isXOR << endl;
+
+	// Incorporar una pausa en el programa.
+	system("pause");
+}`,
+
+        tipsProgramacion:[{tip:'Se utiliza la función float.Parse() para convertir un tipo de dato carácter o cadena a tipo flotante.'},
+          {tip:'Se utiliza la función ToString() para convertir un tipo de dato numérico a tipo carácter o cadena.'},
+        ],
+        implementacion13: 'La implementación de la clase CLine, se presenta a continuación en la Tabla 1.5.2, que contiene datos miembro y funciones miembro que realizan diferentes operaciones.',
+        tabla2:'Tabla 1.5.2. ',
+        tabladetalle2:'Código de la clase CLine del programa.',
+        tablaDatos2:
+          `/*******************************************************
+ WinConsolaPrograma_1_27
+*******************************************************/
+
+// Librerías.
+#include <stdio.h>
+#include <cstdlib>
+
+// Función principal.
+void main()
+{
+	// declaración de variables.
+	int A = 0;
+	int B = 0;
+
+	// Imprimir un mensaje de información.
+	printf("Uso de la compuerta lógica XOR.\n");
+	printf("\n");
+
+	// Imprimir un mensaje y leer un dato de tipo bool.
+	printf("Ingrese 0 para falso o 1 para verdadero: "); // Salida.
+	scanf_s("%d", &A);	// Entrada.
+
+	// Imprimir un mensaje y leer un dato de tipo bool.
+	printf("Ingrese 0 para falso o 1 para verdadero: "); // Salida.
+	scanf_s("%d", &B);	// Entrada.
+
+	// Imprimir un salto de línea (INTRO).
+	printf("\n");
+
+	// Evaluar la expresión algebraica equivalente al XOR
+	int isXOR = (A || B) && (!A || !B);
+
+	// Imprimir el resultado obtenido según la tabla de verdad del XOR.
+	printf("A, B, A XOR B\n");
+	printf("%d, %d, %d\n", A, B, isXOR);
+
+	// Incorporar una pausa en el programa.
+	system("pause");
+}
+`,
       }
 
     ];

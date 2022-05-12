@@ -2584,8 +2584,2299 @@
         </ng-template>
       </mat-tab>
 
+      <mat-tab label="Operadores Relacionales">
+        <ng-template matTabContent>
 
-        <mat-tab label="Video Tutorial">
+              <br>
+              <h2>1.6. Operadores Relacionales</h2>
+              <br>
+              <p>Los operadores relacionales se emplean para comparar o determinar alguna relación elemental entre dos variables o también entre dos expresiones y generar un valor de verdadero (1) o de falso (0) (Jones, B., Aitken, P., 2003). La Tabla 1.5 resume los operadores relacionales que maneja el lenguaje C/C++.</p>
+              <h5><strong>Tabla 1.5. </strong>Operadores Relacionales. </h5>
+              <table border="1" cellspacing="0" cellpadding="0" width="100%">
+                <tbody>
+                <tr>
+                  <td width="85" valign="top">
+                    <p>
+                      <strong>Operador</strong>
+                    </p>
+                  </td>
+                  <td width="100" valign="top">
+                    <p>
+                      <strong>Significado</strong>
+                    </p>
+                  </td>
+                  <td width="283" valign="top">
+                    <p>
+                      <strong>Descripción</strong>
+                    </p>
+                  </td>
+                  <td width="99" valign="top">
+                    <p>
+                      <strong>Ejemplo</strong>
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="85" valign="top">
+                    <p>
+                      ==
+                    </p>
+                  </td>
+                  <td width="100" valign="top">
+                    <p>
+                      Igual a
+                    </p>
+                  </td>
+                  <td width="283" valign="top">
+                    <p>
+                      El operador de igualdad que se usa en el lenguaje C/C++ es
+                      el signo de doble igual ‘==’, puesto que el signo de simple
+                      igualdad ‘=’ es el operador de asignación. Este operador
+                      retorna el valor de verdadero si los dos operandos o
+                      expresiones son iguales, caso contrario retorna el valor de
+                      falso.
+                    </p>
+                  </td>
+                  <td width="99" valign="top">
+                    <p>
+                      a == b
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="85" valign="top">
+                    <p>
+                      !=
+                    </p>
+                  </td>
+                  <td width="100" valign="top">
+                    <p>
+                      No igual a
+                    </p>
+                  </td>
+                  <td width="283" valign="top">
+                    <p>
+                      El operador de desigualdad retorna el valor de verdadero si
+                      los dos operandos o expresiones son desiguales, caso
+                      contrario retorna el valor de falso.
+                    </p>
+                  </td>
+                  <td width="99" valign="top">
+                    <p>
+                      a != b
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="85" valign="top">
+                    <p>
+                      &gt;
+                    </p>
+                  </td>
+                  <td width="100" valign="top">
+                    <p>
+                      Mayor que
+                    </p>
+                  </td>
+                  <td width="283" valign="top">
+                    <p>
+                      El operador de mayor que retorna verdadero si el operando o
+                      la expresión de la izquierda es mayor que el operando o la
+                      expresión de la derecha, caso contrario retorna el valor de
+                      falso.
+                    </p>
+                  </td>
+                  <td width="99" valign="top">
+                    <p>
+                      a &gt; b
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="85" valign="top">
+                    <p>
+                      &lt;
+                    </p>
+                  </td>
+                  <td width="100" valign="top">
+                    <p>
+                      Menor que
+                    </p>
+                  </td>
+                  <td width="283" valign="top">
+                    <p>
+                      El operador de menor que retorna verdadero si el operando o
+                      la expresión de la izquierda es menor que el operando o la
+                      expresión de la derecha, caso contrario retorna el valor de
+                      falso.
+                    </p>
+                  </td>
+                  <td width="99" valign="top">
+                    <p>
+                      a &lt; b
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="85" valign="top">
+                    <p>
+                      &gt;=
+                    </p>
+                  </td>
+                  <td width="100" valign="top">
+                    <p>
+                      Mayor o igual que
+                    </p>
+                  </td>
+                  <td width="283" valign="top">
+                    <p>
+                      El operador de mayor o igual que retorna verdadero si el
+                      operando o la expresión de la izquierda es mayor o igual
+                      que el operando o la expresión de la derecha, caso
+                      contrario retorna el valor de falso.
+                    </p>
+                  </td>
+                  <td width="99" valign="top">
+                    <p>
+                      a &gt;= b
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="85" valign="top">
+                    <p>
+                      &lt;=
+                    </p>
+                  </td>
+                  <td width="100" valign="top">
+                    <p>
+                      Menor o igual que
+                    </p>
+                  </td>
+                  <td width="283" valign="top">
+                    <p>
+                      El operador de menor o igual que retorna verdadero si el
+                      operando o la expresión de la izquierda es menor o igual
+                      que el operando o la expresión de la derecha, caso
+                      contrario retorna el valor de falso.
+                    </p>
+                  </td>
+                  <td width="99" valign="top">
+                    <p>
+                      a &lt;= b
+                    </p>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+              <p>Los siguientes programas ilustran cómo trabajan estos operadores relacionales.</p>
+              <h5><strong>Ejercicio 1.24: </strong>Escribir un programa que permita probar el uso de los operadores relacionales, con dos números enteros leídos desde el teclado, utilizando las funciones ‘cout’ y ‘cin’.</h5>
+              <h5><strong>Programa 1.24: </strong>Código del programa.</h5>
+              <pre><code [highlight]="prefTab[4].tablaDatos1"  [lineNumbers]="true"></code></pre>
+              <br><h5><strong>Salida 1.24:  </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/I/media/salida1.24.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Ejercicio 1.25: </strong>Escribir un programa que permita probar el uso de los operadores relacionales, con dos números enteros leídos desde el teclado, utilizando las funciones ‘printf’ y ‘scanf’.</h5>
+              <h5><strong>Programa 1.25: </strong>Código del programa.</h5>
+              <pre><code [highlight]="prefTab[4].tablaDatos2"  [lineNumbers]="true"></code></pre>
+              <br><h5><strong>Salida 1.25:  </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/I/media/salida1.25.png" style="display:block; margin:auto; "><br>
+        </ng-template>
+      </mat-tab>
+
+      <mat-tab label="Operadores Lógicos">
+        <ng-template matTabContent>
+
+          <br>
+          <h2>1.7. Operadores Lógicos</h2>
+          <br>
+          <p>Los operadores lógicos o puertas lógicas se utilizan con operandos o expresiones para devolver un valor de verdadero (1) o un valor de falso (0) (Jones, B., Aitken, P., 2003). A estos operadores también se los denomina como operadores boolenos, en honor de George Boole, creador del álgebra de Boole. La Tabla 1.6, 1.7 y 1.8 resumen las tablas de verdad de los tres operadores lógicos o puertas lógicas que maneja el lenguaje C/C++.
+          </p>
+          <h5><strong>Tabla 1.6. </strong>Tabla de verdad del operador lógico AND (&&).</h5>
+          <table border="1" cellspacing="0" cellpadding="0" width="100%">
+            <tbody>
+            <tr>
+              <td width="234" colspan="2" valign="top">
+                <p>
+                  <strong>Operandos</strong>
+                </p>
+              </td>
+              <td width="142" valign="top">
+                <p>
+                  <strong>Operador Lógico</strong>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td width="117" valign="top">
+                <p>
+                  A
+                </p>
+              </td>
+              <td width="117" valign="top">
+                <p>
+                  B
+                </p>
+              </td>
+              <td width="142" valign="top">
+                <p>
+                  A &amp;&amp; B
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td width="117" valign="top">
+                <p>
+                  Verdadero (1)
+                </p>
+              </td>
+              <td width="117" valign="top">
+                <p>
+                  Verdadero (1)
+                </p>
+              </td>
+              <td width="142" valign="top">
+                <p>
+                  Verdadero (1)
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td width="117" valign="top">
+                <p>
+                  Verdadero (1)
+                </p>
+              </td>
+              <td width="117" valign="top">
+                <p>
+                  Falso (0)
+                </p>
+              </td>
+              <td width="142" valign="top">
+                <p>
+                  Falso (0)
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td width="117" valign="top">
+                <p>
+                  Falso (0)
+                </p>
+              </td>
+              <td width="117" valign="top">
+                <p>
+                  Verdadero (1)
+                </p>
+              </td>
+              <td width="142" valign="top">
+                <p>
+                  Falso (0)
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td width="117" valign="top">
+                <p>
+                  Falso (0)
+                </p>
+              </td>
+              <td width="117" valign="top">
+                <p>
+                  Falso (0)
+                </p>
+              </td>
+              <td width="142" valign="top">
+                <p>
+                  Falso (0)
+                </p>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+          <h5><strong>Tabla 1.7. </strong>Tabla de verdad del operador lógico OR (||).</h5>
+          <table border="1" cellspacing="0" cellpadding="0" width="100%">
+            <tbody>
+            <tr>
+              <td width="234" colspan="2" valign="top">
+                <p>
+                  <strong>Operandos</strong>
+                </p>
+              </td>
+              <td width="142" valign="top">
+                <p>
+                  <strong>Operador Lógico</strong>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td width="117" valign="top">
+                <p>
+                  A
+                </p>
+              </td>
+              <td width="117" valign="top">
+                <p>
+                  B
+                </p>
+              </td>
+              <td width="142" valign="top">
+                <p>
+                  A || B
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td width="117" valign="top">
+                <p>
+                  Verdadero (1)
+                </p>
+              </td>
+              <td width="117" valign="top">
+                <p>
+                  Verdadero (1)
+                </p>
+              </td>
+              <td width="142" valign="top">
+                <p>
+                  Verdadero (1)
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td width="117" valign="top">
+                <p>
+                  Verdadero (1)
+                </p>
+              </td>
+              <td width="117" valign="top">
+                <p>
+                  Falso (0)
+                </p>
+              </td>
+              <td width="142" valign="top">
+                <p>
+                  Verdadero (1)
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td width="117" valign="top">
+                <p>
+                  Falso (0)
+                </p>
+              </td>
+              <td width="117" valign="top">
+                <p>
+                  Verdadero (1)
+                </p>
+              </td>
+              <td width="142" valign="top">
+                <p>
+                  Verdadero (1)
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td width="117" valign="top">
+                <p>
+                  Falso (0)
+                </p>
+              </td>
+              <td width="117" valign="top">
+                <p>
+                  Falso (0)
+                </p>
+              </td>
+              <td width="142" valign="top">
+                <p>
+                  Falso (0)
+                </p>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+          <h5><strong>Tabla 1.8. </strong>Tabla de verdad del operador lógico NOT (!).</h5>
+          <table border="1" cellspacing="0" cellpadding="0" width="100%">
+            <tbody>
+            <tr>
+              <td width="121" valign="top">
+                <p>
+                  <strong>Operando</strong>
+                </p>
+              </td>
+              <td width="113" valign="top">
+                <p>
+                  <strong>Negación</strong>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td width="121" valign="top">
+                <p>
+                  A
+                </p>
+              </td>
+              <td width="113" valign="top">
+                <p>
+                  !A
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td width="121" valign="top">
+                <p>
+                  Verdadero (1)
+                </p>
+              </td>
+              <td width="113" valign="top">
+                <p>
+                  Falso (0)
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td width="121" valign="top">
+                <p>
+                  Falso (0)
+                </p>
+              </td>
+              <td width="113" valign="top">
+                <p>
+                  Verdadero (1)
+                </p>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+          <p>Adicionalmente a estas puertas lógicas, se puede implementar la puerta lógica XOR u OR exclusiva mediante la siguiente expresión algebraica: (A || B) && (!A || !B), cuya tabla de verdad resultante se muestra en la Tabla 1.9.</p>
+          <h5><strong>Tabla 1.9. </strong>Tabla de verdad de la puerta lógica XOR.</h5>
+          <table border="1" cellspacing="0" cellpadding="0" WIDTH="100%">
+            <tbody>
+            <tr>
+              <td width="234" colspan="2" valign="top">
+                <p>
+                  <strong>Operandos</strong>
+                </p>
+              </td>
+              <td width="142" valign="top">
+                <p>
+                  <strong>Operador Lógico</strong>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td width="117" valign="top">
+                <p>
+                  A
+                </p>
+              </td>
+              <td width="117" valign="top">
+                <p>
+                  B
+                </p>
+              </td>
+              <td width="142" valign="top">
+                <p>
+                  A XOR B
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td width="117" valign="top">
+                <p>
+                  Verdadero (1)
+                </p>
+              </td>
+              <td width="117" valign="top">
+                <p>
+                  Verdadero (1)
+                </p>
+              </td>
+              <td width="142" valign="top">
+                <p>
+                  Falso (0)
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td width="117" valign="top">
+                <p>
+                  Verdadero (1)
+                </p>
+              </td>
+              <td width="117" valign="top">
+                <p>
+                  Falso (0)
+                </p>
+              </td>
+              <td width="142" valign="top">
+                <p>
+                  Verdadero (1)
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td width="117" valign="top">
+                <p>
+                  Falso (0)
+                </p>
+              </td>
+              <td width="117" valign="top">
+                <p>
+                  Verdadero (1)
+                </p>
+              </td>
+              <td width="142" valign="top">
+                <p>
+                  Verdadero (1)
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td width="117" valign="top">
+                <p>
+                  Falso (0)
+                </p>
+              </td>
+              <td width="117" valign="top">
+                <p>
+                  Falso (0)
+                </p>
+              </td>
+              <td width="142" valign="top">
+                <p>
+                  Falso (0)
+                </p>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+          <p>Los siguientes programas ilustran cómo trabajan estos operadores lógicos.</p>
+
+          <h5><strong>Ejercicio 1.26: </strong>Escribir un programa que permita representar la expresión algebraica: (A || B) && (!A || !B) y probar una de las salidas de la puerta lógica XOR, para lo cual se debe leer por teclado el valor de verdad de A y de B, utilizando las funciones ‘cout’ y ‘cin’.</h5>
+          <h5><strong>Programa 1.26: </strong>Código del programa.</h5>
+          <pre><code [highlight]="prefTab[5].tablaDatos1"  [lineNumbers]="true"></code></pre>
+          <br><h5><strong>Salida 1.26:  </strong>Salida del programa.</h5>
+          <img src="./assets/images/Capitulos/I/media/salida1.26.png" style="display:block; margin:auto; "><br>
+          <h5><strong>Ejercicio 1.27: </strong>Escribir un programa que permita representar la expresión algebraica: (A || B) && (!A || !B) y probar una de las salidas de la puerta lógica XOR, para lo cual se debe leer por teclado el valor de verdad de A y de B, utilizando las funciones ‘printf’ y ‘scanf’.</h5>
+          <h5><strong>Programa 1.27: </strong>Código del programa.</h5>
+          <pre><code [highlight]="prefTab[4].tablaDatos2"  [lineNumbers]="true"></code></pre>
+          <br><h5><strong>Salida 1.27:  </strong>Salida del programa.</h5>
+          <img src="./assets/images/Capitulos/I/media/salida1.27.png" style="display:block; margin:auto; "><br>
+        </ng-template>
+      </mat-tab>
+
+      <mat-tab label="Fórmulas Matemáticas">
+        <ng-template matTabContent>
+          <mat-tab-group>
+            <mat-tab  label="Introducción">
+              <br>
+              <h2>1.8. Fórmulas Matemáticas</h2>
+              <br>
+              <p>Adicionalmente al uso de expresiones aritméticas, el C permite estructurar fórmulas matemáticas para diferentes propósitos como: calcular el área de un círculo, calcular el volumen de un cilindro, calcular el tiempo de vuelo de un proyectil que sigue una trayectoria parabólica, etc. Todos estos problemas y más, se resuelven utilizando fórmulas matemáticas (Granizo, E., 2016). El C/C++ para esto tiene una librería de funciones matemáticas que pertenecen al archivo de cabecera ‘cmath.h’.</p>
+            </mat-tab>
+
+            <mat-tab  label="1.8.1. Funciones de la Librería cmath.h">
+              <br>
+              <h2>Funciones de la Librería cmath.h</h2>
+              <br>
+              <p>Como se mencionó en la sección 1.2.1, la Librería de Encabezado de Funciones Matemáticas (Math Library Header), es una librería que tiene funciones para realizar operaciones matemáticas básicas, tales como: funciones trigonométricas, funciones exponenciales, funciones logarítmicas, funciones para calcular la raíz cuadrada, funciones para calcular el valor absoluto de un número, etc., (Luna, F., 2004). La Tabla 1.10 resume algunas de las funciones matemáticas más comúnmente utilizadas:</p>
+              <h5><strong>Tabla 1.10. </strong>Algunas de las Funciones Matemáticas de la Librería ‘cmath’.</h5>
+              <table border="1" cellspacing="0" cellpadding="0" width="100%">
+                <tbody>
+                <tr>
+                  <td width="288" valign="top">
+                    <p>
+                      <strong>Declaración de la Función</strong>
+                    </p>
+                  </td>
+                  <td width="288" valign="top">
+                    <p>
+                      <strong>Descripción</strong>
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="288" valign="top">
+                    <p>
+                      double sqrt(double x);
+                    </p>
+                  </td>
+                  <td width="288" valign="top">
+                    <p>
+                      Retorna .
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="288" valign="top">
+                    <p>
+                      double pow(double x, double y);
+                    </p>
+                  </td>
+                  <td width="288" valign="top">
+                    <p>
+                      Retorna .
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="288" valign="top">
+                    <p>
+                      double fabs(double x);
+                    </p>
+                  </td>
+                  <td width="288" valign="top">
+                    <p>
+                      Retorna .
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="288" valign="top">
+                    <p>
+                      double exp(double x);
+                    </p>
+                  </td>
+                  <td width="288" valign="top">
+                    <p>
+                      Retorna .
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="288" valign="top">
+                    <p>
+                      double log(double x);
+                    </p>
+                  </td>
+                  <td width="288" valign="top">
+                    <p>
+                      Retorna .
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="288" valign="top">
+                    <p>
+                      double cos(double x);
+                    </p>
+                  </td>
+                  <td width="288" valign="top">
+                    <p>
+                      Retorna .
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="288" valign="top">
+                    <p>
+                      double sin(double x);
+                    </p>
+                  </td>
+                  <td width="288" valign="top">
+                    <p>
+                      Retorna .
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="288" valign="top">
+                    <p>
+                      double tan(double x);
+                    </p>
+                  </td>
+                  <td width="288" valign="top">
+                    <p>
+                      Retorna .
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="288" valign="top">
+                    <p>
+                      double acos(double x);
+                    </p>
+                  </td>
+                  <td width="288" valign="top">
+                    <p>
+                      Retorna .
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="288" valign="top">
+                    <p>
+                      double asin(double x);
+                    </p>
+                  </td>
+                  <td width="288" valign="top">
+                    <p>
+                      Retorna .
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="288" valign="top">
+                    <p>
+                      double atan(double x);
+                    </p>
+                  </td>
+                  <td width="288" valign="top">
+                    <p>
+                      Retorna .
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="288" valign="top">
+                    <p>
+                      double atan2(double y, double x);
+                    </p>
+                  </td>
+                  <td width="288" valign="top">
+                    <p>
+                      Retorna .
+                    </p>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+                <mathjax content="'ss'">
+
+                </mathjax>
+              <h5><strong>Ejercicio 1.14:  </strong>Escribir un programa que permita presentar el uso de los operadores aritméticos binarios con los tipos de datos enteros de C/C++, utilizando las funciones ‘cout’ y ‘cin’.  </h5>
+              <h5><strong>Programa 1.14:  </strong>Código del programa.</h5>
+              <pre><code [highlight]="prefTab[3].tablaDatos1" [lineNumbers]="true"></code></pre>
+              <br><h5><strong>Salida 1.14:  </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/I/media/salida1.14.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Ejercicio 1.15:  </strong>: Escribir un programa que permita presentar el uso de los operadores aritméticos binarios con los tipos de datos enteros de C/C++, utilizando las funciones ‘printf’ y ‘scanf’.</h5>
+              <h5><strong>Programa 1.15:  </strong>Código del programa.</h5>
+              <pre><code [highlight]="prefTab[3].tablaDatos2"  [lineNumbers]="true"></code></pre>
+              <br><h5><strong>Salida 1.15:  </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/I/media/salida1.15.png" style="display:block; margin:auto; "><br>
+            </mat-tab>
+
+            <mat-tab  label="1.5.2. El Operador de Módulo">
+              <br>
+              <h2>El Operador de Módulo</h2>
+              <br>
+              <p>El lenguaje C/C++ maneja un operador especial que es el de módulo, que retorna el resto de una división entera. Por ejemplo, al dividir la fracción 7 / 2, el resto de la división es 1; al dividir la fracción 7 / 13, el resto de la división es 7; y al dividir la fracción 23 / 8, el resto de esta división es 7 que a su vez es el numerador de la fracción 7 / 8 que forma parte de la fracción impropia
+                2 (7/8), como se muestra a continuación:
+              </p>
+              <br><img src="./assets/images/Capitulos/I/media/math1.png" style="display:block; margin:auto; width: 900px" ><br>
+            </mat-tab>
+
+            <mat-tab  label="1.5.3. Expresiones Aritméticas Compuestas">
+              <br>
+              <h2>Expresiones Aritméticas Compuestas</h2>
+              <br>
+              <p>El lenguaje C/C++ define las siguientes expresiones aritméticas compuestas que utilizan un operador aritmético y el operador de asignación junto a dos operandos (Davies, P., 1995). La Tabla 1.3 resume lo expuesto:</p>
+              <h5><strong>Tabla 1.3. </strong>Expresiones Aritméticas Compuestas.</h5>
+              <table border="1" cellspacing="0" cellpadding="0" width="100%">
+                <tbody>
+                <tr>
+                  <td width="215" valign="top">
+                    <p>
+                      <strong>Expresión Aritmética Compuesta</strong>
+                    </p>
+                  </td>
+                  <td width="208" valign="top">
+                    <p>
+                      <strong>Descripción</strong>
+                    </p>
+                  </td>
+                  <td width="189" valign="top">
+                    <p>
+                      <strong>Ejemplo</strong>
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="215" valign="top">
+                    <p>
+                      x = x + y;
+                    </p>
+                  </td>
+                  <td width="208" valign="top">
+                    <p>
+                      Asigna el valor de x + y en la misma variable x.
+                    </p>
+                  </td>
+                  <td width="189" valign="top">
+                    <p>
+                      int x = 5;
+                    </p>
+                    <p>
+                      int y = 7;
+                    </p>
+                    <p>
+                      x = x + y; // x = 12
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="215" valign="top">
+                    <p>
+                      x = x - y;
+                    </p>
+                  </td>
+                  <td width="208" valign="top">
+                    <p>
+                      Asigna el valor de x - y en la misma variable x.
+                    </p>
+                  </td>
+                  <td width="189" valign="top">
+                    <p>
+                      int x = 5;
+                    </p>
+                    <p>
+                      int y = 7;
+                    </p>
+                    <p>
+                      x = x - y; // x = -2
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="215" valign="top">
+                    <p>
+                      x = x * y;
+                    </p>
+                  </td>
+                  <td width="208" valign="top">
+                    <p>
+                      Asigna el valor de x * y en la misma variable x.
+                    </p>
+                  </td>
+                  <td width="189" valign="top">
+                    <p>
+                      int x = 5;
+                    </p>
+                    <p>
+                      int y = 7;
+                    </p>
+                    <p>
+                      x = x * y; // x = 35
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="215" valign="top">
+                    <p>
+                      x = x / y;
+                    </p>
+                  </td>
+                  <td width="208" valign="top">
+                    <p>
+                      Asigna el valor de x / y en la misma variable x.
+                    </p>
+                  </td>
+                  <td width="189" valign="top">
+                    <p>
+                      int x = 5;
+                    </p>
+                    <p>
+                      int y = 7;
+                    </p>
+                    <p>
+                      x = x / y; // x = 0
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="215" valign="top">
+                    <p>
+                      x = x % y;
+                    </p>
+                  </td>
+                  <td width="208" valign="top">
+                    <p>
+                      Asigna el valor de x % y en la misma variable x.
+                    </p>
+                  </td>
+                  <td width="189" valign="top">
+                    <p>
+                      int x = 5;
+                    </p>
+                    <p>
+                      int y = 7;
+                    </p>
+                    <p>
+                      x = x % y; // x = 5
+                    </p>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+              <h5><strong>Ejercicio 1.16:  </strong>Escribir un programa que permita probar el uso de las cinco expresiones aritméticas compuestas, con dos números enteros leídos desde el teclado, utilizando las funciones ‘cout’ y ‘cin’.</h5>
+              <h5><strong>Programa 1.16:  </strong>Código del programa.</h5>
+              <pre><code [highlight]="prefTab[3].tablaDatos5"  [lineNumbers]="true"></code></pre>
+              <br><h5><strong>Salida 1.16:  </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/I/media/salida1.16.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Ejercicio 1.17:  </strong>Escribir un programa que permita probar el uso de las cinco expresiones aritméticas compuestas, con dos números enteros leídos desde el teclado, utilizando las funciones ‘printf’ y ‘scanf’. </h5>
+              <h5><strong>Programa 1.17:  </strong>Código del programa.</h5>
+              <pre><code [highlight]="prefTab[3].tablaDatos6"  [lineNumbers]="true"></code></pre>
+              <br><h5><strong>Salida 1.17:  </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/I/media/salida1.17.png" style="display:block; margin:auto; "><br>
+            </mat-tab>
+
+            <mat-tab  label="1.5.4. Operadores Aritméticos Unarios">
+              <br>
+              <h2>Operadores Aritméticos Unarios</h2>
+              <br>
+              <p>Un operador unario es una operación que actúa sobre una variable u operando (Davies, P., 1995). La Tabla 1.4 resume los tres operadores unarios que maneja el C/C++.
+              </p>
+              <h5><strong>Tabla 1.4. </strong>Operadores Unarios. </h5>
+              <table border="1" cellspacing="0" cellpadding="0" width="100%">
+                <tbody>
+                <tr>
+                  <td width="215" valign="top">
+                    <p>
+                      <strong>Operador Unario</strong>
+                    </p>
+                  </td>
+                  <td width="208" valign="top">
+                    <p>
+                      <strong>Descripción</strong>
+                    </p>
+                  </td>
+                  <td width="195" valign="top">
+                    <p>
+                      <strong>Ejemplo</strong>
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="215" valign="top">
+                    <p>
+                      Operador de Negación: -
+                    </p>
+                  </td>
+                  <td width="208" valign="top">
+                    <p>
+                      Niega el operando.
+                    </p>
+                  </td>
+                  <td width="195" valign="top">
+                    <p>
+                      int a = 5;
+                    </p>
+                    <p>
+                      int b = -a; // b = -5
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="215" valign="top">
+                    <p>
+                      Operador de Incremento: ++
+                    </p>
+                  </td>
+                  <td width="208" valign="top">
+                    <p>
+                      Incrementa el valor del operando en uno. Este operador
+                      puede tener una notación prefija o postfija.
+                    </p>
+                  </td>
+                  <td width="195" valign="top">
+                    <p>
+                      int x = 5;
+                    </p>
+                    <p>
+                      ++x; // x = 6 (prefijo)
+                    </p>
+                    <p>
+                      x++; // x = 7 (postfijo)
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="215" valign="top">
+                    <p>
+                      Operador de Decremento: --
+                    </p>
+                  </td>
+                  <td width="208" valign="top">
+                    <p>
+                      Decrementa el valor del operando en uno. Este operador
+                      puede tener una notación prefija o postfija.
+                    </p>
+                  </td>
+                  <td width="195" valign="top">
+                    <p>
+                      int y = 5;
+                    </p>
+                    <p>
+                      --y; // y = 4 (prefijo)
+                    </p>
+                    <p>
+                      y--; // y = 3 (postfijo)
+                    </p>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+              <hr>
+              <br><h4><strong>Tips de Programación...</strong>
+              <mat-icon>wb_incandescent</mat-icon>
+              <mat-icon>laptop_windows</mat-icon>
+            </h4>
+              <ul *ngFor="let item of prefTab[3].tipsProgramacion">
+                <p>
+                  <mat-icon style="font-size: 15px">check_circle_outline</mat-icon>{{item.tip}}
+                </p>
+              </ul>
+              <hr>
+              <p>En este curso de programación se recomienda el uso de los operadores ++ y -- en notación postfija, debido a la complejidad de comprensión que implica la notación prefija. </p>
+              <p>Observe que los operadores de incremento y decremento pueden tener una notación prefija y postfija, que aparentemente da lo mismo utilizar, pero no es así. La técnica que diferencia el uso de esta notación en expresiones simples y complejas es la siguiente:</p>
+              <ol>
+                <li>a++; significa que primero se utiliza el valor de la variable y luego se incrementa el valor de la variable en uno.</li>
+                <li>++a; significa que primero se incrementa el valor de la variable en uno y luego se utiliza el valor de la variable.</li>
+                <li>a--; significa que primero se utiliza el valor de la variable y luego se decrementa el valor de la variable en uno.</li>
+                <li>--a; significa que primero se decrementa el valor de la variable en uno y luego se utiliza el valor de la variable.</li>
+              </ol>
+              <p>Los siguientes programas muestran el uso de estos operadores.</p>
+              <h4><strong>Ejercicio 1.18:  </strong></h4> <p>Escribir un programa que permita probar el uso de los operadores aritméticos unarios en expresiones matemáticas simples, utilizando las funciones ‘cout’ y ‘cin’.</p>
+              <h5><strong>Programa 1.18:  </strong>Código del programa.</h5>
+              <pre><code [highlight]="prefTab[3].tablaDatos13"  [lineNumbers]="true"></code></pre>
+              <br><h5><strong>Salida 1.18.  </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/I/media/salida1.18.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Tabla 1.18. </strong>Prueba de escritorio manual del programa. </h5>
+              <table border="1" cellspacing="0" cellpadding="0" width="100%">
+                <tbody>
+                <tr>
+                  <td width="73" valign="top">
+                    <p align="center">
+                      <strong>Nº Paso</strong>
+                    </p>
+                  </td>
+                  <td width="154" valign="top">
+                    <p align="center">
+                      <strong>a</strong>
+                    </p>
+                  </td>
+                  <td width="113" valign="top">
+                    <p align="center">
+                      <strong>b</strong>
+                    </p>
+                  </td>
+                  <td width="113" valign="top">
+                    <p align="center">
+                      <strong>x</strong>
+                    </p>
+                  </td>
+                  <td width="113" valign="top">
+                    <p align="center">
+                      <strong>y</strong>
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="73" valign="top">
+                    <p>
+                      1
+                    </p>
+                  </td>
+                  <td width="154" valign="top">
+                    <p>
+                      5
+                    </p>
+                  </td>
+                  <td width="113" valign="top">
+                  </td>
+                  <td width="113" valign="top">
+                  </td>
+                  <td width="113" valign="top">
+                  </td>
+                </tr>
+                <tr>
+                  <td width="73" valign="top">
+                    <p>
+                      2
+                    </p>
+                  </td>
+                  <td width="154" valign="top">
+                  </td>
+                  <td width="113" valign="top">
+                    <p>
+                      -5
+                    </p>
+                  </td>
+                  <td width="113" valign="top">
+                  </td>
+                  <td width="113" valign="top">
+                  </td>
+                </tr>
+                <tr>
+                  <td width="73" valign="top">
+                    <p>
+                      3
+                    </p>
+                  </td>
+                  <td width="154" valign="top">
+                  </td>
+                  <td width="113" valign="top">
+                  </td>
+                  <td width="113" valign="top">
+                    <p>
+                      5
+                    </p>
+                  </td>
+                  <td width="113" valign="top">
+                  </td>
+                </tr>
+                <tr>
+                  <td width="73" valign="top">
+                    <p>
+                      4
+                    </p>
+                  </td>
+                  <td width="154" valign="top">
+                  </td>
+                  <td width="113" valign="top">
+                  </td>
+                  <td width="113" valign="top">
+                    <p>
+                      6
+                    </p>
+                  </td>
+                  <td width="113" valign="top">
+                  </td>
+                </tr>
+                <tr>
+                  <td width="73" valign="top">
+                    <p>
+                      5
+                    </p>
+                  </td>
+                  <td width="154" valign="top">
+                  </td>
+                  <td width="113" valign="top">
+                  </td>
+                  <td width="113" valign="top">
+                    <p>
+                      7
+                    </p>
+                  </td>
+                  <td width="113" valign="top">
+                  </td>
+                </tr>
+                <tr>
+                  <td width="73" valign="top">
+                    <p>
+                      6
+                    </p>
+                  </td>
+                  <td width="154" valign="top">
+                  </td>
+                  <td width="113" valign="top">
+                  </td>
+                  <td width="113" valign="top">
+                  </td>
+                  <td width="113" valign="top">
+                    <p>
+                      5
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="73" valign="top">
+                    <p>
+                      7
+                    </p>
+                  </td>
+                  <td width="154" valign="top">
+                  </td>
+                  <td width="113" valign="top">
+                  </td>
+                  <td width="113" valign="top">
+                  </td>
+                  <td width="113" valign="top">
+                    <p>
+                      4
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="73" valign="top">
+                    <p>
+                      8
+                    </p>
+                  </td>
+                  <td width="154" valign="top">
+                  </td>
+                  <td width="113" valign="top">
+                  </td>
+                  <td width="113" valign="top">
+                  </td>
+                  <td width="113" valign="top">
+                    <p>
+                      3
+                    </p>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+            </mat-tab>
+
+            <mat-tab  label="1.5.5. Prueba de Escritorio">
+              <br>
+              <h2>Prueba de Escritorio</h2>
+              <br>
+              <p>La prueba de escritorio es una técnica que permite controlar el flujo de los datos y ver los valores que van tomando las variables de un programa en el momento de la ejecución del mismo. En la Tabla 1.18 que forma parte del Ejercicio 1.18 se presenta una prueba de escritorio manual donde en la primera columna está cada uno de los pasos que se cumplen desde el inicio del programa hasta la finalización del mismo y en las otras columnas los valores que van tomando cada una de las variables en cada uno de los pasos del programa. </p>
+              <p>Se puede realizar también la prueba de escritorio con la computadora, para lo cual se utiliza una de las herramientas de depuración (Depurar) de Visual C++ 2019, la cual la encontramos en la barra de menús y la activamos con la tecla F10 que permite hacer una prueba de escritorio paso a paso por procedimientos, como se muestra en la Figura 1.21.</p>
+              <img src="./assets/images/Capitulos/I/media/figura1.21.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Figura 1.21. </strong>Herramienta de depuración.</h5>
+
+              <img src="./assets/images/Capitulos/I/media/figura1.22.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Figura 1.22. </strong>Depuración paso a paso por procedimientos.</h5>
+
+              <img src="./assets/images/Capitulos/I/media/figura1.23.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Figura 1.23. </strong>Prueba de escritorio con la computadora.</h5>
+              <p>La opción de depuración de paso a paso por procedimientos, permite que el compilador ejecute paso a paso el programa desde el inicio hasta el final del mismo, presionando cada vez la tecla F10 sin entrar al detalle de las funciones, como se muestra en la Figura 1.22. Existe también la opción de paso a paso por instrucciones que se activa presionando la tecla F11, la cual hace lo mismo que la opción anterior, pero entrando a ver el detalle de cada una de las funciones, lo cual servirá cuando se estudie el capítulo correspondiente a funciones.</p>
+              <p>Una vez que se haya activado la opción de depuración de paso a paso por procedimientos, se puede hacer una prueba de escritorio utilizando la computadora, presionando F10 para pasar de una instrucción a otra, pero por procedimiento, donde en una ventana de depuración se puede ver los diferentes valores que van tomando las variables del programa, tal como se lo hace en la prueba de escritorio manual. La Figura 1.23 muestra los valores de las variables en el “Paso 6” de la prueba de escritorio con la computadora.</p>
+
+
+              <h5><strong>Ejercicio 1.19:  </strong>Escribir un programa que permita probar el uso de los operadores aritméticos unarios en expresiones matemáticas simples, utilizando las funciones ‘printf’ y ‘scanf’.</h5>
+              <h5><strong>Programa 1.19:  </strong>Código del programa.</h5>
+              <pre><code [highlight]="prefTab[3].tablaDatos14"  [lineNumbers]="true"></code></pre>
+              <br><h5><strong>Salida 1.19:  </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/I/media/salida1.19.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Tabla 1.19. </strong>Prueba de escritorio manual del programa.</h5>
+              <table border="1" cellspacing="0" cellpadding="0" width="100%">
+                <tbody>
+                <tr>
+                  <td width="73" valign="top">
+                    <p align="center">
+                      <strong>Nº Paso</strong>
+                    </p>
+                  </td>
+                  <td width="154" valign="top">
+                    <p align="center">
+                      <strong>a</strong>
+                    </p>
+                  </td>
+                  <td width="113" valign="top">
+                    <p align="center">
+                      <strong>b</strong>
+                    </p>
+                  </td>
+                  <td width="113" valign="top">
+                    <p align="center">
+                      <strong>x</strong>
+                    </p>
+                  </td>
+                  <td width="113" valign="top">
+                    <p align="center">
+                      <strong>y</strong>
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="73" valign="top">
+                    <p>
+                      1
+                    </p>
+                  </td>
+                  <td width="154" valign="top">
+                    <p>
+                      5
+                    </p>
+                  </td>
+                  <td width="113" valign="top">
+                  </td>
+                  <td width="113" valign="top">
+                  </td>
+                  <td width="113" valign="top">
+                  </td>
+                </tr>
+                <tr>
+                  <td width="73" valign="top">
+                    <p>
+                      2
+                    </p>
+                  </td>
+                  <td width="154" valign="top">
+                  </td>
+                  <td width="113" valign="top">
+                    <p>
+                      -5
+                    </p>
+                  </td>
+                  <td width="113" valign="top">
+                  </td>
+                  <td width="113" valign="top">
+                  </td>
+                </tr>
+                <tr>
+                  <td width="73" valign="top">
+                    <p>
+                      3
+                    </p>
+                  </td>
+                  <td width="154" valign="top">
+                  </td>
+                  <td width="113" valign="top">
+                  </td>
+                  <td width="113" valign="top">
+                    <p>
+                      5
+                    </p>
+                  </td>
+                  <td width="113" valign="top">
+                  </td>
+                </tr>
+                <tr>
+                  <td width="73" valign="top">
+                    <p>
+                      4
+                    </p>
+                  </td>
+                  <td width="154" valign="top">
+                  </td>
+                  <td width="113" valign="top">
+                  </td>
+                  <td width="113" valign="top">
+                    <p>
+                      6
+                    </p>
+                  </td>
+                  <td width="113" valign="top">
+                  </td>
+                </tr>
+                <tr>
+                  <td width="73" valign="top">
+                    <p>
+                      5
+                    </p>
+                  </td>
+                  <td width="154" valign="top">
+                  </td>
+                  <td width="113" valign="top">
+                  </td>
+                  <td width="113" valign="top">
+                    <p>
+                      7
+                    </p>
+                  </td>
+                  <td width="113" valign="top">
+                  </td>
+                </tr>
+                <tr>
+                  <td width="73" valign="top">
+                    <p>
+                      6
+                    </p>
+                  </td>
+                  <td width="154" valign="top">
+                  </td>
+                  <td width="113" valign="top">
+                  </td>
+                  <td width="113" valign="top">
+                  </td>
+                  <td width="113" valign="top">
+                    <p>
+                      5
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="73" valign="top">
+                    <p>
+                      7
+                    </p>
+                  </td>
+                  <td width="154" valign="top">
+                  </td>
+                  <td width="113" valign="top">
+                  </td>
+                  <td width="113" valign="top">
+                  </td>
+                  <td width="113" valign="top">
+                    <p>
+                      4
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="73" valign="top">
+                    <p>
+                      8
+                    </p>
+                  </td>
+                  <td width="154" valign="top">
+                  </td>
+                  <td width="113" valign="top">
+                  </td>
+                  <td width="113" valign="top">
+                  </td>
+                  <td width="113" valign="top">
+                    <p>
+                      3
+                    </p>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+
+              <h5><strong>Ejercicio 1.20: </strong>Escribir un programa que permita probar el uso de los operadores aritméticos unarios en expresiones matemáticas complejas, utilizando las funciones ‘cout’ y ‘cin’.</h5>
+              <h5><strong>Programa 1.20: </strong>Código del programa.</h5>
+              <pre><code [highlight]="prefTab[3].tablaDatos15"  [lineNumbers]="true"></code></pre>
+              <br><h5><strong>Salida 1.20:  </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/I/media/salida1.20.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Tabla 1.20. </strong>Prueba de escritorio manual del programa.</h5>
+              <table border="1" cellspacing="0" cellpadding="0" width="100%">
+                <tbody>
+                <tr>
+                  <td width="73" valign="top">
+                  </td>
+                  <td width="576" colspan="8" valign="top">
+                    <p align="center">
+                      <strong>Variables</strong>
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="73" valign="top">
+                    <p align="center">
+                      <strong>Nº Paso</strong>
+                    </p>
+                  </td>
+                  <td width="28" valign="top">
+                    <p align="center">
+                      <strong>a</strong>
+                    </p>
+                  </td>
+                  <td width="25" valign="top">
+                    <p align="center">
+                      <strong>b</strong>
+                    </p>
+                  </td>
+                  <td width="60" valign="top">
+                    <p align="center">
+                      <strong>c</strong>
+                    </p>
+                  </td>
+                  <td width="79" valign="top">
+                    <p align="center">
+                      <strong>d</strong>
+                    </p>
+                  </td>
+                  <td width="92" valign="top">
+                    <p align="center">
+                      <strong>x</strong>
+                    </p>
+                  </td>
+                  <td width="73" valign="top">
+                    <p align="center">
+                      <strong>y</strong>
+                    </p>
+                  </td>
+                  <td width="153" valign="top">
+                    <p align="center">
+                      <strong>Z</strong>
+                    </p>
+                  </td>
+                  <td width="66" valign="top">
+                    <p align="center">
+                      <strong>w</strong>
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="73" valign="top">
+                    <p>
+                      1
+                    </p>
+                  </td>
+                  <td width="28" valign="top">
+                    <p>
+                      5
+                    </p>
+                  </td>
+                  <td width="25" valign="top">
+                    <p>
+                      2
+                    </p>
+                  </td>
+                  <td width="60" valign="top">
+                    <p>
+                      0
+                    </p>
+                  </td>
+                  <td width="79" valign="top">
+                    <p>
+                      0
+                    </p>
+                  </td>
+                  <td width="92" valign="top">
+                    <p>
+                      -3
+                    </p>
+                  </td>
+                  <td width="73" valign="top">
+                    <p>
+                      -4
+                    </p>
+                  </td>
+                  <td width="153" valign="top">
+                    <p>
+                      1
+                    </p>
+                  </td>
+                  <td width="66" valign="top">
+                    <p>
+                      -1
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="73" valign="top">
+                    <p>
+                      2
+                    </p>
+                  </td>
+                  <td width="28" valign="top">
+                  </td>
+                  <td width="25" valign="top">
+                    <p>
+                      1
+                    </p>
+                  </td>
+                  <td width="60" valign="top">
+                  </td>
+                  <td width="79" valign="top">
+                  </td>
+                  <td width="92" valign="top">
+                    <p>
+                      -
+                    </p>
+                  </td>
+                  <td width="73" valign="top">
+                    <p>
+                      -3*2=-6
+                    </p>
+                  </td>
+                  <td width="153" valign="top">
+                  </td>
+                  <td width="66" valign="top">
+                  </td>
+                </tr>
+                <tr>
+                  <td width="73" valign="top">
+                    <p>
+                      3
+                    </p>
+                  </td>
+                  <td width="28" valign="top">
+                    <p>
+                      6
+                    </p>
+                  </td>
+                  <td width="25" valign="top">
+                  </td>
+                  <td width="60" valign="top">
+                  </td>
+                  <td width="79" valign="top">
+                  </td>
+                  <td width="92" valign="top">
+                    <p>
+                      5*(-4)=-20
+                    </p>
+                  </td>
+                  <td width="73" valign="top">
+                  </td>
+                  <td width="153" valign="top">
+                  </td>
+                  <td width="66" valign="top">
+                  </td>
+                </tr>
+                <tr>
+                  <td width="73" valign="top">
+                    <p>
+                      4
+                    </p>
+                  </td>
+                  <td width="28" valign="top">
+                  </td>
+                  <td width="25" valign="top">
+                  </td>
+                  <td width="60" valign="top">
+                  </td>
+                  <td width="79" valign="top">
+                  </td>
+                  <td width="92" valign="top">
+                    <p>
+                      -19
+                    </p>
+                  </td>
+                  <td width="73" valign="top">
+                    <p>
+                      -5
+                    </p>
+                  </td>
+                  <td width="153" valign="top">
+                    <p>
+                      -20+(-5)=-25
+                    </p>
+                  </td>
+                  <td width="66" valign="top">
+                  </td>
+                </tr>
+                <tr>
+                  <td width="73" valign="top">
+                    <p>
+                      5
+                    </p>
+                  </td>
+                  <td width="28" valign="top">
+                    <p>
+                      5
+                    </p>
+                  </td>
+                  <td width="25" valign="top">
+                    <p>
+                      2
+                    </p>
+                  </td>
+                  <td width="60" valign="top">
+                    <p>
+                      5-1=4
+                    </p>
+                  </td>
+                  <td width="79" valign="top">
+                  </td>
+                  <td width="92" valign="top">
+                  </td>
+                  <td width="73" valign="top">
+                  </td>
+                  <td width="153" valign="top">
+                  </td>
+                  <td width="66" valign="top">
+                  </td>
+                </tr>
+                <tr>
+                  <td width="73" valign="top">
+                    <p>
+                      6
+                    </p>
+                  </td>
+                  <td width="28" valign="top">
+                  </td>
+                  <td width="25" valign="top">
+                  </td>
+                  <td width="60" valign="top">
+                    <p>
+                      3
+                    </p>
+                  </td>
+                  <td width="79" valign="top">
+                    <p>
+                      -25/3=-8
+                    </p>
+                  </td>
+                  <td width="92" valign="top">
+                  </td>
+                  <td width="73" valign="top">
+                  </td>
+                  <td width="153" valign="top">
+                    <p>
+                      -24
+                    </p>
+                  </td>
+                  <td width="66" valign="top">
+                  </td>
+                </tr>
+                <tr>
+                  <td width="73" valign="top">
+                    <p>
+                      7
+                    </p>
+                  </td>
+                  <td width="28" valign="top">
+                    <p>
+                      6
+                    </p>
+                  </td>
+                  <td width="25" valign="top">
+                    <p>
+                      3
+                    </p>
+                  </td>
+                  <td width="60" valign="top">
+                  </td>
+                  <td width="79" valign="top">
+                  </td>
+                  <td width="92" valign="top">
+                  </td>
+                  <td width="73" valign="top">
+                  </td>
+                  <td width="153" valign="top">
+                  </td>
+                  <td width="66" valign="top">
+                    <p>
+                      5%3=2
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="73" valign="top">
+                    <p>
+                      8
+                    </p>
+                  </td>
+                  <td width="28" valign="top">
+                  </td>
+                  <td width="25" valign="top">
+                  </td>
+                  <td width="60" valign="top">
+                  </td>
+                  <td width="79" valign="top">
+                  </td>
+                  <td width="92" valign="top">
+                    <p>
+                      -18
+                    </p>
+                  </td>
+                  <td width="73" valign="top">
+                    <p>
+                      -6
+                    </p>
+                  </td>
+                  <td width="153" valign="top">
+                    <p>
+                      (-18)+(-5)+(-23)=-46
+                    </p>
+                  </td>
+                  <td width="66" valign="top">
+                  </td>
+                </tr>
+                <tr>
+                  <td width="73" valign="top">
+                    <p>
+                      9
+                    </p>
+                  </td>
+                  <td width="28" valign="top">
+                    <p>
+                      6
+                    </p>
+                  </td>
+                  <td width="25" valign="top">
+                    <p>
+                      3
+                    </p>
+                  </td>
+                  <td width="60" valign="top">
+                    <p>
+                      3
+                    </p>
+                  </td>
+                  <td width="79" valign="top">
+                    <p>
+                      -8
+                    </p>
+                  </td>
+                  <td width="92" valign="top">
+                  </td>
+                  <td width="73" valign="top">
+                  </td>
+                  <td width="153" valign="top">
+                  </td>
+                  <td width="66" valign="top">
+                  </td>
+                </tr>
+                <tr>
+                  <td width="73" valign="top">
+                    <p>
+                      10
+                    </p>
+                  </td>
+                  <td width="28" valign="top">
+                  </td>
+                  <td width="25" valign="top">
+                  </td>
+                  <td width="60" valign="top">
+                  </td>
+                  <td width="79" valign="top">
+                  </td>
+                  <td width="92" valign="top">
+                    <p>
+                      -18
+                    </p>
+                  </td>
+                  <td width="73" valign="top">
+                    <p>
+                      -6
+                    </p>
+                  </td>
+                  <td width="153" valign="top">
+                    <p>
+                      -46
+                    </p>
+                  </td>
+                  <td width="66" valign="top">
+                    <p>
+                      2
+                    </p>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+
+              <h5><strong>Ejercicio 1.21: </strong>Escribir un programa que permita probar el uso de los operadores aritméticos unarios en expresiones matemáticas complejas, utilizando las funciones ‘printf’ y ‘scanf’</h5>
+              <h5><strong>Programa 1.21: </strong>Código del programa.</h5>
+              <pre><code [highlight]="prefTab[3].tablaDatos16"  [lineNumbers]="true"></code></pre>
+              <br><h5><strong>Salida 1.21:  </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/I/media/salida1.21.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Tabla 1.21. </strong>Prueba de escritorio manual del programa.</h5>
+              <table border="1" cellspacing="0" cellpadding="0" width="100%">
+                <tbody>
+                <tr>
+                  <td width="73" valign="top">
+                  </td>
+                  <td width="576" colspan="8" valign="top">
+                    <p align="center">
+                      <strong>Variables</strong>
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="73" valign="top">
+                    <p align="center">
+                      <strong>Nº Paso</strong>
+                    </p>
+                  </td>
+                  <td width="28" valign="top">
+                    <p align="center">
+                      <strong>a</strong>
+                    </p>
+                  </td>
+                  <td width="25" valign="top">
+                    <p align="center">
+                      <strong>b</strong>
+                    </p>
+                  </td>
+                  <td width="60" valign="top">
+                    <p align="center">
+                      <strong>c</strong>
+                    </p>
+                  </td>
+                  <td width="79" valign="top">
+                    <p align="center">
+                      <strong>d</strong>
+                    </p>
+                  </td>
+                  <td width="92" valign="top">
+                    <p align="center">
+                      <strong>x</strong>
+                    </p>
+                  </td>
+                  <td width="73" valign="top">
+                    <p align="center">
+                      <strong>y</strong>
+                    </p>
+                  </td>
+                  <td width="153" valign="top">
+                    <p align="center">
+                      <strong>Z</strong>
+                    </p>
+                  </td>
+                  <td width="66" valign="top">
+                    <p align="center">
+                      <strong>w</strong>
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="73" valign="top">
+                    <p>
+                      1
+                    </p>
+                  </td>
+                  <td width="28" valign="top">
+                    <p>
+                      5
+                    </p>
+                  </td>
+                  <td width="25" valign="top">
+                    <p>
+                      2
+                    </p>
+                  </td>
+                  <td width="60" valign="top">
+                    <p>
+                      0
+                    </p>
+                  </td>
+                  <td width="79" valign="top">
+                    <p>
+                      0
+                    </p>
+                  </td>
+                  <td width="92" valign="top">
+                    <p>
+                      -3
+                    </p>
+                  </td>
+                  <td width="73" valign="top">
+                    <p>
+                      -4
+                    </p>
+                  </td>
+                  <td width="153" valign="top">
+                    <p>
+                      1
+                    </p>
+                  </td>
+                  <td width="66" valign="top">
+                    <p>
+                      -1
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="73" valign="top">
+                    <p>
+                      2
+                    </p>
+                  </td>
+                  <td width="28" valign="top">
+                  </td>
+                  <td width="25" valign="top">
+                    <p>
+                      1
+                    </p>
+                  </td>
+                  <td width="60" valign="top">
+                  </td>
+                  <td width="79" valign="top">
+                  </td>
+                  <td width="92" valign="top">
+                    <p>
+                      -
+                    </p>
+                  </td>
+                  <td width="73" valign="top">
+                    <p>
+                      -3*2=-6
+                    </p>
+                  </td>
+                  <td width="153" valign="top">
+                  </td>
+                  <td width="66" valign="top">
+                  </td>
+                </tr>
+                <tr>
+                  <td width="73" valign="top">
+                    <p>
+                      3
+                    </p>
+                  </td>
+                  <td width="28" valign="top">
+                    <p>
+                      6
+                    </p>
+                  </td>
+                  <td width="25" valign="top">
+                  </td>
+                  <td width="60" valign="top">
+                  </td>
+                  <td width="79" valign="top">
+                  </td>
+                  <td width="92" valign="top">
+                    <p>
+                      5*(-4)=-20
+                    </p>
+                  </td>
+                  <td width="73" valign="top">
+                  </td>
+                  <td width="153" valign="top">
+                  </td>
+                  <td width="66" valign="top">
+                  </td>
+                </tr>
+                <tr>
+                  <td width="73" valign="top">
+                    <p>
+                      4
+                    </p>
+                  </td>
+                  <td width="28" valign="top">
+                  </td>
+                  <td width="25" valign="top">
+                  </td>
+                  <td width="60" valign="top">
+                  </td>
+                  <td width="79" valign="top">
+                  </td>
+                  <td width="92" valign="top">
+                    <p>
+                      -19
+                    </p>
+                  </td>
+                  <td width="73" valign="top">
+                    <p>
+                      -5
+                    </p>
+                  </td>
+                  <td width="153" valign="top">
+                    <p>
+                      -20+(-5)=-25
+                    </p>
+                  </td>
+                  <td width="66" valign="top">
+                  </td>
+                </tr>
+                <tr>
+                  <td width="73" valign="top">
+                    <p>
+                      5
+                    </p>
+                  </td>
+                  <td width="28" valign="top">
+                    <p>
+                      5
+                    </p>
+                  </td>
+                  <td width="25" valign="top">
+                    <p>
+                      2
+                    </p>
+                  </td>
+                  <td width="60" valign="top">
+                    <p>
+                      5-1=4
+                    </p>
+                  </td>
+                  <td width="79" valign="top">
+                  </td>
+                  <td width="92" valign="top">
+                  </td>
+                  <td width="73" valign="top">
+                  </td>
+                  <td width="153" valign="top">
+                  </td>
+                  <td width="66" valign="top">
+                  </td>
+                </tr>
+                <tr>
+                  <td width="73" valign="top">
+                    <p>
+                      6
+                    </p>
+                  </td>
+                  <td width="28" valign="top">
+                  </td>
+                  <td width="25" valign="top">
+                  </td>
+                  <td width="60" valign="top">
+                    <p>
+                      3
+                    </p>
+                  </td>
+                  <td width="79" valign="top">
+                    <p>
+                      -25/3=-8
+                    </p>
+                  </td>
+                  <td width="92" valign="top">
+                  </td>
+                  <td width="73" valign="top">
+                  </td>
+                  <td width="153" valign="top">
+                    <p>
+                      -24
+                    </p>
+                  </td>
+                  <td width="66" valign="top">
+                  </td>
+                </tr>
+                <tr>
+                  <td width="73" valign="top">
+                    <p>
+                      7
+                    </p>
+                  </td>
+                  <td width="28" valign="top">
+                    <p>
+                      6
+                    </p>
+                  </td>
+                  <td width="25" valign="top">
+                    <p>
+                      3
+                    </p>
+                  </td>
+                  <td width="60" valign="top">
+                  </td>
+                  <td width="79" valign="top">
+                  </td>
+                  <td width="92" valign="top">
+                  </td>
+                  <td width="73" valign="top">
+                  </td>
+                  <td width="153" valign="top">
+                  </td>
+                  <td width="66" valign="top">
+                    <p>
+                      5%3=2
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="73" valign="top">
+                    <p>
+                      8
+                    </p>
+                  </td>
+                  <td width="28" valign="top">
+                  </td>
+                  <td width="25" valign="top">
+                  </td>
+                  <td width="60" valign="top">
+                  </td>
+                  <td width="79" valign="top">
+                  </td>
+                  <td width="92" valign="top">
+                    <p>
+                      -18
+                    </p>
+                  </td>
+                  <td width="73" valign="top">
+                    <p>
+                      -6
+                    </p>
+                  </td>
+                  <td width="153" valign="top">
+                    <p>
+                      (-18)+(-5)+(-23)=-46
+                    </p>
+                  </td>
+                  <td width="66" valign="top">
+                  </td>
+                </tr>
+                <tr>
+                  <td width="73" valign="top">
+                    <p>
+                      9
+                    </p>
+                  </td>
+                  <td width="28" valign="top">
+                    <p>
+                      6
+                    </p>
+                  </td>
+                  <td width="25" valign="top">
+                    <p>
+                      3
+                    </p>
+                  </td>
+                  <td width="60" valign="top">
+                    <p>
+                      3
+                    </p>
+                  </td>
+                  <td width="79" valign="top">
+                    <p>
+                      -8
+                    </p>
+                  </td>
+                  <td width="92" valign="top">
+                  </td>
+                  <td width="73" valign="top">
+                  </td>
+                  <td width="153" valign="top">
+                  </td>
+                  <td width="66" valign="top">
+                  </td>
+                </tr>
+                <tr>
+                  <td width="73" valign="top">
+                    <p>
+                      10
+                    </p>
+                  </td>
+                  <td width="28" valign="top">
+                  </td>
+                  <td width="25" valign="top">
+                  </td>
+                  <td width="60" valign="top">
+                  </td>
+                  <td width="79" valign="top">
+                  </td>
+                  <td width="92" valign="top">
+                    <p>
+                      -18
+                    </p>
+                  </td>
+                  <td width="73" valign="top">
+                    <p>
+                      -6
+                    </p>
+                  </td>
+                  <td width="153" valign="top">
+                    <p>
+                      -46
+                    </p>
+                  </td>
+                  <td width="66" valign="top">
+                    <p>
+                      2
+                    </p>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+            </mat-tab>
+
+            <mat-tab  label="1.5.6. Precedencia de Operadores Aritméticos">
+              <br>
+              <h2>Precedencia de Operadores Aritméticos</h2>
+              <br>
+              <p>Considere la siguiente sentencia:</p>
+              <pre><code [highlight]="prefTab[3].code1"  [lineNumbers]="true"></code></pre>
+              <br><p>En este punto surge una pregunta: ¿En qué orden el compilador ejecuta las varias operaciones aritméticas? En el lenguaje C/C++ cada operador tiene definida un nivel de precedencia, y los operadores son evaluados en un orden de mayor precedencia a menor precedencia. Las operaciones de multiplicación, división y módulo tienen el mismo nivel de precedencia. De manera similar la operación de suma y de resta, tienen el mismo nivel de precedencia. Por lo tanto las operaciones de multiplicación, división y módulo tienen mayor precedencia que la suma y la resta, lo que implica que las operaciones de multiplicación, división y módulo siempre ocurrirán antes que la suma y la resta (Deitel, H., Deitel, P., 2003). Entonces, la expresión anterior será evaluada de la siguiente forma:</p>
+              <pre><code [highlight]="prefTab[3].code2"  [lineNumbers]="true"></code></pre>
+              <br><p>Nótese que los operadores con el mismo nivel de precedencia son evaluados de izquierda a derecha.</p>
+              <p>Algunas veces se requiere forzar a que una operación ocurra primero. Por ejemplo, en la expresión anterior, se pudo haber querido que la suma entre 7 y 2 y la resta entre 3 y 1 se realice primero. Así como está la expresión, no se puede cumplir con este caso, pero si encerramos entre paréntesis las expresiones que queremos que se evalúen primero, el problema está resuelto. Entonces se puede forzar la evaluación de operadores de menor precedencia como la suma y la resta sobre operadores de mayor precedencia como la multiplicación, la división y el módulo, utilizando paréntesis. Así entonces, tenemos reformulada la expresión matemática anterior, de la siguiente manera:</p>
+              <pre><code [highlight]="prefTab[3].code3"  [lineNumbers]="true"></code></pre>
+              <br><p>Los paréntesis también pueden estar anidados en una expresión matemática, donde usted puede especificar el grupo de expresiones que quiere que se evalúe primero, luego las que van en segundo lugar y después las que van en tercer lugar, etc. En una expresión con paréntesis anidados, las operaciones son evaluadas en cierto orden, desde el grupo de paréntesis más interno hasta el grupo de paréntesis más externo. El siguiente ejemplo muestra lo indicado:</p>
+              <pre><code [highlight]="prefTab[3].code4"  [lineNumbers]="true"></code></pre>
+
+              <hr>
+              <br><h4><strong>Tips de Programación...</strong>
+              <mat-icon>wb_incandescent</mat-icon>
+              <mat-icon>laptop_windows</mat-icon>
+            </h4>
+              <ul *ngFor="let item of prefTab[3].tipsProgramacion1">
+                <p>
+                  <mat-icon style="font-size: 15px">check_circle_outline</mat-icon>{{item.tip}}
+                </p>
+              </ul>
+              <hr>
+              <p>Los siguientes programas ilustran cómo trabaja la precedencia de operadores con expresiones numéricas.</p>
+
+              <h5><strong>Ejercicio 1.22:  </strong>Escribir un programa que permita probar el uso de la precedencia de operadores con las expresiones numéricas expuestas en la sección 1.5, utilizando las funciones ‘cout’ y ‘cin’. </h5>
+              <h5><strong>Programa 1.22:  </strong>Código del programa.</h5>
+              <pre><code [highlight]="prefTab[3].tablaDatos17"  [lineNumbers]="true"></code></pre>
+              <br><h5><strong>Salida 1.22:  </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/I/media/salida1.22.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Ejercicio 1.23:  </strong>Escribir un programa que permita probar el uso de la precedencia de operadores con las expresiones numéricas expuestas en la sección 1.5, utilizando las funciones ‘printf’ y ‘scanf’.  </h5>
+              <h5><strong>Programa 1.23:  </strong>Código del programa.</h5>
+              <pre><code [highlight]="prefTab[3].tablaDatos18"  [lineNumbers]="true"></code></pre>
+              <br><h5><strong>Salida 1.23:  </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/I/media/salida1.23.png" style="display:block; margin:auto; "><br>
+
+            </mat-tab>
+
+          </mat-tab-group>
+        </ng-template>
+      </mat-tab>
+
+
+      <mat-tab label="Video Tutorial">
             <ng-template matTabContent>
                 <br>
                 <div class="social-item">
