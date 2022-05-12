@@ -117,16 +117,19 @@
 
         </ng-template>
       </mat-tab>
+
       <mat-tab label="Ejercicios Propuestos">
         <ng-template matTabContent>
 
         </ng-template>
       </mat-tab>
+
       <mat-tab label="Bibliografía">
         <ng-template matTabContent>
 
         </ng-template>
       </mat-tab>
+
     </mat-tab-group>
   <button mat-button (click)="selectTabNext()" *ngIf="positionCurrentNext">{{titleNext}} <mat-icon>navigate_next</mat-icon></button>
     <button mat-button (click)="selectTabBefore()" *ngIf="positionCurrentBefore"><mat-icon>navigate_before</mat-icon> Atras  &nbsp; &nbsp; &nbsp;&nbsp;</button>
