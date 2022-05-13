@@ -14,8 +14,9 @@ import { HelpComponent } from './components/user/help/help.component';
 import { GestionComponent } from './components/user/gestion/gestion.component';
 import { GalleryComponent } from './components/principal/gallery/gallery.component';
 import { ContactComponent } from './components/principal/contact/contact.component';
-import { UserCompGrafComponent } from './components/user/user-comp-graf/user-comp-graf.component'; 
-import { TestCompGrafComponent } from './components/user/test-comp-graf/test-comp-graf.component'; 
+import { UserCompGrafComponent } from './components/user/user-comp-graf/user-comp-graf.component';
+import { TestCompGrafComponent } from './components/user/test-comp-graf/test-comp-graf.component';
+import {ChapterIvComponent} from './components/user/chapter-iv/chapter-iv.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -26,7 +27,8 @@ const routes: Routes = [
   { path: 'user/content', children: [
     {path: 'chapterI', component: ChapterIComponent},
     {path: 'chapterII', component: ChapterIIComponent},
-    {path: 'chapterIII', component: ChapterIIIComponent}
+    {path: 'chapterIII', component: ChapterIIIComponent},
+      {path: 'chapterIV', component: ChapterIvComponent}
   ]},
   { path: 'user/help', component: HelpComponent },
   { path: 'user/bibliography', component: BibliographyComponent },

@@ -39,8 +39,8 @@ export class NavbarComponent implements OnInit {
   public pruebatype: string='';
 
   /*****/
-  @Input() propagaruserCompGraf: UserCompGraf= new UserCompGraf(); 
-  
+  @Input() propagaruserCompGraf: UserCompGraf= new UserCompGraf();
+
   @ViewChild(MatSidenav)
  sidenav!: MatSidenav;
  version = VERSION;
@@ -55,7 +55,7 @@ export class NavbarComponent implements OnInit {
     iconName: 'help',
     route: 'user/login'
    }
- ]; 
+ ];
  navItems: NavItem[] = [
   {
     displayName: 'Inicio',
@@ -64,7 +64,7 @@ export class NavbarComponent implements OnInit {
    },
   {
      displayName: 'Contenido',
-     iconName: 'work_outline', 
+     iconName: 'work_outline',
      route: 'user/content',
      children: [
        {
@@ -81,6 +81,11 @@ export class NavbarComponent implements OnInit {
          displayName: 'Capítulo III',
          iconName: 'library_books',
          route: 'user/content/chapterIII'
+       },
+       {
+         displayName: 'Capítulo IV',
+         iconName: 'library_books',
+         route: 'user/content/chapterIV'
        }
      ]
    },
@@ -109,7 +114,7 @@ export class NavbarComponent implements OnInit {
    },
   {
      displayName: 'Contenido',
-     iconName: 'work_outline', 
+     iconName: 'work_outline',
      route: 'user/content',
      children: [
        {
@@ -126,6 +131,11 @@ export class NavbarComponent implements OnInit {
          displayName: 'Capítulo III',
          iconName: 'library_books',
          route: 'user/content/chapterIII'
+       },
+       {
+         displayName: 'Capítulo IV',
+         iconName: 'library_books',
+         route: 'user/content/chapterIV'
        }
      ]
    },
@@ -163,7 +173,7 @@ export class NavbarComponent implements OnInit {
    }
  ];
 
-  constructor( private observer: BreakpointObserver,private navService: NavService, private authService: AuthService, private afsAuth: AngularFireAuth, private router: Router, public userCompGrafService: UserCompGrafService ){ 
+  constructor( private observer: BreakpointObserver,private navService: NavService, private authService: AuthService, private afsAuth: AngularFireAuth, private router: Router, public userCompGrafService: UserCompGrafService ){
     this.userCompGrafService.selectedMDBUserCompGraf=this.propagaruserCompGraf;
   }
 
@@ -181,7 +191,7 @@ try {
       this.userCompGrafService.selectedMDBUserCompGraf = res;
       console.log(">2.1>>>>>"+res.email_user);
       console.log('>3>>>>>>>>>>>>>'+this.userCompGrafService.selectedMDBUserCompGraf.email_user);
-    
+
     });
     } catch (error) {
       console.log(error);
@@ -199,7 +209,7 @@ try {
           this.sidenav.open();
         }
       });
-  
+
     }catch(error){}
   }
 
@@ -212,8 +222,8 @@ try {
           this.userCompGrafService.selectedMDBUserCompGraf = res;
           console.log(">2.1>>>>>"+res.email_user);
           console.log('>3>>>>>>>>>>>>>'+this.userCompGrafService.selectedMDBUserCompGraf.email_user);
-          console.log('>4>>>>>>>>>>>>>'+this.userCompGrafService.selectedMDBUserCompGraf.type_user); 
-          console.log('>4.1>>>>>>>>>>>>>'+this.userCompGrafService.selectedMDBUserCompGraf.type_user);        
+          console.log('>4>>>>>>>>>>>>>'+this.userCompGrafService.selectedMDBUserCompGraf.type_user);
+          console.log('>4.1>>>>>>>>>>>>>'+this.userCompGrafService.selectedMDBUserCompGraf.type_user);
 
         this.pruebanombre=auth.displayName
         if(this.propagaruserCompGraf.type_user){
@@ -221,18 +231,18 @@ try {
         }else{
           this.pruebatype=this.userCompGrafService.selectedMDBUserCompGraf.type_user;
         }
-        this.pruebaemail=auth.email;        
+        this.pruebaemail=auth.email;
         this.pruebaphoto=auth.photoURL;
 
         if(this.propagaruserCompGraf.type_user==="Docente" || this.userCompGrafService.selectedMDBUserCompGraf.type_user==="Docente"){
           this.isLogged = false;
-          this.isAdmin = true;  
+          this.isAdmin = true;
         }else{
           this.isLogged = true;
-          this.isAdmin = false;  
-        }       
+          this.isAdmin = false;
+        }
         });
-        
+
       } else {
         console.log('NOT user logged');
         this.isLogged = false;
@@ -240,7 +250,7 @@ try {
 
       }
     });
-    
+
   }
   async onLogout() {
     try {

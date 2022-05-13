@@ -23,7 +23,7 @@ import {MatRadioModule} from '@angular/material/radio';
 export class TestCompGrafComponent implements OnInit {
 
 /**Tipo de usuario*/
-lista:string[]=["1","2","3"];
+lista:string[]=["1","2","3","4"];
 testForm: FormGroup;
 /***/
 /*Responsive Table**/
@@ -48,7 +48,7 @@ ngOnInit() {
 }
 
 ngAfterViewInit() {
-  
+
 }
 
 applyFilter(filterValue: string) {
@@ -79,7 +79,7 @@ addTestCompGraf(form?: NgForm) {
     //console.log(this.userCompGrafService.selectedUserCompGraf.id_user+"AQUIII");
     console.log("1");
     this.createTestCompGraf();
-    console.log("3");    
+    console.log("3");
     this.testCompGrafService.postTestCompGraf(this.testForm.value).subscribe((res) => {
       console.log("4");
       this.getTestCompGraf();
@@ -151,9 +151,9 @@ createTestCompGraf(){
   let formArray=this.formBuiler.array(this.testCompGrafService.selectedTestCompGraf.answer);
   console.log("Convertir +1>>"+this.num);
   this.testForm= this.formBuiler.group({
-    id_question: this.num, 
-    cap_question: this.testCompGrafService.selectedTestCompGraf.cap_question, 
-    question: this.testCompGrafService.selectedTestCompGraf.question, 
+    id_question: this.num,
+    cap_question: this.testCompGrafService.selectedTestCompGraf.cap_question,
+    question: this.testCompGrafService.selectedTestCompGraf.question,
     answer: formArray
   });
 }
@@ -164,7 +164,7 @@ resettestForm(form?: FormGroup) {
   }
 }
 
-/**/ 
+/**/
 
 
 
