@@ -20,10 +20,26 @@
     <mat-tab-group [selectedIndex]="selectedIndex.value" (selectedIndexChange)="selectedIndex.setValue($event)">
         <mat-tab label="Introducción">
             <ng-template matTabContent>
+              <br>
+              <h1>Introducción</h1>
+              <p>En este capítulo se aprenderán a diseñar algoritmos y a utilizar la computadora como una herramienta para resolver problemas creando programas con estructuras de control en el lenguaje C/C++. Para la solución de problemas de programación se aplican aspectos de Ingeniería de Software y el método científico que permiten identificar a la programación con un enfoque sistemático. 
+              </p>
+              <p>
+                En un programa estructurado el flujo lógico se gobierna por tres estructuras de control básicas: a) estructuras secuenciales; b) estructuras de decisión; c) estructuras repetitivas. El estudio de las estructuras de control se realiza en base al diseño de algoritmos y a la creación de programas en un lenguaje de programación estructurado como es el Lenguaje C/C++.
+              </p>
             </ng-template>
         </mat-tab>
         <mat-tab label="Objetivos">
             <ng-template matTabContent>
+              <br>
+                <h1>Objetivos</h1>
+                <ul>
+                    <li>Revisar los principales conceptos en torno a algoritmos y a estructuras de control.</li>
+                    <li>Entender cómo trabajan los algoritmos y las estructuras de control y cómo se aplican con el lenguaje C/C++ en la construcción de programas.</li>
+                    <li>Aprender a crear algoritmos en Pseudocódigo y en Lenguaje C/C++.</li>
+                    <li>Diseñar y crear programas en lenguaje C/C++ utilizando algoritmos y estructuras de control.</li>
+                    <li>Resolver casos de estudio con algoritmos y estructuras de control aplicadas al área matemática.</li>
+                </ul>
                   </ng-template>
         </mat-tab>
       <mat-tab label="Algoritmo">
@@ -31,26 +47,111 @@
           <mat-tab-group>
             <!-- <mat-tab *ngFor="let tab of asyncTabs | async"> -->
             <mat-tab  label="2.1.1. Definición de Algoritmo">
+              <ng-template matTabContent>
+                <br>
+              <h1>Definición de Algoritmo</h1>
+              <p>Un algoritmo es un conjunto de pasos o instrucciones ordenadas y finitas que permiten resolver un problema (Joyanes,L., 2008). Etimológicamente hablando la palabra algoritmo proviene del latín, dixit algorithmus y este del griego arithmos, que significa número y también con la influencia del matemático persa Muhammad Al-Juarismi que vivió durante el siglo IX y alcanzó gran reputación por el enunciado de las reglas paso a paso para sumar, restar, multiplicar y dividir números decimales. Euclides, el gran matemático griego que vivió en el siglo IV antes de Cristo, inventó un método para encontrar el Máximo Común Divisor (MCD) de dos números en base a divisiones sucesivas. A Euclides y a Al-Juarismi se les consideran los padres de la algoritmia que es una ciencia que se dedica al estudio de los algoritmos.
+              </p>
+              </ng-template>
             </mat-tab>
             <mat-tab  label="2.1.2. Características de los Algoritmos">
+              <ng-template matTabContent>
+                <br>
+                <h1>Características de los Algoritmos </h1>
+                <p>
+                  Un algoritmo tiene las siguientes tres características (Joyanes, L., 2008):
+                </p>
+                <br>
+                <li><strong>Preciso: </strong>Un algoritmo debe definirse de manera rigurosa sin ambigüedades.
+                </li>
+                <li><strong>Definido: </strong>Si se sigue un algoritmo dos veces, se debe obtener el mismo resultado.</li>
+                <li><strong>Finito: </strong>Un algoritmo debe terminar en algún momento.</li>
+                <br>
+                <p>
+                  Considerando estas características un algoritmo puede tener elementos de entrada y debe producir un resultado claro y conciso, que puede ser escrito en un lenguaje de programación como C/C++.   
+                </p>
+              </ng-template>
             </mat-tab>
 
             <mat-tab  label="2.1.3. Etapas para la Solución de un Problema">
+              <ng-template matTabContent>
+                <br>
+                <h1>Etapas para la Solución de un Problema</h1>
+                <br>
+                <p>
+                  Los Ingenieros en Sistemas en la industria de la computación han encontrado que la ingeniería y el método científico para la solución de problemas pueden ser adaptados para el desarrollo confiable de sistemas de software (Hanly, J., Koffman, E., Horvath, J., 1995). Desde hace varias décadas la Ingeniería de Software ha sido utilizada para identificar la programación con un enfoque sistemático (Pressman, R., 2010). En este capítulo se van a aplicar cuatro fases en la resolución de problemas de programación, considerando los aspectos de la ingeniería y el método científico dentro de cada fase.
+                </p>
+                <br>
+                <ol type="1" style="font-weight: normal;" >
+                  <li><strong>Análisis del Problema: </strong>En esta fase, se estudia la especificación del problema, se identifican las entradas y salidas requeridas. Se revisan los principios teóricos y científicos que se aplican en la solución de un problema y se listan las fórmulas o relaciones relevantes.</li>
+                  <li><strong>Diseño del Algoritmo: </strong>En esta fase, se escribe el algoritmo y se lista los sub-problemas a detalle. Se puede aplicar el proceso llamado “divide y vencerás” (divide and conquer), donde el problema se divide en sub-problemas.</li>
+                  <li><strong>Desarrollo y Codificación: </strong>En esta fase, se presenta la codificación del programa en Lenguaje C/C++, debidamente comentado y explicado conforme a los algoritmos diseñados, considerando la especificación de requerimientos, datos, constantes y fórmulas requeridas para resolver el problema.</li>
+                  <li><strong>Implementación y Pruebas: </strong>En esta fase, se verifica que la solución del problema es correcta y el programa trabaja adecuadamente, para lo cual se corre el programa varias veces y se prueba con diferentes valores. Además, se pueden contemplar pruebas de escritorio del programa mostrando el funcionamiento de algunas partes del mismo o en su totalidad considerando los datos y los cálculos que se necesitan procesar.</li>
+                </ol>
+
+              </ng-template>
             </mat-tab>
 
             <mat-tab  label="2.1.4. Programas y Algoritmos">
+              <ng-template matTabContent>
+                <br>
+                <h1>Programas y Algoritmos</h1>
+                <br>
+                <p>Un algoritmo como se mencionó en la sección 2.1.1, es un conjunto de pasos o instrucciones que se siguen para resolver un problema. Un programa implementa uno o más algoritmos y lo traduce a lenguaje máquina. Según Joyanes Aguilar, et al. (2005), un algoritmo se puede expresar de tres maneras: a) forma gráfica, utilizando un diagrama de flujo; b) pseudocódigo que es un lenguaje de descripción algorítmica; c) lenguaje de programación que es una manera explícita de representar un algoritmo. En este capítulo se van a diseñar algoritmos mediante pseudocódigo y se los van a implementar utilizando el Lenguaje de Programación C/C++.</p>
+              <p>Los programas se pueden dividir en sub-programas utilizando funciones, de modo que la complejidad algorítmica se reduce a tener un solo programa completo, lo cual ayuda a mejorar el rendimiento del mismo. Esta práctica es muy utilizada y se conoce como refinamiento progresivo. De acuerdo con Wirth Niklaus (1971), un programa está formado por algoritmos y estructuras de datos.</p>
+              <p>La programación como tal puede tener muchos enfoques o paradigmas de programación lo cual permite formular la resolución de un problema de diferentes formas. Los dos paradigmas de programación más utilizados son: a) Paradigma de Programación Estructurada, que permite mejorar la calidad, claridad y tiempo de desarrollo de un programa recurriendo al uso de subrutinas y estructuras de control; b) Paradigma de Programación Orientada a Objetos, que permite innovar la programación utilizando objetos que manipulan datos y diferentes mecanismos de abstracción como herencia y polimorfismo (Granizo E., 2016).</p>
+              </ng-template>
             </mat-tab>
 
             <mat-tab  label="2.1.5. Pseudocódigo como Técnica de Representación de un Algoritmo">
+              <ng-template matTabContent>
+                <br>
+                <h1>Pseudocódigo como Técnica de Representación de un Algoritmo</h1>
+              <br>
+              <p>Pseudocódigo es un lenguaje de especificación o descripción de algoritmos. El uso de este lenguaje ayuda a la codificación de un programa de una manera relativamente fácil (Joyanes Aguilar, L., 2008). Este lenguaje nació en inglés y era un medio de representación básico de las estructuras de control de la programación estructurada. Actualmente, se lo puede utilizar también en español sustituyendo las palabras originales del idioma inglés. En esta obra de programación se utilizará la técnica del pseudocódigo para diseñar los algoritmos de los programas y el Lenguaje C/C++ para implementar los mismos.</p>
+              <p>Por ejemplo, algunas de las palabras reservadas y operadores que maneja el Pseudocódigo son:</p>
+            <ol>
+                <li value="1">Leer (Read)</li>
+                <li>Imprimir (Print/Write)</li>
+                <li>Calcular (Calculate)</li>
+                <li>Repetir (Repeat)</li>
+                <li>Asignar a 'x', el valor de 'y':
+                  <ul>
+                    <li>	x &larr; y; (Opción 1)</li>
+                  <li>	x := y; (Opción 2)</li>
+                  <li>	x = y; (Opción 3)</li>
+                  </ul>
+                </li>
+            </ol>  
+                <p>En la sección 2.2 se presentará el algoritmo en Pseudocódigo y la implementación de programas en Lenguaje C/C++, utilizando estructuras de control secuenciales, selectivas y repetitivas. Además, se presentan varios Casos de Estudio donde se cumplen con las etapas para la solución de un problema, aplicando el método científico.</p>
+
+            </ng-template>
             </mat-tab>
 
             <mat-tab  label="2.1.6. Diseño Conceptual de Procesos Aplicado a Programas">
+              <ng-template matTabContent>
+                <br>
+                <h1>Diseño Conceptual de Procesos Aplicado a Programas</h1>
+                <br>
+                <p>Un proceso es un sistema formado por unidades, componentes o equipos interconectados en forma organizada para procesar, modificar o transformar las propiedades de elementos o corrientes de proceso en productos de interés (Mallar, M.A., 2010). Un proceso se puede representar por: a) Diagrama de Entrada-Salida (input-output); b) Diagrama de Bloques (operaciones principales); c) Diagrama de Flujos (Flowsheet); d) Diagrama de tuberías e instrumentación (PID).</p>
+                <p>El Diagrama de Entrada-Salida (input-output) se utiliza para representar flujos de materiales considerando las entradas y salidas de los procesos de fabricación de un producto. En la Figura 2.1 se muestra un ejemplo de un Proceso Químico donde las entradas son: a) Recursos económicos; b) Materias primas; c) Energía; las salidas son: a) Recursos económicos; b) Productos; c) Energía; d) Residuos.</p>
+                <br>
+                <p><b>Figura 2.1. </b>Diagrama de Entrada-Salida de un Proceso Químico (Adaptado de: Arce, E., 2011).</p>
+                <br>
+                <p>Este tipo de diagramas también se pueden utilizar para representar un programa como un proceso. Conceptualmente un programa puede ser considerado como una caja negra (Joyanes Aguilar, L., 2008), donde la caja negra es el proceso o algoritmo de resolución, las entradas y las auxiliares son un grupo de datos que van a ser procesados para obtener las salidas o resultados, como se puede ver en la Figura 2.2. En el resto de capítulos y lecciones se utilizará el Diagrama de Entrada-Salida para entender el funcionamiento de un algoritmo como un proceso.</p>
+                <br>
+                <p><b>Figura 2.2. </b>Diagrama de Entrada-Salida de un Programa (Adaptado de: Joyanes Aguilar, L., 2008).</p>
+              </ng-template>
             </mat-tab>
 
             <mat-tab  label="2.1.7. Aplicaciones de Algoritmos en la Vida Cotidiana">
+              <ng-template matTabContent>
+              </ng-template>
             </mat-tab>
 
             <mat-tab  label="2.1.8. Estructuras de Control en Lenguaje C/C++">
+              <ng-template matTabContent>
+              </ng-template>
             </mat-tab>
           </mat-tab-group>
         </ng-template>
@@ -61,10 +162,16 @@
           <mat-tab-group>
             <!-- <mat-tab *ngFor="let tab of asyncTabs | async"> -->
             <mat-tab  label="2.2.1. Escritura">
+              <ng-template matTabContent>
+              </ng-template>
             </mat-tab>
             <mat-tab  label="2.2.2. Lectura">
+              <ng-template matTabContent>
+              </ng-template>
             </mat-tab>
             <mat-tab  label="2.2.3. Asignación">
+              <ng-template matTabContent>
+              </ng-template>
             </mat-tab>
           </mat-tab-group>
         </ng-template>
@@ -75,14 +182,22 @@
           <mat-tab-group>
             <!-- <mat-tab *ngFor="let tab of asyncTabs | async"> -->
             <mat-tab  label="2.3.1. La sentencia if">
+              <ng-template matTabContent>
+              </ng-template>
             </mat-tab>
             <mat-tab  label="2.3.2. La sentencia if-else">
+              <ng-template matTabContent>
+              </ng-template>
             </mat-tab>
 
             <mat-tab  label="2.3.3. Sentencias if-else Anidadas">
+              <ng-template matTabContent>
+              </ng-template>
             </mat-tab>
 
             <mat-tab  label="2.3.4. Secuencia de Sentencias if">
+              <ng-template matTabContent>
+              </ng-template>
             </mat-tab>
 
             <mat-tab  label="2.3.5. Secuencia de Sentencias if-else">
