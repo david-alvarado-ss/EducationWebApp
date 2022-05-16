@@ -75,6 +75,50 @@
           <mat-tab-group>
             <!-- <mat-tab *ngFor="let tab of asyncTabs | async"> -->
             <mat-tab  label="2.3.1. La sentencia if">
+              <br>
+              <h2>La Sentencia if</h2>
+              <br>
+              <p>La sentencia if permite escoger entre ejecutar una instrucción o no ejecutarla. El formato de esta sentencia tiene la siguiente sintaxis:</p>
+              <h4><strong>Sintaxis 1:  </strong>  </h4>
+              <pre><code [highlight]="prefTab[0].sintaxis1"  [lineNumbers]="true"></code></pre>
+              <p>expresión: Expresión lógica que determina si la sentencia o acción se ha de ejecutar. </p>
+              <p>sentencia:  La sentencia o acción se ejecuta si la expresión lógica es verdadera. </p>
+              <p><strong>Nota: </strong> En esta sintaxis no es necesario utilizar llaves ya que se tiene una sola sentencia o instrucción. </p>
+              <h4><strong>Sintaxis 2:  </strong>  </h4>
+              <pre><code [highlight]="prefTab[0].sintaxis2"  [lineNumbers]="true"></code></pre>
+              <p>expresión: Expresión lógica que determina si la sentencia o acción se ha de ejecutar. </p>
+              <p>sentencia: Las acciones o sentencias se ejecutan si la expresión lógica es verdadera. </p>
+              <p><strong>Nota: </strong> En esta sintaxis es necesario utilizar llaves ya que se tienen varias sentencias o instrucciones. </p>
+              <h4><strong>Ejercicio 2.7: </strong>Escribir un programa que permita ver si un número es par, para lo cual se debe utilizar el operador de módulo, que permite obtener el resto de una división entera.</h4><br>
+              <TABLE BORDER WIDTH="100%" CELLPADDING=1 CELLSPACING=0 class="mat-elevation-z8">
+                <TR>
+                  <TH>N°</TH>
+                  <TH>Algoritmo en Pseudocódigo</TH>
+                  <TH>Algoritmo en Lenguaje C/C++</TH>
+                </TR>
+                <tbody *ngFor="let item of prefTab[0].tablaDatos1">
+                <TR style="text-align: left">
+                  <TD>
+                    <ul *ngFor="let i of item.Numero" style="list-style-type: none;">
+                      <li>{{i}}</li>
+                    </ul>
+                  </TD>
+                  <TD>
+                    <ul *ngFor="let i of item.Pseudo" style="list-style-type: none;">
+                      <li>{{i}}</li>
+                    </ul>
+                  </TD>
+                  <TD>
+                    <ul *ngFor="let i of item.Codigo" style="list-style-type: none;">
+                      <li>{{i}}</li>
+                    </ul>
+                  </TD>
+                </TR>
+                </tbody>
+              </TABLE><br>
+              <h5><strong>Programa 2.7: </strong>Código del programa .</h5><br>
+              <pre><code [highlight]="prefTab[0].programa1"  [lineNumbers]="true"></code></pre>
+              <p>La Ejecución 2.7, correspondiente a la salida del programa, muestra que el número 6 es par.</p>
             </mat-tab>
             <mat-tab  label="2.3.2. La sentencia if-else">
             </mat-tab>

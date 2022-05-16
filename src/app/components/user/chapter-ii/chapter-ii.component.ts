@@ -15,6 +15,7 @@ export interface ExampleTab {
 export class ChapterIIComponent implements OnInit {
   asyncTabs: Observable<ExampleTab[]>;
   prefTabs: any;
+  prefTab: any;
   introduccion: any;
   praqnique: any;
   praqniquePropuesto: any;
@@ -537,7 +538,64 @@ export class ChapterIIComponent implements OnInit {
           }
         ]}
     ];
-
+    this.prefTab =[
+      { label: 'Sentencia if',
+        sintaxis1: `if(expresión)
+  sentencia`,
+        sintaxis2: `if(expresión) 
+{
+   sentencia1;
+   sentencia2;
+   …
+   sentencian;
+}`,
+  tablaDatos1: [
+  {Objeto:'',Numero:['1'], Pseudo:['entero : num1'],Codigo:['int num1;']},
+  {Objeto:'',Numero:['2'], Pseudo:['entero : num2'],Codigo:['int num2;']},
+  {Objeto:'',Numero:['3'], Pseudo:['Leer num1'],Codigo:['cin >> num1;']},
+  {Objeto:'',Numero:['4'], Pseudo:['num2 ← num1 MOD 2'],Codigo:['num2 = num1 % 2;']},
+  {Objeto:'',Numero:['5'], Pseudo:['Si num2 = 0'],Codigo:['if (num2 == 0)']},
+  {Objeto:'',Numero:['6'], Pseudo:['Imprimir mensaje: El número num1 es par'],Codigo:['cout << "El número " << num1 << " es par." << endl;']},
+],
+      programa1 : `/*******************************************************
+  WinConsolaPrograma_2_7
+  *******************************************************/
+     
+  // Librerías.
+  #include <iostream>
+  #include <cstdlib>
+     
+  using namespace std;
+     
+  // Función principal.
+  void main()
+  {
+    // Declaración de variables.
+    int num1; // Se declara la variable 'num1' de tipo entero.
+    int num2; // Se declara la variable 'num2' de tipo entero.	
+     
+    // Leer el valor de un número 'num1'.
+    cout << "Ingrese el valor de un número: ";
+    cin >> num1;
+       
+    // Calcular el módulo entre el número ingresado con el valor de dos, 
+    // utilizando una expresión matemática, donde se asigna en la variable 
+    // 'num2' el módulo entre 'num1' y 2.
+    num2 = num1 % 2;
+     
+    // Si el valor de la variable 'num2' es igual a cero.
+    if (num2 == 0)
+    {
+      // Imprimir el mensaje que el número ingresado 'num1' es par.
+      cout << "El número " << num1 << " es par." << endl;
+    }
+     
+    // Incorporar una pausa en el programa.
+    system("pause");
+  }`
+     
+      }
+    ];
     this.praqnique=[
         {
           link:'https://drive.google.com/uc?id=1egwN2u9pFA5YksGGot1bBMFel3bpc8I6&export=download',
