@@ -15,6 +15,7 @@ export interface ExampleTab {
 export class ChapterIIComponent implements OnInit {
   asyncTabs: Observable<ExampleTab[]>;
   prefTabs: any;
+  prefTab2: any;
   introduccion: any;
   praqnique: any;
   praqniquePropuesto: any;
@@ -27,6 +28,539 @@ export class ChapterIIComponent implements OnInit {
   num_capitulo = 2;
 
   constructor() {
+
+
+    this.prefTab2=[{
+    programa2_1:`/*******************************************************
+    WinConsolaPrograma_2_1
+   *******************************************************/
+   
+   // Librerías.
+   #include <iostream>
+   #include <cstdlib>
+   
+   using namespace std;
+   
+   // Función principal.
+   void main()
+   {
+     // Declaración de variables.
+     int num1; // Se declara la variable 'num1' de tipo entero.
+     int num2; // Se declara la variable 'num2' de tipo entero.
+     int num3; // Se declara la variable 'num3' de tipo entero.
+     
+     // Leer el valor del primer número 'num1'.
+     cout << "Ingrese el valor del primer número: ";
+     cin >> num1;
+     // Leer el valor del segundo número 'num2'.
+     cout << "Ingrese el valor del segundo número: ";
+     cin >> num2;
+   
+     // Calcular la suma de dos números, utilizando una expresión matemática,
+     // donde se asigna en la variable num3 la suma entre num1 y num2.
+     num3 = num1 + num2;
+   
+     // Imprimir el valor del resultado de la suma 'num3'.
+     cout << "Resultado de la suma: " << num3 << endl;
+   
+     // Incorporar una pausa en el programa.
+     system("pause");
+   }
+   `,
+    programa2_2:`/*******************************************************
+    WinConsolaPrograma_2_2
+   *******************************************************/
+   
+   // Librerías.
+   #include <iostream>
+   #include <cstdlib>
+   
+   using namespace std;
+   
+   // Función principal.
+   void main()
+   {
+     // Declaración de variables.
+     int a; // Se declara la variable 'a' de tipo entero.
+     int b; // Se declara la variable 'b' de tipo entero.
+   
+     a = 7; // Se asigna el valor de 7 a la variable 'a'.
+     b = a; // Se asigna el valor de 7 de la variable 'a', a la variable 'b'.
+   
+     // Imprimir los valores de 'a' y de 'b'.
+     cout << "Valor de 'a': " << a << endl;
+     cout << "Valor de 'b': " << b << endl;
+        
+     // Incorporar una pausa en el programa.
+     system("pause");
+   }
+   `,
+   programa2_3:`/*******************************************************
+   WinConsolaPrograma_2_3
+  *******************************************************/
+  
+  // Librerías.
+  #include <iostream>
+  #include <cstdlib>
+  
+  using namespace std;
+  
+  // Función principal.
+  void main()
+  {
+    // Declaración de variables.
+    int a; // Se declara la variable 'a' de tipo entero.
+    a = 0; // Se asigna el valor de cero a la variable 'a' que trabaja como 
+      // un contador.
+    a = a + 1; // Se asigna el valor de lo que tiene la variable 'a' que es 
+          // cero más uno, que da uno.
+    // Imprimir el valor de 'a'.
+    cout << "Valor de 'a': " << a << endl;
+    a = a + 1; // Se asigna el valor de lo que tiene la variable 'a' que es 
+          // uno más uno, que da dos.
+    // Imprimir el valor de 'a'.
+    cout << "Valor de 'a': " << a << endl;
+    a = a + 1; // Se asigna el valor de lo que tiene la variable 'a' que es 
+          // dos más uno, que da tres.
+    // Imprimir el valor de 'a'.
+    cout << "Valor de 'a': " << a << endl;	
+    a = a + 1; // Se asigna el valor de lo que tiene la variable 'a' que es 
+          // tres más uno, que da cuatro.
+    // Imprimir el valor de 'a'.
+    cout << "Valor de 'a': " << a << endl;
+    a = a + 1; // Se asigna el valor de lo que tiene la variable 'a' que es 
+          // cuatro más uno, que da cinco.
+    // Imprimir el valor de 'a'.
+    cout << "Valor de 'a': " << a << endl;
+  
+    // Incorporar una pausa en el programa.
+    system("pause");
+  } 
+   `,
+  programa2_4:`/*******************************************************
+  WinConsolaPrograma_2_4
+ *******************************************************/
+ 
+ // Librerías.
+ #include <iostream>
+ #include <cstdlib>
+ 
+ using namespace std;
+ 
+ // Función principal.
+ void main()
+ {
+   // Declaración de variables.
+   int n1; // Se declara la variable 'n1' de tipo entero.
+   int n2; // Se declara la variable 'n2' de tipo entero.
+   int n3; // Se declara la variable 'n3' de tipo entero.
+   int n4; // Se declara la variable 'n3' de tipo entero.
+   int n5; // Se declara la variable 'n3' de tipo entero.
+   int sum; // Se declara la variable 'sum' de tipo entero (sumador).
+   
+   n1 = 1; // Se asigna el valor de 1 a la variable 'n1'.
+   n2 = 2; // Se asigna el valor de 2 a la variable 'n2'.
+   n3 = 3; // Se asigna el valor de 3 a la variable 'n3'.
+   n4 = 4; // Se asigna el valor de 4 a la variable 'n3'.
+   n5 = 5; // Se asigna el valor de 5 a la variable 'n3'.	
+   sum = 0; // Se asigna el valor de cero que es el neutro aditivo, a la 
+       // variable 'sum' que trabaja como un acumulador.
+ 
+   sum = sum + n1; // Se asigna el valor de lo que tiene la variable 'sum' 
+         // que es cero más el valor de la variable n1, que da 1.
+   sum = sum + n2; // Se asigna el valor de lo que tiene la variable 'sum' 
+         // que es 1 más el valor de la variable n2, que da 3.
+   sum = sum + n3; // Se asigna el valor de lo que tiene la variable 'sum' 
+         // que es 3 más el valor de la variable n3, que da 6.
+   sum = sum + n4; // Se asigna el valor de lo que tiene la variable 'sum' 
+         // que es 6 más el valor de la variable n4, que da 10.
+   sum = sum + n5; // Se asigna el valor de lo que tiene la variable 'sum' 
+         // que es 10 más el valor de la variable n5, que da 15.
+ 
+   // Imprimir el valor del acumulador 'sum'.
+   cout << "Valor del acumulador 'sum': " << sum << endl;
+ 
+   // Incorporar una pausa en el programa.
+   system("pause");
+ }
+ `,
+programa2_5:`/*******************************************************
+WinConsolaPrograma_2_5
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
+
+// Función principal.
+void main()
+{
+ // Declaración de variables.
+ int n1; // Se declara la variable 'n1' de tipo entero.
+ int n2; // Se declara la variable 'n2' de tipo entero.
+ int n3; // Se declara la variable 'n3' de tipo entero.
+ int n4; // Se declara la variable 'n4' de tipo entero.
+ int n5; // Se declara la variable 'n5' de tipo entero.
+ int prod; // Se declara la variable 'prod' de tipo entero (producto).
+
+ n1 = 1; // Se asigna el valor de 1 a la variable 'n1'.
+ n2 = 2; // Se asigna el valor de 2 a la variable 'n2'.
+ n3 = 3; // Se asigna el valor de 3 a la variable 'n3'.
+ n4 = 4; // Se asigna el valor de 4 a la variable 'n4'.
+ n5 = 5; // Se asigna el valor de 5 a la variable 'n5'.
+ prod = 1; // Se asigna el valor de uno que es el neutro multiplicativo, 
+      // a la variable 'prod' que trabaja como un acumulador.
+
+ prod = prod * n1; // Se asigna el valor de lo que tiene la variable 'prod' 
+         // que es uno por el valor de la variable n1, que da 1.
+ prod = prod * n2; // Se asigna el valor de lo que tiene la variable 'prod' 
+         // que es 1 por el valor de la variable n2, que da 2.
+ prod = prod * n3; // Se asigna el valor de lo que tiene la variable 'prod' 
+         // que es 2 por el valor de la variable n3, que da 6.
+ prod = prod * n4; // Se asigna el valor de lo que tiene la variable 'prod' 
+         // que es 6 por el valor de la variable n4, que da 24.
+ prod = prod * n5; // Se asigna el valor de lo que tiene la variable 'prod' 
+         // que es 24 por el valor de la variable n3, que da 120.
+ 
+ // Imprimir el valor del acumlador 'sum'.
+ cout << "Valor del acumulador 'prod': " << prod << endl;
+
+ // Incorporar una pausa en el programa.
+ system("pause");
+}
+`,
+programa2_6:`/*******************************************************
+WinConsolaPrograma_2_6
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
+
+// Función principal.
+void main()
+{
+ // Declaración de variables.
+ int a; // Se declara la variable 'a' de tipo entero.
+ int b; // Se declara la variable 'b' de tipo entero.
+ int c; // Se declara la variable 'c' de tipo entero.
+ int d; // Se declara la variable 'd' de tipo entero.
+
+ a = 5; // Se asigna el valor de 5 a la variable 'a'.
+ b = 2; // Se asigna el valor de 2 a la variable 'b'.
+ c = 7; // Se asigna el valor de 7 a la variable 'c'.
+
+ d = (a * c) + (c / 2); // Se asigna el valor de 38 a la variable 'd', que es el
+              // resultado de una expresión matemática.
+
+ // Imprimir el valor de 'd'.
+ cout << "Valor de la expresión 'd': " << d << endl;
+
+ // Incorporar una pausa en el programa.
+ system("pause");
+}
+`,
+tabla2_1_1:`/*******************************************************
+WinConsolaCasoEstudio_2_1
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+
+// Macros o sentencias de preprocesador.
+#define PI 3.141592
+
+using namespace std;
+
+// Función principal.
+void main()
+{
+ float radio;     // Entrada: radio de un círculo.
+ float perimetro; // Salida: perímetro de un círculo.
+ float area;      // Salida: área de un círculo.  
+
+ // Leer el radio del círculo utilizando la variable 'radio'.
+ cout << "Ingrese el valor del radio: ";
+ cin >> radio;
+
+ // Calcular el perímetro.
+ perimetro = 2 * PI * radio;
+
+ // Calcular el área.
+ area = PI * radio * radio;
+
+ // Imprimir el valor de la variable 'perimetro' y de la variable 'area'. 
+ cout << "El perímetro es: " << perimetro << endl;
+ cout << "El área es: " << area << endl;
+
+ // Incorporar una pausa en el programa.
+ system("pause");
+}
+`,
+tabla2_2_1:`/*******************************************************
+WinConsolaCasoEstudio_2_2
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
+
+// Función principal.
+void main()
+{
+ float ancho;     // Entrada: ancho del rectángulo.
+ float largo;     // Entrada: largo del rectángulo.
+ float perimetro; // Salida: perímetro del rectángulo.
+ float area;      // Salida: área del rectángulo.  
+
+ // Leer el ancho del rectángulo utilizando la variable 'ancho'.
+ cout << "Ingrese el valor del ancho: ";
+ cin >> ancho;
+ // Leer el largo del rectángulo utilizando la variable 'largo'.
+ cout << "Ingrese el valor del largo: ";
+ cin >> largo;
+
+ // Calcular el perímetro.
+ perimetro = 2 * ancho + 2 * largo;
+ // Calcular el área.
+ area = ancho * largo;
+
+ // Imprimir el valor de la variable 'perimetro' y de la variable 'area'. 
+ cout << "El perímetro es: " << perimetro << endl;
+ cout << "El área es: " << area << endl;
+
+ // Incorporar una pausa en el programa.
+ system("pause");
+}
+`,
+tabla2_3_1:`/*******************************************************
+WinConsolaCasoEstudio_2_3
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+#include <cmath>
+
+// Macros o sentencias de preprocesador.
+#define PI 3.141592
+
+using namespace std;
+
+// Función principal.
+void main()
+{
+ float r;       // Entrada: radio del cono.	
+ float h;       // Entrada: altura del cono.
+ float g;       // Salida: generatriz del cono.
+ float area;    // Salida: área del cono.
+ float volumen; // Salida: volumen del cono.  
+
+ // Leer el radio del cono utilizando la variable 'r'.
+ cout << "Ingrese el valor del radio: ";
+ cin >> r;
+ // Leer la altura del cono utilizando la variable 'h'.
+ cout << "Ingrese el valor de la altura: ";
+ cin >> h;
+
+ // Calcular la generatriz del cono.
+ g = sqrt(r * r + h * h);
+ // Calcular el área.
+ area = (PI * r * g) + (PI * pow(r, 2));
+ // Calcular el volumen.
+ volumen = (1 / 3.0) * PI * pow(r, 2) * h;
+
+ // Imprimir el valor de la variable 'g', de la variable 'area' y 
+ // de la variable 'volumen'.
+ cout << "La generatriz es: " << g << endl;
+ cout << "El área es: " << area << endl;
+ cout << "El volumen es: " << volumen << endl;
+
+ // Incorporar una pausa en el programa.
+ system("pause");
+}
+`,
+tabla2_4_1:`/*******************************************************
+WinConsolaCasoEstudio_2_4
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+#include <cmath>
+
+// Directivas define o macros.
+#define PI 3.141593
+#define g 9.80665
+
+using namespace std;
+
+// Función principal.
+int main()
+{
+ // Declaración de variables.	
+ float v = 0.0f;     // Entrada: Velocidad inicial.
+ float theta = 0.0f; // Entrada: Ángulo de lanzamiento.
+ float d = 0.0f;     // Salida: Distancia alcanzada.
+ float t = 0.0f;     // Salida: Tiempo de vuelo.
+ float h = 0.0f;     // Salida: Altura máxima.
+
+ // Imprimir un mensaje de información.
+ cout << "Tiro Parabólico de un Proyectil." << endl;
+ cout << endl;
+
+ // Leer el valor de la velocidad.
+ cout << "Ingrese el valor de la velocidad [m/seg]: ";
+ cin >> v;
+ 
+ // Leer el valor del ángulo theta.
+ cout << "Ingrese el valor del ángulo [grados]: ";
+ cin >> theta;
+ 
+ // Convertir el ángulo theta de grados a radianes.
+ theta = theta * PI / 180.0;
+
+ // Calcular la distancia alcanzada.
+ d = (pow(v, 2) * sin(2 * theta)) / g;
+
+ // Calcular el tiempo de vuelo.
+ t = (v * sin(theta)) / g;
+
+ // Calcular la altura máxima.
+ h = (pow(v, 2) * pow(sin(theta), 2)) / (2 * g);
+
+ cout << endl;
+
+ // Imprimir el valor de la distancia.
+ cout << "El valor de la distancia es: " << d << " m" << endl;
+
+ // Imprimir el valor del tiempo de vuelo.
+ cout << "El valor del tiempo de vuelo es: " << t << " seg" << endl;
+
+ // Imprimir el valor de la altura.
+ cout << "El valor de la altura es: " << h << " m" << endl;
+
+ // Incorporar una pausa en el programa.
+ system("pause");
+}
+`,
+programa2_7:`/*******************************************************
+WinConsolaPrograma_2_7
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
+
+// Función principal.
+void main()
+{
+ // Declaración de variables.
+ int num1; // Se declara la variable 'num1' de tipo entero.
+ int num2; // Se declara la variable 'num2' de tipo entero.	
+
+ // Leer el valor de un número 'num1'.
+ cout << "Ingrese el valor de un número: ";
+ cin >> num1;
+ 
+ // Calcular el módulo entre el número ingresado con el valor de dos, 
+ // utilizando una expresión matemática, donde se asigna en la variable 
+ // 'num2' el módulo entre 'num1' y 2.
+ num2 = num1 % 2;
+
+ // Si el valor de la variable 'num2' es igual a cero.
+ if (num2 == 0)
+ {
+   // Imprimir el mensaje que el número ingresado 'num1' es par.
+   cout << "El número " << num1 << " es par." << endl;
+ }
+
+ // Incorporar una pausa en el programa.
+ system("pause");
+}
+`,
+programa2_8:`/*******************************************************
+WinConsolaPrograma_2_8
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
+
+// Función principal.
+void main()
+{
+ // Declaración de variables.
+ float nota; // Se declara la variable 'nota' de tipo float.
+ 
+ // Leer el valor de una nota.
+ cout << "Ingrese una nota entre (0 y 10): ";
+ cin >> nota;	
+
+ // Si el valor de la variable nota es mayor o igual que 7.
+ if (nota >= 7)
+ {
+   // Imprimir el mensaje de Aprobado.
+   cout << "Aprobado." << endl;
+ }
+ 
+ // Incorporar una pausa en el programa.
+ system("pause");
+}
+`,
+tabla2_5_1:`/*******************************************************
+WinConsolaCasoEstudio_2_5
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
+
+// Función principal.
+void main()
+{
+ // Declaración de variables.
+ int num1; // Se declara la variable 'num1' de tipo entero.
+ int num2; // Se declara la variable 'num2' de tipo entero.
+ int num3; // Se declara la variable 'num3' de tipo entero.
+ 
+ // Leer el valor del primer número 'num1'.
+ cout << "Ingrese el valor del primer número: ";
+ cin >> num1;
+ // Leer el valor del segundo número 'num2'.
+ cout << "Ingrese el valor del segundo número: ";
+ cin >> num2;
+
+ // Calcular el módulo entre dos números, utilizando una expresión matemática,
+ // donde se asigna en la variable num3 el módulo entre num1 y num2.
+ num3 = num1 % num2;
+
+ // Si el valor de la variable num3 es igual a cero.
+ if (num3 == 0)
+ {
+   // Imprimir el mensaje que el número 1 es divisible para el número 2.
+   cout << "El número " << num1 << " es divisible para " << num2 << endl;
+ }
+ 
+ // Incorporar una pausa en el programa.
+ system("pause");
+}
+`
+    }]
+
       this.introduccion=[{
         f1:
         `
