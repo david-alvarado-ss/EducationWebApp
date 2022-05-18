@@ -558,7 +558,397 @@ void main()
  // Incorporar una pausa en el programa.
  system("pause");
 }
+`,
+programa2_17:`/*******************************************************
+WinConsolaPrograma_2_17
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+#include <cmath>
+
+using namespace std;
+
+// Función principal.
+void main()
+{
+ int i; // Salida: contador del bucle.
+
+ // Impresión de un mensaje de información.
+ cout << "Impresión del 1 al 10 de manera creciente." << endl;
+ 
+ // Inicializar el valor del contador en uno.
+ i = 1;
+ // Mientras la condición sea verdadera, hacer:
+ while (i <= 10)
+ {
+   // Imprimir el valor del contador.
+   cout << i << endl;
+   // Incrementar el valor del contador en uno.
+   i++;
+ }
+
+ // Incorporar una pausa en el programa.
+ system("pause");
+}
+`,
+programa2_18:`/*******************************************************
+WinConsolaPrograma_2_18
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+#include <cmath>
+
+using namespace std;
+
+// Función principal.
+void main()
+{
+ int i; // Salida: contador del bucle.
+
+ // Impresión de un mensaje de información.
+ cout << "Impresión del 10 al 1 de manera decreciente." << endl;
+
+ // Inicializar el valor del contador en diez.
+ i = 10;
+ // Mientras la condición sea verdadera, hacer:
+ while (i >= 1)
+ {
+   // Imprimir el valor del contador.
+   cout << i << endl;
+   // Decrementar el valor del contador en uno.
+   i--;
+ }
+
+ // Incorporar una pausa en el programa.
+ system("pause");
+}
+`,
+programa2_19:`/*******************************************************
+WinConsolaPrograma_2_19
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+#include <cmath>
+
+using namespace std;
+
+// Función principal.
+void main()
+{
+ int i; // Salida: contador del bucle.
+
+ // Impresión de un mensaje de información.
+ cout << "Impresión de los números pares del 2 al 10." << endl;
+
+ // Inicializar el valor del contador en dos.
+ i = 2;
+ // Mientras la condición sea verdadera, hacer:
+ while (i <= 10)
+ {
+   // Imprimir el valor del contador.
+   cout << i << endl;
+   // Incrementar el valor del contador en dos.
+   i = i + 2;
+ }
+
+ // Incorporar una pausa en el programa.
+ system("pause");
+}
+`,
+programa2_20: `/*******************************************************
+WinConsolaPrograma_2_20
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+#include <cmath>
+
+using namespace std;
+
+// Función principal.
+void main()
+{
+ int i; // Salida: contador del bucle.
+
+ // Impresión de un mensaje de información.
+ cout << "Impresión de los números impares del 9 al 1." << endl;
+
+ // Inicializar el valor del contador en diez.
+ i = 9;
+ // Mientras la condición sea verdadera, hacer:
+ while (i >= 1)
+ {
+   // Imprimir el valor del contador.
+   cout << i << endl;
+   // Decrementar el valor del contador en dos.
+   i = i - 2;
+ }
+
+ // Incorporar una pausa en el programa.
+ system("pause");
+}
+`,
+tabla2_17_1:`/*******************************************************
+WinConsolaCasoEstudio_2_17
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+#include <cmath>
+
+using namespace std;
+
+// Función principal.
+void main()
+{
+ int n;      // Entrada: número de notas.
+ float nota; // Entrada: valor de una nota.	
+ float sum;  // Salida: sumatoria de un grupo de notas.
+ float prom; // Salida: media o promedio de un grupo de notas.
+ int i;      // Auxiliar: contador del bucle.
+
+ // Impresión de un mensaje de información.
+ cout << "Sumatoria y promedio de un grupo de notas." << endl << endl;
+ // Leer el valor del número de notas que se desea ingresar.
+ cout << "Ingrese el número de notas que desea leer: "; cin >> n;
+
+ // Inicializar el valor del contador en uno.
+ i = 1;
+ // Inicializar el valor de la sumatoria en cero.
+ sum = 0;
+ // Mientras el valor del contador ‘i’ sea menor o igual que cero, hacer:
+ while (i <= n)
+ {
+   // Leer el valor de una nota.
+   cout << "Ingrese una nota: "; cin >> nota;
+   // Asignar al acumulador ‘sum’ el valor que tiene acumulado más el 
+   // valor de una nota.
+   sum = sum + nota;
+   // Incrementar el valor del contador ‘i’ en uno.
+   i++;
+ }
+ // Calcular el valor del promedio de un grupo de diez notas.
+ prom = sum / n;
+
+ // Imprimir el valor de la sumatoria de un grupo de notas.
+ cout << endl << "Sumatoria: " << sum << endl;
+ // Imprimir el valor del promedio de un grupo de notas.
+ cout << "Promedio: " << prom << endl;
+
+ // Incorporar una pausa en el programa.
+ system("pause");
+}
+
+`,
+tabla2_18_2:`/*******************************************************
+WinConsolaCasoEstudio_2_18
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+#include <cmath>
+
+// Macros o sentencias de preprocesador.
+
+using namespace std;
+
+// Función principal.
+void main()
+{
+ // Declaración de variables.
+ long a;   // Entrada: primer número.
+ long b;   // Entrada: segundo número.
+ long D;   // Auxiliar: Dividendo.
+ long d;   // Auxiliar: divisor.
+ long R;   // Auxiliar: Residuo.
+ long MCD; // Salida: Máximo Común Divisor.
+ long mcm; // Salida: mínimo común múltiplo.
+
+ // Imprimir un mensaje de información.
+ cout << "\tMCD y mcm." << endl << endl;	
+
+ // Leer el primer número.	
+ cout << "Ingrese el primer número: "; cin >> a;
+ // Leer el segundo número.	
+ cout << "Ingrese el segundo número: "; cin >> b;
+   
+ // Asignar a la variable Dividendo el valor del primer número.
+ D = a; 
+ // Asignar a la variable divisor el valor del segundo número.
+ d = b;	
+ // Mientras el divisor sea diferente de cero, hacer:
+ while (d != 0) // (d>0)
+ { 
+   // Calcular el valor del Residuo entre el Dividendo y el divisor.
+   R = D % d;
+   // Asignar a la variable Dividendo el valor del divisor.
+   D = d;
+   // Asignar a la variable divisor el valor del Residuo.
+   d = R;		
+ } 
+ // Asignar a la variable MCD el valor final del Dividendo.
+ MCD = D;
+ // Calcular el valor del mínimo común múltiplo.
+ mcm = a * b / MCD;
+
+ // Imprimir el valor del Máximo Común Divisor (MCD).
+ cout << endl << "El MCD es: " << MCD << endl;	
+ // Imprimir el valor del mínimo común múltiplo (mcm).
+ cout << "El mcm es: " << mcm << endl;	
+
+ // Incorporar una pausa en el programa.
+ system("pause");
+}
+
+`,
+programa2_21: `/*******************************************************
+WinConsolaPrograma_2_21
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+#include <cmath>
+
+using namespace std;
+
+// Función principal.
+void main()
+{
+ int i; // Salida: contador del bucle.
+
+ // Impresión de un mensaje de información.
+ cout << "Impresión del 1 al 10 de manera creciente." << endl;
+
+ // Inicializar el valor del contador en uno.
+ i = 1;
+ // Hacer:
+ do {
+   // Imprimir el valor del contador.
+   cout << i << endl;
+   // Incrementar el valor del contador en uno.
+   i++;
+ // Mientras la condición sea verdadera.
+ } while (i <= 10);
+ 
+ // Incorporar una pausa en el programa.
+ system("pause");
+}
 `
+,
+programa2_22: `/*******************************************************
+WinConsolaPrograma_2_22
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+#include <cmath>
+
+using namespace std;
+
+// Función principal.
+void main()
+{
+ int i; // Salida: contador del bucle.
+
+ // Impresión de un mensaje de información.
+ cout << "Impresión del 10 al 1 de manera decreciente." << endl;
+
+ // Inicializar el valor del contador en diez.
+ i = 10;
+ // Hacer:
+ do {
+   // Imprimir el valor del contador.
+   cout << i << endl;
+   // Decrementar el valor del contador en uno.
+   i--;
+ // Mientras la condición sea verdadera.
+ } while (i >= 1);
+ 
+ // Incorporar una pausa en el programa.
+ system("pause");
+}
+`,
+programa2_23:`/*******************************************************
+WinConsolaPrograma_2_23
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+#include <cmath>
+
+using namespace std;
+
+// Función principal.
+void main()
+{
+ int i; // Salida: contador del bucle.
+
+ // Impresión de un mensaje de información.
+ cout << "Impresión de los números pares del 2 al 10." << endl;
+
+ // Inicializar el valor del contador en dos.
+ i = 2;
+ // Hacer:
+ do {
+   // Imprimir el valor del contador.
+   cout << i << endl;
+   // Incrementar el valor del contador en dos.
+   i = i + 2;
+ // Mientras la condición sea verdadera.
+ } while (i <= 10);
+ 
+ // Incorporar una pausa en el programa.
+ system("pause");
+}
+`,
+programa2_24:`/*******************************************************
+WinConsolaPrograma_2_24
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+#include <cmath>
+
+using namespace std;
+
+// Función principal.
+void main()
+{
+ int i; // Salida: contador del bucle.
+
+ // Impresión de un mensaje de información.
+ cout << "Impresión de los números impares del 9 al 1." << endl;
+
+ // Inicializar el valor del contador en diez.
+ i = 9;
+ // Hacer:
+ do {
+   // Imprimir el valor del contador.
+   cout << i << endl;
+   // Decrementar el valor del contador en dos.
+   i = i - 2;
+ // Mientras la condición sea verdadera.
+ } while (i >= 1);
+
+ // Incorporar una pausa en el programa.
+ system("pause");
+}
+`,
+
+
     }]
 
       this.introduccion=[{

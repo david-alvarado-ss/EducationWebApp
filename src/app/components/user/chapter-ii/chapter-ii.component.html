@@ -843,15 +843,476 @@
         <ng-template matTabContent>
           <mat-tab-group>
             <!-- <mat-tab *ngFor="let tab of asyncTabs | async"> -->
-            <mat-tab  label="2.4.1. La sentencia while">
+              <mat-tab  label="Introducción">
+                <ng-template matTabContent>
+                  <br>
+                  <h1>Estructuras de Control Repetitivas o Bucles</h1>
+                  <p>La estructura de control conocida como bucle es aquella que realiza la repetición o iteración de acciones. La sentencia o grupos de sentencias que se repiten en un bloque se denominan cuerpo del bucle y cada repetición del cuerpo del bucle se llama iteración del bucle. Las principales sentencias de repetición son:
+                  </p>
+                  <ol type="a">
+                    <li>La sentencia while </li>
+                    <li>	La sentencia do-while </li>
+                     <li>	La sentencia for </li>
+                    <li>	Bucles anidados  </li> 
+                  </ol>
+                </ng-template>
+              </mat-tab>
+              <mat-tab  label="2.4.1. La sentencia while">
+                <ng-template matTabContent>
+                  <br><h1>La sentencia while()</h1>
+                  <p>La sentencia while() crea un bucle que se repite hasta que la expresión lógica o condición del bucle se vuelva falsa. El cuerpo del bucle while() se ejecutará cero o más veces dependiendo de la condición del bucle. El formato de esta sentencia tiene la siguiente sintaxis:</p>
+                  <p><b>Sintaxis 1:</b></p>
+                  <pre><code align="left">while(Condición_Bucle)
+      sentencia;</code></pre>
+                    <table>
+                      <tr VALIGN=top><td><code>Condición_Bucle</code></td>
+                        <td>Expresión lógica o booleana que determina si la sentencia o acción se ha de ejecutar de manera repetitiva.</td></tr>
+                        <tr VALIGN=top><td><code>sentencia</code></td>
+                        <td>La sentencia o acción se ejecuta si la expresión lógica es verdadera dentro del bucle.</td></tr>
+                    </table>
+                    <br>
+                    <table border="1" CELLPADDING=5 CELLSPACING=0>
+                      <tr VALIGN=top><td width="50"><b> Nota:</b></td><td>  En esta sintaxis no es necesario utilizar llaves ya que se tiene una sola sentencia o instrucción.</td></tr>
+                    </table>
+                    <br>
+                    <p><b>Sintaxis 2:</b></p>
+                  <pre><code align="left">while(Condición_Bucle)
+  &#65371;
+        sentencia<sub>1</sub>;
+        sentencia<sub>2</sub>;
+        ...
+        sentencia<sub>n</sub>;
+  &#65373; 
+  </code></pre>
+                    <table>
+                      <tr VALIGN=top><td><code>Condición_Bucle</code></td>
+                        <td>Expresión lógica o booleana que determina si la sentencia o acción se ha de ejecutar de manera repetitiva.</td></tr>
+                        <tr VALIGN=top><td><code>sentencia</code></td>
+                        <td>Las acciones o sentencias se ejecutan si la expresión lógica es verdadera dentro del bucle.</td></tr>
+                    </table>
+                    <br>
+                    <h4><b>Ejercicio 2.17: </b>Escribir un programa que permita imprimir de manera ascendente los números del 1 al 10 utilizando un bucle while().</h4>
+                    <br>
+                    <TABLE border="1" align="center" cellspacing="0" cellpadding="5">
+                      <TR>
+                        <th width="10"> <b> N° </b> </th> 
+                        <th width="200"> <b> Algoritmo en Pseudocódigo </b> </th>
+                        <th width="210"> <b> Algoritmo en Lenguaje C/C++ </b> </th>
+                      </TR>
+                      <TR> <td>1</td>  <td>entero : i</td>
+                        <td>
+                          <font color="blue" face="Bookman Old Style, Book Antiqua, Garamond">int </font>
+                          i;</td>
+                      </TR>
+                      <TR>
+                        <td>2</td>
+                        <td>Inicializar el valor del contador en uno</td>
+                        <td>i = 1;  </td>
+                      </TR>
+                      <TR><td>3</td> <td>Mientras la condición sea verdadera, hacer:</td> 
+                        <td><font color="blue" face="Bookman Old Style, Book Antiqua, Garamond">while </font>
+                          (i &gt;=10) &#65371;</td> </TR>
+                      <TR><td>4</td><td>Imprimir el valor del contador. "</td>
+                        <td>cout <font color="green" face="Bookman Old Style, Book Antiqua, Garamond">&gt;&gt;</font>
+                          i <font color="green" face="Bookman Old Style, Book Antiqua, Garamond">&gt;&gt;</font> endl;</td></TR>
+                       <TR><td>5</td><td>Incrementar el valor del contador en uno.</td>
+<td><pre>i++;
+  &#65373; 
+</pre> </td></TR>
+                    </TABLE> <br>
+                    <h5><b>Programa 2.17: </b>Código del programa</h5>
+                    <pre><code [highlight]="prefTab2[0].programa2_17"  [lineNumbers]="true"></code></pre>
+                    <p>En la salida de la Ejecución 2.17 se puede ver la impresión del 1 al 10 de manera creciente.</p>
+                    <h5><b>Ejecución 2.17 </b>Salida del programa.</h5>
+                    <img src="./assets/images/Capitulos/II/media/Ejecución 2.17.png" style="display:block; margin:auto; "><br>
+                    <p>En la Tabla 2.17 se puede ver la prueba de escritorio del programa, donde se puede ver que en cada iteración del bucle el contador se incrementa en uno, mientras la condición del bucle sea verdadera.</p>
+                    <h5><b>Tabla 2.17: </b>Prueba de escritorio del programa.</h5>
+                    <table frame="void" rules="all" align="center" cellspacing="0" cellpadding="5"> 
+                      <tr style="color:red"><td>i</td><td>i &gt;=10</td><td>cout &gt;&gt; i &gt;&gt; endl;</td></tr>
+                      <tr><td>1</td><td>1 &gt;=10 (V)</td><td>1 INTRO</td></tr>
+                      <tr><td>2</td><td>2 &gt;=10 (V)</td><td>2 INTRO</td></tr>
+                      <tr><td>3</td><td>3 &gt;=10 (V)</td><td>3 INTRO</td></tr>
+                      <tr><td>4</td><td>4 &gt;=10 (V)</td><td>4 INTRO</td></tr>
+                      <tr><td>5</td><td>5 &gt;=10 (V)</td><td>5 INTRO</td></tr>
+                      <tr><td>6</td><td>6 &gt;=10 (V)</td><td>6 INTRO</td></tr>
+                      <tr><td>7</td><td>7 &gt;=10 (V)</td><td>7 INTRO</td></tr>
+                      <tr><td>8</td><td>8 &gt;=10 (V)</td><td>8 INTRO</td></tr>
+                      <tr><td>9</td><td>9 &gt;=10 (V)</td><td>9 INTRO</td></tr>
+                      <tr><td>10</td><td>10 &gt;=10 (V)</td><td>10 INTRO</td></tr>
+                      <tr><td>11</td><td style="color:rgb(33, 15, 201)">11 &gt;=10 (F)</td><td> </td></tr>
+                      
+                    </table>
+                    <br>
+                    <h4><b>Ejercicio 2.18: </b>Escribir un programa que permita imprimir de manera descendente los números del 10 al 1 utilizando un bucle while().</h4>
+                    <br>
+                    <TABLE border="1" align="center" cellspacing="0" cellpadding="5">
+                      <TR>
+                        <th width="10"> <b> N° </b> </th> 
+                        <th width="200"> <b> Algoritmo en Pseudocódigo </b> </th>
+                        <th width="210"> <b> Algoritmo en Lenguaje C/C++ </b> </th>
+                      </TR>
+                      <TR> <td>1</td>  <td>entero : i</td>
+                        <td>
+                          <font color="blue" face="Bookman Old Style, Book Antiqua, Garamond">int </font>
+                          i;</td>
+                      </TR>
+                      <TR>
+                        <td>2</td>
+                        <td>Inicializar el valor del contador en diez</td>
+                        <td>i = 10;  </td>
+                      </TR>
+                      <TR><td>3</td> <td>Mientras la condición sea verdadera, hacer:</td> 
+                        <td><font color="blue" face="Bookman Old Style, Book Antiqua, Garamond">while </font>
+                          (i &lt;=1) &#65371;</td> </TR>
+                      <TR><td>4</td><td>Imprimir el valor del contador. "</td>
+                        <td>cout <font color="green" face="Bookman Old Style, Book Antiqua, Garamond">&gt;&gt;</font>
+                          i <font color="green" face="Bookman Old Style, Book Antiqua, Garamond">&gt;&gt;</font> endl;</td></TR>
+                       <TR><td>5</td><td>Decrementar el valor del contador en uno.</td>
+<td><pre>i--;
+  &#65373; 
+</pre> </td></TR>
+                    </TABLE> <br>
+                    <h5><b>Programa 2.18: </b>Código del programa</h5>
+                    <pre><code [highlight]="prefTab2[0].programa2_18"  [lineNumbers]="true"></code></pre>
+                    <p>En la salida de la Ejecución 2.18 se puede ver la impresión del 10 al 1 de manera decreciente.</p>
+                    <h5><b>Ejecución 2.18 </b>Salida del programa.</h5>
+                    <img src="./assets/images/Capitulos/II/media/Ejecución 2.18.png" style="display:block; margin:auto; "><br>
+ <p>En la Tabla 2.18 se puede ver la prueba de escritorio del programa, donde se puede ver que en cada iteración del bucle el contador se decrementa en uno, mientras la condición del bucle sea verdadera.</p>
+                    <h5><b>Tabla 2.18: </b>Prueba de escritorio del programa.</h5>
+                    <table frame="void" rules="all" align="center" cellspacing="0" cellpadding="5"> 
+                      <tr style="color:red"><td>i</td><td>i &lt;=10</td><td>cout &gt;&gt; i &gt;&gt; endl;</td></tr>
+                      <tr><td>10</td><td>10 &lt;=10 (V)</td><td>10 INTRO</td></tr>
+                      <tr><td>9</td><td>9 &lt;=1 (V)</td><td>9 INTRO</td></tr>
+                      <tr><td>8</td><td>8 &lt;=1 (V)</td><td>8 INTRO</td></tr>
+                      <tr><td>7</td><td>7 &lt;=1 (V)</td><td>7 INTRO</td></tr>
+                      <tr><td>6</td><td>6 &lt;=1 (V)</td><td>6 INTRO</td></tr>
+                      <tr><td>5</td><td>5 &lt;=1 (V)</td><td>5 INTRO</td></tr>
+                      <tr><td>4</td><td>4 &lt;=1 (V)</td><td>4 INTRO</td></tr>
+                      <tr><td>3</td><td>3 &lt;=1 (V)</td><td>3 INTRO</td></tr>
+                      <tr><td>2</td><td>2 &lt;=1 (V)</td><td>2 INTRO</td></tr>
+                      <tr><td>1</td><td>1 &lt;=1 (V)</td><td>1 INTRO</td></tr>
+                      <tr><td>0</td><td style="color:rgb(33, 15, 201)">0 &lt;=1 (F)</td><td> </td></tr>
+                      
+                    </table><br>
+                    <h4><b>Ejercicio 2.19: </b>Escribir un programa que permita imprimir de manera ascendente los números pares del 2 al 10 utilizando un bucle while().</h4>
+                    <br>
+                    <TABLE border="1" align="center" cellspacing="0" cellpadding="5">
+                      <TR>
+                        <th width="10"> <b> N° </b> </th> 
+                        <th width="200"> <b> Algoritmo en Pseudocódigo </b> </th>
+                        <th width="210"> <b> Algoritmo en Lenguaje C/C++ </b> </th>
+                      </TR>
+                      <TR> <td>1</td>  <td>entero : i</td>
+                        <td>
+                          <font color="blue" face="Bookman Old Style, Book Antiqua, Garamond">int </font>
+                          i;</td>
+                      </TR>
+                      <TR>
+                        <td>2</td>
+                        <td>Inicializar el valor del contador en dos</td>
+                        <td>i = 2;  </td>
+                      </TR>
+                      <TR><td>3</td> <td>Mientras la condición sea verdadera, hacer:</td> 
+                        <td><font color="blue" face="Bookman Old Style, Book Antiqua, Garamond">while </font>
+                          (i &gt;=1) &#65371;</td> </TR>
+                      <TR><td>4</td><td>Imprimir el valor del contador. "</td>
+                        <td>cout <font color="green" face="Bookman Old Style, Book Antiqua, Garamond">&gt;&gt;</font>
+                          i <font color="green" face="Bookman Old Style, Book Antiqua, Garamond">&gt;&gt;</font> endl;</td></TR>
+                       <TR><td>5</td><td>Incrementar el valor del contador en dos.</td>
+<td><pre>i=i+2;
+  &#65373; 
+</pre> </td></TR>
+                    </TABLE> <br>
+                    <h5><b>Programa 2.19: </b>Código del programa</h5>
+                    <pre><code [highlight]="prefTab2[0].programa2_19"  [lineNumbers]="true"></code></pre>
+                    <p>En la salida de la Ejecución 2.19 se puede ver la impresión de los números pares del 2 al 10 de manera creciente.</p>
+                    <h5><b>Ejecución 2.19 </b>Salida del programa.</h5>
+                    <img src="./assets/images/Capitulos/II/media/Ejecución 2.19.png" style="display:block; margin:auto; "><br>
+ <p>En la Tabla 2.19 se puede ver la prueba de escritorio del programa, donde se puede ver que en cada iteración del bucle el contador se incrementa en dos, mientras la condición del bucle sea verdadera.
+</p>
+                    <h5><b>Tabla 2.19: </b>Prueba de escritorio del programa.</h5>
+                    <table frame="void" rules="all" align="center" cellspacing="0" cellpadding="5"> 
+                      <tr style="color:red"><td>i</td><td>i &gt;=10</td><td>cout &gt;&gt; i &gt;&gt; endl;</td></tr>
+                      <tr><td>2</td><td>2 &gt;=10 (V)</td><td>2 INTRO</td></tr>
+                      <tr><td>4</td><td>4 &gt;=10 (V)</td><td>4 INTRO</td></tr>
+                      <tr><td>6</td><td>6 &gt;=10 (V)</td><td>6 INTRO</td></tr>
+                      <tr><td>8</td><td>8 &gt;=10 (V)</td><td>8 INTRO</td></tr>
+                      <tr><td>10</td><td>10 &gt;=10 (V)</td><td>10 INTRO</td></tr>
+                      <tr><td>12</td><td>12 &gt;=10 (F)</td><td> </td></tr>                      
+                    </table> <br>
+ <h4><b>Ejercicio 2.20: </b>Escribir un programa que permita imprimir de manera descendente los números impares del 9 al 1 utilizando un bucle while().
+</h4>
+                    <br>
+                    <TABLE border="1" align="center" cellspacing="0" cellpadding="5">
+                      <TR>
+                        <th width="10"> <b> N° </b> </th> 
+                        <th width="200"> <b> Algoritmo en Pseudocódigo </b> </th>
+                        <th width="210"> <b> Algoritmo en Lenguaje C/C++ </b> </th>
+                      </TR>
+                      <TR> <td>1</td>  <td>entero : i</td>
+                        <td>
+                          <font color="blue" face="Bookman Old Style, Book Antiqua, Garamond">int </font>
+                          i;</td>
+                      </TR>
+                      <TR>
+                        <td>2</td>
+                        <td>Inicializar el valor del contador en nueve</td>
+                        <td>i = 9;  </td>
+                      </TR>
+                      <TR><td>3</td> <td>Mientras la condición sea verdadera, hacer:</td> 
+                        <td><font color="blue" face="Bookman Old Style, Book Antiqua, Garamond">while </font>
+                          (i &lt;=1) &#65371;</td> </TR>
+                      <TR><td>4</td><td>Imprimir el valor del contador. "</td>
+                        <td>cout <font color="green" face="Bookman Old Style, Book Antiqua, Garamond">&gt;&gt;</font>
+                          i <font color="green" face="Bookman Old Style, Book Antiqua, Garamond">&gt;&gt;</font> endl;</td></TR>
+                       <TR><td>5</td><td>Decrementar el valor del contador en dos.</td>
+<td><pre>i=i-2;
+  &#65373; 
+</pre> </td></TR>
+                    </TABLE> <br>
+                    <h5><b>Programa 2.20: </b>Código del programa</h5>
+                    <pre><code [highlight]="prefTab2[0].programa2_20"  [lineNumbers]="true"></code></pre>
+                    <p>En la salida de la Ejecución 2.20 se puede ver la impresión del 9 al 1 de manera decreciente.
+</p>
+                    <h5><b>Ejecución 2.20 </b>Salida del programa.</h5>
+                    <img src="./assets/images/Capitulos/II/media/Ejecución 2.20.png" style="display:block; margin:auto; "><br>
+ <p>En la Tabla 2.20 se puede ver la prueba de escritorio del programa, donde se puede ver que en cada iteración del bucle el contador se decrementa en dos, mientras la condición del bucle sea verdadera.
+
+</p>
+                    <h5><b>Tabla 2.20: </b>Prueba de escritorio del programa.</h5>
+                    <table frame="void" rules="all" align="center" cellspacing="0" cellpadding="5"> 
+                      <tr style="color:red"><td>i</td><td>i &lt;=1</td><td>cout &gt;&gt; i &gt;&gt; endl;</td></tr>
+                      <tr><td>9</td><td>9 &gt;=1 (V)</td><td>9 INTRO</td></tr>
+                      <tr><td>7</td><td>7 &gt;=1 (V)</td><td>7 INTRO</td></tr>
+                      <tr><td>5</td><td>5 &gt;=1 (V)</td><td>5 INTRO</td></tr>
+                      <tr><td>3</td><td>3 &gt;=1 (V)</td><td>3 INTRO</td></tr>
+                      <tr><td>1</td><td>1 &gt;=1 (V)</td><td>1 INTRO</td></tr>
+                      <tr><td>-1</td><td>-1 &gt;=1 (F)</td><td> </td></tr>                      
+                    </table> <br>
+                    <h1><b>Caso de Estudio 2.17: Sumatoria y Promedio de un Grupo de Notas.</b></h1>
+                    <h2><b>A) Problema</b></h2>
+                    <p>Escribir un programa que permita calcular la sumatoria y el promedio de un grupo de notas leídas desde el teclado.</p>
+                    <h2><b>B) Análisis</b></h2>
+                    <p>Claramente se puede ver que las entradas del problema son el número de notas representada por la variable ‘n’ y el valor de una nota representada por la variable ‘nota’. Hay dos salidas requeridas que son la sumatoria de un grupo de notas representada por la variable ‘sum’ y el promedio de un grupo de notas representada por la variable ‘prom’. Se requiere un dato auxiliar que es el contador del bucle representado por la variable ‘i’. El requerimiento de los datos y las fórmulas requeridas se muestran a continuación. </p>
+                    <h3><b>Requerimiento de los Datos</b></h3>
+                    <p><b>Entradas del Programa</b></p>
+                    <table>
+                      <tr><td width="200">n</td><td width="200">/* Número de notas */</td></tr>
+                      <tr><td width="200">nota</td><td width="200">/* Valor de una nota */</td></tr>
+                    </table><br>
+                    <p><b>Salidas del Problema</b></p>
+                    <table>
+                      <tr><td width="200">sum</td><td width="200">/* Sumatoria de un grupo de notas  */</td></tr>
+                      <tr><td width="200">prom</td><td width="200">/* Media o promedio de un grupo de notas */</td></tr>
+                     </table><br>
+                    <p><b>Auxiliares del Problema</b></p>
+                    <table>
+                      <tr><td width="200">i</td><td width="200">/* Contador del bucle  */</td></tr>
+                   </table><br>
+                   <p><b>Fórmulas Relevantes</b></p>
+                      <table>
+                        <tr><td width="120"><em>sum = sum + valor </em></td><td width="30"> (1) </td><td width="280">/* Fórmula que representa el acumulador de una sumatoria */</td></tr>
+                        <tr><td ><em>prom = <sup>sum</sup> / <sub>n</sub></em></td><td> (2) </td><td>/* Fórmula que calcula el promedio de un grupo de elementos en función del valor de la sumatoria  */</td></tr>
+                      </table> <br>
+                      <h3><b>B.2) Diagrama de Entrada-Salida</b></h3>
+                <p>En la Figura 2.17.2 se muestra el diagrama de Entrada-Salida del programa donde se identifican y se diagraman las entradas, salidas y auxiliares del problema como son: a) Entradas: la variable ‘n’; la variable ‘nota’; b) Salidas: la variable ‘sum’; la variable ‘prom’; c) Auxiliares: el contador ‘i’.
+</p>
+                <img src="./assets/images/Capitulos/II/media/Figura 2.17.2.png" style="display:block; margin:auto; "><br>
+                <h5 style="text-align:center"><b>Figura 2.17.2. </b>Diagrama de Entrada-Salida del Programa.</h5>
+                <h2><b>C) Diseño</b></h2>
+                <p>Una vez que se conocen las entradas, las auxiliares y las salidas del problema, se deben listar los pasos necesarios para resolver el problema, es decir, el algoritmo.</p>
+                
+		<p><b>Algoritmo</b></p>
+                <ol type="1">
+                  <li>Impresión de un mensaje de información.</li>
+                  <li>Leer el valor del número de notas que se desea ingresar.</li>
+		<li>Inicializar el valor del contador en uno.</li>
+		<li>Inicializar el valor de la sumatoria en cero.</li>                  
+		<li>Mientras el valor del contador ‘i’ sea menor o igual que cero, hacer:</li>
+                  <ol type="1" start="5">
+                    <li>1. Leer el valor de una nota.</li>
+                  </ol><ol type="1" start="5">
+                    <li>2. Asignar al acumulador de sumas ‘sum’ el valor que tiene acumulado más el valor de una nueva nota, utilizando la ecuación (1).</li>
+                  </ol><ol type="1" start="5">
+                    <li>3. Incrementar el valor del contador ‘i’ en uno.</li>
+                  </ol>
+                  <li>Calcular el valor del promedio de un grupo de notas, utilizando la ecuación (2).</li>
+                  <li>Imprimir el valor de la sumatoria de un grupo de notas.</li>
+                  
+                  <li>Imprimir el valor del promedio de un grupo de notas.</li>
+                </ol>
+                
+                <h2><b>D) Implementación</b></h2>
+                <p>Para implementar la solución, se debe escribir el algoritmo como un programa de C/C++ que contenga toda la información necesaria para completar la traducción a lenguaje máquina. En la Tabla 2.17.1 se muestra el código del programa en C/C++.</p>
+                <h5><b>Tabla 2.17.1. </b>Programa que convierte un número decimal en un número binario.</h5>
+                <pre><code [highlight]="prefTab2[0].tabla2_17_1"  [lineNumbers]="true"></code></pre> <br>
+                <h2>E) Pruebas</h2>
+                <p>En la Tabla 2.17.2, se muestra un ejemplo de la salida del programa, donde se puede ver que los resultados del programa tienen sentido, comparando estos resultados con los datos devueltos por una calculadora.</p>
+                <p>En la salida de la Tabla 2.17.2 se puede ver que, se solicita al usuario que ingrese el número de notas que para este ejemplo es 10. Luego, el usuario ingresa cada una de las 10 notas y el programa calcula la sumatoria y el promedio.</p>
+		<h5><b>Tabla 2.17.2.</b> Salida del programa</h5>
+                <img src="./assets/images/Capitulos/II/media/Tabla 2.17.2.png" style="display:block; margin:auto; "><br>
+		<p>En la Tabla 2.17.3, se muestra la prueba de escritorio del programa, donde se puede comprobar que en cada ciclo del bucle while() se lee el valor de una nota y se suma en un acumulador el valor que tiene con el valor de una nueva nota ingresada desde el teclado y se incrementa en uno el valor del contador. Finalmente, la ejecución de la sentencia while() termina cuando la condición del bucle se hace falsa.</p>
+               <h5><b>Tabla 2.17.2. </b>Prueba de escritorio del programa.</h5>
+
+               <table frame="void" rules="all" align="center" cellspacing="0" cellpadding="5"> 
+                <tr style="color:red"><td>n</td><td>i</td><td>i &gt;=n</td><td>nota</td><td>sum</td><td>prom</td></tr>
+                <tr><td>10</td><td>1</td><td>1 &gt;=10 (V)</td><td>11.8</td><td>0</td><td>13.983</td></tr>
+                <tr><td></td><td>2</td><td>2 &gt;=10 (V)</td><td>12.6</td><td>0+11.8=11.8</td><td></td></tr>
+                <tr><td></td><td>3</td><td>3 &gt;=10 (V)</td><td>16.5</td><td>11.8+12.6=24.4</td><td></td></tr>
+                <tr><td></td><td>4</td><td>4 &gt;=10 (V)</td><td>18.03</td><td>24.4+16.5=40.9</td><td></td></tr>
+                <tr><td></td><td>5</td><td>5 &gt;=10 (V)</td><td>14.8</td><td>40.9+18.03=58.93</td><td></td></tr>
+                <tr><td></td><td>6</td><td>6 &gt;=10 (V)</td><td>10.3</td><td>58.93+14.8=73.73</td><td></td></tr>
+                <tr><td></td><td>7</td><td>7 &gt;=10 (V)</td><td>7.4</td><td>73.73+10.3=84.03</td><td></td></tr>
+                <tr><td></td><td>8</td><td>8 &gt;=10 (V)</td><td>17.6</td><td>84.03+7.4=91.43</td><td></td></tr>
+                <tr><td></td><td>9</td><td>9 &gt;=10 (V)</td><td>16.2</td><td>91.43+1706=109.03</td><td></td></tr>
+                <tr><td></td><td>10</td><td>10 &gt;=10 (V)</td><td>14.6</td><td>109.03+16.2=125.23</td><td></td></tr>
+                <tr><td></td><td>11</td><td style="color:blue">11 &gt;=10 (F)</td><td>11.8</td><td>125.23+14.6=139.83</td><td></td></tr>
+                        
+              </table> <br>
+              <h1><b>Caso de Estudio 2.18: Máximo Común Divisor y mínimo común múltiplo entre dos números.</b></h1>
+              <h2><b>A) Problema</b></h2>
+              <p>Escribir un programa que permita calcular el Máximo Común Divisor (MCD) y el mínimo común múltiplo (mcm) entre dos números enteros. Así, por ejemplo, el MCD entre 1032 y 180 es 12 y el mcm es 15480.</p>
+              <h2><b>B) Análisis</b></h2>
+              <p>Claramente se puede ver que las entradas del problema son dos números enteros. Hay dos salidas requeridas que son el MCD y el mcm. Se requieren tres datos auxiliares que son: el dividendo de la división, el divisor de la división y el residuo de la división. El proceso manual de cálculo del MCD se basa en el Algoritmo de Euclides donde se utilizan divisiones sucesivas para calcular los restos de las divisiones, donde en cada división resultante, el divisor obtenido pasa a ser el nuevo Dividendo y el Residuo obtenido pasa a ser el nuevo divisor, como se puede ver en la Figura 2.18.1.</p>
+              <img src="./assets/images/Capitulos/II/media/Figura 2.18.1.png" style="display:block; margin:auto; "><br>
+              <h5 style="text-align:center"><b>Figura 2.18.1. </b>Divisiones sucesivas del Algoritmo de Euclides.</h5>
+              <p>En la Tabla 2.18.1 se presenta el resumen de los resultados de los cocientes, Dividendos, divisores y Residuos de las divisiones sucesivas realizadas para calcular el MCD entre los números 1032 y 180.</p>
+              <h5><b>Tabla 2.18.1. </b>Resumen de resultados del Algoritmo de Euclides.</h5>
+            <table border="1" cellspacing="0" cellpadding="5">
+              <tr><td>Cociente</td><td width="30"></td><td width="30">5</td><td width="30">1</td><td width="30">2</td><td width="30">1</td><td width="30">3</td><td width="30"></td></tr>
+              <tr><td>Dividendos/Divisores</td><td>1032</td><td>180</td><td>132</td><td>48</td><td>36</td><td>12</td><td>0</td></tr>
+              <tr><td>Restos</td><td>132</td><td>48</td><td>36</td><td>12</td><td>0</td><td></td><td></td></tr>
+            </table>  <br>
+            <p>En la solución computacional del MCD se cumple con el Algoritmo de Euclides donde se utiliza un bucle que controla las divisiones sucesivas, donde en cada división resultante, el divisor obtenido pasa a ser el nuevo Dividendo y el Residuo obtenido pasa a ser el nuevo divisor. El requerimiento de los datos y las fórmulas requeridas se muestran a continuación. </p>
+            <h3><b>Requerimiento de los Datos</b></h3>
+              <p><b>Entradas del Programa</b></p>
+              		
+		<table>
+                  <tr><td width="200"> a </td><td width="200">/* primer número entero  */</td></tr>
+                  <tr><td width="200"> b </td><td width="200">/* segundo número entero */</td></tr>
+                </table><br>
+                <p><b>Salidas del Problema</b></p>
+                <table>
+                  <tr><td width="200"> MCD </td><td width="200">/* Máximo Común Divisor  */</td></tr>
+                  <tr><td> mcm </td><td>/* mínimo común múltiplo */</td></tr>
+                </table><br>
+		<p><b>Auxiliares del Problema</b></p>
+              <table>
+                <tr><td width="200">D</td><td width="200">/* Dividendo de la división */</td></tr>
+		<tr><td width="200">d</td><td width="200">/* divisor de la división */</td></tr>
+		<tr><td width="200">R</td><td width="200">/* Residuo de la división */</td></tr>
+             </table><br>
+                <p><b>Fórmulas Relevantes</b></p>
+                <table>
+                  <tr><td width="120"><em>R=D MOD2 </em></td><td width="30"> (1) </td><td width="280">/* Fórmula que calcula el residuo de una división */</td></tr>
+                  <tr><td ><em>mcm = <sup>a∙b</sup> / <sub>MCD</sub></em></td><td> (2) </td><td>/* Fórmula que calcula el mcm entre dos números ‘a’ y ‘b’ utilizando el MCD */</td></tr>
+                </table> <br>
+
+                <h3><b>B.2) Diagrama de Entrada-Salida</b></h3>
+                <p>En la Figura 2.18.2 se muestra el diagrama de Entrada-Salida del programa donde se identifican y se diagraman las entradas, salidas y auxiliares del problema como son: a) Entradas: la variable ‘a’; la variable ‘b’; b) Salidas: la variable ‘MCD’; la variable ‘mcm’; c) Auxiliares: la variable ‘D’; la variable ‘d’; la variable ‘R’.
+</p>
+                <img src="./assets/images/Capitulos/II/media/Figura 2.18.2.png" style="display:block; margin:auto; "><br>
+                <h5 style="text-align:center"><b>Figura 2.18.2. </b>Diagrama de Entrada-Salida del Programa.</h5>
+                <h2><b>C) Diseño</b></h2>
+                <p>Una vez que se conocen las entradas, las auxiliares y las salidas del problema, se deben listar los pasos necesarios para resolver el problema, es decir, el algoritmo.</p>
+                
+			<p><b>Algoritmo</b></p>
+                <ol type="1">
+                  <li>Leer el valor del primer número entero.</li>
+                  <li>Leer el valor del segundo número entero.</li>
+		<li>Asignar a la variable Dividendo el valor del primer número.</li>
+		<li>Asignar a la variable divisor el valor del segundo número.</li>                  
+		<li>Mientras el divisor sea diferente de cero, hacer:</li>
+                  <ol type="1" start="5">
+                    <li>1. Calcular el valor del Residuo entre el Dividendo y el divisor.</li>
+                  </ol><ol type="1" start="5">
+                    <li>2. Asignar a la variable Dividendo el valor del divisor.</li>
+                  </ol><ol type="1" start="5">
+                    <li>3. Asignar a la variable divisor el valor del Residuo.</li>
+                  </ol>
+                  <li>Asignar a la variable MCD el valor final del Dividendo.</li>
+                  <li>Calcular el valor del mínimo común múltiplo.</li>
+                   <li>Imprimir el valor del Máximo Común Divisor (MCD).</li>
+                  <li>Imprimir el valor del mínimo común múltiplo (mcm).</li>
+                </ol>
+
+
+                <h2><b>D) Implementación</b></h2>
+                <p>Para implementar la solución, se debe escribir el algoritmo como un programa de C/C++ que contenga toda la información necesaria para completar la traducción a lenguaje máquina. En la Tabla 2.18.2 se muestra el código del programa en C/C++.</p>
+                <h5><b>Tabla 2.18.2. </b>Programa que calcula el MCD y el mcm entre dos números.</h5>
+                <pre><code [highlight]="prefTab2[0].tabla2_18_2"  [lineNumbers]="true"></code></pre> <br>
+                <h2>E) Pruebas</h2>
+                <p>En la Tabla 2.18.3, se muestra un ejemplo de la salida del programa, donde se puede ver que los resultados del programa tienen sentido, comparando estos resultados con los datos devueltos por una calculadora.</p>
+                <p>En la salida de la Tabla 2.18.3 se puede ver que, al ingresar el primer número que es 1032 y al ingresar el segundo número que es 180, se obtiene el valor del MCD que es 12 y el valor del mcm que es 15480.</p>
+	            	<h5><b>Tabla 2.18.3.</b> Salida del programa</h5>
+                <img src="./assets/images/Capitulos/II/media/Tabla 2.18.3.png" style="display:block; margin:auto; "><br>
+            		<p>En la Tabla 2.18.4, se muestra la prueba de escritorio del programa, donde se puede comprobar que en cada división sucesiva el divisor de una división pasa a ser el nuevo Dividendo de la siguiente división y el Residuo de la división pasa a ser el nuevo divisor de la siguiente división. También, se puede comprobar que el MCD resultante es el valor final del Dividendo calculado y la ejecución de la sentencia while() termina cuando la condición del bucle se hace falsa.</p>
+               <h5><b>Tabla 2.18.4. </b>Prueba de escritorio del programa.</h5>
+            		<table frame="void" rules="all" align="center" cellspacing="0" cellpadding="5"> 
+                <tr style="color:red"><td>a</td><td>b</td><td>D</td><td>D</td><td>d &lt; 0</td><td>R = D % d</td></tr>
+                <tr><td>1032</td><td>180</td><td>1032</td><td>180</td><td>180 &lt; 0 (V)</td><td>132</td></tr>
+	            	<tr><td></td><td></td><td>180</td><td>132</td><td>132 &lt; 0 (V)</td><td>48</td></tr>
+            		<tr><td></td><td></td><td>132</td><td>48</td><td>48 &lt; 0 (V)</td><td>36</td></tr>
+            		<tr><td></td><td></td><td>48</td><td>36</td><td>36 &lt; 0 (V)</td><td>12</td></tr>
+                <tr><td></td><td></td><td>36</td><td>12</td><td>12 &lt; 0 (V)</td><td>0</td></tr>
+                <tr><td></td><td></td><td>12</td><td>0</td><td style="color:blue">0 &lt;=0 (F)</td><td></td></tr>
+                        
+               </table> <br>
+            </ng-template>
             </mat-tab>
             <mat-tab  label="2.4.2. La sentencia do-while">
+              <ng-template matTabContent>
+                <br>
+                <h1>La sentencia do-while()</h1>
+                <p>La sentencia do-while() crea un bucle que se repite hasta que la expresión lógica o condición del bucle se vuelva falsa. El cuerpo del bucle do-while() se ejecutará una o varias veces, pero al menos una vez, dependiendo de la condición del bucle. El formato de esta sentencia tiene la siguiente sintaxis:</p>
+                <p><b>Sintaxis 1:</b></p>
+                <pre><code align="left">
+do
+    sentencia;
+while(Condición_Bucle);
+</code></pre>
+                  <table>
+                    <tr VALIGN=top><td><code>Condición_Bucle</code></td>
+                      <td>Expresión lógica o booleana que determina si la sentencia o acción se ha de ejecutar de manera repetitiva.</td></tr>
+                      <tr VALIGN=top><td><code>sentencia</code></td>
+                      <td>La sentencia o acción se ejecuta si la expresión lógica es verdadera dentro del bucle.</td></tr>
+                  </table>
+                  <br>
+                  <table border="1" CELLPADDING=5 CELLSPACING=0>
+                    <tr VALIGN=top><td width="50"><b> Nota:</b></td><td>  En esta sintaxis no es necesario utilizar llaves ya que se tiene una sola sentencia o instrucción.</td></tr>
+                  </table>
+                  <br>
+                  <p><b>Sintaxis 2:</b></p>
+                <pre><code align="left">
+do
+&#65371;
+      sentencia<sub>1</sub>;
+      sentencia<sub>2</sub>;
+      ...
+      sentencia<sub>n</sub>;
+&#65373; while(Condición_Bucle);
+</code></pre>
+                  <table>
+                    <tr VALIGN=top><td><code>Condición_Bucle</code></td>
+                      <td>Expresión lógica o booleana que determina si la sentencia o acción se ha de ejecutar de manera repetitiva.</td></tr>
+                      <tr VALIGN=top><td><code>sentencia</code></td>
+                      <td>Las acciones o sentencias se ejecutan si la expresión lógica es verdadera dentro del bucle.</td></tr>
+                  </table>
+                  <br>
+         
+
+
+              </ng-template>
             </mat-tab>
 
             <mat-tab  label="2.4.3. La sentencia for">
+              <ng-template matTabContent>
+              </ng-template>
             </mat-tab>
 
             <mat-tab  label="2.4.4. Bucles anidados">
+              <ng-template matTabContent>
+              </ng-template>
             </mat-tab>
           </mat-tab-group>
         </ng-template>
