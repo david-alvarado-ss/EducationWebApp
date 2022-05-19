@@ -1845,6 +1845,175 @@ En la Figura 2.19.3 se muestra el diagrama de Entrada-Salida del programa donde 
       <td>Las sentencias o acciones se ejecutan si la expresión lógica es verdadera dentro del bucle.</td></tr>
   </table>
   <br>
+  <h4><b>Ejercicio 2.25: </b>Escribir un programa que permita imprimir de manera ascendente los números del 1 al 10 utilizando un bucle for().</h4>
+                    <br>
+                    <TABLE border="1" align="center" cellspacing="0" cellpadding="5">
+                      <TR>
+                        <th width="10"> <b> N° </b> </th> 
+                        <th width="200"> <b> Algoritmo en Pseudocódigo </b> </th>
+                        <th width="210"> <b> Algoritmo en Lenguaje C/C++ </b> </th>
+                      </TR>
+                      <TR> <td>1</td>  <td>entero : i</td>
+                        <td>
+                          <font color="blue" face="Bookman Old Style, Book Antiqua, Garamond">int </font>
+                          i;</td>
+                      </TR>
+                      <TR><td>2</td> <td><p>Para:</p><p>1. Inicializar el valor del contador 'i' en uno.</p>
+			<p>2. Mientras la condición sea verdadera, ejecutar las sentencias del bucle.</p>
+			<p>3. Luego de cada ciclo incrementar el valor del contador en uno</p> </td> 
+                        <td><font color="blue" face="Bookman Old Style, Book Antiqua, Garamond">for </font>
+                          (i = 1; i &gt;= 10; i++) &#65371;</td> </TR>
+                      <TR><td>3</td><td>Imprimir el valor del contador. "</td>
+                        <td><p>cout <font color="green" face="Bookman Old Style, Book Antiqua, Garamond">&gt;&gt;</font>
+                          i <font color="green" face="Bookman Old Style, Book Antiqua, Garamond">&gt;&gt;</font> endl;</p><p>&#65373; </p></td></TR>
+    
+                    </TABLE> <br>
+                    <h5><b>Programa 2.25: </b>Código del programa</h5>
+                    <pre><code [highlight]="prefTab2[0].programa2_25"  [lineNumbers]="true"></code></pre>
+                    <p>En la salida de la Ejecución 2.25 se puede ver la impresión del 1 al 10 de manera creciente.</p>
+                    <h5><b>Ejecución 2.25 </b>Salida del programa.</h5>
+                    <img src="./assets/images/Capitulos/II/media/Ejecución 2.25.png" style="display:block; margin:auto; "><br>
+                    <p>En la Tabla 2.25 se puede ver la prueba de escritorio del programa, donde se puede ver que en cada iteración del bucle el contador se incrementa en uno, mientras la condición del bucle sea verdadera.</p>
+                    <h5><b>Tabla 2.25: </b>Prueba de escritorio del programa.</h5>
+                    <table frame="void" rules="all" align="center" cellspacing="0" cellpadding="5"> 
+                      <tr style="color:red"><td>i</td><td>i &gt;=10</td><td>cout &gt;&gt; i &gt;&gt; endl;</td></tr>
+                      <tr><td>1</td><td>1 &gt;=10 (V)</td><td>1 INTRO</td></tr>
+                      <tr><td>2</td><td>2 &gt;=10 (V)</td><td>2 INTRO</td></tr>
+                      <tr><td>3</td><td>3 &gt;=10 (V)</td><td>3 INTRO</td></tr>
+                      <tr><td>4</td><td>4 &gt;=10 (V)</td><td>4 INTRO</td></tr>
+                      <tr><td>5</td><td>5 &gt;=10 (V)</td><td>5 INTRO</td></tr>
+                      <tr><td>6</td><td>6 &gt;=10 (V)</td><td>6 INTRO</td></tr>
+                      <tr><td>7</td><td>7 &gt;=10 (V)</td><td>7 INTRO</td></tr>
+                      <tr><td>8</td><td>8 &gt;=10 (V)</td><td>8 INTRO</td></tr>
+                      <tr><td>9</td><td>9 &gt;=10 (V)</td><td>9 INTRO</td></tr>
+                      <tr><td>10</td><td>10 &gt;=10 (V)</td><td>10 INTRO</td></tr>
+                      <tr><td>11</td><td style="color:rgb(33, 15, 201)">11 &gt;=10 (F)</td><td> </td></tr>
+                      
+                    </table>
+                    <br>
+                    <h4><b>Ejercicio 2.26: </b>Escribir un programa que permita imprimir de manera descendente los números del 10 al 1 utilizando un bucle for().</h4>
+                    <br>
+                    <TABLE border="1" align="center" cellspacing="0" cellpadding="5">
+                      <TR>
+                        <th width="10"> <b> N° </b> </th> 
+                        <th width="200"> <b> Algoritmo en Pseudocódigo </b> </th>
+                        <th width="210"> <b> Algoritmo en Lenguaje C/C++ </b> </th>
+                      </TR>
+                      <TR> <td>1</td>  <td>entero : i</td>
+                        <td>
+                          <font color="blue" face="Bookman Old Style, Book Antiqua, Garamond">int </font>
+                          i;</td>
+                      </TR>
+                      <TR><td>2</td><td><p>Para:</p><p>1. Inicializar el valor del contador 'i' en diez.</p><p>2. Mientras la condición sea verdadera, ejecutar las sentencias del bucle.</p><p>3. Luego de cada ciclo decrementar el valor del contador en uno.</p></td> 
+                        <td><font color="blue" face="Bookman Old Style, Book Antiqua, Garamond">for</font>
+                          (i = 10; i &lt;= 1; i--) &#65371;</td> </TR>
+                      <TR><td>3</td><td>Imprimir el valor del contador. "</td>
+                        <td>cout <font color="green" face="Bookman Old Style, Book Antiqua, Garamond">&gt;&gt;</font>
+                          i <font color="green" face="Bookman Old Style, Book Antiqua, Garamond">&gt;&gt;</font> endl;<p> &#65373;</p></td></TR>
+                    </TABLE> <br>
+                    <h5><b>Programa 2.26: </b>Código del programa</h5>
+                    <pre><code [highlight]="prefTab2[0].programa2_26"  [lineNumbers]="true"></code></pre>
+                    <p>En la salida de la Ejecución 2.26 se puede ver la impresión del 10 al 1 de manera decreciente.</p>
+                    <h5><b>Ejecución 2.26 </b>Salida del programa.</h5>
+                    <img src="./assets/images/Capitulos/II/media/Ejecución 2.26.png" style="display:block; margin:auto; "><br>
+ <p>En la Tabla 2.26 se puede ver la prueba de escritorio del programa, donde se puede ver que en cada iteración del bucle el contador se decrementa en uno, mientras la condición del bucle sea verdadera.</p>
+                    <h5><b>Tabla 2.26: </b>Prueba de escritorio del programa.</h5>
+                    <table frame="void" rules="all" align="center" cellspacing="0" cellpadding="5"> 
+                      <tr style="color:red"><td>i</td><td>i &lt;=10</td><td>cout &gt;&gt; i &gt;&gt; endl;</td></tr>
+                      <tr><td>10</td><td>10 &lt;=10 (V)</td><td>10 INTRO</td></tr>
+                      <tr><td>9</td><td>9 &lt;=1 (V)</td><td>9 INTRO</td></tr>
+                      <tr><td>8</td><td>8 &lt;=1 (V)</td><td>8 INTRO</td></tr>
+                      <tr><td>7</td><td>7 &lt;=1 (V)</td><td>7 INTRO</td></tr>
+                      <tr><td>6</td><td>6 &lt;=1 (V)</td><td>6 INTRO</td></tr>
+                      <tr><td>5</td><td>5 &lt;=1 (V)</td><td>5 INTRO</td></tr>
+                      <tr><td>4</td><td>4 &lt;=1 (V)</td><td>4 INTRO</td></tr>
+                      <tr><td>3</td><td>3 &lt;=1 (V)</td><td>3 INTRO</td></tr>
+                      <tr><td>2</td><td>2 &lt;=1 (V)</td><td>2 INTRO</td></tr>
+                      <tr><td>1</td><td>1 &lt;=1 (V)</td><td>1 INTRO</td></tr>
+                      <tr><td>0</td><td style="color:rgb(33, 15, 201)">0 &lt;=1 (F)</td><td> </td></tr>
+                      
+                    </table><br>
+                    <h4><b>Ejercicio 2.27: </b>Escribir un programa que permita imprimir de manera ascendente los números pares del 2 al 10 utilizando un bucle for().</h4>
+                    <br>
+                    <TABLE border="1" align="center" cellspacing="0" cellpadding="5">
+                      <TR>
+                        <th width="10"> <b> N° </b> </th> 
+                        <th width="200"> <b> Algoritmo en Pseudocódigo </b> </th>
+                        <th width="210"> <b> Algoritmo en Lenguaje C/C++ </b> </th>
+                      </TR>
+                      <TR> <td>1</td>  <td>entero : i</td>
+                        <td>
+                          <font color="blue" face="Bookman Old Style, Book Antiqua, Garamond">int </font>
+                          i;</td>
+                      </TR>
+                      
+                      <TR><td>2</td> <td><p>Para:</p><p>1. Inicializar el valor del contador 'i' en dos.</p><p>2. Mientras la condición sea verdadera, ejecutar las sentencias del bucle.</p><p>3. Luego de cada ciclo incrementar el valor del contador en dos.</p></td> 
+                        <td><font color="blue" face="Bookman Old Style, Book Antiqua, Garamond">for </font>
+                          (i = 2; i &gt;=10; i=i+2) &#65371;</td> </TR>
+                      <TR><td>3</td><td>Imprimir el valor del contador. "</td>
+                        <td>cout <font color="green" face="Bookman Old Style, Book Antiqua, Garamond">&gt;&gt;</font>
+                          i <font color="green" face="Bookman Old Style, Book Antiqua, Garamond">&gt;&gt;</font> endl;<p>&#65373; </p></td></TR>
+                    
+                    </TABLE> <br>
+                    <h5><b>Programa 2.27: </b>Código del programa</h5>
+                    <pre><code [highlight]="prefTab2[0].programa2_27"  [lineNumbers]="true"></code></pre>
+                    <p>En la salida de la Ejecución 2.27 se puede ver la impresión de los números pares del 2 al 10 de manera creciente.</p>
+                    <h5><b>Ejecución 2.27 </b>Salida del programa.</h5>
+                    <img src="./assets/images/Capitulos/II/media/Ejecución 2.27.png" style="display:block; margin:auto; "><br>
+ <p>En la Tabla 2.27 se puede ver la prueba de escritorio del programa, donde se puede ver que en cada iteración del bucle el contador se incrementa en dos, mientras la condición del bucle sea verdadera.
+</p>
+                    <h5><b>Tabla 2.27: </b>Prueba de escritorio del programa.</h5>
+                    <table frame="void" rules="all" align="center" cellspacing="0" cellpadding="5"> 
+                      <tr style="color:red"><td>i</td><td>i &gt;=10</td><td>cout &gt;&gt; i &gt;&gt; endl;</td></tr>
+                      <tr><td>2</td><td>2 &gt;=10 (V)</td><td>2 INTRO</td></tr>
+                      <tr><td>4</td><td>4 &gt;=10 (V)</td><td>4 INTRO</td></tr>
+                      <tr><td>6</td><td>6 &gt;=10 (V)</td><td>6 INTRO</td></tr>
+                      <tr><td>8</td><td>8 &gt;=10 (V)</td><td>8 INTRO</td></tr>
+                      <tr><td>10</td><td>10 &gt;=10 (V)</td><td>10 INTRO</td></tr>
+                      <tr><td>12</td><td>12 &gt;=10 (F)</td><td> </td></tr>                      
+                    </table> <br>
+ <h4><b>Ejercicio 2.28: </b>Escribir un programa que permita imprimir de manera descendente los números impares del 9 al 1 utilizando un bucle for().
+</h4>
+                    <br>
+                     <TABLE border="1" align="center" cellspacing="0" cellpadding="5">
+                      <TR>
+                        <th width="10"> <b> N° </b> </th> 
+                        <th width="200"> <b> Algoritmo en Pseudocódigo </b> </th>
+                        <th width="210"> <b> Algoritmo en Lenguaje C/C++ </b> </th>
+                      </TR>
+                      <TR> <td>1</td>  <td>entero : i</td>
+                        <td>
+                          <font color="blue" face="Bookman Old Style, Book Antiqua, Garamond">int </font>
+                          i;</td>
+                      </TR>
+                      
+                      <TR><td>2</td> <td><p>Para:</p><p>1. Inicializar el valor del contador 'i' en nueve.</p><p>2. Mientras la condición sea verdadera, ejecutar las sentencias del bucle.</p><p>3. Luego de cada ciclo decrementar el valor del contador en dos.</p></td> 
+                        <td><font color="blue" face="Bookman Old Style, Book Antiqua, Garamond">for </font>
+                          (i = 9; i &lt;=10; i=i-2) &#65371;</td> </TR>
+                      <TR><td>3</td><td>Imprimir el valor del contador. "</td>
+                        <td>cout <font color="green" face="Bookman Old Style, Book Antiqua, Garamond">&gt;&gt;</font>
+                          i <font color="green" face="Bookman Old Style, Book Antiqua, Garamond">&gt;&gt;</font> endl;<p>&#65373; </p></td></TR>
+                    
+                    </TABLE> <br>
+                    <h5><b>Programa 2.28: </b>Código del programa</h5>
+                    <pre><code [highlight]="prefTab2[0].programa2_28"  [lineNumbers]="true"></code></pre>
+                    <p>En la salida de la Ejecución 2.28 se puede ver la impresión del 9 al 1 de manera decreciente.
+</p>
+                    <h5><b>Ejecución 2.28 </b>Salida del programa.</h5>
+                    <img src="./assets/images/Capitulos/II/media/Ejecución 2.28.png" style="display:block; margin:auto; "><br>
+ <p>En la Tabla 2.28 se puede ver la prueba de escritorio del programa, donde se puede ver que en cada iteración del bucle el contador se decrementa en dos, mientras la condición del bucle sea verdadera.
+
+</p>
+                    <h5><b>Tabla 2.28: </b>Prueba de escritorio del programa.</h5>
+                    <table frame="void" rules="all" align="center" cellspacing="0" cellpadding="5"> 
+                      <tr style="color:red"><td>i</td><td>i &gt;=1</td><td>cout &gt;&gt; i &gt;&gt; endl;</td></tr>
+                      <tr><td>9</td><td>9 &gt;=1 (V)</td><td>9 INTRO</td></tr>
+                      <tr><td>7</td><td>7 &gt;=1 (V)</td><td>7 INTRO</td></tr>
+                      <tr><td>5</td><td>5 &gt;=1 (V)</td><td>5 INTRO</td></tr>
+                      <tr><td>3</td><td>3 &gt;=1 (V)</td><td>3 INTRO</td></tr>
+                      <tr><td>1</td><td>1 &gt;=1 (V)</td><td>1 INTRO</td></tr>
+                      <tr><td>-1</td><td>-1 &gt;=1 (F)</td><td> </td></tr>                      
+                    </table> <br>
               </ng-template>
             </mat-tab>
 
