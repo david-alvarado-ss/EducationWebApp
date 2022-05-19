@@ -1081,7 +1081,7 @@
 </p>
                     <h5><b>Tabla 2.20: </b>Prueba de escritorio del programa.</h5>
                     <table frame="void" rules="all" align="center" cellspacing="0" cellpadding="5"> 
-                      <tr style="color:red"><td>i</td><td>i &lt;=1</td><td>cout &gt;&gt; i &gt;&gt; endl;</td></tr>
+                      <tr style="color:red"><td>i</td><td>i &gt;=1</td><td>cout &gt;&gt; i &gt;&gt; endl;</td></tr>
                       <tr><td>9</td><td>9 &gt;=1 (V)</td><td>9 INTRO</td></tr>
                       <tr><td>7</td><td>7 &gt;=1 (V)</td><td>7 INTRO</td></tr>
                       <tr><td>5</td><td>5 &gt;=1 (V)</td><td>5 INTRO</td></tr>
@@ -1300,18 +1300,559 @@ do
                   </table>
                   <br>
          
+                  <h4><b>Ejercicio 2.21: </b>Escribir un programa que permita imprimir de manera ascendente los números del 1 al 10 utilizando un bucle do-while().</h4>
+                  <br>
+                  <TABLE border="1" align="center" cellspacing="0" cellpadding="5">
+                    <TR>
+                      <th width="10"> <b> N° </b> </th> 
+                      <th width="200"> <b> Algoritmo en Pseudocódigo </b> </th>
+                      <th width="210"> <b> Algoritmo en Lenguaje C/C++ </b> </th>
+                    </TR>
+                    <TR> <td>1</td>  <td>entero : i</td>
+                      <td>
+                        <font color="blue" face="Bookman Old Style, Book Antiqua, Garamond">int </font>
+                        i;</td>
+                    </TR>
+                    <TR>
+                      <td>2</td>
+                      <td>Inicializar el valor del contador en uno</td>
+                      <td>i = 1;  </td>
+                    </TR>
+                    <TR><td>3</td> <td>Hacer:</td> 
+                      <td><font color="blue" face="Bookman Old Style, Book Antiqua, Garamond">do </font>
+                       &#65371;</td> </TR>
+                    <TR><td>4</td><td>Imprimir el valor del contador. "</td>
+                      <td>cout <font color="green" face="Bookman Old Style, Book Antiqua, Garamond">&gt;&gt;</font>
+                        i <font color="green" face="Bookman Old Style, Book Antiqua, Garamond">&gt;&gt;</font> endl;</td></TR>
+                     <TR><td>5</td><td>Incrementar el valor del contador en uno.</td> <td>i++; </td></TR>
+    <TR><td>6</td><td>Mientras la condicion sea verdadera.</td><td>&#65373; 
+    <font color="blue" face="Bookman Old Style, Book Antiqua, Garamond">while </font>(i &gt; 10);</td></TR>
+                  </TABLE> <br>
+                  <h5><b>Programa 2.21: </b>Código del programa</h5>
+                  <pre><code [highlight]="prefTab2[0].programa2_21"  [lineNumbers]="true"></code></pre>
+                  <p>En la salida de la Ejecución 2.21 se puede ver la impresión del 1 al 10 de manera creciente.</p>
+                  <h5><b>Ejecución 2.21 </b>Salida del programa.</h5>
+                  <img src="./assets/images/Capitulos/II/media/Ejecución 2.21.png" style="display:block; margin:auto; "><br>
+                  <p>En la Tabla 2.21 se puede ver la prueba de escritorio del programa, donde se puede ver que en cada iteración del bucle el contador se incrementa en uno, mientras la condición del bucle sea verdadera.</p>
+                  <h5><b>Tabla 2.21: </b>Prueba de escritorio del programa.</h5>
+                  <table frame="void" rules="all" align="center" cellspacing="0" cellpadding="5"> 
+                    <tr style="color:red"><td>i</td><td>i &gt;=10</td><td>cout &gt;&gt; i &gt;&gt; endl;</td></tr>
+                    <tr><td>1</td><td>1 &gt;=10 (V)</td><td>1 INTRO</td></tr>
+                    <tr><td>2</td><td>2 &gt;=10 (V)</td><td>2 INTRO</td></tr>
+                    <tr><td>3</td><td>3 &gt;=10 (V)</td><td>3 INTRO</td></tr>
+                    <tr><td>4</td><td>4 &gt;=10 (V)</td><td>4 INTRO</td></tr>
+                    <tr><td>5</td><td>5 &gt;=10 (V)</td><td>5 INTRO</td></tr>
+                    <tr><td>6</td><td>6 &gt;=10 (V)</td><td>6 INTRO</td></tr>
+                    <tr><td>7</td><td>7 &gt;=10 (V)</td><td>7 INTRO</td></tr>
+                    <tr><td>8</td><td>8 &gt;=10 (V)</td><td>8 INTRO</td></tr>
+                    <tr><td>9</td><td>9 &gt;=10 (V)</td><td>9 INTRO</td></tr>
+                    <tr><td>10</td><td>10 &gt;=10 (V)</td><td>10 INTRO</td></tr>
+                    <tr><td>11</td><td style="color:rgb(33, 15, 201)">11 &gt;=10 (F)</td><td> </td></tr>
+                    
+                  </table>
+                  <br>
+                  <h4><b>Ejercicio 2.22: </b>Escribir un programa que permita imprimir de manera descendente los números del 10 al 1 utilizando un bucle do-while().</h4>
+                    <br>
+                    <TABLE border="1" align="center" cellspacing="0" cellpadding="5">
+                      <TR>
+                        <th width="10"> <b> N° </b> </th> 
+                        <th width="200"> <b> Algoritmo en Pseudocódigo </b> </th>
+                        <th width="210"> <b> Algoritmo en Lenguaje C/C++ </b> </th>
+                      </TR>
+                      <TR> <td>1</td>  <td>entero : i</td>
+                        <td>
+                          <font color="blue" face="Bookman Old Style, Book Antiqua, Garamond">int </font>
+                          i;</td>
+                      </TR>
+                      <TR>
+                        <td>2</td>
+                        <td>Inicializar el valor del contador en diez</td>
+                        <td>i = 10;  </td>
+                      </TR>
+                      <TR><td>3</td> <td>Hacer:</td> 
+                        <td><font color="blue" face="Bookman Old Style, Book Antiqua, Garamond">do </font>&#65371;</td> </TR>
+                      <TR><td>4</td><td>Imprimir el valor del contador. "</td>
+                        <td>cout <font color="green" face="Bookman Old Style, Book Antiqua, Garamond">&gt;&gt;</font>
+                          i <font color="green" face="Bookman Old Style, Book Antiqua, Garamond">&gt;&gt;</font> endl;</td></TR>
+                       <TR><td>5</td><td>Decrementar el valor del contador en uno.</td><td>i--;</td></TR>
+			<TR><td>6</td> <td>Mientras la condición sea verdadera</td> 
+			<td>&#65373;<font color="blue" face="Bookman Old Style, Book Antiqua, Garamond">while </font>
+                          (i &lt;=1); </td> </TR>
+                    </TABLE> <br>
+                    <h5><b>Programa 2.22: </b>Código del programa</h5>
+                    <pre><code [highlight]="prefTab2[0].programa2_22"  [lineNumbers]="true"></code></pre>
+                    <p>En la salida de la Ejecución 2.22 se puede ver la impresión del 10 al 1 de manera decreciente.</p>
+                    <h5><b>Ejecución 2.22 </b>Salida del programa.</h5>
+                    <img src="./assets/images/Capitulos/II/media/Ejecución 2.22.png" style="display:block; margin:auto; "><br>
+ <p>En la Tabla 2.22 se puede ver la prueba de escritorio del programa, donde se puede ver que en cada iteración del bucle el contador se decrementa en uno, mientras la condición del bucle sea verdadera.</p>
+                    <h5><b>Tabla 2.22: </b>Prueba de escritorio del programa.</h5>
+                    <table frame="void" rules="all" align="center" cellspacing="0" cellpadding="5"> 
+                      <tr style="color:red"><td>i</td><td>i &lt;=10</td><td>cout &gt;&gt; i &gt;&gt; endl;</td></tr>
+                      <tr><td>10</td><td>10 &lt;=10 (V)</td><td>10 INTRO</td></tr>
+                      <tr><td>9</td><td>9 &lt;=1 (V)</td><td>9 INTRO</td></tr>
+                      <tr><td>8</td><td>8 &lt;=1 (V)</td><td>8 INTRO</td></tr>
+                      <tr><td>7</td><td>7 &lt;=1 (V)</td><td>7 INTRO</td></tr>
+                      <tr><td>6</td><td>6 &lt;=1 (V)</td><td>6 INTRO</td></tr>
+                      <tr><td>5</td><td>5 &lt;=1 (V)</td><td>5 INTRO</td></tr>
+                      <tr><td>4</td><td>4 &lt;=1 (V)</td><td>4 INTRO</td></tr>
+                      <tr><td>3</td><td>3 &lt;=1 (V)</td><td>3 INTRO</td></tr>
+                      <tr><td>2</td><td>2 &lt;=1 (V)</td><td>2 INTRO</td></tr>
+                      <tr><td>1</td><td>1 &lt;=1 (V)</td><td>1 INTRO</td></tr>
+                      <tr><td>0</td><td style="color:rgb(33, 15, 201)">0 &lt;=1 (F)</td><td> </td></tr>
+                      
+                    </table><br>
+                    <h4><b>Ejercicio 2.23: </b>Escribir un programa que permita imprimir de manera ascendente los números pares del 2 al 10 utilizando un bucle do-while().</h4>
+                    <br>
+                    <TABLE border="1" align="center" cellspacing="0" cellpadding="5">
+                      <TR>
+                        <th width="10"> <b> N° </b> </th> 
+                        <th width="200"> <b> Algoritmo en Pseudocódigo </b> </th>
+                        <th width="210"> <b> Algoritmo en Lenguaje C/C++ </b> </th>
+                      </TR>
+                      <TR> <td>1</td>  <td>entero : i</td>
+                        <td>
+                          <font color="blue" face="Bookman Old Style, Book Antiqua, Garamond">int </font>
+                          i;</td>
+                      </TR>
+                      <TR>
+                        <td>2</td>
+                        <td>Inicializar el valor del contador en dos</td>
+                        <td>i = 2;  </td>
+                      </TR>
+                      <TR><td>3</td> <td>Mientras la condición sea verdadera, hacer:</td> 
+                        <td><font color="blue" face="Bookman Old Style, Book Antiqua, Garamond">do </font>
+                          &#65371;</td> </TR>
+                      <TR><td>4</td><td>Imprimir el valor del contador. "</td>
+                        <td>cout <font color="green" face="Bookman Old Style, Book Antiqua, Garamond">&gt;&gt;</font>
+                          i <font color="green" face="Bookman Old Style, Book Antiqua, Garamond">&gt;&gt;</font> endl;</td></TR>
+                       <TR><td>5</td><td>Incrementar el valor del contador en dos.</td>
+			<td>i=i+2; </td></TR>
+			<TR><td>6</td> <td>Mientras la condición sea verdadera</td> 
+                        <td>&#65373; <font color="blue" face="Bookman Old Style, Book Antiqua, Garamond">while </font>
+                          (i &gt;=10);</td> </TR>
+                    </TABLE> <br>
+                    <h5><b>Programa 2.23: </b>Código del programa</h5>
+                    <pre><code [highlight]="prefTab2[0].programa2_23"  [lineNumbers]="true"></code></pre>
+                    <p>En la salida de la Ejecución 2.23 se puede ver la impresión de los números pares del 2 al 10 de manera creciente.</p>
+                    <h5><b>Ejecución 2.23 </b>Salida del programa.</h5>
+                    <img src="./assets/images/Capitulos/II/media/Ejecución 2.23.png" style="display:block; margin:auto; "><br>
+ <p>En la Tabla 2.23 se puede ver la prueba de escritorio del programa, donde se puede ver que en cada iteración del bucle el contador se incrementa en dos, mientras la condición del bucle sea verdadera.
+</p>
+                    <h5><b>Tabla 2.23: </b>Prueba de escritorio del programa.</h5>
+                    <table frame="void" rules="all" align="center" cellspacing="0" cellpadding="5"> 
+                      <tr style="color:red"><td>i</td><td>i &gt;=10</td><td>cout &gt;&gt; i &gt;&gt; endl;</td></tr>
+                      <tr><td>2</td><td>2 &gt;=10 (V)</td><td>2 INTRO</td></tr>
+                      <tr><td>4</td><td>4 &gt;=10 (V)</td><td>4 INTRO</td></tr>
+                      <tr><td>6</td><td>6 &gt;=10 (V)</td><td>6 INTRO</td></tr>
+                      <tr><td>8</td><td>8 &gt;=10 (V)</td><td>8 INTRO</td></tr>
+                      <tr><td>10</td><td>10 &gt;=10 (V)</td><td>10 INTRO</td></tr>
+                      <tr><td>12</td><td>12 &gt;=10 (F)</td><td> </td></tr>                      
+                    </table> <br>   
+                  <h4><b>Ejercicio 2.24: </b>Escribir un programa que permita imprimir de manera descendente los números impares del 9 al 1 utilizando un bucle do-while().
+</h4>
+                    <br>
+                    <TABLE border="1" align="center" cellspacing="0" cellpadding="5">
+                      <TR>
+                        <th width="10"> <b> N° </b> </th> 
+                        <th width="200"> <b> Algoritmo en Pseudocódigo </b> </th>
+                        <th width="210"> <b> Algoritmo en Lenguaje C/C++ </b> </th>
+                      </TR>
+                      <TR> <td>1</td>  <td>entero : i</td>
+                        <td>
+                          <font color="blue" face="Bookman Old Style, Book Antiqua, Garamond">int </font>
+                          i;</td>
+                      </TR>
+                      <TR><td>2</td><td>Inicializar el valor del contador en nueve</td><td>i = 9;  </td></TR>
+                      <TR><td>3</td> <td>Mientras la condición sea verdadera, hacer:</td> 
+                        <td><font color="blue" face="Bookman Old Style, Book Antiqua, Garamond">do </font>
+                        &#65371;</td> </TR>
+                      <TR><td>4</td><td>Imprimir el valor del contador. "</td>
+                        <td>cout <font color="green" face="Bookman Old Style, Book Antiqua, Garamond">&gt;&gt;</font>
+                          i <font color="green" face="Bookman Old Style, Book Antiqua, Garamond">&gt;&gt;</font> endl;</td></TR>
+                       <TR><td>5</td><td>Decrementar el valor del contador en dos.</td><td>i=i-2;</td></TR>
+			<TR><td>6</td> <td>Mientras la condición sea verdadera.</td> 
+                        <td>&#65373; <font color="blue" face="Bookman Old Style, Book Antiqua, Garamond">while </font>
+                          (i &lt;=1);</td> </TR>
+                    </TABLE> <br>
+                    <h5><b>Programa 2.24: </b>Código del programa</h5>
+                    <pre><code [highlight]="prefTab2[0].programa2_24"  [lineNumbers]="true"></code></pre>
+                    <p>En la salida de la Ejecución 2.24 se puede ver la impresión del 9 al 1 de manera decreciente.
+</p>
+                    <h5><b>Ejecución 2.24 </b>Salida del programa.</h5>
+                    <img src="./assets/images/Capitulos/II/media/Ejecución 2.24.png" style="display:block; margin:auto; "><br>
+ <p>En la Tabla 2.24 se puede ver la prueba de escritorio del programa, donde se puede ver que en cada iteración del bucle el contador se decrementa en dos, mientras la condición del bucle sea verdadera.
+
+</p>
+                    <h5><b>Tabla 2.24: </b>Prueba de escritorio del programa.</h5>
+                    <table frame="void" rules="all" align="center" cellspacing="0" cellpadding="5"> 
+                      <tr style="color:red"><td>i</td><td>i &lt;=1</td><td>cout &gt;&gt; i &gt;&gt; endl;</td></tr>
+                      <tr><td>9</td><td>9 &gt;=1 (V)</td><td>9 INTRO</td></tr>
+                      <tr><td>7</td><td>7 &gt;=1 (V)</td><td>7 INTRO</td></tr>
+                      <tr><td>5</td><td>5 &gt;=1 (V)</td><td>5 INTRO</td></tr>
+                      <tr><td>3</td><td>3 &gt;=1 (V)</td><td>3 INTRO</td></tr>
+                      <tr><td>1</td><td>1 &gt;=1 (V)</td><td>1 INTRO</td></tr>
+                      <tr><td>-1</td><td>-1 &gt;=1 (F)</td><td> </td></tr>                      
+                    </table> <br>
+                    <h4><b>Ejercicio 2.24: </b>Escribir un programa que permita imprimir de manera descendente los números impares del 9 al 1 utilizando un bucle do-while().
+                    </h4>
+                    <br>
+                                        <TABLE border="1" align="center" cellspacing="0" cellpadding="5">
+                                          <TR>
+                                            <th width="10"> <b> N° </b> </th> 
+                                            <th width="200"> <b> Algoritmo en Pseudocódigo </b> </th>
+                                            <th width="210"> <b> Algoritmo en Lenguaje C/C++ </b> </th>
+                                          </TR>
+                                          <TR> <td>1</td>  <td>entero : i</td>
+                                            <td>
+                                              <font color="blue" face="Bookman Old Style, Book Antiqua, Garamond">int </font>
+                                              i;</td>
+                                          </TR>
+                                          <TR><td>2</td><td>Inicializar el valor del contador en nueve</td><td>i = 9;  </td></TR>
+                                          <TR><td>3</td> <td>Mientras la condición sea verdadera, hacer:</td> 
+                                            <td><font color="blue" face="Bookman Old Style, Book Antiqua, Garamond">do </font>
+                                            &#65371;</td> </TR>
+                                          <TR><td>4</td><td>Imprimir el valor del contador. "</td>
+                                            <td>cout <font color="green" face="Bookman Old Style, Book Antiqua, Garamond">&gt;&gt;</font>
+                                              i <font color="green" face="Bookman Old Style, Book Antiqua, Garamond">&gt;&gt;</font> endl;</td></TR>
+                                           <TR><td>5</td><td>Decrementar el valor del contador en dos.</td><td>i=i-2;</td></TR>
+                          <TR><td>6</td> <td>Mientras la condición sea verdadera.</td> 
+                                            <td>&#65373; <font color="blue" face="Bookman Old Style, Book Antiqua, Garamond">while </font>
+                                              (i &lt;=1);</td> </TR>
+                                        </TABLE> <br>
+                                        <h5><b>Programa 2.24: </b>Código del programa</h5>
+                                        <pre><code [highlight]="prefTab2[0].programa2_24"  [lineNumbers]="true"></code></pre>
+                                        <p>En la salida de la Ejecución 2.24 se puede ver la impresión del 9 al 1 de manera decreciente.
+                    </p>
+                                        <h5><b>Ejecución 2.24 </b>Salida del programa.</h5>
+                                        <img src="./assets/images/Capitulos/II/media/Ejecución 2.24.png" style="display:block; margin:auto; "><br>
+                     <p>En la Tabla 2.24 se puede ver la prueba de escritorio del programa, donde se puede ver que en cada iteración del bucle el contador se decrementa en dos, mientras la condición del bucle sea verdadera.
+                    
+                    </p>
+                                        <h5><b>Tabla 2.24: </b>Prueba de escritorio del programa.</h5>
+                                        <table frame="void" rules="all" align="center" cellspacing="0" cellpadding="5"> 
+                                          <tr style="color:red"><td>i</td><td>i &gt;=1</td><td>cout &gt;&gt; i &gt;&gt; endl;</td></tr>
+                                          <tr><td>9</td><td>9 &gt;=1 (V)</td><td>9 INTRO</td></tr>
+                                          <tr><td>7</td><td>7 &gt;=1 (V)</td><td>7 INTRO</td></tr>
+                                          <tr><td>5</td><td>5 &gt;=1 (V)</td><td>5 INTRO</td></tr>
+                                          <tr><td>3</td><td>3 &gt;=1 (V)</td><td>3 INTRO</td></tr>
+                                          <tr><td>1</td><td>1 &gt;=1 (V)</td><td>1 INTRO</td></tr>
+                                          <tr><td>-1</td><td>-1 &gt;=1 (F)</td><td> </td></tr>                      
+                                        </table> <br>
+                     <h1><b>Caso de Estudio 2.19: Conversión de Decimal a Binario.</b></h1>
+              <h2><b>A) Problema</b></h2>
+              <p>Escribir un programa que permita convertir un número en sistema decimal o base 10 a sistema binario o base 2, utilizando divisiones sucesivas. Así, por ejemplo, el número 233 en binario es 11101001.</p>
+              <h2><b>B) Análisis</b></h2>
+              <p>Claramente se puede ver que la entrada del problema es el número decimal. Hay una sola salida requerida que es el número binario o en base dos. Se requieren cinco datos auxiliares que son: el dividendo de la división, el cociente de la división, el residuo de la división, una sumatoria para acumular valores y un contador para las potencias de 10. El proceso manual de cálculo de conversión de un número decimal a binario se basa en divisiones sucesivas y los restos obtenidos de abajo hacia arriba generan el número binario como se puede ver en la Figura 2.19.1.
+</p>
+              <img src="./assets/images/Capitulos/II/media/Figura 2.19.1.png" style="display:block; margin:auto; "><br>
+              <h5 style="text-align:center"><b>Figura 2.19.1. </b>Proceso manual de cálculo de un número binario.</h5>
+             
+ <p>En la solución computacional del número binario hay un bucle que controla las divisiones sucesivas, que permiten obtener los restos de las divisiones que se acumulan en una sumatoria que acumula los resultados parciales del producto del residuo por 10 elevado a una potencia de ‘n’ y un contador que controla los valores de la potencia de ‘n’. De manera sucesiva el resultado del cociente de una división pasa a ser el dividendo de la siguiente división, asignando a la variable dividendo el valor del cociente en cada iteración del bucle. Finalmente, el valor de la sumatoria obtenida viene a ser el valor del número binario calculado, como se puede ver en la Figura 2.19.2. El requerimiento de los datos y las fórmulas requeridas se muestran a continuación. 
+</p>              <img src="./assets/images/Capitulos/II/media/Figura 2.19.2.png" style="display:block; margin:auto; "><br>
+              <h5 style="text-align:center"><b>Figura 2.19.2. </b>Solución computacional del número binario.</h5>
+    
+	<h3><b>B.1) Requerimiento de los Datos</b></h3>
+              <p><b>Entradas del Programa</b></p>
+              		
+		<table>
+                  <tr><td width="200"> num </td><td width="200">/* número en sistema decimal o base 10  */</td></tr>
+                </table><br>
+                <p><b>Salidas del Problema</b></p>
+                <table>
+                  <tr><td width="200"> bin </td><td width="200">/* número en binario o base 2 */</td></tr>
+                </table><br>
+		<p><b>Auxiliares del Problema</b></p>
+              <table>
+                <tr><td width="200">D</td><td width="200">/* Dividendo de la división */</td></tr>
+		<tr><td width="200">c</td><td width="200">/* cociente de la división */</td></tr>
+		<tr><td width="200">R</td><td width="200">/* Residuo de la división */</td></tr>
+<tr><td width="200">sum</td><td width="200">/* sumatoria */</td></tr>
+<tr><td width="200">i</td><td width="200">/* contador */</td></tr>
+             </table><br>
+                <p><b>Fórmulas Relevantes</b></p>
+                <table>
+		<tr><td ><em>c = <sup>D</sup> / <sub>2</sub></em></td><td> (2) </td><td>/* Fórmula que calcula el cociente de una división */</td></tr>
+                <tr><td width="120"><em>R=D MOD2 </em></td><td width="30"> (1) </td><td width="280">/* Fórmula que calcula el residuo de una división */</td></tr>
+                  <tr><td ><em>sum = sum + R∙10<sup>n</sup> </em></td><td> (2) </td><td>/* Fórmula que acumula el valor de una sumatoria más el producto entre el residuo por 10 elevado a la potencia de n */</td></tr>
+                </table> <br>
+
+                <h3><b>B.2) Diagrama de Entrada-Salida</b></h3>
+                <p>
+En la Figura 2.19.3 se muestra el diagrama de Entrada-Salida del programa donde se identifican y se diagraman las entradas, salidas y auxiliares del problema como son: a) Entradas: la variable ‘num’; b) Salidas: la variable ‘bin’; c) Auxiliares: la variable ‘D’; la variable ‘c’; la variable ‘R’; la variable ‘sum’; la variable ‘i’.
+
+</p>
+                <img src="./assets/images/Capitulos/II/media/Figura 2.19.3.png" style="display:block; margin:auto; "><br>
+                <h5 style="text-align:center"><b>Figura 2.19.3. </b>Diagrama de Entrada-Salida del Programa.</h5>
+                <h2><b>C) Diseño</b></h2>
+                <p>Una vez que se conocen las entradas, las auxiliares y las salidas del problema, se deben listar los pasos necesarios para resolver el problema, es decir, el algoritmo.</p>
+                
+			<p><b>Algoritmo</b></p>
+                <ol type="1">
+                  <li>Leer el valor del número decimal.</li>
+                  <li>Asignar a la variable Dividendo el valor del número decimal.</li>
+		<li>Inicializar la variable sumatoria con el valor de cero.</li>
+		<li>Inicializar el contador ‘i’ con el valor de cero.</li>                  
+		<li>Hacer:</li>
+                  <ol type="1" start="5">
+                    <li>1. Calcular el valor del cociente entre el Dividendo y el valor de 2.</li>
+                  </ol><ol type="1" start="5">
+                    <li>2. Calcular el valor del Residuo entre el Dividendo y el valor de 2.</li>
+                  </ol><ol type="1" start="5">
+                    <li>3. Asignar a la sumatoria el valor que tiene acumulado más el producto entre el Residuo con el valor de 10 elevado a la potencia de ‘i’.</li>
+                  </ol><ol type="1" start="5">
+                    <li>4. Asignar a la variable Dividendo el valor del cociente.</li>
+                  </ol><ol type="1" start="5">
+                    <li>5. Incrementar el valor del contador ‘i’ en uno.</li>
+			Mientras el cociente de la división sea diferente de cero.
+                  </ol>
+                  <li>Asignar a la variable ‘bin’ el valor de la sumatoria que corresponde al número binario calculado.</li>
+                  <li>Imprimir el valor del número binario.</li>
+                </ol>
+
+                <h2><b>D) Implementación</b></h2>
+                <p>Para implementar la solución, se debe escribir el algoritmo como un programa de C/C++ que contenga toda la información necesaria para completar la traducción a lenguaje máquina. En la Tabla 2.19.1 se muestra el código del programa en C/C++.</p>
+                <h5><b>Tabla 2.19.1. </b>Programa que convierte un número decimal en un número binario.</h5>
+                <pre><code [highlight]="prefTab2[0].tabla2_19_1"  [lineNumbers]="true"></code></pre> <br>
+                <h2>E) Pruebas</h2>
+                <p>En la Tabla 2.19.2, se muestra un ejemplo de la salida del programa, donde se puede ver que los resultados del programa tienen sentido, comparando estos resultados con los datos devueltos por una calculadora.</p>
+                <p>En la salida de la Tabla 2.19.2 se puede ver que, al ingresar el número 233 en sistema de numeración decimal, se obtiene el número 11101001 en sistema de numeración binario.</p>
+	            	<h5><b>Tabla 2.19.2.</b> Salida del programa</h5>
+                <img src="./assets/images/Capitulos/II/media/Tabla 2.19.2.png" style="display:block; margin:auto; "><br>
+            		<p>En la Tabla 2.19.3, se muestra la prueba de escritorio del programa, donde se puede comprobar que en cada división sucesiva el cociente de una división pasa a ser el dividendo de la siguiente división. También, se puede comprobar que el resultado de la sumatoria es el número binario calculado y la ejecución de la sentencia do-while() termina cuando la condición del bucle se hace falsa.
+</p>
+               <h5><b>Tabla 2.19.3. </b>Prueba de escritorio del programa.</h5>
+               <table frame="void" rules="all" align="center" cellspacing="0" cellpadding="5"> 
+                <tr style="color:red"><td>num</td><td>D</td><td>Sum</td><td>i</td><td>c</td><td>R</td><td>c! = 0</td></tr>
+                <tr><td>233</td><td>233</td><td>0</td><td>0</td><td></td><td></td><td></td></tr>
+	            	<tr><td></td><td>116</td><td>0+1&#88;10<sup>0</sup>=1</td><td>1</td><td>116</td><td>1</td><td>116 != 0 (V)</td></tr>
+            		<tr><td></td><td>58</td><td>1+0&#88;10<sup>1</sup>=1</td><td>2</td><td>58</td><td>0</td><td>58 != 0 (V)</td></tr>
+            		<tr><td></td><td>29</td><td>1+0&#88;10<sup>2</sup>=1</td><td>3</td><td>29</td><td>0</td><td>29 != 0 (V)</td></tr>
+                <tr><td></td><td>14</td><td>1+1&#88;10<sup>3</sup>=1001</td><td>4</td><td>14</td><td>1</td><td>14 != 0 (V)</td></tr>
+                <tr><td></td><td>7</td><td>1001+0&#88;10<sup>4</sup>=1001</td><td>5</td><td>7</td><td>0</td><td>7 != 0 (V)</td></tr>
+                <tr><td></td><td>3</td><td>1001+1&#88;10<sup>5</sup>=101001</td><td>6</td><td>3</td><td>1</td><td>3 != 0 (V)</td></tr>
+                <tr><td></td><td>1</td><td>101001+1&#88;10<sup>6</sup>=1101001</td><td>7</td><td>1</td><td>1</td><td>1 != 0 (V)</td></tr>
+                <tr><td></td><td>0</td><td>1101001+1&#88;10<sup>7</sup>=11101001</td><td>8</td><td>0</td><td>1</td><td style="color:blue">0! = 0 (F)</td></tr>    
+               </table> <br>
+
+               <h1><b>Caso de Estudio 2.20: Análisis de Números Palíndromos.</b></h1>
+               <h2><b>A) Problema</b></h2>
+               <p>Escribir un programa que permita analizar si un número es palíndromo o no lo es. Un número palíndromo es aquel número que invertido o dado la vuelta resulta ser el mismo número. Así, por ejemplo, los números 1234321, 55555, 333, son números palíndromos. Analizar además el número de cifras que tiene el número, visualizar el número original al revés y desplegar un mensaje donde se mencione si el número ingresado por teclado es o no palíndromo.
+ 
+ </p>
+               <h2><b>B) Análisis</b></h2>
+               <p>Claramente se puede ver que la entrada del problema es un número entero. Hay dos salidas requeridas que son el número de cifras del número y el número original invertido. Se requieren seis datos auxiliares que son: un contador de cifras para el número, el dividendo de la división, el cociente de la división, el residuo de la división, una sumatoria para acumular valores y un contador para las potencias de 10. 
+ </p>
+     <p>En la solución computacional de análisis de un número palíndromo se plantea primeramente un bucle que cuenta el número de cifras del número entero leído desde el teclado, como se puede ver en la Figura 2.20.1.
+ </p>
+               <img src="./assets/images/Capitulos/II/media/Figura 2.20.1.png" style="display:block; margin:auto; "><br>
+               <h5 style="text-align:center"><b>Figura 2.20.1. </b>Proceso para contar el número de cifras de un número entero.</h5>
+              
+  <p>Luego, hay un bucle que controla las divisiones sucesivas, que permiten obtener los restos de las divisiones que se acumulan en una sumatoria que acumula los resultados parciales del producto del residuo por 10 elevado a una potencia de ‘n’ y un contador que controla los valores de la potencia de ‘n’. Antes de ingresar a este bucle, el contador se inicializa con el valor del número de cifras menos el valor de uno. De manera sucesiva, el resultado del cociente de una división pasa a ser el dividendo de la siguiente división, asignando a la variable dividendo el valor del cociente en cada iteración del bucle. Finalmente, el valor de la sumatoria obtenida viene a ser el valor del número invertido calculado, como se puede ver en la Figura 2.20.2. El requerimiento de los datos y las fórmulas requeridas se muestran a continuación.
+ </p>              <img src="./assets/images/Capitulos/II/media/Figura 2.20.2.png" style="display:block; margin:auto; "><br>
+               <h5 style="text-align:center"><b>Figura 2.20.2. </b>Proceso para invertir un número entero.</h5>
+     
+   <h3><b>B.1) Requerimiento de los Datos</b></h3>
+               <p><b>Entradas del Programa</b></p>
+                   
+     <table>
+                   <tr><td width="200"> num </td><td width="200">/* número entero original  */</td></tr>
+                 </table><br>
+                 <p><b>Salidas del Problema</b></p>
+                 <table>
+                   <tr><td width="200"> numeroCifras </td><td width="200">/* número de cifras decimales del entero  */</td></tr>
+                   <tr><td width="200"> numInvertido </td><td width="200">/* número entero invertido */</td></tr>
+                   <tr><td width="200"> Mensaje </td><td width="200">/* que indica que el número ingresado es palíndromo o no es palíndromo */</td></tr>
+                 </table><br>
+     <p><b>Auxiliares del Problema</b></p>
+               <table>
+                 <tr><td width="200">cont</td><td width="200">/* contador de cifras decimales de un entero */</td></tr>
+     <tr><td width="200">D</td><td width="200">/* Dividendo de la división */</td></tr>
+     <tr><td width="200">c</td><td width="200">/* cociente de la división */</td></tr>
+     <tr><td width="200">R</td><td width="200">/* Residuo de la división */</td></tr>
+     <tr><td width="200">sum</td><td width="200">/* sumatoria */</td></tr>
+     <tr><td width="200">i</td><td width="200">/* contador */</td></tr>
+              </table><br>
+                 <p><b>Fórmulas Relevantes</b></p>
+                 <table>
+     <tr><td ><em>c = <sup>D</sup> / <sub>10</sub></em></td><td> (2) </td><td>/* Fórmula que calcula el cociente de una división */</td></tr>
+                 <tr><td width="120"><em>R=D MOD2 </em></td><td width="30"> (1) </td><td width="280">/* Fórmula que calcula el residuo de una división */</td></tr>
+                   <tr><td ><em>sum = sum + R∙10<sup>n</sup> </em></td><td> (2) </td><td>/* Fórmula que acumula el valor de una sumatoria más el producto entre el residuo por 10 elevado a la potencia de n */</td></tr>
+                 </table> <br>
+ 
+                 <h3><b>B.2) Diagrama de Entrada-Salida</b></h3>
+                 <p>En la Figura 2.20.3 se muestra el diagrama de Entrada-Salida del programa donde se identifican y se diagraman las entradas, salidas y auxiliares del problema como son: a) Entradas: la variable ‘num’; b) Salidas: la variable ‘numeroCifras’; la variable ‘numInvertido’; un mensaje de información que indica que el número ingresado es palíndromo o no es palíndromo; c) Auxiliares: la variable ‘cont’; la variable ‘D’; la variable ‘c’; la variable ‘R’; la variable ‘sum’; la variable ‘i’.
+ </p>
+                 <img src="./assets/images/Capitulos/II/media/Figura 2.20.3.png" style="display:block; margin:auto; "><br>
+                 <h5 style="text-align:center"><b>Figura 2.20.3. </b>Diagrama de Entrada-Salida del Programa.</h5>
+                 <h2><b>C) Diseño</b></h2>
+                 <p>Una vez que se conocen las entradas, las auxiliares y las salidas del problema, se deben listar los pasos necesarios para resolver el problema, es decir, el algoritmo.</p>
+                 
+       <p><b>Algoritmo</b></p>
+                 <ol type="1">
+                   <li>Imprimir el mensaje de información: Analizar si un número es palíndromo.</li>
+                   <li>Leer el valor de un número entero.</li>
+     <li>Asignar a la variable Dividendo el valor del número entero.</li>
+     <li>Inicializar el contador ‘cont’ con el valor de cero.</li>                  
+     <li>Hacer:</li>
+                   <ol type="1" start="5">
+                     <li>1. Calcular el valor del cociente entre el Dividendo y el valor de 10.</li>
+                   </ol><ol type="1" start="5">
+                     <li>2. Calcular el valor del Residuo entre el Dividendo y el valor de 10.</li>
+                   </ol><ol type="1" start="5">
+                     <li>3. Asignar a la variable Dividendo el valor del cociente.</li>
+                   </ol><ol type="1" start="5">
+                     <li>4. Incrementar el valor del contador ‘i’ en uno.</li>
+     Mientras el cociente de la división sea diferente de cero.
+                   </ol>
+                   <li>Asignar a la variable 'numeroCifras' el valor del contador 'cont' que corresponde al valor del número de cifras del número entero ingresado.</li>
+     <li>Imprimir el número de cifras del número entero ingresado por teclado.</li>
+     <li>Asignar a la variable Dividendo el valor del número entero.</li>
+     <li>Inicializar la variable sumatoria con el valor de cero.</li>
+     <li>Inicializar el contador 'i' con el valor del número de cifras menos uno.</li>
+     <li>Hacer:</li>
+                   <ol type="1" start="11">
+                     <li>1. Calcular el valor del cociente entre el Dividendo y el valor de 10.</li>
+                   </ol><ol type="1" start="11">
+                     <li>2. Calcular el valor del Residuo entre el Dividendo y el valor de 10.</li>
+                   </ol><ol type="1" start="11">
+                     <li>3. 11.3.	Asignar a la sumatoria el valor que tiene acumulado ás el producto entre el Residuo con el valor de 10 elevado a la potencia de ‘i’.</li>
+                   </ol><ol type="1" start="11">
+                     <li>4. Asignar a la variable Dividendo el valor del cociente.</li>
+                   </ol><ol type="1" start="11">
+                     <li>5. Decrementar el valor del contador ‘i’ en uno.</li>
+      Mientras el cociente de la división sea diferente de cero.
+                   </ol>
+     <li>Asignar a la variable 'numInvertido' el valor de la sumatoria 'sum' que corresponde al valor del número entero invertido.</li>                  
+     <li>Imprimir el número entero invertido.</li>
+     <li>Si el valor de la variable 'num' que tiene el valor del número entero original es igual al valor de la variable 'numInvertido' que tiene el valor del número entero invertido.</li>
+     <ol type="1" start="14">
+                     <li>1. Imprimir el mensaje: El número ingresado es palíndromo.</li>
+                   </ol>
+     <li>Caso contrario, el valor de la variable 'num' es diferente del valor de la variable 'numInvertido'.</li>
+     <ol type="1" start="15">
+                     <li>1. Imprimir el mensaje: El número ingresado no es palíndromo.</li>
+                   </ol>
+                 </ol>
+ 
+                 <h2><b>D) Implementación</b></h2>
+                 <p>Para implementar la solución, se debe escribir el algoritmo como un programa de C/C++ que contenga toda la información necesaria para completar la traducción a lenguaje máquina. En la Tabla 2.20.1 se muestra el código del programa en C/C++.</p>
+                 <h5><b>Tabla 2.19.1. </b>Programa que analiza si un número leído es palíndromo.</h5>
+                 <pre><code [highlight]="prefTab2[0].tabla2_20_1"  [lineNumbers]="true"></code></pre> <br>
+                 <h2>E) Pruebas</h2>
+                 <p>En la Tabla 2.20.2, se muestra un ejemplo de la salida del programa, donde se puede ver que los resultados del programa tienen sentido, comparando estos resultados con los datos devueltos por una calculadora.</p>
+                 <p>En la salida de la Tabla 2.20.2 se puede ver que, al ingresar el número 55555, el programa indica que este número tiene 5 cifras decimales. Luego, se obtiene el número invertido que en este caso resulta ser el mismo número, y por lo tanto el número ingresado es palíndromo.
+ </p>
+                 <h5><b>Tabla 2.20.2.</b> Salida del programa</h5>
+                 <img src="./assets/images/Capitulos/II/media/Tabla 2.20.2.png" style="display:block; margin:auto; "><br>
+                 <p>En la Tabla 2.20.3, se muestra la prueba de escritorio del primer bucle do-while() del programa que cuenta el número de cifras que tiene el número ingresado por el teclado que en este caso es el número 55555 cuyo número de cifras es 5.  
+ </p>
+                <h5><b>Tabla 2.20.3. </b>Prueba de escritorio del programa del primer bucle do-while() del programa.</h5>
+                 <table frame="void" rules="all" align="center" cellspacing="0" cellpadding="5"> 
+                 <tr style="color:red"><td>num</td><td>D</td><td>cont</td><td>C</td><td>c!=0</td></tr>
+                 <tr><td>55555</td><td>55555</td><td>0</td><td></td><td></td></tr>
+                 <tr><td></td><td>5555</td><td>1</td><td>5555</td><td>5555 != 0 (V)</td></tr>
+                  <tr><td></td><td>555</td><td>2</td><td>555</td><td>555 != 0 (V)</td></tr>
+                  <tr><td></td><td>55</td><td>3</td><td>55</td><td>55 != 0 (V)</td></tr>
+                  <tr><td></td><td>5</td><td>4</td><td>5</td><td>5 != 0 (V)</td></tr>
+                  <tr><td></td><td>0</td><td>5</td><td>0</td><td style="color:rgb(33, 15, 201)">0!= 0 (F)</td></tr>
+                </table> <br>
+                <p>En la Tabla 2.20.4, se muestra la prueba de escritorio del segundo bucle do-while() del programa que invierte el número original que es el 55555 y se obtiene nuevamente el mismo número 55555. En cada división sucesiva el cociente de una división pasa a ser el dividendo de la siguiente división. También, se puede comprobar que el resultado de la sumatoria es el número invertido calculado mediante la suma de cada residuo multiplicado por una potencia de diez comenzando con la potencia igual al número de cifras menos uno hasta llegar al valor de cero. Finalmente, la ejecución de la sentencia do-while() termina cuando la condición del bucle se hace falsa. En este caso el número 55555 resulta ser palíndromo.</p>
+                <h5><b>Tabla 2.20.4. </b>Prueba de escritorio del programa del segundo bucle do-while() del programa.</h5>
+                <table frame="void" rules="all" align="center" cellspacing="0" cellpadding="5"> 
+                <tr style="color:red"><td>num</td><td>D</td><td>Sum</td><td>i</td><td>C</td><td>R</td><td>c!=0</td></tr>
+                <tr><td>55555</td><td>55555</td><td>0</td><td>4</td><td></td><td></td><td></td></tr>
+                <tr><td></td><td>5555</td><td>0+50&#88;10<sup>4</sup>=50000</td><td>3</td><td>5555</td><td>5</td><td>5555 != 0 (V)</td></tr>
+                 <tr><td></td><td>555</td><td>50000+5&#88;10<sup>3</sup>=55000</td><td>2</td><td>555</td><td>5</td><td>555 != 0 (V)</td></tr>
+                 <tr><td></td><td>55</td><td>55000+5&#88;10<sup>2</sup>=55500</td><td>1</td><td>55</td><td>5</td><td>55 != 0 (V)</td></tr>
+                 <tr><td></td><td>5</td><td>55500+5&#88;10<sup>1</sup>=55550</td><td>0</td><td>5</td><td>5</td><td>5 != 0 (V)</td></tr>
+                 <tr><td></td><td>0</td><td>55550+5&#88;10<sup>0</sup>=55555</td><td>-1</td><td>0</td><td></td><td style="color:rgb(33, 15, 201)">0!= 0 (F)</td></tr>
+               </table> <br>
+               <p>En la Tabla 2.20.5, se muestra otro ejemplo de la salida del programa, donde se puede ver que los resultados del programa tienen sentido, comparando estos resultados con los datos devueltos por una calculadora.</p>
+              <p>En la salida de la Tabla 2.20.5 se puede ver que, al ingresar el número 1234, el programa indica que este número tiene 4 cifras decimales. Luego, se obtiene el número invertido que en este caso no resulta ser el mismo número, y por lo tanto el número ingresado no es palíndromo.</p>
+            
+            
 
 
-              </ng-template>
+              
+              <h5><b>Tabla 2.20.5.</b> Salida del programa</h5>
+              <img src="./assets/images/Capitulos/II/media/Tabla 2.20.5.png" style="display:block; margin:auto; "><br>
+             <p>En la Tabla 2.20.6, se muestra la prueba de escritorio del primer bucle do-while() del programa que cuenta el número de cifras que tiene el número ingresado por el teclado que en este caso es el número 1234 cuyo número de cifras es 4.  </p>
+             <h5><b>Tabla 2.20.6. </b>Prueba de escritorio del programa del primer bucle do-while() del programa.</h5>
+              <table frame="void" rules="all" align="center" cellspacing="0" cellpadding="5"> 
+              <tr style="color:red"><td>num</td><td>D</td><td>cont</td><td>C</td><td>c!=0</td></tr>
+              <tr><td>1234</td><td>1234</td><td>0</td><td></td><td></td></tr>
+              <tr><td></td><td>123</td><td>1</td><td>123</td><td>123 != 0 (V)</td></tr>
+               <tr><td></td><td>12</td><td>2</td><td>12</td><td>12 != 0 (V)</td></tr>
+               <tr><td></td><td>1</td><td>3</td><td>1</td><td>1 != 0 (V)</td></tr>
+               <tr><td></td><td>0</td><td>4</td><td>0</td><td style="color:rgb(33, 15, 201)">0!= 0 (F)</td></tr>
+             </table> <br>
+             <p>En la Tabla 2.20.7, se muestra la prueba de escritorio del segundo bucle do-while() del programa que invierte el número original que es el número 1234 y se obtiene el número invertido 4321. En cada división sucesiva el cociente de una división pasa a ser el dividendo de la siguiente división. También, se puede comprobar que el resultado de la sumatoria es el número invertido calculado mediante la suma de cada residuo multiplicado por una potencia de diez comenzando con la potencia igual al número de cifras menos uno hasta llegar al valor de cero. Finalmente, la ejecución de la sentencia do-while() termina cuando la condición del bucle se hace falsa. En este caso el número 1234 resulta no ser palíndromo.</p>
+             <h5><b>Tabla 2.20.7. </b>Prueba de escritorio del programa del segundo bucle do-while() del programa.</h5>
+             <table frame="void" rules="all" align="center" cellspacing="0" cellpadding="5"> 
+             <tr style="color:red"><td>num</td><td>D</td><td>Sum</td><td>i</td><td>C</td><td>R</td><td>c!=0</td></tr>
+             <tr><td>1234</td><td>1234</td><td>0</td><td>3</td><td></td><td></td><td></td></tr>
+             <tr><td></td><td>123</td><td>0+4&#88;10<sup>3</sup>=4000</td><td>2</td><td>123</td><td>4</td><td>5555 != 0 (V)</td></tr>
+              <tr><td></td><td>12</td><td>4000+3&#88;10<sup>2</sup>=4300</td><td>1</td><td>12</td><td>3</td><td>555 != 0 (V)</td></tr>
+              <tr><td></td><td>1</td><td>4300+2&#88;10<sup>1</sup>=4320</td><td>0</td><td>1</td><td>2</td><td>55 != 0 (V)</td></tr>
+              <tr><td></td><td>0</td><td>4320+1&#88;10<sup>0</sup>=4321</td><td>-1</td><td>0</td><td>1</td><td style="color:rgb(33, 15, 201)">0!= 0 (F)</td></tr>
+            </table> <br>
+            
+            </ng-template>
             </mat-tab>
 
             <mat-tab  label="2.4.3. La sentencia for">
               <ng-template matTabContent>
+                <br><h1>La sentencia for()</h1>
+                <p>El bucle for() es el bucle más potente que tiene el lenguaje C/C++, ya que agrupa en un solo lugar tres acciones: a) inicializar uno o varios contadores; b) manejar una expresión lógica y c) incrementar o decrementar el contador o contadores. Este bucle es ideal para implementar bucles controlados por contador que son bucles en los que un conjunto de sentencias se ejecuta una vez por cada valor de un rango especificado, de acuerdo al algoritmo que resuelve un problema. El formato de esta sentencia tiene la siguiente sintaxis:</p>
+
+                <p><b>Sintaxis 1:</b></p>
+<pre><code align="left">for(Inicialización; Condición_Bucle; Incremento/Decremento) 
+      sentencia;</code></pre>
+                    <table>
+                      <tr VALIGN=top><td><code>Inicialización</code></td>
+                        <td>Sección donde se inicializan las variables de control del bucle.</td></tr>
+                        
+                      <tr VALIGN=top><td><code>Condición_Bucle</code></td>
+                        <td>Sección que contiene una expresión lógica o booleana que determina si la sentencia o acción se ha de ejecutar de manera repetitiva, mientras sea verdadera.</td></tr>
+                        <tr VALIGN=top><td><code>Incremento/Decremento</code></td>
+                          <td>Sección donde se incrementan o se decrementan las variables de control del bucle.</td></tr>
+                      <tr VALIGN=top><td><code>sentencia</code></td>
+                        <td>La sentencia o acción se ejecuta si la expresión lógica es verdadera dentro del bucle.</td></tr>
+                    </table>
+                    <br>
+                    <table border="1" CELLPADDING=5 CELLSPACING=0>
+                      <tr VALIGN=top><td width="50"><b> Nota:</b></td><td>  En esta sintaxis no es necesario utilizar llaves ya que se tiene una sola sentencia o instrucción.</td></tr>
+                    </table>
+                    <br>
+                    <p><b>Sintaxis 2:</b></p>
+                  <pre><code align="left">for(Inicialización; Condición_Bucle; Incremento/Decremento)
+&#65371;
+        sentencia<sub>1</sub>;
+        sentencia<sub>2</sub>;
+        ...
+        sentencia<sub>n</sub>;
+&#65373; 
+  </code></pre>
+  <table>
+    <tr VALIGN=top><td><code>Inicialización</code></td>
+      <td>Sección donde se inicializan las variables de control del bucle.</td></tr>
+      
+    <tr VALIGN=top><td><code>Condición_Bucle</code></td>
+      <td>Sección que contiene una expresión lógica o booleana que determina si la sentencia o acción se ha de ejecutar de manera repetitiva, mientras sea verdadera.</td></tr>
+      <tr VALIGN=top><td><code>Incremento/Decremento</code></td>
+        <td>Sección donde se incrementan o se decrementan las variables de control del bucle.</td></tr>
+    <tr VALIGN=top><td><code>sentencias</code></td>
+      <td>Las sentencias o acciones se ejecutan si la expresión lógica es verdadera dentro del bucle.</td></tr>
+  </table>
+  <br>
               </ng-template>
             </mat-tab>
 
             <mat-tab  label="2.4.4. Bucles anidados">
               <ng-template matTabContent>
+               
+
+                    <br>
               </ng-template>
             </mat-tab>
           </mat-tab-group>
