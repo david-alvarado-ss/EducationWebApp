@@ -2014,14 +2014,1400 @@ En la Figura 2.19.3 se muestra el diagrama de Entrada-Salida del programa donde 
                       <tr><td>1</td><td>1 &gt;=1 (V)</td><td>1 INTRO</td></tr>
                       <tr><td>-1</td><td>-1 &gt;=1 (F)</td><td> </td></tr>                      
                     </table> <br>
+            
+                    <h1><b>Caso de Estudio 2.21: Sumatoria de una sucesión.</b></h1>
+                    <h2><b>A) Problema</b></h2>
+                    <p>Dada la sucesión:</p>
+                     <table align="right">
+                      <td width="350"><em>S <sub>n</sub> = (1,2,3,4,5,6, ...,n) </em></td>
+                    <td align="right">(1)</td>
+                    </table>
+                    <br><br>
+
+                    <p>Donde la fórmula de la sumatoria de los n-términos es:</p>
+                    
+                    <table align="right">
+                      <td width="350"><em> S<sub>n</sub> = &Sigma; <sup><font size="2">&#x221e;</font></sup><sub><font size="2">n=1</font></sub>
+                         n</em></td>
+                    <td align="right">(2)</td>
+                    </table><br>
+                    <h2><b>B) Análisis</b></h2>
+                    <p>Claramente se puede ver que la única entrada del problema es el número de términos de la sucesión. Se requiere una sola salida que es el valor de la sumatoria de la sucesión. El proceso de cálculo requiere que la sucesión numérica infinita de la ecuación (2), se convierta a una sucesión numérica finita, donde el valor de ‘n’ se convierte en el valor de ‘i’ y el valor de infinito pasa a ser el valor de ‘n’, ya que si se quiere calcular la sumatoria de los cinco primeros términos de la sucesión, la sumatoria iría desde el valor de i = 1 hasta el valor de i = 5, como se puede ver en la ecuación (3):</p>
+          
+          <table align="right">
+            <td width="350"><em> S<sub>n</sub> = &Sigma; <sup><font size="2">&#x221e;</font></sup><sub><font size="2">i=1</font></sub>
+               i</em></td>
+          <td align="right">(3)</td>
+          </table><br>
+          <p>Como se puede ver en la ecuación (3) se requiere utilizar un solo bucle para calcular la sumatoria de la sucesión.</p> 
+        <h3><b>B.1) Requerimiento de los Datos</b></h3>
+                    <p><b>Entradas del Programa</b></p>
+                        
+          <table>
+                        <tr><td width="200"> n </td><td width="200">/* número de términos de la sucesión */</td></tr>
+                      </table><br>
+                      <p><b>Salidas del Problema</b></p>
+                      <table>
+                        <tr><td width="200"> sum </td><td width="200">/* Acumulador de sumas  */</td></tr>
+                      </table><br>
+          <p><b>Auxiliares del Problema</b></p>
+                    <table>
+          <tr><td width="200">i</td><td width="200">/* Contador para controlar la sumatoria */</td></tr>
+                   </table><br>
+                      <p><b>Fórmulas Relevantes</b></p>
+                      <table>
+                    <tr><td width="120"><em>sum = sum + valor</em></td><td width="30"> (1) </td><td width="280">/* Fórmula que representa el acumulador de una sumatoria */</td></tr>
+                      <tr><td width="120"><em> S<sub>n</sub> = &Sigma; <sup><font size="2">&#x221e;</font></sup><sub><font size="2">i=1</font></sub>
+                        i</em></td><td width="30"> (2) </td><td width="280">/* Fórmula que representa la sumatoria de la sucesión finita  */</td></tr>
+                      </table> <br>
+      
+                      <h3><b>B.2) Diagrama de Entrada-Salida</b></h3>
+                      <p>En la Figura 2.21.1 se muestra el diagrama de Entrada-Salida del programa donde se identifican y se diagraman las entradas, salidas y auxiliares del problema como son: a) Entradas: la variable ‘n’; b) Salidas: la variable ‘sum’; c) Auxiliares: el contador ‘i’.</p>
+                      <img src="./assets/images/Capitulos/II/media/Figura 2.21.1.png" style="display:block; margin:auto; "><br>
+                      <h5 style="text-align:center"><b>Figura 2.20.3. </b>Diagrama de Entrada-Salida del Programa.</h5>
+                      <h2><b>C) Diseño</b></h2>
+                      <p>Una vez que se conocen las entradas, las auxiliares y las salidas del problema, se deben listar los pasos necesarios para resolver el problema, es decir, el algoritmo.</p>
+                      
+            <p><b>Algoritmo</b></p>
+                      <ol type="1">
+                        <li>1.	Imprimir el mensaje de información: Sn = (1, 2, 3, 4, 5, 6, 7, ..., n).</li>
+                        <li>2.	Leer el número de términos de la serie, utilizando la variable ‘n’.</li>
+                       <li>3.	Inicializar con el valor de cero el acumulador de sumas cuya variable utilizada es ‘sum’.</li>                  
+          <li>Para el bucle, hacer:</li>
+                        <ol type="1" start="4">
+                          <li>1. Inicializar el valor del contador ‘i’ en uno. </li>
+                        </ol><ol type="1" start="4">
+                          <li>2. Mientras el valor de la condición (i &gt;= n), sea verdadera, ejecutar las sentencias del bucle.</li>
+                        </ol><ol type="1" start="4">
+                          <li>3. Luego de cada iteración incrementar en uno el valor del contador ‘i’. </li>
+                        </ol><ol type="1" start="5">
+                          <li>4. Asignar al acumulador 'sum' lo que tiene sumado más el valor del contador 'i'.</li>
+                        </ol>
+                        <li>Imprimir el valor de la sumatoria utilizando la variable ‘sum’.</li>
+                      </ol>
+      
+                      <h2><b>D) Implementación</b></h2>
+                      <p>Para implementar la solución, se debe escribir el algoritmo como un programa de C/C++ que contenga toda la información necesaria para completar la traducción a lenguaje máquina. En la Tabla 2.21.1 se muestra el código del programa en C/C++.</p>
+                      <h5><b>Tabla 2.21.1. </b>Programa que analiza si un número leído es palíndromo.</h5>
+                      <pre><code [highlight]="prefTab2[0].tabla2_21_1"  [lineNumbers]="true"></code></pre> <br>
+                      <h2>E) Pruebas</h2>
+                      <p>En la Tabla 2.21.2, se muestra un ejemplo de la salida del programa, donde se puede ver que los resultados del programa tienen sentido, comparando estos resultados con los datos devueltos por una calculadora.</p>
+                      <p>En la salida de la Tabla 2.21.2 se puede ver que, al ingresar el número de términos igual a 5, se obtiene la sumatoria de los primeros cinco números, es decir, 1+2+3+4+5, cuyo resultado es 15.</p>
+                      <h5><b>Tabla 2.21.2.</b> Salida del programa</h5>
+                      <img src="./assets/images/Capitulos/II/media/Tabla 2.21.2.png" style="display:block; margin:auto; "><br>
+                     <p>En la Tabla 2.21.3, se muestra la prueba de escritorio del programa, donde se puede comprobar que en cada iteración del bucle for() se utiliza un acumulador de sumas donde se acumulan los valores parciales de la sucesión. Finalmente, la ejecución del bucle termina cuando la condición de esta sentencia se hace falsa.</p>
+                     <h5><b>Tabla 2.21.3. </b>Prueba de escritorio del programa.</h5>
+                      <table frame="void" rules="all" align="center" cellspacing="0" cellpadding="5"> 
+                      <tr style="color:red"><td>n</td><td>i</td><td>i &gt= n</td><td>sum</td></tr>
+                      <tr><td>5</td><td>1</td><td>1 &gt= 5 (V)</td><td>0</td></tr>
+                      <tr><td></td><td>2</td><td>2 &gt= 5 (V)</td><td>0 + 1 = 1</td></tr>
+                      <tr><td></td><td>3</td><td>3 &gt= 5 (V)</td><td>1 + 2 = 3</td></tr>
+                      <tr><td></td><td>4</td><td>4 &gt= 5 (V)</td><td>3 + 3 = 6</td></tr>
+                      <tr><td></td><td>5</td><td>5 &gt= 5 (V)</td><td>6 + 4 = 10</td></tr>
+                      <tr><td></td><td>6</td><td style="color:(33, 15, 201)">6 &gt= 5 (F)</td><td>10 + 5 = 15</td></tr>
+                      
+                     </table> <br>
+
+
+            <h1><b>Caso de Estudio 2.22: Factorial de un Número.</b></h1>
+                     <h2><b>A) Problema</b></h2>
+                     <p>El factorial de un número se define como el producto de todos los enteros positivos desde 1 hasta n:</p>
+                     <table align="right">
+                      <td width="350"><em>n! = 1∙2∙3∙4∙5∙6∙7∙...∙n</em></td>
+                    <td align="right">(1)</td>
+                    </table><br>
+                     <p>Por ejemplo: 5!=1∙2∙3∙4∙5=120</p>
+                     <p>Donde la fórmula del factorial de un número se puede representar como un producto de números de una sucesión, como se puede ver a continuación:</p>
+                     <table align="right">
+                      <td width="350"><em> n! = &prod; <sup><font size="2">&#x221e;</font></sup><sub><font size="2">n=1</font></sub> 
+                         n</em></td>
+                    <td align="right">(2)</td>
+                    </table><br>
+                    <p>Escribir un programa que permita calcular el factorial de un número, utilizando un bucle.</p>
+
+                     <h2><b>B) Análisis</b></h2>
+                     <p>Claramente se puede ver que la única entrada del problema es un número entero positivo. Se requiere una sola salida que es el valor del producto de la sucesión o el factorial de un número. El proceso de cálculo requiere que la sucesión numérica infinita de la ecuación (2), se convierta a una sucesión numérica finita, donde el valor de ‘n’ se convierte en el valor de ‘i’ y el valor de infinito pasa a ser el valor de ‘n’, ya que si se quiere calcular el producto de los cinco primeros términos de la sucesión o el factorial de 5, es decir, 5!, el producto iría desde el valor de i = 1 hasta el valor de i = 5, como se puede ver en la ecuación (3):</p>
+                     <table align="right">
+                      <td width="350"><em> n! = &prod; <sup><font size="2">&#x221e;</font></sup><sub><font size="2">i=1</font></sub> 
+                         i</em></td>
+                    <td align="right">(3)</td>
+                    </table><br>
+                     <p>Como se puede ver en la ecuación (3) se requiere utilizar un solo bucle para calcular el producto de la sucesión.</p>
+                     
+         <h3><b>B.1) Requerimiento de los Datos</b></h3>
+                     <p><b>Entradas del Programa</b></p>
+                         
+           <table>
+                         <tr><td width="200"> n </td><td width="200">/* número entero positivo a calcular */</td></tr>
+                       </table><br>
+                       <p><b>Salidas del Problema</b></p>
+                       <table>
+                         <tr><td width="200"> prod </td><td width="200">/* Acumulador de productos */</td></tr>
+                      </table><br>
+           <p><b>Auxiliares del Problema</b></p>
+                     <table>
+                       
+           <tr><td width="200">i</td><td width="200">/* Contador para controlar el producto */</td></tr>
+                    </table><br>
+                       <p><b>Fórmulas Relevantes</b></p>
+                       <table>
+           <tr><td width="120"><em>prod = prod x valor</em></td><td> (1) </td><td>/* Fórmula que representa el acumulador de un producto  */</td></tr>
+                       <tr><td width="120"><em>n! = &prod; <sup><font size="2">&#x221e;</font></sup><sub><font size="2">i=1</font></sub> 
+                        i</em></td><td width="30"> (2) </td><td width="280">/* Fórmula que representa el producto de la sucesión finita o el factorial de un número */</td></tr>
+                        </table> <br>
+       
+                       <h3><b>B.2) Diagrama de Entrada-Salida</b></h3>
+                       <p>En la Figura 2.22.1 se muestra el diagrama de Entrada-Salida del programa donde se identifican y se diagraman las entradas, salidas y auxiliares del problema como son: a) Entradas: la variable ‘n’; b) Salidas: la variable ‘prod’; c) Auxiliares: el contador ‘i’.</p>
+                       <img src="./assets/images/Capitulos/II/media/Figura 2.22.1.png" style="display:block; margin:auto; "><br>
+                       <h5 style="text-align:center"><b>Figura 2.22.1. </b>Diagrama de Entrada-Salida del Programa.</h5>
+                       <h2><b>C) Diseño</b></h2>
+                       <p>Una vez que se conocen las entradas, las auxiliares y las salidas del problema, se deben listar los pasos necesarios para resolver el problema, es decir, el algoritmo.</p>
+                       
+             <p><b>Algoritmo</b></p>
+                       <ol type="1">
+                         <li>Imprimir el mensaje de información: n! = 1∙2∙3∙4∙5∙6∙7∙…∙n.</li>
+                         <li>Leer un número entero positivo, utilizando la variable ‘n’.</li>
+           <li>Inicializar con el valor de uno el acumulador de productos cuya variable utilizada es ‘prod’.</li>
+          <li>Para el bucle, hacer:</li>
+                         <ol type="1" start="4">
+                           <li>1. Inicializar el valor del contador ‘i’ en uno. </li>
+                         </ol><ol type="1" start="4">
+                           <li>2. Mientras el valor de la condición (i <= n), sea verdadera, ejecutar las sentencias del bucle. </li>
+                         </ol><ol type="1" start="4">
+                           <li>3. Luego de cada iteración incrementar en uno el valor del contador ‘i’. </li>
+                         </ol><ol type="1" start="4">
+                           <li>4. Asignar al acumulador 'prod' lo que tiene multiplicado por el valor del contador 'i'.</li>
+                           </ol>
+                         <li>5.	Imprimir el valor del producto calculado o del factorial de un número, utilizando la variable ‘prod’.</li>
+                       </ol>
+       
+                       <h2><b>D) Implementación</b></h2>
+                       <p>Para implementar la solución, se debe escribir el algoritmo como un programa de C/C++ que contenga toda la información necesaria para completar la traducción a lenguaje máquina. En la Tabla 2.22.1 se muestra el código del programa en C/C++.</p>
+                       <h5><b>Tabla 2.22.1. </b>Programa que calcula el factorial de un número entero positivo.</h5>
+                       <pre><code [highlight]="prefTab2[0].tabla2_22_1"  [lineNumbers]="true"></code></pre> <br>
+                       <h2>E) Pruebas</h2>
+                       <p>En la Tabla 2.22.2, se muestra un ejemplo de la salida del programa, donde se puede ver que los resultados del programa tienen sentido, comparando estos resultados con los datos devueltos por una calculadora.</p>
+                       <p>En la salida de la Tabla 2.22.2 se puede ver que, al ingresar el número de términos igual a 5, se obtiene el producto de los primeros cinco números, es decir, 1*2*3*4*5, cuyo resultado es 120, que corresponde al factorial de 5 (5!).</p>
+                       <h5><b>Tabla 2.22.2.</b> Salida del programa</h5>
+                       <img src="./assets/images/Capitulos/II/media/Tabla 2.22.2.png" style="display:block; margin:auto; "><br>
+                       <p>En la Tabla 2.22.3, se muestra la prueba de escritorio del programa, donde se puede comprobar que en cada iteración del bucle for() se utiliza un acumulador de productos donde se acumulan los valores parciales de la sucesión o del factorial de un número. Finalmente, la ejecución del bucle termina cuando la condición de esta sentencia se hace falsa.</p>
+                      <h5><b>Tabla 2.22.3. </b>Prueba de escritorio del programa.</h5>
+                      <table frame="void" rules="all" align="center" cellspacing="0" cellpadding="5"> 
+                        <tr style="color:red"><td>n</td><td>i</td><td>i &gt= n</td><td>prod</td></tr>
+                        <tr><td>5</td><td>1</td><td>1 &gt= 5 (V)</td><td>0</td></tr>
+                        <tr><td></td><td>2</td><td>2 &gt= 5 (V)</td><td>0 x 1 = 1</td></tr>
+                        <tr><td></td><td>3</td><td>3 &gt= 5 (V)</td><td>1 x 2 = 2</td></tr>
+                        <tr><td></td><td>4</td><td>4 &gt= 5 (V)</td><td>2 x 3 = 6</td></tr>
+                        <tr><td></td><td>5</td><td>5 &gt= 5 (V)</td><td>6 x 4 = 24</td></tr>
+                        <tr><td></td><td>6</td><td><font color="blue"> 6 &gt= 5 (F)</font></td><td>24 x 5 = 120</td></tr>
+                        
+                       </table> <br>
+                       <h1><b>Caso de Estudio 2.23: Sucesión de Fibonacci Iterativa.</b></h1>
+                       <h2><b>A) Problema</b></h2>
+                       <p>La sucesión o serie de Fibonacci es una sucesión infinita de números naturales que comienza con los números 0 y 1, donde a partir de estos números cada término es la suma de los dos anteriores:</p>
+                       <p>0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, …</p>
+                       <p>A los elementos de esta sucesión se los llama los números de Fibonacci en honor a Leonardo de Pisa, matemático italiano del siglo XIII (Vorobiov, N.N.; 1974). Esta sucesión tiene muchas aplicaciones en varias áreas como las Matemáticas, Computación, Teoría de Juegos, Biología, entre otras. Como, por ejemplo: las ramas de los árboles, la disposición de las hojas en el tallo de un árbol, en las flores de alcachofas, en las flores de los girasoles, en la configuración de las piñas coníferas, en los números de parejas de conejos, etc.</p>
+                       <p>Los números de Fibonacci quedan definidos por las ecuaciones:</p>
+                       <table align="right">
+                        <tr><td width="350"><em> f<sub>0</sub> = 0 <p>f<sub>1</sub>=1</p></em></td>
+                          <td align="right">Ec. 2.23.1</td></tr>
+                      <tr><td><em>f<sub>n</sub> = f<sub>n-2</sub> + f <sub>n-1</sub></em></td><td>Ec. 2.23.2</td></tr>
+                      </table><br><br><br><br><br>
+                      <p>Esto produce los siguientes números:</p>
+                      <table align="center">
+                          <tr><td><em>f<sub>0</sub> = 0</em></td></tr>
+                          <tr><td><em>f<sub>1</sub> = 1</em></td></tr>
+                          <tr><td><em>f<sub>2</sub> = 1</em></td></tr>
+                          <tr><td><em>f<sub>3</sub> = 2</em></td></tr>
+                          <tr><td><em>f<sub>4</sub> = 3</em></td></tr>
+                          <tr><td><em>f<sub>5</sub> = 5</em></td></tr>
+                          <tr><td><em>f<sub>6</sub> = 8</em></td></tr>
+                          <tr><td><em>f<sub>7</sub> = 13</em></td></tr>
+                          <tr><td><em>f<sub>8</sub> = 21</em></td></tr>
+                          <tr><td><em>f<sub>9</sub> = 34</em></td></tr>
+                          <tr><td>...</td></tr>
+                      </table><br>
+                      <p>Esta manera de definir la sucesión se la considera algorítmica y es parte del estudio en las Matemáticas Discretas.</p>
+                       <h2><b>B) Análisis</b></h2>
+                       <p>Claramente se puede ver que la única entrada del problema es el número de Fibonacci que se desea calcular. Hay una sola salida requerida que es el n-ésimo término de la serie. Para resolver este ejercicio, se va a utilizar tres sentencias if-else anidadas y un bucle for(), que es una solución iterativa muy eficiente. De acuerdo con la Ec. 2.23.2 (caso general), la serie de Fibonacci se puede representar por una sucesión recurrente donde el n-ésimo término se obtiene sumando los dos anteriores términos de la sucesión, partiendo de los casos simples de la Ec. 2.23.1. </p>
+           <h3><b>B.1) Requerimiento de los Datos</b></h3>
+                       <p><b>Entradas del Programa</b></p>
+                           
+             <table>
+                           <tr><td width="200"> n</td><td width="200">/* término de la sucesión a calcular */</td></tr>
+                         </table><br>
+                         <p><b>Salidas del Problema</b></p>
+                         <table>
+                           <tr><td width="200"> c </td><td width="200">/* n-ésimo término de la sucesión calculado */</td></tr>
+                            </table><br>
+             <p><b>Auxiliares del Problema</b></p>
+             <table>
+              <tr><td width="200"> a </td><td width="200">/* primer término de la sucesión recurrente */</td></tr>
+              <tr><td width="200"> b </td><td width="200">/* segundo término de la sucesión recurrente */</td></tr>
+              <tr><td width="200"> i </td><td width="200">/* contador que controla el bucle for() */</td></tr>
+            </table><br>
+                         <p><b>Fórmulas Relevantes</b></p>
+                         <table>
+             <tr><td ><em>f<sub>0</sub>=0</em><p><em>f<sub>1</sub>=1</em></p></td><td> (1) </td><td>/* Condiciones iniciales del problema (casos especiales) */</td></tr>
+                         <tr><td width="120"><em>f<sub>n</sub> = f<sub>n-2</sub> + f <sub>n-1</sub></em></td><td width="30"> (2) </td><td width="280">/* Fórmula general que calcula el n-ésimo término de la sucesión de Fibonacci */</td></tr>
+                            </table> <br>
+         
+                         <h3><b>B.2) Diagrama de Entrada-Salida</b></h3>
+                         <p>En la Figura 2.23.1 se muestra el diagrama de Entrada-Salida del programa donde se identifican y se diagraman las entradas, salidas y auxiliares del problema como son: a) Entradas: la variable ‘n’; b) Salidas: la variable ‘c’; c) Auxiliares: el contador ‘i’; la variable ‘a’; la variable ‘b’.</p>
+                         <img src="./assets/images/Capitulos/II/media/Figura 2.23.1.png" style="display:block; margin:auto; "><br>
+                         <h5 style="text-align:center"><b>Figura 2.23.1. </b>Diagrama de Entrada-Salida del Programa.</h5>
+                         <h2><b>C) Diseño</b></h2>
+                         <p>Una vez que se conocen las entradas, las auxiliares y las salidas del problema, se deben listar los pasos necesarios para resolver el problema, es decir, el algoritmo.</p>
+                         
+               <p><b>Algoritmo</b></p>
+                         <ol type="1">
+                           <li>Imprimir el mensaje de información: <p>f(n) = 0+1+1+2+3+5+8+13+21+34+55+89+...</p></li>
+                           <li>Leer el término de la sucesión recurrente a calcular, utilizando la variable ‘n’.</li>
+             <li>Asignar a la variable 'a' el valor de cero.</li>
+             <li>Asignar a la variable 'b' el valor de uno.</li> 
+             <li>Si el valor de 'n' es igual a cero.</li>   
+             <ol type="1" start="5">
+              <li>1. Asignar a la la variable 'c' el valor de la variable 'a'.</li>
+            </ol>
+            <li>Caso contrario, si el valor de 'n' es igual a uno.</li>
+            <ol type="1" start="6">
+              <li>1. Asignar a la la variable 'c' el valor de la variable 'b'.</li>
+            </ol>
+             <li>7.	Caso contrario, si el valor de 'n' es mayor o igual a dos.</li>
+             <ol type="1" start="7">
+              <li>1. Para el bucle, hacer: </li>
+            
+            <ol type="1" start="7">
+             <li>1.1.	Inicializar el valor del contador 'i' en dos. </li>
+            </ol><ol type="1" start="7">
+                             <li>1.2.	Mientras el valor de la condición (i &gt;= n) sea verdadera, ejecutar las sentencias del bucle. </li>
+                           </ol><ol type="1" start="7">
+                             <li>1.3.	Luego de cada iteración incrementar en uno el valor del contador ‘i’. </li>
+                           </ol><ol type="1" start="7">
+                             <li>1.4.	Asignar a la la variable 'c' la suma de a + b.</li>
+                             </ol><ol type="1" start="7">
+                              <li>1.5.	Asignar a la la variable 'b' el valor de la variable 'c'.</li>
+                              </ol></ol> 
+                           <li>8.	Imprimir el valor de la variable 'n' y de la variable 'c'.</li>        
+                         </ol>
+         
+                         <h2><b>D) Implementación</b></h2>
+                         <p>Para implementar la solución, se debe escribir el algoritmo como un programa de C/C++ que contenga toda la información necesaria para completar la traducción a lenguaje máquina. En la Tabla 2.23.1 se muestra el código del programa en C/C++.</p>
+                         <h5><b>Tabla 2.23.1. </b>Programa que analiza si un número leído es palíndromo.</h5>
+                         <pre><code [highlight]="prefTab2[0].tabla2_23_1"  [lineNumbers]="true"></code></pre> <br>
+                         <h2>E) Pruebas</h2>
+                         <p>En la Tabla 2.23.2, se muestra un ejemplo de la salida del programa, donde se puede ver que los resultados del programa tienen sentido, comparando estos resultados con los datos devueltos por una calculadora.</p>
+                         <p>En la salida de la Tabla 2.23.2 se puede ver que, al ingresar el valor de ‘n’ igual a 6, se otiene el sexto término de la sucesión de Fibonacci que es el valor de 8.</p>
+                         <h5><b>Tabla 2.23.2.</b> Salida del programa</h5>
+                         <img src="./assets/images/Capitulos/II/media/Tabla 2.23.2.png" style="display:block; margin:auto; "><br>
+                         <p>En la Tabla 2.23.3, se muestra la prueba de escritorio del programa, donde se puede comprobar que se utilizan tres sentencias if-else anidadas, donde en este caso se evalúa la sentecia if-else cuya condición (n>=2) es verdadera. Luego, se utiliza un bucle for() que comienza con el contador igual a 2 y se ejecuta mientras la condición (n>=2) es verdadera. En cada iteración del bucle, la variable ‘a’ toma el valor de la variable ‘b’ y la variable ‘b’ toma el valor de la variable ‘c’. Finalmente, la ejecución del bucle termina cuando la condición de esta sentencia se hace falsa y se imprime el valor de la variable ‘c’ que corresponde al sexto termino de la sucesión de Fibonacci que es igual al valor de 8.</p>
+                        <h5><b>Tabla 2.23.3. </b>Prueba de escritorio del programa.</h5>
+                         <table frame="void" rules="all" align="center" cellspacing="0" cellpadding="5"> 
+                         <tr style="color:red"><td>n</td><td>a</td><td>b</td><td>c</td><td>n == 0</td><td>n==1</td><td>n &lt;= 2</td><td>i</td><td>i &gt;= n</td><td>cout <font color="green" face="Bookman Old Style, Book Antiqua, Garamond">&gt;&gt;</font>
+                          <font color="#900C3F">"f("</font>
+                          <font color="green" face="Bookman Old Style, Book Antiqua, Garamond">&gt;&gt;</font>
+                          <font color="black">n</font> 
+                          <font color="green" face="Bookman Old Style, Book Antiqua, Garamond">&gt;&gt;</font>
+                          <font color="#900C3F">")="</font>
+                          <font color="green" face="Bookman Old Style, Book Antiqua, Garamond">&gt;&gt;</font>
+                          <font color="black">c</font> 
+                          <font color="green" face="Bookman Old Style, Book Antiqua, Garamond">&gt;&gt;</font>
+                          <font color="black"> endl;</font>
+                        </td></tr>
+                        <tr><td>6</td><td>0</td><td>1</td><td>1</td><td>6 == 0 (F)</td><td>6 == 1 (F)</td><td>6 &lt;= 2 (V)</td><td>2</td><td>2 &gt;= 6 (V)</td><td></td></tr>
+                        <tr><td></td><td>1</td><td>1</td><td>2</td><td></td><td></td><td></td><td>3</td><td>3 &gt;= 6 (V)</td><td></td></tr>
+                        <tr><td></td><td>1</td><td>2</td><td>3</td><td></td><td></td><td></td><td>4</td><td>4 &gt;= 6 (V)</td><td></td></tr>
+                        <tr><td></td><td>2</td><td>3</td><td>5</td><td></td><td></td><td></td><td>5</td><td>5 &gt;= 6 (V)</td><td></td></tr>
+                        <tr><td></td><td>3</td><td>5</td><td>8</td><td></td><td></td><td></td><td>6</td><td>6 &gt;= 6 (V)</td><td></td></tr>
+                        <tr><td></td><td>5</td><td>8</td><td>0</td><td></td><td></td><td></td><td>7</td><td><font color="blue"> 7 &gt;= 6 (F)</font></td><td>f(6) = 8</td></tr>
+                         
+                        </table> <br>
               </ng-template>
             </mat-tab>
 
             <mat-tab  label="2.4.4. Bucles anidados">
               <ng-template matTabContent>
-               
+               <br>
+               <h1>Bucles anidados</h1>
+                <p>En el lenguaje C/C++ es posible anidar bucles, donde estos bucles anidados constan de un bucle externo con uno o más bucles internos. Cada vez que se repite el bucle externo, los bucles internos se repiten y se ejecutan las sentencias de estos bucles. Se pueden combinar bucles for() entre sí, pero también se pueden combinar bucles for() con bucles while() y do-while() en diferente orden, por ejemplo:</p>
+                <p><b>Ejemplo 1:</b>Combinación de un bucle do-while() anidado con un bucle for().</p>
+ <pre><code align="left">do &#65371;
+      for()
+      &#65371;
+          sentencia<sub>1</sub>;
+          sentencia<sub>2</sub>;
+          ...
+          sentencia<sub>n</sub>;
+      &#65373;
+&#65373; while();</code></pre>
+                <p><b>Ejemplo 2:</b>Combinación de un bucle for() anidado con un bucle while().</p>
+ <pre><code align="left">for() 
+&#65371;
+      while()
+      &#65371;
+          sentencia<sub>1</sub>;
+          sentencia<sub>2</sub>;
+          ...
+          sentencia<sub>n</sub>;
+      &#65373;
+&#65373;</code></pre>
+              <p><b>Ejemplo 3:</b>Combinación de tres bucles for() anidados.</p>
+<pre><code align="left">for() 
+&#65371;
+     for()
+     &#65371;
+          for()
+          &#65371;
+                sentencia<sub>1</sub>;
+                sentencia<sub>2</sub>;
+                ...
+                sentencia<sub>n</sub>;
+          &#65373;
+     &#65373;
+&#65373;</code></pre>
+          <p><b>Ejemplo 4:</b>Combinación de un bucle for() anidado con otros dos bucles for().</p>
+<pre><code align="left">for() 
+&#65371;
+    for()
+    &#65371;
+          sentencia<sub>1.1</sub>;
+          sentencia<sub>1.2</sub>;
+          ...
+          sentencia<sub>1.n</sub>;
+    &#65373;
+    for()
+    &#65371;
+          sentencia<sub>1</sub>;
+          sentencia<sub>2</sub>;
+          ...
+          sentencia<sub>n</sub>;
+    &#65373;
+&#65373;</code></pre><br>
+                 <h4><b>Ejercicio 2.29: </b>Escribir un programa que permita visualizar un triángulo rectángulo isósceles de asteriscos. Así, por ejemplo, si el valor del lado del triángulo es igual a 5, se obtendrá la siguiente figura:</h4>
+                   <table border="1" align="center" cellspacing="0" cellpadding="5" >
+                     <tr><td width="100"><p>*</p><p>**</p><p>***</p><p>****</p><p>*****</p></td></tr>
+                   </table><br>
+                    <TABLE border="1" align="center" cellspacing="0" cellpadding="5" >
+                      <TR>
+                        <th width="10"> <b> N° </b> </th> 
+                        <th width="350"> <b> Algoritmo en Pseudocódigo </b> </th>
+                        <th width="210"> <b> Algoritmo en Lenguaje C/C++ </b> </th>
+                      </TR>
+                      <TR> <td>1</td>  <td>entero : lado</td>
+                        <td>
+                          <font color="blue" face="Bookman Old Style, Book Antiqua, Garamond">int </font>
+                          lado;</td>
+                      </TR>
+                      <TR> <td>2</td>  <td>entero : f</td>
+                        <td>
+                          <font color="blue" face="Bookman Old Style, Book Antiqua, Garamond">int </font>
+                          f;</td>
+                      </TR>
+                      <TR> <td>3</td>  <td>entero : a</td>
+                        <td>
+                          <font color="blue" face="Bookman Old Style, Book Antiqua, Garamond">int </font>
+                          a;</td>
+                      </TR>
+                      <TR>
+                        <td>4</td>
+                        <td>Leer el valor del lado</td>
+                        <td>cin <font color="green" face="Bookman Old Style, Book Antiqua, Garamond">&gt;&gt;</font> lado</td>
+                      </TR>
+                      <TR><td>5</td> <td>Para: <p>1. Inicializar el valor del contador de las filas ‘f’ en uno.</p>
+                      <p>2. Mientras la condición (f &lt;= lado) sea verdadera, ejecutar las sentencias del bucle externo.</p>
+                    <p>3. Luego de cada ciclo incrementar el valor del contador de las filas ‘f’ en uno</p></td> 
+                        <td><font color="blue" face="Bookman Old Style, Book Antiqua, Garamond">for </font> (f = 1; f &lt;= lado; f++) 
+                         &#65371;</td> </TR>
+                      <TR><td>6</td><td>Para: <p>1. Inicializar el valor del contador de las columnas de asteriscos ‘a’ en uno.</p>
+                      <p>2. Mientras la condición (a &lt;= f) sea verdadera, ejecutar las sentencias del bucle interno.</p>
+                    <p>3. Luego de cada ciclo incrementar el valor del contador de las columnas de asteriscos ‘a’ en uno.</p></td>
+                    <td><font color="blue" face="Bookman Old Style, Book Antiqua, Garamond">for </font> (a = 1; a &lt;= f; a++) &#65371;</td> </TR>   
+                    <tr><td>7</td><td>Imprimir un asterisco por columna.</td> <td>cout <font color="green" face="Bookman Old Style, Book Antiqua, Garamond">&lt;&lt;</font>
+                          <font color="red">"*"</font>;<p>&#65373;</p></td></tr>
+                  <tr><td>8</td><td>Imprimir un salto de línea (INTRO).</td><td>cout <font color="green" face="Bookman Old Style, Book Antiqua, Garamond">&lt;&lt;</font>
+                        endl;<p>&#65373;</p></td></tr>
+                        
+                    </TABLE> <br>
 
+                    <h5><b>Programa 2.29: </b>Código del programa</h5>
+                    <pre><code [highlight]="prefTab2[0].programa2_29"  [lineNumbers]="true"></code></pre>
+                   <p>En la salida de la Ejecución 2.29 se puede ver la impresión del triángulo rectángulo isósceles de asteriscos de lado igual a 5.</p>
+                    <h5><b>Ejecución 2.29 </b>Salida del programa.</h5>
+                    <img src="./assets/images/Capitulos/II/media/Ejecución 2.29.png" style="display:block; margin:auto; "><br>
+                    <p>En la Tabla 2.29 se puede ver la prueba de escritorio del programa, donde la impresión del triángulo rectángulo isósceles se realiza mediante un bucle externo y un bucle interno. Cada vez que se repite el bucle externo, se ejecuta el bucle interno. </p>
+                    <p>El bucle externo se repite cinco veces en este caso, según la condición que depende del valor del lado del triangulo rectángulo y se controla con el contador de las filas ‘f’. El número de repeticiones realizadas por el bucle interno se controla con el contador de los asteriscos ‘a’ cuya condición depende del valor de las filas ‘f’ del triángulo rectángulo, donde este bucle se encarga de manejar la impresión de los asteriscos.</p>
+                    <h5><b>Tabla 2.29: </b>Prueba de escritorio del programa.</h5>
+                    <table frame="void" rules="all" align="center" cellspacing="0" cellpadding="5" style="font-size:x-small"> 
+                      <tr style="color:red"><td>lado</td><td>f</td><td>f &lt;= lado</td><td>a</td><td>a &lt;= f</td><td>cout &lt;&lt; "*"; </td><td>cout &lt;&lt; endl;</td></tr>
+                      <tr><td HEIGHT="50">5</td><td>1</td><td>1 &lt;= 5 (V)</td><td>1</td><td>1 &lt;= 1 (V)</td><td>*</td><td></td></tr>
+                      <tr><td HEIGHT="30"></td><td></td><td></td><td>2</td><td style="color:rgb(33, 15, 201)">2 &lt;= 1 (F)</td><td></td><td>INTRO</td></tr>
+                      <tr><td></td><td>2</td><td>2 &lt;= 5 (V)</td><td>1</td><td>1 &lt;= 2 (V)</td><td>**</td><td></td></tr>
+                      <tr><td></td><td></td><td></td><td>3</td><td>2 &lt;= 2 (V)</td><td></td><td></td></tr>
+                      <tr><td></td><td></td><td></td><td>3</td><td style="color:rgb(33, 15, 201)">3 &lt;= 2 (F)</td><td></td><td>INTRO</td></tr>
+                      <tr><td></td><td>3</td><td>3 &lt;= 5 (V)</td><td>1</td><td>1 &lt;= 3 (V)</td><td>***</td><td></td></tr>
+                      <tr><td></td><td></td><td></td><td>2</td><td>2 &lt;= 3 (V)</td><td></td><td></td></tr>
+                      <tr><td></td><td></td><td></td><td>3</td><td>3 &lt;= 3 (V)</td><td></td><td></td></tr>
+                      <tr><td></td><td></td><td></td><td>4</td><td style="color:rgb(33, 15, 201)">4 &lt;= 3 (F)</td><td></td><td>INTRO</td></tr>
+                      <tr><td></td><td>4</td><td>4 &lt;= 5 (V)</td><td>1</td><td>1 &lt;= 4 (V)</td><td>****</td><td></td></tr>
+                      <tr><td></td><td></td><td></td><td>2</td><td>2 &lt;= 4 (V)</td><td></td><td></td></tr>
+                      <tr><td></td><td></td><td></td><td>3</td><td>3 &lt;= 4 (V)</td><td></td><td></td></tr>
+                      <tr><td></td><td></td><td></td><td>4</td><td>4 &lt;= 4 (V)</td><td></td><td></td></tr>
+                      <tr><td></td><td></td><td></td><td>5</td><td style="color:rgb(33, 15, 201)">5 &lt;= 4 (F)</td><td></td><td>INTRO</td></tr>
+                      <tr><td></td><td>5</td><td>5 &lt;= 5 (V)</td><td>1</td><td>1 &lt;= 5 (V)</td><td>*****</td><td></td></tr>
+                      <tr><td></td><td></td><td></td><td>2</td><td>2 &lt;= 5 (V)</td><td></td><td></td></tr>
+                      <tr><td></td><td></td><td></td><td>3</td><td>3 &lt;= 5 (V)</td><td></td><td></td></tr>
+                      <tr><td></td><td></td><td></td><td>4</td><td>4 &lt;= 5 (V)</td><td></td><td></td></tr>
+                      <tr><td></td><td></td><td></td><td>5</td><td>5 &lt;= 5 (V)</td><td></td><td></td></tr>
+                      <tr><td></td><td></td><td></td><td>6</td><td style="color:rgb(33, 15, 201)">2 &lt;= 5 (F)</td><td></td><td>INTRO</td></tr>
+                      <tr><td></td><td>6</td><td style="color:rgb(33, 15, 201)">6 &lt;= 5 (V)</td><td></td><td></td><td></td><td></td></tr>
+                       
+                    </table>
                     <br>
+                   <h4><b>Ejercicio 2.30: </b>Escribir un programa que permita visualizar un rectángulo de asteriscos. Así, por ejemplo, si el valor del lado del triángulo es igual a 5, se obtendrá la siguiente figura:</h4>
+                   
+		<table border="1" align="center" cellspacing="0" cellpadding="5">
+                     <tr><td width="100"><p>*****</p><p>*****</p><p>*****</p><p>*****</p></td></tr>
+                   </table><br>
+                    <TABLE border="1" align="center" cellspacing="0" cellpadding="5">
+                      <TR>
+                        <th width="10"> <b> N° </b> </th> 
+                        <th width="200"> <b> Algoritmo en Pseudocódigo </b> </th>
+                        <th width="210"> <b> Algoritmo en Lenguaje C/C++ </b> </th>
+                      </TR>
+                      <TR> <td>1</td>  <td>entero : ancho</td>
+                        <td>
+                          <font color="blue" face="Bookman Old Style, Book Antiqua, Garamond">int </font>
+                          ancho;</td>
+                      </TR>
+			<TR> <td>2</td>  <td>entero : largo</td>
+                        <td>
+                          <font color="blue" face="Bookman Old Style, Book Antiqua, Garamond">int </font>
+                          largo;</td>
+                      </TR>
+                      <TR> <td>3</td>  <td>entero : f</td>
+                        <td>
+                          <font color="blue" face="Bookman Old Style, Book Antiqua, Garamond">int </font>
+                          f;</td>
+                      </TR>
+                      <TR> <td>4</td>  <td>entero : a</td>
+                        <td>
+                          <font color="blue" face="Bookman Old Style, Book Antiqua, Garamond">int </font>
+                          a;</td>
+                      </TR>
+                      <TR>
+                        <td>5</td>
+                        <td>Leer el valor del ancho</td>
+                        <td>cin <font color="green" face="Bookman Old Style, Book Antiqua, Garamond">&gt;&gt;</font> ancho</td>
+                      </TR>
+			<TR>
+                        <td>6</td>
+                        <td>Leer el valor del largo</td>
+                        <td>cin <font color="green" face="Bookman Old Style, Book Antiqua, Garamond">&gt;&gt;</font> largo</td>
+                      </TR>
+                      <TR><td>7</td> <td>Para: <p>1. Inicializar el valor del contador de las filas ‘f’ en uno.</p>
+                      <p>2. Mientras la condición (f &lt;= largo) sea verdadera, ejecutar las sentencias del bucle externo.</p>
+                    <p>3. Luego de cada ciclo incrementar el valor del contador de las filas ‘f’ en uno</p></td> 
+                        <td><font color="blue" face="Bookman Old Style, Book Antiqua, Garamond">for </font> (f = 1; f &lt;= largo; f++) 
+                         &#65371;</td> </TR>
+                      <TR><td>8</td><td>Para: <p>1. Inicializar el valor del contador de las columnas de asteriscos ‘a’ en uno.</p>
+                      <p>2. Mientras la condición (a &lt;= ancho) sea verdadera, ejecutar las sentencias del bucle interno.</p>
+                    <p>3. Luego de cada ciclo incrementar el valor del contador de las columnas de asteriscos ‘a’ en uno.</p></td>
+                    <td><font color="blue" face="Bookman Old Style, Book Antiqua, Garamond">for </font> (a = 1; a &lt;= ancho; a++) &#65371;</td> </TR>   
+                    <tr><td>7</td><td>Imprimir un asterisco por columna.</td> <td>cout <font color="green" face="Bookman Old Style, Book Antiqua, Garamond">&lt;&lt;</font>
+                          <font color="red">"*"</font>;<p>&#65373;</p></td></tr>
+                  <tr><td>8</td><td>Imprimir un salto de línea (INTRO).</td><td>cout <font color="green" face="Bookman Old Style, Book Antiqua, Garamond">&lt;&lt;</font>
+                        endl;<p>&#65373;</p></td></tr>
+                        
+                    </TABLE> <br>
+
+                    <h5><b>Programa 2.30: </b>Código del programa</h5>
+                    <pre><code [highlight]="prefTab2[0].programa2_30"  [lineNumbers]="true"></code></pre>
+                   <p>En la salida de la Ejecución 2.30 se puede ver la impresión del rectángulo de asteriscos de ancho igual a 5 y de largo igual a 4.</p>
+                    <h5><b>Ejecución 2.30 </b>Salida del programa.</h5>
+                    <img src="./assets/images/Capitulos/II/media/Ejecución 2.30.png" style="display:block; margin:auto; "><br>
+                    <p>En la Tabla 2.30 se puede ver la prueba de escritorio del programa, donde la impresión del rectángulo se realiza mediante un bucle externo y un bucle interno. </p>
+			<p>Cada vez que se repite el bucle externo, se ejecuta el bucle interno. El bucle externo se repite cinco veces en este caso, según la condición que depende del valor del largo del rectángulo y se controla con el contador de las filas ‘f’. El número de repeticiones realizadas por el bucle interno se controla con el contador de los asteriscos ‘a’ cuya condición depende del valor del ancho del rectángulo, donde este bucle se encarga de manejar la impresión de los asteriscos.</p>
+		<h5><b>Tabla 2.30: </b>Prueba de escritorio del programa.</h5>
+
+                    <table frame="void" rules="all" align="center" cellspacing="0" cellpadding="5" style="font-size:x-small" HEIGHT="50"> 
+                      <tr style="color:red"><td>ancho</td><td>largo</td><td>f</td><td>f &lt;= lado</td><td>a</td><td>a &lt;= f</td><td>cout &lt;&lt; "*"; </td><td>cout &lt;&lt; endl;</td></tr>
+                      <tr><td>5</td><td>4</td><td>1</td><td>1 &lt;= 4 (V)</td><td>1</td><td>1 &lt;= 5 (V)</td><td>*****</td><td></td></tr>
+                      <tr><td></td><td></td><td></td><td></td><td>2</td><td>2 &lt;= 5 (V)</td><td></td><td></td></tr>
+                      <tr><td></td><td></td><td></td><td></td><td>3</td><td>3 &lt;= 5 (V)</td><td></td><td></td></tr>
+                      <tr><td></td><td></td><td></td><td></td><td>4</td><td>4 &lt;= 5 (V)</td><td></td><td></td></tr>
+                      <tr><td></td><td></td><td></td><td></td><td>5</td><td>5 &lt;= 5 (V)</td><td></td><td></td></tr>
+                      <tr><td></td><td></td><td></td><td></td><td>6</td><td style="color:rgb(33, 15, 201)">6 &lt;= 5 (F)</td><td></td><td>INTRO</td></tr>
+                      <tr><td></td><td></td><td>2</td><td>2 &lt;= 4 (V)</td><td>1</td><td>1 &lt;= 5 (V)</td><td>*****</td><td></td></tr>
+                      <tr><td></td><td></td><td></td><td></td><td>2</td><td>2 &lt;= 5 (V)</td><td></td><td></td></tr>
+                      <tr><td></td><td></td><td></td><td></td><td>3</td><td>3 &lt;= 5 (V)</td><td></td><td></td></tr>
+                      <tr><td></td><td></td><td></td><td></td><td>4</td><td>4 &lt;= 5 (V)</td><td></td><td></td></tr>
+                      <tr><td></td><td></td><td></td><td></td><td>5</td><td>5 &lt;= 5 (V)</td><td></td><td></td></tr>
+                      <tr><td></td><td></td><td></td><td></td><td>6</td><td style="color:rgb(33, 15, 201)">6 &lt;= 5 (F)</td><td></td><td>INTRO</td></tr>
+                      <tr><td></td><td></td><td>3</td><td>3 &lt;= 4 (V)</td><td>1</td><td>1 &lt;= 5 (V)</td><td>*****</td><td></td></tr>
+                      <tr><td></td><td></td><td></td><td></td><td>2</td><td>2 &lt;= 5 (V)</td><td></td><td></td></tr>
+                      <tr><td></td><td></td><td></td><td></td><td>3</td><td>3 &lt;= 5 (V)</td><td></td><td></td></tr>
+                      <tr><td></td><td></td><td></td><td></td><td>4</td><td>4 &lt;= 5 (V)</td><td></td><td></td></tr>
+                      <tr><td></td><td></td><td></td><td></td><td>5</td><td>5 &lt;= 5 (V)</td><td></td><td></td></tr>
+                      <tr><td></td><td></td><td></td><td></td><td>6</td><td style="color:rgb(33, 15, 201)">6 &lt;= 5 (F)</td><td></td><td>INTRO</td></tr>
+                      <tr><td></td><td></td><td>4</td><td>4 &lt;= 4 (V)</td><td>1</td><td>1 &lt;= 5 (V)</td><td>*****</td><td></td></tr>
+                      <tr><td></td><td></td><td></td><td></td><td>2</td><td>2 &lt;= 5 (V)</td><td></td><td></td></tr>
+                      <tr><td></td><td></td><td></td><td></td><td>3</td><td>3 &lt;= 5 (V)</td><td></td><td></td></tr>
+                      <tr><td></td><td></td><td></td><td></td><td>4</td><td>4 &lt;= 5 (V)</td><td></td><td></td></tr>
+                      <tr><td></td><td></td><td></td><td></td><td>5</td><td>5 &lt;= 5 (V)</td><td></td><td></td></tr>
+                      <tr><td></td><td></td><td></td><td></td><td>6</td><td style="color:rgb(33, 15, 201)">6 &lt;= 5 (F)</td><td></td><td>INTRO</td></tr>
+                      <tr><td></td><td></td><td>5</td><td style="color:rgb(33, 15, 201)">5 &lt;= 4 (F)</td><td></td><td></td><td></td><td></td></tr>
+ 
+                    </table>
+                    <br>
+               
+                 <h4><b>Ejercicio 2.31: </b>Escribir un programa que permita visualizar un triángulo isósceles de asteriscos. Así, por ejemplo, si el valor de la altura del triángulo es igual a 5, se obtendrá la siguiente figura:</h4>
+                   
+		<table border="1" align="center" cellspacing="0" cellpadding="5">
+                     <tr><td width="100"><p>&#9633;&#9633;&#9633;&#9633;*</p><p>&#9633;&#9633;&#9633;***</p><p>&#9633;&#9633;*****</p><p>&#9633;*******</p><p>**********</p></td></tr>
+                   </table><br>
+
+<table border="1" CELLPADDING=5 CELLSPACING=0>
+                    <tr VALIGN=top><td width="50"><b> Nota:</b></td><td> Como se puede ver en la figura anterior, en cada fila mientras se reduce el número de espacios en blanco, aumenta el número de asteriscos. Con fines didácticos, el símbolo &#9633; equivale a un espacio en blanco (“ ”).</td></tr>
+                  </table>
+<br><br>
+                    <TABLE border="1" align="center" cellspacing="0" cellpadding="5">
+                      <TR>
+                        <th width="10"> <b> N° </b> </th> 
+                        <th width="350"> <b> Algoritmo en Pseudocódigo </b> </th>
+                        <th width="210"> <b> Algoritmo en Lenguaje C/C++ </b> </th>
+                      </TR>
+                      <TR> <td>1</td>  <td>entero : altura</td>
+                        <td>
+                          <font color="blue" face="Bookman Old Style, Book Antiqua, Garamond">int </font>
+                          altura;</td>
+                      </TR>
+			
+                      <TR> <td>2</td>  <td>entero : f</td>
+                        <td>
+                          <font color="blue" face="Bookman Old Style, Book Antiqua, Garamond">int </font>
+                          f;</td>
+                      </TR>
+
+                      <TR> <td>3</td>  <td>entero : b</td>
+                        <td>
+                          <font color="blue" face="Bookman Old Style, Book Antiqua, Garamond">int </font>
+                          b;</td>
+                      </TR>
+                      <TR> <td>4</td>  <td>entero : a</td>
+                        <td>
+                          <font color="blue" face="Bookman Old Style, Book Antiqua, Garamond">int </font>
+                          a;</td>
+                      </TR>
+                      <TR>
+                        <td>5</td>
+                        <td>Leer el valor de la altura del triángulo isósceles</td>
+                        <td>cin <font color="green" face="Bookman Old Style, Book Antiqua, Garamond">&gt;&gt;</font> altura</td>
+                      </TR>
+                      <TR><td>6</td> <td>Para: <p>1. Inicializar el valor del contador de las filas ‘f’ en uno.</p>
+                      <p>2. Mientras la condición (f &lt;= altura) sea verdadera, ejecutar las sentencias del bucle externo.</p>
+                    <p>3. Luego de cada ciclo incrementar el valor del contador de las filas ‘f’ en uno</p></td> 
+                        <td><font color="blue" face="Bookman Old Style, Book Antiqua, Garamond">for </font> (f = 1; f &lt;= altura; f++) 
+                         &#65371;</td> </TR>
+			<TR><td>7</td> <td>Para: <p>1. Inicializar el valor del contador de las columnas de blancos ‘b’ con el valor de la altura menos el número de filas.</p>
+                      <p>2. Mientras la condición (b &gt;= 1) sea verdadera, ejecutar las sentencias del bucle externo.</p>
+                    <p>3. Luego de cada ciclo decrementar el valor del contador de las columnas de blanco ‘b’ en uno</p></td> 
+                        <td><font color="blue" face="Bookman Old Style, Book Antiqua, Garamond">for </font> (b = altura - f; b &gt;= 1; b--) 
+                         &#65371;</td> </TR>
+			<TR><td>8</td><td>Imprimir un espacio en blanco por columna.</td><td>cout <font color="green" face="Bookman Old Style, Book Antiqua, Garamond">&lt;&lt;</font>  
+        <font color="red"> " "</font>;<p>&#65373;</p></td></TR>
+                      <TR><td>9</td><td>Para: <p>1. Inicializar el valor del contador de las columnas de asteriscos ‘a’ en uno.</p>
+                      <p>2. Mientras la condición (a &lt;= ancho * f - 1) sea verdadera, ejecutar las sentencias del bucle interno.</p>
+                    <p>3. Luego de cada ciclo incrementar el valor del contador de las columnas de asteriscos ‘a’ en uno.</p></td>
+                    <td><font color="blue" face="Bookman Old Style, Book Antiqua, Garamond">for </font> (a = 1; a &lt;= 2 * f - 1; a++) &#65371;</td> </TR>   
+                    <tr><td>10</td><td>Imprimir un asterisco por columna.</td> <td>cout <font color="green" face="Bookman Old Style, Book Antiqua, Garamond">&lt;&lt;</font>
+                          <font color="red">"*"</font>;<p>&#65373;</p></td></tr>
+                  <tr><td>11</td><td>Imprimir un salto de línea (INTRO).</td><td>cout <font color="green" face="Bookman Old Style, Book Antiqua, Garamond">&lt;&lt;</font>
+                        endl;<p>&#65373;</p></td></tr>
+                        
+                    </TABLE> <br>
+                    <h5><b>Programa 2.31: </b>Código del programa</h5>
+                    <pre><code [highlight]="prefTab2[0].programa2_31"  [lineNumbers]="true"></code></pre>
+                   <p>En la salida de la Ejecución 2.31 se puede ver la impresión del triángulo isósceles de asteriscos de altura igual a 5.</p>
+                    
+<h5><b>Ejecución 2.31 </b>Salida del programa.</h5>
+                    <img src="./assets/images/Capitulos/II/media/Ejecución 2.31.png" style="display:block; margin:auto; "><br>
+                   <p>En la Tabla 2.31 se puede ver la prueba de escritorio del programa, donde la impresión del triángulo isósceles se realiza mediante un bucle externo y dos bucles internos. Cada vez que se repite el bucle externo, se ejecutan los dos bucles internos. </p>
+<p>El bucle externo se repite cinco veces en este caso, según la altura del triángulo y se controla con el contador de las filas ‘f’. El número de repeticiones realizadas por los bucles internos se basan en el valor del contador de las filas ‘f’. El primer bucle interno controla la impresión de los espacios en blanco con el contador ‘b’ y el segundo bucle interno controla la impresión de los asteriscos con el contador ‘a’. </p>
+<h5><b>Tabla 2.31: </b>Prueba de escritorio del programa.</h5>
+
+<table frame="void" rules="all" align="center" cellspacing="0" cellpadding="5" style="font-size:x-small" HEIGHT="50"> 
+  <tr style="color:red"><td>altura</td><td>f</td><td>f &lt;= altura</td><td>b</td><td>b &gt;= 1</td><td>cout &lt;&lt;= " ";</td><td>a</td><td>a &lt;= 2 * f - 1</td><td>cout &lt;&lt; "*"; </td><td>cout &lt;&lt; endl;</td></tr>
+  <tr><td>5</td><td>1</td><td>1 &lt;= 5 (V)</td><td>4</td><td>4 &gt;= 1 (V)</td><td>&#9633;&#9633;&#9633;&#9633;</td><td>1</td><td>1 &lt;= 1 (V)</td><td>*</td><td></td></tr>
+  <tr><td></td><td></td><td></td><td>3</td><td>3 &gt;= 1 (V)</td><td></td><td style="color:rgb(33, 15, 201)">2</td><td style="color:rgb(33, 15, 201)">2 &lt;= 1 (F)</td><td></td><td></td></tr>
+  <tr><td></td><td></td><td></td><td>2</td><td>2 &gt;= 1 (V)</td><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr><td></td><td></td><td></td><td>1</td><td>1 &gt;= 1 (V)</td><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr><td></td><td></td><td></td><td style="color:rgb(33, 15, 201)">0</td><td style="color:rgb(33, 15, 201)">0 &gt;= 1 (F)</td><td></td><td></td><td></td><td></td><td>INTRO</td></tr>
+
+  <tr><td></td><td>2</td><td>2 &lt;= 5 (V)</td><td>3</td><td>3 &gt;= 1 (V)</td><td>&#9633;&#9633;&#9633;</td><td>1</td><td>1 &lt;= 3 (V)</td><td>***</td><td></td></tr>
+  <tr><td></td><td></td><td></td><td>2</td><td>2 &gt;= 1 (V)</td><td></td><td>2</td><td></td><td></td><td></td></tr>
+  <tr><td></td><td></td><td></td><td>1</td><td>1 &gt;= 1 (V)</td><td></td><td>3</td><td></td><td></td><td></td></tr>
+  <tr><td></td><td></td><td></td><td style="color:rgb(33, 15, 201)">0</td><td style="color:rgb(33, 15, 201)">0 &gt;= 1 (F)</td><td></td><td style="color:rgb(33, 15, 201)">4</td><td style="color:rgb(33, 15, 201)"> 4 &lt;= 3 (F)</td><td></td><td>INTRO</td></tr>
+
+  <tr><td></td><td>3</td><td>3 &lt;= 5 (V)</td><td>2</td><td> 2 &gt;= 1 (V)</td><td>&#9633;&#9633;</td><td>1</td><td>1 &lt;= 5 (V)</td><td>*****</td><td></td></tr>
+  <tr><td></td><td></td><td></td><td>1</td><td>1 &gt;= 1 (V)</td><td></td><td>2</td><td>2 &lt;= 5 (V)</td><td></td><td></td></tr>
+  <tr><td></td><td></td><td></td><td style="color:rgb(33, 15, 201)">0</td><td style="color:rgb(33, 15, 201)">0 &gt;= 1 (F)</td><td></td><td>3</td><td>3 &lt;= 5 (V)</td><td></td><td></td></tr>
+  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td>4</td><td>4 &lt;= 5 (V)</td><td></td><td></td></tr>
+  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td>5</td><td>5 &lt;= 5 (V)</td><td></td><td></td></tr>
+  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td style="color:rgb(33, 15, 201)">6</td><td style="color:rgb(33, 15, 201)">6 &lt;= 5 (F)</td><td></td><td>INTRO</td></tr>
+  
+  <tr><td></td><td>4</td><td>4 &lt;= 4 (V)</td><td>1</td><td>1 &gt;= 1 (V)</td><td>&#9633;</td><td>1</td><td>1 &lt;= 7 (V)</td><td>*******</td><td></td></tr>
+  <tr><td></td><td></td><td></td><td style="color:rgb(33, 15, 201)">0</td><td style="color:rgb(33, 15, 201)">0 &gt;= 1 (F)</td><td></td><td>2</td><td>2&lt;= 7 (V)</td><td></td><td></td></tr>
+  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td>3</td><td>3 &lt;= 7 (V)</td><td></td><td></td></tr>
+  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td>4</td><td>4 &lt;= 7 (V)</td><td></td><td></td></tr>
+  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td>5</td><td>5 &lt;= 7 (V)</td><td></td><td></td></tr>
+  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td>6</td><td>6 &lt;= 7 (V)</td><td></td><td></td></tr>
+  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td>7</td><td>7 &lt;= 7 (V)</td><td></td><td></td></tr>
+  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td style="color:rgb(33, 15, 201)">8</td><td style="color:rgb(33, 15, 201)">8 &lt;= 7 (F)</td><td></td><td>INTRO</td></tr>
+  
+  <tr><td></td><td>5</td><td>5 &lt;= 5 (V)</td><td style="color:rgb(33, 15, 201)">0</td><td style="color:rgb(33, 15, 201)">0 &gt;= 1 (F)</td><td></td><td>1</td><td>1 &lt;= 9 (V)</td><td>*********</td><td></td></tr>
+  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td>2</td><td>2 &lt;= 9 (V)</td><td></td><td></td></tr>
+  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td>3</td><td>3 &lt;= 9 (V)</td><td></td><td></td></tr>
+  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td>4</td><td>4 &lt;= 9 (V)</td><td></td><td></td></tr>
+  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td>5</td><td>5 &lt;= 9 (V)</td><td></td><td></td></tr>
+  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td>6</td><td>6 &lt;= 9 (V)</td><td></td><td></td></tr>
+  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td>7</td><td>7 &lt;= 9 (V)</td><td></td><td></td></tr>
+  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td>8</td><td>8 &lt;= 9 (V)</td><td></td><td></td></tr>
+  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td>9</td><td>9 &lt;= 9 (V)</td><td></td><td></td></tr>
+  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td style="color:rgb(33, 15, 201)">10</td><td style="color:rgb(33, 15, 201)">10 &lt;= 9 (F)</td><td></td><td>INTRO</td></tr>
+  
+  <tr><td></td><td style="color:rgb(33, 15, 201)">6</td><td style="color:rgb(33, 15, 201)">6 &lt;= 5 (F)</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+</table>
+<br>
+<h1><b>Caso de Estudio 2.24: Visualización de un Rombo con Asteriscos.</b></h1>
+              <h2><b>A) Problema</b></h2>
+              <p>Escribir un programa que permita visualizar un rombo de asteriscos. Así, por ejemplo, si el valor de la Diagonal mayor es igual a 9 o a 10, se obtendrá la siguiente figura:</p>
+              <table border="1" align="center" cellspacing="0" cellpadding="5">
+                <tr><td width="200"><p>bbbb*</p><p>bbb***</p><p>bb*****</p><p>b*******</p><p>**********</p>
+              <p>b*******</p><p>bb*****</p><p>bbb***</p><p>bbbb*</p>	</td></tr>
+              </table><br>
+              
+              <table border="1" CELLPADDING=5 CELLSPACING=0>
+                <tr VALIGN=top><td width="50"><b> Nota:</b></td><td>Como se puede ver en la figura anterior, en cada fila mientras se reduce el número de espacios en blanco, aumenta el número de asteriscos, tanto de arriba hacia abajo, como de abajo hacia arriba. Con fines didácticos, la letra ‘b’ en color plomo equivale a un espacio en blanco (“ ”).</td></tr>
+              </table><br>
+              <h2><b>B) Análisis</b></h2>
+              <p>Claramente se puede ver que la única entrada del problema es el valor de la diagonal mayor del rombo. Se requieren dos salidas que son los espacios en blanco y los asteriscos de la figura geométrica controlados por los contadores ‘b’ y ‘a’ respectivamente. Se requiere una variable auxiliar llamada ‘aux’ que tiene el valor de la mitad de la diaginal del rombo. El proceso de cálculo y visualización del rombo con asteriscos requiere la utilización de bucles anidados.</p>
+        	<h3><b>B.1) Requerimiento de los Datos</b></h3>
+              <p><b>Entradas del Problema</b></p>		
+		<table>
+                  <tr><td width="200"> diagonalMayor </td><td width="200">/* Tamaño de la diagonal mayor del rombo  */</td></tr>
+                </table><br>
+                <p><b>Salidas del Problema</b></p>
+                <table>
+                  <tr><td width="200"> Mensaje1 </td><td width="200">/* Mensaje que imprime un espacio en blanco */</td></tr>
+                  <tr><td width="200"> Mensaje2 </td><td width="200">/* Mensaje que imprime un asterisco */</td></tr>
+                  <tr><td width="200"> Mensaje3 </td><td width="200">/* Mensaje que imprime un INTRO */</td></tr>
+                </table><br>
+		<p><b>Auxiliares del Problema</b></p>
+              <table>
+    <tr><td width="200">altura</td><td width="200">/* Altura que representa la mitad de la diagonal mayor del rombo */</td></tr>
+		<tr><td width="200">f</td><td width="200">/* Número de filas */</td></tr>
+		<tr><td width="200">b</td><td width="200">/* Contador para controlar el número de espacios en blanco */</td></tr>
+		<tr><td width="200">a</td><td width="200">* Contador para controlar el número de asteriscos */</td></tr>
+             </table><br>
+                <p><b>Fórmulas Relevantes</b></p>
+                <table>
+                  <tr><td><em>num = num % 2</em></td><td>(1)</td><td>/* Fórmula que calcula si un número es par */</td></tr>
+                  <tr><td ><em>num = (num = 1)/2</em></td><td> (2) </td><td>/* Fórmula que obtiene la mitad de un valor impar y lo convierte a un valor par */</td></tr>
+                <tr><td width="120"><em>num = num/2</em></td><td width="30"> (3) </td><td width="280">/* Fórmula que obtiene la mitad de un valor par */</td></tr>
+                  <tr><td ><em>b = h - f</em></td><td> (4) </td><td>/* Fórmula que obtiene un número definido de  espacios en blanco de acuerdo al valor de la altura del triánguo isósceles y al valor de la fila */</td></tr>
+                <tr><td><em>a = 2 * f - 1</em></td><td>(5)</td><td>/* Fórmula que obtiene un número impar de  asteriscos de acuerdo al valor de la fila */</td></tr>
+                </table> <br>
+
+                <h3><b>B.2) Diagrama de Entrada-Salida</b></h3>
+                <p>En la Figura 2.24.1 se muestra el diagrama de Entrada-Salida del programa donde se identifican y se diagraman las entradas, salidas y auxiliares del problema como son: a) Entradas: la variable ‘diagonalMayor’; b) Salidas: Mensaje1 que imprime un espacio en blanco; Mensaje2 que imprime un asterisco; Mensaje3 que imprime un INTRO; c) Auxiliares: la variable ‘altura’; la variable ‘f’; la variable ‘b’; la variable ‘a’.</p>
+                <img src="./assets/images/Capitulos/II/media/Figura 2.24.1.png" style="display:block; margin:auto; "><br>
+                <h5 style="text-align:center"><b>Figura 2.24.1. </b>Diagrama de Entrada-Salida del Programa.</h5>
+                <h2><b>C) Diseño</b></h2>
+                <p>Una vez que se conocen las entradas, las auxiliares y las salidas del problema, se deben listar los pasos necesarios para resolver el problema, es decir, el algoritmo.</p>
+                
+			<p><b>Algoritmo</b></p>
+                <ol type="1">
+                  <li>Leer el valor de la diagonal mayor del rombo.</li>
+                  <li>Si el valor de la diagonal mayor es impar, entonces</li>
+                  <ol type="1" start="2">
+                    <li>1. Asignar a la variable ‘altura’ el valor de la diagonal mayor más uno dividido para dos.</li>
+                  </ol>
+		<li>Caso contrario,</li>
+    <ol type="1" start="3">
+      <li>Asignar a la variable ‘altura’ el valor de la mitad de la diagonal mayor.</li>
+    </ol>
+		<li>Para el bucle externo, hacer: </li>                  
+                  <ol type="1" start="4">
+                    <li>1. Inicializar el valor del contador de las filas ‘f’ en uno. </li>
+                  </ol><ol type="1" start="4">
+                    <li>2. Mientras el valor de la condición (f &lt;= altura), sea verdadera, ejecutar las sentencias del bucle. </li>
+                  </ol><ol type="1" start="4">
+                    <li>3. Luego de cada iteración incrementar en uno el valor del contador de las filas ‘f’. </li>
+                  </ol><ol type="1" start="4">
+                    <li>4. Para el bucle interno, hacer: </li>
+                    <ol type="1" start="4">
+                      <li>4.1.	Inicializar el valor de las columnas de blancos ‘b’ con el valor de la variable 'altura' menos el número de filas.  </li></ol>
+                      <ol type="1" start="4">
+                        <li>4.2.	Mientras la condición (b &gt;= 1) sea verdadera, ejecutar las sentencias del bucle interno.  </li></ol>
+                        <ol type="1" start="4">
+                          <li>4.3.	Luego de cada iteración decrementar el valor de las columnas de blancos ‘b’ en uno. </li></ol>
+                          <ol type="1" start="4">
+                            <li>4.4.	Imprimir un espacio en blanco por columna. </li></ol>
+                  </ol><ol type="1" start="4">
+                    <li>5.	Para el bucle interno, hacer:  </li>
+                    <ol type="1" start="4">
+                      <li>5.1.	Inicializar el valor de las columnas de asteriscos ‘a’ en uno. </li></ol>
+                      <ol type="1" start="4">
+                        <li>5.2.	Mientras la condición (a &lt;= 2 * f - 1) sea verdadera, ejecutar las sentencias del bucle interno. </li></ol>
+                        <ol type="1" start="4">
+                          <li>5.3.	Luego de cada iteración incrementar el valor de las columnas de asteriscos ‘a’ en uno. </li></ol>
+                          <ol type="1" start="4">
+                            <li>5.4.	Imprimir un asterisco por columna. </li></ol>
+                    </ol><ol type="1" start="4">
+                    <li>6.	Imprimir un salto de línea (INTRO). </li></ol>
+                 <li>Para el bucle externo, hacer: </li>
+                 <ol type="1" start="5">
+                  <li>1. Inicializar el valor de las filas ‘f’ con el valor de la variable ‘altura’ menos uno. </li>
+                </ol><ol type="1" start="5">
+                  <li>2. Mientras el valor de la condición (f &gt;= altura), sea verdadera, ejecutar las sentencias del bucle externo. </li>
+                </ol><ol type="1" start="5">
+                  <li>3. Luego de cada iteración decrementar en uno el valor del contador de las filas ‘f’. </li>
+                </ol><ol type="1" start="5">
+                  <li>4. Para el bucle interno, hacer: </li>
+                  <ol type="1" start="5">
+                    <li>4.1.	Inicializar el valor de las columnas de blancos ‘b’ con el valor de la variable 'altura' menos el número de filas.  </li></ol>
+                    <ol type="1" start="5">
+                      <li>4.2.	Mientras la condición (b &gt;= 1) sea verdadera, ejecutar las sentencias del bucle interno.  </li></ol>
+                      <ol type="1" start="5">
+                        <li>4.3.	Luego de cada iteración decrementar el valor de las columnas de blancos ‘b’ en uno. </li></ol>
+                        <ol type="1" start="5">
+                          <li>4.4.	Imprimir un espacio en blanco por columna. </li></ol>
+                </ol><ol type="1" start="5">
+                  <li>5.	Para el bucle interno, hacer:  </li>
+                  <ol type="1" start="5">
+                    <li>5.1.	Inicializar el valor de las columnas de asteriscos ‘a’ en uno. </li></ol>
+                    <ol type="1" start="5">
+                      <li>5.2.	Mientras la condición (a &lt;= 2 * f - 1) sea verdadera, ejecutar las sentencias del bucle interno. </li></ol>
+                      <ol type="1" start="5">
+                        <li>5.3.	Luego de cada iteración incrementar el valor de las columnas de asteriscos ‘a’ en uno. </li></ol>
+                        <ol type="1" start="5">
+                          <li>5.4.	Imprimir un asterisco por columna. </li></ol>
+                  </ol><ol type="1" start="5">
+                  <li>6.	Imprimir un salto de línea (INTRO). </li></ol>
+		
+                  </ol>
+
+                <h2><b>D) Implementación</b></h2>
+                <p>Para implementar la solución, se debe escribir el algoritmo como un programa de C/C++ que contenga toda la información necesaria para completar la traducción a lenguaje máquina. En la Tabla 2.24.1 se muestra el código del programa en C/C++.</p>
+                <h5><b>Tabla 2.24.1. </b>Programa que analiza si un número leído es palíndromo.</h5>
+                <pre><code [highlight]="prefTab2[0].tabla2_24_1"  [lineNumbers]="true"></code></pre> <br>
+                <h2>E) Pruebas</h2>
+                <p>En la Tabla 2.24.2, se muestra un ejemplo de la salida del programa, donde se puede ver que los resultados del programa tienen sentido, comparando estos resultados con los obtenidos en una hoja de cuadros o de papel milimetrado.</p>
+	            	<p>En la salida de la Tabla 2.24.2 se puede ver que, al ingresar el valor de la diagonal mayor igual a 9 se obiene el rombo de asteriscos compuesto por dos triángulos isósceles, el uno de altura igual a 5 y el otro de altura igual a 4.</p>
+                <h5><b>Tabla 2.24.2.</b> Salida del programa</h5>
+                <img src="./assets/images/Capitulos/II/media/Tabla 2.24.2.png" style="display:block; margin:auto; "><br>
+                  <p>En la Tabla 2.24.3 se puede ver la primera parte de la prueba de escritorio del programa, donde se almacena en la variable ‘diagonalMayor’ el valor de 9. Luego se verifica que este valor es impar utilizando el operador de módulo (%). Como este valor es impar, se suma el valor de uno obteniéndose 10 y ese resultado se divide para 2 obteniéndose el valor de 5 en la variable altura, caso contrario, se dividiría directamente para 2.</p>
+               <h5><b>Tabla 2.24.3. </b>Prueba de escritorio del programa (primera parte).</h5>
+            		<table frame="void" rules="all" align="center" cellspacing="0" cellpadding="5"> 
+                <tr style="color:red"><td>diagonalMayor</td><td>diagonalMayor % 2 != 0</td><td>altura = (diagonalMayor + 1)/2;</td></tr>
+                <tr><td>9</td><td>9 % 2 != 0 (V)</td><td>(9 + 1)/2 = 10/2 = 5</td></tr>                
+               </table> <br>
+                <br>
+                <p>En la Tabla 2.24.4 se puede ver la segunda parte de la prueba de escritorio del programa, donde la impresión de la mitad del rombo de asteriscos es un triángulo isósceles cuyo valor de altura es 5, se realiza mediante un bucle externo y dos bucles internos. Cada vez que se repite el bucle externo incremental, se ejecutan los dos bucles internos. El bucle externo incremental se repite cinco veces en este caso, según la altura del triángulo y se controla con el contador de las filas ‘f’. El número de repeticiones realizadas por los bucles internos se basan en el valor del contador de las filas ‘f’. El primer bucle interno controla la impresión de los espacios en blanco con el contador ‘b’ y el segundo bucle interno controla la impresión de los asteriscos con el contador ‘a’.</p>
+                <h5><b>Tabla 2.24.4. </b>Prueba de escritorio del programa (segunda parte).</h5>
+                <table frame="void" rules="all" align="center" cellspacing="0" cellpadding="5" style="font-size:x-small" HEIGHT="50"> 
+                  <tr style="color:red"><td>altura</td><td>f</td><td>f &lt;= altura</td><td>b</td><td>b &gt;= 1</td><td>cout &lt;&lt;= " ";</td><td>a</td><td>a &lt;= 2 * f - 1</td><td>cout &lt;&lt; "*"; </td><td>cout &lt;&lt; endl;</td></tr>
+                  <tr><td>5</td><td>1</td><td>1 &lt;= 5 (V)</td><td>4</td><td>4 &gt;= 1 (V)</td><td>bbbb</td><td>1</td><td>1 &lt;= 1 (V)</td><td>*</td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td>3</td><td>3 &gt;= 1 (V)</td><td></td><td style="color:rgb(33, 15, 201)">2</td><td style="color:rgb(33, 15, 201)">2 &lt;= 1 (F)</td><td></td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td>2</td><td>2 &gt;= 1 (V)</td><td></td><td></td><td></td><td></td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td>1</td><td>1 &gt;= 1 (V)</td><td></td><td></td><td></td><td></td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td style="color:rgb(33, 15, 201)">0</td><td style="color:rgb(33, 15, 201)">0 &gt;= 1 (F)</td><td></td><td></td><td></td><td></td><td>INTRO</td></tr>
+                
+                  <tr><td></td><td>2</td><td>2 &lt;= 5 (V)</td><td>3</td><td>3 &gt;= 1 (V)</td><td>bbb</td><td>1</td><td>1 &lt;= 3 (V)</td><td>***</td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td>2</td><td>2 &gt;= 1 (V)</td><td></td><td>2</td><td></td><td></td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td>1</td><td>1 &gt;= 1 (V)</td><td></td><td>3</td><td></td><td></td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td style="color:rgb(33, 15, 201)">0</td><td style="color:rgb(33, 15, 201)">0 &gt;= 1 (F)</td><td></td><td style="color:rgb(33, 15, 201)">4</td><td style="color:rgb(33, 15, 201)"> 4 &lt;= 3 (F)</td><td></td><td>INTRO</td></tr>
+                
+                  <tr><td></td><td>3</td><td>3 &lt;= 5 (V)</td><td>2</td><td> 2 &gt;= 1 (V)</td><td>bb</td><td>1</td><td>1 &lt;= 5 (V)</td><td>*****</td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td>1</td><td>1 &gt;= 1 (V)</td><td></td><td>2</td><td>2 &lt;= 5 (V)</td><td></td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td style="color:rgb(33, 15, 201)">0</td><td style="color:rgb(33, 15, 201)">0 &gt;= 1 (F)</td><td></td><td>3</td><td>3 &lt;= 5 (V)</td><td></td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td>4</td><td>4 &lt;= 5 (V)</td><td></td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td>5</td><td>5 &lt;= 5 (V)</td><td></td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td style="color:rgb(33, 15, 201)">6</td><td style="color:rgb(33, 15, 201)">6 &lt;= 5 (F)</td><td></td><td>INTRO</td></tr>
+                  
+                  <tr><td></td><td>4</td><td>4 &lt;= 4 (V)</td><td>1</td><td>1 &gt;= 1 (V)</td><td>b</td><td>1</td><td>1 &lt;= 7 (V)</td><td>*******</td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td style="color:rgb(33, 15, 201)">0</td><td style="color:rgb(33, 15, 201)">0 &gt;= 1 (F)</td><td></td><td>2</td><td>2&lt;= 7 (V)</td><td></td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td>3</td><td>3 &lt;= 7 (V)</td><td></td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td>4</td><td>4 &lt;= 7 (V)</td><td></td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td>5</td><td>5 &lt;= 7 (V)</td><td></td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td>6</td><td>6 &lt;= 7 (V)</td><td></td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td>7</td><td>7 &lt;= 7 (V)</td><td></td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td style="color:rgb(33, 15, 201)">8</td><td style="color:rgb(33, 15, 201)">8 &lt;= 7 (F)</td><td></td><td>INTRO</td></tr>
+                  
+                  <tr><td></td><td>5</td><td>5 &lt;= 5 (V)</td><td style="color:rgb(33, 15, 201)">0</td><td style="color:rgb(33, 15, 201)">0 &gt;= 1 (F)</td><td></td><td>1</td><td>1 &lt;= 9 (V)</td><td>*********</td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td>2</td><td>2 &lt;= 9 (V)</td><td></td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td>3</td><td>3 &lt;= 9 (V)</td><td></td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td>4</td><td>4 &lt;= 9 (V)</td><td></td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td>5</td><td>5 &lt;= 9 (V)</td><td></td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td>6</td><td>6 &lt;= 9 (V)</td><td></td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td>7</td><td>7 &lt;= 9 (V)</td><td></td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td>8</td><td>8 &lt;= 9 (V)</td><td></td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td>9</td><td>9 &lt;= 9 (V)</td><td></td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td style="color:rgb(33, 15, 201)">10</td><td style="color:rgb(33, 15, 201)">10 &lt;= 9 (F)</td><td></td><td>INTRO</td></tr>
+                  
+                  <tr><td></td><td style="color:rgb(33, 15, 201)">6</td><td style="color:rgb(33, 15, 201)">6 &lt;= 5 (F)</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                </table><br>
+               <p>En la Tabla 2.24.5 se puede ver la tercera parte de la prueba de escritorio del programa, donde la impresión de la mitad del rombo de asteriscos es un triángulo isósceles invertido cuyo valor de altura es 4, se realiza mediante un bucle externo y dos bucles internos. Cada vez que se repite el bucle externo decremental, se ejecutan los dos bucles internos. El bucle externo decremental se repite cuatro veces en este caso, según la altura del triángulo y se controla con el contador de las filas ‘f’. El número de repeticiones realizadas por los bucles internos se basan en el valor del contador de las filas ‘f’. El primer bucle interno controla la impresión de los espacios en blanco con el contador ‘b’ y el segundo bucle interno controla la impresión de los asteriscos con el contador ‘a’.</p>
+                <h5><b>Tabla 2.24.5. </b>Prueba de escritorio del programa (tercera parte).</h5>
+              
+                <table frame="void" rules="all" align="center" cellspacing="0" cellpadding="5" style="font-size:x-small" HEIGHT="50"> 
+                  <tr style="color:red"><td>altura</td><td>f</td><td>f &gt;= 1</td><td>b</td><td>b &gt;= 1</td><td>cout &lt;&lt;= " ";</td><td>a</td><td>a &lt;= 2 * f - 1</td><td>cout &lt;&lt; "*"; </td><td>cout &lt;&lt; endl;</td></tr>
+                  
+                  <tr><td>5</td><td>4</td><td>4 &gt;= 1 (V)</td><td>1</td><td>1 &gt;= 1 (V)</td><td>b</td><td>1</td><td>1 &lt;= 7 (V)</td><td>*******</td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td style="color:rgb(33, 15, 201)">0</td><td style="color:rgb(33, 15, 201)">0 &gt;= 1 (F)</td><td></td><td>2</td><td>2&lt;= 7 (V)</td><td></td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td>3</td><td>3 &lt;= 7 (V)</td><td></td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td>4</td><td>4 &lt;= 7 (V)</td><td></td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td>5</td><td>5 &lt;= 7 (V)</td><td></td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td>6</td><td>6 &lt;= 7 (V)</td><td></td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td>7</td><td>7 &lt;= 7 (V)</td><td></td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td style="color:rgb(33, 15, 201)">8</td><td style="color:rgb(33, 15, 201)">8 &lt;= 7 (F)</td><td></td><td>INTRO</td></tr>
+                                
+                  <tr><td></td><td>3</td><td>3 &gt;= 1 (V)</td><td>2</td><td> 2 &gt;= 1 (V)</td><td>bb</td><td>1</td><td>1 &lt;= 5 (V)</td><td>*****</td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td>1</td><td>1 &gt;= 1 (V)</td><td></td><td>2</td><td>2 &lt;= 5 (V)</td><td></td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td style="color:rgb(33, 15, 201)">0</td><td style="color:rgb(33, 15, 201)">0 &gt;= 1 (F)</td><td></td><td>3</td><td>3 &lt;= 5 (V)</td><td></td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td>4</td><td>4 &lt;= 5 (V)</td><td></td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td>5</td><td>5 &lt;= 5 (V)</td><td></td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td style="color:rgb(33, 15, 201)">6</td><td style="color:rgb(33, 15, 201)">6 &lt;= 5 (F)</td><td></td><td>INTRO</td></tr>
+                  
+                  <tr><td></td><td>2</td><td>2 &gt;= 1 (V)</td><td>3</td><td>3 &gt;= 1 (V)</td><td>bbb</td><td>1</td><td>1 &lt;= 3 (V)</td><td>***</td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td>2</td><td>2 &gt;= 1 (V)</td><td></td><td>2</td><td></td><td></td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td>1</td><td>1 &gt;= 1 (V)</td><td></td><td>3</td><td></td><td></td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td style="color:rgb(33, 15, 201)">0</td><td style="color:rgb(33, 15, 201)">0 &gt;= 1 (F)</td><td></td><td style="color:rgb(33, 15, 201)">4</td><td style="color:rgb(33, 15, 201)"> 4 &lt;= 3 (F)</td><td></td><td>INTRO</td></tr>
+                
+                  <tr><td></td><td>1</td><td>1 &gt;= 1 (V)</td><td>4</td><td>4 &gt;= 1 (V)</td><td>bbbb</td><td>1</td><td>1 &lt;= 1 (V)</td><td>*</td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td>3</td><td>3 &gt;= 1 (V)</td><td></td><td style="color:rgb(33, 15, 201)">2</td><td style="color:rgb(33, 15, 201)">2 &lt;= 1 (F)</td><td></td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td>2</td><td>2 &gt;= 1 (V)</td><td></td><td></td><td></td><td></td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td>1</td><td>1 &gt;= 1 (V)</td><td></td><td></td><td></td><td></td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td style="color:rgb(33, 15, 201)">0</td><td style="color:rgb(33, 15, 201)">0 &gt;= 1 (F)</td><td></td><td></td><td></td><td></td><td>INTRO</td></tr>
+
+                  <tr><td></td><td style="color:rgb(33, 15, 201)">0</td><td style="color:rgb(33, 15, 201)">0 &gt;= 1 (F)</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                </table><br>
+                <h1><b>Caso de Estudio 2.25: Visualización de un Rombo con Espacios en Blanco.</b></h1>
+                <h2><b>A) Problema</b></h2>
+                <p>Escribir un programa que permita visualizar un rombo de asteriscos. Así, por ejemplo, si el valor de la Diagonal mayor es igual a 9 o a 10, se obtendrá la siguiente figura:</p>
+                <table border="1" align="center" cellspacing="0" cellpadding="5">
+                  <tr><td width="200"><p>************</p><p>*****bb*****</p><p>****bbbb****</p><p>***bbbbbb***</p><p>**bbbbbbbb**</p><p>*bbbbbbbbbbb*</p>
+                    <p>**bbbbbbbb**</p><p>***bbbbbb***</p><p>****bbbb****</p><p>*****bb*****</p><p>***********</p>	</td></tr>
+                </table><br>
+                
+                <table border="1" CELLPADDING=5 CELLSPACING=0>
+                  <tr VALIGN=top><td width="50"><b> Nota:</b></td><td>Como se puede ver en la figura anterior, la primera y la última fila de la figura es un caso especial. Mientras se reduce el número de ateriscos, aumenta el número de espacios en blanco, tanto de arriba hacia abajo, como de abajo hacia arriba. Con fines didácticos, la letra ‘b’ en color plomo equivale a un espacio en blanco (“ ”).</td></tr>
+                </table><br>
+                
+                
+                <h2><b>B) Análisis</b></h2>
+                <p>Claramente se puede ver que la única entrada del problema es el valor de la diagonal mayor del rombo. Se requieren dos salidas que son los espacios en blanco y los asteriscos de la figura geométrica controlados por los contadores ‘b’ y ‘a’ respectivamente. Se requiere una variable auxiliar llamada ‘aux’ que tiene el valor de la mitad de la diaginal del rombo. El proceso de cálculo y visualización del rombo con asteriscos requiere la utilización de bucles anidados.</p>
+
+    <h3><b>B.1) Requerimiento de los Datos</b></h3>
+                <p><b>Entradas del Problema</b></p>		
+                <table>
+                              <tr><td width="200"> diagonalMayor </td><td width="200">/* Tamaño de la diagonal mayor del rombo  */</td></tr>
+                            </table><br>
+                            <p><b>Salidas del Problema</b></p>
+                            <table>
+                              <tr><td width="200"> Mensaje1 </td><td width="200">/* Mensaje que imprime un espacio en blanco */</td></tr>
+                              <tr><td width="200"> Mensaje2 </td><td width="200">/* Mensaje que imprime un asterisco */</td></tr>
+                              <tr><td width="200"> Mensaje3 </td><td width="200">/* Mensaje que imprime un INTRO */</td></tr>
+                            </table><br>
+                <p><b>Auxiliares del Problema</b></p>
+                          <table>
+                <tr><td width="200">altura</td><td width="200">/* Altura que representa la mitad de la diagonal mayor del rombo */</td></tr>
+                <tr><td width="200">f</td><td width="200">/* Número de filas */</td></tr>
+                <tr><td width="200">b</td><td width="200">/* Contador para controlar el número de espacios en blanco */</td></tr>
+                <tr><td width="200">a</td><td width="200">* Contador para controlar el número de asteriscos */</td></tr>
+                         </table><br>
+                            <p><b>Fórmulas Relevantes</b></p>
+                            <table>
+                              <tr><td><em>num = num % 2</em></td><td>(1)</td><td>/* Fórmula que calcula si un número es par */</td></tr>
+                              <tr><td ><em>num = (num = 1)/2</em></td><td> (2) </td><td>/* Fórmula que obtiene la mitad de un valor impar y lo convierte a un valor par */</td></tr>
+                            <tr><td width="120"><em>num = num/2</em></td><td width="30"> (3) </td><td width="280">/* Fórmula que obtiene la mitad de un valor par */</td></tr>
+                              <tr><td ><em>a = h * 2 + 2</em></td><td> (4) </td><td>/* Fórmula que obtiene el número total de asteriscos en la primera y última fila de acuerdo a la altura del triánguo isósceles */</td></tr>
+                            <tr><td><em>a = (h + 1) - f</em></td><td>(5)</td><td>/* Fórmula que obtiene un número determinado de  asteriscos de acuerdo al valor de la fila y de la altura del triánguo isósceles */</td></tr>
+                          <tr><td><em>b = 2 * f</em></td><td>(6)</td><td>/* Fórmula que obtiene un número par de  espacios en blanco de acuerdo al valor de la fila */</td></tr>  
+                          </table> <br>
+                  <h3><b>B.2) Diagrama de Entrada-Salida</b></h3>
+                  <p>En la Figura 2.25.1 se muestra el diagrama de Entrada-Salida del programa donde se identifican y se diagraman las entradas, salidas y auxiliares del problema como son: a) Entradas: la variable ‘diagonalMayor’; b) Salidas: Mensaje1 que imprime un asterisco; Mensaje2 que imprime un espacio en blanco; Mensaje3 que imprime un INTRO; c) Auxiliares: la variable ‘altura’; la variable ‘f’; la variable ‘b’; la variable ‘a’.</p>
+                  <img src="./assets/images/Capitulos/II/media/Figura 2.25.1.png" style="display:block; margin:auto; "><br>
+                  <h5 style="text-align:center"><b>Figura 2.25.1. </b>Diagrama de Entrada-Salida del Programa.</h5>
+                  <h2><b>C) Diseño</b></h2>
+                  <p>Una vez que se conocen las entradas, las auxiliares y las salidas del problema, se deben listar los pasos necesarios para resolver el problema, es decir, el algoritmo.</p>
+                  
+        <p><b>Algoritmo</b></p>
+                  <ol type="1">
+                 <li>Leer el valor de la diagonal mayor del rombo.</li>   
+                   <li>Si el valor de la diagonal mayor es impar, entonces</li> 
+                   <ol type="1" start="2"><li>1.	Asignar a la variable ‘altura’ el valor de la diagonal mayor más uno dividido para dos.</li></ol>          
+      <li>Caso contrario,</li>
+      <ol type="1" start="3"><li>1.	Asignar a la variable ‘altura’ el valor de la mitad de la diagonal mayor.</li></ol>
+      <li>4.	Para el bucle, hacer:</li>            
+      <ol type="1" start="4">
+                      <li>1.	Inicializar el valor de las columnas de asteriscos 'a' en uno.</li>
+                    </ol><ol type="1" start="4">
+                      <li>2.	Mientras la condición (a &lt;= altura * 2 + 2) sea verdadera, ejecutar las sentencias del bucle externo.</li>
+                    </ol><ol type="1" start="4">
+                      <li>3.	Luego de cada ciclo incrementar el valor de las columnas de asteriscos 'a' en uno.</li>
+                    </ol><ol type="1" start="4">
+                      <li>4.	Imprimir un asterisco por columna.</li>
+                      </ol>
+      <li>Imprimir un salto de línea o INTRO.</li>
+      <li>Para el bucle externo, hacer: </li>
+                    <ol type="1" start="6">
+                      <li>1.	Inicializar el valor del contador de las filas ‘f’ en uno. </li>
+                    </ol><ol type="1" start="6">
+                      <li>2.	Mientras el valor de la condición (f &lt;= altura), sea verdadera, ejecutar las sentencias del bucle externo. </li>
+                    </ol><ol type="1" start="6">
+                      <li>3.	Luego de cada iteración incrementar en uno el valor del contador de las filas ‘f’. </li>
+                    </ol><ol type="1" start="6">
+                      <li>4.	Para el bucle interno, hacer: </li>
+                            <ol type="1" start="6"><li>4.1.	Inicializar el valor de las columnas de asteriscos ‘a’ con el valor de (altura + 1) - f. </li></ol>
+                            <ol type="1" start="6"><li>4.2.	Mientras la condición (a &gt;= 1) sea verdadera, ejecutar las sentencias del bucle interno. </li></ol>
+                            <ol type="1" start="6"><li>4.3.	Luego de cada iteración decrementar el valor de las columnas de asteriscos ‘a’ en uno.</li></ol>
+                            <ol type="1" start="6"><li>4.4.	Imprimir un asterisco por columna.</li></ol>
+            </ol><ol type="1" start="6">
+         <li>5. Para el bucle interno, hacer</li>
+         <ol type="1" start="6"><li>5.1.	Inicializar el valor de las columnas de blancos ‘b’ con el valor de uno. </li></ol>
+         <ol type="1" start="6"><li>5.2.	Mientras la condición (b &lt;= 2 * f) sea verdadera, ejecutar las sentencias del bucle interno. </li></ol>
+         <ol type="1" start="6"><li>5.3.	Luego de cada iteración incrementar el valor de las columnas de blancos ‘b’ en uno.</li></ol>
+         <ol type="1" start="6"><li>6.5.4.	Imprimir un espacio en blanco por columna.</li></ol>
+                    </ol><ol type="1" start="6">
+         <li>6.	Para el bucle interno, hacer: .</li>
+         <ol type="1" start="6"><li>6.1.	Inicializar el valor de las columnas de asteriscos ‘a’ con el valor de (altura + 1) - f. </li></ol>
+         <ol type="1" start="6"><li>6.2.	Mientras la condición (a &gt;= 1) sea verdadera, ejecutar las sentencias del bucle interno. </li></ol>
+         <ol type="1" start="6"><li>6.3.	Luego de cada iteración decrementar el valor de las columnas de asteriscos ‘a’ en uno.</li></ol>
+         <ol type="1" start="6"><li>6.4.	Imprimir un asterisco por columna.</li></ol>
+                    </ol>
+      <li>Para el bucle externo, hacer: </li>
+      <ol type="1" start="7"><li>1.	Inicializar el valor de las filas ‘f’ con el valor de la variable ‘altura’ menos uno</li></ol>
+      <ol type="1" start="7"><li>2.	Mientras la condición (f &gt;= 1) sea verdadera, ejecutar las sentencias del bucle externo. </li></ol>
+      <ol type="1" start="7"><li>3.	Luego de cada iteración decrementar en uno el valor del contador de las filas ‘f’. </li></ol>
+      <ol type="1" start="7"><li>4.	Para el bucle interno, hacer: </li>
+        <ol type="1" start="7"><li>4.1.	Inicializar el valor de las columnas de asteriscos ‘a’ con el valor de (altura + 1) - f. </li></ol>
+        <ol type="1" start="7"><li>4.2.	Mientras la condición (a &gt;= 1) sea verdadera, ejecutar las sentencias del bucle interno. </li></ol>
+        <ol type="1" start="7"><li>4.3.	Luego de cada iteración decrementar el valor de las columnas de asteriscos ‘a’ en uno.</li></ol>
+        <ol type="1" start="7"><li>4.4.	Imprimir un asterisco por columna.</li></ol>
+      </ol>
+      <ol type="1" start="7"><li>5.	Para el bucle interno, hacer: </li>
+        <ol type="1" start="7"><li>5.1.	Inicializar el valor de las columnas de blancos ‘b’ con el valor de uno. </li></ol>
+        <ol type="1" start="7"><li>5.2.	Mientras la condición (b &lt;= 2 * f) sea verdadera, ejecutar las sentencias del bucle interno. </li></ol>
+        <ol type="1" start="7"><li>5.3.	Luego de cada iteración incrementar el valor de las columnas de blancos ‘b’ en uno.</li></ol>
+        <ol type="1" start="7"><li>5.4.	Imprimir un espacio en blanco por columna.</li></ol>
+      </ol>
+      <ol type="1" start="7"><li>6.	Para el bucle interno, hacer: </li>
+        <ol type="1" start="7"><li>6.1.	Inicializar el valor de las columnas de asteriscos ‘a’ con el valor de (altura + 1) - f. </li></ol>
+        <ol type="1" start="7"><li></li>7.6.2.	Mientras la condición (a &gt;= 1) sea verdadera, ejecutar las sentencias del bucle interno. </ol>
+        <ol type="1" start="7"><li>6.3.	Luego de cada iteración decrementar el valor de las columnas de asteriscos ‘a’ en uno.</li></ol>
+        <ol type="1" start="7"><li>6.4.	Imprimir un asterisco por columna.</li></ol>
+      </ol>
+      <ol type="1" start="7"><li>7. Imprimir un salto de línea (INTRO).</li></ol>
+      <li>Para el bucle, hacer:</li>
+      <ol type="1" start="8"><li>1.	Inicializar el valor de las columnas de asteriscos 'a' en uno.</li></ol>
+      <ol type="1" start="8"><li>2.	Mientras la condición (a &lt;= altura * 2 + 2) sea verdadera, ejecutar las sentencias del bucle externo.</li></ol>
+      <ol type="1" start="8"><li>3.	Luego de cada ciclo incrementar el valor de las columnas de asteriscos 'a' en uno.</li></ol>
+      <ol type="1" start="8"><li>4.	Imprimir un asterisco por columna.</li></ol>
+      <li>Imprimir un salto de línea o INTRO.</li>
+                  </ol>
+  
+                  <h2><b>D) Implementación</b></h2>
+                  <p>Para implementar la solución, se debe escribir el algoritmo como un programa de C/C++ que contenga toda la información necesaria para completar la traducción a lenguaje máquina. En la Tabla 2.25.1 se muestra el código del programa en C/C++.</p>
+                  <h5><b>Tabla 2.25.1. </b>Programa que analiza si un número leído es palíndromo.</h5>
+                  <pre><code [highlight]="prefTab2[0].tabla2_25_1"  [lineNumbers]="true"></code></pre> <br>
+                  <h2>E) Pruebas</h2>
+                  <p>En la Tabla 2.25.2, se muestra un ejemplo de la salida del programa, donde se puede ver que los resultados del programa tienen sentido, comparando estos resultados con los obtenidos en una hoja de cuadros o de papel milimetrado.</p>
+                  <p>En la salida de la Tabla 2.25.2 se puede ver que, al ingresar el valor de la diagonal mayor igual a 9 se obiene el rombo de espacios en blanco compuesto por dos triángulos isósceles, el uno de altura igual a 5 y el otro de altura igual a 4.</p>
+                  <h5><b>Tabla 2.25.2.</b> Salida del programa</h5>
+                  <img src="./assets/images/Capitulos/II/media/Tabla 2.25.2.png" style="display:block; margin:auto; "><br>
+                  <p>En la Tabla 2.25.3 se puede ver la primera parte de la prueba de escritorio del programa, donde se almacena en la variable ‘diagonalMayor’ el valor de 9. Luego se verifica que este valor es impar utilizando el operador de módulo (%). Como este valor es impar, se suma el valor de uno obteniéndose 10 y ese resultado se divide para 2 obteniéndose el valor de 5 en la variable altura, caso contrario, se dividiría directamente para 2.</p>
+                 
+                 <h5><b>Tabla 2.25.3. </b>Prueba de escritorio del programa (primera parte).</h5>
+                 <table frame="void" rules="all" align="center" cellspacing="0" cellpadding="5"> 
+                 <tr style="color:red"><td>diagonalMayor</td><td>diagonalMayor % 2 != 0</td><td>altura = (diagonalMayor + 1)/2;</td></tr>
+                 <tr><td>9</td><td>9 % 2 != 0 (V)</td><td>(9 + 1)/2 = 10/2 = 5</td></tr>                
+                </table> <br>
+                 <br>
+                 <p>En la Tabla 2.25.4 se puede ver la segunda parte de la prueba de escritorio del programa, donde se imprime la primera fila de asteriscos mediante un bucle for() y al terminar la ejecución de este bucle se imprime un salto de línea (INTRO).</p>
+                 <h5><b>Tabla 2.25.4. </b>Prueba de escritorio del programa (segunda parte).</h5>
+                 <table frame="void" rules="all" align="center" cellspacing="0" cellpadding="5"> 
+                  <tr style="color:red"><td>altura</td><td>a</td><td>a &lt;= altura * 2 + 2</td><td>cout &lt;&lt; "*"; </td><td>cout &lt;&lt; endl;</td></tr>
+                  <tr><td>5</td><td>1</td><td>1 &lt;= 12 (V)</td><td>************</td><td></td></tr>
+                  <tr><td></td><td>2</td><td>2 &lt;= 12 (V)</td><td></td><td></td></tr>
+                  <tr><td></td><td>3</td><td>3 &lt;= 12 (V)</td><td></td><td></td></tr>
+                  <tr><td></td><td>4</td><td>4 &lt;= 12 (V)</td><td></td><td></td></tr>
+                  <tr><td></td><td>5</td><td>5 &lt;= 12 (V)</td><td></td><td></td></tr>
+                  <tr><td></td><td>6</td><td>6 &lt;= 12 (V)</td><td></td><td></td></tr>
+                  <tr><td></td><td>7</td><td>7 &lt;= 12 (V)</td><td></td><td></td></tr>
+                  <tr><td></td><td>8</td><td>8 &lt;= 12 (V)</td><td></td><td></td></tr>
+                  <tr><td></td><td>9</td><td>9 &lt;= 12 (V)</td><td></td><td></td></tr>
+                  <tr><td></td><td>10</td><td>10 &lt;= 12 (V)</td><td></td><td></td></tr>
+                  <tr><td></td><td>11</td><td>11 &lt;= 12 (V)</td><td></td><td></td></tr>
+                  <tr><td></td><td>12</td><td>12 &lt;= 12 (V)</td><td></td><td></td></tr>
+                  <tr><td></td><td style="color:rgb(33, 15, 201)">13</td><td style="color:rgb(33, 15, 201)">13 &lt;= 12 (V)</td><td></td><td>INTRO</td></tr>
+                   </table>
+                <br>
+                 
+                <p>En la Tabla 2.25.5 se puede ver la tercera parte de la prueba de escritorio del programa, donde la impresión de la mitad del rombo de espacios en blanco, es un triángulo isósceles cuyo valor de altura es 5, se realiza mediante un bucle externo y tres bucles internos. Cada vez que se repite el bucle externo incremental, se ejecutan los tres bucles internos. El bucle externo incremental se repite cinco veces en este caso, según la altura del triángulo y se controla con el contador de las filas ‘f’. El número de repeticiones realizadas por los bucles internos se basan en el valor del contador de las filas ‘f’ y de la altura del triángulo isósceles. El primer bucle interno controla la impresión del primer grupo de asteriscos con el contador ‘a’. El segundo bucle interno controla la impresión de los espacios en blanco con el contador ‘b’. El tercer bucle interno controla la impresión del segundo grupo de asteriscos con el contador ‘a’. </p>
+                <h5><b>Tabla 2.25.5. </b>Prueba de escritorio del programa (tercera parte).</h5>
+                 <table frame="void" rules="all" align="center" cellspacing="0" cellpadding="5" style="font-size:x-small" HEIGHT="50"> 
+                   <tr style="color:red"><td>altura</td><td>f</td><td>f &lt;= altura</td><td>a</td><td>a &gt;= 1</td><td>cout &lt;&lt;= "*";</td><td>b</td><td>b &lt;= 2 * f</td><td>cout &lt;&lt; " "; </td><td>a</td><td>a &gt;= 1</td><td>cout &lt;&lt; "*";</td><td>cout &lt;&lt; endl;</td></tr>
+                   <tr><td>5</td><td>1</td><td>1 &lt;= 5 (V)</td><td>5</td><td>5 &gt;= 1 (V)</td><td>*****</td><td>1</td><td>1 &lt; 2 (V)</td><td>bb</td><td>5</td><td>5 &gt;= 1 (V)</td><td>*****</td><td></td></tr>
+                   <tr><td></td><td></td><td></td><td>4</td><td>4 &gt;= 1 (V)</td><td></td><td>2</td><td>2 &lt;= 2 (V)</td><td></td><td>4</td><td>4 &gt;= 1 (V)</td><td></td><td></td></tr>
+                   <tr><td></td><td></td><td></td><td>3</td><td>3 &gt;= 1 (V)</td><td></td><td style="color:rgb(33, 15, 201)">3</td><td style="color:rgb(33, 15, 201)">3 &lt;= 2 (F)</td><td></td><td>3</td><td>3 &gt;= 1 (V)</td><td></td><td></td></tr>
+                   <tr><td></td><td></td><td></td><td>2</td><td>2 &gt;= 1 (V)</td><td></td><td></td><td></td><td></td><td>2</td><td>2 &gt;= 1 (V)</td><td></td><td></td></tr>
+                   <tr><td></td><td></td><td></td><td>1</td><td>1 &gt;= 1 (V)</td><td></td><td></td><td></td><td></td><td>1</td><td>1 &gt;= 1 (V)</td><td></td><td></td></tr>
+                   <tr><td></td><td></td><td></td><td style="color:rgb(33, 15, 201)">0</td><td style="color:rgb(33, 15, 201)">0 &gt;= 1 (F)</td><td></td><td></td><td></td><td></td><td style="color:rgb(33, 15, 201)">0</td><td style="color:rgb(33, 15, 201)">0 &gt;= 1 (F)</td><td></td><td>INTRO</td></tr>
+                 
+                   <tr><td></td><td>2</td><td>2 &lt;= 5 (V)</td><td>4</td><td>4 &gt;= 1 (V)</td><td>****</td><td>1</td><td>1 &lt; 4 (V)</td><td>bbbb</td><td>4</td><td>4 &gt;= 1 (V)</td><td>****</td><td></td></tr>
+                   <tr><td></td><td></td><td></td><td>3</td><td>3 &gt;= 1 (V)</td><td></td><td>2</td><td>2 &lt;= 4 (V)</td><td></td><td>3</td><td>3 &gt;= 1 (V)</td><td></td><td></td></tr>
+                   <tr><td></td><td></td><td></td><td>2</td><td>2 &gt;= 1 (V)</td><td></td><td>3</td><td>3 &lt;= 4 (V)</td><td></td><td>2</td><td>2 &gt;= 1 (V)</td><td></td><td></td></tr>
+                   <tr><td></td><td></td><td></td><td>1</td><td>1 &gt;= 1 (V)</td><td></td><td>4</td><td>4 &lt;= 4 (V)</td><td></td><td>1</td><td>1 &gt;= 1 (V)</td><td></td><td></td></tr>
+                   <tr><td></td><td></td><td></td><td style="color:rgb(33, 15, 201)">0</td><td style="color:rgb(33, 15, 201)">0 &gt;= 1 (F)</td><td></td><td style="color:rgb(33, 15, 201)">5</td><td style="color:rgb(33, 15, 201)">5 &lt;= 4 (F)</td><td></td><td style="color:rgb(33, 15, 201)">0</td><td style="color:rgb(33, 15, 201)">0 &gt;= 1 (F)</td><td></td><td>INTRO</td></tr>
+                 
+                   <tr><td></td><td>3</td><td>3 &lt;= 5 (V)</td><td>3</td><td>3 &gt;= 1 (V)</td><td>***</td><td>1</td><td>1 &lt; 6 (V)</td><td>bbbbbbbb</td><td>3</td><td>3 &gt;= 1 (V)</td><td>***</td><td></td></tr>
+                   <tr><td></td><td></td><td></td><td>2</td><td>4 &gt;= 1 (V)</td><td></td><td>2</td><td>2 &lt;= 6 (V)</td><td></td><td>2</td><td>2 &gt;= 1 (V)</td><td></td><td></td></tr>
+                   <tr><td></td><td></td><td></td><td>1</td><td>3 &gt;= 1 (V)</td><td></td><td>3</td><td>3 &lt;= 6 (V)</td><td></td><td>1</td><td>1 &gt;= 1 (V)</td><td></td><td></td></tr>
+                   <tr><td></td><td></td><td></td><td style="color:rgb(33, 15, 201)">0</td><td style="color:rgb(33, 15, 201)">0 &gt;= 1 (F)</td><td></td><td>4</td><td>4 &lt;= 6 (V)</td><td></td><td style="color:rgb(33, 15, 201)">0</td><td style="color:rgb(33, 15, 201)">0 &gt;= 1 (F)</td><td></td><td></td></tr>
+                   <tr><td></td><td></td><td></td><td></td><td></td><td></td><td>5</td><td>5 &lt;= 6 (V)</td><td></td><td></td><td></td><td></td><td></td></tr>
+                   <tr><td></td><td></td><td></td><td></td><td></td><td></td><td style="color:rgb(33, 15, 201)">7</td><td style="color:rgb(33, 15, 201)">7 &lt;=6 (F)</td><td></td><td></td><td></td><td></td><td>INTRO</td></tr>
+                 
+                   <tr><td></td><td>4</td><td>4 &lt;= 5 (V)</td><td>2</td><td>2 &gt;= 1 (V)</td><td>**</td><td>1</td><td>1 &lt; 8 (V)</td><td>bbbbbbbbbb</td><td>2</td><td>2 &gt;= 1 (V)</td><td>**</td><td></td></tr>
+                   <tr><td></td><td></td><td></td><td>1</td><td>1 &gt;= 1 (V)</td><td></td><td>2</td><td>2 &lt;= 8 (V)</td><td></td><td>1</td><td>1 &gt;= 1 (V)</td><td></td><td></td></tr>
+                   <tr><td></td><td></td><td></td><td style="color:rgb(33, 15, 201)">0</td><td style="color:rgb(33, 15, 201)">0 &gt;= 1 (F)</td><td></td><td>3</td><td>3 &lt;= 8 (V)</td><td></td><td style="color:rgb(33, 15, 201)">0</td><td style="color:rgb(33, 15, 201)">0 &gt;= 1 (F)</td><td></td><td></td></tr>
+                   <tr><td></td><td></td><td></td><td></td><td></td><td></td><td>4</td><td>4 &lt;= 8 (V)</td><td></td><td></td><td></td><td></td><td></td></tr>
+                   <tr><td></td><td></td><td></td><td></td><td></td><td></td><td>5</td><td>5 &lt;= 8 (V)</td><td></td><td></td><td></td><td></td><td></td></tr>
+                   <tr><td></td><td></td><td></td><td></td><td></td><td></td><td>6</td><td>6 &lt;= 8 (V)</td><td></td><td></td><td></td><td></td><td></td></tr>
+                   <tr><td></td><td></td><td></td><td></td><td></td><td></td><td>7</td><td>7 &lt;= 8 (V)</td><td></td><td></td><td></td><td></td><td></td></tr>
+                   <tr><td></td><td></td><td></td><td></td><td></td><td></td><td>8</td><td>8 &lt;= 8 (V)</td><td></td><td></td><td></td><td></td><td></td></tr>
+                   <tr><td></td><td></td><td></td><td></td><td></td><td></td><td style="color:rgb(33, 15, 201)">9</td><td style="color:rgb(33, 15, 201)">9 &lt;=8 (F)</td><td></td><td></td><td></td><td></td><td>INTRO</td></tr>
+                 
+                   <tr><td></td><td>5</td><td>5 &lt;= 5 (V)</td><td>1</td><td>1 &gt;= 1 (V)</td><td>*</td><td>1</td><td>1 &lt; 10 (V)</td><td>bbbbbbbbbbbb</td><td>1</td><td>1 &gt;= 1 (V)</td><td>*</td><td></td></tr>
+                   <tr><td></td><td></td><td></td><td style="color:rgb(33, 15, 201)">0</td><td style="color:rgb(33, 15, 201)">0 &gt;= 1 (F)</td><td></td><td>2</td><td>2 &lt;= 10 (V)</td><td></td><td style="color:rgb(33, 15, 201)">0</td><td style="color:rgb(33, 15, 201)">0 &gt;= 1 (F)</td><td></td><td></td></tr>
+                   <tr><td></td><td></td><td></td><td></td><td></td><td></td><td>3</td><td>3 &lt;= 10 (V)</td><td></td><td></td><td></td><td></td><td></td></tr>
+                   <tr><td></td><td></td><td></td><td></td><td></td><td></td><td>4</td><td>4 &lt;= 10 (V)</td><td></td><td></td><td></td><td></td><td></td></tr>
+                   <tr><td></td><td></td><td></td><td></td><td></td><td></td><td>5</td><td>5 &lt;= 10 (V)</td><td></td><td></td><td></td><td></td><td></td></tr>
+                   <tr><td></td><td></td><td></td><td></td><td></td><td></td><td>6</td><td>6 &lt;= 10 (V)</td><td></td><td></td><td></td><td></td><td></td></tr>
+                   <tr><td></td><td></td><td></td><td></td><td></td><td></td><td>7</td><td>7 &lt;= 10 (V)</td><td></td><td></td><td></td><td></td><td></td></tr>
+                   <tr><td></td><td></td><td></td><td></td><td></td><td></td><td>8</td><td>8 &lt;= 10 (V)</td><td></td><td></td><td></td><td></td><td></td></tr>
+                   <tr><td></td><td></td><td></td><td></td><td></td><td></td><td>9</td><td>9 &lt;= 10 (V)</td><td></td><td></td><td></td><td></td><td></td></tr>
+                   <tr><td></td><td></td><td></td><td></td><td></td><td></td><td>10</td><td>10 &lt;= 10 (V)</td><td></td><td></td><td></td><td></td><td></td></tr>
+                   <tr><td></td><td></td><td></td><td></td><td></td><td></td><td style="color:rgb(33, 15, 201)">11</td><td style="color:rgb(33, 15, 201)">11 &lt;=8 (F)</td><td></td><td></td><td></td><td></td><td>INTRO</td></tr>
+                 
+                   <tr><td></td><td style="color:rgb(33, 15, 201)">6</td><td style="color:rgb(33, 15, 201)">6 &lt;= 5 (F)</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                 </table><br>
+                 <p>En la Tabla 2.25.6 se puede ver la cuarta parte de la prueba de escritorio del programa, donde la impresión de la otra mitad del rombo de espacios en blanco es un triángulo isósceles invertido cuyo valor de altura es 4, se realiza mediante un bucle externo y tres bucles internos. Cada vez que se repite el bucle externo decremental, se ejecutan los tres bucles internos. El bucle externo decremental se repite cuatro veces en este caso, según la altura del triángulo y se controla con el contador de las filas ‘f’. El número de repeticiones realizadas por los bucles internos se basan en el valor del contador de las filas ‘f’ y de la altura del triángulo isósceles. El primer bucle interno controla la impresión del primer grupo de asteriscos con el contador ‘a’. El segundo bucle interno controla la impresión de los espacios en blanco con el contador ‘b’. El tercer bucle interno controla la impresión del segundo grupo de asteriscos con el contador ‘a’.</p>
+
+                 <h5><b>Tabla 2.25.6. </b>Prueba de escritorio del programa (cuarta parte).</h5>
+                 <table frame="void" rules="all" align="center" cellspacing="0" cellpadding="5" style="font-size:x-small" HEIGHT="50"> 
+                  <tr style="color:red"><td>altura</td><td>f</td><td>f &gt;= 1</td><td>a</td><td>a &gt;= 1</td><td>cout &lt;&lt;= "*";</td><td>b</td><td>b &lt;= 2 * f</td><td>cout &lt;&lt; " "; </td><td>a</td><td>a &gt;= 1</td><td>cout &lt;&lt; "*";</td><td>cout &lt;&lt; endl;</td></tr>
+                  <tr><td>5</td><td>4</td><td>4 &gt;= 1 (V)</td><td>2</td><td>2 &gt;= 1 (V)</td><td>**</td><td>1</td><td>1 &lt; 8 (V)</td><td>bbbbbbbbbb</td><td>2</td><td>2 &gt;= 1 (V)</td><td>**</td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td>1</td><td>1 &gt;= 1 (V)</td><td></td><td>2</td><td>2 &lt;= 8 (V)</td><td></td><td>1</td><td>1 &gt;= 1 (V)</td><td></td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td style="color:rgb(33, 15, 201)">0</td><td style="color:rgb(33, 15, 201)">0 &gt;= 1 (F)</td><td></td><td>3</td><td>3 &lt;= 8 (V)</td><td></td><td style="color:rgb(33, 15, 201)">0</td><td style="color:rgb(33, 15, 201)">0 &gt;= 1 (F)</td><td></td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td>4</td><td>4 &lt;= 8 (V)</td><td></td><td></td><td></td><td></td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td>5</td><td>5 &lt;= 8 (V)</td><td></td><td></td><td></td><td></td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td>6</td><td>6 &lt;= 8 (V)</td><td></td><td></td><td></td><td></td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td>7</td><td>7 &lt;= 8 (V)</td><td></td><td></td><td></td><td></td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td>8</td><td>8 &lt;= 8 (V)</td><td></td><td></td><td></td><td></td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td style="color:rgb(33, 15, 201)">9</td><td style="color:rgb(33, 15, 201)">9 &lt;=8 (F)</td><td></td><td></td><td></td><td></td><td>INTRO</td></tr>
+                
+                  <tr><td></td><td>3</td><td>3 &gt;= 1 (V)</td><td>3</td><td>3 &gt;= 1 (V)</td><td>***</td><td>1</td><td>1 &lt; 6 (V)</td><td>bbbbbbbb</td><td>3</td><td>3 &gt;= 1 (V)</td><td>***</td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td>2</td><td>4 &gt;= 1 (V)</td><td></td><td>2</td><td>2 &lt;= 6 (V)</td><td></td><td>2</td><td>2 &gt;= 1 (V)</td><td></td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td>1</td><td>3 &gt;= 1 (V)</td><td></td><td>3</td><td>3 &lt;= 6 (V)</td><td></td><td>1</td><td>1 &gt;= 1 (V)</td><td></td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td style="color:rgb(33, 15, 201)">0</td><td style="color:rgb(33, 15, 201)">0 &gt;= 1 (F)</td><td></td><td>4</td><td>4 &lt;= 6 (V)</td><td></td><td style="color:rgb(33, 15, 201)">0</td><td style="color:rgb(33, 15, 201)">0 &gt;= 1 (F)</td><td></td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td>5</td><td>5 &lt;= 6 (V)</td><td></td><td></td><td></td><td></td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td style="color:rgb(33, 15, 201)">7</td><td style="color:rgb(33, 15, 201)">7 &lt;=6 (F)</td><td></td><td></td><td></td><td></td><td>INTRO</td></tr>
+                
+                  <tr><td></td><td>2</td><td>2 &gt;= 1 (V)</td><td>4</td><td>4 &gt;= 1 (V)</td><td>****</td><td>1</td><td>1 &lt; 4 (V)</td><td>bbbb</td><td>4</td><td>4 &gt;= 1 (V)</td><td>****</td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td>3</td><td>3 &gt;= 1 (V)</td><td></td><td>2</td><td>2 &lt;= 4 (V)</td><td></td><td>3</td><td>3 &gt;= 1 (V)</td><td></td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td>2</td><td>2 &gt;= 1 (V)</td><td></td><td>3</td><td>3 &lt;= 4 (V)</td><td></td><td>2</td><td>2 &gt;= 1 (V)</td><td></td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td>1</td><td>1 &gt;= 1 (V)</td><td></td><td>4</td><td>4 &lt;= 4 (V)</td><td></td><td>1</td><td>1 &gt;= 1 (V)</td><td></td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td style="color:rgb(33, 15, 201)">0</td><td style="color:rgb(33, 15, 201)">0 &gt;= 1 (F)</td><td></td><td style="color:rgb(33, 15, 201)">5</td><td style="color:rgb(33, 15, 201)">5 &lt;= 4 (F)</td><td></td><td style="color:rgb(33, 15, 201)">0</td><td style="color:rgb(33, 15, 201)">0 &gt;= 1 (F)</td><td></td><td>INTRO</td></tr>
+                
+                  <tr><td></td><td>1</td><td>1 &gt;= 1 (V)</td><td>5</td><td>5 &gt;= 1 (V)</td><td>*****</td><td>1</td><td>1 &lt; 2 (V)</td><td>bb</td><td>5</td><td>5 &gt;= 1 (V)</td><td>*****</td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td>4</td><td>4 &gt;= 1 (V)</td><td></td><td>2</td><td>2 &lt;= 2 (V)</td><td></td><td>4</td><td>4 &gt;= 1 (V)</td><td></td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td>3</td><td>3 &gt;= 1 (V)</td><td></td><td style="color:rgb(33, 15, 201)">3</td><td style="color:rgb(33, 15, 201)">3 &lt;= 2 (F)</td><td></td><td>3</td><td>3 &gt;= 1 (V)</td><td></td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td>2</td><td>2 &gt;= 1 (V)</td><td></td><td></td><td></td><td></td><td>2</td><td>2 &gt;= 1 (V)</td><td></td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td>1</td><td>1 &gt;= 1 (V)</td><td></td><td></td><td></td><td></td><td>1</td><td>1 &gt;= 1 (V)</td><td></td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td style="color:rgb(33, 15, 201)">0</td><td style="color:rgb(33, 15, 201)">0 &gt;= 1 (F)</td><td></td><td></td><td></td><td></td><td style="color:rgb(33, 15, 201)">0</td><td style="color:rgb(33, 15, 201)">0 &gt;= 1 (F)</td><td></td><td>INTRO</td></tr>
+                   <tr><td></td><td style="color:rgb(33, 15, 201)">0</td><td style="color:rgb(33, 15, 201)">0 &gt;= 1 (F)</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                </table><br>
+              
+                <h1><b>Caso de Estudio 2.26: Serie de la Función Exponencial <em>y = e <sup>x</sup></em>.</b></h1>
+                <h2><b>A) Problema</b></h2>
+                <p>El valor de la función y=e^x se puede aproximar mediante la siguiente serie de Taylor:</p>
+                <table align="right">
+                  <td width="350">e<sup>x</sup>= 1 + <sup>x</sup>/<sub>1!</sub> + <sup>x<sup>2</sup></sup>/<sub>2!</sub> + <sup>x<sup>3</sup></sup>/<sub>3!</sub> + ... + <sup>x<sup>n</sup></sup>/<sub>n!</sub></td>
+                <td align="right">(1)</td>
+                </table><br><br>
+                <p>La fórmula de la sumatoria de la función es:</p>
+                <table align="right">
+                  <td width="350">e<sup>x</sup>= &Sigma;<sup><font size="2">&infin;</font></sup><sub><font size="2">n=0</font></sub>  <sup>x<sup>n</sup></sup>/<sub>n!</sub></td>
+                <td align="right">(2)</td>
+                </table><br><br>
+                <p>Escribir un programa que permita aproximar el valor de la función exponencial y=e^x utilizando la serie de Taylor y bucles anidados.</p>
+                <h2><b>B) Análisis</b></h2>
+                <p>Claramente se puede ver que las entradas del problema son el número de términos de la serie y el valor del exponente de la función exponencial. Se requiere una sola salida que es el valor de la serie aproximada. El proceso de cálculo requiere que la serie numérica infinita de la ecuación (2), se convierta a una serie numérica finita, donde el valor de ‘n’ se convierte en el valor de ‘i’ y el valor de infinito pasa a ser el valor de n-1, ya que si se quiere calcular la sumatoria de los cinco primeros términos de la serie, la sumatoria iría desde el valor de i = 0 hasta el valor de i = 5 - 1, es decir, i = 4, como se puede ver en la ecuación (3):</p>
+                <table align="right">
+                  <td width="350">e<sup>x</sup>= &Sigma;<sup><font size="2">n-1</font></sup><sub><font size="2">i=0</font></sub>  <sup>x<sup>i</sup></sup>/<sub>i!</sub></td>
+                <td align="right">(3)</td>
+                </table><br><br>
+                 <p>Para calcular el valor del factorial de la función seno se requiere utilizar la sucesión del factorial de un número cuya ecuación es:</p>
+                 <table align="right">
+                  <td width="350">n! = &prod;<sup><font size="2">&infin;</font></sup><sub><font size="2">n=1</font></sub>  n </td>
+                <td align="right">(4)</td>
+                </table><br><br>
+                <p>Por lo que, el factorial de (i) es:</p>
+                <table align="right">
+                  <td width="350">i! = &prod;<sup><font size="2">i</font></sup><sub><font size="2">j=1</font></sub>  j</td>
+                <td align="right">(5)</td>
+                </table><br><br>
+                <p>Reemplazando el valor de la ecuación (5) en la ecuación (3) se tiene:</p>
+                <table align="right">
+                  <td width="350">e<sup>x</sup>= &Sigma;<sup><font size="2">n-1</font></sup><sub><font size="2">i=0</font></sub>  <sup>x<sup>i</sup></sup>/<sub> [ &prod;<sup><font size="1">i</font></sup><sub><font size="1">j=1</font></sub>  j ]</sub></td>
+                <td align="right">(6)</td>
+                </table><br><br>  <br>              
+              <p>Como se puede ver en la ecuación (6) se requiere utilizar dos bucles anidados; un bucle externo para calcular la sumatoria y un bucle interno para calcular el factorial de un número que básicamente es un producto.</p>
+                  
+    <h3><b>B.1) Requerimiento de los Datos</b></h3>
+                <p><b>Entradas del Programa</b></p>
+                    
+      <table>
+                    <tr><td width="200"> n </td><td width="200">/* número de términos de la serie */</td></tr>
+                    <tr><td>x</td><td>/* Exponente de la función exponencial */</td></tr>
+                  </table><br>
+                  <p><b>Salidas del Problema</b></p>
+                  <table>
+                    <tr><td width="200"> serie </td><td width="200">/* Resultado de la serie aproximada  */</td></tr>
+                  </table><br>
+      <p><b>Auxiliares del Problema</b></p>
+                <table>
+                 <tr><td width="200">i</td><td width="200">/* Contador para controlar la sumatoria */</td></tr>
+                <tr><td width="200">j</td><td width="200">/* Contador para controlar el factorial de un número */</td></tr>
+                <tr><td width="200">sum</td><td width="200">/* Acumulador de sumas */</td></tr>
+                <tr><td width="200">prod</td><td width="200">/* Acumulador de productos */</td></tr>
+               </table><br>
+                  <p><b>Fórmulas Relevantes</b></p>
+                  <table>
+                <tr><td ><i>prod = prod ∙ valor </i></td><td> (1) </td><td>/* Fórmula que representa el acumulador de un producto */</td></tr>
+                  <tr><td width="120"><i>sum = sum + valor</i></td><td width="30"> (2) </td><td width="280">/* Fórmula que representa el acumulador de una sumatoria */</td></tr>
+                    <tr><td >n! = &prod;<sup><font size="2">&infin;</font></sup><sub><font size="2">n=1</font></sub>  n</td><td> (3) </td><td>/* Fórmula que representa el factorial de un número */</td></tr>
+                    <tr><td >e<sup>x</sup>= &Sigma;<sup><font size="2">n-1</font></sup><sub><font size="2">i=0</font></sub>  <sup>x<sup>i</sup></sup>/<sub> [ &prod;<sup><font size="1">i</font></sup><sub><font size="1">j=1</font></sub>  j ]</sub></td><td> (4) </td><td>/* Fórmula que representa la serie de la función exponencial incluido el factorial de un número */</td></tr>
+                  </table> <br>
+  
+                  <h3><b>B.2) Diagrama de Entrada-Salida</b></h3>
+                  <p>En la Figura 2.26.1 se muestra el diagrama de Entrada-Salida del programa donde se identifican y se diagraman las entradas, salidas y auxiliares del problema como son: a) Entradas: la variable ‘n’; la variable ‘x’; b) Salidas: la variable ‘serie’; c) Auxiliares: el contador ‘i’; el contador ‘j’; la variable ‘prod’; la variable ‘sum’.</p>
+                  <img src="./assets/images/Capitulos/II/media/Figura 2.26.1.png" style="display:block; margin:auto; "><br>
+                  <h5 style="text-align:center"><b>Figura 2.20.3. </b>Diagrama de Entrada-Salida del Programa.</h5>
+                  <h2><b>C) Diseño</b></h2>
+                  <p>Una vez que se conocen las entradas, las auxiliares y las salidas del problema, se deben listar los pasos necesarios para resolver el problema, es decir, el algoritmo.</p>
+                  
+        <p><b>Algoritmo</b></p>
+                  
+                  <ol type="1">
+                    <li>Imprimir el mensaje de información: Serie de la Función Exponencial y=e <sup>x</sup>.</li>
+                    <li>Leer el número de términos de la serie, utilizando la variable ‘n’.</li>
+                    <li>Leer el valor del exponente de la función exponencial, utilizando la variable ‘x’.</li>
+                    <li>Inicializar con el valor de cero el acumulador de sumas cuya variable utilizada es ‘sum’.</li>
+                    <li>Para el bucle externo, hacer: </li>
+                    <ol type="1" start="5"><li>1.	Inicializar el valor del contador ‘i’ en cero. </li></ol>
+                    <ol type="1" start="5"><li>2.	Mientras el valor de la condición (i &lt;=n-1) sea verdadera ejecutar las sentencias del bucle externo. </li></ol>
+                    <ol type="1" start="5"><li>3.	Luego de cada iteración incrementar en uno el valor del contador ‘i’. </li></ol>
+                    <ol type="1" start="5"><li>4.	Inicializar el acumulador de productos ‘prod’ con el valor de uno.</li></ol>
+                    <ol type="1" start="5"><li>5.	Para el bucle interno, hacer: </li>
+                      <ol type="1" start="5"><li>5.1.	Inicializar el valor del contador ‘j’ en uno.</li></ol>
+                      <ol type="1" start="5"><li>5.2.	Mientras el valor de la condición (j&lt;=i) sea verdadera ejecutar las sentencias del bucle interno.</li></ol>
+                      <ol type="1" start="5"><li>5.3.	Luego de cada iteración incrementar en uno el valor del contador ‘j’.</li></ol>
+                      <ol type="1" start="5"><li>5.4.	Asignar al acumulador ‘prod’ lo que tiene multiplicado por el valor del contador ‘j’.</li></ol>
+                    </ol>
+                    <ol type="1" start="5"><li>6.	Asignar al acumulador ‘sum’ lo que tiene sumado el valor del término e-nésimo de la serie.</li></ol>
+
+                    <li>Asignar a la variable serie el valor del acumulador ‘sum’.</li>
+                    <li>Imprimir el valor de la serie aproximada.</li>
+                  </ol>
+  
+                  <h2><b>D) Implementación</b></h2>
+                  <p>Para implementar la solución, se debe escribir el algoritmo como un programa de C/C++ que contenga toda la información necesaria para completar la traducción a lenguaje máquina. En la Tabla 2.26.1 se muestra el código del programa en C/C++.</p>
+                  <h5><b>Tabla 2.26.1. </b>Programa que calcula la serie de la función exponencial y=e <sup>x</sup>..</h5>
+                  <pre><code [highlight]="prefTab2[0].tabla2_26_1"  [lineNumbers]="true"></code></pre> <br>
+                  <h2>E) Pruebas</h2>
+                  <p>En la Tabla 2.26.2 y en la Tabla 2.26.3, se muestran dos ejemplos de la salida del programa, donde se puede ver que los resultados del programa tienen sentido, comparando estos resultados con los datos devueltos por una calculadora científica.</p>
+                  <p>En la salida de la Tabla 2.26.2 se puede ver que, al ingresar el número de términos igual a 10 y el valor del exponente igual a 1, se obtiene el valor de la serie aproximada igual a 2.71828.</p>
+                  <h5><b>Tabla 2.26.2.</b> Salida del programa.</h5>
+                  <img src="./assets/images/Capitulos/II/media/Tabla 2.26.2.png" style="display:block; margin:auto; "><br>
+                  <p>En la salida de la Tabla 2.26.3 se puede ver que, al ingresar el número de términos igual a 10 y el valor del exponente igual a 2, se obtiene el valor de la serie aproximada igual a 7.38871.</p>
+                 <h5><b>Tabla 2.26.3. </b>Salida del programa.</h5>
+                 <img src="./assets/images/Capitulos/II/media/Tabla 2.26.3.png" style="display:block; margin:auto; "><br>
+                  <p>En la Tabla 2.26.4, se muestra la prueba de escritorio del programa, donde se puede comprobar que en cada iteración del bucle externo for() se inicializa el acumulador del producto en 1 y luego se calcula el factorial de (i) utilizando un bucle interno for(). Luego de ejecutarse el bucle interno for() se utiliza un acumulador de sumas donde se acumulan los valores parciales de la serie de la función y la ejecución del bucle externo termina cuando la condición (i <= n - 1) de esta sentencia se hace falsa.</p>
+                  <h5><b>Tabla 2.26.4. </b>Prueba de escritorio del programa.</h5>
+                  <table frame="void" rules="all" align="center" cellspacing="0" cellpadding="5"> 
+                  <tr style="color:red"><td>n</td><td>x</td><td>Sum</td><td>i</td><td>i &lt;= n - 1</td><td>prod</td><td>j</td><td>i &lt;= i</td></tr>
+                    <tr><td>6</td><td>1</td><td>0</td><td>0</td><td>0 &lt;= 5 (V)</td><td>1</td><td style="color:rgb(33, 15, 201)">1</td><td style="color:rgb(33, 15, 201)">1 &lt;= 0 (F)</td></tr>
+                    <tr><td></td><td></td><td>0 + (1<sup>0</sup> /1)=1</td><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td></td><td></td><td></td><td>1</td><td>1 &lt;= 5 (V)</td><td>1</td><td>1</td><td>1 &lt;= 1 (V)</td></tr>
+                    <tr><td></td><td></td><td>1 + (1<sup>1</sup> /1)=2</td><td></td><td></td><td>1*1=1</td><td style="color:rgb(33, 15, 201)">2</td><td style="color:rgb(33, 15, 201)">2 &lt;= 1 (F)</td></tr>
+                    <tr><td></td><td></td><td></td><td>1</td><td>1 &lt;= 5 (V)</td><td>1</td><td>1</td><td>1 &lt;= 2 (V)</td></tr>
+                    <tr><td></td><td></td><td></td><td></td><td></td><td>1*1=1</td><td>2</td><td>1 &lt;= 2 (V)</td></tr>
+                    <tr><td></td><td></td><td>1 + (1<sup>2</sup> /2)=2.5</td><td></td><td></td><td>1*2=2</td><td style="color:rgb(33, 15, 201)">3</td><td style="color:rgb(33, 15, 201)">3 &lt;= 2 (F)</td></tr>
+                 
+                    <tr><td></td><td></td><td></td><td>3</td><td>3 &lt;= 5 (V)</td><td>1</td><td>1</td><td>1 &lt;= 3 (V)</td></tr>
+                    <tr><td></td><td></td><td></td><td></td><td></td><td>1*1=1</td><td>2</td><td>2 &lt;= 3 (V)</td></tr>
+                    <tr><td></td><td></td><td></td><td></td><td></td><td>1*2=2</td><td>3</td><td>3 &lt;= 3 (V)</td></tr>
+                    <tr><td></td><td></td><td>1 + (1<sup>3</sup> /6)=2.66667</td><td></td><td></td><td>2*3=6</td><td style="color:rgb(33, 15, 201)">4</td><td style="color:rgb(33, 15, 201)">4 &lt;= 3 (F)</td></tr>
+                 
+                    <tr><td></td><td></td><td></td><td>4</td><td>4 &lt;= 5 (V)</td><td>1</td><td>1</td><td>1 &lt;= 4 (V)</td></tr>
+                    <tr><td></td><td></td><td></td><td></td><td></td><td>1*1=1</td><td>2</td><td>2 &lt;= 4 (V)</td></tr>
+                    <tr><td></td><td></td><td></td><td></td><td></td><td>1*2=2</td><td>3</td><td>3 &lt;= 4 (V)</td></tr>
+                    <tr><td></td><td></td><td></td><td></td><td></td><td>2*3=6</td><td>4</td><td>4 &lt;= 4 (V)</td></tr>
+                    <tr><td></td><td></td><td>1 + (1<sup>4</sup> /24)=2.70834</td><td></td><td></td><td>6*4=24</td><td style="color:rgb(33, 15, 201)">5</td><td style="color:rgb(33, 15, 201)">5 &lt;= 4 (F)</td></tr>
+                  
+                    <tr><td></td><td></td><td></td><td>5</td><td>5 &lt;= 5 (V)</td><td>1</td><td>1</td><td>1 &lt;= 5 (V)</td></tr>
+                    <tr><td></td><td></td><td></td><td></td><td></td><td>1*1=1</td><td>2</td><td>2 &lt;= 5 (V)</td></tr>
+                    <tr><td></td><td></td><td></td><td></td><td></td><td>1*2=2</td><td>3</td><td>3 &lt;= 5 (V)</td></tr>
+                    <tr><td></td><td></td><td></td><td></td><td></td><td>2*3=6</td><td>4</td><td>4 &lt;= 5 (V)</td></tr>
+                    <tr><td></td><td></td><td></td><td></td><td></td><td>6*4=24</td><td>4</td><td>5 &lt;= 5 (V)</td></tr>
+                    <tr><td></td><td></td><td>1 + (1<sup>5</sup> /120)=2.71667</td><td></td><td></td><td>24*5=120</td><td style="color:rgb(33, 15, 201)">6</td><td style="color:rgb(33, 15, 201)">5 &lt;= 5 (F)</td></tr>
+                  </table> <br>
+                  
+                  <h1><b>Caso de Estudio 27: Serie de la Función Seno.</b></h1>
+                  <h2><b>A) Problema</b></h2>
+                  <p>El valor de la función y=sen(x) se puede aproximar mediante la siguiente serie de Taylor:</p>
+                 <table align="right">
+                  <td width="350"> <i>sen(x)</i>= x - (x<sup>3</sup> /3!) + (x<sup>5</sup> /5!) - (x<sup>7</sup> /!) + ... + (-1<sup>n</sup>)∙(x<sup>2n+1</sup>)/(2n+1)!
+                  </td><td align="right">(1)</td></table> 
+                   
+                  <p>La fórmula de la sumatoria de la función es:</p>
+                  <table align="right">
+                    <td width="350"> <i>sen(x)</i>= &Sigma;<sup><font size="2">&infin;</font></sup><sub><font size="2">n=1</font></sub>   (-1<sup>n</sup>)∙(x<sup>2n+1</sup>)/(2n+1)!
+                    </td><td align="right">(2)</td></table><br><br><br>
+                    <p>Escribir un programa que permita aproximar el valor de la función seno utilizando la serie de Taylor y bucles anidados.</p>
+                  <h2><b>B) Análisis</b></h2>
+                  <p>Claramente se puede ver que las entradas del problema son el número de términos de la serie y el valor del ángulo en grados de la función seno. Se requiere una sola salida que es el valor de la serie aproximada. El proceso de cálculo requiere que la serie numérica infinita de la ecuación (2), se convierta a una serie numérica finita, donde el valor de ‘n’ se convierte en el valor de ‘i’ y el valor de infinito pasa a ser el valor de n-1, ya que si se quiere calcular la sumatoria de los cinco primeros términos de la serie, la sumatoria iría desde el valor de i = 0 hasta el valor de i = 5 - 1, es decir, i = 4, como se puede ver en la ecuación (3):</p>
+                  <table align="right">
+                    <td width="350"><i>sen(x)</i>= &Sigma;<sup><font size="2">n-1</font></sup><sub><font size="2">i=0</font></sub>   (-1<sup>i</sup>)∙(x<sup>2i+1</sup>)/(2i+1)!
+                      
+                    </td><td align="right">(3)</td></table>
+                    <p>Para calcular el valor del factorial de la función seno se requiere utilizar la sucesión del factorial de un número cuya ecuación es:</p>
+                    <table align="right"><td width="350">n! = &prod;<sup><font size="2">&infin;</font></sup><sub><font size="2">n=1</font></sub>  n </td>
+                    <td align="right">(4)</td>
+                    </table><br><br>
+                    <p>Por lo que, el factorial de (2i+1) es:</p>
+                    <table align="right">
+                      <td width="350">(2i + 1)! = &prod;<sup><font size="2">2i=1</font></sup><sub><font size="2">j=1</font></sub>  j</td>
+                    <td align="right">(5)</td>
+                    </table><br><br>
+                    <p>Reemplazando el valor de la ecuación (5) en la ecuación (3) se tiene:</p>
+                    <table align="right">
+                      <td width="350"><i>sen(x)</i>= &Sigma;<sup><font size="2">n-1</font></sup><sub><font size="2">i=0</font></sub>   (-1<sup>i</sup>)∙(x<sup>2i+1</sup>)/( &prod;<sup><font size="1">2i=1</font></sup><sub><font size="1">j=1</font></sub>  j)!                  
+                      </td><td align="right">(2)</td></table>
+                      <p>Como se puede ver en la ecuación (6) se requiere utilizar dos bucles anidados; un bucle externo para calcular la sumatoria y un bucle interno para calcular el factorial de un número que básicamente es un producto. Además, se tiene que convertir el valor del ángulo de grados a radianes para realizar los cálculos respectivos.</p>
+
+    <h3><b>B.1) Requerimiento de los Datos</b></h3>
+                <p><b>Entradas del Programa</b></p>
+                    
+      <table> <tr><td width="200"> n </td><td width="200">/* número de términos de la serie */</td></tr>
+                    <tr><td>x</td><td>/* Ángulo de la función en grados */</td></tr>
+                  </table><br>
+                  <p><b>Salidas del Problema</b></p>
+                  <table>
+                    <tr><td width="200"> serie </td><td width="200">/* Resultado de la serie aproximada  */</td></tr>
+                  </table><br>
+      <p><b>Auxiliares del Problema</b></p>
+                <table>
+                 <tr><td width="200">i</td><td width="200">/* Contador para controlar la sumatoria */</td></tr>
+                <tr><td width="200">j</td><td width="200">/* Contador para controlar el factorial de un número */</td></tr>
+                <tr><td width="200">sum</td><td width="200">/* Acumulador de sumas */</td></tr>
+                <tr><td width="200">prod</td><td width="200">/* Acumulador de productos */</td></tr>
+               </table><br>
+                  <p><b>Fórmulas Relevantes</b></p>
+                  <table>
+                    <tr><td><i>x = (x∙π)/180</i></td><td>1</td><td>Fórmula para convertir de grados a radianes </td></tr>
+                <tr><td ><i>prod = prod ∙ valor </i></td><td> (2) </td><td>/* Fórmula que representa el acumulador de un producto */</td></tr>
+                  <tr><td width="120"><i>sum = sum + valor</i></td><td width="30"> (3) </td><td width="280">/* Fórmula que representa el acumulador de una sumatoria */</td></tr>
+                    <tr><td >n! = &prod;<sup><font size="2">&infin;</font></sup><sub><font size="2">n=1</font></sub>  n</td><td> (4) </td><td>/* Fórmula que representa el factorial de un número */</td></tr>
+                    <tr><td ><i>sen(x)</i>= &Sigma;<sup><font size="2">n-1</font></sup><sub><font size="2">i=0</font></sub>   (-1<sup>i</sup>)∙(x<sup>2i+1</sup>)/( &prod;<sup><font size="1">2i=1</font></sup><sub><font size="1">j=1</font></sub>  j)!                  
+                    </td><td> (5) </td>
+                      <td>/* Fórmula que representa la serie del seno incluido el factorial de un número */</td></tr>
+                  </table> <br>
+  
+                  <h3><b>B.2) Diagrama de Entrada-Salida</b></h3>
+                  <p>En la Figura 2.27.1 se muestra el diagrama de Entrada-Salida del programa donde se identifican y se diagraman las entradas, salidas y auxiliares del problema como son: a) Entradas: la variable ‘n’; la variable ‘x’; b) Salidas: la variable ‘serie’; c) Auxiliares: el contador ‘i’; el contador ‘j’; la variable ‘prod’; la variable ‘sum’; la constante PI.</p>
+                  <img src="./assets/images/Capitulos/II/media/Figura 2.27.1.png" style="display:block; margin:auto; "><br>
+                  <h5 style="text-align:center"><b>Figura 2.27.1. </b>Diagrama de Entrada-Salida del Programa.</h5>
+                  <h2><b>C) Diseño</b></h2>
+                  <p>Una vez que se conocen las entradas, las auxiliares y las salidas del problema, se deben listar los pasos necesarios para resolver el problema, es decir, el algoritmo.</p>
+                  
+        <p><b>Algoritmo</b></p>
+                  
+                  <ol type="1">
+                    <li>Imprimir el mensaje de información: Serie del Seno <sup>x</sup>.</li>
+                    <li>Leer el número de términos de la serie, utilizando la variable ‘n’.</li>
+                    <li>Leer el valor del ángulo en grados de la función seno, utilizando la variable ‘x’..</li>
+                    <li>Convertir el valor del ángulo ‘x’ de grados a radianes, utilizando la fórmula (1).</li>
+                    <li>Inicializar con el valor de cero el acumulador de sumas cuya variable utilizada es ‘sum’.</li>
+                    <li>Para el bucle externo, hacer: </li>
+                    <ol type="1" start="6"><li>1.	Inicializar el valor del contador ‘i’ en cero. </li></ol>
+                    <ol type="1" start="6"><li>2.	Mientras el valor de la condición (i &lt;=n-1) sea verdadera ejecutar las sentencias del bucle externo. </li></ol>
+                    <ol type="1" start="6"><li>3.	Luego de cada iteración incrementar en uno el valor del contador ‘i’. </li></ol>
+                    <ol type="1" start="6"><li>4.	Inicializar el acumulador de productos ‘prod’ con el valor de uno.</li></ol>
+                    <ol type="1" start="6"><li>5.	Para el bucle interno, hacer: </li>
+                      <ol type="1" start="6"><li>5.1.	Inicializar el valor del contador ‘j’ en uno.</li></ol>
+                      <ol type="1" start="6"><li>5.2.	Mientras el valor de la condición (j&lt;=i*i+1) sea verdadera ejecutar las sentencias del bucle interno.</li></ol>
+                      <ol type="1" start="6"><li>5.3.	Luego de cada iteración incrementar en uno el valor del contador ‘j’.</li></ol>
+                      <ol type="1" start="6"><li>5.4.	Asignar al acumulador ‘prod’ lo que tiene multiplicado por el valor del contador ‘j’.</li></ol>
+                    </ol>
+                    <ol type="1" start="6"><li>6.	Asignar al acumulador ‘sum’ lo que tiene sumado el valor del término e-nésimo de la serie.</li></ol>
+
+                    <li>Asignar a la variable serie el valor del acumulador ‘sum’.</li>
+                    <li>Imprimir el valor de la serie aproximada.</li>
+                  </ol>                    
+
+
+                    <h2><b>D) Implementación</b></h2>
+                    <p>Para implementar la solución, se debe escribir el algoritmo como un programa de C/C++ que contenga toda la información necesaria para completar la traducción a lenguaje máquina. En la Tabla 2.27.1 se muestra el código del programa en C/C++.</p>
+                    <h5><b>Tabla 2.27.1. </b>Programa que calcula la serie de la función seno.</h5>
+                    <pre><code [highlight]="prefTab2[0].tabla2_27_1"  [lineNumbers]="true"></code></pre> <br>
+                    <h2>E) Pruebas</h2>
+                    <p>En la Tabla 2.27.2, se muestra un ejemplo de la salida del programa, donde se puede ver que los resultados del programa tienen sentido, comparando estos resultados con los datos devueltos por una calculadora.</p>
+                    <p>En la salida de la Tabla 2.27.2 se puede ver que, al ingresar el número de términos igual a 10 y el valor del ángulo en grados igual a 30, se obtiene el valor de la serie aproximada igual a 0.5.</p>
+                    <h5><b>Tabla 2.27.2.</b> Salida del programa</h5>
+                    <img src="./assets/images/Capitulos/II/media/Tabla 2.27.2.png" style="display:block; margin:auto; "><br>
+                    <p>En la Tabla 2.27.3, se muestra la prueba de escritorio del programa, donde se puede comprobar que en cada iteración del bucle externo for() se inicializa el acumulador del producto en 1 y luego se calcula el factorial de (2i+1) utilizando un bucle interno for(). Luego de ejecutarse el bucle interno for() se utiliza un acumulador de sumas donde se acumulan los valores parciales de la serie de la función y la ejecución del bucle externo termina cuando la condición de esta sentencia se hace falsa.</p>
+                   <h5><b>Tabla 2.27.3. </b>Prueba de escritorio del programa.</h5>
+                   <table frame="void" rules="all" align="center" cellspacing="0" cellpadding="5"> 
+                    <tr style="color:red"><td>n</td><td>x</td><td>Sum</td><td>i</td><td>i &lt;= n - 1</td><td>prod</td><td>j</td><td>j &lt;= 2*i+1</td></tr>
+                      <tr><td>3</td><td>π/6</td><td>0</td><td>0</td><td>0 &lt;= 3 (V)</td><td>1</td><td>1</td><td>1 &lt;= 1 (V)</td></tr>
+                      <tr><td></td><td></td><td>0 + π/6 = π/6 = 0.523599</td><td></td><td></td><td>1*1=1</td><td style="color:rgb(33, 15, 201)">2</td><td style="color:rgb(33, 15, 201)">2 &lt;= 1 (F)</td></tr>
+                      <tr><td></td><td></td><td></td><td>1</td><td>1 &lt;= 3 (V)</td><td>1</td><td>1</td><td>1 &lt;= 3 (V)</td></tr>
+                      <tr><td></td><td></td><td></td><td></td><td></td><td>1*1=1</td><td>2</td><td>2 &lt;= 3 (V)</td></tr>
+                      <tr><td></td><td></td><td></td><td></td><td></td><td>1*2=2</td><td>3</td><td>3 &lt;= 3 (V)</td></tr>
+                      <tr><td></td><td></td><td>0.523599 - (π/6)<sup>3</sup>/6=0.49967</td><td></td><td></td><td>2*3=6</td><td style="color:rgb(33, 15, 201)">4</td><td style="color:rgb(33, 15, 201)">4 &lt;= 3 (F)</td></tr>
+                      <tr><td></td><td></td><td></td><td>2</td><td>2 &lt;= 3 (V)</td><td>1</td><td>1</td><td>1 &lt;= 5 (V)</td></tr>
+                      <tr><td></td><td></td><td></td><td></td><td></td><td>1*1=1</td><td>2</td><td>2 &lt;= 5 (V)</td></tr>
+                      <tr><td></td><td></td><td></td><td></td><td></td><td>1*2=2</td><td>3</td><td>3 &lt;= 5 (V)</td></tr>                      
+                      <tr><td></td><td></td><td></td><td></td><td></td><td>2*3=6</td><td>4</td><td>4 &lt;= 5 (V)</td></tr>
+                      <tr><td></td><td></td><td></td><td></td><td></td><td>6*4=24</td><td>5</td><td>5 &lt;= 5 (V)</td></tr>
+                      <tr><td></td><td></td><td>0.499674 + (π/6)<sup>5</sup>/120 = 0.5000002</td><td></td><td></td><td>24*5=120</td><td style="color:rgb(33, 15, 201)">6</td><td style="color:rgb(33, 15, 201)">6 &lt;= 5 (F)</td></tr>
+                   
+                      <tr><td></td><td></td><td></td><td>3</td><td>3 &lt;= 3 (V)</td><td>1</td><td>1</td><td>1 &lt;= 7 (V)</td></tr>
+                      <tr><td></td><td></td><td></td><td></td><td></td><td>1*1=1</td><td>2</td><td>2 &lt;= 7 (V)</td></tr>
+                      <tr><td></td><td></td><td></td><td></td><td></td><td>1*2=2</td><td>3</td><td>3 &lt;= 7 (V)</td></tr>                      
+                      <tr><td></td><td></td><td></td><td></td><td></td><td>2*3=6</td><td>4</td><td>4 &lt;= 7 (V)</td></tr>
+                      <tr><td></td><td></td><td></td><td></td><td></td><td>6*4=24</td><td>5</td><td>5 &lt;= 7 (V)</td></tr>
+                      <tr><td></td><td></td><td></td><td></td><td></td><td>24*5=120</td><td>6</td><td>6 &lt;= 7 (V)</td></tr>
+                      <tr><td></td><td></td><td></td><td></td><td></td><td>120*6=720</td><td>7</td><td>7 &lt;= 7 (V)</td></tr>
+                      <tr><td></td><td></td><td>0.5000002 - (π/6)<sup>7</sup>/5040 = 0.5</td><td></td><td></td><td>720*7=5040</td><td style="color:rgb(33, 15, 201)">8</td><td style="color:rgb(33, 15, 201)">8 &lt;= 7 (F)</td></tr>
+                                      
+                      <tr><td></td><td></td><td style="color:rgb(33, 15, 201)">4</td><td style="color:rgb(33, 15, 201)">4&lt;= 3 (F)</td><td></td><td></td><td></td><td></td></tr>
+                    </table> <br> 
+
+
               </ng-template>
             </mat-tab>
           </mat-tab-group>
@@ -2029,6 +3415,22 @@ En la Figura 2.19.3 se muestra el diagrama de Entrada-Salida del programa donde 
       </mat-tab>
 
       <mat-tab label="Resumen">
+        <ng-template matTabContent>
+          <br><h1>Resumen</h1>
+          <ol type="1">
+            <li>Un algoritmo es un método para resolver un problema. La solución de un problema de programación implica la aplicación de cuatro fases: a) Análisis del problema; b) Diseño del algoritmo; c) Desarrollo y codificación; Implementación y pruebas.</li>
+            <li>Un programa es un conjunto de instrucciones que producirán la ejecución de una determinada tarea para conseguir un fin.</li>
+            <li>El pseudocódigo es un lenguaje que se utiliza para describir algoritmos y ayuda a la codificación de un programa.</li>
+            <li>La programación estructurada enseña la descomposición de un programa en módulos más simples de programar que permitirá la escritura de programas fáciles de leer y modificar. En un programa estructurado el flujo lógico se gobierna por las estructuras de control básicas: a) estructuras secuenciales; b) estructuras de decisión; c) estructuras repetitivas. El estudio de las estructuras de control se realiza en base al diseño de algoritmos y a la creación de programas en lenguaje C/C++.</li>
+            <li>La estructura de control secuencial es aquella en la que una instrucción se ejecuta a continuación de otra de modo de secuencia.</li>
+            <li>La estructura de control de selección es aquella en la que las instrucciones se ejecutan entre acciones alternativas. Las principales sentencias de decisión son: a) La sentencia if; b) La sentencia if-else; c) Sentencias if-else anidadas; d) Secuencia de Sentencias if; e) Secuencia de Sentencias if-else; f) Sentencia de control switch.</li>
+            <li>La estructura de control conocida como bucle es aquella que realiza la repetición o iteración de acciones o grupos de sentencias. Las principales sentencias de repetición son: a) La sentencia while; b) La sentencia do-while; c) La sentencia for; d) Bucles anidados.</li>
+            <li>En el lenguaje C/C++ es posible anidar bucles, donde estos bucles anidados constan de un bucle externo con uno o más bucles internos. Cada vez que se repite el bucle externo, los bucles internos se repiten y se ejecutan las sentencias de estos bucles</li>
+          </ol>
+        </ng-template>
+      </mat-tab>
+
+      <mat-tab label="Test de Conocimientos">
         <ng-template matTabContent>
 
         </ng-template>
