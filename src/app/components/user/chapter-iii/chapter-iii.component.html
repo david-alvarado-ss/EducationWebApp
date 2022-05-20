@@ -19,11 +19,22 @@
     <mat-tab-group [selectedIndex]="selectedIndex.value" (selectedIndexChange)="selectedIndex.setValue($event)">
         <mat-tab label="Introducción">
             <ng-template matTabContent>
-                </ng-template>
+              <br><h1>Introducción</h1>
+              <p>En este capítulo se aprenderá a diseñar funciones con algoritmos y a utilizar la computadora como una herramienta para resolver problemas creando programas con funciones, referencias y punteros en el lenguaje C/C++. Para la solución de problemas de programación se aplican aspectos de Ingeniería de Software y el método científico que permiten identificar a la programación con un enfoque sistemático. </p>
+            <p>En un programa estructurado el flujo lógico se puede optimizar con el uso de funciones, referencias y punteros que es parte de la programación modular. El estudio de las funciones se realiza en base al paso de parámetros por valor, por referencia y por dirección. La aplicación de funciones para crear programas se lo hace con un lenguaje estructurado y modular como es el Lenguaje C/C++.</p>   
+            </ng-template>
         </mat-tab>
 
         <mat-tab label="Objetivos">
             <ng-template matTabContent>
+              <br><h1>Objetivos</h1>
+              <ul>
+                <li>Revisar los principales conceptos en torno a funciones con algoritmos y con estructuras de control.</li>
+                <li>Entender cómo trabajan las funciones, las referencias, los punteros y cómo se aplican con el lenguaje C/C++ en la construcción de programas.</li>
+                <li>Aprender a manejar el paso de parámetros por valor, por referencia y por dirección con algoritmos en Pseudocódigo y en Lenguaje C/C++.</li>
+                <li>Diseñar y crear programas en lenguaje C/C++ utilizando funciones, referencias y punteros.</li>
+                <li>Resolver casos de estudio con funciones, referencias y punteros aplicados al área matemática</li>
+              </ul>
             </ng-template>
         </mat-tab>
       <mat-tab label="Función">
@@ -31,6 +42,16 @@
           <mat-tab-group>
             <!-- <mat-tab *ngFor="let tab of asyncTabs | async"> -->
             <mat-tab  label="Introducción">
+              <ng-template matTabContent>
+                <br><h1>Función</h1>
+                <p>Una función es un mini programa dentro de un programa. Las funciones contienen varias sentencias bajo un solo nombre, que un programa puede utilizar una o más veces para ejecutar dichas sentencias (Granizo, E., 2016). Una función es una unidad de código diseñada para ejecutar una cierta tarea. Una función típica recibe algo de información y retorna algo de información. El concepto de una función es algo similar a una función matemática. Considere el caso de la función <i>sen(x)</i>, la cual toma un parámetro ‘x’ y evalúa o retorna algún valor, esto es el seno de ‘x’.</p>
+                <p>La utilidad de las funciones puede ser fácilmente demostrada si consideramos un programa sin el uso de ellas, como el siguiente:</p>
+                <h4><b>Ejercicio 3.1: </b>Escribir un programa sin utilizar funciones que calcule el área de un rectángulo para los siguientes valores de ancho y largo: a) ancho: 7; largo: 2; b) ancho: 9; largo: 5; c) ancho: 8; largo: 4; ingresados desde el teclado en forma seguida, es decir, uno a continuación de otro.</h4>
+                <h5><b>Programa 3.1: </b>Programa sin funciones.</h5>
+                    <pre><code [highlight]="prefTabs3[0].programa3_1"  [lineNumbers]="true"></code></pre>
+              
+              
+              </ng-template>
             </mat-tab>
             <mat-tab  label="3.1.1.   Estructura de una Función">
             </mat-tab>

@@ -18,6 +18,7 @@ export interface ExampleTab {
 export class ChapterIIIComponent implements OnInit {
   asyncTabs: Observable<ExampleTab[]>;
   prefTabs: any;
+  prefTabs3: any;
   introduccion: any;
   praqnique: any;
   praqniquePropuesto: any;
@@ -40,6 +41,868 @@ export class ChapterIIIComponent implements OnInit {
       }, 1000);
     });
   */
+this.prefTabs3={
+programa3_1:`/*******************************************************
+WinConsolaPrograma_3_1
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
+
+// Función principal.
+void main()
+{
+	float ancho; // Entrada: ancho del rectángulo.
+	float largo; // Entrada: largo del rectángulo.	
+	float area;  // Salida: área del rectángulo.  
+
+	// Imprimr un mensaje de información.
+	cout << "Área de un rectángulo." << endl;
+	// Leer el valor del ancho del rectángulo.
+	cout << "Ingrese el valor del ancho: "; cin >> ancho;
+	// Leer el valor del largo del rectángulo.
+	cout << "Ingrese el valor del largo: "; cin >> largo;
+
+	// Calcular el valor del área del rectángulo.
+	area = ancho * largo;
+	// Imprimir el valor del área del rectángulo. 	
+	cout << "El área es: " << area << endl;
+
+	// Realizar otros cálculos.
+	cout << endl << "Realizar otros cálculos..." << endl << endl;
+
+	// Imprimr un mensaje de información.
+	cout << "Área de un rectángulo." << endl;
+	// Leer el valor del ancho del rectángulo.
+	cout << "Ingrese el valor del ancho: "; cin >> ancho;
+	// Leer el valor del largo del rectángulo.
+	cout << "Ingrese el valor del largo: "; cin >> largo;
+
+	// Calcular el valor del área del rectángulo.
+	area = ancho * largo;
+	// Imprimir el valor del área del rectángulo. 	
+	cout << "El área es: " << area << endl;
+
+	// Imprimir un salto de línea (INTRO).
+	cout << endl;
+
+	// Imprimr un mensaje de información.
+	cout << "Área de un rectángulo." << endl;
+	// Leer el valor del ancho del rectángulo.
+	cout << "Ingrese el valor del ancho: "; cin >> ancho;
+	// Leer el valor del largo del rectángulo.
+	cout << "Ingrese el valor del largo: "; cin >> largo;
+
+	// Calcular el valor del área del rectángulo.
+	area = ancho * largo; 
+	// Imprimir el valor del área del rectángulo. 	
+	cout << "El área es: " << area << endl;
+
+	// Incorporar una pausa en el programa.
+	system("pause");
+}
+`,
+programa3_2:`/*******************************************************
+WinConsolaPrograma_3_2
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
+
+// Esta función lee el valor del ancho y del largo del rectángulo,
+// calcula el valor del área del rectángulo y retorna el valor del
+// cálculo del área del rectángulo.
+float CalcularAreaRectangulo()
+{
+	float ancho; // Entrada: ancho del rectángulo.
+	float largo; // Entrada: largo del rectángulo.	
+	float area;  // Salida: área del rectángulo.  
+
+	// Imprimr un mensaje de información.
+	cout << "Área de un rectángulo." << endl;
+	// Leer el valor del ancho del rectángulo.
+	cout << "Ingrese el valor del ancho: "; cin >> ancho;
+	// Leer el valor del largo del rectángulo.
+	cout << "Ingrese el valor del largo: "; cin >> largo;
+
+	// Calcular el valor del área del rectángulo.
+	area = ancho * largo;
+	// Retornar el valor del área calculada.
+	return area;
+}
+
+// Función principal.
+void main()
+{
+	// Llamada a la función CalcularAreaRectangulo().	
+	cout << "El área es : " << CalcularAreaRectangulo() << endl;
+	// Imprimir un salto de línea (INTRO).
+	cout << endl;
+	// Realizar otros cálculos.
+	cout << "Realizar otros calculos..." << endl << endl;	
+	// Llamada a la función CalcularAreaRectangulo().
+	cout << "El área es : " << CalcularAreaRectangulo() << endl;
+	// Imprimir un salto de línea (INTRO).
+	cout << endl;
+	// Llamada a la función CalcularAreaRectangulo().	
+	cout << "El área es : " << CalcularAreaRectangulo() << endl;
+	// Incorporar una pausa en el programa.
+	system("pause");
+}
+`,
+programa3_3:`/*******************************************************
+WinConsolaPrograma_3_3
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
+
+// Declaración de las funciones (prototipos de las funciones).
+float CalcularAreaRectangulo();
+
+// Función principal.
+void main()
+{
+	// Llamada a la función CalcularAreaRectangulo().	
+	cout << "El área es : " << CalcularAreaRectangulo() << endl;
+	// Imprimir un salto de línea (INTRO).
+	cout << endl;
+	// Realizar otros cálculos.
+	cout << "Realizar otros calculos..." << endl << endl;
+	// Llamada a la función CalcularAreaRectangulo().
+	cout << "El área es : " << CalcularAreaRectangulo() << endl;
+	// Imprimir un salto de línea (INTRO).
+	cout << endl;
+	// Llamada a la función CalcularAreaRectangulo().	
+	cout << "El área es : " << CalcularAreaRectangulo() << endl;
+	// Incorporar una pausa en el programa.
+	system("pause");
+}
+
+// Definición de las funciones (implementación de las funciones).
+
+// Esta función lee el valor del ancho y del largo del rectángulo,
+// calcula el valor del área del rectángulo y retorna el valor del
+// cálculo del área del rectángulo.
+float CalcularAreaRectangulo()
+{
+	float ancho; // Entrada: ancho del rectángulo.
+	float largo; // Entrada: largo del rectángulo.	
+	float area;  // Salida: área del rectángulo.  
+
+	// Imprimr un mensaje de información.
+	cout << "Área de un rectángulo." << endl;
+	// Leer el valor del ancho del rectángulo.
+	cout << "Ingrese el valor del ancho: "; cin >> ancho;
+	// Leer el valor del largo del rectángulo.
+	cout << "Ingrese el valor del largo: "; cin >> largo;
+
+	// Calcular el valor del área del rectángulo.
+	area = ancho * largo;
+	// Retornar el valor del área calculada.
+	return area;
+}
+`,
+Figura3_3:`
+float CalcularAreaRectangulo()
+{
+	float ancho; // Entrada: ancho del rectángulo.
+	float largo; // Entrada: largo del rectángulo.	
+	float area;  // Salida: área del rectángulo.  
+
+	// Imprimr un mensaje de información.
+	cout << "Área de un rectángulo." << endl;
+	// Leer el valor del ancho del rectángulo.
+	cout << "Ingrese el valor del ancho: "; cin >> ancho;
+	// Leer el valor del largo del rectángulo.
+	cout << "Ingrese el valor del largo: "; cin >> largo;
+
+	// Calcular el valor del área del rectángulo.
+	area = ancho * largo;
+	// Retornar el valor del área calculada.
+	return area;
+}
+`,
+programa3_4:`/*******************************************************
+WinConsolaPrograma_3_4
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
+
+// Declaración de las funciones (prototipos de las funciones).
+
+float QuintaPotenciaDeUnNumero(float x);
+
+void main()
+{
+	// Declaración de variables.
+	float datoEntrada; // Entrada: número flotante.
+
+	// Imprimir un mensaje de información con 2 saltos de línea.
+	cout << "Quinta potencia de un número." << endl << endl;
+
+	// Leer un número real.
+	cout << "Ingrese un número real: "; cin >> datoEntrada;
+	// Llamada a la función QuintaPotenciaDeUnNumero().
+	cout << datoEntrada << " ^ 5 = " << QuintaPotenciaDeUnNumero(datoEntrada);
+	// Imprimir un salto de línea (INTRO).
+	cout << endl;
+	// Leer un número real.
+	cout << "Ingrese un número real: "; cin >> datoEntrada;
+	// Llamada a la función QuintaPotenciaDeUnNumero().
+	cout << datoEntrada << " ^ 5 = " << QuintaPotenciaDeUnNumero(datoEntrada);
+	// Imprimir un salto de línea (INTRO).
+	cout << endl;
+	// Leer un número real.
+	cout << "Ingrese un número real: "; cin >> datoEntrada;
+	// Llamada a la función QuintaPotenciaDeUnNumero().
+	cout << datoEntrada << " ^ 5 = " << QuintaPotenciaDeUnNumero(datoEntrada);
+	// Imprimir un salto de línea (INTRO).
+	cout << endl;
+
+	// Incorporar una pausa en el programa.
+	system("pause");
+}
+
+// Definición de las funciones (implementación de las funciones).
+
+// Función llamada 'QuintaPotenciaDeUnNumero()' la cual tiene un parámetro 
+// de tipo 'float' llamado 'x' y la cual retorna un valor de tipo 'float'.
+float QuintaPotenciaDeUnNumero(float x)
+{
+	// Calcular el valor de x^5 = x * x * x * x * x.
+	float resultado = x * x * x * x * x;
+	// Retornar el valor de la variable resultado.
+	return resultado;
+}
+`,
+programa3_5:`/*******************************************************
+WinConsolaPrograma_3_5
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
+
+// Declaración de las funciones (prototipos de las funciones).
+
+void ImprimirVector3D(float x, float y, float z);
+
+void main()
+{
+	// Declaración de variables.
+	float x; // Entrada: componente 'x' de un vector.
+	float y; // Entrada: componente 'y' de un vector.
+	float z; // Entrada: componente 'z' de un vector.
+
+	// Leer las tres componentes de un vector 3D.
+	cout << "Primer Vector." << endl << endl;
+	cout << "Ingrese el valor de 'x': "; cin >> x;
+	cout << "Ingrese el valor de 'y': "; cin >> y;
+	cout << "Ingrese el valor de 'z': "; cin >> z;
+	// Imprimir un salto de línea (INTRO).
+	cout << endl;
+	
+	cout << "V1 = ";	
+	// Llamada a la función ImprimirVector3D(Lista_De_Parámetros).
+	ImprimirVector3D(x, y, z);
+	// Imprimir un salto de línea (INTRO).
+	cout << endl;
+
+	// Leer las tres componentes de un vector 3D.
+	cout << "Segundo Vector." << endl << endl;
+	cout << "Ingrese el valor de 'x': "; cin >> x;
+	cout << "Ingrese el valor de 'y': "; cin >> y;
+	cout << "Ingrese el valor de 'z': "; cin >> z;
+	// Imprimir un salto de línea (INTRO).
+	cout << endl;
+
+	cout << "V2 = ";
+	// Llamada a la función ImprimirVector3D(Lista_De_Parámetros).
+	ImprimirVector3D(x, y, z);
+	// Imprimir un salto de línea (INTRO).
+	cout << endl;
+
+	// Leer las tres componentes de un vector 3D.
+	cout << "Tercer Vector." << endl << endl;
+	cout << "Ingrese el valor de 'x': "; cin >> x;
+	cout << "Ingrese el valor de 'y': "; cin >> y;
+	cout << "Ingrese el valor de 'z': "; cin >> z;
+	// Imprimir un salto de línea (INTRO).
+	cout << endl;
+
+	cout << "V3 = ";
+	// Llamada a la función ImprimirVector3D(Lista_De_Parámetros).
+	ImprimirVector3D(x, y, z);
+	// Imprimir un salto de línea (INTRO).
+	cout << endl;
+
+	// Incorporar una pausa en el programa.
+	system("pause");
+}
+
+// Definición de las funciones (implementación de las funciones).
+
+// Función llamada 'ImprimirVector3D()' la cual tiene tres parámetros 
+// de tipo 'float' llamados 'x', 'y', y 'z', la cual retorna un void, 
+// es decir, no retorna un valor y se encarga de imprimir los valores 
+// de las tres componentes de un vector en el espacio.
+void ImprimirVector3D(float x, float y, float z)
+{
+	// Imprimir las componentes 'x', 'y' y 'z' del vector 3D.
+	cout << "< " << x << ", " << y << ", " << z << " >" << endl;
+}
+`,
+programa3_6:`/*******************************************************
+WinConsolaPrograma_3_6
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+using namespace std;
+
+// Declaración de las funciones (prototipos de las funciones).
+void ImprimirDatosInicialesRaton(int x, int y);
+int ObtenerPosicionXRaton();
+int ObtenerPosicionYRaton();
+void ImprimirPosicionRaton(int x, int y);
+
+// Función principal.
+void main()
+{
+ // Declaración de variables.
+ // Se declara la variable 'x' de tipo entero y se la inicializa 
+ // con el valor de cero.
+ int x = 0; 
+ // Se declara la variable 'y' de tipo entero y se la inicializa 
+ // con el valor de cero.
+ int y = 0;
+
+ // Llamada a la función srand(time(0)), que inicializa el 
+ // generador de números aleatorios en base a la pila del reloj.
+ srand(time(0));	
+
+ // Llamada a la función ImprimirDatosInicialesRaton(), enviando
+ // los argumentos 'x' e 'y' a los parámetros de la función.
+ ImprimirDatosInicialesRaton(x, y);
+
+ // Imprimir un salto de línea (INTRO).
+ cout << endl;
+
+ // Llamada a la función ObtenerPosicionXRaton(), sin argumentos
+ // que retorna un valor de tipo entero a la variable 'x'.
+ x = ObtenerPosicionXRaton();
+ // Llamada a la función ObtenerPosicionYRaton(), sin argumentos
+ // que retorna un valor de tipo entero a la variable 'y'.
+ y = ObtenerPosicionYRaton();
+ // Llamada a la función ImprimirPosicionRaton(), enviando
+ // los argumentos 'x' e 'y' a los parámetros de la función.
+ ImprimirPosicionRaton(x, y);	
+
+ // Incorporar una pausa en el programa.
+ system("pause");
+}
+
+// Definición de las funciones (implementación de las funciones).
+
+// Función ImprimirDatosInicialesRaton(), que tiene dos parámetros
+// que son las variables 'x' e 'y', que reciben los valores de los
+// argumentos por valor.
+void ImprimirDatosInicialesRaton(int x, int y)
+{
+ cout << "Datos iniciales de la posición del ratón" << endl;
+ cout << "x = " << x << endl;
+ cout << "y = " << y << endl;
+}
+
+// Función ObtenerPosicionXRaton(), que no tiene parámetros y 
+// retorna un valor de tipo entero.
+int ObtenerPosicionXRaton()
+{
+ // Se genera un número aleatorio entre 0 y 1024 y se retorna
+ // dicho valor.
+ return(rand() % 1025);
+}
+
+// Función ObtenerPosicionYRaton(), que no tiene parámetros y 
+// retorna un valor de tipo entero.
+int ObtenerPosicionYRaton()
+{
+ // Se genera un número aleatorio entre 0 y 768 y se retorna
+ // dicho valor.
+ return(rand() % 769);
+}
+
+// Función ImprimirPosicionRaton(), que tiene dos parámetros
+// que son las variables 'x' e 'y', que reciben los valores de los
+// argumentos por valor.
+void ImprimirPosicionRaton(int x, int y)
+{
+ cout << "Datos aleatorios de la posición del ratón" << endl;
+ cout << "x = " << x << endl;
+ cout << "y = " << y << endl;
+}
+`,
+programa3_7:`/*******************************************************
+WinConsolaPrograma_3_7
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+using namespace std;
+
+// Declaración de las funciones (prototipos de las funciones).
+void ImprimirDatosAleatorios();
+
+// Función principal.
+void main()
+{
+ // Llamada a la función srand(time(0)), que inicializa el 
+ // generador de números aleatorios en base a la pila del reloj.
+ srand(time(0));
+
+ // Llamada a la función ImprimirDatosAleatorios(), sin argumentos
+ // que imprime 10 números aleatorios dentro del rango [5, 20].
+ ImprimirDatosAleatorios();
+
+ // Incorporar una pausa en el programa.
+ system("pause");
+}
+
+// Definición de las funciones (implementación de las funciones).
+
+// Función ImprimirDatosAleatorios(), que no tiene parámetros
+// y genera 10 números aleatorios dentro del rango [5, 20],
+// que son impresos utilizando un bucle for().
+void ImprimirDatosAleatorios()
+{
+ // Variable que controla la generación de números aleatorios.
+ int valor; 
+ // Contador que controla el bucle for().
+ int i;
+ // Para:
+ // 1. Inicializar el valor del contador 'i' en uno.
+ // 2. Mientras la condición sea verdadera, ejecutar las sentencias
+ // del bucle.
+ // 3. Luego de cada ciclo incrementar el valor del contador en uno.
+ for (i = 1; i <= 10; i++)
+ {
+   // Generar un número aleatorio dentro del rango [5, 20].
+   valor = 5 + rand() % 17;
+   // Imprimir el valor del número aleatorio generado.
+   cout << valor << endl;
+ }
+}
+`,
+tabla3_1:`float CalcularAreaRectangulo()
+{
+	float ancho; // Ancho del rectángulo.
+	float largo; // Largo del rectángulo.
+	float area;  // Área del rectángulo.  
+
+	// Leer el ancho del rectángulo utilizando la variable 'ancho'.
+	cout << "Ingrese el valor del ancho: ";
+	cin >> ancho;
+	// Leer el largo del rectángulo utilizando la variable 'largo'.
+	cout << "Ingrese el valor del largo: ";
+	cin >> largo;
+
+	// Calcular el área del rectángulo.
+	area = ancho * largo;
+
+	// Retornar el valor del área del rectángulo.
+	return(area);
+}
+`,
+programa3_8:`/*******************************************************
+WinConsolaPrograma_3_8
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
+
+// Declaración de las funciones (prototipos de las funciones).
+float CalcularAreaRectangulo();
+float CalcularAreaRectangulo(float ancho, float largo);
+void ImprimirDatos(float area);
+
+// Función principal.
+void main()
+{
+ // Declaración de variables.
+ float ancho; // Entrada: Ancho del rectángulo.
+ float largo; // Entrada: Largo del rectángulo.
+ float area;  // Salida: Área del rectángulo. 
+
+ // Llamada a la función CalcularAreaRectangulo(), que no se  
+ // envían argumentos y retorna a la variable 'area' el valor 
+ // calculado.
+ area = CalcularAreaRectangulo();
+ // Llamada a la función ImprimirDatos(), que envía como argumento
+ // el valor de la variable 'area' que se va a imprimir.
+ ImprimirDatos(area);
+
+ // Imprimir un salto de línea (INTRO).
+ cout << endl;
+
+ // Realizar otros cálculos.
+ cout << "Realizar otros cálculos..." << endl << endl;
+
+ // Llamada a la función CalcularAreaRectangulo(), que no se  
+ // envían argumentos y retorna a la variable 'area' el valor 
+ // calculado.
+ CalcularAreaRectangulo();
+ // Llamada a la función ImprimirDatos(), que envía como argumento
+ // el valor de la variable 'area' que se va a imprimir.
+ ImprimirDatos(area);
+
+ // Imprimir un salto de línea (INTRO).
+ cout << endl;	
+ 
+ // Leer el ancho del rectángulo utilizando la variable 'ancho'.
+ cout << "Ingrese el valor del ancho: ";
+ cin >> ancho;
+ // Leer el largo del rectángulo utilizando la variable 'largo'.
+ cout << "Ingrese el valor del largo: ";
+ cin >> largo;
+
+ // Llamada a la función CalcularAreaRectangulo(), sobrecargada
+ // donde se envían dos argumentos que son la variable 'ancho' 
+ // y la variable 'largo' y luego retorna a la variable 'area' 
+ // el valor calculado.
+ area = CalcularAreaRectangulo(ancho, largo);
+ // Llamada a la función ImprimirDatos(), que envía como argumento
+ // el valor de la variable 'area' que se va a imprimir.
+ ImprimirDatos(area);	
+
+ // Incorporar una pausa en el programa.
+ system("pause");
+}
+
+// Definición de las funciones (implementación de las funciones).
+
+// Función CalcularAreaRectangulo(), que no tiene parámetros,
+// lee los valores del ancho y largo, calcula el área de un 
+// rectángulo y retorna el valor del área.
+float CalcularAreaRectangulo()
+{
+ float ancho; // Ancho del rectángulo.
+ float largo; // Largo del rectángulo.
+ float area;  // Área del rectángulo.  
+
+ // Leer el ancho del rectángulo utilizando la variable 'ancho'.
+ cout << "Ingrese el valor del ancho: ";
+ cin >> ancho;
+ // Leer el largo del rectángulo utilizando la variable 'largo'.
+ cout << "Ingrese el valor del largo: ";
+ cin >> largo;
+
+ // Calcular el área del rectángulo.
+ area = ancho * largo;
+
+ // Retornar el valor del área del rectángulo.
+ return(area);
+}
+
+// Función CalcularAreaRectangulo() sobrecargada, que tiene 2 
+// parámetros que reciben 2 argumentos, calcula el área de un 
+// rectángulo y retorna el valor del área.
+float CalcularAreaRectangulo(float ancho, float largo)
+{
+ // Retornar el cálculo del área del rectángulo.
+ return(ancho * largo);
+}
+
+// Función ImprimirDatos(), que tiene 1 parámetro que recibe 1
+// argumento e imprimime el valor de la variable 'area' y no 
+// retorna ningún valor.
+void ImprimirDatos(float area)
+{
+ // Imprimir el valor de la variable 'area'. 	
+ cout << "El área es: " << area << endl;
+}
+`,
+programa3_9:`/*******************************************************
+WinConsolaPrograma_3_9
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
+
+// Función principal.
+void main()
+{
+	// Declaración e inicialización de la variable 'c' con el número 7.
+	int c = 7;
+	// Creación de la referencia 'Ref_valor' referenciada a la variable 
+	// 'c', utilizando el operador unario de dirección (&).
+	int &ref = c;
+
+	// Imprimir el contenido de la variable 'c', que en este caso es el
+	// número 7.
+	cout << "Variable 'c': " << c << endl;
+	// Imprimir el contenido de la referencia 'ref'. Debido a que la
+	// referencia 'ref' es un alias de la variable 'c' se imprime
+	// el mismo número que tiene almacenada la variable 'c' que es el
+	// número 7.
+	cout << "Referencia a la variable 'c': " << ref << endl;
+
+	// Imprimir un salto de línea (INTRO).
+	cout << endl;
+
+	// Asignar a la referencia 'ref' el número 70. En este caso se 
+	// modifica la referencia. Sin embargo, dada que la referencia 'ref'
+	// es un alias de la variable 'c'. Al modificar el contenido de la
+	// referencia 'ref', se modifica el contenido almacenado en la 
+	// variable 'c' con el número 70.
+	ref = 70;
+
+	// Imprimir el contenido de la variable 'c'. En este punto se
+	// comprueba que la referencia 'ref' modifica la variable 'c'
+	// a la cual se refiere.
+	cout << "Variable 'c': " << c << endl;
+	// Imprimir el contenido de la referencia 'ref' nuevamente.
+	cout << "Referencia a la variable 'c': " << ref << endl;
+
+	// Incorporar una pausa en el programa.
+	system("pause");
+}
+`,
+programa3_10:`/*******************************************************
+WinConsolaPrograma_3_10
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
+
+// Declaración de las funciones (prototipos de las funciones).
+void LeerDatos(int &x, int &y);
+void Invertir(int &x, int &y);
+void ImprimirDatos(int x, int y);
+
+// Función principal.
+void main()
+{
+	// Declaración de variables.
+       int a;
+	int b;
+	
+	// Llamada a la función LeerDatos(), donde se envían dos
+	// argumentos que son la variable 'a' y la variable 'b'
+	// y no se retorna ningún valor.
+	LeerDatos(a, b);
+
+	// Imprimir un salto de línea (INTRO).
+	cout << endl;
+
+	// Imprimir el mensaje: "Impresión de los números originales: ".
+	cout << "Impresión de los números originales: " << endl;
+
+	// Llamada a la función ImprimirDatos(), donde se envían dos
+	// argumentos que son la variable 'a' y la variable 'b'
+	// y no se retorna ningún valor.
+	ImprimirDatos(a, b);
+
+	// Imprimir un salto de línea (INTRO).
+	cout << endl;
+
+	// Llamada a la función Invertir(), donde se envían dos
+	// argumentos que son la variable 'a' y la variable 'b'
+	// y no se retorna ningún valor.
+	Invertir(a, b);
+
+	// Imprimir el mensaje: "Impresión de los números invertidos: ".
+	cout << "Impresión de los números invertidos: " << endl;
+
+	// Llamada a la función ImprimirDatos(), donde se envían dos
+	// argumentos que son la variable 'a' y la variable 'b'
+	// y no se retorna ningún valor.
+	ImprimirDatos(a, b);
+
+	// Incorporar una pausa en el programa.
+	system("pause");
+}
+
+// Definición de las funciones (implementación de las funciones).
+
+// Función LeerDatos(), que tiene 2 parámetros que son 2 referencias
+// que reciben 2 argumentos. Esta función lee 2 datos utilizando 
+// referencias y no se retorna ningún valor.
+void LeerDatos(int &x, int &y)
+{
+	// Leer el valor del primer número utilizando la referencia 'x'.
+	cout << "Ingrese el valor del primer número: "; cin >> x;
+	// Leer el valor del segundo número utilizando la referencia 'y'.
+	cout << "Ingrese el valor del segundo número: "; cin >> y;
+}
+
+// Función Invertir(), que tiene 2 parámetros que son 2 referencias
+// que reciben 2 argumentos. Esta función invierte 2 valores  
+// utilizando 2 referencias y una variable auxiliar llamada 'temp'
+// y no se retorna ningún valor.
+void Invertir(int &x, int &y)
+{
+	// Declaración de la variable 'temp'.
+	int temp;
+
+	// Asignar a la variable 'temp', el valor de la referencia 'x'.
+	temp = x;
+	// Asignar a la referencia 'x', el valor de la referencia 'y'.
+	x = y;
+	// Asignar a la referencia 'y', el valor de la variable 'temp'.
+	y = temp;
+}
+
+// Función ImprimirDatos(), que tiene 2 parámetro2 que reciben
+// 2 argumentos e imprimime el valor de la variable 'x' y de la
+// variable 'y' y no se retorna ningún valor.
+void ImprimirDatos(int x, int y)
+{
+	// Imprimir los valores de las variables 'x' e 'y'.
+	cout << "Primer número: " << x << endl;
+	cout << "Segundo número: " << y << endl;
+}
+`,
+programa3_11:`/*******************************************************
+WinConsolaPrograma_3_11
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
+
+// Declaración de las funciones (prototipos de las funciones).
+void LeerDatos(float &n1, float &n2, float &n3);
+void Ordenar(float &menor, float &mayor);
+void ImprimirDatos(float n1, float n2, float n3);
+
+// Función principal.
+void main()
+{
+	// Declaración de variables.
+	float num1; // Entrada: primer número.
+	float num2; // Entrada: segundo número.
+	float num3; // Entrada: tercer número.
+
+	// Llamada a la función LeerDatos(), donde se envían tres
+	// argumentos que son la variable 'num1', la variable 'num2'
+	// y la variable 'num3' y no se retorna ningún valor.
+	LeerDatos(num1, num2, num3);
+
+	// Llamada a la función Ordenar(), donde se envían dos
+	// argumentos que son la variable 'num1' y la variable 
+	// 'num2' y no se retorna ningún valor.
+	Ordenar(num1, num2);
+	// Llamada a la función Ordenar(), donde se envían dos
+	// argumentos que son la variable 'num1' y la variable 
+	// 'num3' y no se retorna ningún valor.
+	Ordenar(num1, num3);
+	// Llamada a la función Ordenar(), donde se envían dos
+	// argumentos que son la variable 'num2' y la variable 
+	// 'num3' y no se retorna ningún valor.
+	Ordenar(num2, num3);
+
+	// Imprimir un salto de línea (INTRO).
+	cout << endl;
+
+	// Llamada a la función ImprimirDatos(), donde se envían
+	// tres argumentos que son la variable 'num1', la variable
+	// 'num2' y la variable 'num3' y no se retorna ningún valor.
+	ImprimirDatos(num1, num2, num3);
+
+	// Incorporar una pausa en el programa.
+	system("pause");
+}
+
+// Definición de las funciones (implementación de las funciones).
+
+// Función LeerDatos(), que tiene 3 parámetros que son 3 referencias
+// que reciben 3 argumentos. Esta función lee 3 datos utilizando 
+// referencias y no se retorna ningún valor.
+void LeerDatos(float &n1, float &n2, float &n3)
+{
+	// Leer el valor del primer número utilizando la referencia 'n1'.
+	cout << "Ingrese el valor del primer número: "; cin >> n1;
+	// Leer el valor del primer número utilizando la referencia 'n2'.
+	cout << "Ingrese el valor del segundo número: "; cin >> n2;
+	// Leer el valor del primer número utilizando la referencia 'n3'.
+	cout << "Ingrese el valor del tercer número: "; cin >> n3;
+}
+
+// Función Ordenar(), que tiene 2 parámetros que son 2 referencias
+// que reciben 2 argumentos. Esta función compara dos números,
+// donde se supone que el primer número es menor que el segundo
+// número y en caso de que así no sea se invierten los dos
+// números entre sí.
+void Ordenar(float &menor, float &mayor)
+{
+	// Declaración de la variable 'temp'.
+	float temp;
+	// Si el valor de la referencia 'pmenor' es mayor que el
+	// valor de la referencia 'pmayor', entonces invertir 
+	// los dos números.
+	if (menor > mayor)
+	{
+		// Asignar a la variable 'temp', el valor de la referencia 
+		// 'menor'.
+		temp = menor;
+		// Asignar a la referencia 'menor', el valor de la referencia
+		// 'mayor'.
+		menor = mayor;
+		// Asignar a la referencia 'mayor', el valor de la variable
+		// 'temp'.
+		mayor = temp;
+	}
+}
+
+// Función ImprimirDatos(), que tiene 3 parámetros que reciben
+// 3 argumentos e imprimime el valor de la variable 'n1', el
+// valor de la variable 'n2' y el valor de la variable 'n3' y
+// no se retorna ningún valor.
+void ImprimirDatos(float n1, float n2, float n3)
+{
+	// Imprimir un mensaje de información y un salto de línea.
+	cout << "Los tres números en orden ascendente son: " << endl;
+	// Imprimir los valores de las variables 'n1', 'n2' y 'n3'.
+	cout << n1 << endl;
+	cout << n2 << endl;
+	cout << n3 << endl;
+}
+`,
+
+    }
     this.introduccion = [{
       f1:
         `
