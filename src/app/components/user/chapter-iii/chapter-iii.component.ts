@@ -41,7 +41,425 @@ export class ChapterIIIComponent implements OnInit {
       }, 1000);
     });
   */
-this.prefTabs3={
+this.prefTabs3=[{
+programa3_12:`/*******************************************************
+WinConsolaPrograma_3_12
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
+
+// Función principal.
+void main()
+{
+	// Declaración e inicialización de la variable 'c' con el número 7.
+	int c = 7;
+	// Creación del puntero 'ptr' que va a apuntar a una variable de tipo
+	// entero, utilizando el operador de indirección (*).
+	int *ptr;
+	// Asignar al puntero 'ptr' la dirección de la variable 'c', utilizando
+	// el operador unario de dirección (&).
+	ptr = &c;
+
+	// Imprimir el contenido de la variable 'c', que en este caso es el
+	// número 7.
+	cout << "Variable 'c': " << c << endl;
+	// Imprimir el contenido de lo que apunta el puntero 'ptr', utilizando
+	// el operador de indirección (*). Debido a que el puntero 'ptr' apunta
+	// a la variable 'c', puede acceder al contenido de la variable 'c', 
+	// utilizando el operador de indirección (*) y se imprime el valor
+	// que tiene almacenada la variable 'c' que es el número 7.
+	cout << "Contenido de lo que apunta el puntero 'ptr': " << *ptr << endl;
+
+	// Imprimir un salto de línea (INTRO).
+	cout << endl;
+
+	// Asignar al contenido de lo que apunta el puntero 'ptr' el valor de
+	// 70, utilizando el operador de indirección (*). Debido a que el 
+	// puntero 'ptr' apunta a la variable 'c', puede modificar el contenido 
+	// de la variable 'c', utilizando el operador de indirección (*).
+	*ptr = 70;
+
+	// Imprimir el valor de la variable 'c'. En este punto se comprueba
+	// que el puntero 'ptr' modifica el contenido de la variable 'c' que 
+	// es la variable a la cual apunta.
+	cout << "Variable 'c': " << c << endl;
+	// Imprimir el contenido de lo que apunta el puntero 'ptr' nuevamente.
+	cout << "Contenido de lo que apunta el puntero 'ptr': " << *ptr << endl;
+
+	// Incorporar una pausa en el programa.
+	system("pause");
+}
+`,
+programa3_13:`/*******************************************************
+WinConsolaPrograma_3_13
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
+
+// Declaración de las funciones (prototipos de las funciones).
+void LeerDatos(int *ptr_x, int *ptr_y);
+void Invertir(int *ptr_x, int *ptr_y);
+void ImprimirDatos(int x, int y);
+
+// Función principal.
+void main()
+{
+       // Declaración de variables.
+	int a;
+	int b;
+
+	// Llamada a la función LeerDatos(), donde se envían dos
+	// argumentos que son la dirección de la variable 'a' y la
+	// dirección de la variable 'b' y no se retorna ningún valor.
+	LeerDatos(&a, &b);
+
+	// Imprimir un salto de línea (INTRO).
+	cout << endl;
+
+	// Imprimir el mensaje: "Impresión de los números originales: ".
+	cout << "Impresión de los números originales: " << endl;
+
+	// Llamada a la función ImprimirDatos(), donde se envían dos
+	// argumentos que son la variable 'a' y la variable 'b'
+	// y no se retorna ningún valor.
+	ImprimirDatos(a, b);
+
+	// Imprimir un salto de línea (INTRO).
+	cout << endl;
+
+	// Llamada a la función Invertir(), donde se envían dos
+	// argumentos que son la dirección de la variable 'a' y la 
+	// dirección de la variable 'b' y no se retorna ningún valor.
+	Invertir(&a, &b);
+
+	// Imprimir el mensaje: "Impresión de los números invertidos: ".
+	cout << "Impresión de los números invertidos: " << endl;
+
+	// Llamada a la función ImprimirDatos(), donde se envían dos
+	// argumentos que son la variable 'a' y la variable 'b'
+	// y no se retorna ningún valor.
+	ImprimirDatos(a, b);
+
+	// Incorporar una pausa en el programa.
+	system("pause");
+}
+
+// Definición de las funciones (implementación de las funciones).
+
+// Función LeerDatos(), que tiene 2 parámetros que son 2 punteros
+// que reciben 2 direcciones de variables. Esta función lee 2 datos 
+// utilizando 2 punteros que acceden al contenido de las 2 variables
+// a las cuales apuntan y no se retorna ningún valor.
+void LeerDatos(int *ptr_x, int *ptr_y)
+{
+	// Leer el valor del primer número accediendo al contenido de
+	// lo que apunta el puntero ptr_x, utilizando el operador de 
+	// indirección (*).
+	cout << "Ingrese el valor del primer número: "; cin >> *ptr_x;
+	// Leer el valor del segundo número accediendo al contenido de
+	// lo que apunta el puntero ptr_y, utilizando el operador de 
+	// indirección (*).
+	cout << "Ingrese el valor del segundo número: "; cin >> *ptr_y;
+}
+
+// Función LeerDatos(), que tiene 2 parámetros que son 2 punteros
+// que reciben 2 direcciones de variables. Esta función invierte 2 
+// valores utilizando 2 punteros que acceden al contenido de las 
+// variables a las cuales apuntan y utiliza también una variable 
+// auxiliar llamada 'temp' y no se retorna ningún valor.
+void Invertir(int *ptr_x, int *ptr_y)
+{
+	// Declaración de la variable 'temp'.
+	int temp;
+
+	// Asignar a la variable 'temp', el contenido de lo que apunta
+	// el puntero ptr_x que es la variable 'a', utilizando el 
+	// operador de indirección (*).	
+	temp = *ptr_x;
+	// Asignar al contenido de lo que apunta el puntero ptr_x,
+	// el contenido de lo que apunta el puntero ptr_y, utilizando 
+	// el operador de indirección (*).
+	*ptr_x = *ptr_y;
+	// Asignar al contenido de lo que apunta el puntero ptr_y,
+	// el valor de la variable 'temp'.
+	*ptr_y = temp;
+}
+
+// Función ImprimirDatos(), que tiene 2 parámetro2 que reciben
+// 2 argumentos e imprimime el valor de la variable 'x' y de la
+// variable 'y' y no se retorna ningún valor.
+void ImprimirDatos(int x, int y)
+{
+	// Imprimir los valores de las variables 'x' e 'y'.
+	cout << "Primer número: " << x << endl;
+	cout << "Segundo número: " << y << endl;
+}
+`,
+programa3_14:`/*******************************************************
+WinConsolaPrograma_3_14
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
+
+// Declaración de las funciones (prototipos de las funciones).
+void LeerDatos(float* ptr_n1, float* ptr_n2, float* ptr_n3);
+void Ordenar(float* pmenor, float* pmayor);
+void ImprimirDatos(float n1, float n2, float n3);
+
+// Función principal.
+void main()
+{
+	// Declaración de variables.
+	float num1; // Entrada: primer número.
+	float num2; // Entrada: segundo número.
+	float num3; // Entrada: tercer número.
+
+	// Llamada a la función LeerDatos(), donde se envían tres
+	// argumentos que son la dirección de la variable 'num1',
+	// la dirección de la variable 'num2' y la dirección de la 
+	// variable 'num3' y no se retorna ningún valor.
+	LeerDatos(&num1, &num2, &num3);
+
+	// Llamada a la función Ordenar(), donde se envían dos
+	// argumentos que son la dirección de la variable 'num1'
+	// y la dirección de la variable 'num2' y no se retorna 
+	// ningún valor.
+	Ordenar(&num1, &num2);
+	// Llamada a la función Ordenar(), donde se envían dos
+	// argumentos que son la dirección de la variable 'num1'
+	// y la dirección de la variable 'num3' y no se retorna 
+	// ningún valor.
+	Ordenar(&num1, &num3);
+	// Llamada a la función Ordenar(), donde se envían dos
+	// argumentos que son la dirección de la variable 'num2'
+	// y la dirección de la variable 'num3' y no se retorna 
+	// ningún valor.
+	Ordenar(&num2, &num3);
+
+	// Imprimir un salto de línea (INTRO).
+	cout << endl;
+
+	// Llamada a la función ImprimirDatos(), donde se envían
+	// tres argumentos que son la variable 'num1', la variable
+	// 'num2' y la variable 'num3' y no se retorna ningún valor.
+	ImprimirDatos(num1, num2, num3);
+
+	// Incorporar una pausa en el programa.
+	system("pause");
+}
+
+// Definición de las funciones (implementación de las funciones).
+
+// Función LeerDatos(), que tiene 3 parámetros que son 3 punteros
+// que reciben 3 direcciones de variables. Esta función lee 3 datos
+// utilizando 3 punteros que acceden al contenido de las 3 variables
+// a las cuales apuntan y no se retorna ningún valor.
+void LeerDatos(float* ptr_n1, float* ptr_n2, float* ptr_n3)
+{
+	// Leer el valor del primer número accediendo al contenido de
+	// lo que apunta el puntero ptr_n1, utilizando el operador de 
+	// indirección (*).
+	cout << "Ingrese el valor del primer número: "; cin >> *ptr_n1;
+	// Leer el valor del primer número accediendo al contenido de
+	// lo que apunta el puntero ptr_n2, utilizando el operador de 
+	// indirección (*).
+	cout << "Ingrese el valor del segundo número: "; cin >> *ptr_n2;
+	// Leer el valor del primer número accediendo al contenido de
+	// lo que apunta el puntero ptr_n3, utilizando el operador de 
+	// indirección (*).
+	cout << "Ingrese el valor del tercer número: "; cin >> *ptr_n3;
+}
+
+// Función Ordenar(), que tiene 2 parámetros que son 2 punteros
+// que reciben 2 direcciones de variables. Esta función compara
+// dos números, donde se supone que el primer número es menor que
+// el segundo número y en caso de que así no sea se invierten los 
+// dos números entre sí.
+void Ordenar(float* pmenor, float* pmayor)
+{
+	// Declaración de la variable 'temp'.
+	float temp;
+	// Si el contenido de lo que apunta el puntero pmenor es
+	// mayor que el contenido de lo que apunta el puntero 
+	// pmayor, entonces invertir los dos números.
+	if (*pmenor > * pmayor)
+	{
+		// Asignar a la variable 'temp', el contenido de lo que 
+		// apunta el puntero pmenor, utilizando el operador de 
+		// indirección (*).
+		temp = *pmenor;
+		// Asignar al contenido de lo que apunta el puntero pmenor,
+		// el contenido de lo que apunta el puntero pmayor, 
+		// utilizando el operador de indirección (*).
+		*pmenor = *pmayor;
+		// Asignar al contenido de lo que apunta el puntero pmayor,
+		// el valor de la variable 'temp'.
+		*pmayor = temp;
+	}	
+}
+
+// Función ImprimirDatos(), que tiene 3 parámetros que reciben
+// 3 argumentos e imprimime el valor de la variable 'n1', el
+// valor de la variable 'n2' y el valor de la variable 'n3' y
+// no se retorna ningún valor.
+void ImprimirDatos(float n1, float n2, float n3) 
+{
+	// Imprimir un mensaje de información y un salto de línea.
+	cout << "Los tres números en orden ascendente son: " << endl;
+	// Imprimir los valores de las variables 'n1', 'n2' y 'n3'.
+	cout << n1 << endl;
+	cout << n2 << endl;
+	cout << n3 << endl;
+}
+`,
+tabla3_1_1:`/*******************************************************
+WinConsolaCasoEstudio_3_1
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+#include <cmath>
+
+// Directivas define o macros.
+#define PI 3.141593
+#define g 9.80665
+
+using namespace std;
+
+// Declaración de las funciones (prototipos de las funciones)
+void ImprimirMensajeInformacion();
+void LeerDatos(float &v, float &theta);
+float ConvertirGradosARadianes(float theta);
+float Distancia(float v, float theta);
+float Tiempo(float v, float theta);
+float Altura(float v, float theta);
+void ImprimirDatos(float d, float t, float h);
+
+// Función principal.
+void main()
+{
+ // Declaración de variables.	
+ float v = 0.0f;     // Entrada: Velocidad inicial.
+ float theta = 0.0f; // Entrada: Ángulo de lanzamiento.
+ float d = 0.0f;     // Salida: Distancia alcanzada.
+ float t = 0.0f;     // Salida: Tiempo de vuelo.
+ float h = 0.0f;     // Salida: Altura máxima.
+
+ // Llamada a la función de ImprimirMensajeInformacion(), 
+      // donde no se envían argumentos y no se retorna ningún valor.
+ ImprimirMensajeInformacion();
+ // Llamada a la función LeerDatos(), donde se envían dos
+ // argumentos que son la variable 'v' y la variable 
+ // 'theta' y no se retorna ningún valor.
+ LeerDatos(v, theta);	
+ // Llamada a la función ConvertirGradosARadianes(), donde se 
+ // envía un argumento que es la variable 'theta' y luego
+ // retorna a la variable 'theta' el valor calculado.
+ theta = ConvertirGradosARadianes(theta);	
+ // Llamada a la función Distancia(), donde se envían dos 
+ // argumentos que son la variable 'v' y la variable 'theta' 
+ // y luego retorna a la variable 'd' el valor calculado.
+ d = Distancia(v, theta);
+ // Llamada a la función Tiempo(), donde se envían dos 
+ // argumentos que son la variable 'v' y la variable 'theta' 
+ // y luego retorna a la variable 't' el valor calculado.
+ t = Tiempo(v, theta);	
+ // Llamada a la función Altura(), donde se envían dos 
+ // argumentos que son la variable 'v' y la variable 'theta' 
+ // y luego retorna a la variable 'h' el valor calculado.
+ h = Altura(v, theta);
+ // Imprimir un salto de línea (INTRO).
+ cout << endl;
+ // Llamada a la función ImprimirDatos(), que se envían como 
+ // argumentos los valores de las variables 'd', 't' y 'h'
+ // e imprime esos valores.
+ ImprimirDatos(d, t, h);
+ // Incorporar una pausa en el programa.
+ system("pause");
+}
+
+// Definición de las funciones (implementación de las funciones).
+
+// Función ImprimirMensajeInformacion, que no tiene parámetros. Esta
+// función imprime un mensaje de información y 2 saltos de línea
+// y no se retorna ningún valor.
+void ImprimirMensajeInformacion()
+{
+ // Imprimir un mensaje de información y 2 INTROs.
+ cout << "Tiro Parabólico de un Proyectil." << endl;
+ cout << endl;
+}
+// Función LeerDatos(), que tiene 2 parámetros que son 2 referencias
+// que reciben 2 argumentos. Esta función lee 2 datos utilizando 
+// referencias y no se retorna ningún valor.
+void LeerDatos(float &v, float &theta)
+{
+ // Leer el valor de la velocidad.
+ cout << "Ingrese el valor de la velocidad [m/seg]: ";
+ cin >> v;
+ // Leer el valor del ángulo theta.
+ cout << "Ingrese el valor del ángulo [grados]: ";
+ cin >> theta;
+}
+// Función ConvertirGradosARadianes(), que tiene 1 parámetro
+// que recibe 1 argumento, convierte un ángulo de grados a 
+// radianes y retorna el valor calculado.
+float ConvertirGradosARadianes(float theta)
+{
+ // Convertir el ángulo theta de grados a radianes.
+ return(theta * PI / 180.0);
+}
+// Función Distancia(), que tiene 2 parámetros que reciben 
+// 2 argumentos, calcula la distancia alcanzada por una
+// particula en el aire y retorna el valor calculado.
+float Distancia(float v, float theta)
+{
+ // Calcular la distancia alcanzada.
+ return((pow(v, 2) * sin(2 * theta)) / g);
+}
+// Función Tiempo(), que tiene 2 parámetros que reciben 
+// 2 argumentos, calcula el tiempo de vuelo de una
+// particula en el aire y retorna el valor calculado.
+float Tiempo(float v, float theta)
+{
+ // Calcular el tiempo de vuelo.
+ return((v * sin(theta)) / g);
+}
+// Función Altura(), que tiene 2 parámetros que reciben 
+// 2 argumentos, calcula la altura alcanzada por una
+// particula en el aire y retorna el valor calculado.
+float Altura(float v, float theta)
+{
+ // Calcular la altura máxima.
+ return((pow(v, 2) * pow(sin(theta), 2)) / (2 * g));
+}
+// Función ImprimirDatos(), que tiene 3 parámetros que reciben
+// 3 argumentos e imprimime el valor de la variable 'd', el
+// valor de la variable 't' y el valor de la variable 'h' y
+// no se retorna ningún valor.
+void ImprimirDatos(float d, float t, float h)
+{
+ // Imprimir el valor de la distancia.
+ cout << "El valor de la distancia es: " << d << " m" << endl;
+ // Imprimir el valor del tiempo de vuelo.
+ cout << "El valor del tiempo de vuelo es: " << t << " seg" << endl;
+ // Imprimir el valor de la altura.
+ cout << "El valor de la altura es: " << h << " m" << endl;
+}
+`,
 programa3_1:`/*******************************************************
 WinConsolaPrograma_3_1
 *******************************************************/
@@ -535,6 +953,12 @@ tabla3_1:`float CalcularAreaRectangulo()
 	return(area);
 }
 `,
+tabla3_2:`float CalcularAreaRectangulo(float ancho, float largo)
+{
+	// Retornar el cálculo del área del rectángulo.
+	return(ancho * largo);
+}
+`,
 programa3_8:`/*******************************************************
 WinConsolaPrograma_3_8
 *******************************************************/
@@ -902,7 +1326,7 @@ void ImprimirDatos(float n1, float n2, float n3)
 }
 `,
 
-    }
+    }]
     this.introduccion = [{
       f1:
         `
