@@ -4039,6 +4039,129 @@ tablaDatos5: [
     {Objeto:'',nota:['Vehículos livianos con eje de remolque'], puntos:['1.50']},
   
   ],
+    programa23: `/*******************************************************
+    WinConsolaCasoEstudio_2_16
+   *******************************************************/
+   
+   // Librerías.
+   #include <iostream>
+   #include <cstdlib>
+   #include <cmath>
+   
+   // Macros o sentencias de preprocesador.
+   #define TARIFA1 1.00
+   #define TARIFA2 2.00
+   #define TARIFA3 3.00
+   #define TARIFA4 4.00
+   #define TARIFA5 5.00
+   #define TARIFA6 6.00
+   #define TARIFA7 0.20
+   #define TARIFA8 1.50
+   
+   using namespace std;
+   
+   // Función principal.
+   void main()
+   {
+     int numVehiculos;   // Entrada: primer número.	
+     int costo;   // Salida: resultado de una operación matemática.
+     int opcion; // Entrada: opción a ser seleccionada del menú.
+   
+     // Imprimir un menú con ocho opciones.
+     cout << "Consulta de las tarifas autorizadas del peaje." << endl;
+     cout << "---------------------------------------------." << endl;
+     // Imprimir el mensaje: 1. Automóviles, todoterrenos o camionetas.
+     cout << "1. Automóviles, todoterrenos o camionetas." << endl;
+     // Imprimir el mensaje: 2. Buses y camiones de 2 ejes.
+     cout << "2. Buses y camiones de 2 ejes." << endl;
+     // Imprimir el mensaje: 3. Buses y camiones de 3 ejes.
+     cout << "3. Buses y camiones de 3 ejes." << endl;
+     // Imprimir el mensaje: 4. Camiones de 4 ejes.
+     cout << "4. Camiones de 4 ejes." << endl;
+     // Imprimir el mensaje: 5. Camiones de 5 ejes.
+     cout << "5. Camiones de 5 ejes." << endl;
+     // Imprimir el mensaje: 6. Camiones de 6 ejes o más.
+     cout << "6. Camiones de 6 ejes o mas." << endl;
+     // Imprimir el mensaje: 7. Motos.
+     cout << "7. Motos." << endl;
+     // Imprimir el mensaje: 8. Vehículo liviano con eje remolque.
+     cout << "8. Vehículos livianos con eje de remolque." << endl;
+     cout << endl;
+     // Imprimir el mensaje: Digite una opción.
+     cout << "Digite una opción: ";
+     // Leer el valor de la opción seleccionada.
+     cin >> opcion;
+     cout << endl;
+   
+     // Si la opción seleccionada está entre los valores de 1 y 8. 
+     if (opcion > 0 && opcion <= 8)
+     {
+       // Leer el número de vehículos.
+       cout << "Ingrese el número de vehículos: ";
+       cin >> numVehiculos;		
+       cout << endl;
+     }
+   
+     // Según sea el valor de la variable 'opcion', hacer:
+     switch (opcion)
+     {
+     case 1: // Caso 1
+       // Calcular el costo del peaje por vehículo, según la Tarifa 1.
+       costo = numVehiculos * TARIFA1;
+       // Imprimir el costo del peaje.
+       cout << "El costo del peaje es: $ " << costo << " USD." << endl;
+       break;
+     case 2: // Caso 2
+       // Calcular el costo del peaje por vehículo, según la Tarifa 2.
+       costo = numVehiculos * TARIFA2;
+       // Imprimir el costo del peaje.
+       cout << "El costo del peaje es: $ " << costo << " USD." << endl;
+       break;
+     case 3: // Caso 3
+       // Calcular el costo del peaje por vehículo, según la Tarifa 3.
+       costo = numVehiculos * TARIFA3;
+       // Imprimir el costo del peaje.
+       cout << "El costo del peaje es: $ " << costo << " USD." << endl;
+       break;
+     case 4: // Caso 4
+       // Calcular el costo del peaje por vehículo, según la Tarifa 4.
+       costo = numVehiculos * TARIFA4;
+       // Imprimir el costo del peaje.
+       cout << "El costo del peaje es: $ " << costo << " USD." << endl;
+       break;
+     case 5: // Cas0 5
+       // Calcular el costo del peaje por vehículo, según la Tarifa 5.
+       costo = numVehiculos * TARIFA5;
+       // Imprimir el costo del peaje.
+       cout << "El costo del peaje es: $ " << costo << " USD." << endl;
+       break;
+     case 6: // Caso 6
+       // Calcular el costo del peaje por vehículo, según la Tarifa 6.
+       costo = numVehiculos * TARIFA6;
+       // Imprimir el costo del peaje.
+       cout << "El costo del peaje es: $ " << costo << " USD." << endl;
+       break;
+     case 7: // Caso 7
+       // Calcular el costo del peaje por vehículo, según la Tarifa 7.
+       costo = numVehiculos * TARIFA7;
+       // Imprimir el costo del peaje.
+       cout << "El costo del peaje es: $ " << costo << " USD." << endl;
+       break;
+     case 8: // Caso 8
+       // Calcular el costo del peaje por vehículo, según la Tarifa 8.
+       costo = numVehiculos * TARIFA8;
+       // Imprimir el costo del peaje.
+       cout << "El costo del peaje es: $ " << costo << " USD." << endl;
+       break;
+     default: // Caso por defecto
+       // Imprimir el mensaje: Opción incorrecta.
+       cout << "Opción incorrecta." << endl;
+       break;
+     }
+   
+     // Incorporar una pausa en el programa.
+     system("pause");
+   `,
       }
     ];
     this.praqnique=[

@@ -2051,88 +2051,94 @@
               <p>Claramente, se puede ver que las entradas del problema son el número de vehículos representados por la variable ‘numVehiculos’ y la opción del menú a seleccionar representada por la variable ‘opcion’. Hay una salida requerida que es el valor del costo del peaje. Partiendo de un conocimiento básico de Aritmética y Álgebra, se sabe que hay 8 diferentes valores para los costos que dependen de los valores de las tarifas y del número de vehículos. Las fórmulas requeridas se incluyen en el requerimiento de los datos.</p>
               
               <h4><strong>B.1)   Requerimiento de los Datos </strong></h4>
-              
+              <h4><strong>Constantes del Problema </strong></h4>
+              <p>TARIFA1 = 1.00 <br>
+                TARIFA2 = 2.00 <br>
+                TARIFA3 = 3.00 <br>
+                TARIFA4 = 4.00 <br>
+                TARIFA5 = 5.00 <br>
+                TARIFA6 = 6.00 <br>
+                TARIFA7 = 0.20 <br>
+                TARIFA8 = 1.50
+                </p>
               <h4><strong>Entradas del Problema </strong></h4>
-              <p>num1	&nbsp; &nbsp;/* Valor del primer número */ </p>
-              <p>num2	&nbsp; &nbsp;/* Valor del segundo número */ </p>
+              <p>numVehiculos	&nbsp; &nbsp;/* Valor del número de vehículos */ </p>
               <p>opcion	&nbsp; &nbsp;/* Opción a ser seleccionada del menú */ </p>
-                                         
+                                                       
               <h4><strong>Salidas del Problema </strong></h4>
-              <p>num3	&nbsp; &nbsp;/* Valor del resultado de una operación */ </p>
+              <p>costo	&nbsp; &nbsp;/* Valor del costo del peaje */ </p>
                             
               <h4><strong>Fórmulas Relevantes </strong></h4>
-              <img src="./assets/images/Capitulos/II/media/a78.png" style="display:block; margin:auto; "><br>
+              <img src="./assets/images/Capitulos/II/media/a86.png" style="display:block; margin:auto; "><br>
               
               <h4><strong>B.2)   Diagrama de Entrada-Salida </strong></h4>
-              <p>En la Figura 2.15.2 se muestra el diagrama de Entrada-Salida del programa donde se identifican y se diagraman las entradas y salidas del problema como son: a) Entradas: la variable ‘num1’; la variable ‘num2’; la variable ‘opcion’; b) Salidas: la variable ‘num3’.</p>
-              <img src="./assets/images/Capitulos/II/media/a79.png" style="display:block; margin:auto; "><br>
-              <h5><strong>Figura 2.15.2. </strong>Diagrama de Entrada-Salida del Programa.</h5>
+              <p>En la Figura 2.16.2 se muestra el diagrama de Entrada-Salida del programa donde se identifican y se diagraman las entradas, salidas y auxiliares del problema como son: a) Entradas: la variable ‘numVehiculos’; la variable ‘opcion’; b) Salidas: la variable ‘costo’; c) Auxiliares: las constantes TARIFA1, TARIFA2; TARIFA3; TARIFA4; TARIFA5; TARIFA6; TARIFA7; TARIFA8.</p>
+              <img src="./assets/images/Capitulos/II/media/a87.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Figura 2.16.2. </strong>Diagrama de Entrada-Salida del Programa.</h5>
               <h4><strong>C)   Diseño </strong></h4>
               <p>Una vez que se conoce las entradas y las salidas del problema, se deben listar los pasos necesarios para resolver el problema, es decir, el algoritmo.</p>
               <h4><strong>Algoritmo </strong></h4>
               <p>1.	Imprimir un menú con cinco opciones.</p>
-              <p> &nbsp; &nbsp; 1.1.	Imprimir el mensaje: 1. Suma de dos números.</p>
-              <p> &nbsp; &nbsp; 1.2.	Imprimir el mensaje: 2. Resta de dos números.</p>
-              <p> &nbsp; &nbsp; 1.3.	Imprimir el mensaje: 3. Multiplicación entre dos números.</p>
-              <p> &nbsp; &nbsp; 1.4.	Imprimir el mensaje: 4. División entre dos números.</p>
-              <p> &nbsp; &nbsp; 1.5.	Imprimir el mensaje: 5. Módulo entre dos números.</p>
-              <p> &nbsp; &nbsp; 1.6.	Imprimir el mensaje: Digite una opción.</p>
-              <p>2.	Leer el valor de la opción seleccionada, utilizando la variable ‘opcion’.</p>
+              <p> &nbsp; &nbsp; 1.1.	Imprimir el mensaje: 1. Automóviles, todoterrenos o camionetas.</p>
+              <p> &nbsp; &nbsp; 1.2.	Imprimir el mensaje: 2. Buses y camiones de 2 ejes.</p>
+              <p> &nbsp; &nbsp; 1.3.	Imprimir el mensaje: 3. Buses y camiones de 3 ejes.</p>
+              <p> &nbsp; &nbsp; 1.4.	Imprimir el mensaje: 4. Camiones de 4 ejes.</p>
+              <p> &nbsp; &nbsp; 1.5.	Imprimir el mensaje: 5. Camiones de 5 ejes.</p>
+              <p> &nbsp; &nbsp; 1.6.	Imprimir el mensaje: 6. Camiones de 6 ejes o más.</p>
+              <p> &nbsp; &nbsp; 1.7.	Imprimir el mensaje: 7. Motos.</p>
+              <p> &nbsp; &nbsp; 1.8.	Imprimir el mensaje: 8. Vehículo liviano con eje remolque.</p>
+              <p> &nbsp; &nbsp; 1.9.	Imprimir el mensaje: Digite una opción.</p>
+              <p> &nbsp; &nbsp; 1.10.	Leer el valor de la opción seleccionada, utilizando la variable ‘opcion’.</p>
+              <p>2.	Si la opción seleccionada está entre los valores de 1 y 8.</p>
+              <p> &nbsp; &nbsp; 2.1.	Leer el valor del número de vehículos, utilizando la variable ‘numVehiculos’.</p>
               
-              <p>3.	Si la opción seleccionada está entre los valores de 1 y 5.</p>
-              <p> &nbsp; &nbsp; 3.1.	Leer el valor del primer número ‘num1’.</p>
-              <p> &nbsp; &nbsp; 3.2.	Leer el valor del segundo número ‘num2’.</p>
-              <p>4.	Según sea el valor de la variable 'opcion', hacer:</p>
-              <p> &nbsp; &nbsp; 4.1.	Caso 1: </p>
-              <p> &nbsp; &nbsp; &nbsp; 4.1.1.	Calcular la suma entre dos números.</p>
-              <p> &nbsp; &nbsp; &nbsp; &nbsp; 4.1.1.1.	Asignar la suma entre dos números a la variable ‘num3’.</p>
-              <p> &nbsp; &nbsp; &nbsp; &nbsp; 4.1.1.2.	Imprimir el mensaje: num1 + num2 = num3.</p>
-              <p> &nbsp; &nbsp; 4.2.	Caso 2:  </p>
-              <p> &nbsp; &nbsp; &nbsp; 4.2.1.	Calcular la resta entre dos números.</p>
-              <p> &nbsp; &nbsp; &nbsp; &nbsp; 4.2.1.1.	Asignar la resta entre dos números a la variable ‘num3’.</p>
-              <p> &nbsp; &nbsp; &nbsp; &nbsp; 4.2.1.2.	Imprimir el mensaje: num1 - num2 = num3.</p>
-              <p> &nbsp; &nbsp; 4.3.	Caso 3: </p>
-              <p> &nbsp; &nbsp; &nbsp; 4.3.1.	Calcular la multiplicación entre dos números.</p>
-              <p> &nbsp; &nbsp; &nbsp; &nbsp; 4.3.1.1.	Asignar el producto entre dos números a la variable ‘num3’.</p>
-              <p> &nbsp; &nbsp; &nbsp; &nbsp; 4.3.1.2.	Imprimir el mensaje: num1 * num2 = num3.</p>
-              <p> &nbsp; &nbsp; 4.4.	Caso 4:  </p>
-              <p> &nbsp; &nbsp; &nbsp; 4.4.1.	Si el valor de la variable ‘num2’ es diferente de cero.</p>
-              <p> &nbsp; &nbsp; &nbsp; &nbsp; 4.4.1.1.	Calcular la división entre dos números.</p>
-              <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 4.4.1.1.1.	Asignar la división entre dos números a la variable ‘num3’.</p>
-              <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 4.4.1.1.2.	Imprimir el mensaje: num1 / num2 = num3.</p>
-              <p> &nbsp; &nbsp; &nbsp; 4.4.2.	Caso contrario, se niega la condición: !(num2 != 0), es decir, (num2 == 0).</p>
-              <p> &nbsp; &nbsp; &nbsp; &nbsp; 4.4.2.1.	Imprimir el mensaje: Error. División para cero no existe.</p>
-              <p> &nbsp; &nbsp; 4.5.	Caso 5: </p>
-              <p> &nbsp; &nbsp; &nbsp; 4.5.1.	Si el valor de la variable ‘num2’ es diferente de cero.</p>
-              <p> &nbsp; &nbsp; &nbsp; &nbsp; 4.5.1.1.	Calcular el módulo entre dos números.</p>
-              <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 4.5.1.1.1.	Asignar el módulo entre dos números a la variable ‘num3’, utilizando el operador ‘%’.</p>
-              <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 4.5.1.1.2.	Imprimir el mensaje: num1 % num2 = num3.</p>
-              <p> &nbsp; &nbsp; &nbsp; 4.5.2.	Caso contrario, se niega la condición: !(num2 != 0), es decir, (num2 == 0).</p>
-              <p> &nbsp; &nbsp; &nbsp; &nbsp; 4.5.2.1.	Imprimir el mensaje: Error. División para cero no existe.</p>
-              <p> &nbsp; &nbsp; 4.6.	Caso por defecto: </p>
-              <p> &nbsp; &nbsp; &nbsp; 4.6.1.	Imprimir el mensaje: Opción incorrecta.</p>
-                       
-                                                                
+              <p>3.	Según sea el valor de la variable 'opcion', hacer:</p>
+              <p> &nbsp; &nbsp; 3.1.	Caso 1: </p>
+              <p> &nbsp; &nbsp; &nbsp; 3.1.1.	Calcular el costo del peaje por vehículo, según la Tarifa 1.</p>
+              <p> &nbsp; &nbsp; &nbsp; 3.1.2.	Imprimir el costo del peaje.</p>
+              <p> &nbsp; &nbsp; 3.2.	Caso 2:  </p>
+              <p> &nbsp; &nbsp; &nbsp; 3.2.1.	Calcular el costo del peaje por vehículo, según la Tarifa 2.</p>
+              <p> &nbsp; &nbsp; &nbsp; 3.2.2.	Imprimir el costo del peaje.</p>
+              <p> &nbsp; &nbsp; 3.3.	Caso 3:  </p>
+              <p> &nbsp; &nbsp; &nbsp; 3.3.1.	Calcular el costo del peaje por vehículo, según la Tarifa 3.</p>
+              <p> &nbsp; &nbsp; &nbsp; 3.3.2.	Imprimir el costo del peaje.</p>
+              <p> &nbsp; &nbsp; 3.4.	Caso 4:  </p>
+              <p> &nbsp; &nbsp; &nbsp; 3.4.1.	Calcular el costo del peaje por vehículo, según la Tarifa 4.</p>
+              <p> &nbsp; &nbsp; &nbsp; 3.4.2.	Imprimir el costo del peaje.</p>
+              <p> &nbsp; &nbsp; 3.5.	Caso 5:  </p>
+              <p> &nbsp; &nbsp; &nbsp; 3.5.1.	Calcular el costo del peaje por vehículo, según la Tarifa 5.</p>
+              <p> &nbsp; &nbsp; &nbsp; 3.5.2.	Imprimir el costo del peaje.</p>
+              <p> &nbsp; &nbsp; 3.6.	Caso 6:  </p>
+              <p> &nbsp; &nbsp; &nbsp; 3.6.1.	Calcular el costo del peaje por vehículo, según la Tarifa 6.</p>
+              <p> &nbsp; &nbsp; &nbsp; 3.6.2.	Imprimir el costo del peaje.</p>
+              <p> &nbsp; &nbsp; 3.7.	Caso 7:  </p>
+              <p> &nbsp; &nbsp; &nbsp; 3.7.1.	Calcular el costo del peaje por vehículo, según la Tarifa 7.</p>
+              <p> &nbsp; &nbsp; &nbsp; 3.7.2.	Imprimir el costo del peaje.</p>
+              <p> &nbsp; &nbsp; 3.8.	Caso 8: </p>
+              <p> &nbsp; &nbsp; &nbsp; 3.8.1.	Calcular el costo del peaje por vehículo, según la Tarifa 8.</p>
+              <p> &nbsp; &nbsp; &nbsp; 3.8.2.	Imprimir el costo del peaje.</p>
+              <p> &nbsp; &nbsp; 3.9.	Caso por defecto: </p>
+              <p> &nbsp; &nbsp; &nbsp; 3.9.1.	Imprimir el mensaje: Opción incorrecta.</p>
+                      
+                             
+                                                               
               <h4><strong>D)   Implementación </strong></h4>
-              <p>Para implementar la solución, se debe escribir el algoritmo como un programa de C/C++ que contenga toda la información necesaria para completar la traducción a lenguaje máquina. En la Tabla 2.15.1 se muestra el código del programa en C/C++.</p>
-              <h5><strong>Tabla 2.15.1. </strong>Programa que calcula el consumo eléctrico.</h5>
-              <pre><code [highlight]="prefTab[0].programa22"  [lineNumbers]="true"></code></pre><br>
+              <p>Para implementar la solución, se debe escribir el algoritmo como un programa de C/C++ que contenga toda la información necesaria para completar la traducción a lenguaje máquina. La Tabla 2.16.2 se muestra el código del programa en C/C++.
+              <h5><strong>Tabla 2.16.2. </strong>Programa que calcula el consumo eléctrico.</h5>
+              <pre><code [highlight]="prefTab[0].programa23"  [lineNumbers]="true"></code></pre><br>
               <h4><strong>E) Pruebas </strong></h4>
-              <p>Desde la Tabla 2.15.2, hasta la Tabla 2.15.7, se muestran seis ejemplos de la salida del programa, donde se puede ver que los resultados del programa tienen sentido, comparando estos resultados con los datos devueltos por una calculadora.</p>
-              <p>En la salida de la Tabla 2.15.2 se puede ver que, al seleccionar la opción 1 se puede ingresar el primer número que es el 7 y el segundo número que es el 2, obteniéndose la suma entre estos dos números que es 9. De manera similar, en la salida de la Tabla 2.15.3 se puede ver que, al seleccionar la opción 2 se puede ingresar el primer número que es el 7 y el segundo número que es el 2, obteniéndose la resta entre estos dos números que es 5. En la salida de la Tabla 2.15.4 se puede ver que, al seleccionar la opción 3 se puede ingresar el primer número que es el 7 y el segundo número que es el 2, obteniéndose la multiplicación entre estos dos números que es 14. En la salida de la Tabla 2.15.5 se puede ver que, al seleccionar la opción 4 se puede ingresar el primer número que es el 7 y el segundo número que es el 2, obteniéndose la división entera entre estos dos números que es 3. En la salida de la Tabla 2.15.6 se puede ver que, al seleccionar la opción 5 se puede ingresar el primer número que es el 7 y el segundo número que es el 2, obteniéndose el módulo o el resto de una división entera entre estos dos números que es 1. Finalmente, en la salida de la Tabla 2.15.7 se puede ver que, al seleccionar la opción 7, el programa indica que es una opción incorrecta y no realiza ningún cálculo matemático.</p>
+              <p>Desde la Tabla 2.16.3, hasta la Tabla 2.16.6, se muestran cuatro ejemplos de la salida del programa, donde se puede ver que los resultados del programa tienen sentido, comparando estos resultados con los datos devueltos por una calculadora.</p>
+              <p>En la salida de la Tabla 2.16.3 se puede ver que, al seleccionar la opción 1 se puede ingresar el número de vehículos a pagar el peaje que en este caso es 3, obteniéndose el valor de $3 USD. De manera similar, en la salida de la Tabla 2.16.4 se puede ver que, al seleccionar la opción 4 se puede ingresar el número de vehículos a pagar el peaje que en este caso es 4, obteniéndose el valor de $16 USD. En la salida de la Tabla 2.16.5 se puede ver que, al seleccionar la opción 8 se puede ingresar el número de vehículos a pagar el peaje que en este caso es 1, obteniéndose el valor de $1 USD. Finalmente, en la salida Tabla 2.16.6 se puede ver que, al seleccionar la opción 9, el programa indica que es una opción incorrecta y no realiza ningún cálculo matemático.</p>
                             
-              <h5><strong>Tabla 2.15.2. </strong>Salida del programa.</h5>
-              <img src="./assets/images/Capitulos/II/media/a80.png" style="display:block; margin:auto; "><br>
-              <h5><strong>Tabla 2.15.3. </strong>Salida del programa.</h5>
-              <img src="./assets/images/Capitulos/II/media/a81.png" style="display:block; margin:auto; "><br>
-              <h5><strong>Tabla 2.15.4. </strong>Salida del programa.</h5>
-              <img src="./assets/images/Capitulos/II/media/a82.png" style="display:block; margin:auto; "><br>
-              <h5><strong>Tabla 2.15.5. </strong>Salida del programa.</h5>
-              <img src="./assets/images/Capitulos/II/media/a83.png" style="display:block; margin:auto; "><br>
-              <h5><strong>Tabla 2.15.6. </strong>Salida del programa.</h5>
-              <img src="./assets/images/Capitulos/II/media/a84.png" style="display:block; margin:auto; "><br>
-              <h5><strong>Tabla 2.15.7. </strong>Salida del programa.</h5>
-              <img src="./assets/images/Capitulos/II/media/a85.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Tabla 2.16.3. </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/II/media/a88.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Tabla 2.16.4. </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/II/media/a89.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Tabla 2.16.5. </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/II/media/a90.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Tabla 2.16.6. </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/II/media/a91.png" style="display:block; margin:auto; "><br>
+              
               
             </mat-tab>
           </mat-tab-group>
@@ -4738,14 +4744,34 @@ En la Figura 2.19.3 se muestra el diagrama de Entrada-Salida del programa donde 
 
       <mat-tab label="Ejercicios Propuestos">
         <ng-template matTabContent>
-
+          <h2><strong>Ejercicios Propuestos</strong></h2>
+          <p>1.	Escribir un programa que calcule el área y el perímetro de un cuadrado, utilizando las siguientes fórmulas matemáticas:</p>
+          <img src="./assets/images/Capitulos/II/media/a92.png" style="display:block; margin:auto; "><br>
+          <p>Siendo ‘l’ el valor del lado del cuadrado. </p>
+          <p>2.	Escribir un programa para calcular e imprimir el perímetro, la apotema y el área de un hexágono, utilizando las siguientes fórmulas matemáticas:</p>
+          <img src="./assets/images/Capitulos/II/media/a93.png" style="display:block; margin:auto; "><br>
+          <p>Siendo ‘l’ el valor del lado del hexágono.</p>
+          <p>3.	Escribir un programa para calcular e imprimir el área y el volumen de un cilindro, utilizando las siguientes fórmulas matemáticas:</p>
+          <img src="./assets/images/Capitulos/II/media/a94.png" style="display:block; margin:auto; "><br>
+          <p>Siendo ‘r’ el valor del radio del cilindro y ‘h’ el valor de la altura del cilindro.</p>
+          <p>4.	Partiendo de un sistema general de dos ecuaciones con dos incognitas:</p>
+          <img src="./assets/images/Capitulos/II/media/a95.png" style="display:block; margin:auto; "><br>
+          <p>Se puede resolver este sistema con la Regla de Cramer utilizando las siguientes fórmulas basadas en determinantes, para calcular los valores de ‘x’ e ‘y’:</p>
+          <img src="./assets/images/Capitulos/II/media/a96.png" style="display:block; margin:auto; "><br>
+          <p>Escribir un programa que lea los coeficientes numéricos de las dos ecuaciones: ‘a’, ‘b’ y ‘c’ de la primera ecuación; ‘d’, ‘e’ y ‘f’ de la segunda ecuación. Luego, calcular los valores de ‘x’ e ‘y’, para lo cual se deben validar los denominadores de las expresiones matemáticas, ya que que la división para cero no está definida.</p>
+          <p>5.	Escribir un programa con bucles anidados que permita visualizar la siguiente figura: <br> n: 4</p>
+          <img src="./assets/images/Capitulos/II/media/a97.png" style="display:block; margin:auto; "><br>
+          <p>La letra ‘b’ en color plomo es equivalente a un espacio en blanco.</p>
+          <p>6.	Escribir un programa con funciones que ingrese una suma determinada de dinero en centavos (menor que un $1,00 USD) y las salidas desplieguen el mayor número de monedas de 25 centavos, 10 centavos, 5 centavos y un centavo, necesitados para hacer esta suma. Por ejemplo:</p>
+          <img src="./assets/images/Capitulos/II/media/a98.png" style="display:block; margin:auto; "><br>
+          
         </ng-template>
       </mat-tab>
 
       <mat-tab label="Bibliografía">
         <ng-template matTabContent>
           <h2>Bibliografía</h2>
-          <ol type="A">
+          <ul>
             <li>Ceballos, F.J., 2007. C/C++: Curso de Programación. Tercera Edición. Editorial RA-MA, España. ISBN: 978-84-9964-322-9.</li>
             <li>Davies, P., 1995. The Indispensable Guide to C with Engineering Applications. First Edition. Addison-Wesley Publishing Company, USA. ISBN: 0-201624389.</li>
             <li>Deitel, H., Deitel, P., 2003. Cómo Programar en C++. Cuarta Edición. Pearson Educación, México. ISBN: 970-26-0254-8.</li>
@@ -4764,7 +4790,7 @@ En la Figura 2.19.3 se muestra el diagrama de Entrada-Salida del programa donde 
             <li>Arce, E., 2011. Introducción al Diseño Básico de los Procesos Químicos. Instituto Politécnico Nacional, México.</li>
             <li>Mallar, M.A., 2010. La Gestión por Procesos: Un Enfoque de Gestión Eficiente. Revista Científica “Visión Futuro”. ISSN: 1669-7634. Universidad Nacional de Misiones Argentina.</li>
             
-          </ol>
+          </ul>
         </ng-template>
       </mat-tab>
 
