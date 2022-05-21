@@ -16,6 +16,7 @@ export class ChapterIIComponent implements OnInit {
   asyncTabs: Observable<ExampleTab[]>;
   prefTabs: any;
   prefTab: any;
+  prefTab2: any;
   introduccion: any;
   praqnique: any;
   praqniquePropuesto: any;
@@ -28,6 +29,2029 @@ export class ChapterIIComponent implements OnInit {
   num_capitulo = 2;
 
   constructor() {
+
+
+    this.prefTab2=[{
+    programa2_1:`/*******************************************************
+    WinConsolaPrograma_2_1
+   *******************************************************/
+   
+   // Librerías.
+   #include <iostream>
+   #include <cstdlib>
+   
+   using namespace std;
+   
+   // Función principal.
+   void main()
+   {
+     // Declaración de variables.
+     int num1; // Se declara la variable 'num1' de tipo entero.
+     int num2; // Se declara la variable 'num2' de tipo entero.
+     int num3; // Se declara la variable 'num3' de tipo entero.
+     
+     // Leer el valor del primer número 'num1'.
+     cout << "Ingrese el valor del primer número: ";
+     cin >> num1;
+     // Leer el valor del segundo número 'num2'.
+     cout << "Ingrese el valor del segundo número: ";
+     cin >> num2;
+   
+     // Calcular la suma de dos números, utilizando una expresión matemática,
+     // donde se asigna en la variable num3 la suma entre num1 y num2.
+     num3 = num1 + num2;
+   
+     // Imprimir el valor del resultado de la suma 'num3'.
+     cout << "Resultado de la suma: " << num3 << endl;
+   
+     // Incorporar una pausa en el programa.
+     system("pause");
+   }
+   `,
+    programa2_2:`/*******************************************************
+    WinConsolaPrograma_2_2
+   *******************************************************/
+   
+   // Librerías.
+   #include <iostream>
+   #include <cstdlib>
+   
+   using namespace std;
+   
+   // Función principal.
+   void main()
+   {
+     // Declaración de variables.
+     int a; // Se declara la variable 'a' de tipo entero.
+     int b; // Se declara la variable 'b' de tipo entero.
+   
+     a = 7; // Se asigna el valor de 7 a la variable 'a'.
+     b = a; // Se asigna el valor de 7 de la variable 'a', a la variable 'b'.
+   
+     // Imprimir los valores de 'a' y de 'b'.
+     cout << "Valor de 'a': " << a << endl;
+     cout << "Valor de 'b': " << b << endl;
+        
+     // Incorporar una pausa en el programa.
+     system("pause");
+   }
+   `,
+   programa2_3:`/*******************************************************
+   WinConsolaPrograma_2_3
+  *******************************************************/
+  
+  // Librerías.
+  #include <iostream>
+  #include <cstdlib>
+  
+  using namespace std;
+  
+  // Función principal.
+  void main()
+  {
+    // Declaración de variables.
+    int a; // Se declara la variable 'a' de tipo entero.
+    a = 0; // Se asigna el valor de cero a la variable 'a' que trabaja como 
+      // un contador.
+    a = a + 1; // Se asigna el valor de lo que tiene la variable 'a' que es 
+          // cero más uno, que da uno.
+    // Imprimir el valor de 'a'.
+    cout << "Valor de 'a': " << a << endl;
+    a = a + 1; // Se asigna el valor de lo que tiene la variable 'a' que es 
+          // uno más uno, que da dos.
+    // Imprimir el valor de 'a'.
+    cout << "Valor de 'a': " << a << endl;
+    a = a + 1; // Se asigna el valor de lo que tiene la variable 'a' que es 
+          // dos más uno, que da tres.
+    // Imprimir el valor de 'a'.
+    cout << "Valor de 'a': " << a << endl;	
+    a = a + 1; // Se asigna el valor de lo que tiene la variable 'a' que es 
+          // tres más uno, que da cuatro.
+    // Imprimir el valor de 'a'.
+    cout << "Valor de 'a': " << a << endl;
+    a = a + 1; // Se asigna el valor de lo que tiene la variable 'a' que es 
+          // cuatro más uno, que da cinco.
+    // Imprimir el valor de 'a'.
+    cout << "Valor de 'a': " << a << endl;
+  
+    // Incorporar una pausa en el programa.
+    system("pause");
+  } 
+   `,
+  programa2_4:`/*******************************************************
+  WinConsolaPrograma_2_4
+ *******************************************************/
+ 
+ // Librerías.
+ #include <iostream>
+ #include <cstdlib>
+ 
+ using namespace std;
+ 
+ // Función principal.
+ void main()
+ {
+   // Declaración de variables.
+   int n1; // Se declara la variable 'n1' de tipo entero.
+   int n2; // Se declara la variable 'n2' de tipo entero.
+   int n3; // Se declara la variable 'n3' de tipo entero.
+   int n4; // Se declara la variable 'n3' de tipo entero.
+   int n5; // Se declara la variable 'n3' de tipo entero.
+   int sum; // Se declara la variable 'sum' de tipo entero (sumador).
+   
+   n1 = 1; // Se asigna el valor de 1 a la variable 'n1'.
+   n2 = 2; // Se asigna el valor de 2 a la variable 'n2'.
+   n3 = 3; // Se asigna el valor de 3 a la variable 'n3'.
+   n4 = 4; // Se asigna el valor de 4 a la variable 'n3'.
+   n5 = 5; // Se asigna el valor de 5 a la variable 'n3'.	
+   sum = 0; // Se asigna el valor de cero que es el neutro aditivo, a la 
+       // variable 'sum' que trabaja como un acumulador.
+ 
+   sum = sum + n1; // Se asigna el valor de lo que tiene la variable 'sum' 
+         // que es cero más el valor de la variable n1, que da 1.
+   sum = sum + n2; // Se asigna el valor de lo que tiene la variable 'sum' 
+         // que es 1 más el valor de la variable n2, que da 3.
+   sum = sum + n3; // Se asigna el valor de lo que tiene la variable 'sum' 
+         // que es 3 más el valor de la variable n3, que da 6.
+   sum = sum + n4; // Se asigna el valor de lo que tiene la variable 'sum' 
+         // que es 6 más el valor de la variable n4, que da 10.
+   sum = sum + n5; // Se asigna el valor de lo que tiene la variable 'sum' 
+         // que es 10 más el valor de la variable n5, que da 15.
+ 
+   // Imprimir el valor del acumulador 'sum'.
+   cout << "Valor del acumulador 'sum': " << sum << endl;
+ 
+   // Incorporar una pausa en el programa.
+   system("pause");
+ }
+ `,
+programa2_5:`/*******************************************************
+WinConsolaPrograma_2_5
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
+
+// Función principal.
+void main()
+{
+ // Declaración de variables.
+ int n1; // Se declara la variable 'n1' de tipo entero.
+ int n2; // Se declara la variable 'n2' de tipo entero.
+ int n3; // Se declara la variable 'n3' de tipo entero.
+ int n4; // Se declara la variable 'n4' de tipo entero.
+ int n5; // Se declara la variable 'n5' de tipo entero.
+ int prod; // Se declara la variable 'prod' de tipo entero (producto).
+
+ n1 = 1; // Se asigna el valor de 1 a la variable 'n1'.
+ n2 = 2; // Se asigna el valor de 2 a la variable 'n2'.
+ n3 = 3; // Se asigna el valor de 3 a la variable 'n3'.
+ n4 = 4; // Se asigna el valor de 4 a la variable 'n4'.
+ n5 = 5; // Se asigna el valor de 5 a la variable 'n5'.
+ prod = 1; // Se asigna el valor de uno que es el neutro multiplicativo, 
+      // a la variable 'prod' que trabaja como un acumulador.
+
+ prod = prod * n1; // Se asigna el valor de lo que tiene la variable 'prod' 
+         // que es uno por el valor de la variable n1, que da 1.
+ prod = prod * n2; // Se asigna el valor de lo que tiene la variable 'prod' 
+         // que es 1 por el valor de la variable n2, que da 2.
+ prod = prod * n3; // Se asigna el valor de lo que tiene la variable 'prod' 
+         // que es 2 por el valor de la variable n3, que da 6.
+ prod = prod * n4; // Se asigna el valor de lo que tiene la variable 'prod' 
+         // que es 6 por el valor de la variable n4, que da 24.
+ prod = prod * n5; // Se asigna el valor de lo que tiene la variable 'prod' 
+         // que es 24 por el valor de la variable n3, que da 120.
+ 
+ // Imprimir el valor del acumlador 'sum'.
+ cout << "Valor del acumulador 'prod': " << prod << endl;
+
+ // Incorporar una pausa en el programa.
+ system("pause");
+}
+`,
+programa2_6:`/*******************************************************
+WinConsolaPrograma_2_6
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
+
+// Función principal.
+void main()
+{
+ // Declaración de variables.
+ int a; // Se declara la variable 'a' de tipo entero.
+ int b; // Se declara la variable 'b' de tipo entero.
+ int c; // Se declara la variable 'c' de tipo entero.
+ int d; // Se declara la variable 'd' de tipo entero.
+
+ a = 5; // Se asigna el valor de 5 a la variable 'a'.
+ b = 2; // Se asigna el valor de 2 a la variable 'b'.
+ c = 7; // Se asigna el valor de 7 a la variable 'c'.
+
+ d = (a * c) + (c / 2); // Se asigna el valor de 38 a la variable 'd', que es el
+              // resultado de una expresión matemática.
+
+ // Imprimir el valor de 'd'.
+ cout << "Valor de la expresión 'd': " << d << endl;
+
+ // Incorporar una pausa en el programa.
+ system("pause");
+}
+`,
+tabla2_1_1:`/*******************************************************
+WinConsolaCasoEstudio_2_1
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+
+// Macros o sentencias de preprocesador.
+#define PI 3.141592
+
+using namespace std;
+
+// Función principal.
+void main()
+{
+ float radio;     // Entrada: radio de un círculo.
+ float perimetro; // Salida: perímetro de un círculo.
+ float area;      // Salida: área de un círculo.  
+
+ // Leer el radio del círculo utilizando la variable 'radio'.
+ cout << "Ingrese el valor del radio: ";
+ cin >> radio;
+
+ // Calcular el perímetro.
+ perimetro = 2 * PI * radio;
+
+ // Calcular el área.
+ area = PI * radio * radio;
+
+ // Imprimir el valor de la variable 'perimetro' y de la variable 'area'. 
+ cout << "El perímetro es: " << perimetro << endl;
+ cout << "El área es: " << area << endl;
+
+ // Incorporar una pausa en el programa.
+ system("pause");
+}
+`,
+tabla2_2_1:`/*******************************************************
+WinConsolaCasoEstudio_2_2
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
+
+// Función principal.
+void main()
+{
+ float ancho;     // Entrada: ancho del rectángulo.
+ float largo;     // Entrada: largo del rectángulo.
+ float perimetro; // Salida: perímetro del rectángulo.
+ float area;      // Salida: área del rectángulo.  
+
+ // Leer el ancho del rectángulo utilizando la variable 'ancho'.
+ cout << "Ingrese el valor del ancho: ";
+ cin >> ancho;
+ // Leer el largo del rectángulo utilizando la variable 'largo'.
+ cout << "Ingrese el valor del largo: ";
+ cin >> largo;
+
+ // Calcular el perímetro.
+ perimetro = 2 * ancho + 2 * largo;
+ // Calcular el área.
+ area = ancho * largo;
+
+ // Imprimir el valor de la variable 'perimetro' y de la variable 'area'. 
+ cout << "El perímetro es: " << perimetro << endl;
+ cout << "El área es: " << area << endl;
+
+ // Incorporar una pausa en el programa.
+ system("pause");
+}
+`,
+tabla2_3_1:`/*******************************************************
+WinConsolaCasoEstudio_2_3
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+#include <cmath>
+
+// Macros o sentencias de preprocesador.
+#define PI 3.141592
+
+using namespace std;
+
+// Función principal.
+void main()
+{
+ float r;       // Entrada: radio del cono.	
+ float h;       // Entrada: altura del cono.
+ float g;       // Salida: generatriz del cono.
+ float area;    // Salida: área del cono.
+ float volumen; // Salida: volumen del cono.  
+
+ // Leer el radio del cono utilizando la variable 'r'.
+ cout << "Ingrese el valor del radio: ";
+ cin >> r;
+ // Leer la altura del cono utilizando la variable 'h'.
+ cout << "Ingrese el valor de la altura: ";
+ cin >> h;
+
+ // Calcular la generatriz del cono.
+ g = sqrt(r * r + h * h);
+ // Calcular el área.
+ area = (PI * r * g) + (PI * pow(r, 2));
+ // Calcular el volumen.
+ volumen = (1 / 3.0) * PI * pow(r, 2) * h;
+
+ // Imprimir el valor de la variable 'g', de la variable 'area' y 
+ // de la variable 'volumen'.
+ cout << "La generatriz es: " << g << endl;
+ cout << "El área es: " << area << endl;
+ cout << "El volumen es: " << volumen << endl;
+
+ // Incorporar una pausa en el programa.
+ system("pause");
+}
+`,
+tabla2_4_1:`/*******************************************************
+WinConsolaCasoEstudio_2_4
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+#include <cmath>
+
+// Directivas define o macros.
+#define PI 3.141593
+#define g 9.80665
+
+using namespace std;
+
+// Función principal.
+int main()
+{
+ // Declaración de variables.	
+ float v = 0.0f;     // Entrada: Velocidad inicial.
+ float theta = 0.0f; // Entrada: Ángulo de lanzamiento.
+ float d = 0.0f;     // Salida: Distancia alcanzada.
+ float t = 0.0f;     // Salida: Tiempo de vuelo.
+ float h = 0.0f;     // Salida: Altura máxima.
+
+ // Imprimir un mensaje de información.
+ cout << "Tiro Parabólico de un Proyectil." << endl;
+ cout << endl;
+
+ // Leer el valor de la velocidad.
+ cout << "Ingrese el valor de la velocidad [m/seg]: ";
+ cin >> v;
+ 
+ // Leer el valor del ángulo theta.
+ cout << "Ingrese el valor del ángulo [grados]: ";
+ cin >> theta;
+ 
+ // Convertir el ángulo theta de grados a radianes.
+ theta = theta * PI / 180.0;
+
+ // Calcular la distancia alcanzada.
+ d = (pow(v, 2) * sin(2 * theta)) / g;
+
+ // Calcular el tiempo de vuelo.
+ t = (v * sin(theta)) / g;
+
+ // Calcular la altura máxima.
+ h = (pow(v, 2) * pow(sin(theta), 2)) / (2 * g);
+
+ cout << endl;
+
+ // Imprimir el valor de la distancia.
+ cout << "El valor de la distancia es: " << d << " m" << endl;
+
+ // Imprimir el valor del tiempo de vuelo.
+ cout << "El valor del tiempo de vuelo es: " << t << " seg" << endl;
+
+ // Imprimir el valor de la altura.
+ cout << "El valor de la altura es: " << h << " m" << endl;
+
+ // Incorporar una pausa en el programa.
+ system("pause");
+}
+`,
+programa2_7:`/*******************************************************
+WinConsolaPrograma_2_7
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
+
+// Función principal.
+void main()
+{
+ // Declaración de variables.
+ int num1; // Se declara la variable 'num1' de tipo entero.
+ int num2; // Se declara la variable 'num2' de tipo entero.	
+
+ // Leer el valor de un número 'num1'.
+ cout << "Ingrese el valor de un número: ";
+ cin >> num1;
+ 
+ // Calcular el módulo entre el número ingresado con el valor de dos, 
+ // utilizando una expresión matemática, donde se asigna en la variable 
+ // 'num2' el módulo entre 'num1' y 2.
+ num2 = num1 % 2;
+
+ // Si el valor de la variable 'num2' es igual a cero.
+ if (num2 == 0)
+ {
+   // Imprimir el mensaje que el número ingresado 'num1' es par.
+   cout << "El número " << num1 << " es par." << endl;
+ }
+
+ // Incorporar una pausa en el programa.
+ system("pause");
+}
+`,
+programa2_8:`/*******************************************************
+WinConsolaPrograma_2_8
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
+
+// Función principal.
+void main()
+{
+ // Declaración de variables.
+ float nota; // Se declara la variable 'nota' de tipo float.
+ 
+ // Leer el valor de una nota.
+ cout << "Ingrese una nota entre (0 y 10): ";
+ cin >> nota;	
+
+ // Si el valor de la variable nota es mayor o igual que 7.
+ if (nota >= 7)
+ {
+   // Imprimir el mensaje de Aprobado.
+   cout << "Aprobado." << endl;
+ }
+ 
+ // Incorporar una pausa en el programa.
+ system("pause");
+}
+`,
+tabla2_5_1:`/*******************************************************
+WinConsolaCasoEstudio_2_5
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
+
+// Función principal.
+void main()
+{
+ // Declaración de variables.
+ int num1; // Se declara la variable 'num1' de tipo entero.
+ int num2; // Se declara la variable 'num2' de tipo entero.
+ int num3; // Se declara la variable 'num3' de tipo entero.
+ 
+ // Leer el valor del primer número 'num1'.
+ cout << "Ingrese el valor del primer número: ";
+ cin >> num1;
+ // Leer el valor del segundo número 'num2'.
+ cout << "Ingrese el valor del segundo número: ";
+ cin >> num2;
+
+ // Calcular el módulo entre dos números, utilizando una expresión matemática,
+ // donde se asigna en la variable num3 el módulo entre num1 y num2.
+ num3 = num1 % num2;
+
+ // Si el valor de la variable num3 es igual a cero.
+ if (num3 == 0)
+ {
+   // Imprimir el mensaje que el número 1 es divisible para el número 2.
+   cout << "El número " << num1 << " es divisible para " << num2 << endl;
+ }
+ 
+ // Incorporar una pausa en el programa.
+ system("pause");
+}
+`,
+programa2_17:`/*******************************************************
+WinConsolaPrograma_2_17
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+#include <cmath>
+
+using namespace std;
+
+// Función principal.
+void main()
+{
+ int i; // Salida: contador del bucle.
+
+ // Impresión de un mensaje de información.
+ cout << "Impresión del 1 al 10 de manera creciente." << endl;
+ 
+ // Inicializar el valor del contador en uno.
+ i = 1;
+ // Mientras la condición sea verdadera, hacer:
+ while (i <= 10)
+ {
+   // Imprimir el valor del contador.
+   cout << i << endl;
+   // Incrementar el valor del contador en uno.
+   i++;
+ }
+
+ // Incorporar una pausa en el programa.
+ system("pause");
+}
+`,
+programa2_18:`/*******************************************************
+WinConsolaPrograma_2_18
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+#include <cmath>
+
+using namespace std;
+
+// Función principal.
+void main()
+{
+ int i; // Salida: contador del bucle.
+
+ // Impresión de un mensaje de información.
+ cout << "Impresión del 10 al 1 de manera decreciente." << endl;
+
+ // Inicializar el valor del contador en diez.
+ i = 10;
+ // Mientras la condición sea verdadera, hacer:
+ while (i >= 1)
+ {
+   // Imprimir el valor del contador.
+   cout << i << endl;
+   // Decrementar el valor del contador en uno.
+   i--;
+ }
+
+ // Incorporar una pausa en el programa.
+ system("pause");
+}
+`,
+programa2_19:`/*******************************************************
+WinConsolaPrograma_2_19
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+#include <cmath>
+
+using namespace std;
+
+// Función principal.
+void main()
+{
+ int i; // Salida: contador del bucle.
+
+ // Impresión de un mensaje de información.
+ cout << "Impresión de los números pares del 2 al 10." << endl;
+
+ // Inicializar el valor del contador en dos.
+ i = 2;
+ // Mientras la condición sea verdadera, hacer:
+ while (i <= 10)
+ {
+   // Imprimir el valor del contador.
+   cout << i << endl;
+   // Incrementar el valor del contador en dos.
+   i = i + 2;
+ }
+
+ // Incorporar una pausa en el programa.
+ system("pause");
+}
+`,
+programa2_20: `/*******************************************************
+WinConsolaPrograma_2_20
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+#include <cmath>
+
+using namespace std;
+
+// Función principal.
+void main()
+{
+ int i; // Salida: contador del bucle.
+
+ // Impresión de un mensaje de información.
+ cout << "Impresión de los números impares del 9 al 1." << endl;
+
+ // Inicializar el valor del contador en diez.
+ i = 9;
+ // Mientras la condición sea verdadera, hacer:
+ while (i >= 1)
+ {
+   // Imprimir el valor del contador.
+   cout << i << endl;
+   // Decrementar el valor del contador en dos.
+   i = i - 2;
+ }
+
+ // Incorporar una pausa en el programa.
+ system("pause");
+}
+`,
+tabla2_17_1:`/*******************************************************
+WinConsolaCasoEstudio_2_17
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+#include <cmath>
+
+using namespace std;
+
+// Función principal.
+void main()
+{
+ int n;      // Entrada: número de notas.
+ float nota; // Entrada: valor de una nota.	
+ float sum;  // Salida: sumatoria de un grupo de notas.
+ float prom; // Salida: media o promedio de un grupo de notas.
+ int i;      // Auxiliar: contador del bucle.
+
+ // Impresión de un mensaje de información.
+ cout << "Sumatoria y promedio de un grupo de notas." << endl << endl;
+ // Leer el valor del número de notas que se desea ingresar.
+ cout << "Ingrese el número de notas que desea leer: "; cin >> n;
+
+ // Inicializar el valor del contador en uno.
+ i = 1;
+ // Inicializar el valor de la sumatoria en cero.
+ sum = 0;
+ // Mientras el valor del contador ‘i’ sea menor o igual que cero, hacer:
+ while (i <= n)
+ {
+   // Leer el valor de una nota.
+   cout << "Ingrese una nota: "; cin >> nota;
+   // Asignar al acumulador ‘sum’ el valor que tiene acumulado más el 
+   // valor de una nota.
+   sum = sum + nota;
+   // Incrementar el valor del contador ‘i’ en uno.
+   i++;
+ }
+ // Calcular el valor del promedio de un grupo de diez notas.
+ prom = sum / n;
+
+ // Imprimir el valor de la sumatoria de un grupo de notas.
+ cout << endl << "Sumatoria: " << sum << endl;
+ // Imprimir el valor del promedio de un grupo de notas.
+ cout << "Promedio: " << prom << endl;
+
+ // Incorporar una pausa en el programa.
+ system("pause");
+}
+
+`,
+tabla2_18_2:`/*******************************************************
+WinConsolaCasoEstudio_2_18
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+#include <cmath>
+
+// Macros o sentencias de preprocesador.
+
+using namespace std;
+
+// Función principal.
+void main()
+{
+ // Declaración de variables.
+ long a;   // Entrada: primer número.
+ long b;   // Entrada: segundo número.
+ long D;   // Auxiliar: Dividendo.
+ long d;   // Auxiliar: divisor.
+ long R;   // Auxiliar: Residuo.
+ long MCD; // Salida: Máximo Común Divisor.
+ long mcm; // Salida: mínimo común múltiplo.
+
+ // Imprimir un mensaje de información.
+ cout << "\tMCD y mcm." << endl << endl;	
+
+ // Leer el primer número.	
+ cout << "Ingrese el primer número: "; cin >> a;
+ // Leer el segundo número.	
+ cout << "Ingrese el segundo número: "; cin >> b;
+   
+ // Asignar a la variable Dividendo el valor del primer número.
+ D = a; 
+ // Asignar a la variable divisor el valor del segundo número.
+ d = b;	
+ // Mientras el divisor sea diferente de cero, hacer:
+ while (d != 0) // (d>0)
+ { 
+   // Calcular el valor del Residuo entre el Dividendo y el divisor.
+   R = D % d;
+   // Asignar a la variable Dividendo el valor del divisor.
+   D = d;
+   // Asignar a la variable divisor el valor del Residuo.
+   d = R;		
+ } 
+ // Asignar a la variable MCD el valor final del Dividendo.
+ MCD = D;
+ // Calcular el valor del mínimo común múltiplo.
+ mcm = a * b / MCD;
+
+ // Imprimir el valor del Máximo Común Divisor (MCD).
+ cout << endl << "El MCD es: " << MCD << endl;	
+ // Imprimir el valor del mínimo común múltiplo (mcm).
+ cout << "El mcm es: " << mcm << endl;	
+
+ // Incorporar una pausa en el programa.
+ system("pause");
+}
+
+`,
+programa2_21: `/*******************************************************
+WinConsolaPrograma_2_21
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+#include <cmath>
+
+using namespace std;
+
+// Función principal.
+void main()
+{
+ int i; // Salida: contador del bucle.
+
+ // Impresión de un mensaje de información.
+ cout << "Impresión del 1 al 10 de manera creciente." << endl;
+
+ // Inicializar el valor del contador en uno.
+ i = 1;
+ // Hacer:
+ do {
+   // Imprimir el valor del contador.
+   cout << i << endl;
+   // Incrementar el valor del contador en uno.
+   i++;
+ // Mientras la condición sea verdadera.
+ } while (i <= 10);
+ 
+ // Incorporar una pausa en el programa.
+ system("pause");
+}
+`
+,
+programa2_22: `/*******************************************************
+WinConsolaPrograma_2_22
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+#include <cmath>
+
+using namespace std;
+
+// Función principal.
+void main()
+{
+ int i; // Salida: contador del bucle.
+
+ // Impresión de un mensaje de información.
+ cout << "Impresión del 10 al 1 de manera decreciente." << endl;
+
+ // Inicializar el valor del contador en diez.
+ i = 10;
+ // Hacer:
+ do {
+   // Imprimir el valor del contador.
+   cout << i << endl;
+   // Decrementar el valor del contador en uno.
+   i--;
+ // Mientras la condición sea verdadera.
+ } while (i >= 1);
+ 
+ // Incorporar una pausa en el programa.
+ system("pause");
+}
+`,
+programa2_23:`/*******************************************************
+WinConsolaPrograma_2_23
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+#include <cmath>
+
+using namespace std;
+
+// Función principal.
+void main()
+{
+ int i; // Salida: contador del bucle.
+
+ // Impresión de un mensaje de información.
+ cout << "Impresión de los números pares del 2 al 10." << endl;
+
+ // Inicializar el valor del contador en dos.
+ i = 2;
+ // Hacer:
+ do {
+   // Imprimir el valor del contador.
+   cout << i << endl;
+   // Incrementar el valor del contador en dos.
+   i = i + 2;
+ // Mientras la condición sea verdadera.
+ } while (i <= 10);
+ 
+ // Incorporar una pausa en el programa.
+ system("pause");
+}
+`,
+programa2_24:`/*******************************************************
+WinConsolaPrograma_2_24
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+#include <cmath>
+
+using namespace std;
+
+// Función principal.
+void main()
+{
+ int i; // Salida: contador del bucle.
+
+ // Impresión de un mensaje de información.
+ cout << "Impresión de los números impares del 9 al 1." << endl;
+
+ // Inicializar el valor del contador en diez.
+ i = 9;
+ // Hacer:
+ do {
+   // Imprimir el valor del contador.
+   cout << i << endl;
+   // Decrementar el valor del contador en dos.
+   i = i - 2;
+ // Mientras la condición sea verdadera.
+ } while (i >= 1);
+
+ // Incorporar una pausa en el programa.
+ system("pause");
+}
+`,
+
+tabla2_19_1:`/*******************************************************
+WinConsolaCasoEstudio_2_19
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+#include <cmath>
+
+// Macros o sentencias de preprocesador.
+
+using namespace std;
+
+// Función principal.
+void main()
+{
+ // Declaración de variables.
+ long num; // Entrada: Número decimal.
+ long bin; // Salida: Número binario.
+ long D;   // Auxiliar: Dividendo.
+ long c;   // Auxiliar: cociente.
+ long R;   // Auxiliar: Residuo.	
+ long sum; // Auxiliar: Sumatoria.
+ long i;   // Auxiliar: contador.
+
+ // Imprimir un mensaje de información.	
+ cout << "\tConvertir de Decimal a Binario." << endl << endl;
+
+ // Leer el número decimal.
+ cout << "Ingrese un número: "; cin >> num;	
+
+ // Asignar a la variable Dividendo el valor del número decimal.
+ D = num;
+ // Inicializar la variable sumatoria con el valor de cero.
+ sum = 0; 
+ // Inicializar el contador 'i' con el valor de cero.
+ i = 0;
+ // Hacer:
+ do {
+   // Calcular el valor del cociente entre el Dividendo y el valor de 2.
+   c = D / 2;
+   // Calcular el valor del Residuo entre el Dividendo y el valor de 2.
+   R = D % 2;
+   // Asignar a la sumatoria el valor que tiene acumulado más el producto 
+   // entre el Residuo con el valor de 10 elevado a la potencia de 'i'.
+   sum = sum + R * pow(10, i);
+   // Asignar a la variable Dividendo el valor del cociente.
+   D = c;
+   // Incrementar el valor del contador 'i' en uno.
+   i++;	
+ // Mientras el cociente de la división sea diferente de cero.
+ } while (c != 0); //(c > 0);	
+ // Asignar a la variable 'bin' el valor de la sumatoria que corresponde al
+ // número binario calculado.
+ bin = sum;
+ 
+ // Imprimir el valor del número binario.	
+ cout << "El número binario es: " << bin << endl;
+
+ // Incorporar una pausa en el programa.
+ system("pause");
+}
+`,
+tabla2_20_1:`/*******************************************************
+WinConsolaCasoEstudio_2_20
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+#include <cmath>
+
+using namespace std;
+
+// Función principal.
+void main()
+{
+ // Declaración de variables.
+ long num;          // Entrada: Número original.
+ long cont;         // Auxiliar: Contador de cifras decimales.
+ long numeroCifras; // Salida: Número de cifras decimales.
+ long numInvertido; // Salida: Número invertido.
+ long D;            // Auxiliar: Dividendo.
+ long c;            // Auxiliar: cociente.
+ long R;            // Auxiliar: Residuo.
+ long sum;          // Auxiliar: Sumatoria.
+ long i;            // Auxiliar: contador.
+
+ // Imprimir un mensaje de información.
+ cout << "\tAnalizar si un número es Palíndromo." << endl << endl;
+ // Leer el número entero.
+ cout << "Ingrese un número: "; cin >> num;
+
+ // Asignar a la variable Dividendo el valor del número entero.
+ D = num;
+ // Inicializar el contador 'cont' con el valor de cero.
+ cont = 0;
+ // Hacer:
+ do {
+   // Calcular el valor del cociente entre el Dividendo y el valor de 10.
+   c = D / 10;
+   // Calcular el valor del Residuo entre el Dividendo y el valor de 10.		
+   D = c;
+   // Incrementar el valor del contador 'i' en uno.
+   cont++;
+   // Mientras el cociente de la división sea diferente de cero.
+ } while (c != 0);
+ // Asignar a la variable 'numeroCifras' el valor del contador 'cont' que
+ // corresponde al valor del número de cifras del número entero ingresado.	
+ numeroCifras = cont;
+ // Imprimir el número de cifras del número entero ingresado por teclado.
+ cout << endl << "El número tiene " << numeroCifras << " cifras." << endl;
+
+ // Invertir el número.
+ // Asignar a la variable Dividendo el valor del número entero.
+ D = num;
+ // Inicializar la variable sumatoria con el valor de cero.
+ sum = 0;
+ // Inicializar el contador 'i' con el valor del número de cifras calculado.
+ i = numeroCifras - 1;
+ // Hacer:
+ do {
+   // Calcular el valor del cociente entre el Dividendo y el valor de 10.
+   c = D / 10;
+   // Calcular el valor del Residuo entre el Dividendo y el valor de 10.
+   R = D % 10;
+   // Asignar a la sumatoria el valor que tiene acumulado más el producto 
+   // entre el Residuo con el valor de 10 elevado a la potencia de 'i'.
+   sum = sum + R * pow(10, i);
+   // Asignar a la variable Dividendo el valor del cociente.
+   D = c;
+   // Decrementar el valor del contador 'i' en uno.
+   i--;
+   // Mientras el cociente de la división sea diferente de cero.
+ } while (c != 0);
+ // Asignar a la variable 'numInvertido' el valor de la sumatoria 'sum'
+ // que corresponde al valor del número entero invertido.
+ numInvertido = sum;
+ // Imprimir el número entero invertido.	
+ cout << "El número invertido es: " << numInvertido << endl;
+
+ // Si el valor de la variable 'num' que tiene el valor del número entero
+ // original es igual al valor de la variable 'numInvertido' que tiene
+ // el valor del número entero invertido.
+ if (num == numInvertido)
+ {
+   // Imprimir el mensaje: El número ingresado es palíndromo.
+   cout << "El número ingresado es palíndromo." << endl << endl;
+ }
+ // Caso contrario, el valor de la variable 'num' es diferente del valor
+ // de la variable 'numInvertido'.
+ else
+ {
+   //Imprimir el mensaje: El número ingresado no es palíndromo.
+   cout << "El número ingresado no es palíndromo." << endl << endl;
+ }
+
+ // Incorporar una pausa en el programa.
+ system("pause");
+}
+`,
+programa2_25:`/*******************************************************
+WinConsolaPrograma_2_25
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+#include <cmath>
+
+using namespace std;
+
+// Función principal.
+void main()
+{
+ int i; // Salida: contador del bucle.
+
+ // Impresión de un mensaje de información.
+ cout << "Impresión del 1 al 10 de manera creciente." << endl;
+   
+ // Para:
+ // 1. Inicializar el valor del contador 'i' en uno.
+ // 2. Mientras la condición sea verdadera, ejecutar las sentencias
+ // del bucle.
+ // 3. Luego de cada ciclo incrementar el valor del contador en uno.
+ for(i = 1; i <= 10; i++)
+ {
+   // Imprimir el valor del contador.
+   cout << i << endl;		
+ }
+
+ // Incorporar una pausa en el programa.
+ system("pause");
+}
+`,
+programa2_26:`/*******************************************************
+WinConsolaPrograma_2_26
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+#include <cmath>
+
+using namespace std;
+
+// Función principal.
+void main()
+{
+ int i; // Salida: contador del bucle.
+
+ // Impresión de un mensaje de información.
+ cout << "Impresión del 10 al 1 de manera decreciente." << endl;
+
+ // Para:
+ // 1. Inicializar el valor del contador 'i' en diez.
+ // 2. Mientras la condición sea verdadera, ejecutar las sentencias
+ // del bucle.
+ // 3. Luego de cada ciclo decrementar el valor del contador en uno.
+ for (i = 10; i >= 1; i--)
+ {
+   // Imprimir el valor del contador.
+   cout << i << endl;
+ }
+
+ // Incorporar una pausa en el programa.
+ system("pause");
+}
+`,
+programa2_27:`/*******************************************************
+WinConsolaPrograma_2_27
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+#include <cmath>
+
+using namespace std;
+
+// Función principal.
+void main()
+{
+ int i; // Salida: contador del bucle.
+
+ // Impresión de un mensaje de información.
+ cout << "Impresión de los números pares del 2 al 10." << endl;
+
+ // Para:
+ // 1. Inicializar el valor del contador 'i' en dos.
+ // 2. Mientras la condición sea verdadera, ejecutar las sentencias
+ // del bucle.
+ // 3. Luego de cada ciclo incrementar el valor del contador en dos.
+ for (i = 2; i <= 10; i = i + 2)
+ {
+   // Imprimir el valor del contador.
+   cout << i << endl;
+ }
+
+ // Incorporar una pausa en el programa.
+ system("pause");
+}
+`,
+programa2_28:`/*******************************************************
+WinConsolaPrograma_2_28
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+#include <cmath>
+
+using namespace std;
+
+// Función principal.
+void main()
+{
+ int i; // Salida: contador del bucle.
+
+ // Impresión de un mensaje de información.
+ cout << "Impresión de los números impares del 9 al 1." << endl;
+
+ // Para:
+ // 1. Inicializar el valor del contador 'i' en nueve.
+ // 2. Mientras la condición sea verdadera, ejecutar las sentencias
+ // del bucle.
+ // 3. Luego de cada ciclo decrementar el valor del contador en dos.
+ for (i = 9; i >= 1; i = i - 2)
+ {
+   // Imprimir el valor del contador.
+   cout << i << endl;
+ }
+
+ // Incorporar una pausa en el programa.
+ system("pause");
+}
+`,
+tabla2_21_1:`/*******************************************************
+WinConsolaCasoEstudio_2_21
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+#include <cmath>
+
+using namespace std;
+
+// Función principal.
+void main()
+{
+ int n;     // Entrada: Número de términos.
+ float sum; // Salida: Sumatoria de la sucesión.
+ int i;     // Auxiliar: contador del bucle.
+ 
+ // Impresión de un mensaje de información.
+ cout << "Sn = (1, 2, 3, 4, 5, 6, 7, ..., n)." << endl << endl;
+ // Leer el número de términos de la sucesión.
+ cout << "Ingrese el número de términos: "; cin >> n;
+ 
+ // Inicializar el acumulador de sumas 'sum' con el valor de cero.
+ sum = 0;
+ // Para el bucle, hacer:
+ // a.- Inicializar el valor del contador 'i' en uno.
+ // b.- Mientras el valor de la condición sea verdadera, ejecutar las
+ // sentencias del bucle.
+ // c.- Luego de cada iteración incrementar en uno el valor del contador 'i'.
+ for (i = 1; i <= n; i++)
+ {
+   // Asignar al acumulador 'sum' lo que tiene sumado más el valor
+   // del contador 'i'.
+   sum = sum + i;
+ }
+   
+ // Imprimir el valor de la sumatoria calculada
+ cout << "Sumatoria: " << sum << endl << endl;
+
+ // Incorporar una pausa en el programa.
+ system("pause");
+}
+`,
+tabla2_22_1:`/*******************************************************
+WinConsolaCasoEstudio_2_22
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+#include <cmath>
+
+using namespace std;
+
+// Función principal.
+void main()
+{
+ int n;      // Entrada: Número de términos.
+ float prod; // Salida: Producto de la sucesión (Factorial).
+ int i;      // Auxiliar: contador del bucle.
+
+ // Impresión de un mensaje de información.
+ cout << "n! = 1∙2∙3∙4∙5∙6∙7∙…∙n" << endl << endl;
+ // Leer un número entero positivo.
+ cout << "Ingrese un número entero positivo: "; cin >> n;
+
+ // Inicializar el acumulador de productos 'prod' con el valor de uno.
+ prod = 1;
+ // Para el bucle, hacer:
+ // a.- Inicializar el valor del contador 'i' en uno.
+ // b.- Mientras el valor de la condición sea verdadera, ejecutar las
+ // sentencias del bucle.
+ // c.- Luego de cada iteración incrementar en uno el valor del contador 'i'.
+ for (i = 1; i <= n; i++)
+ {
+   // Asignar al acumulador 'prod' lo que tiene multiplicado por el valor 
+   // del contador 'i'.
+   prod = prod * i;
+ }
+
+ // Imprimir el valor del producto calculado o del factorial de un número.
+ cout << "Factorial: " << prod << endl << endl;
+
+ // Incorporar una pausa en el programa.
+ system("pause");
+}
+`,
+tabla2_23_1:`/*******************************************************
+WinConsolaCasoEstudio_2_23
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+#include <cmath>
+
+using namespace std;
+
+// Función principal.
+void main()
+{
+ // Declaración de variables.
+ int n; // Entrada: término de la sucesión.
+ int i; // Auxiliar: contador.	
+ int a; // Auxiliar: primer término de la sucesion recurrente.
+ int b; // Auxiliar: segundo término de la sucesion recurrente.
+ int c; // Salida: n-ésimo término de la sucesión calculado.
+
+ // Imprimir un mensaje de información.
+ cout << "f(n) = 0+1+1+2+3+5+8+13+21+34+55+89+..." << endl << endl;
+
+ // Leer el término de la sucesión recurrente a calcular.
+ cout << "Ingrese el valor de 'n': "; cin >> n;
+
+ a = 0;   // Asignar a la variable 'a' el valor de cero.
+ b = 1;   // Asignar a la variable 'b' el valor de uno.	
+
+ // Si el valor de 'n' es igual a cero.
+ if (n == 0)
+ {
+   // Asignar a la la variable 'c' el valor de la variable 'a'.
+   c = a;				
+ }
+ // Caso contrario, si el valor de 'n' es igual a uno. 
+ else if (n == 1)
+ {		
+   // Asignar a la la variable 'c' el valor de la variable 'b'.
+   c = b;
+ }
+ // Caso contrario, si el valor de 'n' es mayor o igual a dos.
+ else if (n >= 2)
+ {		
+   // Para el bucle, hacer:
+   // 1. Inicializar el valor del contador 'i' en dos.
+   // 2. Mientras el valor de la condición (i <= n) sea verdadera, 
+   // ejecutar las sentencias del bucle.
+   // 3. Luego de cada iteración incrementar en uno el valor del 
+   // contador 'i'.
+   for (i = 2; i <= n; i++)
+   {
+     // Asignar a la la variable 'c' la suma de a + b.
+     c = a + b;
+     // Asignar a la la variable 'a' el valor de la variable 'b'.
+     a = b;
+     // Asignar a la la variable 'b' el valor de la variable 'c'.
+     b = c;
+   }
+ }
+
+ // Imprimir el valor de la variable 'n' y de la variable 'c'.
+ cout << "f(" << n << ") = " << c << endl;
+ 
+ // Incorporar una pausa en el programa.
+ system("pause");
+}
+`,
+programa2_29:`/*******************************************************
+WinConsolaPrograma_2_29
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+#include <cmath>
+
+using namespace std;
+
+// Función principal.
+void main()
+{
+ int lado; // Entrada: Tamaño del lado del triángulo.	
+ int f;  // Auxiliar: Número de filas.
+ int a;  // Salida: Número de columnas de asteriscos.	
+
+ // Leer el valor del lado del triángulo.
+ cout << "Ingrese el tamaño del triángulo rectángulo isósceles: "; 
+ cin >> lado;
+
+ // Bucle externo for()
+ // Para:
+ // 1. Inicializar el valor de las filas 'f' en uno.
+ // 2. Mientras la condición (f <= lado) sea verdadera, ejecutar 
+ // las sentencias del bucle externo.
+ // 3. Luego de cada ciclo incrementar el valor de las filas 'f' en uno.
+ for (f = 1; f <= lado; f++)
+ {
+   // Bucle interno for()
+   // Para:
+   // 1. Inicializar el valor de las columnas de asteriscos 'a' en uno.
+   // 2. Mientras la condición (a <= f) sea verdadera, ejecutar 
+   // las sentencias del bucle interno.
+   // 3. Luego de cada ciclo incrementar el valor de las columnas de 
+   // asteriscos 'a' en uno.
+   for (a = 1; a <= f; a++)
+   {
+     // Imprimir un asterisco por columna.
+     cout << "*";
+   }
+   // Imprimir un salto de línea (INTRO).
+   cout << endl;
+ }
+
+ // Incorporar una pausa en el programa.
+ system("pause");
+}
+`,
+programa2_30:`/*******************************************************
+WinConsolaPrograma_2_30
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+#include <cmath>
+
+using namespace std;
+
+// Función principal.
+void main()
+{
+ int ancho; // Entrada: Tamaño del ancho del rectángulo.	
+ int largo; // Entrada: Tamaño del largo del rectángulo.	
+ int f; // Auxiliar: Número de filas.
+ int a; // Salida: Número de columnas de asteriscos.	
+
+ // Leer el tamaño del triángulo rectángulo.
+ cout << "Ingrese el ancho del rectángulo: "; cin >> ancho;
+ cout << "Ingrese el largo del rectángulo: "; cin >> largo;
+
+ // Bucle externo for()
+ // Para:
+ // 1. Inicializar el valor de las filas 'f' en uno.
+ // 2. Mientras la condición (f <= largo) sea verdadera, ejecutar 
+ // las sentencias del bucle externo.
+ // 3. Luego de cada ciclo incrementar el valor de las filas 'f' en uno.
+ for (f = 1; f <= largo; f++)
+ {
+   // Bucle interno for()
+   // Para:
+   // 1. Inicializar el valor de las columnas de asteriscos 'a' en uno.
+   // 2. Mientras la condición (a <= ancho) sea verdadera, ejecutar 
+   // las sentencias del bucle interno.
+   // 3. Luego de cada ciclo incrementar el valor de las columnas de 
+   // asteriscos 'a' en uno.
+   for (a = 1; a <= ancho; a++)
+   {
+     // Imprimir un asterisco por columna.
+     cout << "*";
+   }
+   // Imprimir un salto de línea (INTRO).
+   cout << endl;
+ }
+
+ // Incorporar una pausa en el programa.
+ system("pause");
+}
+`,
+programa2_31:`/*******************************************************
+WinConsolaPrograma_2_31
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+#include <cmath>
+
+using namespace std;
+
+// Función principal.
+void main()
+{
+ int altura; // Entrada: Tamaño de la altura del triángulo.	
+ int f;      // Auxiliar: Número de filas.
+ int b;      // Salida: Número de columnas de espacios en blanco.
+ int a;      // Salida: Número de columnas de asteriscos.	
+
+ // Leer el valor de la altura del triángulo isósceles.
+ cout << "Ingrese la altura del triángulo isósceles: ";
+ cin >> altura;
+
+ // Bucle externo for()
+ // Para:
+ // 1. Inicializar el valor de las filas 'f' en uno.
+ // 2. Mientras la condición (f <= lado) sea verdadera, ejecutar 
+ // las sentencias del bucle externo.
+ // 3. Luego de cada ciclo incrementar el valor de las filas 'f' en uno.
+ for (f = 1; f <= altura; f++)
+ {
+   // Bucle interno for()
+   // Para:
+   // 1. Inicializar el valor de las columnas de blancos 'b' con
+   // el valor de la altura menos el número de filas.
+   // 2. Mientras la condición (b >= 1) sea verdadera, ejecutar 
+   // las sentencias del bucle interno.
+   // 3. Luego de cada ciclo decrementar el valor de las columnas de 
+   // blancos 'b' en uno.
+   for (b = altura - f; b >= 1; b--)
+   {
+     cout << " ";
+   }
+   // Bucle interno for()
+   // Para:
+   // 1. Inicializar el valor de las columnas de asteriscos 'a' en uno.
+   // 2. Mientras la condición (a <= 2 * f - 1) sea verdadera, ejecutar 
+   // las sentencias del bucle interno.
+   // 3. Luego de cada ciclo incrementar el valor de las columnas de 
+   // asteriscos 'a' en uno.
+   for (a = 1; a <= 2 * f - 1; a++)
+   {
+     // Imprimir un asterisco por columna.
+     cout << "*";
+   }
+   // Imprimir un salto de línea (INTRO).
+   cout << endl;
+ }
+
+ // Incorporar una pausa en el programa.
+ system("pause");
+}
+`,
+tabla2_24_1:`/*******************************************************
+WinConsolaCasoEstudio_2_24
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+#include <cmath>
+
+using namespace std;
+
+// Función principal.
+void main()
+{
+ int diagonalMayor; // Entrada: Tamaño de la diagonal mayor del rombo.	
+ int altura;        // Auxiliar: Altura que representa la mitad de la 
+                    // diagonal mayor del rombo.
+ int f;             // Auxiliar: Número de filas.
+ int b;             // Salida: Número de columnas de espacios en blanco.
+ int a;             // Salida: Número de columnas de asteriscos.	
+
+ // Leer el valor de la diagonal mayor del rombo.
+ cout << "Ingrese el valor de la diagonal mayor del rombo: ";
+ cin >> diagonalMayor;
+
+ // Si el valor de la diagonal mayor es impar
+ if (diagonalMayor % 2 != 0)
+ {
+   // Asignar a la variable 'altura' el valor de la  diagonal mayor
+   // más uno dividido para dos.
+   altura = (diagonalMayor + 1) / 2;
+ }
+ // Caso contrario, 
+ else
+ {
+   // Asignar a la variable 'altura' el valor de la mitad de la
+   // diagonal mayor. 
+   altura = diagonalMayor / 2;
+ }
+
+ // Bucle externo for()
+ // Para:
+ // 1. Inicializar el valor de las filas 'f' en uno.
+ // 2. Mientras la condición (f <= altura) sea verdadera, ejecutar 
+ // las sentencias del bucle externo.
+ // 3. Luego de cada ciclo incrementar el valor de las filas 'f' en uno.
+ for (f = 1; f <= altura; f++)
+ {
+   // Bucle interno for()
+   // Para:
+   // 1. Inicializar el valor de las columnas de blancos 'b' con
+   // el valor de la variable 'altura' menos el número de filas.
+   // 2. Mientras la condición (b >= 1) sea verdadera, ejecutar 
+   // las sentencias del bucle interno.
+   // 3. Luego de cada ciclo decrementar el valor de las columnas de 
+   // blancos 'b' en uno.
+   for (b = altura - f; b >= 1; b--)
+   {
+     // Imprimir un espacio en blanco por columna.
+     cout << " ";
+   }
+   // Bucle interno for()
+   // Para:
+   // 1. Inicializar el valor de las columnas de asteriscos 'a' en uno.
+   // 2. Mientras la condición (a <= 2 * f - 1) sea verdadera, ejecutar 
+   // las sentencias del bucle interno.
+   // 3. Luego de cada ciclo incrementar el valor de las columnas de 
+   // asteriscos 'a' en uno.
+   for (a = 1; a <= 2 * f - 1; a++)
+   {
+     // Imprimir un asterisco por columna.
+     cout << "*";
+   }
+   // Imprimir un salto de línea (INTRO).
+   cout << endl;
+ }
+
+ // Bucle externo for()
+ // Para:
+ // 1. Inicializar el valor de las filas ‘f’ con el valor de la variable 
+ // ‘altura’ menos uno.
+ // 2. Mientras la condición (f >= 1) sea verdadera, ejecutar 
+ // las sentencias del bucle externo.
+ // 3. Luego de cada ciclo decrementar el valor de las filas 'f' en uno.
+ for (f = altura - 1; f >= 1; f--)
+ {
+   // Bucle interno for()
+   // Para:
+   // 1. Inicializar el valor de las columnas de blancos 'b' con
+   // el valor de la altura menos el número de filas.
+   // 2. Mientras la condición (b >= 1) sea verdadera, ejecutar 
+   // las sentencias del bucle interno.
+   // 3. Luego de cada ciclo decrementar el valor de las columnas de 
+   // blancos 'b' en uno.
+   for (b = altura - f; b >= 1; b--)
+   {
+     cout << " ";
+   }
+   // Bucle interno for()
+   // Para:
+   // 1. Inicializar el valor de las columnas de asteriscos 'a' en uno.
+   // 2. Mientras la condición (a <= 2 * f - 1) sea verdadera, ejecutar 
+   // las sentencias del bucle interno.
+   // 3. Luego de cada ciclo incrementar el valor de las columnas de 
+   // asteriscos 'a' en uno.
+   for (a = 1; a <= 2 * f - 1; a++)
+   {
+     // Imprimir un asterisco por columna.
+     cout << "*";
+   }
+   // Imprimir un salto de línea (INTRO).
+   cout << endl;
+ }
+
+ // Incorporar una pausa en el programa.
+ system("pause");
+}
+`,
+tabla2_25_1:`/*******************************************************
+WinConsolaCasoEstudio_2_25
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+#include <cmath>
+
+using namespace std;
+
+// Función principal.
+void main()
+{
+ int diagonalMayor; // Entrada: Tamaño de la diagonal mayor del rombo.	
+ int altura;        // Auxiliar: Altura que representa la mitad de la 
+            // diagonal mayor del rombo.
+ int f;             // Auxiliar: Número de filas.
+ int b;             // Salida: Número de columnas de espacios en blanco.
+ int a;             // Salida: Número de columnas de asteriscos.	
+
+ // Leer el valor de la diagonal mayor del rombo.
+ cout << "Ingrese el valor de la diagonal mayor del rombo: ";
+ cin >> diagonalMayor;
+
+ // Si el valor de la diagonal mayor es impar
+ if (diagonalMayor % 2 != 0)
+ {
+   // Asignar a la variable 'altura' el valor de la diagonal mayor
+   // más uno dividido para dos.
+   altura = (diagonalMayor + 1) / 2;
+ }
+ // Caso contrario, 
+ else
+ {
+   // Asignar a la variable 'altura' el valor de la mitad de la
+   // diagonal mayor. 
+   altura = diagonalMayor / 2;
+ }
+
+ // Para:
+ // 1. Inicializar el valor de las columnas de asteriscos 'a' en uno.
+ // 2. Mientras la condición (a <= altura * 2 + 2) sea verdadera, 
+ // ejecutar las sentencias del bucle externo.
+ // 3. Luego de cada ciclo incrementar el valor de las columnas de 
+ // asteriscos 'a' en uno.
+ for (a = 1; a <= altura * 2 + 2; a++)
+ {
+   // Imprimir un asterisco por columna.
+   cout << "*";
+ }
+ // Imprimir un salto de línea o INTRO.
+ cout << endl;
+
+ // Bucle externo for()
+ // Para:
+ // 1. Inicializar el valor de las filas 'f' en uno.
+ // 2. Mientras la condición (f <= altura) sea verdadera, ejecutar 
+ // las sentencias del bucle externo.
+ // 3. Luego de cada ciclo incrementar el valor de las filas 'f' en uno.
+ for (f = 1; f <= altura; f++)
+ {
+   // Bucle interno for()
+   // Para:
+   // 1. Inicializar el valor de las columnas de asteriscos 'a' con
+   // el valor de (altura + 1) - f.
+   // 2. Mientras la condición (a >= 1) sea verdadera, ejecutar 
+   // las sentencias del bucle interno.
+   // 3. Luego de cada ciclo decrementar el valor de las columnas de 
+   // asteriscos 'a' en uno.
+   for (a = (altura + 1) - f; a >= 1; a--)
+   {
+     // Imprimir un asterisco por columna.
+     cout << "*";
+   }
+   // Bucle interno for()
+   // Para:
+   // 1. Inicializar el valor de las columnas de blancos 'b' con
+   // el valor de uno.
+   // 2. Mientras la condición (b <= 2 * f) sea verdadera, ejecutar 
+   // las sentencias del bucle interno.
+   // 3. Luego de cada ciclo incrementar el valor de las columnas de 
+   // blancos 'b' en uno.
+   for (b = 1; b <= 2 * f; b++)
+   {
+     // Imprimir un espacio en blanco por columna.
+     cout << " ";
+   }
+   // Bucle interno for()
+   // Para:
+   // 1. Inicializar el valor de las columnas de asteriscos 'a' con
+   // el valor de (altura + 1) - f.
+   // 2. Mientras la condición (a >= 1) sea verdadera, ejecutar 
+   // las sentencias del bucle interno.
+   // 3. Luego de cada ciclo decrementar el valor de las columnas de 
+   // asteriscos 'a' en uno.
+   for (a = (altura + 1) - f; a >= 1; a--)
+   {
+     // Imprimir un asterisco por columna.
+     cout << "*";
+   }
+   // Imprimir un salto de línea (INTRO).
+   cout << endl;
+ }
+
+ // Bucle externo for()
+ // Para:
+ // 1. Inicializar el valor de las filas ‘f’ con el valor de la variable 
+ // ‘altura’ menos uno.
+ // 2. Mientras la condición (f >= 1) sea verdadera, ejecutar 
+ // las sentencias del bucle externo.
+ // 3. Luego de cada ciclo decrementar el valor de las filas 'f' en uno.
+ for (f = altura - 1; f >= 1; f--)
+ {
+   // Bucle interno for()
+   // Para:
+   // 1. Inicializar el valor de las columnas de asteriscos 'a' con
+   // el valor de (altura + 1) - f.
+   // 2. Mientras la condición (a >= 1) sea verdadera, ejecutar 
+   // las sentencias del bucle interno.
+   // 3. Luego de cada ciclo decrementar el valor de las columnas de 
+   // asteriscos 'a' en uno.
+   for (a = (altura + 1) - f; a >= 1; a--)
+   {
+     // Imprimir un asterisco por columna.
+     cout << "*";
+   }
+   // Bucle interno for()
+   // Para:
+   // 1. Inicializar el valor de las columnas de blancos 'b' con
+   // el valor de uno.
+   // 2. Mientras la condición (b <= 2 * f) sea verdadera, ejecutar 
+   // las sentencias del bucle interno.
+   // 3. Luego de cada ciclo incrementar el valor de las columnas de 
+   // blancos 'b' en uno.
+   for (b = 1; b <= 2 * f; b++)
+   {
+     // Imprimir un espacio en blanco por columna.
+     cout << " ";
+   }
+   // Bucle interno for()
+   // Para:
+   // 1. Inicializar el valor de las columnas de asteriscos 'a' con
+   // el valor de (altura + 1) - f.
+   // 2. Mientras la condición (a >= 1) sea verdadera, ejecutar 
+   // las sentencias del bucle interno.
+   // 3. Luego de cada ciclo decrementar el valor de las columnas de 
+   // asteriscos 'a' en uno.
+   for (a = (altura + 1) - f; a >= 1; a--)
+   {
+     // Imprimir un asterisco por columna.
+     cout << "*";
+   }
+   // Imprimir un salto de línea (INTRO).
+   cout << endl;
+ }
+
+ // Para:
+ // 1. Inicializar el valor de las columnas de asteriscos 'a' en uno.
+ // 2. Mientras la condición (a <= altura * 2 + 2) sea verdadera, 
+ // ejecutar las sentencias del bucle externo.
+ // 3. Luego de cada ciclo incrementar el valor de las columnas de 
+ // asteriscos 'a' en uno.
+ for (a = 1; a <= altura * 2 + 2; a++)
+ {
+   // Imprimir un asterisco por columna.
+   cout << "*";
+ }
+ // Imprimir un salto de línea (INTRO).
+ cout << endl;	
+
+ // Incorporar una pausa en el programa.
+ system("pause");
+}
+`,
+tabla2_26_1:`/*******************************************************
+WinConsolaCasoEstudio_2_26
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+#include <cmath>
+
+// Macros o sentencias de preprocesador.
+#define PI 3.14159265
+
+using namespace std;
+
+// Función principal.
+void main()
+{
+ // Declaración de variables.
+ long n;      // Entrada: número de términos de la serie.
+ float x;     // Entrada: valor del ángulo.
+ float serie; // Salida: resultado de la serie aproximada.
+
+ long i;      // Auxiliar: contador.
+ long j;      // Auxiliar: contador.
+ float sum;   // Auxiliar: acumulador de sumas.
+ float prod;  // Auxiliar: acumulador de productos.
+
+ // Imprimir el mensaje de información: Serie del Seno.
+ cout << "Serie de la Función Exponencial y = e^x." << endl << endl;
+
+ // Leer el número de términos de la serie, utilizando la variable 'n'.
+ cout << "Ingrese el número de términos: "; cin >> n;
+ // Leer el valor del exponente de la función exponencial, utilizando 
+ // la variable 'x'.
+ cout << "Ingrese el valor del exponente 'x': "; cin >> x;	
+
+ // Inicializar el acumulador de sumas 'sum' con el valor de cero.
+ sum = 0;
+ // Para el bucle externo, hacer: 
+ // 1. Inicializar el valor del contador 'i' en cero.
+ // 2. Mientras el valor de la condición (i <= n - 1) sea verdadera, 
+ //    ejecutar las sentencias del bucle externo.
+ // 3. Luego de cada iteración incrementar en uno el valor del 
+ //    contador 'i'.
+ for (i = 0; i <= n - 1; i++)
+ {
+   // Inicializar el acumulador de productos 'prod' con el valor de uno.
+   prod = 1;
+   // Para el bucle interno, hacer: 
+   // 1. Inicializar el valor del contador 'j' en uno.
+   // 2. Mientras el valor de la condición (j <= i) sea verdadera  
+   //    ejecutar las sentencias del bucle interno.
+   // 3. Luego de cada iteración incrementar en uno el valor del 
+   //    contador 'j'.
+   for (j = 1; j <= i; j++)
+   {
+     // Asignar al acumulador 'prod' lo que tiene multiplicado por el 
+     // valor del contador 'j'.
+     prod = prod * j;
+   }
+   // Asignar al acumulador 'sum' lo que tiene sumado más el valor del 
+   // término e-nésimo de la serie calculado en cada iteración.
+   sum = sum + pow(x, i) / prod;
+ }
+
+ // Asignar a la variable serie el valor del acumulador 'sum'.
+ serie = sum;
+
+ // Imprimir el valor de la serie aproximada.
+ cout << "Serie: " << serie << endl;
+
+ // Incorporar una pausa en el programa.
+ system("pause");
+}
+`,
+tabla2_27_1:`/*******************************************************
+WinConsolaCasoEstudio_2_27
+*******************************************************/
+
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+#include <cmath>
+
+// Macros o sentencias de preprocesador.
+#define PI 3.14159265
+
+using namespace std;
+
+// Función principal.
+void main()
+{
+ // Declaración de variables.
+ long n;      // Entrada: número de términos de la serie.
+ float x;     // Entrada: valor del ángulo.
+ float serie; // Salida: resultado de la serie aproximada.
+
+ long i; // Auxiliar: contador.
+ long j; // Auxiliar: contador.
+ float sum; // Auxiliar: acumulador de sumas.
+ float prod; // Auxiliar: acumulador de productos.
+
+ // Imprimir el mensaje de información: Serie del Seno.
+ cout << "Serie del Seno." << endl << endl;
+
+ // Leer el número de términos de la serie, utilizando la variable 'n'.
+ cout << "Ingrese el número de términos: "; cin >> n;
+ // Leer el valor del ángulo en grados de la función seno, utilizando 
+ // la variable 'x'.
+ cout << "Ingrese el valor de x [grados]: "; cin >> x;
+
+ // Convertir el valor del ángulo 'x' de grados a radianes.
+ x = x * PI / 180;
+
+ // Inicializar el acumulador de sumas 'sum' con el valor de cero.
+ sum = 0;
+ // Para el bucle externo, hacer: 
+ // 1. Inicializar el valor del contador 'i' en cero.
+ // 2. Mientras el valor de la condición (i <= n - 1) sea verdadera, 
+ //    ejecutar las sentencias del bucle externo.
+ // 3. Luego de cada iteración incrementar en uno el valor del 
+ //    contador 'i'.
+ for (i = 0; i <= n - 1; i++)
+ {
+   // Inicializar el acumulador de productos 'prod' con el valor de uno.
+   prod = 1;
+   // Para el bucle interno, hacer: 
+   // 1. Inicializar el valor del contador 'j' en uno.
+   // 2. Mientras el valor de la condición (j <= 2 * i + 1) sea verdadera  
+        //    ejecutar las sentencias del bucle interno.
+   // 3. Luego de cada iteración incrementar en uno el valor del 
+   //    contador 'j'.
+   for (j = 1; j <= 2 * i + 1; j++)
+   {
+     // Asignar al acumulador 'prod' lo que tiene multiplicado por el 
+     // valor del contador 'j'.
+     prod = prod * j;
+   }
+   // Asignar al acumulador 'sum' lo que tiene sumado más el valor del 
+   // término e-nésimo de la serie calculado en cada iteración.
+   sum = sum + (pow(-1, i) * pow(x, 2 * i + 1)) / prod;
+ }
+
+ // Asignar a la variable serie el valor del acumulador 'sum'.
+ serie = sum;
+
+ // Imprimir el valor de la serie aproximada.
+ cout << "Serie: " << serie << endl;
+
+ // Incorporar una pausa en el programa.
+ system("pause");
+}
+`,
+test6:`if (velocidad > 80)
+consumo = 10.00;
+else if (velocidad > 100)
+consumo = 12.00;
+else if (velocidad > 120)
+consumo = 15.00;
+else if (velocidad > 140)
+consumo = 20.00;
+`,
+test7:`      int i, j, k;
+
+for (i = 3; i > 0; i--)
+{
+  for (j = 1; j <= i; j++)
+  {
+    for (k = i; k >= j; k--)
+    {
+      printf("%d, %d, %d\n", i, j, k);
+    }			
+  }
+}
+`,
+
+    },
+  {
+    tabla2_19_3: [
+      {Objeto:['233'],Propiedad:['233'],Valor:['0'],i:['0'],c:[' '],R:[' '],ultimo:[' ']},
+      {Objeto:[' '],Propiedad:['116'],Valor:['0+1×10<sup>0</sup>=1'],i:['1'],c:['116'],R:['1'],ultimo:['116!=0 (V)']},
+      {Objeto:[' '],Propiedad:['58'],Valor:['1+0×10<sup>1</sup>=1'],i:['2'],c:['58'],R:['0'],ultimo:['58!=0 (V)']},
+      {Objeto:[' '],Propiedad:['29'],Valor:['1+0×10<sup>2</sup>=1'],i:['3'],c:['29'],R:['0'],ultimo:['29!=0 (V)']},
+      {Objeto:[' '],Propiedad:['14'],Valor:['1+1×10<sup>3</sup>=1001'],i:['4'],c:['14'],R:['1'],ultimo:['14!=0 (V)']},
+      {Objeto:[' '],Propiedad:['7'],Valor:['1001+0×10<sup>4</sup>=1001'],i:['5'],c:['7'],R:['0'],ultimo:['7!=0 (V)']},
+{Objeto:[' '],Propiedad:['3'],Valor:['1001+1×10<sup>5</sup>=101001'],i:['6'],c:['3'],R:['1'],ultimo:['3!=0 (V)']},
+{Objeto:[' '],Propiedad:['1'],Valor:['101001+1×10<sup>6</sup>=1101001'],i:['7'],c:['1'],R:['1'],ultimo:['1!=0 (V)']},
+    ],
+
+  }
+  ]
+
       this.introduccion=[{
         f1:
         `

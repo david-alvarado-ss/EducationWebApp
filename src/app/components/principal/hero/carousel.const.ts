@@ -7,7 +7,7 @@ export const CAROUSEL_DATA_ITEMS: ICarouselItem[] = [
             first: 'APLICACIÓN ',
             second: 'MULTIMEDIA EDUCATIVA'
         },
-        subtitle: 'COMPGRAF',
+        subtitle: 'C++',
         link: '/',
         image: './assets/images/principal/4.jpg'
     },
