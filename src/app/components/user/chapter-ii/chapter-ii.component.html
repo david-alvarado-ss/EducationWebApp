@@ -117,22 +117,1286 @@
                 </tbody>
               </TABLE><br>
               <h5><strong>Programa 2.7: </strong>Código del programa .</h5><br>
-              <pre><code [highlight]="prefTab[0].programa1"  [lineNumbers]="true"></code></pre>
+              <pre><code [highlight]="prefTab[0].programa1"  [lineNumbers]="true"></code></pre><br>
               <p>La Ejecución 2.7, correspondiente a la salida del programa, muestra que el número 6 es par.</p>
+              <h5><strong>Ejecución 2.7: </strong>Salida del programa .</h5>
+              <img src="./assets/images/Capitulos/II/media/a1.png" style="display:block; margin:auto; "><br>
+              <h4><strong>Ejercicio 2.8: </strong> Escribir un programa que permita ver si una nota entre 0 y 10 ingresada por teclado es mayor o igual que siete y se imprima un mensaje de aprobado.</h4>
+              <TABLE BORDER WIDTH="100%" CELLPADDING=1 CELLSPACING=0 class="mat-elevation-z8">
+                <TR>
+                  <TH>N°</TH>
+                  <TH>Algoritmo en Pseudocódigo</TH>
+                  <TH>Algoritmo en Lenguaje C/C++</TH>
+                </TR>
+                <tbody *ngFor="let item of prefTab[0].tablaDatos2">
+                <TR style="text-align: left">
+                  <TD>
+                    <ul *ngFor="let i of item.Numero" style="list-style-type: none;">
+                      <li>{{i}}</li>
+                    </ul>
+                  </TD>
+                  <TD>
+                    <ul *ngFor="let i of item.Pseudo" style="list-style-type: none;">
+                      <li>{{i}}</li>
+                    </ul>
+                  </TD>
+                  <TD>
+                    <ul *ngFor="let i of item.Codigo" style="list-style-type: none;">
+                      <li>{{i}}</li>
+                    </ul>
+                  </TD>
+                </TR>
+                </tbody>
+              </TABLE><br>
+              <h5><strong>Programa 2.8: </strong>Código del programa .</h5><br>
+              <pre><code [highlight]="prefTab[0].programa2"  [lineNumbers]="true"></code></pre><br>
+              <p>La Ejecución 2.8, correspondiente a la salida del programa, muestra que el valor de la nota igual a 8 corresponde al mensaje de Aprobado.</p>
+              <h5><strong>Ejecución 2.8: </strong>Salida del programa .</h5>
+              <img src="./assets/images/Capitulos/II/media/a2.png" style="display:block; margin:auto; "><br>
+              <h3><strong>Caso de Estudio 2.5: Divisibilidad entre dos Números. </strong></h3>
+              <h4><strong>A)   Problema </strong></h4>
+              <p>Escribir un programa que permita ver si un número es divisible para otro.</p>
+              <h4><strong>B)   Análisis </strong></h4>
+              <p>Claramente, se puede ver que las entradas del problema son los dos números que se ingresan para analizar la divisibilidad entre ellos. Hay una variable auxiliar que se va a utilizar para calcular el módulo de la división entre los dos números ingresados, de tal manera que si el valor del módulo es cero los dos números son divisibles entre sí. La única salida requerida es un mensaje de impresión que indica si el primer número es divisible para el segundo número.</p>
+              <h4><strong>B.1)   Requerimiento de los Datos </strong></h4>
+              <h4><strong>Entradas del Problema </strong></h4>
+              <p>num1	&nbsp; &nbsp;/* primer número */ <br> num2	&nbsp; &nbsp;/* segundo número */ </p>
+              <h4><strong>Auxiliares del Problema </strong></h4>
+              <p>num3	&nbsp; &nbsp;/* módulo de la división */ </p>
+              <h4><strong>Salidas del Problema </strong></h4>
+              <p>mensaje	&nbsp; &nbsp;/* mensaje que indica que el primer número es divisible para el segundo número */ </p>
+              <h4><strong>Formulas Relevantes </strong></h4>
+              <p>n3=n1 MOD n2	&nbsp; &nbsp;(1)	/* Fórmula del módulo de una división entre dos números */ </p>
+              <h4><strong>B.2)   Diagrama de Entrada-Salida </strong></h4>
+              <p>En la Figura 2.5.1 se muestra el diagrama de Entrada-Salida del programa donde se identifican y se diagraman las entradas, salidas y auxiliares del problema como son: a) Entradas: la variable ‘num1’ y la variable ‘num2’; b) Salidas: Un mensaje de información que indica que el primer número es divisible para el segundo número; c) Auxiliares: la variable ‘num3’;</p>
+              <img src="./assets/images/Capitulos/II/media/a3.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Figura 2.5.1. </strong>Diagrama de Entrada-Salida del Programa.</h5>
+              <h4><strong>C)   Diseño </strong></h4>
+              <p>Una vez que se conoce las entradas, las auxiliares y las salidas del problema, se deben listar los pasos necesarios para resolver el problema, es decir, el algoritmo.</p>
+              <h4><strong>Algoritmo </strong></h4>
+              <p>1.	Leer el primer número.</p>
+              <p>2.	Leer el segundo número.</p>
+              <p>3.	Leer el lado 3 del triángulo.</p>
+              <p>4.	Calcular el módulo de la división entre los dos números ingresados, utilizando la ecuación (1), donde se asigna en la variable ‘num3’ el módulo de la división entre ‘num1’ y ‘num2’.</p>
+              <p>5.	Si el valor de la variable ‘num3’ es igual a cero.</p>
+              <p> &nbsp; &nbsp; 5.1.	Imprimir el mensaje que el número 1 es divisible para el número 2.</p>
+              <h4><strong>D)   Implementación </strong></h4>
+              <p>Para implementar la solución, se debe escribir el algoritmo como un programa de C/C++ que contenga toda la información necesaria para completar la traducción a lenguaje máquina. En la Tabla 2.5.1 se muestra el código del programa en C/C++.</p>
+              <h5><strong>Tabla 2.5.1. </strong>Programa que permita ver si un número es divisible para otro.</h5>
+              <pre><code [highlight]="prefTab[0].programa3"  [lineNumbers]="true"></code></pre><br>
+              <h4><strong>E) Pruebas </strong></h4>
+              <p>La Tabla 2.5.2 muestra un ejemplo de la salida del programa, donde se puede ver que los resultados del programa tienen sentido, comparando estos resultados con un análisis manual de datos aplicando conceptos de divisibilidad.</p>
+              <h5><strong>Tabla 2.5.2. </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/II/media/a4.png" style="display:block; margin:auto; "><br>
+
             </mat-tab>
             <mat-tab  label="2.3.2. La sentencia if-else">
+              <h2>La sentencia if-else</h2>
+              <p>La sentencia if-else permite escoger entre dos instrucciones o acciones diferentes, es decir, se elige una sentencia y la otra no se la toma en cuenta. El formato de esta sentencia tiene la siguiente sintaxis:</p>
+              <h4><strong>Sintaxis 1:</strong></h4>
+              <pre><code [highlight]="prefTab[0].sintaxis3"  [lineNumbers]="true"></code></pre><br>
+              <p>expresión &nbsp; &nbsp; Expresión lógica que determina si la sentencia o acción se ha de ejecutar.</p>
+              <p>sentencia1 &nbsp; &nbsp; La sentencia o acción se ejecuta si la expresión lógica es verdadera.</p>
+              <p>sentencia2 &nbsp; &nbsp; La sentencia o acción se ejecuta si la expresión lógica es falsa.</p>
+              <p><strong>Nota:</strong>En esta sintaxis no es necesario utilizar llaves ya que se tiene una sola sentencia o instrucción, tanto en el ‘if’ como en el ‘else’.</p>
+              <h4><strong>Sintaxis 2:</strong></h4>
+              <pre><code [highlight]="prefTab[0].sintaxis4"  [lineNumbers]="true"></code></pre><br>
+              <p>expresión &nbsp; &nbsp; Expresión lógica que determina si la sentencia o acción se ha de ejecutar.</p>
+              <p>sentencia1 &nbsp; &nbsp; La sentencia o acción se ejecuta si la expresión lógica es verdadera.</p>
+              <p>sentencia2 &nbsp; &nbsp; La sentencia o acción se ejecuta si la expresión lógica es falsa.</p>
+              <p><strong>Nota:</strong>En esta sintaxis es necesario utilizar llaves ya que se tienen varias sentencias o instrucciones, tanto en el ‘if’ como en el ‘else’.</p>
+              <p>Considerando los operadores relacionales explicados en la sección 1.7, en la Tabla 2.1, se presenta el operador relacional contrario correspondiente a la sentencia if-else. Cabe indicar que el operador relacional del else se evalúa automáticamente y no es necesario colocar la expresión contraria, pero si es necesario entender cómo trabaja esta sentencia de decisión, para evitar confusiones y posibles errores de programación.</p>
+              <h5><strong>Tabla 2.1. </strong>Operador relacional contrario de la sentencia if-else.</h5>
+              <TABLE BORDER WIDTH="100%" CELLPADDING=1 CELLSPACING=0 class="mat-elevation-z8">
+                <TR>
+                  <TH>if</TH>
+                  <TH>else</TH>
+                </TR>
+                <tbody *ngFor="let item of prefTab[0].tablaDatos3">
+                <TR style="text-align: left">
+                  <TD>
+                    <ul *ngFor="let i of item.if" style="list-style-type: none;">
+                      <li>{{i}}</li>
+                    </ul>
+                  </TD>
+                  <TD>
+                    <ul *ngFor="let i of item.else" style="list-style-type: none;">
+                      <li>{{i}}</li>
+                    </ul>
+                  </TD>
+                </TR>
+                </tbody>
+              </TABLE><br>
+              <h4><strong>Ejercicio 2.9: </strong>Escribir un programa que permita ver si un número es par o impar, para lo cual se debe utilizar el operador de módulo, que permite obtener el resto de una división entera.</h4>
+              <TABLE BORDER WIDTH="100%" CELLPADDING=1 CELLSPACING=0 class="mat-elevation-z8">
+                <TR>
+                  <TH>N°</TH>
+                  <TH>Algoritmo en Pseudocódigo</TH>
+                  <TH>Algoritmo en Lenguaje C/C++</TH>
+                </TR>
+                <tbody *ngFor="let item of prefTab[0].tablaDatos4">
+                <TR style="text-align: left">
+                  <TD>
+                    <ul *ngFor="let i of item.Numero" style="list-style-type: none;">
+                      <li>{{i}}</li>
+                    </ul>
+                  </TD>
+                  <TD>
+                    <ul *ngFor="let i of item.Pseudo" style="list-style-type: none;">
+                      <li>{{i}}</li>
+                    </ul>
+                  </TD>
+                  <TD>
+                    <ul *ngFor="let i of item.Codigo" style="list-style-type: none;">
+                      <li>{{i}}</li>
+                    </ul>
+                  </TD>
+                </TR>
+                </tbody>
+              </TABLE><br>
+              <h5><strong>Programa 2.9:</strong> Código del programa.</h5>
+              <pre><code [highlight]="prefTab[0].programa4"  [lineNumbers]="true"></code></pre><br>
+              <p>La Ejecución 2.9.2, correspondiente a la salida del programa, muestra que el número 8 es par y la Ejecución 2.9.2, muestra que el número 7 es impar.</p>
+              <h5><strong>Ejecución 2.9.1.:</strong> Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/II/media/a5.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Ejecución 2.9.2.:</strong> Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/II/media/a6.png" style="display:block; margin:auto; "><br>
+              <h4><strong>Ejercicio 2.10:</strong> Escribir un programa que permita calcular el mayor de dos números leídos desde el teclado y visualizarlo en pantalla.</h4>
+              <TABLE BORDER WIDTH="100%" CELLPADDING=1 CELLSPACING=0 class="mat-elevation-z8">
+                <TR>
+                  <TH>N°</TH>
+                  <TH>Algoritmo en Pseudocódigo</TH>
+                  <TH>Algoritmo en Lenguaje C/C++</TH>
+                </TR>
+                <tbody *ngFor="let item of prefTab[0].tablaDatos5">
+                <TR style="text-align: left">
+                  <TD>
+                    <ul *ngFor="let i of item.Numero" style="list-style-type: none;">
+                      <li>{{i}}</li>
+                    </ul>
+                  </TD>
+                  <TD>
+                    <ul *ngFor="let i of item.Pseudo" style="list-style-type: none;">
+                      <li>{{i}}</li>
+                    </ul>
+                  </TD>
+                  <TD>
+                    <ul *ngFor="let i of item.Codigo" style="list-style-type: none;">
+                      <li>{{i}}</li>
+                    </ul>
+                  </TD>
+                </TR>
+                </tbody>
+              </TABLE><br>
+              <h5><strong>Programa 2.10:</strong> Código del programa.</h5>
+              <pre><code [highlight]="prefTab[0].programa5"  [lineNumbers]="true"></code></pre><br>
+              <p>En la salida de la Ejecución 2.10.1 se puede ver que al ingresar primero el número 84 y luego el número 23, el programa presenta al número 84 como el mayor entre los dos números. De manera similar, en la salida de la Ejecución 2.10.2 se puede ver que al ingresar primero el número 23 y luego el número 84, el programa presenta nuevamente al número 84 como el mayor entre los dos números, por lo que el algoritmo del programa logra su propósito que es encontrar el número mayor entre dos números.</p>
+              <h5><strong>Ejecución 2.10.1.:</strong> Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/II/media/a7.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Ejecución 2.10.2.:</strong> Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/II/media/a8.png" style="display:block; margin:auto; "><br>
+              <h3><strong>Caso de Estudio 2.6: Evaluar una Función Definida por Partes. </strong></h3>
+              <h4><strong>A)   Problema </strong></h4>
+              <p>Dada la función definida por partes y=f(x), calcular el valor de ‘y’ para un valor dado de ‘x’ y visualizarlo en pantalla.</p>
+              <img src="./assets/images/Capitulos/II/media/a9.png" style="display:block; margin:auto; "><br>
+              <p>Los dos intervalos de la función se muestran en la Figura 2.6.1 que son: <br>  y=-x+3;  I_1:x < 3; <br> 
+                𝑦=𝑥−3;  𝐼_2:𝑥≥3</p>
+              <img src="./assets/images/Capitulos/II/media/a10.png" style="display:block; margin:auto; "><br>
+              
+              <h4><strong>B)   Análisis </strong></h4>
+              <p>Claramente, se puede ver que la entrada del problema es el valor de ‘x’. Hay una salida requerida: el valor de f(x)=y. Partiendo de un conocimiento básico de Álgebra, se sabe que hay dos intervalos y dos funciones lineales sobre las cuales se va a evaluar en un punto a la función definida por partes. Las fórmulas requeridas se incluyen en el requerimiento de los datos.</p>
+              <h4><strong>B.1)   Requerimiento de los Datos </strong></h4>
+              <h4><strong>Entradas del Problema </strong></h4>
+              <p>x	&nbsp; &nbsp;/* valor de ‘x’ de la función */ </p>
+              <h5><strong>Figura 2.6.1. </strong>Intervalos de la función.</h5>
+              <h4><strong>Salidas del Problema </strong></h4>
+              <p>y	&nbsp; &nbsp;/* valor de ‘y’ de la función */ </p>
+              <h4><strong>Formulas Relevantes </strong></h4>
+              <p>y=-x+3; x < 3	&nbsp; &nbsp;(1)	/* Función lineal en el intervalo 1 */ <br> y=x-3;x ≥ 3 &nbsp; &nbsp; /* Función lineal en el intervalo 2 */</p>
+              <h4><strong>B.2)   Diagrama de Entrada-Salida </strong></h4>
+              <p>En la Figura 2.6.2 se muestra el diagrama de Entrada-Salida del programa donde se identifican y se diagraman las entradas y salidas del problema como son: a) Entradas: la variable ‘x’ (variable independiente); b) Salidas: la variable ‘y’ (variable dependiente).</p>
+              <img src="./assets/images/Capitulos/II/media/a11.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Figura 2.6.2. </strong>Diagrama de Entrada-Salida del Programa.</h5>
+              <h4><strong>C)   Diseño </strong></h4>
+              <p>Una vez que se conoce las entradas y las salidas del problema, se deben listar los pasos necesarios para resolver el problema, es decir, el algoritmo.</p>
+              <h4><strong>Algoritmo </strong></h4>
+              <p>1.	Leer el valor de ‘x’.</p>
+              <p>2. Si el valor de 'x' está dentro del intervalo I1: x<3.</p>
+              <p> &nbsp; &nbsp; 2.1. 	Evaluar a la función f(x)=-x+3 en un punto 'x'.</p>
+              <p>3.	Caso contrario, el valor de 'x' está dentro del intervalo I2: x≥3.</p>
+              <p> &nbsp; &nbsp; 3.1. 	Evaluar a la función f(x)=x-3 en un punto 'x'.</p>
+              <p>4.	Imprimir el valor de la variable ‘x’ y de la variable ‘y’.</p>
+              
+              
+              <h4><strong>D)   Implementación </strong></h4>
+              <p>Para implementar la solución, se debe escribir el algoritmo como un programa de C/C++ que contenga toda la información necesaria para completar la traducción a lenguaje máquina. En la Tabla 2.6.1 se muestra el código del programa en C/C++.</p>
+              <h5><strong>Tabla 2.6.1. </strong>Programa que evalúa una función definida por partes.</h5>
+              <pre><code [highlight]="prefTab[0].programa6"  [lineNumbers]="true"></code></pre><br>
+              <h4><strong>E) Pruebas </strong></h4>
+              <p>La Tabla 2.6.2 y la Tabla 2.6.3 muestran dos ejemplos de la salida del programa, donde se puede ver que los resultados del programa tienen sentido, comparando estos resultados con los datos devueltos por una calculadora.</p>
+              <p>En la salida de la Tabla 2.5.2 se puede ver que al ingresar el valor de ‘x’ igual a 2, se evalúa la función en el primer intervalo. De manera similar, en la salida Tabla 2.5.3 se puede ver que al ingresar el valor de ‘x’ igual a 7, se evalúa la función en el segundo intervalo, por lo que el algoritmo del programa logra su propósito que es evaluar una función definida por partes o a trozos.</p>
+              <h5><strong>Tabla 2.6.2. </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/II/media/a12.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Tabla 2.6.3. </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/II/media/a13.png" style="display:block; margin:auto; "><br>
+              <h3><strong>Caso de Estudio 2.7: Encontrar el Perímetro, el Semi-perímetro y el Área de un Triángulo. </strong></h3>
+              <h4><strong>A)   Problema </strong></h4>
+              <p>Escribir un programa para calcular e imprimir el perímetro, el semi-perímetro y el área de un triángulo. Además, validar la existencia de un triángulo. (Ver Figura 2.7.1)</p>
+              <img src="./assets/images/Capitulos/II/media/a14.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Figura 2.7.1. </strong>El Triángulo y sus fórmulas.</h5>
+              
+              <h4><strong>B)   Análisis </strong></h4>
+              <p>Claramente, se puede ver que las entradas del problema son los tres lados del triángulo. Hay tres salidas requeridas: el perímetro, el semi-perímetro y el área del triángulo. Partiendo de un conocimiento básico de geometría, se sabe que hay una relación entre los tres lados del triángulo con el perímetro, con el semi-perímetro y con el área de la figura geométrica. Las fórmulas requeridas se incluyen en el requerimiento de los datos. En esta versión del programa del triángulo se considera la validación de la existencia de un triángulo cuyo Teorema expresa que un triángulo cualquiera existe si y sólo si la suma de cualquiera de sus dos lados es mayor que el tercer lado: (a+b>c)∧(a+c>b)∧(b+c>a).</p>
+              <h4><strong>B.1)   Requerimiento de los Datos </strong></h4>
+              <h4><strong>Entradas del Problema </strong></h4>
+              <p>a	&nbsp; &nbsp;/* lado 1 del triángulo */ </p>
+              <p>b	&nbsp; &nbsp;/* lado 2 del triángulo */ </p>
+              <p>c	&nbsp; &nbsp;/* lado 3 del triángulo */ </p>
+              
+              <h4><strong>Salidas del Problema </strong></h4>
+              <p>perimetro	&nbsp; &nbsp;/* perímetro del triángulo */ </p>
+              <p>s	&nbsp; &nbsp;/* semi-perímetro del triángulo */ </p>
+              <p>area	&nbsp; &nbsp;/* área del triángulo */ </p>
+              <h4><strong>Formulas Relevantes </strong></h4>
+              <img src="./assets/images/Capitulos/II/media/a15.png" style="display:block; margin:auto; "><br>
+              <h4><strong>B.2)   Diagrama de Entrada-Salida </strong></h4>
+              <p>En la Figura 2.7.1 se muestra el diagrama de Entrada-Salida del programa donde se identifican y se diagraman las entradas y salidas del problema como son: a) Entradas: la variable ‘a’ (lado 1), la variable ‘b’ (lado 2), la variable ‘c’ (lado 3); b) Salidas: la variable ‘s’ (semiperímetro), la variable ‘perimetro’, la variable ‘area’. </p>
+              <img src="./assets/images/Capitulos/II/media/a16.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Figura 2.7.2. </strong>Diagrama de Entrada-Salida del Programa.</h5>
+              <h4><strong>C)   Diseño </strong></h4>
+              <p>Una vez que se conoce las entradas y las salidas del problema, se deben listar los pasos necesarios para resolver el problema, es decir, el algoritmo.</p>
+              <h4><strong>Algoritmo </strong></h4>
+              <p>1.	Leer el lado 1 del triángulo.</p>
+              <p>2.	Leer el lado 2 del triángulo.</p>
+              <p>3.	Leer el lado 3 del triángulo.</p>
+              <p>4. Si la suma de cualquiera de los dos lados es mayor que el tercero, es decir, si se cumple la condición del teorema: (a+b>c)∧(a+c>b)∧(b+c>a).</p>
+              <p> &nbsp; &nbsp; 4.1. 	Calcular el perímetro.</p>
+              <p> &nbsp; &nbsp; &nbsp; 4.1.1. 	Asignar la suma de los tres lados del triángulo a la variable ‘perimetro’.</p>
+              <p> &nbsp; &nbsp; 4.2. 	Calcular el perímetro.</p>
+              <p> &nbsp; &nbsp; &nbsp; 4.2.1. 	Asignar la suma de los tres lados del triángulo a la variable ‘perimetro’.</p>
+              <p> &nbsp; &nbsp; 4.3. 	Calcular el semi-perímetro.</p>
+              <p> &nbsp; &nbsp; &nbsp; 4.3.1. 	Asignar la suma de los tres lados del triángulo a la variable ‘semiperimetro’.</p>
+              <p> &nbsp; &nbsp; 4.4. 	Calcular el area.</p>
+              <p> &nbsp; &nbsp; &nbsp; 4.4.1. 	4.4.1.	Asignar el valor de la raíz cuadrada del semi-perímetro multiplicado por la diferencia entre el semi-perímetro por cada uno de los lados del triángulo, a la variable ‘area’.</p>
+              <p> &nbsp; &nbsp; 4.5. 	Imprimir el valor de la variable ‘perimetro’, de la variable ‘semiperimetro’ y de la variable ‘area’.</p>
+              
+              <p>5.	Caso contrario, se niega la condición del teorema de existencia de un triángulo, es decir: !(a+b>c)∧(a+c>b)∧(b+c>a).</p>
+              <p> &nbsp; &nbsp; 5.1. 	5.1.	Imprimir el mensaje de error que el triángulo no existe.</p>
+                      
+              <h4><strong>D)   Implementación </strong></h4>
+              <p>Para implementar la solución, se debe escribir el algoritmo como un programa de C/C++ que contenga toda la información necesaria para completar la traducción a lenguaje máquina. En la Tabla 2.7.1 se muestra el código del programa en C/C++.</p>
+              <h5><strong>Tabla 2.7.1. </strong>Programa que calcula el perímetro, el semi-perímetro y el área del triángulo.</h5>
+              <pre><code [highlight]="prefTab[0].programa7"  [lineNumbers]="true"></code></pre><br>
+              <h4><strong>E) Pruebas </strong></h4>
+              <p>La Tabla 2.7.2, la Tabla 2.7.3 y la Tabla 2.7.4 muestran tres ejemplos de la salida del programa, donde se puede ver que los resultados del programa tienen sentido, comparando estos resultados con los datos devueltos por una calculadora.</p>
+              <p>En la salida de la Tabla 2.7.2 se puede ver que, al ingresar los valores de 3, 4 y 5 en los tres lados obtenemos un triángulo rectángulo donde se puede calcular los valores del perímetro, semi-perímetro y del área de dicho triángulo. De manera similar, en la salida de la Tabla 2.7.3 se puede ver que, al ingresar los valores de 3, 3 y 3 en los tres lados obtenemos un triángulo equilátero donde se puede calcular los valores del perímetro, semi-perímetro y del área de dicho triángulo. Finalmente, en la salida de la Tabla 2.7.4 se puede ver que, al ingresar los valores de 1, 2 y 3 en los tres lados obtenemos un triángulo que no existe donde no se puede calcular los valores del perímetro, semi-perímetro y del área de dicho triángulo.</p>
+              <h5><strong>Tabla 2.7.2. </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/II/media/a17.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Tabla 2.7.3. </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/II/media/a18.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Tabla 2.7.3. </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/II/media/a19.png" style="display:block; margin:auto; "><br>
+
+              <h3><strong>Caso de Estudio 2.8: Encontrar la aceleración de dos objetos conectados mediante una cuerda. </strong></h3>
+              <h4><strong>A)   Problema </strong></h4>
+              <p>Escribir un programa para calcular e imprimir la magnitud de la aceleración (‘a’) de dos objetos conectados mediante una cuerda, la tensión (‘T’) en la cuerda y la normal (‘n’) de la masa m_2, donde una bola de masa m_1 y un bloque de masa m_2 se unen mediante una cuerda ligera que pasa sobre una polea sin fricción de masa despreciable, como se muestra en la Figura 2.8.1. El bloque se encuentra sobre un plano inclinado sin fricción de ángulo θ (‘theta’) en grados. A continuación, se presentan las ecuaciones que calculan los elementos solicitados.</p>
+              <img src="./assets/images/Capitulos/II/media/a20.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Figura 2.8.1. </strong>(a) Dos objetos conectados mediante una cuerda ligera sobre una polea sin friccion. (b) Diagrama de cuerpo libre para la bola. (c) Diagrama de cuerpo libre para el bloque (Serway, R., Jewett, J., 2005).</h5>
+              
+              <h4><strong>B)   Análisis </strong></h4>
+              <p>Claramente, se puede ver que las entradas del problema son la masa m_1, la masa m_2 y el ángulo θ (‘theta’) en grados. Hay tres salidas requeridas: la aceleración, la tensión y la normal (‘n’) de la masa m_2. Partiendo de un conocimiento básico de Física, se sabe que hay una relación entre la masa m_1, la masa m_2 y el ángulo θ (‘theta’) del plano inclinado con la acelaración, la tensión y la normal. Las fórmulas requeridas se incluyen en el requerimiento de los datos.</p>
+              <h4><strong>B.1)   Requerimiento de los Datos </strong></h4>
+              <h4><strong>Constantes del Problema </strong></h4>
+              <p>PI = 3.141596</p>
+              <p>g = 9.80665</p>
+              <h4><strong>Entradas del Problema </strong></h4>
+              <p>m1	&nbsp; &nbsp;/* primera masa */ </p>
+              <p>m2	&nbsp; &nbsp;/* segunda masa */ </p>
+              <p>theta	&nbsp; &nbsp;/* ángulo del plano inclinado */ </p>
+              
+              <h4><strong>Salidas del Problema </strong></h4>
+              <p>a	&nbsp; &nbsp;/* aceleración de dos objetos conectados mediante una cuerda */ </p>
+              <p>T	&nbsp; &nbsp;/* tensión en la cuerda */ </p>
+              <p>n	&nbsp; &nbsp;/* normal (‘n’) de la masa m_2 */ </p>
+              <h4><strong>Formulas Relevantes </strong></h4>
+              <img src="./assets/images/Capitulos/II/media/a21.png" style="display:block; margin:auto; "><br>
+              <h4><strong>B.2)   Diagrama de Entrada-Salida </strong></h4>
+              <p>En la Figura 2.8.2 se muestra el diagrama de Entrada-Salida del programa donde se identifican y se diagraman las entradas, salidas y auxiliares del problema como son: a) Entradas: la variable ‘m1’ (primera masa), la variable ‘m2’ y la variable ‘theta’ (ángulo del plano inclinado); b) Salidas: las variables ‘a’ (aceleración), ‘T’ (tensión) y ‘n’ (normal); c) Auxiliares: la constante ‘PI’ y la constante ‘g’ (gravedad). </p>
+              <img src="./assets/images/Capitulos/II/media/a22.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Figura 2.8.2. </strong>Diagrama de Entrada-Salida del Programa.</h5>
+              <h4><strong>C)   Diseño </strong></h4>
+              <p>Una vez que se conoce las entradas y las salidas del problema, se deben listar los pasos necesarios para resolver el problema, es decir, el algoritmo.</p>
+              <h4><strong>Algoritmo </strong></h4>
+              <p>1.	Imprimir el mensaje de información: “Aceleración de dos objetos conectados mediante una cuerda”</p>
+              <p>2.	Leer el valor de la primera masa, utilizando la variable ‘m1’.</p>
+              <p>3.	Leer el valor de la segunda masa, utilizando la variable ‘m2’.</p>
+              <p>4.	Leer el valor del ángulo theta del plano inclinado en grados, utilizando la variable ‘theta’</p>
+              <p>5. Convertir el ángulo theta de grados a radianes.</p>
+              <p> &nbsp; &nbsp; 5.1. Asignar a la variable ‘theta’ el producto del ángulo theta por la constante PI y dividirlo para el valor de 180 grados.</p>
+                          
+              <p>6.	Si la suma entre las masas ‘m1’ y ‘m2’ es diferente de cero.</p>
+              <p> &nbsp; &nbsp; 6.1.	Calcular la aceleración de dos objetos conectados mediante una cuerda.</p>
+              <p> &nbsp; &nbsp; &nbsp; 6.1.1.	Asignar a la variable ‘a’ (aceleración) los valores que contempla la fórmula de la aceleración (1), según la Física Clásica.</p>
+              <p> &nbsp; &nbsp; 6.2.	Calcular la tensión en la cuerda.</p>
+              <p> &nbsp; &nbsp; &nbsp; 6.2.1.	Asignar a la variable ‘T’ (tensión) los valores que contempla la fórmula de la tensión (2), según la Física Clásica.</p>
+              <p> &nbsp; &nbsp; 6.3.	Calcular el valor de la normal de la masa ‘m2’.</p>
+              <p> &nbsp; &nbsp; &nbsp; 6.3.1.	Asignar a la variable ‘n’ (normal) los valores que contempla la fórmula de la normal (3), según la Física Clásica.</p>
+              <p> &nbsp; &nbsp; 6.4.	Imprimir el valor de la variable ‘a’ (aceleración), de la variable ‘T’ (tensión) y de la variable ‘n’ (normal).</p>
+              <p>7.	Caso contrario, la suma entre las masas m1 y m2 es igual a cero.</p>
+              <p> &nbsp; &nbsp; 7.1.	Imprimir el mensaje de error: “Error en el ingreso de los valores de las masas”.</p>
+                      
+              <h4><strong>D)   Implementación </strong></h4>
+              <p>Para implementar la solución, se debe escribir el algoritmo como un programa de C/C++ que contenga toda la información necesaria para completar la traducción a lenguaje máquina. En la Tabla 2.8.1 se muestra el código del programa en C/C++.</p>
+              <h5><strong>Tabla 2.8.1. </strong>Programa que calcula la aceleración de dos objetos conectados mediante una cuerda, la tensión y la normal.</h5>
+              <pre><code [highlight]="prefTab[0].programa8"  [lineNumbers]="true"></code></pre><br>
+              <h4><strong>E) Pruebas </strong></h4>
+              <p>En la Tabla 2.8.2 se muestra un ejemplo de la salida del programa, donde se puede ver que los resultados del programa tienen sentido, comparando estos resultados con los datos devueltos por una calculadora científica.</p>
+              
+              <h5><strong>Tabla 2.8.2. </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/II/media/a23.png" style="display:block; margin:auto; "><br>
+              
             </mat-tab>
 
             <mat-tab  label="2.3.3. Sentencias if-else Anidadas">
+              <h2><strong>Sentencias if-else Anidadas</strong></h2>
+              <p>La sentencia if-else anidada es la una sentencia if-else, pero se utiliza para elegir una única acción o instrucción entre más de dos posibles alternativas, por lo que esto constituye una elección múltiple con varias alternativas. El formato de esta sentencia tiene la siguiente sintaxis:</p>
+              <h4><strong>Sintaxis: </strong></h4>
+              <pre><code [highlight]="prefTab[0].sintaxis5"  [lineNumbers]="true"></code></pre><br>
+              <p>expresión &nbsp; &nbsp; &nbsp; Expresión lógica que determina si la sentencia o acción se ha de ejecutar.</p>
+              <p>sentencia1 &nbsp; &nbsp; &nbsp; La sentencia o acción se ejecuta si la expresión1 es verdadera.</p>
+              <p>sentencia2 &nbsp; &nbsp; &nbsp; La sentencia o acción se ejecuta si la expresión2 es verdadera.</p>
+              <p>sentencia3 &nbsp; &nbsp; &nbsp; La sentencia o acción se ejecuta si la expresión3 es verdadera.</p>
+              <p>sentencian &nbsp; &nbsp; &nbsp; La sentencia o acción se ejecuta si la expresiónn es verdadera.</p>
+              <p>sentencian+1 &nbsp; &nbsp; &nbsp; La sentencia o acción se ejecuta si la expresiónn es falsa.</p>
+              <p><strong>Nota: </strong>En esta sintaxis no es necesario utilizar llaves ya que se tiene una sola sentencia o instrucción, tanto en los ‘if’ como en los ‘else’.</p>
+              <h4><Strong>Ejercicio 2.11: </Strong>Escribir un programa que permita analizar si un número leído desde el teclado es mayor que cero, es menor que cero, o es igual a cero.</h4>
+              <TABLE BORDER WIDTH="100%" CELLPADDING=1 CELLSPACING=0 class="mat-elevation-z8">
+                <TR>
+                  <TH>N°</TH>
+                  <TH>Algoritmo en Pseudocódigo</TH>
+                  <TH>Algoritmo en Lenguaje C/C++</TH>
+                </TR>
+                <tbody *ngFor="let item of prefTab[0].tablaDatos6">
+                <TR style="text-align: left">
+                  <TD>
+                    <ul *ngFor="let i of item.Numero" style="list-style-type: none;">
+                      <li>{{i}}</li>
+                    </ul>
+                  </TD>
+                  <TD>
+                    <ul *ngFor="let i of item.Pseudo" style="list-style-type: none;">
+                      <li>{{i}}</li>
+                    </ul>
+                  </TD>
+                  <TD>
+                    <ul *ngFor="let i of item.Codigo" style="list-style-type: none;">
+                      <li>{{i}}</li>
+                    </ul>
+                  </TD>
+                </TR>
+                </tbody>
+              </TABLE><br>
+              <h5><strong>Programa 2.11: </strong>Código del programa.</h5>
+              <pre><code [highlight]="prefTab[0].programa9"  [lineNumbers]="true"></code></pre><br>
+              <p>En la salida de la Ejecución 2.11.1 se puede ver que al ingresar el número 7, el programa indica que este número es mayor que cero. De manera similar, en la salida de la Ejecución 2.10.2 se puede ver que al ingresar el número -4, el programa indica que este número es menor que cero. Finalmente, en la salida de la Ejecución 2.10.3 se puede ver que al ingresar el número 0, el programa indica que este número es efectivamente el cero, por lo que el algoritmo del programa logra su propósito que es analizar si un número leído desde el teclado es mayor que cero, es menor que cero, o es igual a cero.</p>
+              <h5><strong>Ejecución 2.11.1: </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/II/media/a24.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Ejecución 2.11.2: </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/II/media/a25.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Ejecución 2.11.3: </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/II/media/a26.png" style="display:block; margin:auto; "><br>
+              <h4><Strong>Ejercicio 2.12: </Strong>Escribir un programa que permita analizar si un número leído desde el teclado es mayor que cero, es menor que cero, o es igual a cero.</h4>
+              <TABLE BORDER WIDTH="100%" CELLPADDING=1 CELLSPACING=0 class="mat-elevation-z8">
+                <TR>
+                  <TH>N°</TH>
+                  <TH>Algoritmo en Pseudocódigo</TH>
+                  <TH>Algoritmo en Lenguaje C/C++</TH>
+                </TR>
+                <tbody *ngFor="let item of prefTab[0].tablaDatos7">
+                <TR style="text-align: left">
+                  <TD>
+                    <ul *ngFor="let i of item.Numero" style="list-style-type: none;">
+                      <li>{{i}}</li>
+                    </ul>
+                  </TD>
+                  <TD>
+                    <ul *ngFor="let i of item.Pseudo" style="list-style-type: none;">
+                      <li>{{i}}</li>
+                    </ul>
+                  </TD>
+                  <TD>
+                    <ul *ngFor="let i of item.Codigo" style="list-style-type: none;">
+                      <li>{{i}}</li>
+                    </ul>
+                  </TD>
+                </TR>
+                </tbody>
+              </TABLE><br>
+              <h5><strong>Programa 2.12: </strong> Código del programa.</h5>
+              <pre><code [highlight]="prefTab[0].programa10"  [lineNumbers]="true"></code></pre><br>
+              <p>En la salida de la Ejecución 2.12.1 se puede ver que al ingresar el número 7, el programa indica que el número siguiente es el 8. De manera similar, en la salida de la Ejecución 2.12.2 se puede ver que al ingresar el número -4, el programa indica que el número siguiente es el -5. Finalmente, en la salida de la Ejecución 2.12.3 se puede ver que al ingresar el número 0, el programa indica que el número siguiente es el 1 y el número anterior es el -1, por lo que el algoritmo del programa logra su propósito.</p>
+              <h5><strong>Ejecución 2.12.1: </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/II/media/a27.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Ejecución 2.12.2: </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/II/media/a28.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Ejecución 2.12.3: </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/II/media/a29.png" style="display:block; margin:auto; "><br>
+
+              <h3><strong>Caso de Estudio 2.9: Evaluar una Función Definida por Partes. </strong></h3>
+              <h4><strong>A)   Problema </strong></h4>
+              <p>Dada la función definida por partes y=f(x), calcular el valor de ‘y’ para un valor dado de ‘x’ y visualizarlo en pantalla.</p>
+              <img src="./assets/images/Capitulos/II/media/a30.png" style="display:block; margin:auto; "><br>
+              <p>Los tres intervalos de la función se muestran en la Figura 2.9.1 que son:</p>
+              <p>y=-x;  I_1:x≤-1</p>
+              <p>y=x^2;  I_2:-1 < x < 1, es decir, (-1 < x)∧(x < 1) </p>
+              <p>y=x;  I_3:x≥1</p>
+              <img src="./assets/images/Capitulos/II/media/a31.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Figura 2.9.1. </strong>Intervalos de la función.</h5>
+              
+              <h4><strong>B)   Análisis </strong></h4>
+              <p>Claramente, se puede ver que la entrada del problema es el valor de ‘x’. Hay una salida requerida: el valor de f(x)=y. Partiendo de un conocimiento básico de Álgebra, se sabe que hay dos intervalos y dos funciones lineales sobre las cuales se va a evaluar en un punto a la función definida por partes. Las fórmulas requeridas se incluyen en el requerimiento de los datos.</p>
+              <h4><strong>B.1)   Requerimiento de los Datos </strong></h4>
+              
+              <h4><strong>Entradas del Problema </strong></h4>
+              <p>x	&nbsp; &nbsp;/* valor de ‘x’ de la función */ </p>
+                           
+              <h4><strong>Salidas del Problema </strong></h4>
+              <p>y	&nbsp; &nbsp;/* valor de ‘y’ de la función */ </p>
+              
+              <h4><strong>Formulas Relevantes </strong></h4>
+              <img src="./assets/images/Capitulos/II/media/a32.png" style="display:block; margin:auto; "><br>
+              <h4><strong>B.2)   Diagrama de Entrada-Salida </strong></h4>
+              <p>En la Figura 2.9.2 se muestra el diagrama de Entrada-Salida del programa donde se identifican y se diagraman las entradas y salidas del problema como son: a) Entradas: la variable ‘x’ (variable independiente); b) Salidas: la variable ‘y’ (variable dependiente). </p>
+              <img src="./assets/images/Capitulos/II/media/a33.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Figura 2.9.2. </strong>Diagrama de Entrada-Salida del Programa.</h5>
+              <h4><strong>C)   Diseño </strong></h4>
+              <p>Una vez que se conoce las entradas y las salidas del problema, se deben listar los pasos necesarios para resolver el problema, es decir, el algoritmo.</p>
+              <h4><strong>Algoritmo </strong></h4>
+              <p>1.	Leer el valor de ‘x’.</p>
+              <p>2.	Si el valor de 'x' está dentro del intervalo I1: x≤-1.</p>
+              <p> &nbsp; &nbsp; 2.1. 	Evaluar a la función f(x)=-x en un punto 'x'.</p>
+              <p>3.		Caso contrario, si el valor de 'x' está dentro del intervalo I2: (-1< x)∧(x < 1).</p>
+              <p> &nbsp; &nbsp; 3.1.	Evaluar a la función f(x)=x^2  en un punto 'x'.</p>
+              <p>4.	Caso contrario, si el valor de 'x' está dentro del intervalo I3: x≥1.</p>
+              <p> &nbsp; &nbsp; 4.1.	Evaluar a la función f(x)=x en un punto 'x'.</p>
+              <p>5. Imprimir el valor de la variable ‘x’ y de la variable ‘y’.</p>
+                                                           
+              <h4><strong>D)   Implementación </strong></h4>
+              <p>Para implementar la solución, se debe escribir el algoritmo como un programa de C/C++ que contenga toda la información necesaria para completar la traducción a lenguaje máquina. En la Tabla 2.9.1 se muestra el código del programa en C/C++.</p>
+              <h5><strong>Tabla 2.9.1. </strong>Programa que evalúa una función definida por partes.</h5>
+              <pre><code [highlight]="prefTab[0].programa11"  [lineNumbers]="true"></code></pre><br>
+              <h4><strong>E) Pruebas </strong></h4>
+              <p>La Tabla 2.9.2, la Tabla 2.9.3 y la Tabla 2.9.4 muestran tres ejemplos de la salida del programa, donde se puede ver que los resultados del programa tienen sentido, comparando estos resultados con los datos devueltos por una calculadora.</p>
+              <p>En la salida de la Tabla 2.9.2 se puede ver que, al ingresar el valor de -4 se evalúa la primera función cuyo valor resultante es 4. De manera similar, en la salida Tabla 2.9.3 se puede ver que, al ingresar el valor de 0.5 se evalúa la segunda función cuyo valor resultante es 0.25. Finalmente, en la salida Tabla 2.9.4 se puede ver que, al ingresar el valor de 4 se evalúa la tercera función cuyo valor resultante es 4.</p>
+              
+              <h5><strong>Tabla 2.9.2. </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/II/media/a34.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Tabla 2.9.3. </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/II/media/a35.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Tabla 2.9.4. </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/II/media/a36.png" style="display:block; margin:auto; "><br>
+
+              <h3><strong>Caso de Estudio 2.10: Calcular la Media de Tres Notas. </strong></h3>
+              <h4><strong>A)   Problema </strong></h4>
+              <p>Tres notas de tipo flotante entre 0 y 100 representan las puntuaciones de un estudiante de un curso de Programación. Escribir un programa para encontrar la media de estas notas y visualizar un cuadro de calificaciones, de acuerdo con los valores de las notas y puntuaciones presentadas de la Tabla 2.10.1:</p>
+              <h5><strong>Tabla 2.10.1. </strong>Tabla de notas y puntuaciones.</h5>
+              <TABLE BORDER WIDTH="100%" CELLPADDING=1 CELLSPACING=0 class="mat-elevation-z8">
+                <TR>
+                  <TH>Nota</TH>
+                  <TH>Puntuación</TH>
+                </TR>
+                <tbody *ngFor="let item of prefTab[0].tablaDatos8">
+                <TR style="text-align: left">
+                  <TD>
+                    <ul *ngFor="let i of item.nota" style="list-style-type: none;">
+                      <li>{{i}}</li>
+                    </ul>
+                  </TD>
+                  <TD>
+                    <ul *ngFor="let i of item.puntos" style="list-style-type: none;">
+                      <li>{{i}}</li>
+                    </ul>
+                  </TD>
+                </TR>
+                </tbody>
+              </TABLE><br>
+              <p>Los cinco intervalos de la nota promedio se muestran en la Figura 2.10.1 que son:</p>
+              <p>I_1:0 ≤ m < 60, es decir, (0 ≤ m)∧(m < 60) </p>
+              <p>I_2:60 ≤ m < 70, es decir, (60 ≤ m)∧(m < 70)</p>
+              <p>I_3:70 ≤ m < 80, es decir, (70 ≤ m)∧(m < 80)</p>
+              <p>I_4:80 ≤ m < 90, es decir, (80 ≤ m)∧(m < 90)</p>
+              <p>I_5:90 ≤ m ≤ 100, es decir, (90 ≤ m)∧(m ≤ 100)</p>
+              <img src="./assets/images/Capitulos/II/media/a37.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Figura 2.10.1. </strong>Intervalos de la nota promedio.</h5>
+              
+              <h4><strong>B)   Análisis </strong></h4>
+              <p>Claramente, se puede ver que la entrada del problema es el valor del consumo de la luz ‘c’. Hay una salida requerida que es el valor del recibo. Partiendo de un conocimiento básico de Álgebra, se sabe que hay cuatro intervalos y cuatro diferentes valores para los recibos que dependen de los valores de las tarifas. Las fórmulas requeridas se incluyen en el requerimiento de los datos.</p>
+              <h4><strong>B.1)   Requerimiento de los Datos </strong></h4>
+              
+              <h4><strong>Entradas del Problema </strong></h4>
+              <p>nota1	&nbsp; &nbsp;/* Valor de la primera nota*/ </p>
+              <p>nota2	&nbsp; &nbsp;/* Valor de la segunda nota*/ </p>
+              <p>nota3	&nbsp; &nbsp;/* Valor de la tercera nota*/ </p>
+                           
+              <h4><strong>Salidas del Problema </strong></h4>
+              <p>suma	&nbsp; &nbsp;/* Valor de la sumatoria de las 3 notas */ </p>
+              <p>m	&nbsp; &nbsp;/* Valor de la media de las 3 notas */ </p>
+              <p>puntuacion	&nbsp; &nbsp;/* Valor de la puntuación de las 3 notas */ </p>
+              
+              <h4><strong>Formulas Relevantes </strong></h4>
+              <img src="./assets/images/Capitulos/II/media/a38.png" style="display:block; margin:auto; "><br>
+              <h4><strong>B.2)   Diagrama de Entrada-Salida </strong></h4>
+              <p>En la Figura 2.10.2 se muestra el diagrama de Entrada-Salida del programa donde se identifican y se diagraman las entradas y salidas del problema como son: a) Entradas: la variable ‘nota1’, la variable ‘nota2’, la variable ‘nota2’; b) Salidas: la variable ‘suma’, la variable ‘m’ (media), la variable ‘puntuacion’. </p>
+              <img src="./assets/images/Capitulos/II/media/a39.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Figura 2.10.2. </strong>Diagrama de Entrada-Salida del Programa.</h5>
+              <h4><strong>C)   Diseño </strong></h4>
+              <p>Una vez que se conoce las entradas y las salidas del problema, se deben listar los pasos necesarios para resolver el problema, es decir, el algoritmo.</p>
+              <h4><strong>Algoritmo </strong></h4>
+              <p>1.	Leer el valor de la primera nota ‘nota1’.</p>
+              <p>2.	Leer el valor de la segunda nota ‘nota2’.</p>
+              <p>3.	Leer el valor de la tercera nota ‘nota3’.</p>
+              <p>4.	Calcular la sumatoria de las tres notas.</p>
+              <p> &nbsp; &nbsp; 4.1.	Asignar la suma de las tres notas a la variable ‘suma’.</p>
+              <p>5. Calcular la media de las tres notas.</p>
+              <p> &nbsp; &nbsp; 5.1.	Asignar la división entre la sumatoria y el valor de tres a la variable ‘m’.</p>
+              <p>6.	Si el valor de la media 'm' está dentro del intervalo I1: (0≤m)∧(m<60).</p>
+              <p> &nbsp; &nbsp; 6.1.	Asignar a la variable ‘puntuacion’ el valor de ‘E’.</p>
+              <p>7.	Caso contrario, si el valor de la media 'm' está dentro del intervalo I2: (60≤m)∧(m<70).</p>
+              <p> &nbsp; &nbsp; 7.1.	Asignar a la variable ‘puntuacion’ el valor de ‘D’.</p>
+              <p>8.	Caso contrario, si el valor de la media 'm' está dentro del intervalo I3: (70≤m)∧(m<80).</p>
+              <p> &nbsp; &nbsp; 8.1.	Asignar a la variable ‘puntuacion’ el valor de ‘C’.</p>
+              <p>9.	Caso contrario, si el valor de la media 'm' está dentro del intervalo I4: (80≤m)∧(m<90).</p>
+              <p> &nbsp; &nbsp; 9.1.	Asignar a la variable ‘puntuacion’ el valor de ‘B’.</p>
+              <p>10.	Caso contrario, si el valor de la media 'm' está dentro del intervalo I5: (90≤m)∧(m≤100).</p>
+              <p> &nbsp; &nbsp; 10.1.	Asignar a la variable ‘puntuacion’ el valor de ‘A’.</p>
+              <p>11.	Imprimir un cuadro de calificaciones resumen.</p>
+              <p> &nbsp; &nbsp; 11.1.	Imprimir el valor de la primera nota.</p>
+              <p> &nbsp; &nbsp; 11.2.	Imprimir el valor de la segunda nota.</p>
+              <p> &nbsp; &nbsp; 11.3.	Imprimir el valor de la tercera nota.</p>
+              <p> &nbsp; &nbsp; 11.4.	Imprimir el valor de la sumatoria de las tres notas.</p>
+              <p> &nbsp; &nbsp; 11.5.	Imprimir el valor de la media de las tres notas.</p>
+              <p> &nbsp; &nbsp; 11.6.	Imprimir el valor de la puntuación.</p>
+                                                           
+              <h4><strong>D)   Implementación </strong></h4>
+              <p>Para implementar la solución, se debe escribir el algoritmo como un programa de C/C++ que contenga toda la información necesaria para completar la traducción a lenguaje máquina. En la Tabla 2.10.2 se muestra el código del programa en C/C++.</p>
+              <h5><strong>Tabla 2.10.2. </strong>Programa que calcula el consumo eléctrico.</h5>
+              <pre><code [highlight]="prefTab[0].programa12"  [lineNumbers]="true"></code></pre><br>
+              <h4><strong>E) Pruebas </strong></h4>
+              <p>La Tabla 2.10.3 muestra un ejemplo de la salida del programa, donde se puede ver que los resultados del programa tienen sentido, comparando estos resultados con los datos devueltos por una calculadora. En la salida de la Tabla 2.10.3 se puede ver que, al ingresar los valores de las tres notas 77, 84, 91, se obtiene el valor de la sumatoria que es 252, el valor de la media que es 84 y la puntuación que corresponde al valor de ‘B’.</p>
+                            
+              <h5><strong>Tabla 2.10.3. </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/II/media/a40.png" style="display:block; margin:auto; "><br>
+              
             </mat-tab>
 
             <mat-tab  label="2.3.4. Secuencia de Sentencias if">
+              <h2><strong>Secuencia de Sentencias if</strong></h2>
+              <p>Solo en ciertos casos se puede utilizar una secuencia de sentencias if, lo cual no es tan legible ni eficiente y se podría reemplazar por sentencias if-else anidadas que resulta mucho más eficiente ya que se ejecutan más rápidamente (ver Sección 2.2.2.3). El formato de esta sentencia tiene la siguiente sintaxis:</p>
+              <h4><strong>Sintaxis: </strong></h4>
+              <pre><code [highlight]="prefTab[0].sintaxis6"  [lineNumbers]="true"></code></pre><br>
+              <p>expresión &nbsp; &nbsp; &nbsp; Expresión lógica que determina si la sentencia o acción se ha de ejecutar.</p>
+              <p>sentencia1 &nbsp; &nbsp; &nbsp; La sentencia o acción se ejecuta si la expresión1 es verdadera.</p>
+              <p>sentencia2 &nbsp; &nbsp; &nbsp; La sentencia o acción se ejecuta si la expresión2 es verdadera.</p>
+              <p>sentencia3 &nbsp; &nbsp; &nbsp; La sentencia o acción se ejecuta si la expresión3 es verdadera.</p>
+              <p>sentencian &nbsp; &nbsp; &nbsp; La sentencia o acción se ejecuta si la expresiónn es verdadera.</p>
+              <p><strong>Nota: </strong>En esta sintaxis no es necesario utilizar llaves ya que se tiene una sola sentencia o instrucción, en todos los ‘if’.</p>
+              <h4><strong>Ejercicio 2.13: </strong>Escribir un programa que permita analizar si un número leído desde el teclado es mayor que cero, es menor que cero, o es igual a cero.</h4>
+              <TABLE BORDER WIDTH="100%" CELLPADDING=1 CELLSPACING=0 class="mat-elevation-z8">
+                <TR>
+                  <TH>N°</TH>
+                  <TH>Algoritmo en Pseudocódigo</TH>
+                  <TH>Algoritmo en Lenguaje C/C++</TH>
+                </TR>
+                <tbody *ngFor="let item of prefTab[0].tablaDatos9">
+                <TR style="text-align: left">
+                  <TD>
+                    <ul *ngFor="let i of item.Numero" style="list-style-type: none;">
+                      <li>{{i}}</li>
+                    </ul>
+                  </TD>
+                  <TD>
+                    <ul *ngFor="let i of item.Pseudo" style="list-style-type: none;">
+                      <li>{{i}}</li>
+                    </ul>
+                  </TD>
+                  <TD>
+                    <ul *ngFor="let i of item.Codigo" style="list-style-type: none;">
+                      <li>{{i}}</li>
+                    </ul>
+                  </TD>
+                </TR>
+                </tbody>
+              </TABLE><br>
+              <h5><strong>Programa 2.13: </strong>Código del programa.</h5>
+              <pre><code [highlight]="prefTab[0].programa13"  [lineNumbers]="true"></code></pre><br>
+              <p>En la salida de la Ejecución 2.13.1 se puede ver que al ingresar el número 7, el programa indica que este número es mayor que cero. De manera similar, en la salida de la Ejecución 2.13.2 se puede ver que al ingresar el número -4, el programa indica que este número es menor que cero. Finalmente, en la salida de la Ejecución 2.13.3 se puede ver que al ingresar el número 0, el programa indica que este número es efectivamente el cero, por lo que el algoritmo del programa logra su propósito que es analizar si un número leído desde el teclado es mayor que cero, es menor que cero, o es igual a cero.</p>
+              <h5><strong>Ejecución 2.13.1: </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/II/media/a41.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Ejecución 2.13.2: </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/II/media/a42.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Ejecución 2.13.3: </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/II/media/a43.png" style="display:block; margin:auto; "><br>
+
+              <h3><strong>Caso de Estudio 2.11: Evaluar una Función Definida por Partes. </strong></h3>
+              <h4><strong>A)   Problema </strong></h4>
+              <p>Dada la función definida por partes y=f(x), calcular el valor de ‘y’ para un valor dado de ‘x’ y visualizarlo en pantalla.</p>
+              <img src="./assets/images/Capitulos/II/media/a44.png" style="display:block; margin:auto; "><br>
+              <p>Los tres intervalos de la función se muestran en la Figura 2.9.1 que son:</p>
+              <p>y=-x;  I_1:x≤-1</p>
+              <p>y=x^2;  I_2:-1 < x < 1, es decir, (-1 < x)∧(x < 1) </p>
+              <p>y=x;  I_3:x≥1</p>
+              <img src="./assets/images/Capitulos/II/media/a45.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Figura 2.11.1. </strong>Intervalos de la función.</h5>
+              
+              <h4><strong>B)   Análisis </strong></h4>
+              <p>Claramente, se puede ver que la entrada del problema es el valor de ‘x’. Hay una salida requerida: el valor de f(x)=y. Partiendo de un conocimiento básico de Álgebra, se sabe que hay dos intervalos y dos funciones lineales sobre las cuales se va a evaluar en un punto a la función definida por partes. Las fórmulas requeridas se incluyen en el requerimiento de los datos.</p>
+              <h4><strong>B.1)   Requerimiento de los Datos </strong></h4>
+              
+              <h4><strong>Entradas del Problema </strong></h4>
+              <p>x	&nbsp; &nbsp;/* valor de ‘x’ de la función */ </p>
+                           
+              <h4><strong>Salidas del Problema </strong></h4>
+              <p>y	&nbsp; &nbsp;/* valor de ‘y’ de la función */ </p>
+              
+              <h4><strong>Formulas Relevantes </strong></h4>
+              <img src="./assets/images/Capitulos/II/media/a46.png" style="display:block; margin:auto; "><br>
+              <h4><strong>B.2)   Diagrama de Entrada-Salida </strong></h4>
+              <p>En la Figura 2.11.2 se muestra el diagrama de Entrada-Salida del programa donde se identifican y se diagraman las entradas y salidas del problema como son: a) Entradas: la variable ‘x’ (variable independiente); b) Salidas: la variable ‘y’ (variable dependiente). </p>
+              <img src="./assets/images/Capitulos/II/media/a47.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Figura 2.11.2. </strong>Diagrama de Entrada-Salida del Programa.</h5>
+              <h4><strong>C)   Diseño </strong></h4>
+              <p>Una vez que se conoce las entradas y las salidas del problema, se deben listar los pasos necesarios para resolver el problema, es decir, el algoritmo.</p>
+              <h4><strong>Algoritmo </strong></h4>
+              <p>1.	Leer el valor de ‘x’.</p>
+              <p>2.	Si el valor de 'x' está dentro del intervalo I1: x≤-1.</p>
+              <p> &nbsp; &nbsp; 2.1. 	Evaluar a la función f(x)=-x en un punto 'x'.</p>
+              <p>3.		Caso contrario, si el valor de 'x' está dentro del intervalo I2: (-1< x)∧(x < 1).</p>
+              <p> &nbsp; &nbsp; 3.1.	Evaluar a la función f(x)=x^2  en un punto 'x'.</p>
+              <p>4.	Caso contrario, si el valor de 'x' está dentro del intervalo I3: x≥1.</p>
+              <p> &nbsp; &nbsp; 4.1.	Evaluar a la función f(x)=x en un punto 'x'.</p>
+              <p>5. Imprimir el valor de la variable ‘x’ y de la variable ‘y’.</p>
+                                                           
+              <h4><strong>D)   Implementación </strong></h4>
+              <p>Para implementar la solución, se debe escribir el algoritmo como un programa de C/C++ que contenga toda la información necesaria para completar la traducción a lenguaje máquina. En la Tabla 2.9.1 se muestra el código del programa en C/C++.</p>
+              <h5><strong>Tabla 2.11.1. </strong>Programa que evalúa una función definida por partes.</h5>
+              <pre><code [highlight]="prefTab[0].programa14"  [lineNumbers]="true"></code></pre><br>
+              <h4><strong>E) Pruebas </strong></h4>
+              <p>La Tabla 2.11.2, la Tabla 2.11.3 y la Tabla 2.11.4 muestran tres ejemplos de la salida del programa, donde se puede ver que los resultados del programa tienen sentido, comparando estos resultados con los datos devueltos por una calculadora.</p>
+              <p>En la salida de la Tabla 2.11.2 se puede ver que, al ingresar el valor de -4 se evalúa la primera función cuyo valor resultante es 4. De manera similar, en la salida Tabla 2.11.3 se puede ver que, al ingresar el valor de 0.5 se evalúa la segunda función cuyo valor resultante es 0.25. Finalmente, en la salida Tabla 2.11.4 se puede ver que, al ingresar el valor de 4 se evalúa la tercera función cuyo valor resultante es 4.</p>
+              
+              <h5><strong>Tabla 2.11.2. </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/II/media/a48.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Tabla 2.11.3. </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/II/media/a49.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Tabla 2.11.4. </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/II/media/a50.png" style="display:block; margin:auto; "><br>
+
+              <h3><strong>Caso de Estudio 2.12: Calcular el Consumo Eléctrico. </strong></h3>
+              <h4><strong>A)   Problema </strong></h4>
+              <p>Dadas las siguientes tarifas por gasto eléctrico en función del consumo en KWH, como se puede ver en la Tabla 2.12.1:</p>
+              <h5><strong>Tabla 2.12.1. </strong>Tarifas de consumo eléctrico.</h5>
+              <TABLE BORDER WIDTH="100%" CELLPADDING=1 CELLSPACING=0 class="mat-elevation-z8">
+                <TR>
+                  <TH>Consumo (KWH)</TH>
+                  <TH>Tarifa (USD por KWH)</TH>
+                </TR>
+                <tbody *ngFor="let item of prefTab[0].tablaDatos10">
+                <TR style="text-align: left">
+                  <TD>
+                    <ul *ngFor="let i of item.nota" style="list-style-type: none;">
+                      <li>{{i}}</li>
+                    </ul>
+                  </TD>
+                  <TD>
+                    <ul *ngFor="let i of item.puntos" style="list-style-type: none;">
+                      <li>{{i}}</li>
+                    </ul>
+                  </TD>
+                </TR>
+                </tbody>
+              </TABLE><br>
+              <p>Escribir un programa que permita calcular el costo de la planilla de luz o el recibo de la luz. Los cuatro intervalos del consumo de la luz ‘c’ se muestran en la Figura 2.12.1 que son:</p>
+              <p>TARIFA1: I_1:0≤c≤200, es decir, (0 ≤ c)∧(c ≤ 200)</p>
+              <p>TARIFA2: I_2:200 < c ≤ 500, es decir, (200 < c)∧(c ≤ 500) </p>
+              <p>TARIFA3: I_3:500 < c ≤ 700, es decir, (500 < c)∧(c ≤ 700) </p>
+              <p>TARIFA4: I_4:c > 700</p>
+              
+              <img src="./assets/images/Capitulos/II/media/a51.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Figura 2.12.1. </strong>Intervalos de la nota promedio.</h5>
+              
+              <h4><strong>B)   Análisis </strong></h4>
+              <p>Claramente, se puede ver que la entrada del problema es el valor del consumo de la luz ‘c’. Hay una salida requerida que es el valor del recibo. Partiendo de un conocimiento básico de Álgebra, se sabe que hay cuatro intervalos y cuatro diferentes valores para los recibos que dependen de los valores de las tarifas. Las fórmulas requeridas se incluyen en el requerimiento de los datos.</p>
+              <h4><strong>B.1)   Requerimiento de los Datos </strong></h4>
+              
+              <h4><strong>Constante del Problema </strong></h4>
+              <p>TARIFA1 = 0.35 </p>
+              <p>TARIFA2 = 0.55 </p>
+              <p>TARIFA3 = 0.75 </p>
+              <p>TARIFA4 = 1.05 </p>
+              <h4><strong>Entradas del Problema </strong></h4>
+              <p>c	&nbsp; &nbsp;/* valor del consumo de la luz */ </p>
+                                         
+              <h4><strong>Salidas del Problema </strong></h4>
+              <p>recibo	&nbsp; &nbsp;/* valor del recibo */ </p>
+                            
+              <h4><strong>Formulas Relevantes </strong></h4>
+              <img src="./assets/images/Capitulos/II/media/a52.png" style="display:block; margin:auto; "><br>
+              <h4><strong>B.2)   Diagrama de Entrada-Salida </strong></h4>
+              <p>En la Figura 2.12.2 se muestra el diagrama de Entrada-Salida del programa donde se identifican y se diagraman las entradas, salidas y auxiliares del problema como son: a) Entradas: la variable ‘c’ (consumo); b) Salidas: la variable ‘recibo’; c) Auxiliares: la constante ‘TARIFA1’, la constante ‘TARIFA2’, la constante ‘TARIFA3’ y la constante ‘TARIFA4’.</p>
+              <img src="./assets/images/Capitulos/II/media/a53.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Figura 2.12.2. </strong>Diagrama de Entrada-Salida del Programa.</h5>
+              <h4><strong>C)   Diseño </strong></h4>
+              <p>Una vez que se conoce las entradas y las salidas del problema, se deben listar los pasos necesarios para resolver el problema, es decir, el algoritmo.</p>
+              <h4><strong>Algoritmo </strong></h4>
+              <p>1.	Leer el valor del consumo ‘c’.</p>
+              <p>2.	Si el valor del consuno 'c' está dentro del intervalo I1: (0 ≤ c)∧(c ≤ 200).</p>
+              <p> &nbsp; &nbsp; 2.1.	Calcular el valor del recibo con la TARIFA1.</p>
+              <p>3.	Si el valor del consuno 'c' está dentro del intervalo I2: (200 < c)∧(c ≤ 500).</p>
+              <p> &nbsp; &nbsp; 3.1.	Calcular el valor del recibo con la TARIFA2.</p>
+              <p>4.	Si el valor del consuno 'c' está dentro del intervalo I3: (500 < c)∧(c ≤ 700)</p>
+              <p> &nbsp; &nbsp; 4.1.	Calcular el valor del recibo con la TARIFA3.</p>
+              <p>5. Si el valor del consuno 'c' está dentro del intervalo I4: c > 700.</p>
+              <p> &nbsp; &nbsp; 5.1.	Calcular el valor del recibo con la TARIFA4.</p>
+              <p>6.	Imprimir el valor de la variable ‘recibo’.</p>
+                                                                  
+              <h4><strong>D)   Implementación </strong></h4>
+              <p>Para implementar la solución, se debe escribir el algoritmo como un programa de C/C++ que contenga toda la información necesaria para completar la traducción a lenguaje máquina. En la Tabla 2.12.1 se muestra el código del programa en C/C++.</p>
+              <h5><strong>Tabla 2.12.1. </strong>Programa que calcula el consumo eléctrico.</h5>
+              <pre><code [highlight]="prefTab[0].programa15"  [lineNumbers]="true"></code></pre><br>
+              <h4><strong>E) Pruebas </strong></h4>
+              <p>La Tabla 2.12.2, la Tabla 2.12.3, la Tabla 2.12.4 y la Tabla 2.12.5 muestran cuatro ejemplos de la salida del programa, donde se puede ver que los resultados del programa tienen sentido, comparando estos resultados con los datos devueltos por una calculadora.</p>
+              <p>En la salida de la Tabla 2.12.2 se puede ver que, al ingresar el valor del consumo igual a 100 se obtiene una cuenta total de $35 USD. De manera similar, en la salida Tabla 2.12.3 se puede ver que, al ingresar el valor del consumo igual a 400 se obtiene una cuenta total de $220 USD. De manera similar, en la salida Tabla 2.12.4 se puede ver que, al ingresar el valor del consumo igual a 600 se obtiene una cuenta total de $450 USD. Finalmente, en la salida Tabla 2.12.5 se puede ver que, al ingresar el valor del consumo igual a 800 se obtiene una cuenta total de $840 USD.</p>
+                            
+              <h5><strong>Tabla 2.12.2. </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/II/media/a54.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Tabla 2.12.3. </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/II/media/a55.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Tabla 2.12.4. </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/II/media/a56.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Tabla 2.12.5. </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/II/media/a57.png" style="display:block; margin:auto; "><br>
             </mat-tab>
 
             <mat-tab  label="2.3.5. Secuencia de Sentencias if-else">
+              <h2>Secuencia de Sentencias if-else</h2>
+              <p>Solo en ciertos casos se puede utilizar una secuencia de sentencias if-else, lo cual no es tan legible ni eficiente y se podría reemplazar por sentencias if-else anidadas que resulta mucho más eficiente ya que se ejecutan más rápidamente. El formato de esta sentencia tiene la siguiente sintaxis:</p>
+              <h4>Sintaxis: </h4>
+              <pre><code [highlight]="prefTab[0].sintaxis7"  [lineNumbers]="true"></code></pre><br>
+              <p>expresión1 &nbsp; &nbsp; Expresión lógica que determina si la sentencia o acción se ha de ejecutar.</p>
+              <p>expresión2 &nbsp; &nbsp; Expresión lógica que determina si la sentencia o acción se ha de ejecutar.</p>
+              <p>sentencia2.1 &nbsp; &nbsp; La sentencia o acción se ejecuta si la expresión lógica es verdadera.</p>
+              <p>sentencia2.2 &nbsp; &nbsp; La sentencia o acción se ejecuta si la expresión lógica es verdadera.</p>
+              <p>expresión3 &nbsp; &nbsp; Expresión lógica que determina si la sentencia o acción se ha de ejecutar.</p>
+              <p>expresión4 &nbsp; &nbsp; Expresión lógica que determina si la sentencia o acción se ha de ejecutar.</p>
+              <p>sentencia4.1 &nbsp; &nbsp; La sentencia o acción se ejecuta si la expresión lógica es verdadera.</p>
+              <p>sentencia4.2 &nbsp; &nbsp; La sentencia o acción se ejecuta si la expresión lógica es verdadera.</p>
+              <p>expresiónm &nbsp; &nbsp; Expresión lógica que determina si la sentencia o acción se ha de ejecutar.</p>
+              <p>expresiónn &nbsp; &nbsp; Expresión lógica que determina si la sentencia o acción se ha de ejecutar.</p>
+              <p>sentencian.1 &nbsp; &nbsp; La sentencia o acción se ejecuta si la expresión lógica es verdadera.</p>
+              <p>sentencian.2 &nbsp; &nbsp; La sentencia o acción se ejecuta si la expresión lógica es verdadera.</p>
+              <p><strong>Nota: </strong>En esta sintaxis no es necesario utilizar llaves ya que se tiene una sola sentencia o instrucción, en todos los ‘if-else’.</p>
+
+              <h4><strong>Ejercicio 2.14: </strong> Escribir un programa que permita calcular el mayor de tres números leídos desde el teclado y visualizarlo en pantalla.</h4>
+              <TABLE BORDER WIDTH="100%" CELLPADDING=1 CELLSPACING=0 class="mat-elevation-z8">
+                <TR>
+                  <TH>N°</TH>
+                  <TH>Algoritmo en Pseudocódigo</TH>
+                  <TH>Algoritmo en Lenguaje C/C++</TH>
+                </TR>
+                <tbody *ngFor="let item of prefTab[0].tablaDatos11">
+                <TR style="text-align: left">
+                  <TD>
+                    <ul *ngFor="let i of item.Numero" style="list-style-type: none;">
+                      <li>{{i}}</li>
+                    </ul>
+                  </TD>
+                  <TD>
+                    <ul *ngFor="let i of item.Pseudo" style="list-style-type: none;">
+                      <li>{{i}}</li>
+                    </ul>
+                  </TD>
+                  <TD>
+                    <ul *ngFor="let i of item.Codigo" style="list-style-type: none;">
+                      <li>{{i}}</li>
+                    </ul>
+                  </TD>
+                </TR>
+                </tbody>
+              </TABLE><br>
+              <h5><strong>Programa 2.14:  </strong>Código del programa.</h5>
+              <pre><code [highlight]="prefTab[0].programa16"  [lineNumbers]="true"></code></pre><br>
+              <p>En la salida de la Ejecución 2.14 se puede ver que al ingresar el valor del primer número que es 72, el valor del segundo número que es 84 y el valor del tercer número que es 51, el programa indica que el mayor de los tres números es 84.</p>
+              <h5><strong>Ejecución 2.14: </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/II/media/a58.png" style="display:block; margin:auto; "><br>
+
+              <h3><strong>Caso de Estudio 2.13: Colores Secundarios a partir de Mezclas. </strong></h3>
+              <h4><strong>A)   Problema </strong></h4>
+              <p>Escribir un programa que permita obtener los colores secundarios a partir de la mezcla de dos colores primarios, es decir, amarillo, azul y rojo. El programa debe permitir visualizar un mensaje de la mezcla de los dos colores en pantalla.</p>
+                            
+              <h4><strong>B)   Análisis </strong></h4>
+              <p>Claramente, se puede ver que las entradas del problema son los valores de las variables ‘primero’ y ‘segundo’ que representan a los dos colores que se van a mezclar. Hay una sola salida requerida que es un mensaje de información que contiene la mezcla de los dos colores y su resultado que es un color secundario. Partiendo de un conocimiento básico de arte, se sabe que hay tres colores secundarios obtenidos a partir de la mezcla de dos colores primarios:</p>
+              <ol type=”A”>
+                <li>Amarillo + Rojo = Naranja</li>
+                <li>Azul + Rojo = Violeta</li>
+                <li>Amarillo + Azul = Verde</li>
+              </ol>
+              <p>En la Figura 2.13.1 se muestran los tres colores primarios y los tres colores secundarios obtenidos de mezclas:</p>
+              <img src="./assets/images/Capitulos/II/media/a59.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Figura 2.13.1.</strong>Tres colores secundarios obtenidos de mezclas.</h5>
+              <h4><strong>B.1)   Requerimiento de los Datos </strong></h4>
+              
+              <h4><strong>Entradas del Problema </strong></h4>
+              <p>primero	&nbsp; &nbsp;/* valor del primer color */ </p>
+              <p>segundo	&nbsp; &nbsp;/* valor del segundo color */ </p>
+                                         
+              <h4><strong>Salidas del Problema </strong></h4>
+              <p>Amarillo + Azul = Verde	&nbsp; &nbsp;/* Mensaje de información de la primera mezcla */ </p>
+              <p>Amarillo + Rojo = Naranja	&nbsp; &nbsp;/* Mensaje de información de la segunda mezcla */ </p>
+              <p>Azul + Rojo = Violeta	&nbsp; &nbsp;/* Mensaje de información de la tercera mezcla */ </p>
+              <p>Azul + Amarillo = Verde	&nbsp; &nbsp;/* Mensaje de información de la cuarta mezcla */ </p>
+                            
+              <h4><strong>B.2)   Diagrama de Entrada-Salida </strong></h4>
+              <p>En la Figura 2.13.2 se muestra el diagrama de Entrada-Salida del programa donde se identifican y se diagraman las entradas y salidas del problema como son: a) Entradas: la variable ‘primero’, la variable ‘segunco’; b) Salidas: Mensaje 1: “Verde”; Mensaje 2: “Naranja”; Mensaje 3: “Violeta”; Mensaje 4: “Verde”.</p>
+              <img src="./assets/images/Capitulos/II/media/a60.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Figura 2.13.2. </strong>Diagrama de Entrada-Salida del Programa.</h5>
+              <h4><strong>C)   Diseño </strong></h4>
+              <p>Una vez que se conoce las entradas y las salidas del problema, se deben listar los pasos necesarios para resolver el problema, es decir, el algoritmo.</p>
+              <h4><strong>Algoritmo </strong></h4>
+              <p>1.	Imprimir el mensaje de información: “Mezcla de dos colores primarios”.</p>
+              <p>2.	Imprimir el mensaje: a. Amarillo; b. Azul.</p>
+              
+              <p>3.	Imprimir el mensaje: Seleccione un color (a o b):</p>
+              <p>4.	Leer el primer color utilizando la variable ‘primero’.</p>
+              <p>5.	Si el primer color es igual a la opción 'a' (Amarillo).</p>
+              <p> &nbsp; &nbsp; 5.1.	Imprimir el mensaje: b. Azul; c. Rojo.</p>
+              <p> &nbsp; &nbsp; 5.2.	Imprimir el mensaje: Seleccione otro color (b o c):</p>
+              <p> &nbsp; &nbsp; 5.3.	Leer el segundo color utilizando la variable ‘segundo’.</p>
+              <p> &nbsp; &nbsp; 5.4.	Si el segundo color es igual a la opción 'b' (Azul).</p>
+              <p> &nbsp; &nbsp; &nbsp; 5.4.1.	Imprimir el mensaje: Amarillo + Azul = Verde</p>
+              <p> &nbsp; &nbsp; 5.5.	Caso contrario, se seleccionó la opción 'c' (Rojo).</p>
+              <p> &nbsp; &nbsp; &nbsp; 5.5.1.	Imprimir el mensaje: Amarillo + Rojo = Naranja</p>
+              <p>6.	Caso contrario, se seleccionó la opción 'b' (Azul)..</p>
+              <p> &nbsp; &nbsp; 6.1.	Imprimir el mensaje: c. Rojo; a. Amarillo.</p>
+              <p> &nbsp; &nbsp; 6.2.	Imprimir el mensaje: Seleccione otro color (c o a):</p>
+              <p> &nbsp; &nbsp; 6.3.	Leer el segundo color.</p>
+              <p> &nbsp; &nbsp; 6.4.	Si el segundo color es igual a la opción 'c' (Rojo).</p>
+              <p> &nbsp; &nbsp; 6.4.1.	Imprimir el mensaje: Azul + Rojo = Violeta</p>
+              <p> &nbsp; &nbsp; 6.5.	Caso contrario, se seleccionó la opción 'a' (Amarillo).</p>
+              <p> &nbsp; &nbsp; 6.5.1.	Imprimir el mensaje: Azul + Amarillo = Verde</p>
+                                                                  
+              <h4><strong>D)   Implementación </strong></h4>
+              <p>Para implementar la solución, se debe escribir el algoritmo como un programa de C/C++ que contenga toda la información necesaria para completar la traducción a lenguaje máquina. En la Tabla 2.13.1 se muestra el código del programa en C/C++.</p>
+              <h5><strong>Tabla 2.13.1. </strong>Programa que evalúa una función definida por partes.</h5>
+              <pre><code [highlight]="prefTab[0].programa17"  [lineNumbers]="true"></code></pre><br>
+              <h4><strong>E) Pruebas </strong></h4>
+              <p>La Tabla 2.13.2, la Tabla 2.13.3, la Tabla 2.13.4 y la Tabla 2.13.5 muestran cuatro ejemplos de la salida del programa, donde se puede ver que los resultados del programa tienen sentido, comparando estos resultados con los datos obtenidos por las mezclas de dos colores primarios para obtener un color secundario de acuerdo a la Figura 2.13.1.</p>
+              <p>En la salida de la Tabla 2.13.2 se puede ver que, al seleccionar la opción ‘a’ (Amarillo) y la opción ‘b’ (Azul), se obtiene el color Verde. De manera similar, en la salida de la Tabla 2.13.3 se puede ver que, al seleccionar la opción ‘a’ (Amarillo) y la opción ‘c’ (Rojo), se obtiene el color Naranja. De manera similar, en la salida de la Tabla 2.13.4 se puede ver que, al seleccionar la opción ‘b’ (Azul) y la opción ‘c’ (Rojo), se obtiene el color Violeta. Finalmente, en la salida de la Tabla 2.13.5 se puede ver que, al seleccionar la opción ‘b’ (Azul) y la opción ‘a’ (Amarillo), se obtiene el color Verde.</p>
+                            
+              <h5><strong>Tabla 2.13.2. </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/II/media/a61.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Tabla 2.13.3. </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/II/media/a62.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Tabla 2.13.4. </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/II/media/a63.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Tabla 2.13.5. </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/II/media/a64.png" style="display:block; margin:auto; "><br>
+
+              <h3><strong>Caso de Estudio 2.14: Calcular las Raíces de la Función Cuadrática. </strong></h3>
+              <h4><strong>A)   Problema </strong></h4>
+              <p>Escribir un programa para calcular las raíces de la función cuadrática:</p>
+              <p>f(x)=ax^2+bx+c</p>
+              <p>Las raíces son los valores de x para los cuales:</p>
+              <p>f(x)=0</p>
+              <p>Para calcular las raíces de la función se utiliza la fórmula:</p>
+              <img src="./assets/images/Capitulos/II/media/a65.png" style="display:block; margin:auto; "><br>
+              <p>El discriminante de la función cuadrática es:</p>
+              <p>∆=b^2-4ac</p>
+              <p>Los tipos de raíces se obtienen de acuerdo a las siguientes condiciones del discriminante:</p>
+              <p>si ∆ > 0, las raíces son reales.</p>
+              <p>si ∆ = 0, existe una sola raíz real.</p>
+              <p>si ∆ < 0, las raíces son imaginarias.</p>
+              <p>En la Figura 2.14.1 se muestran tres gráficos que corresponden a las condiciones del discriminante y sus raíces.</p>
+              <h5><strong>Figura 2.14.1. </strong>Raíces de la función cuadrática.</h5>
+              <img src="./assets/images/Capitulos/II/media/a66.png" style="display:block; margin:auto; "><br>
+                            
+              <h4><strong>B)   Análisis </strong></h4>
+              <p>Claramente, se puede ver que las tres entradas del problema son los coeficientes ‘a’, ‘b’ y ‘c’ de la función. Dependiendo del valor del discriminante; si el descriminante es mayor que cero, entonces hay dos salidas diferentes que son ‘x1’ y ‘x2’; si el discriminante es igual a cero, entonces hay dos salidas iguales entre sí que son ‘x1’ y ‘x2’; si el discriminante es menor que cero, entonces hay dos salidas complejas conjugadas que son formadas por las variables ‘real’ e ‘imag’. Además, hay una salida para la ecuación lineal que es ‘x’ si el valor del coeficiente ‘a’ es igual a cero. Finalmente, hay otra salida que es la misma variable del coeficiente ‘c’ cuando el valor del coeficiente ‘a’ es igual a cero y también el valor del coeficiente ‘b’ es igual a cero. Partiendo de un conocimiento básico de Algebra, se sabe que hay una relación entre el discriminante de la ecuación cuadrática y sus coeficientes. Las fórmulas requeridas se incluyen en el requerimiento de los datos.</p>
+              
+              <h4><strong>B.1)   Requerimiento de los Datos </strong></h4>
+              
+              <h4><strong>Entradas del Problema </strong></h4>
+              <p>a	&nbsp; &nbsp;/* coeficiente 1 de la ecuación cuadrática */ </p>
+              <p>b	&nbsp; &nbsp;/* coeficiente 2 de la ecuación cuadrática */ </p>
+              <p>c	&nbsp; &nbsp;/* coeficiente 3 de la ecuación cuadrática */ </p>
+                                         
+              <h4><strong>Salidas del Problema </strong></h4>
+              <p>x	&nbsp; &nbsp;/* raíz de la ecuación lineal */ </p>
+              <p>c	&nbsp; &nbsp;/* coeficiente 3 de la ecuación cuadrática */ </p>
+              <p>x1	&nbsp; &nbsp;/* raíz real de la ecuación cuadrática */ </p>
+              <p>x2	&nbsp; &nbsp;/* raíz real de la ecuación cuadrática */ </p>
+              <p>real	&nbsp; &nbsp;/* parte real del número complejo de la raíz imaginaria */ </p>
+              <p>imag	&nbsp; &nbsp;/* parte imaginaria del número complejo de la raíz imaginaria */ </p>
+              
+              <h4><strong>Auxiliares del Problema </strong></h4>
+              <p>D	&nbsp; &nbsp;/* Discriminante de la ecuación cuadrática */ </p>
+              <h4><strong>Fórmulas Relevantes </strong></h4>
+              <p>Para encontrar las raíces de la ecuación cuadrática, se deben considerar los siguientes casos:</p>
+              <p>si a = 0 y si b ≠ 0, entonces: x=-c÷b (1)</p>
+              <p>si a = 0 y b = 0, entonces la función es una constante, cuya ecuación es: y = c (2) </p>
+              <p>si a ≠ 0, donde el discriminante es: ∆=b^2-4ac (3)</p>
+              <p>si ∆>0, entonces las raíces son reales:</p>
+              <img src="./assets/images/Capitulos/II/media/a67.png" style="display:block; margin:auto; "><br>
+              <p>si ∆ = 0, entonces existe una sola raíz real:</p>
+              <img src="./assets/images/Capitulos/II/media/a68.png" style="display:block; margin:auto; "><br>
+              <p>si ∆ < 0, entonces las raíces son imaginarias:</p>
+              <img src="./assets/images/Capitulos/II/media/a69.png" style="display:block; margin:auto; "><br>
+
+              <h4><strong>B.2)   Diagrama de Entrada-Salida </strong></h4>
+              <p>En la Figura 2.14.2 se muestra el diagrama de Entrada-Salida del programa donde se identifican y se diagraman las entradas, salidas y auxiliares del problema como son: a) Entradas: la variable ‘a’ (coeficiente 1); la variable ‘b’ (coeficiente 2); la variable ‘c’ (coeficiente 3); b) Salidas: la variable ‘x’; la variable ‘c’ (coeficiente 3); la variable ‘x1’; la variable ‘x2’; la variable ‘real’; la variable ‘imag’; c) Auxiliares: la variable ‘D’ (Discriminante).</p>
+              <img src="./assets/images/Capitulos/II/media/a70.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Figura 2.14.2. </strong>Diagrama de Entrada-Salida del Programa.</h5>
+              <h4><strong>C)   Diseño </strong></h4>
+              <p>Una vez que se conocen las entradas y las salidas del problema, se deben listar los pasos necesarios para resolver el problema, es decir, el algoritmo.</p>
+              <h4><strong>Algoritmo </strong></h4>
+              <p>1.	Imprimir el mensaje de información: “Raíces de la ecuación cuadrática.”.</p>
+              <p>2.	Leer el valor del coeficiente ‘a’ de la ecuación cuadrática.</p>
+              
+              <p>3.	Leer el valor del coeficiente ‘b’ de la ecuación cuadrática.</p>
+              <p>4.	Leer el valor del coeficiente ‘c’ de la ecuación cuadrática.</p>
+              <p>5.	Si el valor del coeficiente ‘a’ es igual a cero.</p>
+              <p> &nbsp; &nbsp; 5.1.	Si el valor del coeficiente ‘b’ es diferente de cero.</p>
+              <p> &nbsp; &nbsp; &nbsp; 5.1.1.	Calcular el valor de la raíz de la ecuación lineal ‘x’ que es igual al resultado de la división entre –c para b.</p>
+              <p> &nbsp; &nbsp; &nbsp; 5.1.2.	Imprimir el valor de la raíz de la ecuación lineal 'x'.</p>
+              <p> &nbsp; &nbsp; 5.2.	Caso contrario, cuando el valor del coeficiente 'b' es igual a cero.</p>
+              <p> &nbsp; &nbsp; &nbsp; 5.2.1.	Imprimir el valor de la función constante que es igual al valor de 'c'.</p>
+              
+              <p>6.	Caso contrario, cuando el valor del coeficiente 'a' es diferente de cero (a != 0).</p>
+              <p> &nbsp; &nbsp; 6.1.	Calcular el valor del discriminante, utilizando la variable 'D'.</p>
+              <p> &nbsp; &nbsp; &nbsp; 6.1.1.	Asignar a la variable ‘D’ el cuadrado de ‘b’ menos cuatro veces ‘a’ por ‘c’ de acuerdo a la ecuación (3).</p>
+              <p> &nbsp; &nbsp; 6.2.	Si el valor del discriminante es mayor que cero</p>
+              <p> &nbsp; &nbsp; &nbsp; 6.2.1.	Imprimir el mensaje: “Las raíces son reales”.</p>
+              <p> &nbsp; &nbsp; &nbsp; 6.2.2.	Calcular el valor de la primera raíz que es ‘x1’.</p>
+              <p> &nbsp; &nbsp; &nbsp; &nbsp; 6.2.2.1.	Asignar a la variable ‘x1’ el valor de la expresión que consta en la ecuación (4).</p>
+              <p> &nbsp; &nbsp; &nbsp; 6.2.3.	Calcular el valor de la segunda raíz que es ‘x2’.</p>
+              <p> &nbsp; &nbsp; &nbsp; &nbsp; 6.2.3.1.	Asignar a la variable ‘x2’ el valor de la expresión que consta en la ecuación (5).</p>
+
+              <p> &nbsp; &nbsp; 6.3.	Caso contrario, si el valor del discrimiante es igual a cero.</p>
+              <p> &nbsp; &nbsp; &nbsp; 6.3.1.	Imprimir el mensaje: “Existe una sola raíz real.”.</p>
+              <p> &nbsp; &nbsp; &nbsp; 6.3.2.	Calcular el valor de la única raíz real que es ‘x1’.</p>
+              <p> &nbsp; &nbsp; &nbsp; &nbsp; 6.3.2.1.	Asignar a la variable ‘x1’ el valor de la expresión que consta en la ecuación (6).</p>
+              <p> &nbsp; &nbsp; &nbsp; 6.3.3.	Asignar a la variable ‘x2’ el valor de la raíz de la variable ‘x1’.</p>
+              <p> &nbsp; &nbsp; &nbsp; 6.3.4.	Imprimir el valor de única raíz real, donde ‘x1’ es igual a ‘x2’.</p>
+              <p> &nbsp; &nbsp; 6.4.	Caso contrario, si el valor del discrimiante es menor que cero.</p>
+              <p> &nbsp; &nbsp; &nbsp; 6.4.1.	Imprimir el mensaje: “Las raíces son imaginarias.”.</p>
+              <p> &nbsp; &nbsp; &nbsp; 6.4.2.	Calcular el valor de la parte real del número complejo.</p>
+              <p> &nbsp; &nbsp; &nbsp; &nbsp; 6.4.2.1.	Asignar a la variable ‘x1’ el valor de la expresión que consta en la ecuación (8).</p>
+              <p> &nbsp; &nbsp; &nbsp; 6.4.3.	Calcular el valor de la parte imaginaria del número complejo.</p>
+              <p> &nbsp; &nbsp; &nbsp; &nbsp; 6.4.3.1.	Asignar a la variable ‘x2’ el valor de la expresión que consta en la ecuación (9).</p>
+              <p> &nbsp; &nbsp; &nbsp; 6.4.4.	Imprimir el primer número complejo ‘Z1’ obtenido con los valores de la parte real y la parte imaginaria.</p>
+              <p> &nbsp; &nbsp; &nbsp; 6.4.5.	Imprimir el segundo número complejo 'Z2' que resulta ser el conjudado del primer número complejo ‘Z1’.</p>
+                                                                  
+              <h4><strong>D)   Implementación </strong></h4>
+              <p>Para implementar la solución, se debe escribir el algoritmo como un programa de C/C++ que contenga toda la información necesaria para completar la traducción a lenguaje máquina. En la Tabla 2.14.1 se muestra el código del programa en C/C++.</p>
+              <h5><strong>Tabla 2.14.1. </strong>Programa que calcula las raíces de la función cuadrática.</h5>
+              <pre><code [highlight]="prefTab[0].programa17"  [lineNumbers]="true"></code></pre><br>
+              <h4><strong>E) Pruebas </strong></h4>
+              <p>La Tabla 2.14.2, la Tabla 2.14.3, la Tabla 2.14.4, la Tabla 2.14.5 y la Tabla 2.14.6 muestran cinco ejemplos de la salida del programa, donde se puede ver que los resultados del programa tienen sentido, comparando estos resultados con los datos devueltos por una calculadora científica. </p>
+              <p>En la salida de la Tabla 2.14.2 se puede ver que, al ingresar los valores de ‘a’ igual a 0, ‘b’ igual a 6 y ‘c’ igual a 3 se obtiene el valor de la raíz de la ecuación lineal ‘x’ igual a -0.5. En la Tabla 2.14.3 se puede ver que, al ingresar los valores de ‘a’ igual a 0, ‘b’ igual a 0 y ‘c’ igual a 3 se obtiene una función constante cuya ecuación es igual a 3. En la Tabla 2.14.4 se puede ver que, al ingresar los valores de ‘a’ igual a  -2, ‘b’ igual a 4 y ‘c’ igual a 6 se obtienen las raíces reales x_1=-1 y x_1=3. En la Tabla 2.14.5 se puede ver que, al ingresar los valores de ‘a’ igual a -3, ‘b’ igual a 6 y ‘c’ igual a -3 se obtiene una sola raíz real igual, donde x_1 es igual a x_2 que es igual a 1. En la Tabla 2.14.6 se puede ver que, al ingresar los valores de ‘a’ igual a 1, ‘b’ igual a 1 y ‘c’ igual a 1 se obtienen las raíces imaginarias Z_1=(-0.5,0.866025i) y Z_2=(-0.5,-0.866025i).</p>
+                            
+              <h5><strong>Tabla 2.14.2. </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/II/media/a71.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Tabla 2.14.3. </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/II/media/a72.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Tabla 2.14.4. </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/II/media/a73.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Tabla 2.14.5. </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/II/media/a74.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Tabla 2.14.6. </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/II/media/a75.png" style="display:block; margin:auto; "><br>
             </mat-tab>
 
             <mat-tab  label="2.3.6. Sentencia de Control switch">
+              <h2>Sentencia de Control switch</h2>
+              <p>La sentencia switch se la utiliza cuando se necesita elegir una o varias acciones entre algunas alternativas, por lo tanto, esta sentencia no es excluyente. La sentencia switch es especialmente útil cuando la selección se basa en el valor de una variable simple o de una expresión simple denominada expresión de control o selector. El valor de esta expresión puede ser de tipo int o char, pero no de tipo float ni double. El formato de esta sentencia tiene la siguiente sintaxis:</p>
+              <pre><code [highlight]="prefTab[0].programa19"  [lineNumbers]="true"></code></pre><br>
+              <p>La sentencia break y default son opcionales en la sentencia switch. La sentencia break es una sentencia de salto que hace que el control del programa se salga de la sentencia switch y se dirija a la sentencia situada inmediatamente después de la misma. La sentencia default también es una sentencia opcional donde si no existe un valor específico en la lista del switch, se transfiere el control del programa a la sentencia default.</p>
+              <h4><strong>Ejercicio 2.15: </strong>Escribir un programa que permita leer un dígito (0-9) e imprima el dígito seleccionado en letras y si no es así imprima el mensaje valor fuera de rango.</h4>
+              <TABLE BORDER WIDTH="100%" CELLPADDING=1 CELLSPACING=0 class="mat-elevation-z8">
+                <TR>
+                  <TH>N°</TH>
+                  <TH>Algoritmo en Pseudocódigo</TH>
+                  <TH>Algoritmo en Lenguaje C/C++</TH>
+                </TR>
+                <tbody *ngFor="let item of prefTab[0].tablaDatos12">
+                <TR style="text-align: left">
+                  <TD>
+                    <ul *ngFor="let i of item.Numero" style="list-style-type: none;">
+                      <li>{{i}}</li>
+                    </ul>
+                  </TD>
+                  <TD>
+                    <ul *ngFor="let i of item.Pseudo" style="list-style-type: none;">
+                      <li>{{i}}</li>
+                    </ul>
+                  </TD>
+                  <TD>
+                    <ul *ngFor="let i of item.Codigo" style="list-style-type: none;">
+                      <li>{{i}}</li>
+                    </ul>
+                  </TD>
+                </TR>
+                </tbody>
+              </TABLE><br>
+              <h5><strong>Programa 2.15: </strong>Código del programa.</h5>
+              <pre><code [highlight]="prefTab[0].programa20"  [lineNumbers]="true"></code></pre><br>
+              <p>En la salida de la Ejecución 2.15 se puede ver que al ingresar el dígito 7, el programa indica en palabras que este dígito es efectivamente el siete.</p>
+              <img src="./assets/images/Capitulos/II/media/a76.png" style="display:block; margin:auto; "><br>
+              <h4><strong>Ejercicio 2.16: </strong>Escribir un programa que permita leer una letra y analizar si es una vocal o no lo es.</h4>
+              <TABLE BORDER WIDTH="100%" CELLPADDING=1 CELLSPACING=0 class="mat-elevation-z8">
+                <TR>
+                  <TH>N°</TH>
+                  <TH>Algoritmo en Pseudocódigo</TH>
+                  <TH>Algoritmo en Lenguaje C/C++</TH>
+                </TR>
+                <tbody *ngFor="let item of prefTab[0].tablaDatos13">
+                <TR style="text-align: left">
+                  <TD>
+                    <ul *ngFor="let i of item.Numero" style="list-style-type: none;">
+                      <li>{{i}}</li>
+                    </ul>
+                  </TD>
+                  <TD>
+                    <ul *ngFor="let i of item.Pseudo" style="list-style-type: none;">
+                      <li>{{i}}</li>
+                    </ul>
+                  </TD>
+                  <TD>
+                    <ul *ngFor="let i of item.Codigo" style="list-style-type: none;">
+                      <li>{{i}}</li>
+                    </ul>
+                  </TD>
+                </TR>
+                </tbody>
+              </TABLE><br>
+              <h5><strong>Programa 2.16: </strong>Código del programa.</h5>
+              <pre><code [highlight]="prefTab[0].programa21"  [lineNumbers]="true"></code></pre><br>
+              <p>En la salida de la Ejecución 2.16 se puede ver que al ingresar la letra i, el programa indica en palabras que esta letra es una vocal.</p>
+              <h5><strong>Ejecución 2.16: </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/II/media/a77.png" style="display:block; margin:auto; "><br>
+
+              <h3><strong>Caso de Estudio 2.15: Menú con 5 Operaciones Matemáticas. </strong></h3>
+              <h4><strong>A)   Problema </strong></h4>
+              <p>Escribir un programa para crear un menú que tenga las siguientes opciones:</p>
+              <ol type=”A”>
+                <li>Suma de dos números enteros.</li>
+                <li>Resta de dos números enteros.</li>
+                <li>Multiplicación entre dos números enteros.</li>
+                <li>División entre dos números enteros.</li>
+                <li>Módulo entre dos números enteros.</li>
+              </ol>
+              <p>Para la operación de la división y el módulo se debe controlar que no exista división para cero.</p>
+                                          
+              <h4><strong>B)   Análisis </strong></h4>
+              <p>Claramente, se puede ver que las entradas del problema son el primer número representado por la variable ‘num1’ y el segundo número representado por la variable ‘num2’ con los cuales se van a realizar diferentes operaciones aritméticas. Además, la tercera entrada es la opción del menú a seleccionar representada por la variable ‘opcion’. Hay una sola salida requerida que es el valor del resultado de una operación representada por la variable ‘num3’. Partiendo de un conocimiento básico de Aritmética y Álgebra, se sabe que hay 5 operaciones matemáticas y 5 diferentes valores para el resultado que depende del tipo de operación. Las fórmulas requeridas se incluyen en el requerimiento de los datos.</p>
+              
+              <h4><strong>B.1)   Requerimiento de los Datos </strong></h4>
+              
+              <h4><strong>Entradas del Problema </strong></h4>
+              <p>num1	&nbsp; &nbsp;/* Valor del primer número */ </p>
+              <p>num2	&nbsp; &nbsp;/* Valor del segundo número */ </p>
+              <p>opcion	&nbsp; &nbsp;/* Opción a ser seleccionada del menú */ </p>
+                                         
+              <h4><strong>Salidas del Problema </strong></h4>
+              <p>num3	&nbsp; &nbsp;/* Valor del resultado de una operación */ </p>
+                            
+              <h4><strong>Fórmulas Relevantes </strong></h4>
+              <img src="./assets/images/Capitulos/II/media/a78.png" style="display:block; margin:auto; "><br>
+              
+              <h4><strong>B.2)   Diagrama de Entrada-Salida </strong></h4>
+              <p>En la Figura 2.15.2 se muestra el diagrama de Entrada-Salida del programa donde se identifican y se diagraman las entradas y salidas del problema como son: a) Entradas: la variable ‘num1’; la variable ‘num2’; la variable ‘opcion’; b) Salidas: la variable ‘num3’.</p>
+              <img src="./assets/images/Capitulos/II/media/a79.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Figura 2.15.2. </strong>Diagrama de Entrada-Salida del Programa.</h5>
+              <h4><strong>C)   Diseño </strong></h4>
+              <p>Una vez que se conoce las entradas y las salidas del problema, se deben listar los pasos necesarios para resolver el problema, es decir, el algoritmo.</p>
+              <h4><strong>Algoritmo </strong></h4>
+              <p>1.	Imprimir un menú con cinco opciones.</p>
+              <p> &nbsp; &nbsp; 1.1.	Imprimir el mensaje: 1. Suma de dos números.</p>
+              <p> &nbsp; &nbsp; 1.2.	Imprimir el mensaje: 2. Resta de dos números.</p>
+              <p> &nbsp; &nbsp; 1.3.	Imprimir el mensaje: 3. Multiplicación entre dos números.</p>
+              <p> &nbsp; &nbsp; 1.4.	Imprimir el mensaje: 4. División entre dos números.</p>
+              <p> &nbsp; &nbsp; 1.5.	Imprimir el mensaje: 5. Módulo entre dos números.</p>
+              <p> &nbsp; &nbsp; 1.6.	Imprimir el mensaje: Digite una opción.</p>
+              <p>2.	Leer el valor de la opción seleccionada, utilizando la variable ‘opcion’.</p>
+              
+              <p>3.	Si la opción seleccionada está entre los valores de 1 y 5.</p>
+              <p> &nbsp; &nbsp; 3.1.	Leer el valor del primer número ‘num1’.</p>
+              <p> &nbsp; &nbsp; 3.2.	Leer el valor del segundo número ‘num2’.</p>
+              <p>4.	Según sea el valor de la variable 'opcion', hacer:</p>
+              <p> &nbsp; &nbsp; 4.1.	Caso 1: </p>
+              <p> &nbsp; &nbsp; &nbsp; 4.1.1.	Calcular la suma entre dos números.</p>
+              <p> &nbsp; &nbsp; &nbsp; &nbsp; 4.1.1.1.	Asignar la suma entre dos números a la variable ‘num3’.</p>
+              <p> &nbsp; &nbsp; &nbsp; &nbsp; 4.1.1.2.	Imprimir el mensaje: num1 + num2 = num3.</p>
+              <p> &nbsp; &nbsp; 4.2.	Caso 2:  </p>
+              <p> &nbsp; &nbsp; &nbsp; 4.2.1.	Calcular la resta entre dos números.</p>
+              <p> &nbsp; &nbsp; &nbsp; &nbsp; 4.2.1.1.	Asignar la resta entre dos números a la variable ‘num3’.</p>
+              <p> &nbsp; &nbsp; &nbsp; &nbsp; 4.2.1.2.	Imprimir el mensaje: num1 - num2 = num3.</p>
+              <p> &nbsp; &nbsp; 4.3.	Caso 3: </p>
+              <p> &nbsp; &nbsp; &nbsp; 4.3.1.	Calcular la multiplicación entre dos números.</p>
+              <p> &nbsp; &nbsp; &nbsp; &nbsp; 4.3.1.1.	Asignar el producto entre dos números a la variable ‘num3’.</p>
+              <p> &nbsp; &nbsp; &nbsp; &nbsp; 4.3.1.2.	Imprimir el mensaje: num1 * num2 = num3.</p>
+              <p> &nbsp; &nbsp; 4.4.	Caso 4:  </p>
+              <p> &nbsp; &nbsp; &nbsp; 4.4.1.	Si el valor de la variable ‘num2’ es diferente de cero.</p>
+              <p> &nbsp; &nbsp; &nbsp; &nbsp; 4.4.1.1.	Calcular la división entre dos números.</p>
+              <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 4.4.1.1.1.	Asignar la división entre dos números a la variable ‘num3’.</p>
+              <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 4.4.1.1.2.	Imprimir el mensaje: num1 / num2 = num3.</p>
+              <p> &nbsp; &nbsp; &nbsp; 4.4.2.	Caso contrario, se niega la condición: !(num2 != 0), es decir, (num2 == 0).</p>
+              <p> &nbsp; &nbsp; &nbsp; &nbsp; 4.4.2.1.	Imprimir el mensaje: Error. División para cero no existe.</p>
+              <p> &nbsp; &nbsp; 4.5.	Caso 5: </p>
+              <p> &nbsp; &nbsp; &nbsp; 4.5.1.	Si el valor de la variable ‘num2’ es diferente de cero.</p>
+              <p> &nbsp; &nbsp; &nbsp; &nbsp; 4.5.1.1.	Calcular el módulo entre dos números.</p>
+              <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 4.5.1.1.1.	Asignar el módulo entre dos números a la variable ‘num3’, utilizando el operador ‘%’.</p>
+              <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 4.5.1.1.2.	Imprimir el mensaje: num1 % num2 = num3.</p>
+              <p> &nbsp; &nbsp; &nbsp; 4.5.2.	Caso contrario, se niega la condición: !(num2 != 0), es decir, (num2 == 0).</p>
+              <p> &nbsp; &nbsp; &nbsp; &nbsp; 4.5.2.1.	Imprimir el mensaje: Error. División para cero no existe.</p>
+              <p> &nbsp; &nbsp; 4.6.	Caso por defecto: </p>
+              <p> &nbsp; &nbsp; &nbsp; 4.6.1.	Imprimir el mensaje: Opción incorrecta.</p>
+                       
+                                                                
+              <h4><strong>D)   Implementación </strong></h4>
+              <p>Para implementar la solución, se debe escribir el algoritmo como un programa de C/C++ que contenga toda la información necesaria para completar la traducción a lenguaje máquina. En la Tabla 2.15.1 se muestra el código del programa en C/C++.</p>
+              <h5><strong>Tabla 2.15.1. </strong>Programa que calcula el consumo eléctrico.</h5>
+              <pre><code [highlight]="prefTab[0].programa22"  [lineNumbers]="true"></code></pre><br>
+              <h4><strong>E) Pruebas </strong></h4>
+              <p>Desde la Tabla 2.15.2, hasta la Tabla 2.15.7, se muestran seis ejemplos de la salida del programa, donde se puede ver que los resultados del programa tienen sentido, comparando estos resultados con los datos devueltos por una calculadora.</p>
+              <p>En la salida de la Tabla 2.15.2 se puede ver que, al seleccionar la opción 1 se puede ingresar el primer número que es el 7 y el segundo número que es el 2, obteniéndose la suma entre estos dos números que es 9. De manera similar, en la salida de la Tabla 2.15.3 se puede ver que, al seleccionar la opción 2 se puede ingresar el primer número que es el 7 y el segundo número que es el 2, obteniéndose la resta entre estos dos números que es 5. En la salida de la Tabla 2.15.4 se puede ver que, al seleccionar la opción 3 se puede ingresar el primer número que es el 7 y el segundo número que es el 2, obteniéndose la multiplicación entre estos dos números que es 14. En la salida de la Tabla 2.15.5 se puede ver que, al seleccionar la opción 4 se puede ingresar el primer número que es el 7 y el segundo número que es el 2, obteniéndose la división entera entre estos dos números que es 3. En la salida de la Tabla 2.15.6 se puede ver que, al seleccionar la opción 5 se puede ingresar el primer número que es el 7 y el segundo número que es el 2, obteniéndose el módulo o el resto de una división entera entre estos dos números que es 1. Finalmente, en la salida de la Tabla 2.15.7 se puede ver que, al seleccionar la opción 7, el programa indica que es una opción incorrecta y no realiza ningún cálculo matemático.</p>
+                            
+              <h5><strong>Tabla 2.15.2. </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/II/media/a80.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Tabla 2.15.3. </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/II/media/a81.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Tabla 2.15.4. </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/II/media/a82.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Tabla 2.15.5. </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/II/media/a83.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Tabla 2.15.6. </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/II/media/a84.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Tabla 2.15.7. </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/II/media/a85.png" style="display:block; margin:auto; "><br>
+
+              <h3><strong>Caso de Estudio 2.16: Menú con 8 Opciones para Consulta de Valores de Peajes. </strong></h3>
+              <h4><strong>A)   Problema </strong></h4>
+              <p>Dadas las siguientes tarifas de peajes para vehículos, como se puede ver en la Tabla 2.16.1:</p>
+              <p><strong>Tabla 2.16.1. </strong>Tarifas de peajes.</p>
+              <TABLE BORDER WIDTH="100%" CELLPADDING=1 CELLSPACING=0 class="mat-elevation-z8">
+                <TR>
+                  <TH>Vehículo</TH>
+                  <TH>Tarifa (USD)</TH>
+                </TR>
+                <tbody *ngFor="let item of prefTab[0].tablaDatos14">
+                <TR style="text-align: left">
+                 
+                  <TD>
+                    <ul *ngFor="let i of item.nota" style="list-style-type: none;">
+                      <li>{{i}}</li>
+                    </ul>
+                  </TD>
+                  <TD>
+                    <ul *ngFor="let i of item.puntos" style="list-style-type: none;">
+                      <li>{{i}}</li>
+                    </ul>
+                  </TD>
+                </TR>
+                </tbody>
+              </TABLE><br>
+              <p>Escribir un programa con un menú que permita seleccionar un tipo de vehículo y calcular el costo del peaje para un determinado número de vehículos según el valor de la tarifa.</p>
+                                          
+              <h4><strong>B)   Análisis </strong></h4>
+              <p>Claramente, se puede ver que las entradas del problema son el número de vehículos representados por la variable ‘numVehiculos’ y la opción del menú a seleccionar representada por la variable ‘opcion’. Hay una salida requerida que es el valor del costo del peaje. Partiendo de un conocimiento básico de Aritmética y Álgebra, se sabe que hay 8 diferentes valores para los costos que dependen de los valores de las tarifas y del número de vehículos. Las fórmulas requeridas se incluyen en el requerimiento de los datos.</p>
+              
+              <h4><strong>B.1)   Requerimiento de los Datos </strong></h4>
+              
+              <h4><strong>Entradas del Problema </strong></h4>
+              <p>num1	&nbsp; &nbsp;/* Valor del primer número */ </p>
+              <p>num2	&nbsp; &nbsp;/* Valor del segundo número */ </p>
+              <p>opcion	&nbsp; &nbsp;/* Opción a ser seleccionada del menú */ </p>
+                                         
+              <h4><strong>Salidas del Problema </strong></h4>
+              <p>num3	&nbsp; &nbsp;/* Valor del resultado de una operación */ </p>
+                            
+              <h4><strong>Fórmulas Relevantes </strong></h4>
+              <img src="./assets/images/Capitulos/II/media/a78.png" style="display:block; margin:auto; "><br>
+              
+              <h4><strong>B.2)   Diagrama de Entrada-Salida </strong></h4>
+              <p>En la Figura 2.15.2 se muestra el diagrama de Entrada-Salida del programa donde se identifican y se diagraman las entradas y salidas del problema como son: a) Entradas: la variable ‘num1’; la variable ‘num2’; la variable ‘opcion’; b) Salidas: la variable ‘num3’.</p>
+              <img src="./assets/images/Capitulos/II/media/a79.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Figura 2.15.2. </strong>Diagrama de Entrada-Salida del Programa.</h5>
+              <h4><strong>C)   Diseño </strong></h4>
+              <p>Una vez que se conoce las entradas y las salidas del problema, se deben listar los pasos necesarios para resolver el problema, es decir, el algoritmo.</p>
+              <h4><strong>Algoritmo </strong></h4>
+              <p>1.	Imprimir un menú con cinco opciones.</p>
+              <p> &nbsp; &nbsp; 1.1.	Imprimir el mensaje: 1. Suma de dos números.</p>
+              <p> &nbsp; &nbsp; 1.2.	Imprimir el mensaje: 2. Resta de dos números.</p>
+              <p> &nbsp; &nbsp; 1.3.	Imprimir el mensaje: 3. Multiplicación entre dos números.</p>
+              <p> &nbsp; &nbsp; 1.4.	Imprimir el mensaje: 4. División entre dos números.</p>
+              <p> &nbsp; &nbsp; 1.5.	Imprimir el mensaje: 5. Módulo entre dos números.</p>
+              <p> &nbsp; &nbsp; 1.6.	Imprimir el mensaje: Digite una opción.</p>
+              <p>2.	Leer el valor de la opción seleccionada, utilizando la variable ‘opcion’.</p>
+              
+              <p>3.	Si la opción seleccionada está entre los valores de 1 y 5.</p>
+              <p> &nbsp; &nbsp; 3.1.	Leer el valor del primer número ‘num1’.</p>
+              <p> &nbsp; &nbsp; 3.2.	Leer el valor del segundo número ‘num2’.</p>
+              <p>4.	Según sea el valor de la variable 'opcion', hacer:</p>
+              <p> &nbsp; &nbsp; 4.1.	Caso 1: </p>
+              <p> &nbsp; &nbsp; &nbsp; 4.1.1.	Calcular la suma entre dos números.</p>
+              <p> &nbsp; &nbsp; &nbsp; &nbsp; 4.1.1.1.	Asignar la suma entre dos números a la variable ‘num3’.</p>
+              <p> &nbsp; &nbsp; &nbsp; &nbsp; 4.1.1.2.	Imprimir el mensaje: num1 + num2 = num3.</p>
+              <p> &nbsp; &nbsp; 4.2.	Caso 2:  </p>
+              <p> &nbsp; &nbsp; &nbsp; 4.2.1.	Calcular la resta entre dos números.</p>
+              <p> &nbsp; &nbsp; &nbsp; &nbsp; 4.2.1.1.	Asignar la resta entre dos números a la variable ‘num3’.</p>
+              <p> &nbsp; &nbsp; &nbsp; &nbsp; 4.2.1.2.	Imprimir el mensaje: num1 - num2 = num3.</p>
+              <p> &nbsp; &nbsp; 4.3.	Caso 3: </p>
+              <p> &nbsp; &nbsp; &nbsp; 4.3.1.	Calcular la multiplicación entre dos números.</p>
+              <p> &nbsp; &nbsp; &nbsp; &nbsp; 4.3.1.1.	Asignar el producto entre dos números a la variable ‘num3’.</p>
+              <p> &nbsp; &nbsp; &nbsp; &nbsp; 4.3.1.2.	Imprimir el mensaje: num1 * num2 = num3.</p>
+              <p> &nbsp; &nbsp; 4.4.	Caso 4:  </p>
+              <p> &nbsp; &nbsp; &nbsp; 4.4.1.	Si el valor de la variable ‘num2’ es diferente de cero.</p>
+              <p> &nbsp; &nbsp; &nbsp; &nbsp; 4.4.1.1.	Calcular la división entre dos números.</p>
+              <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 4.4.1.1.1.	Asignar la división entre dos números a la variable ‘num3’.</p>
+              <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 4.4.1.1.2.	Imprimir el mensaje: num1 / num2 = num3.</p>
+              <p> &nbsp; &nbsp; &nbsp; 4.4.2.	Caso contrario, se niega la condición: !(num2 != 0), es decir, (num2 == 0).</p>
+              <p> &nbsp; &nbsp; &nbsp; &nbsp; 4.4.2.1.	Imprimir el mensaje: Error. División para cero no existe.</p>
+              <p> &nbsp; &nbsp; 4.5.	Caso 5: </p>
+              <p> &nbsp; &nbsp; &nbsp; 4.5.1.	Si el valor de la variable ‘num2’ es diferente de cero.</p>
+              <p> &nbsp; &nbsp; &nbsp; &nbsp; 4.5.1.1.	Calcular el módulo entre dos números.</p>
+              <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 4.5.1.1.1.	Asignar el módulo entre dos números a la variable ‘num3’, utilizando el operador ‘%’.</p>
+              <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 4.5.1.1.2.	Imprimir el mensaje: num1 % num2 = num3.</p>
+              <p> &nbsp; &nbsp; &nbsp; 4.5.2.	Caso contrario, se niega la condición: !(num2 != 0), es decir, (num2 == 0).</p>
+              <p> &nbsp; &nbsp; &nbsp; &nbsp; 4.5.2.1.	Imprimir el mensaje: Error. División para cero no existe.</p>
+              <p> &nbsp; &nbsp; 4.6.	Caso por defecto: </p>
+              <p> &nbsp; &nbsp; &nbsp; 4.6.1.	Imprimir el mensaje: Opción incorrecta.</p>
+                       
+                                                                
+              <h4><strong>D)   Implementación </strong></h4>
+              <p>Para implementar la solución, se debe escribir el algoritmo como un programa de C/C++ que contenga toda la información necesaria para completar la traducción a lenguaje máquina. En la Tabla 2.15.1 se muestra el código del programa en C/C++.</p>
+              <h5><strong>Tabla 2.15.1. </strong>Programa que calcula el consumo eléctrico.</h5>
+              <pre><code [highlight]="prefTab[0].programa22"  [lineNumbers]="true"></code></pre><br>
+              <h4><strong>E) Pruebas </strong></h4>
+              <p>Desde la Tabla 2.15.2, hasta la Tabla 2.15.7, se muestran seis ejemplos de la salida del programa, donde se puede ver que los resultados del programa tienen sentido, comparando estos resultados con los datos devueltos por una calculadora.</p>
+              <p>En la salida de la Tabla 2.15.2 se puede ver que, al seleccionar la opción 1 se puede ingresar el primer número que es el 7 y el segundo número que es el 2, obteniéndose la suma entre estos dos números que es 9. De manera similar, en la salida de la Tabla 2.15.3 se puede ver que, al seleccionar la opción 2 se puede ingresar el primer número que es el 7 y el segundo número que es el 2, obteniéndose la resta entre estos dos números que es 5. En la salida de la Tabla 2.15.4 se puede ver que, al seleccionar la opción 3 se puede ingresar el primer número que es el 7 y el segundo número que es el 2, obteniéndose la multiplicación entre estos dos números que es 14. En la salida de la Tabla 2.15.5 se puede ver que, al seleccionar la opción 4 se puede ingresar el primer número que es el 7 y el segundo número que es el 2, obteniéndose la división entera entre estos dos números que es 3. En la salida de la Tabla 2.15.6 se puede ver que, al seleccionar la opción 5 se puede ingresar el primer número que es el 7 y el segundo número que es el 2, obteniéndose el módulo o el resto de una división entera entre estos dos números que es 1. Finalmente, en la salida de la Tabla 2.15.7 se puede ver que, al seleccionar la opción 7, el programa indica que es una opción incorrecta y no realiza ningún cálculo matemático.</p>
+                            
+              <h5><strong>Tabla 2.15.2. </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/II/media/a80.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Tabla 2.15.3. </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/II/media/a81.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Tabla 2.15.4. </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/II/media/a82.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Tabla 2.15.5. </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/II/media/a83.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Tabla 2.15.6. </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/II/media/a84.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Tabla 2.15.7. </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/II/media/a85.png" style="display:block; margin:auto; "><br>
+              
             </mat-tab>
           </mat-tab-group>
         </ng-template>
@@ -158,7 +1422,18 @@
 
       <mat-tab label="Resumen">
         <ng-template matTabContent>
-
+          <h2>Resumen</h2>
+          <ol>
+            <li>Un algoritmo es un método para resolver un problema. La solución de un problema de programación implica la aplicación de cuatro fases: a) Análisis del problema; b) Diseño del algoritmo; c) Desarrollo y codificación; Implementación y pruebas.</li>
+            <li>Un programa es un conjunto de instrucciones que producirán la ejecución de una determinada tarea para conseguir un fin.</li>
+            <li>El pseudocódigo es un lenguaje que se utiliza para describir algoritmos y ayuda a la codificación de un programa.</li>
+            <li>La programación estructurada enseña la descomposición de un programa en módulos más simples de programar que permitirá la escritura de programas fáciles de leer y modificar. En un programa estructurado el flujo lógico se gobierna por las estructuras de control básicas: a) estructuras secuenciales; b) estructuras de decisión; c) estructuras repetitivas. El estudio de las estructuras de control se realiza en base al diseño de algoritmos y a la creación de programas en lenguaje C/C++.</li>
+            <li>La estructura de control secuencial es aquella en la que una instrucción se ejecuta a continuación de otra de modo de secuencia.</li>
+            <li>La estructura de control de selección es aquella en la que las instrucciones se ejecutan entre acciones alternativas. Las principales sentencias de decisión son: a) La sentencia if; b) La sentencia if-else; c) Sentencias if-else anidadas; d) Secuencia de Sentencias if; e) Secuencia de Sentencias if-else; f) Sentencia de control switch.</li>
+            <li>La estructura de control conocida como bucle es aquella que realiza la repetición o iteración de acciones o grupos de sentencias. Las principales sentencias de repetición son: a) La sentencia while; b) La sentencia do-while; c) La sentencia for; d) Bucles anidados.</li>
+            <li>En el lenguaje C/C++ es posible anidar bucles, donde estos bucles anidados constan de un bucle externo con uno o más bucles internos. Cada vez que se repite el bucle externo, los bucles internos se repiten y se ejecutan las sentencias de estos bucles.</li>
+            
+          </ol>
         </ng-template>
       </mat-tab>
       <mat-tab label="Ejercicios Propuestos">
@@ -168,7 +1443,27 @@
       </mat-tab>
       <mat-tab label="Bibliografía">
         <ng-template matTabContent>
-
+          <h2>Bibliografía</h2>
+          <ol type="A">
+            <li>Ceballos, F.J., 2007. C/C++: Curso de Programación. Tercera Edición. Editorial RA-MA, España. ISBN: 978-84-9964-322-9.</li>
+            <li>Davies, P., 1995. The Indispensable Guide to C with Engineering Applications. First Edition. Addison-Wesley Publishing Company, USA. ISBN: 0-201624389.</li>
+            <li>Deitel, H., Deitel, P., 2003. Cómo Programar en C++. Cuarta Edición. Pearson Educación, México. ISBN: 970-26-0254-8.</li>
+            <li>Granizo, E., 2016. Lenguaje C. Teoría y Ejercicios. Tercera Edición. Edicumbre Editorial Corporativa, Ecuador. ISBN: En Trámite.</li>
+            <li>Hanly, H., Koffman, E., 2013. Problem Solving and Program Design in C. Seventh Edition. Pearson Education, USA. ISBN: 978-9332518810.</li>
+            <li>Hanly, H., Koffman, E., Horvath, J., 1995. C Program Design for Engineers. First Edition. Addison-Wesley Publishing Company, USA. ISBN: 0-201590646.</li>
+            <li>Jones, B., Aitken, P., 2003. C in 21 Days. Sixth Edition. SAMS Teach Yourself, USA. ISBN: 0-672-32448-2.</li>
+            <li>Joyanes Aguilar, L., 2008. Fundamentos de Programación. Algoritmos, estructuras de datos y objetos. Cuarta Edición. McGraw-Hill, España. ISBN: 978-84-481-6111-8.</li>
+            <li>Joyanes Aguilar, L., Zahonero Martínez, I., 2005. Programación en C. Metodología, algoritmos y estructuras de datos. Segunda Edición. McGraw-Hill, España. ISBN: 978-8448198442.</li>
+            <li>Luna, F., 2004. C++ Programming for Game Developers. Module I. Game Institute. E-Institute, Inc., USA.</li>
+            <li>Pressman, R., 2010. Ingeniería del Software. Un Enfoque Práctico. Séptima Edición. ISBN: 978-0-07-337597-7. Editorial McGraw-Hill, México.</li>
+            <li>Ritchie, D., Kernighan, B., 1988. C Programming Language. Second Edition. Prentice Hall, USA. ISBN: 0-13-110362-8.</li>
+            <li>Stroustrup, B., 1997. The C++ Programming Language. Special Edition. Addison-Wesley, USA. ISBN: 0-201-88954-4.</li>
+            <li>Wirth Niklaus, 1971. Program Development by Stepwise Refinement. Communications of the ACM, Vol. 14 (4), pp. 221-227.</li>
+            <li>Serway, R., Jewett, J., 2005. Física para Ciencias e Ingeniería. Volumen 1. Séptima Edición. ISBN: 978-607-481-357-9. Cengage Learning Editores, México.</li>
+            <li>Arce, E., 2011. Introducción al Diseño Básico de los Procesos Químicos. Instituto Politécnico Nacional, México.</li>
+            <li>Mallar, M.A., 2010. La Gestión por Procesos: Un Enfoque de Gestión Eficiente. Revista Científica “Visión Futuro”. ISSN: 1669-7634. Universidad Nacional de Misiones Argentina.</li>
+            
+          </ol>
         </ng-template>
       </mat-tab>
     </mat-tab-group>

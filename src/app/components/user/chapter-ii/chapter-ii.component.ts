@@ -592,8 +592,1429 @@ export class ChapterIIComponent implements OnInit {
      
     // Incorporar una pausa en el programa.
     system("pause");
-  }`
+  }`,
+  tablaDatos2: [
+    {Objeto:'',Numero:['1'], Pseudo:['flotante : nota'],Codigo:['float nota;']},
+    {Objeto:'',Numero:['2'], Pseudo:['Leer nota'],Codigo:['cin >> nota;']},
+    {Objeto:'',Numero:['3'], Pseudo:['Si nota >= 7'],Codigo:['if (nota >= 7)']},
+    {Objeto:'',Numero:['4'], Pseudo:['Imprimir mensaje: Aprobado'],Codigo:['cout << "Aprobado." << endl;']},
+  ],
+    programa2 : `/*******************************************************
+WinConsolaPrograma_2_8
+*******************************************************/
+   
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+   
+using namespace std;
+   
+// Función principal.
+void main()
+{
+  // Declaración de variables.
+  float nota; // Se declara la variable 'nota' de tipo float.
      
+  // Leer el valor de una nota.
+  cout << "Ingrese una nota entre (0 y 10): ";
+  cin >> nota;	
+   
+  // Si el valor de la variable nota es mayor o igual que 7.
+  if (nota >= 7)
+  {
+    // Imprimir el mensaje de Aprobado.
+    cout << "Aprobado." << endl;
+  }
+     
+  // Incorporar una pausa en el programa.
+  system("pause");
+}
+    `,
+    programa3: `/*******************************************************
+WinConsolaCasoEstudio_2_5
+*******************************************************/
+   
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+   
+using namespace std;
+   
+// Función principal.
+void main()
+{
+  // Declaración de variables.
+  int num1; // Se declara la variable 'num1' de tipo entero.
+  int num2; // Se declara la variable 'num2' de tipo entero.
+  int num3; // Se declara la variable 'num3' de tipo entero.
+     
+  // Leer el valor del primer número 'num1'.
+  cout << "Ingrese el valor del primer número: ";
+  cin >> num1;
+  // Leer el valor del segundo número 'num2'.
+  cout << "Ingrese el valor del segundo número: ";
+  cin >> num2;
+   
+  // Calcular el módulo entre dos números, utilizando una expresión matemática,
+  // donde se asigna en la variable num3 el módulo entre num1 y num2.
+  num3 = num1 % num2;
+   
+  // Si el valor de la variable num3 es igual a cero.
+  if (num3 == 0)
+  {
+    // Imprimir el mensaje que el número 1 es divisible para el número 2.
+    cout << "El número " << num1 << " es divisible para " << num2 << endl;
+  }
+     
+  // Incorporar una pausa en el programa.
+  system("pause");
+}
+   `,
+   sintaxis3: `if(expresión) 
+   sentencia1;
+else
+   sentencia2;
+   `,
+   sintaxis4: `if(expresión) 
+   {
+        sentencia1.1;
+        sentencia1.2;
+        …
+        sentencia1.n;
+   }
+   else
+   {
+        sentencia2.1;
+        sentencia2.2;
+        …
+        sentencia2.n;
+   }
+   `,
+   tablaDatos3: [
+    {Objeto:'',if:['>'],else:['<=']},
+    {Objeto:'',if:['<'],else:['>=']},
+    {Objeto:'',if:['=='],else:['!=)']},
+    {Objeto:'',if:['(Expresión)'],else:['!(Expresión)']},
+  ],
+  tablaDatos4: [
+    {Objeto:'',Numero:['1'], Pseudo:['entero : num1'],Codigo:['int num1;']},
+    {Objeto:'',Numero:['2'], Pseudo:['entero : num2'],Codigo:['int num2;']},
+    {Objeto:'',Numero:['3'], Pseudo:['Leer num1'],Codigo:['cin >> num1;']},
+    {Objeto:'',Numero:['4'], Pseudo:['num2 ← num1 MOD 2'],Codigo:['num2 = num1 % 2;']},
+    {Objeto:'',Numero:['5'], Pseudo:['Si num2 = 0'],Codigo:['if (num2 == 0)']},
+    {Objeto:'',Numero:['6'], Pseudo:['Imprimir mensaje: El número num1 es par'],Codigo:['cout << "El número " << num1 << " es par." << endl;']},
+    {Objeto:'',Numero:['7'], Pseudo:['Caso contrario, num2 <> 0'],Codigo:['else // (num2 != 0)']},
+    {Objeto:'',Numero:['8'], Pseudo:['Imprimir mensaje: El número num1 es impar'],Codigo:['cout << "El número " << num1 << " es impar." << endl;']},
+  ],
+    programa4: `/*******************************************************
+WinConsolaPrograma_2_9
+*******************************************************/
+   
+// Librerías.
+#include <iostream>
+#include <cstdlib>
+   
+using namespace std;
+   
+// Función principal.
+void main()
+{
+  // Declaración de variables.
+  int num1; // Se declara la variable 'num1' de tipo entero.
+  int num2; // Se declara la variable 'num2' de tipo entero.	
+   
+  // Leer el valor de un número 'num1'.
+  cout << "Ingrese el valor de un número: ";
+  cin >> num1;
+   
+  // Calcular el módulo entre el número número ingresado con el valor de dos, 
+  // utilizando una expresión matemática, donde se asigna en la variable 'num2' 
+  // el módulo entre 'num1' y 2.
+  num2 = num1 % 2;
+   
+  // Si el valor de la variable 'num2' es igual a cero.
+  if (num2 == 0)
+  {
+    // Imprimir el mensaje que el número ingresado 'num1' es par.
+    cout << "El número " << num1 << " es par." << endl;
+  }
+  // Caso contrario, el valor de la variable 'num2' es diferente a cero.
+  else // (num2 != 0)
+  {
+    // Imprimir el mensaje que el número ingresado 'num1' es impar.
+    cout << "El número " << num1 << " es impar." << endl;
+  }
+   
+  // Incorporar una pausa en el programa.
+  system("pause");
+}`,
+tablaDatos5: [
+  {Objeto:'',Numero:['1'], Pseudo:['entero : num1'],Codigo:['int num1;']},
+  {Objeto:'',Numero:['2'], Pseudo:['entero : num2'],Codigo:['int num2;']},
+  {Objeto:'',Numero:['3'], Pseudo:['Leer num1'],Codigo:['cin >> num1;']},
+  {Objeto:'',Numero:['4'], Pseudo:['Leer num2'],Codigo:['cin >> num2;']},
+  {Objeto:'',Numero:['5'], Pseudo:['Si num1 > num2'],Codigo:['if (num1 > num2)']},
+  {Objeto:'',Numero:['6'], Pseudo:['Imprimir mensaje: El mayor de los dos números es num1'],Codigo:['cout << "El mayor de los dos números es: " << num1 << endl;']},
+  {Objeto:'',Numero:['7'], Pseudo:['Caso contrario, num1 <= num2'],Codigo:['eelse // (num1 <= num2)']},
+  {Objeto:'',Numero:['8'], Pseudo:['Imprimir mensaje: El mayor de los dos números es num2'],Codigo:['cout << "El mayor de los dos números es: " << num2 << endl;']},
+],
+  programa5: `/*******************************************************
+  WinConsolaPrograma_2_10
+ *******************************************************/
+ 
+ // Librerías.
+ #include <iostream>
+ #include <cstdlib>
+ 
+ using namespace std;
+ 
+ // Función principal.
+ void main()
+ {
+   // Declaración de variables.
+   int num1; // Se declara la variable 'num1' de tipo entero.
+   int num2; // Se declara la variable 'num2' de tipo entero.
+ 
+   // Leer el valor del primer número 'num1'.
+   cout << "Ingrese el valor del primer número: ";
+   cin >> num1;
+   // Leer el valor del segundo número 'num2'.
+   cout << "Ingrese el valor del segundo número: ";
+   cin >> num2;
+ 
+   // Si el valor de 'num1' es mayor que el valor de 'num2'.
+   if (num1 > num2)
+   {
+     // Imprimir el mensaje que el mayor de los dos números es 'num1'.
+     cout << "El mayor de los dos números es: " << num1 << endl;
+   }
+   // Caso contrario, el valor de 'num1' es menor o igual que 'num2'.
+   else // (num1 <= num2)
+   {
+     // Imprimir el mensaje que el mayor de los dos números es 'num2'.
+     cout << "El mayor de los dos números es: " << num2 << endl;
+   }
+ 
+   // Incorporar una pausa en el programa.
+   system("pause");
+ }
+ `,
+    programa6: `/*******************************************************
+    WinConsolaCasoEstudio_2_6
+   *******************************************************/
+   
+   // Librerías.
+   #include <iostream>
+   #include <cstdlib>
+   
+   using namespace std;
+   
+   // Función principal.
+   void main()
+   {
+     float x; // Entrada: valor de 'x' de la función.		
+     float y; // Salida: valor de 'y' de la función.
+   
+     // Leer el valor de 'x' utilizando la variable 'x'.
+     cout << "Ingrese el valor de 'x': ";
+     cin >> x;
+   
+     // Si el valor de 'x' está dentro del intervalo I1: x < 3.
+     if (x < 3)
+     {
+       // Evaluar a la función f(x) = -x + 3 en un punto 'x'.
+       y = -x + 3;
+     }
+     // Caso contrario, el valor de 'x' está dentro del intervalo I2: x≥3.
+     else // (x >= 3)
+     {
+       // Evaluar a la función f(x) = x - 3 en un punto 'x'.
+       y = x - 3;
+     }
+   
+     // Imprimir el valor de la variable 'x' y de la variable 'y'.
+     cout << "f(" << x << ") = " << y << endl;
+   
+     // Incorporar una pausa en el programa.
+     system("pause");
+   }
+   `,
+      programa7: `/*******************************************************
+      WinConsolaCasoEstudio_2_7
+     *******************************************************/
+     
+     // Librerías.
+     #include <iostream>
+     #include <cstdlib>
+     #include <cmath>
+     
+     using namespace std;
+     
+     // Función principal.
+     void main()
+     {
+       float a;         // Entrada: ancho del triángulo.
+       float b;         // Entrada: largo del triángulo.
+       float c;         // Entrada: largo del triángulo.
+       float s;         // Salida: semi-perímetro del triángulo.
+       float perimetro; // Salida: perímetro del triángulo.
+       float area;      // Salida: área del triángulo.  
+       
+       // Leer el lado 1 del triángulo utilizando la variable 'a'.
+       cout << "Ingrese el valor del lado 1: ";
+       cin >> a;
+       // Leer el lado 2 del triángulo utilizando la variable 'b'.
+       cout << "Ingrese el valor del lado 2: ";
+       cin >> b;
+       // Leer el lado 3 del triángulo utilizando la variable 'c'.
+       cout << "Ingrese el valor del lado 3: ";
+       cin >> c;
+     
+     
+       // Si la suma de cualquiera de los dos lados es mayor que el tercero, es
+       // decir, si se cumple la condición del teorema: (a+b>c)∧(a+c>b)∧(b+c>a).
+       if ((a + b > c) && (a + c > b) && (b + c > a))
+       {
+         // Calcular el perímetro.
+         perimetro = a + b + c;
+         // Calcular el semi-perímetro.
+         s = (a + b + c) / 2.0;
+         // Calcular el área.
+         area = sqrt(s * (s - a) * (s - b) * (s - c));
+     
+         // Imprimir el valor de la variable 'perimetro', de la variable 
+         // 's' y de la variable 'area'.
+         cout << endl;
+         cout << "El perímetro es: " << perimetro << endl;
+         cout << "El semi-perímetro es: " << s << endl;
+         cout << "El área es: " << area << endl;
+       }
+       // Caso contrario, se niega la condición del teorema de existencia de un 
+       // triángulo, es decir: !(a+b>c)∧(a+c>b)∧(b+c>a).
+       else // !((a + b > c) && (a + c > b) && (b + c > a))
+       {
+         // Imprimir el mensaje de error que el triángulo no existe.
+         cout << endl;
+         cout << "Error. El triángulo no existe..." << endl;
+       }
+       
+       // Incorporar una pausa en el programa.
+       system("pause");
+     }
+     `,
+      programa8: `/*******************************************************
+      WinConsolaCasoEstudio_2_8
+     *******************************************************/
+     
+     // Librerías.
+     #include <iostream>
+     #include <cstdlib>
+     #include <cmath>
+     
+     // Directivas define o macros.
+     #define PI 3.141593
+     #define g 9.80665
+     
+     using namespace std;
+     
+     // Función principal.
+     int main()
+     {
+       // Declaración de variables.
+       float m1 = 0.0f;    // Entrada: Primera masa.
+       float m2 = 0.0f;    // Entrada: Segunda masa.
+       float theta = 0.0f; // Entrada: Ángulo del plano inclinado.	
+       float a = 0.0f;     // Salida: Aceleración de dos objetos conectados.
+       float T = 0.0f;     // Salida: Tensión en la cuerda.
+       float n = 0.0f;     // Salida: Normal de la masa m2.
+     
+       // Imprimir un mensaje de información y dos saltos de línea.
+       cout << "Aceleración de dos objetos conectados mediante una cuerda.";
+       cout << endl << endl;
+     
+       // Leer el valor de la primera masa 'm1'.
+       cout << "Ingrese el valor de la primera masa [N]: ";
+       cin >> m1;
+     
+       // Leer el valor de la segunda masa 'm2'.
+       cout << "Ingrese el valor de la segunda masa [N]: ";
+       cin >> m2;
+     
+       // Leer el valor del ángulo theta del plano inclinado.
+       cout << "Ingrese el valor del ángulo [grados]: ";
+       cin >> theta;
+     
+       // Convertir el ángulo theta de grados a radianes.
+       theta = theta * PI / 180.0;
+     
+       // Si la suma entre las masas m1 y m2 es diferente de cero.
+       if ((m1 + m2) != 0)
+       {
+         // Calcular la aceleración de dos objetos conectados.
+         a = (m2 * g * sin(theta) - m1 * g) / (m1 + m2);
+         // Calcular la tensión en la cuerda.
+         T = (m1 * m2 * g * (sin(theta) + 1)) / (m1 + m2);
+         // Calcular la normal de la masa m2.
+         n = m2 * g * cos(theta);
+     
+         // Imprimir un salto de línea (INTRO).
+         cout << endl;
+     
+         // Imprimir el valor de la aceleración de dos objetos conectados.
+         cout << "El valor de la aceleracion es: " << a << " [m/s^2]" << endl;
+         // Imprimir el valor de la tensión en la cuerda.
+         cout << "El valor de la tension es: " << T << " N" << endl;
+         // Imprimir el valor de la normal de la masa m2.
+         cout << "El valor de la normal es: " << n << " N" << endl;
+       }
+       // Caso contrario, la suma entre las masas m1 y m2 es igual a cero.
+       else
+       {
+         // Imprimir un mensaje de error.
+         cout << "Error en el ingreso de los valores de las masas." << endl;
+       }	
+     
+       // Incorporar una pausa en el programa.
+       system("pause");
+     }
+     `,
+      sintaxis5: `if(expresión1) 
+      sentencia1;
+      else if(expresión2)
+            sentencia2;
+      else if(expresión3)
+             sentencia3;
+      …
+      else if(expresiónn)
+             sentencian;
+      else
+      sentencian+1;
+      `,
+      tablaDatos6:[
+        {Objeto:'',Numero:['1'], Pseudo:['entero : num1'],Codigo:['int num1;']},
+        {Objeto:'',Numero:['2'], Pseudo:['Leer num1'],Codigo:['cin >> num1;']},
+        {Objeto:'',Numero:['3'], Pseudo:['Si num1 > 0'],Codigo:['if (num1 > 0)']},
+        {Objeto:'',Numero:['4'], Pseudo:['Imprimir mensaje: El número num1 es mayor que cero'],Codigo:['cout << "El número " << num1 << " es mayor que cero." << endl;']},
+        {Objeto:'',Numero:['5'], Pseudo:['Caso contrario, si num1 < 0'],Codigo:['else if (num1 < 0)']},
+        {Objeto:'',Numero:['6'], Pseudo:['Imprimir mensaje: El número num1 es menor que cero'],Codigo:['cout << "El número " << num1 << " es menor que cero." << endl;']},
+        {Objeto:'',Numero:['7'], Pseudo:['Caso contrario, si num1 = 0'],Codigo:['else if (num1 == 0)']},
+        {Objeto:'',Numero:['8'], Pseudo:['Imprimir mensaje: El número num1 es igual a cero'],Codigo:['cout << "El número " << num1 << " es igual a cero." << endl;']},
+      ],
+      programa9: `/*******************************************************
+      WinConsolaPrograma_2_11
+     *******************************************************/
+     
+     // Librerías.
+     #include <iostream>
+     #include <cstdlib>
+     
+     using namespace std;
+     
+     // Función principal.
+     void main()
+     {
+       // Declaración de variables.
+       int num1; // Entrada: valor de un número 'num1'.
+     
+       // Leer el valor de un número 'num1'.
+       cout << "Ingrese el valor de un número: ";
+       cin >> num1;
+     
+       // Si el valor de la variable 'num1' es mayor que cero.
+       if (num1 > 0)
+       {
+         // Imprimir el mensaje que el número ingresado 'num1' es mayor que cero.
+         cout << "El número " << num1 << " es mayor que cero." << endl;
+       }
+       // Caso contrario, si el valor de la variable 'num1' es menor que cero.
+       else if (num1 < 0)
+       {
+         // Imprimir el mensaje que el número ingresado 'num1' es menor que cero.
+         cout << "El número " << num1 << " es menor que cero." << endl;
+       }
+       // Caso contrario, si el valor de la variable 'num1' es igual a cero.
+       else if (num1 == 0)
+       {
+         // Imprimir el mensaje que el número ingresado 'num1' es igual a cero.
+         cout << "El número " << num1 << " es igual a cero." << endl;
+       }
+     
+       // Incorporar una pausa en el programa.
+       system("pause");
+     }
+     `,
+     tablaDatos7:[
+      {Objeto:'',Numero:['1'], Pseudo:['entero : num'],Codigo:['int num1;']},
+      {Objeto:'',Numero:['2'], Pseudo:['entero: pos'],Codigo:['int pos;']},
+      {Objeto:'',Numero:['3'], Pseudo:['entero: neg'],Codigo:['int neg;']},
+      {Objeto:'',Numero:['4'], Pseudo:['Leer num'],Codigo:['cin >> num;']},
+      {Objeto:'',Numero:['5'], Pseudo:['Si num > 0'],Codigo:['if (num > 0)']},
+      {Objeto:'',Numero:['6'], Pseudo:['Calcular pos = num + 1'],Codigo:['pos = num + 1;']},
+      {Objeto:'',Numero:['7'], Pseudo:['Imprimir mensaje: El número siguiente al número num es pos.'],Codigo:['cout << "El número siguiente al número " << num << " es: " << pos << endl;']},
+      {Objeto:'',Numero:['8'], Pseudo:['Caso contrario, si num1 < 0'],Codigo:['else if (num < 0']},
+      {Objeto:'',Numero:['9'], Pseudo:['Calcular neg = num - 1'],Codigo:['neg = num - 1;']},
+      {Objeto:'',Numero:['10'], Pseudo:['Imprimir mensaje: El número siguiente al número num es neg.'],Codigo:['cout << "El número siguiente al número " << num << " es: " << neg << endl;']},
+      {Objeto:'',Numero:['11'], Pseudo:['Caso contrario, si num = 0'],Codigo:['else if (num == 0)']},
+      {Objeto:'',Numero:['12'], Pseudo:['Calcular pos = num + 1'],Codigo:['pos = num + 1;']},
+      {Objeto:'',Numero:['13'], Pseudo:['Calcular neg = num - 1'],Codigo:['neg = num - 1;']},
+      {Objeto:'',Numero:['14'], Pseudo:['Imprimir mensaje: El número siguiente al cero es pos.'],Codigo:['cout << "El número siguiente al cero es: " << pos;']},
+      {Objeto:'',Numero:['15'], Pseudo:['Imprimir mensaje: El número anterior al cero es pos.'],Codigo:['cout << " y el número anterior al cero es: " << neg << endl;']},
+
+    ],
+      programa10: `/*******************************************************
+      WinConsolaPrograma_2_12
+     *******************************************************/
+     
+     // Librerías.
+     #include <iostream>
+     #include <cstdlib>
+     
+     using namespace std;
+     
+     // Función principal.
+     void main()
+     {
+       // Declaración de variables.
+       int num; // Entrada: valor de un número 'num'.
+       int pos; // Salida: valor siguiente de un número positivo.
+       int neg; // Salida: valor siguiente de un número negativo.
+     
+       // Leer el valor de un número cualquiera 'num'.
+       cout << "Ingrese el valor de un número: ";
+       cin >> num;
+     
+       // Si el valor de la variable 'num' es mayor que cero.
+       if (num > 0)
+       {
+         // Calcular el siguiente número positivo.
+         pos = num + 1;
+         // Imprimir el mensaje: El número siguiente al número 'num' es 'pos'.
+         cout << "El número siguiente al número " << num << " es: " << pos << endl;
+       }
+       // Caso contrario, si el valor de la variable 'num' es menor que cero.
+       else if (num < 0)
+       {
+         // Calcular el siguiente número negativo.
+         neg = num - 1;
+         // Imprimir el mensaje: El número siguiente al número 'num' es 'neg'.
+         cout << "El número siguiente al número " << num << " es: " << neg << endl;
+       }
+       // Caso contrario, si el valor de la variable 'num' es igual a cero.
+       else if (num == 0)
+       {
+         // Calcular el siguiente número positivo.
+         pos = num + 1;
+         // Calcular el siguiente número negativo.
+         neg = num - 1;
+         // Imprimir el mensaje: El número siguiente al cero es 'pos'.
+         cout << "El número siguiente al cero es: " << pos;
+         // Imprimir el mensaje: El número anterior al cero es 'neg'.
+         cout << " y el número anterior al cero es: " << neg << endl;
+       }
+     
+       // Incorporar una pausa en el programa.
+       system("pause");
+     }
+     `,
+      programa11: `/*******************************************************
+      WinConsolaCasoEstudio_2_9
+     *******************************************************/
+     
+     // Librerías.
+     #include <iostream>
+     #include <cstdlib>
+     
+     using namespace std;
+     
+     // Función principal.
+     void main()
+     {
+       float x; // Entrada: valor de 'x' de la función.		
+       float y; // Salida: valor de 'y' de la función.
+     
+       // Leer el valor de 'x' utilizando la variable 'x'.
+       cout << "Ingrese el valor de 'x': ";
+       cin >> x;
+     
+       // Si el valor de 'x' está dentro del intervalo I1: x≤-1.
+       if (x <= -1)
+       {
+         // Evaluar a la función f(x) = -x en un punto 'x'.
+         y = -x;
+       }
+       // Caso contrario, si el valor de 'x' está dentro del intervalo 
+       // I2: (-1<x)∧(x<1).
+       else if ((-1 < x) && (x < 1))
+       {
+         // Evaluar a la función f(x) = x*x en un punto 'x'.
+         y = x * x;
+       }
+       // Caso contrario, si el valor de 'x' está dentro del intervalo 
+       // I3: x≥1.
+       else if (x >= 1)
+       {
+         // Evaluar a la función f(x) = x en un punto 'x'.
+         y = x;
+       }
+     
+       // Imprimir el valor de la variable 'x' y de la variable 'y'.
+       cout << "f(" << x << ") = " << y << endl;
+     
+       // Incorporar una pausa en el programa.
+       system("pause");
+     }
+     `,
+     tablaDatos8:[
+      {Objeto:'',nota:['90-100'], puntos:['A']},
+      {Objeto:'',nota:['80-89'], puntos:['B']},
+      {Objeto:'',nota:['70-79'], puntos:['C']},
+      {Objeto:'',nota:['60-69'], puntos:['D']},
+      {Objeto:'',nota:['0-59'], puntos:['E']},
+    ],
+      programa12: `/*******************************************************
+      WinConsolaCasoEstudio_2_10
+     *******************************************************/
+     
+     // Librerías.
+     #include <iostream>
+     #include <cstdlib>
+     
+     using namespace std;
+     
+     // Función principal.
+     void main()
+     {
+       float nota1;     // Entrada: primera nota.		
+       float nota2;     // Entrada: segunda nota.	
+       float nota3;     // Entrada: tercera nota.	
+       float suma;      // Salida: sumatoria de las tres notas; 
+       float m;         // Salida: valor de la media.
+       char puntuacion; // Salida: valor de la puntuación.
+     
+       // Leer el valor de la primera nota, utilizando la variable 'nota1'.
+       cout << "Ingrese el valor de la primera nota: ";
+       cin >> nota1;
+       // Leer el valor de la segunda nota, utilizando la variable 'nota2'.
+       cout << "Ingrese el valor de la segunda nota: ";
+       cin >> nota2;
+       // Leer el valor de la tercera nota, utilizando la variable 'nota3'.
+       cout << "Ingrese el valor de la tercera nota: ";
+       cin >> nota3;
+     
+       // Calcular la sumatoria de las tres notas.
+       suma = nota1 + nota2 + nota3;
+       // Calcular la media o el promedio de las tres notas.
+       m = suma / 3.0;
+     
+       // Si el valor de 'm' está dentro del intervalo I1: (0≤m)∧(m<60).
+       if ((0 <= m) && (m < 60))
+       {
+         // Asignar a la puntuación el valor de 'E'.
+         puntuacion = 'E';
+       }
+       // Caso contrario, si el valor de 'm' está dentro del intervalo 
+       // I2: (60≤m)∧(m<70).
+       else if ((60 <= m) && (m < 70))
+       {
+         // Asignar a la puntuación el valor de 'D'.
+         puntuacion = 'D';
+       }
+       // Caso contrario, si el valor de 'm' está dentro del intervalo 
+       // I3: (70≤m)∧(m<80).
+       else if ((70 <= m) && (m < 80))
+       {
+         // Asignar a la puntuación el valor de 'C'.
+         puntuacion = 'C';
+       }
+       // Caso contrario, si el valor de 'm' está dentro del intervalo 
+       // I3: (80≤m)∧(m<90).
+       else if ((80 <= m) && (m < 90))
+       {
+         // Asignar a la puntuación el valor de 'B'.
+         puntuacion = 'B';
+       }
+       // Caso contrario, si el valor de 'm' está dentro del intervalo 
+       // I4: (90≤m)∧(m≤100).
+       else if ((90 <= m) && (m <= 100))
+       {
+         // Asignar a la puntuación el valor de 'A'.
+         puntuacion = 'A';
+       }
+     
+       // Imprimir un cuadro de calificaciones resumen.
+       cout << endl;
+       // Imprimir el valor de la nota1.
+       cout << "Nota 1: " << nota1 << endl;
+       // Imprimir el valor de la nota2.
+       cout << "Nota 2: " << nota2 << endl;
+       // Imprimir el valor de la nota3.
+       cout << "Nota 3: " << nota3 << endl;
+       cout << endl;
+       // Imprimir el valor de la sumatoria de las tres notas.
+       cout << "Sumatoria de las tres notas: " << suma << endl;
+       // Imprimir el valor de la media de las tres notas.
+       cout << "Media: " << m << endl;
+       // Imprimir el valor de la puntuación.
+       cout << "Puntuación: " << puntuacion << endl;
+         
+       // Incorporar una pausa en el programa.
+       system("pause");
+     }
+     `,
+      sintaxis6: `if(expresión1) 
+      sentencia1;
+      if(expresión2)
+            sentencia2;
+      if(expresión3)
+             sentencia3;
+      …
+      if(expresiónn)
+             sentencian;
+      `,
+      tablaDatos9:[
+        {Objeto:'',Numero:['1'], Pseudo:['entero : num'],Codigo:['int num1;']},
+        {Objeto:'',Numero:['2'], Pseudo:['Leer num1'],Codigo:['cin >> num1;']},
+        {Objeto:'',Numero:['3'], Pseudo:['Si num1 > 0'],Codigo:['if (num1 > 0)']},
+        {Objeto:'',Numero:['4'], Pseudo:['Imprimir mensaje: El número num1 es mayor que cero'],Codigo:['cout << "El número " << num1 << " es mayor que cero." << endl;']},
+        {Objeto:'',Numero:['5'], Pseudo:['Si num1 < 0'],Codigo:['if (num1 < 0)']},
+        {Objeto:'',Numero:['6'], Pseudo:['Imprimir mensaje: El número num1 es menor que cero'],Codigo:['cout << "El número " << num1 << " es menor que cero." << endl;']},
+        {Objeto:'',Numero:['7'], Pseudo:['Si num1 = 0'],Codigo:['if (num1 == 0)']},
+        {Objeto:'',Numero:['8'], Pseudo:['Imprimir mensaje: El número num1 es igual a cero'],Codigo:['cout << "El número " << num1 << " es igual a cero." << endl;']},
+  
+      ],
+      programa13: `/*******************************************************
+      WinConsolaPrograma_2_13
+     *******************************************************/
+     
+     // Librerías.
+     #include <iostream>
+     #include <cstdlib>
+     
+     using namespace std;
+     
+     // Función principal.
+     void main()
+     {
+       // Declaración de variables.
+       int num1; // Entrada: valor de un número 'num1'.
+     
+       // Leer el valor de un número 'num1'.
+       cout << "Ingrese el valor de un número: ";
+       cin >> num1;
+     
+       // Si el valor de la variable 'num1' es mayor que cero.
+       if (num1 > 0)
+       {
+         // Imprimir el mensaje que el número ingresado 'num1' es mayor que cero.
+         cout << "El número " << num1 << " es mayor que cero." << endl;
+       }
+       // Si el valor de la variable 'num1' es menor que cero.
+       if (num1 < 0)
+       {
+         // Imprimir el mensaje que el número ingresado 'num1' es menor que cero.
+         cout << "El número " << num1 << " es menor que cero." << endl;
+       }
+       // Si el valor de la variable 'num1' es igual a cero.
+       if (num1 == 0)
+       {
+         // Imprimir el mensaje que el número ingresado 'num1' es igual a cero.
+         cout << "El número " << num1 << " es igual a cero." << endl;
+       }
+     
+       // Incorporar una pausa en el programa.
+       system("pause");
+     }
+      `,
+      programa14: `/*******************************************************
+      WinConsolaCasoEstudio_2_11
+     *******************************************************/
+     
+     // Librerías.
+     #include <iostream>
+     #include <cstdlib>
+     
+     using namespace std;
+     
+     // Función principal.
+     void main()
+     {
+       float x; // Entrada: valor de 'x' de la función.		
+       float y; // Salida: valor de 'y' de la función.
+     
+       // Leer el valor de 'x' utilizando la variable 'x'.
+       cout << "Ingrese el valor de 'x': ";
+       cin >> x;
+     
+       // Si el valor de 'x' está dentro del intervalo I1: x≤-1.
+       if (x <= -1)
+       {
+         // Evaluar a la función f(x) = -x en un punto 'x'.
+         y = -x;
+       }
+       // Si el valor de 'x' está dentro del intervalo 
+       // I2: (-1<x)∧(x<1).
+       if ((-1 < x) && (x < 1))
+       {
+         // Evaluar a la función f(x) = x*x en un punto 'x'.
+         y = x * x;
+       }
+       // Si el valor de 'x' está dentro del intervalo 
+       // I3: x≥1.
+       if (x >= 1)
+       {
+         // Evaluar a la función f(x) = x en un punto 'x'.
+         y = x;
+       }
+     
+       // Imprimir el valor de la variable 'x' y de la variable 'y'.
+       cout << "f(" << x << ") = " << y << endl;
+     
+       // Incorporar una pausa en el programa.
+       system("pause");
+     }
+     `,
+     tablaDatos10:[
+      {Objeto:'',nota:['Los primeros 200'], puntos:['0.35']},
+      {Objeto:'',nota:['Hasta los 500'], puntos:['0.55']},
+      {Objeto:'',nota:['Hasta los 700'], puntos:['0.75']},
+      {Objeto:'',nota:['Sobre los 700'], puntos:['1.05']},
+    
+    ],
+      programa15: `/*******************************************************
+      WinConsolaCasoEstudio_2_12
+     *******************************************************/
+     
+     // Librerías.
+     #include <iostream>
+     #include <cstdlib>
+     
+     // Macros o sentencias de preporcesador.
+     #define TARIFA1 0.35
+     #define TARIFA2 0.55
+     #define TARIFA3 0.75
+     #define TARIFA4 1.05
+     
+     using namespace std;
+     
+     // Función principal.
+     void main()
+     {
+       float c;      // Entrada: valor de consumo.		
+       float recibo; // Salida: valor del recibo.
+     
+       // Leer el valor del consumo utilizando la variable 'c'.
+       cout << "Ingrese el consumo en [KWH]: ";
+       cin >> c;
+     
+       // Si el valor de 'c' está dentro del intervalo I1: (0≤c)∧(c≤200).
+       if ((0 <= c) && (c <= 200))
+       {
+         // Calcular el valor del recibo con la TARIFA1.
+         recibo = TARIFA1 * c;
+       }
+       // Si el valor de 'c' está dentro del intervalo 
+       // I2: (200<c)∧(c≤500).
+       if ((200 < c) && (c <= 500))
+       {
+         // Calcular el valor del recibo con la TARIFA2.
+         recibo = TARIFA2 * c;
+       }
+       // Si el valor de 'c' está dentro del intervalo 
+       // I3: (500<c)∧(c≤700).
+       if ((500 < c) && (c <= 700))
+       {
+         // Calcular el valor del recibo con la TARIFA3.
+         recibo = TARIFA3 * c;
+       }
+       // Si el valor de 'c' está dentro del intervalo 
+       // I4: (c > 700).
+       if (c > 700)
+       {
+         // Calcular el valor del recibo con la TARIFA4.
+         recibo = TARIFA4 * c;
+       }
+     
+       // Imprimir el valor del recibo.
+       cout << "La cuenta total es: $ " << recibo << " USD" << endl;
+     
+       // Incorporar una pausa en el programa.
+       system("pause");
+     }
+     `,
+      sintaxis7: `if(expresión1)
+
+      if(expresión2)
+        sentencia2.1;
+      else
+        sentencia2.2;
+    else
+    if(expresión3)
+    
+      if(expresión4)
+        Sentencia4.1;
+      else
+        sentencia4.2;
+    else
+    …
+    if(expresiónm)
+    
+      if(expresiónn)
+        Sentencian.1;
+      else
+        sentencian.2;
+    else
+    
+    `, 
+    tablaDatos11:[
+      {Objeto:'',Numero:['1'], Pseudo:['entero : a'],Codigo:['int a;']},
+      {Objeto:'',Numero:['2'], Pseudo:['entero : b'],Codigo:['int b;']},
+      {Objeto:'',Numero:['3'], Pseudo:['entero : c'],Codigo:['int c;']},
+      {Objeto:'',Numero:['4'], Pseudo:['entero : mayor'],Codigo:['int mayor;']},
+      {Objeto:'',Numero:['5'], Pseudo:['Leer a'],Codigo:['cin >> a;']},
+      {Objeto:'',Numero:['6'], Pseudo:['Leer b'],Codigo:['cin >> b;']},
+      {Objeto:'',Numero:['7'], Pseudo:['Leer c'],Codigo:['cin >> c;']},
+      {Objeto:'',Numero:['8'], Pseudo:['Si a > b'],Codigo:['if (a > b)']},
+      {Objeto:'',Numero:['9'], Pseudo:['Si a > c'],Codigo:['if (a > c)']},
+      {Objeto:'',Numero:['10'], Pseudo:['mayor := a'],Codigo:['mayor = a;']},
+      {Objeto:'',Numero:['11'], Pseudo:['Caso contrario'],Codigo:['else']},
+      {Objeto:'',Numero:['12'], Pseudo:['mayor := c'],Codigo:['mayor = c;']},
+      {Objeto:'',Numero:['13'], Pseudo:['Caso contrario'],Codigo:['else']},
+      {Objeto:'',Numero:['14'], Pseudo:['Si b > c'],Codigo:['if (b > c)']},
+      {Objeto:'',Numero:['15'], Pseudo:['mayor := b'],Codigo:['mayor = b;']},
+      {Objeto:'',Numero:['16'], Pseudo:['Caso contrario'],Codigo:['else']},
+      {Objeto:'',Numero:['17'], Pseudo:['mayor := c'],Codigo:['mayor = c;']},
+      {Objeto:'',Numero:['18'], Pseudo:['Imprimir mensaje: El mayor de los tres números es: mayor'],Codigo:['cout << "El mayor de los tres números es: " << mayor << endl;']},
+    ],
+    programa16: `/*******************************************************
+    WinConsolaPrograma_2_14
+   *******************************************************/
+   
+   // Librerías.
+   #include <iostream>
+   #include <cstdlib>
+   
+   using namespace std;
+   
+   // Función principal.
+   void main()
+   {
+     // Declaración de variables.
+     int a;     // Entrada: valor del primer número 'a'.
+     int b;     // Entrada: valor del segundo número 'b'.
+     int c;     // Entrada: valor del tercer número 'c'.
+     int mayor; // Salida: valor del mayor de los tres números.
+   
+     // Leer el valor del primer número 'a'.
+     cout << "Ingrese el valor del primer número: "; cin >> a;
+     // Leer el valor del segundo número 'b'.
+     cout << "Ingrese el valor del segundo número: "; cin >> b;
+     // Leer el valor del tercer número 'c'.
+     cout << "Ingrese el valor del tercer número: "; cin >> c;
+   
+     // Si 'a' es mayor que 'b'.
+     if (a > b) {
+       // Si 'a' es mayor que 'c'.
+       if (a > c) {
+         // Asignar a la variable mayor el valor de 'a'.
+         mayor = a;
+       }		
+       // Caso contrario, 'c' es mayor que 'a'.
+       else {
+         // Asignar a la variable mayor el valor de 'c'.
+         mayor = c;
+       }			
+     }		
+     // Caso contrario, 'b' es mayor que 'a'.
+     else {
+       // Si 'b' es mayor que 'c'.
+       if (b > c) {
+         // Asignar a la variable mayor el valor de 'b'.
+         mayor = b;
+       }			
+       // Caso contrario, 'c' es mayor que 'b'.
+       else {
+         // Asignar a la variable mayor el valor de 'c'.
+         mayor = c;
+       }			
+     }	
+   
+     // Imprimir: El mayor de los tres números es 'mayor'.
+     cout << "El mayor de los tres números es: " << mayor << endl;
+   
+     system("pause");
+   }
+   `,
+    programa17: `/*******************************************************
+    WinConsolaCasoEstudio_2_13
+   *******************************************************/
+   
+   // Librerías.
+   #include <iostream>
+   #include <cstdlib>
+   
+   using namespace std;
+   
+   // Función principal.
+   void main()
+   {
+     // Declaración de variables.
+     char primero;     // Entrada: valor del primer color.
+     char segundo;     // Entrada: valor del segundo color.
+     
+     // Imprimir el mensaje de información: Mezcla de dos colores primarios.
+     cout << "Mezcla de dos colores primarios." << endl;
+   
+     // Imprimir el mensaje: a. Amarillo; b. Azul.
+     cout << "a. Amarillo; b. Azul." << endl; 
+     // Imprimir el mensaje: Seleccione un color (a o b):
+     cout << "Seleccione un color (a o b): "; 
+     // Leer el primer color.
+     cin >> primero;
+   
+     // Si el primer color es igual a la opción 'a' (Amarillo).
+     if (primero == 'a') {
+       // Imprimir el mensaje: b. Azul; c. Rojo.
+       cout << "b. Azul; c. Rojo." << endl;
+       // Imprimir el mensaje: Seleccione otro color (b o c):
+       cout << "Seleccione otro color (b o c): "; 
+       // Leer el segundo color.
+       cin >> segundo;
+       // Si el segundo color es igual a la opción 'b' (Azul).
+       if (segundo=='b') {
+         // Imprimir el mensaje: Amarillo + Azul = Verde
+         cout << "Amarillo + Azul = Verde" << endl;
+       }
+       // Caso contrario, se seleccionó la opción 'c' (Rojo).
+       else {
+         // Imprimir el mensaje: Amarillo + Rojo = Naranja
+         cout << "Amarillo + Rojo = Naranja" << endl;
+       }
+     }
+     // Caso contrario, se seleccionó la opción 'b' (Azul).
+     else {
+       // Imprimir el mensaje: c. Rojo; a. Amarillo.
+       cout << "c. Rojo; a. Amarillo." << endl;
+       // Imprimir el mensaje: Seleccione otro color (c o a):
+       cout << "Seleccione otro color (c o a): "; 
+       // Leer el segundo color.
+       cin >> segundo;
+       // Si el segundo color es igual a la opción 'c' (Rojo).
+       if (segundo == 'c') {
+         // Imprimir el mensaje: Azul + Rojo = Violeta
+         cout << "Azul + Rojo = Violeta" << endl;
+       }
+       // Caso contrario, se seleccionó la opción 'a' (Amarillo).
+       else {
+         // Imprimir el mensaje: Azul + Amarillo = Verde
+         cout << "Azul + Amarillo = Verde" << endl;
+       }
+     }
+     
+     // Generar una pausa en el programa.
+     system("pause");
+   }
+   `,
+   programa18: `// Librerías.
+   #include <iostream>
+   #include <cstdlib>
+   #include <cmath>
+   
+   using namespace std;
+   
+   // Función principal.
+   void main()
+   {
+     // Declaración de variables.
+     float a, b, c;
+     float x1, x2;
+     float x;
+     float real, imag;
+     float D;
+   
+     // Imprimir un mensaje de información.
+     cout << "Raíces de la ecuación cuadrática." << endl;
+     cout << endl;
+   
+     // Leer el valor del coefiente 'a' de la ecuación cuadrática.
+     cout << "Ingrese el valor del coefiente 'a': "; cin >> a;
+     // Leer el valor del coefiente 'b' de la ecuación cuadrática.
+     cout << "Ingrese el valor del coefiente 'b': "; cin >> b;
+     // Leer el valor del coefiente 'c' de la ecuación cuadrática.
+     cout << "Ingrese el valor del coefiente 'c': "; cin >> c;
+     
+     // Imprimir un salto de línea (INTRO).
+     cout << endl;
+   
+     // Si el valor del coeficiente 'a' es igual a cero.
+     if (a == 0)
+     {
+       // Si el valor del coeficiente 'b' es diferente de cero.
+       if (b != 0)
+       {
+         // Calcular el valor de la raíz de la ecuación lineal 'x'
+         // que es igual al resultado de la división entre -c para b.
+         x = -c / b;
+         // Imprimir el valor de la raíz de la ecuación lineal 'x'.
+         cout << "El valor de la raíz de la ecuación lineal 'x' es: " 
+            << x << endl;
+       }
+       // Caso contrario, cuando el valor del coeficiente 'b' es igual 
+       // a cero.
+       else
+       {
+         // Imprimir el valor de la función constante que es igual al 
+         // valor de 'c'.
+         cout << "La función es una constante cuya ecuación es: y = " 
+            << c << endl;
+       }
+     }
+     // Caso contrario, cuando el valor del coeficiente 'a' es diferente 
+     // de cero (a != 0).
+     else
+     {
+       // Calcular el valor del discriminante, utilizando la variable 'D'.
+       D = b * b - 4 * a * c;
+       // Si el valor del discriminante es mayor que cero.
+       if (D > 0)
+       {
+         // Imprimir el mensaje: "Las raíces son reales".
+         cout << "Las raíces son reales." << endl;	
+         // Calcular el valor de la primera raíz que es 'x1'.
+         x1 = (-b + sqrt(D)) / (2 * a);
+         // Calcular el valor de la segunda raíz que es 'x2'.
+         x2 = (-b - sqrt(D)) / (2 * a);
+         // Imprimir los valores de las raíces que son 'x1' y 'x2'.
+         cout << "x1 = " << x1 << " y x2 = " << x2 << endl;			
+       }
+       // Caso contrario, si el valor del discrimiante es igual a cero.
+       else if (D == 0)
+       {
+         // Imprimir el mensaje: "Existe una sola raíz real.".
+         cout << "Existe una sola raíz real." << endl;	
+         // Calcular el valor de la única raíz real que es 'x1'.
+         x1 = -b / (2 * a);
+         // Asignar a la variable 'x2' el valor de la raíz de la 
+         // variable 'x1'.
+         x2 = x1;
+         // Imprimir el valor de única raíz real, donde 'x1' 
+         // es igual a 'x2'.
+         cout << "x1 = " << x1 << " = x2 = " << x2 << endl;			
+       }
+       // Caso contrario, si el valor del discrimiante es menor que cero.
+       else if (D < 0)
+       {
+         // Imprimir el mensaje: "Las raíces son imaginarias.".
+         cout << "Las raíces son imaginarias." << endl;	
+         // Calcular el valor de la parte real del número complejo.
+         real = -b / (2 * a);
+         // Calcular el valor de la parte imaginaria del número 
+         // complejo.
+         imag = sqrt(fabs(D)) / (2 * a);
+         // Imprimir el primer número complejo 'Z1' obtenido con los 
+         // valores de la parte real y la parte imaginaria.
+         cout << "Z1 = ( " << real << ", " << imag << " i )" << endl;
+         // Imprimir el segundo número complejo 'Z2' que resulta ser 
+         // el conjudado del primer número complejo 'Z1'.
+         cout << "Z2 = ( " << real << ", " << -imag << " i )" << endl;
+       }
+     }
+   
+     // Incorporar una pausa en el programa.
+     system("pause");
+   }
+   `,
+    programa19: `switch(selector)
+    {
+      case etiqueta1:
+        sentencias1;
+        break; /* opcional */
+    case etiqueta2:
+        sentencias2;
+        break; /* opcional */
+      …
+    case etiquetan:
+        sentenciasn;
+        break; /* opcional */
+      default:
+    sentenciasd; /* opcional */
+    }
+    `,
+    tablaDatos12:[
+      {Objeto:'',Numero:['1'], Pseudo:['entero : digito'],Codigo:['int digito;']},
+      {Objeto:'',Numero:['2'], Pseudo:['Leer digito'],Codigo:['cin >> digito;']},
+      {Objeto:'',Numero:['3'], Pseudo:['Según sea el valor del dígito, hacer:'],Codigo:['switch (digito) {']},
+      {Objeto:'',Numero:['4'], Pseudo:['Caso 0:'],Codigo:['case 0:']},
+      {Objeto:'',Numero:['5'], Pseudo:['Imprimir: El dígito ingresado fue cero.'],Codigo:['cout << "El dígito ingresado fue cero." << endl; break;']},
+      {Objeto:'',Numero:['6'], Pseudo:['Caso 1:'],Codigo:['case 1:']},
+      {Objeto:'',Numero:['7'], Pseudo:['Imprimir: El dígito ingresado fue uno.'],Codigo:['cout << "El dígito ingresado fue uno." << endl; break;']},
+      {Objeto:'',Numero:['8'], Pseudo:['Caso 2:'],Codigo:['case 2:']},
+      {Objeto:'',Numero:['9'], Pseudo:['Imprimir: El dígito ingresado fue dos.'],Codigo:['cout << "El dígito ingresado fue dos." << endl; break;']},
+      {Objeto:'',Numero:['10'], Pseudo:['Caso 3:'],Codigo:['case 3:']},
+      {Objeto:'',Numero:['11'], Pseudo:['Imprimir: El dígito ingresado fue tres.'],Codigo:['cout << "El dígito ingresado fue tres." << endl; break;']},
+      {Objeto:'',Numero:['12'], Pseudo:['Caso 4:'],Codigo:['case 4:']},
+      {Objeto:'',Numero:['13'], Pseudo:['Imprimir: El dígito ingresado fue cuatro.'],Codigo:['cout << "El dígito ingresado fue cuatro." << endl; break;']},
+      {Objeto:'',Numero:['14'], Pseudo:['Caso 5:'],Codigo:['case 5:']},
+      {Objeto:'',Numero:['15'], Pseudo:['Imprimir: El dígito ingresado fue cinco.'],Codigo:['cout << "El dígito ingresado fue cinco." << endl; break;']},
+      {Objeto:'',Numero:['16'], Pseudo:['Caso 6:'],Codigo:['case 6:']},
+      {Objeto:'',Numero:['17'], Pseudo:['Imprimir: El dígito ingresado fue seis.'],Codigo:['cout << "El dígito ingresado fue seis." << endl; break;']},
+      {Objeto:'',Numero:['18'], Pseudo:['Caso 7:'],Codigo:['case 7:']},
+      {Objeto:'',Numero:['19'], Pseudo:['Imprimir: El dígito ingresado fue siete.'],Codigo:['cout << "El dígito ingresado fue siete." << endl; break;']},
+      {Objeto:'',Numero:['20'], Pseudo:['Caso 8:'],Codigo:['case 8:']},
+      {Objeto:'',Numero:['21'], Pseudo:['Imprimir: El dígito ingresado fue ocho.'],Codigo:['cout << "El dígito ingresado fue ocho." << endl; break;']},
+      {Objeto:'',Numero:['22'], Pseudo:['Caso 9:'],Codigo:['case 9:']},
+      {Objeto:'',Numero:['23'], Pseudo:['Imprimir: El dígito ingresado fue nueve.'],Codigo:['cout << "El dígito ingresado fue nueve." << endl; break;']},
+      {Objeto:'',Numero:['24'], Pseudo:['Caso por defecto:'],Codigo:['default:']},
+      {Objeto:'',Numero:['25'], Pseudo:['Imprimir el mensaje: Valor fuera de rango.'],Codigo:['cout << "Valor fuera de rango." << endl; break;']},
+    ],
+      programa20: `/*******************************************************
+      WinConsolaPrograma_2_15
+     *******************************************************/
+     
+     // Librerías.
+     #include <iostream>
+     #include <cstdlib>
+     #include <cmath>
+     
+     using namespace std;
+     
+     // Función principal.
+     void main()
+     {
+       int digito; // Entrada: valor de un dígito.
+     
+       // Leer el valor de un dígito.
+       cout << "Ingrese un dígito: ";
+       cin >> digito;
+       
+       // Según sea el valor del dígito, hacer:
+       switch (digito)
+       {
+       case 0: // Caso 0
+         // Imprimir: El dígito ingresado fue cero.
+         cout << "El dígito ingresado fue cero." << endl;
+         break;
+       case 1: // Caso 1
+         // Imprimir: El dígito ingresado fue uno.
+         cout << "El dígito ingresado fue uno." << endl;
+         break;
+       case 2: // Caso 2
+       // Imprimir: El dígito ingresado fue dos.
+         cout << "El dígito ingresado fue dos." << endl;
+         break;
+       case 3: // Caso 3
+       // Imprimir: El dígito ingresado fue tres.
+         cout << "El dígito ingresado fue tres." << endl;
+         break;
+       case 4: // Caso 4
+       // Imprimir: El dígito ingresado fue cuatro.
+         cout << "El dígito ingresado fue cuatro." << endl;
+         break;
+       case 5: // Caso 5
+       // Imprimir: El dígito ingresado fue cinco.
+         cout << "El dígito ingresado fue cinco." << endl;
+         break;
+       case 6: // Caso 6
+       // Imprimir: El dígito ingresado fue seis.
+         cout << "El dígito ingresado fue seis." << endl;
+         break;
+       case 7: // Caso 7
+       // Imprimir: El dígito ingresado fue siete.
+         cout << "El dígito ingresado fue siete." << endl;
+         break;
+       case 8: // Caso 8
+       // Imprimir: El dígito ingresado fue ocho.
+         cout << "El dígito ingresado fue ocho." << endl;
+         break;
+       case 9: // Caso 9
+       // Imprimir: El dígito ingresado fue nueve.
+         cout << "El dígito ingresado fue nueve." << endl;
+         break;
+       default: // Caso por defecto
+         // Imprimir el mensaje: Valor fuera de rango.
+         cout << "Valor fuera de rango." << endl;
+         break;
+       }	
+     
+       // Incorporar una pausa en el programa.
+       system("pause");
+     }
+     `,
+     tablaDatos13:[
+      {Objeto:'',Numero:['1'], Pseudo:['caracter : letra'],Codigo:['char letra;']},
+      {Objeto:'',Numero:['2'], Pseudo:['Leer letra'],Codigo:['cin >> letra;']},
+      {Objeto:'',Numero:['3'], Pseudo:['Según sea el valor de la letra, hacer:'],Codigo:['switch (letra) {']},
+      {Objeto:'',Numero:['4'], Pseudo:['Caso ‘a’: Caso ‘A’:'],Codigo:['case a: case A:']},
+      {Objeto:'',Numero:['5'], Pseudo:['Caso ‘e’: Caso ‘E’:'],Codigo:['case e: case E:']},
+      {Objeto:'',Numero:['6'], Pseudo:['Caso ‘i’: Caso ‘I’:'],Codigo:['case i: case I:']},
+      {Objeto:'',Numero:['7'], Pseudo:['Caso ‘o’: Caso ‘O’:'],Codigo:['case o: case O:']},
+      {Objeto:'',Numero:['8'], Pseudo:['Caso ‘u’: Caso ‘U’:'],Codigo:['case u: case U:']},
+      {Objeto:'',Numero:['9'], Pseudo:['Imprimir: La letra es una vocal.'],Codigo:['cout << "La letra " << letra << " es una vocal." << endl; break;']},
+      {Objeto:'',Numero:['10'], Pseudo:['Caso por defecto:'],Codigo:['default:']},
+      {Objeto:'',Numero:['11'], Pseudo:['Imprimir: La letra no es una vocal.'],Codigo:['cout << "La letra " << letra << " no es una vocal." << endl; break;}']},
+      
+    ],
+    programa21: `/*******************************************************
+    WinConsolaPrograma_2_16
+   *******************************************************/
+   
+   // Librerías.
+   #include <iostream>
+   #include <cstdlib>
+   #include <cmath>
+   
+   using namespace std;
+   
+   // Función principal.
+   void main()
+   {
+     char letra; // Entrada: valor de una letra.
+   
+     // Leer el valor de una letra.
+     cout << "Ingrese una letra: ";
+     cin >> letra;
+   
+     // Según sea el valor de la letra, hacer:
+     switch (letra)
+     {
+     case 'a': case 'A': // caso 'a' o caso 'A'
+     case 'e': case 'E': // caso 'e' o caso 'E'
+     case 'i': case 'I': // caso 'i' o caso 'I'
+     case 'o': case 'O': // caso 'o' o caso 'O'
+     case 'u': case 'U': // caso 'u' o caso 'U'
+       // Imprimir: La letra es una vocal.
+       cout << "La letra " << letra << " es una vocal." << endl;
+       break;	
+     default: // Caso por defecto
+       // Imprimir: La letra no es una vocal.
+       cout << "La letra " << letra << " no es una vocal." << endl;
+       break;
+     }
+   
+     // Incorporar una pausa en el programa.
+     system("pause");
+   }
+   `,
+    programa22: `/*******************************************************
+    WinConsolaCasoEstudio_2_15
+   *******************************************************/
+   
+   // Librerías.
+   #include <iostream>
+   #include <cstdlib>
+   #include <cmath>
+   
+   using namespace std;
+   
+   // Función principal.
+   void main()
+   {
+     int num1;   // Entrada: primer número.
+     int num2;   // Entrada: segundo número.
+     int num3;   // Salida: resultado de una operación matemática.
+     int opcion; // Entrada: opción a ser seleccionada del menú.
+   
+     // Imprimir un menú con cinco opciones.
+     // Imprimir el mensaje: 1. Suma de dos números.
+     cout << "1. Suma de dos números." << endl;
+     // Imprimir el mensaje: 2. Resta de dos números.
+     cout << "2. Resta de dos números." << endl;
+     // Imprimir el mensaje: 3. Multiplicación entre dos números.
+     cout << "3. Multiplicación entre dos números." << endl;
+     // Imprimir el mensaje: 4. División entre dos números.
+     cout << "4. División entre dos números." << endl;
+     // Imprimir el mensaje: 5. Módulo entre dos números.
+     cout << "5. Módulo entre dos números." << endl;
+     cout << endl;
+     // Imprimir el mensaje: Digite una opción.
+     cout << "Digite una opción: ";
+     // Leer el valor de la opción seleccionada.
+     cin >> opcion;
+     cout << endl;
+   
+     // Si la opción seleccionada está entre los valores de 1 y 5. 
+     if (opcion > 0 && opcion <= 5)
+     {
+       // Leer el primer número.
+       cout << "Ingrese el primer numero: ";
+       cin >> num1;
+       // Leer el segundo número.
+       cout << "Ingrese el segundo numero: ";
+       cin >> num2;
+       cout << endl;
+     }	
+   
+     // Según sea el valor de la variable 'opcion', hacer:
+     switch (opcion)
+     {
+     case 1: // Caso 1
+       // Calcular la suma entre dos números.
+       num3 = num1 + num2;
+       // Imprimir el mensaje: num1 + num2 = num3.
+       cout << num1 << " + " << num2 << " = " << num3 << endl;
+       break;
+     case 2: // Caso 2
+       // Calcular la resta entre dos números.
+       num3 = num1 - num2;
+       // Imprimir el mensaje: num1 - num2 = num3.
+       cout << num1 << " - " << num2 << " = " << num3 << endl;
+       break;
+     case 3: // Caso 3
+       // Calcular la multiplicación entre dos números.
+       num3 = num1 * num2;
+       // Imprimir el mensaje: num1 * num2 = num3.
+       cout << num1 << " * " << num2 << " = " << num3 << endl;
+       break;
+     case 4: // Caso 4
+       // Si el valor de la variable 'num2' es diferente de cero.
+       if (num2 != 0)
+       {
+         // Calcular la división entre dos números.
+         num3 = num1 / num2;
+         // Imprimir el mensaje: num1 / num2 = num3.
+         cout << num1 << " / " << num2 << " = " << num3 << endl;
+       }
+       // Caso contrario, se niega la condición: !(num2 != 0).
+       else // (num2 == 0)
+       {
+         // Imprimir el mensaje: Error. División para cero no existe.
+         cout << "Error. División para cero no existe." << endl;
+       }		
+       break;
+     case 5: // Caso 5
+       // Si el valor de la variable 'num2' es diferente de cero.
+       if (num2 != 0)
+       {
+         // Calcular el módulo entre dos números.
+         num3 = num1 % num2;
+         // Imprimir el mensaje: num1 % num2 = num3.
+         cout << num1 << " % " << num2 << " = " << num3 << endl;
+       }
+       // Caso contrario, se niega la condición: !(num2 != 0).
+       else // (num2 == 0)
+       {
+         // Imprimir el mensaje: Error. División para cero no existe.
+         cout << "Error. División para cero no existe." << endl;
+       }		
+       break;
+     default: // Caso por defecto
+       // Imprimir el mensaje: Opción incorrecta.
+       cout << "Opción incorrecta." << endl;
+       break;
+     }
+       
+     // Incorporar una pausa en el programa.
+   `,
+   tablaDatos14:[
+    {Objeto:'',nota:['Automóviles, todoterrenos o camionetas'], puntos:['1.00']},
+    {Objeto:'',nota:['Buses y camiones de 2 ejes'], puntos:['2.00']},
+    {Objeto:'',nota:['Buses y camiones de 3 ejes	'], puntos:['3.00']},
+    {Objeto:'',nota:['Camiones de 4 ejes'], puntos:['4.00']},
+    {Objeto:'',nota:['Camiones de 5 ejes'], puntos:['5.00']},
+    {Objeto:'',nota:['Camiones de 6 ejes o mas'], puntos:['6.00']},
+    {Objeto:'',nota:['Motos'], puntos:['0.20']},
+    {Objeto:'',nota:['Vehículos livianos con eje de remolque'], puntos:['1.50']},
+  
+  ],
       }
     ];
     this.praqnique=[
