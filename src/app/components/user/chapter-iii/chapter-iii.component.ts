@@ -52,8 +52,7 @@ export class ChapterIIIComponent implements OnInit {
       ],
       programa1: ``,
     },]
-this.prefTabs3={
-this.prefTabs3=[{
+    this.prefTabs3=[{
 programa3_12:`/*******************************************************
 WinConsolaPrograma_3_12
 *******************************************************/
@@ -1338,7 +1337,7 @@ void ImprimirDatos(float n1, float n2, float n3)
 }
 `,
 
-    }]
+    }];
     this.introduccion = [{
       f1:
         `
@@ -6232,6 +6231,7 @@ void ImprimirDatos(float n1, float n2, float n3)
         ]
       }
     ];
+  
   }
 
   selectTabNext() {
@@ -6279,4 +6279,3 @@ void ImprimirDatos(float n1, float n2, float n3)
 
   }
 }
-
