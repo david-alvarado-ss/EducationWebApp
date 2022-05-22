@@ -19,6 +19,7 @@ export class ChapterIIIComponent implements OnInit {
   asyncTabs: Observable<ExampleTab[]>;
   prefTabs: any;
   prefTabs3: any;
+  prefTab: any;
   introduccion: any;
   praqnique: any;
   praqniquePropuesto: any;
@@ -41,6 +42,16 @@ export class ChapterIIIComponent implements OnInit {
       }, 1000);
     });
   */
+    this.prefTabs= [{
+      tablaDatos1:[
+        {Objeto:'',nota:['Los primeros 200'], puntos:['0.35']},
+        {Objeto:'',nota:['Hasta los 500'], puntos:['0.55']},
+        {Objeto:'',nota:['Hasta los 700'], puntos:['0.75']},
+        {Objeto:'',nota:['Sobre los 700'], puntos:['1.05']},
+        
+      ],
+      programa1: ``,
+    },]
 this.prefTabs3={
 programa3_1:`/*******************************************************
 WinConsolaPrograma_3_1

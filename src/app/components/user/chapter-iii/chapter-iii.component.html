@@ -139,35 +139,67 @@
             <mat-tab  label="Caso de Estudio 3.2">
               <h3><strong>Caso de Estudio 2.8: Encontrar la aceleración de dos objetos conectados mediante una cuerda. </strong></h3>
               <h4><strong>A)   Problema </strong></h4>
-              <p>Escribir un programa para calcular e imprimir la magnitud de la aceleración (‘a’) de dos objetos conectados mediante una cuerda, la tensión (‘T’) en la cuerda y la normal (‘n’) de la masa m_2, donde una bola de masa m_1 y un bloque de masa m_2 se unen mediante una cuerda ligera que pasa sobre una polea sin fricción de masa despreciable, como se muestra en la Figura 2.8.1. El bloque se encuentra sobre un plano inclinado sin fricción de ángulo θ (‘theta’) en grados. A continuación, se presentan las ecuaciones que calculan los elementos solicitados.</p>
+              <p>Dadas las siguientes tarifas por gasto eléctrico en función del consumo en KWH, como se puede ver en la Tabla 3.2.1:</p>
+              <h4><strong>Tabla 3.2.1. </strong>Tarifas de consumo eléctrico.</h4>
+              <TABLE BORDER WIDTH="100%" CELLPADDING=1 CELLSPACING=0 class="mat-elevation-z8">
+                <TR>
+                  <TH>Consumo (KWH)</TH>
+                  <TH>Tarifa (USD por KWH)</TH>
+                </TR>
+                <tbody *ngFor="let item of prefTab[0].tablaDatos1">
+                <TR style="text-align: left">
+                  
+                  <TD>
+                    <ul *ngFor="let i of item.nota" style="list-style-type: none;">
+                      <li>{{i}}</li>
+                    </ul>
+                  </TD>
+                  <TD>
+                    <ul *ngFor="let i of item.puntos" style="list-style-type: none;">
+                      <li>{{i}}</li>
+                    </ul>
+                  </TD>
+                </TR>
+                </tbody>
+              </TABLE><br>
+              <p>Escribir un programa que permita calcular el costo de la planilla de luz o el recibo de la luz. Los cuatro intervalos del consumo de la luz ‘c’ se muestran en la Figura 3.2.1 que son:</p>
+              <p>TARIFA1: I_1:0≤ c ≤ 200, es decir, (0 ≤ c)∧(c ≤ 200)</p>
+              <p>TARIFA2: I_2:200< c ≤ 500, es decir, (200 < c)∧(c ≤ 500) </p>
+              <p>TARIFA3: I_3:500< c ≤ 700, es decir, (500 < c)∧(c ≤ 700)</p>
+              <p>TARIFA4: I_4:c > 700</p>
               <img src="./assets/images/Capitulos/II/media/a20.png" style="display:block; margin:auto; "><br>
-              <h5><strong>Figura 2.8.1. </strong>(a) Dos objetos conectados mediante una cuerda ligera sobre una polea sin friccion. (b) Diagrama de cuerpo libre para la bola. (c) Diagrama de cuerpo libre para el bloque (Serway, R., Jewett, J., 2005).</h5>
+              <h5><strong>Figura 3.2.1.  </strong>Intervalos del consumo de la luz.</h5>
               
               <h4><strong>B)   Análisis </strong></h4>
-              <p>Claramente, se puede ver que las entradas del problema son la masa m_1, la masa m_2 y el ángulo θ (‘theta’) en grados. Hay tres salidas requeridas: la aceleración, la tensión y la normal (‘n’) de la masa m_2. Partiendo de un conocimiento básico de Física, se sabe que hay una relación entre la masa m_1, la masa m_2 y el ángulo θ (‘theta’) del plano inclinado con la acelaración, la tensión y la normal. Las fórmulas requeridas se incluyen en el requerimiento de los datos.</p>
+              <p>Claramente, se puede ver que la entrada del problema es el valor del consumo de la luz ‘c’. Hay una salida requerida que es el valor del recibo. Partiendo de un conocimiento básico de Álgebra, se sabe que hay cuatro intervalos y cuatro diferentes valores para los recibos que dependen de los valores de las tarifas. Las fórmulas requeridas se incluyen en el requerimiento de los datos.</p>
               <h4><strong>B.1)   Requerimiento de los Datos </strong></h4>
               <h4><strong>Constantes del Problema </strong></h4>
-              <p>PI = 3.141596</p>
-              <p>g = 9.80665</p>
-              <h4><strong>Entradas del Problema </strong></h4>
-              <p>m1	&nbsp; &nbsp;/* primera masa */ </p>
-              <p>m2	&nbsp; &nbsp;/* segunda masa */ </p>
-              <p>theta	&nbsp; &nbsp;/* ángulo del plano inclinado */ </p>
+              <p>TARIFA1 = 0.35 <br>
+                TARIFA2 = 0.55 <br>
+                TARIFA3 = 0.75 <br>
+                TARIFA4 = 1.05
+                </p>
               
+              <h4><strong>Entradas del Problema </strong></h4>
+              <p>c	&nbsp; &nbsp;/* valor del consumo de la luz */ </p>
+                            
               <h4><strong>Salidas del Problema </strong></h4>
-              <p>a	&nbsp; &nbsp;/* aceleración de dos objetos conectados mediante una cuerda */ </p>
-              <p>T	&nbsp; &nbsp;/* tensión en la cuerda */ </p>
-              <p>n	&nbsp; &nbsp;/* normal (‘n’) de la masa m_2 */ </p>
+              <p>recibo	&nbsp; &nbsp;/* valor del recibo */ </p>
+              
               <h4><strong>Formulas Relevantes </strong></h4>
-              <img src="./assets/images/Capitulos/II/media/a21.png" style="display:block; margin:auto; "><br>
+              <img src="./assets/images/Capitulos/II/media/b2.png" style="display:block; margin:auto; "><br>
               <h4><strong>B.2)   Diagrama de Entrada-Salida </strong></h4>
-              <p>En la Figura 2.8.2 se muestra el diagrama de Entrada-Salida del programa donde se identifican y se diagraman las entradas, salidas y auxiliares del problema como son: a) Entradas: la variable ‘m1’ (primera masa), la variable ‘m2’ y la variable ‘theta’ (ángulo del plano inclinado); b) Salidas: las variables ‘a’ (aceleración), ‘T’ (tensión) y ‘n’ (normal); c) Auxiliares: la constante ‘PI’ y la constante ‘g’ (gravedad). </p>
-              <img src="./assets/images/Capitulos/II/media/a22.png" style="display:block; margin:auto; "><br>
-              <h5><strong>Figura 2.8.2. </strong>Diagrama de Entrada-Salida del Programa.</h5>
+              <p>En la Figura 3.2.2 se muestra el diagrama de Entrada-Salida del programa donde se identifican y se diagraman las entradas, salidas y auxiliares del problema como son: a) Entradas: la variable ‘c’ (consumo); b) Salidas: la variable ‘recibo’; c) Auxiliares: la constante ‘TARIFA1’, la constante ‘TARIFA2’, la constante ‘TARIFA3’ y la constante ‘TARIFA4’. </p>
+              <img src="./assets/images/Capitulos/II/media/b3.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Figura 3.2.2.  </strong>Diagrama de Entrada-Salida del Programa.</h5>
               <h4><strong>C)   Diseño </strong></h4>
               <p>Una vez que se conoce las entradas y las salidas del problema, se deben listar los pasos necesarios para resolver el problema, es decir, el algoritmo.</p>
-              <h4><strong>Algoritmo </strong></h4>
-              <p>1.	Imprimir el mensaje de información: “Aceleración de dos objetos conectados mediante una cuerda”</p>
+              <h4><strong>C.1) Algoritmos </strong></h4>
+              <p><strong>3.2.1. Algoritmo de la Función ImprimirMensajeInformacion()</strong></p>
+              <ol>
+                <li>Imprimir el mensaje de información: “Consumo Eléctrico.”.</li>
+                <li>Imprimir dos saltos de línea (INTRO).</li>
+              </ol>
               <p>2.	Leer el valor de la primera masa, utilizando la variable ‘m1’.</p>
               <p>3.	Leer el valor de la segunda masa, utilizando la variable ‘m2’.</p>
               <p>4.	Leer el valor del ángulo theta del plano inclinado en grados, utilizando la variable ‘theta’</p>
