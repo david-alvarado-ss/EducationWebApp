@@ -781,7 +781,7 @@
               <p>TARIFA2: I_2:200< c ≤ 500, es decir, (200 < c)∧(c ≤ 500) </p>
               <p>TARIFA3: I_3:500< c ≤ 700, es decir, (500 < c)∧(c ≤ 700)</p>
               <p>TARIFA4: I_4:c > 700</p>
-              <img src="./assets/images/Capitulos/II/media/a20.png" style="display:block; margin:auto; "><br>
+              <img src="./assets/images/Capitulos/III/media/b1.png" style="display:block; margin:auto; "><br>
               <h5><strong>Figura 3.2.1.  </strong>Intervalos del consumo de la luz.</h5>
               
               <h4><strong>B)   Análisis </strong></h4>
@@ -801,10 +801,10 @@
               <p>recibo	&nbsp; &nbsp;/* valor del recibo */ </p>
               
               <h4><strong>Formulas Relevantes </strong></h4>
-              <img src="./assets/images/Capitulos/II/media/b2.png" style="display:block; margin:auto; "><br>
+              <img src="./assets/images/Capitulos/III/media/b2.png" style="display:block; margin:auto; "><br>
               <h4><strong>B.2)   Diagrama de Entrada-Salida </strong></h4>
               <p>En la Figura 3.2.2 se muestra el diagrama de Entrada-Salida del programa donde se identifican y se diagraman las entradas, salidas y auxiliares del problema como son: a) Entradas: la variable ‘c’ (consumo); b) Salidas: la variable ‘recibo’; c) Auxiliares: la constante ‘TARIFA1’, la constante ‘TARIFA2’, la constante ‘TARIFA3’ y la constante ‘TARIFA4’. </p>
-              <img src="./assets/images/Capitulos/II/media/b3.png" style="display:block; margin:auto; "><br>
+              <img src="./assets/images/Capitulos/III/media/b3.png" style="display:block; margin:auto; "><br>
               <h5><strong>Figura 3.2.2.  </strong>Diagrama de Entrada-Salida del Programa.</h5>
               <h4><strong>C)   Diseño </strong></h4>
               <p>Una vez que se conoce las entradas y las salidas del problema, se deben listar los pasos necesarios para resolver el problema, es decir, el algoritmo.</p>
@@ -813,37 +813,191 @@
               <ol>
                 <li>Imprimir el mensaje de información: “Consumo Eléctrico.”.</li>
                 <li>Imprimir dos saltos de línea (INTRO).</li>
+                
               </ol>
-              <p>2.	Leer el valor de la primera masa, utilizando la variable ‘m1’.</p>
-              <p>3.	Leer el valor de la segunda masa, utilizando la variable ‘m2’.</p>
-              <p>4.	Leer el valor del ángulo theta del plano inclinado en grados, utilizando la variable ‘theta’</p>
-              <p>5. Convertir el ángulo theta de grados a radianes.</p>
-              <p> &nbsp; &nbsp; 5.1. Asignar a la variable ‘theta’ el producto del ángulo theta por la constante PI y dividirlo para el valor de 180 grados.</p>
+              <p><strong>3.2.2. Algoritmo de la Función LeerDatos()</strong></p>
+              <p>1.	Leer el valor del consumo ‘c’.</p>
+              <p><strong>3.2.3. Algoritmo de la Función GenerarRecibo()</strong>></p>
+              <p>1.	Si el valor del consuno 'c' está dentro del intervalo I1: (0 ≤ c)∧(c ≤ 200).</p>
+              <p> &nbsp; &nbsp; 1.1.	Calcular el valor del recibo con la TARIFA1.</p>
+              <p>2.	Si el valor del consuno 'c' está dentro del intervalo I2: (200 < c)∧(c ≤ 500).</p>
+              <p> &nbsp; &nbsp; 2.1.	Calcular el valor del recibo con la TARIFA2.</p>
+              <p>3.	Si el valor del consuno 'c' está dentro del intervalo I3: (500 < c)∧(c ≤ 700).</p>
+              <p> &nbsp; &nbsp; 3.1.	Calcular el valor del recibo con la TARIFA3.</p>
+              <p>4.	Si el valor del consuno 'c' está dentro del intervalo I4: c > 700.</p>
+              <p> &nbsp; &nbsp; 4.1.	Calcular el valor del recibo con la TARIFA4.</p>
                           
-              <p>6.	Si la suma entre las masas ‘m1’ y ‘m2’ es diferente de cero.</p>
-              <p> &nbsp; &nbsp; 6.1.	Calcular la aceleración de dos objetos conectados mediante una cuerda.</p>
-              <p> &nbsp; &nbsp; &nbsp; 6.1.1.	Asignar a la variable ‘a’ (aceleración) los valores que contempla la fórmula de la aceleración (1), según la Física Clásica.</p>
-              <p> &nbsp; &nbsp; 6.2.	Calcular la tensión en la cuerda.</p>
-              <p> &nbsp; &nbsp; &nbsp; 6.2.1.	Asignar a la variable ‘T’ (tensión) los valores que contempla la fórmula de la tensión (2), según la Física Clásica.</p>
-              <p> &nbsp; &nbsp; 6.3.	Calcular el valor de la normal de la masa ‘m2’.</p>
-              <p> &nbsp; &nbsp; &nbsp; 6.3.1.	Asignar a la variable ‘n’ (normal) los valores que contempla la fórmula de la normal (3), según la Física Clásica.</p>
-              <p> &nbsp; &nbsp; 6.4.	Imprimir el valor de la variable ‘a’ (aceleración), de la variable ‘T’ (tensión) y de la variable ‘n’ (normal).</p>
-              <p>7.	Caso contrario, la suma entre las masas m1 y m2 es igual a cero.</p>
-              <p> &nbsp; &nbsp; 7.1.	Imprimir el mensaje de error: “Error en el ingreso de los valores de las masas”.</p>
+              <p><strong>3.2.4. Algoritmo de la Función ImprimirDatos()</strong></p>
+              <p>1.	Imprimir el valor de la variable ‘recibo’.</p>
+              <p><strong>3.2.5. Algoritmo de la Función main()</strong></p>
+              <p>1.	Llamada a la función ImprimirMensajeInformacion().</p>
+              <p>2.	Llamada a la función LeerDatos().</p>
+              <p>3.	Asignar a la variable ‘recibo’ el valor que retorna la función GenerarRecibo().</p>
+              <p>4.	Llamada a la función ImprimirDatos().</p>
                       
               <h4><strong>D)   Implementación </strong></h4>
-              <p>Para implementar la solución, se debe escribir el algoritmo como un programa de C/C++ que contenga toda la información necesaria para completar la traducción a lenguaje máquina. En la Tabla 2.8.1 se muestra el código del programa en C/C++.</p>
-              <h5><strong>Tabla 2.8.1. </strong>Programa que calcula la aceleración de dos objetos conectados mediante una cuerda, la tensión y la normal.</h5>
-              <pre><code [highlight]="prefTab[0].programa8"  [lineNumbers]="true"></code></pre><br>
+              <p>Para implementar la solución, se debe escribir el algoritmo como un programa de C/C++ que contenga toda la información necesaria para completar la traducción a lenguaje máquina. En la Tabla 3.2.1 se muestra el código del programa en C/C++.</p>
+              <h5><strong>Tabla 3.2.1:  </strong>Programa que calcula el consumo eléctrico.</h5>
+              <pre><code [highlight]="prefTab[0].programa1"  [lineNumbers]="true"></code></pre><br>
+              <h4><strong>D.1.)   Explicación de las Funciones</strong></h4>
+              <p><strong>3.2.6. Función ImprimirMensajeInformacion()</strong></p>
+              <p>La Figura 3.2.3 muestra cómo trabaja la función ‘ImprimirMensajeInformacion()’, luego de ser declarada y definida. La llamada a la función ‘ImprimirMensajeInformacion()’ no envía argumentos a la función, pero cumple con la tarea de imprimir el mensaje de información: "Consumo Eléctrico.", e imprime dos saltos de línea y no retorna ningún valor.</p>
+              <img src="./assets/images/Capitulos/III/media/b4.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Figura 3.2.3. </strong>Llamada a la función sin parámetros y retorno de un void.</h5>
+              <p><strong>3.2.7. Función LeerDatos()</strong></p>
+              <p>La Figura 3.2.4 muestra cómo trabaja la función ‘LeerDatos()’, luego de ser declarada y definida. La llamada a la función ‘LeerDatos()’ envía un argumento al parámetro de la función que es una referencia, la misma que cumple con la tarea de lectura de datos y no retorna ningún valor.</p>
+              <img src="./assets/images/Capitulos/III/media/b5.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Figura 3.2.4. </strong>Llamada a la función con dos parámetros y retorno de un void.</h5>
+              <p><strong>3.2.8. Función GenerarRecibo()</strong></p>
+              <p>La Figura 3.2.5 muestra cómo trabaja la función ‘GenerarRecibo()’, luego de ser declarada y definida. La llamada a la función ‘GenerarRecibo()’ envía dos argumentos por valor a los parámetros de la función, la misma que cumple con la tarea de calcular calcula el valor del recibo de acuerdo al valor del consumo y a una tarifa específica y finalmente retorna ese valor calculado.</p>
+              <img src="./assets/images/Capitulos/III/media/b6.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Figura 3.2.5. </strong>Llamada a la función con dos parámetros y retorno de un valor.</h5>
+              <p><strong>3.2.9. Función ImprimirDatos()</strong></p>
+              <p>La Figura 3.2.6 muestra cómo trabaja la función ‘ImprimirDatos()’, luego de ser declarada y definida. La llamada a la función ‘ImprimirDatos()’ envía un argumento por valor al parámetro de la función, la misma que cumple con la tarea de impresión de datos y no retorna ningún valor. En este caso la función ‘ImprimirDatos()’, imprime el valor de la variable ‘recibo’.</p>
+              <img src="./assets/images/Capitulos/III/media/b7.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Figura 3.2.9. </strong>Llamada a la función con dos parámetros y retorno de un valor.</h5>
+
               <h4><strong>E) Pruebas </strong></h4>
-              <p>En la Tabla 2.8.2 se muestra un ejemplo de la salida del programa, donde se puede ver que los resultados del programa tienen sentido, comparando estos resultados con los datos devueltos por una calculadora científica.</p>
+              <p>La Tabla 3.2.2, la Tabla 3.2.3, la Tabla 3.2.4 y la Tabla 3.2.5 muestran cuatro ejemplos de la salida del programa, donde se puede ver que los resultados del programa tienen sentido, comparando estos resultados con los datos devueltos por una calculadora.</p>
+              <p>En la salida de la Tabla 3.2.2 se puede ver que, al ingresar el valor del consumo igual a 100 se obtiene una cuenta total de $35 USD. De manera similar, en la salida Tabla 3.2.3 se puede ver que, al ingresar el valor del consumo igual a 400 se obtiene una cuenta total de $220 USD. De manera similar, en la salida Tabla 3.2.4 se puede ver que, al ingresar el valor del consumo igual a 600 se obtiene una cuenta total de $450 USD. Finalmente, en la salida Tabla 3.2.5 se puede ver que, al ingresar el valor del consumo igual a 800 se obtiene una cuenta total de $840 USD.</p>
               
-              <h5><strong>Tabla 2.8.2. </strong>Salida del programa.</h5>
-              <img src="./assets/images/Capitulos/II/media/a23.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Tabla 3.2.2:  </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/III/media/b8.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Tabla 3.2.3:  </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/III/media/b9.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Tabla 3.2.4:  </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/III/media/b10.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Tabla 3.2.5:  </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/III/media/b11.png" style="display:block; margin:auto; "><br>
+              
             </mat-tab>
 
             <mat-tab  label="Caso de Estudio 3.3">
-              <ng-template matTabContent></ng-template>
+              <ng-template matTabContent>
+                <h3><strong>Caso de Estudio 2.8: Encontrar la aceleración de dos objetos conectados mediante una cuerda. </strong></h3>
+              <h4><strong>A)   Problema </strong></h4>
+              <p>El valor de la función y=sen(x) se puede aproximar mediante la siguiente serie de Taylor:</p>
+              <img src="./assets/images/Capitulos/III/media/b12.png" style="display:block; margin:auto; "><br>
+              <p>La fórmula de la sumatoria de la función es:</p>
+              <img src="./assets/images/Capitulos/III/media/b13.png" style="display:block; margin:auto; "><br>
+              <p>Escribir un programa que permita aproximar el valor de la función seno utilizando la serie de Taylor y bucles anidados.</p>
+              <h4><strong>B)   Análisis </strong></h4>
+              <p>Claramente se puede ver que las entradas del problema son el número de términos de la serie y el valor del ángulo en grados de la función seno. Se requiere una sola salida que es el valor de la serie aproximada. El proceso de cálculo requiere que la serie numérica infinita de la ecuación (2), se convierta a una serie numérica finita, donde el valor de ‘n’ se convierte en el valor de ‘i’ y el valor de infinito pasa a ser el valor de n-1, ya que si se quiere calcular la sumatoria de los cinco primeros términos de la serie, la sumatoria iría desde el valor de i = 0 hasta el valor de i = 5 - 1, es decir, i = 4, como se puede ver en la ecuación (3):</p>
+              <img src="./assets/images/Capitulos/III/media/b14.png" style="display:block; margin:auto; "><br>
+              <p>Para calcular el valor del factorial de la función seno se requiere utilizar la sucesión del factorial de un número cuya ecuación es:</p>
+              <img src="./assets/images/Capitulos/III/media/b15.png" style="display:block; margin:auto; "><br>
+              <p>De acuerdo a la ecuación (4) se requiere utilizar una función llamada Factorial() que va a tener un bucle for() para calcular una sucesión en base a un producto. El proceso de cálculo del factorial de un número requiere que la sucesión numérica infinita de la ecuación (4), se convierta a una sucesión numérica finita, donde el valor de ‘n’ se convierte en el valor de ‘j’ y el valor de infinito pasa a ser el valor de n, ya que si se quiere calcular el producto de los cinco primeros términos de la sucesión, el producto iría desde el valor de j = 1 hasta el valor de j = 5 , como se puede ver en la ecuación (5): </p>
+              <img src="./assets/images/Capitulos/III/media/b16.png" style="display:block; margin:auto; "><br>
+              <p>De acuerdo con la ecuación (3) se requiere utilizar entonces una función llamada SerieSeno() que va a tener un bucle for() para calcular la sumatoria de los n-términos de la serie llamando en cada ciclo a la función Factorial() llevándose como argumento el valor de (2i+1), al parámetro de la función. Además, se tiene que convertir el valor del ángulo de grados a radianes para realizar los cálculos respectivos.</p>
+
+              <h4><strong>B.1)   Requerimiento de los Datos </strong></h4>
+                            
+              <h4><strong>Entradas del Problema </strong></h4>
+              <p>n	&nbsp; &nbsp;/* número de términos de la serie */ </p>
+              <p>x	&nbsp; &nbsp;/* Ángulo de la función en grados */ </p>
+                            
+              <h4><strong>Salidas del Problema </strong></h4>
+              <p>serie	&nbsp; &nbsp;/* Resultado de la serie aproximada */ </p>
+              
+              <h4><strong>Formulas Relevantes </strong></h4>
+              <img src="./assets/images/Capitulos/III/media/b17.png" style="display:block; margin:auto; "><br>
+              <h4><strong>B.2)   Diagrama de Entrada-Salida </strong></h4>
+              <p>En la Figura 3.3.1 se muestra el diagrama de Entrada-Salida del programa donde se identifican y se diagraman las entradas, salidas y auxiliares del problema como son: a) Entradas: la variable ‘n’; la variable ‘x’; b) Salidas: la variable ‘serie’; Auxiliares: la constante PI.</p>
+              <img src="./assets/images/Capitulos/III/media/b18.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Figura 3.3.`.  </strong>Diagrama de Entrada-Salida del Programa.</h5>
+              <h4><strong>C)   Diseño </strong></h4>
+              <p>Una vez que se conoce las entradas y las salidas del problema, se deben listar los pasos necesarios para resolver el problema, es decir, el algoritmo.</p>
+              <h4><strong>C.1) Algoritmos </strong></h4>
+              <p><strong>3.3.1. Algoritmo de la Función ImprimirMensajeInformacion()</strong></p>
+              <ol>
+                <li>Imprimir el mensaje de información: “Serie del Seno.”.</li>
+                <li>Imprimir dos saltos de línea (INTRO).</li>
+                
+              </ol>
+              <p><strong>3.3.2. Algoritmo de la Función LeerDatos()</strong></p>
+              <p>1.	Leer el número de términos de la serie, utilizando la referencia ‘n’.</p>
+              <p>2.	Leer el valor del ángulo en grados de la función seno, utilizando la referencia ‘x’.</p>
+              <p><strong>3.3.3. Algoritmo de la Función ConvertirGradosARadianes()</strong>></p>
+              <p>1.	Asignar a la variable ‘x’ el valor que retorna la función ConvertirGradosARadianes(), que es el producto del ángulo ‘x’ por la constante PI y dividido para el valor de 180 grados, que permite convertir el ángulo ‘theta’ de grados a radianes.</p>
+                                        
+              <p><strong>3.3.4. Algoritmo de la Función Factorial()</strong></p>
+              <p>1.	Inicializar el acumulador de productos ‘prod’ con el valor de uno.</p>
+              <p>2.	Para el bucle, hacer: </p>
+              <p> &nbsp; &nbsp; 2.1.	Inicializar el valor del contador ‘j’ en uno.</p>
+              <p> &nbsp; &nbsp; 2.2.	Mientras el valor de la condición sea verdadera (j<=n) ejecutar las sentencias del bucle.</p>
+              <p> &nbsp; &nbsp; 2.3.	Luego de cada iteración incrementar en uno el valor del contador ‘j’.</p>
+              <p> &nbsp; &nbsp; &nbsp; 2.3.1.	Asignar al acumulador ‘prod’ lo que tiene multiplicado por el valor del contador ‘j’.</p>
+              <p>3.	Retornar el valor del acumulador ‘prod’, que es el factorial de un número.</p>
+
+              <p><strong>3.3.5. Algoritmo de la Función SerieSeno()</strong></p>
+              <p>1.	Inicializar con el valor de cero el acumulador de sumas cuya variable utilizada es ‘sum’.</p>
+              <p>2.	Para el bucle, hacer: </p>
+              <p> &nbsp; &nbsp; 2.1.	Inicializar el valor del contador ‘i’ en cero. </p>
+              <p> &nbsp; &nbsp; 2.2.	Mientras el valor de la condición sea verdadera (i<=n-1) ejecutar las sentencias del bucle. </p>
+              <p> &nbsp; &nbsp; 2.3.	Luego de cada iteración incrementar en uno el valor del contador ‘i’. </p>
+              <p> &nbsp; &nbsp; &nbsp; 2.3.1.	Asignar al acumulador ‘sum’ lo que tiene sumado el valor del término e-nésimo de la serie, incluyendo el valor que retorna la función Factorial(), la cual se lleva como argumento el valor de     (2 * i + 1), al parámetro de la función Factorial().</p>
+              <p>3.	Retornar el valor del acumulador ‘sum’, que es el valor de la serie de la función seno(x).</p>
+              
+              <p><strong>3.3.6. Algoritmo de la Función ImprimirDatos()</strong></p>
+              <p>1.	Imprimir el valor de la variable ‘serie’ (valor de la serie aproximada).</p>
+              
+              <p><strong>3.3.7. Algoritmo de la Función main()</strong></p>
+              <p>1.	Llamada a la función ImprimirMensajeInformacion().</p>
+              <p>2.	Llamada a la función LeerDatos().</p>
+              <p>3.	Asignar a la variable ‘x’ el valor que retorna la función ConvertirGradosARadianes().</p>
+              <p>4.	Asignar a la variable ‘serie’ el valor que retorna la función SerieSeno().</p>
+              <p>5.	Llamada a la función ImprimirDatos().</p>
+
+              <h4><strong>D)   Implementación </strong></h4>
+              <p>Para implementar la solución, se debe escribir el algoritmo como un programa de C/C++ que contenga toda la información necesaria para completar la traducción a lenguaje máquina. En la Tabla 3.3.1 se muestra el código del programa en C/C++.</p>
+              <h5><strong>Tabla 3.3.1:  </strong>Programa que calcula la serie de la función seno.</h5>
+              <pre><code [highlight]="prefTab[0].programa2"  [lineNumbers]="true"></code></pre><br>
+              <h4><strong>D.1.)   Explicación de las Funciones</strong></h4>
+              <p><strong>3.3.8. Función ImprimirMensajeInformacion()</strong></p>
+              <p>La Figura 3.3.2 muestra cómo trabaja la función ‘ImprimirMensajeInformacion()’, luego de ser declarada y definida. La llamada a la función ‘ImprimirMensajeInformacion()’ no envía argumentos a la función, pero cumple con la tarea de imprimir el mensaje de información: "Serie del Seno.", e imprime dos saltos de línea y no retorna ningún valor.</p>
+              <img src="./assets/images/Capitulos/III/media/b19.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Figura 3.3.2.  </strong>Llamada a la función sin parámetros y retorno de un void.</h5>
+              <img src="./assets/images/Capitulos/III/media/b19.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Figura 3.3.3.  </strong>Llamada a la función con dos parámetros y retorno de un void.</h5>
+              <p><strong>3.3.9. Función LeerDatos()</strong></p>
+              <p>La Figura 3.3.3 muestra cómo trabaja la función ‘LeerDatos()’, luego de ser declarada y definida. La llamada a la función ‘LeerDatos()’ envía dos argumentos a los parámetros de la función que son dos referencias, la misma que cumple con las tareas de lectura de datos y no retorna ningún valor.</p>
+              
+              <p><strong>3.3.10. Función ConvertirGradosARadianes()</strong></p>
+              <p>La Figura 3.3.4 muestra cómo trabaja la función ‘ConvertirGradosARadianes()’, luego de ser declarada y definida. La llamada a la función ‘ConvertirGradosARadianes()’ envía un argumento por valor al parámetro de la función, la misma que cumple con la tarea de convertir un valor dado en grados a radianes y retorna ese valor calculado.</p>
+              <img src="./assets/images/Capitulos/III/media/b20.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Figura 3.3.4. </strong>Llamada a la función con un parámetro y retorno de un valor.</h5>
+              <p><strong>3.3.11. Función Factorial()</strong></p>
+              <p>La Figura 3.3.5 muestra cómo trabaja la función ‘Factorial()’, luego de ser declarada y definida. La llamada a la función ‘Factorial()’ envía un argumento por valor al parámetro de la función, la misma que cumple con la tarea de obtener el factorial de un número y retorna ese valor calculado.</p>
+              <img src="./assets/images/Capitulos/III/media/b21.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Figura 3.3.5. </strong>Llamada a la función con un parámetro y retorno de un valor.</h5>
+              <p><strong>3.3.12. Función SerieSeno()</strong></p>
+              <p>La Figura 3.3.6 muestra cómo trabaja la función ‘SerieSeno()’, luego de ser declarada y definida. La llamada a la función ‘SerieSeno()’ envía dos argumentos por valor a los parámetros de la función, la misma que cumple con la tarea de obtener el valor de la serie de la función seno(x) aproximada y retorna ese valor calculado.</p>
+              <img src="./assets/images/Capitulos/III/media/b22.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Figura 3.3.6. </strong>Llamada a la función con dos parámetros y retorno de un valor.</h5>
+              <p><strong>3.3.14. Función ImprimirDatos()</strong></p>
+              <p>La Figura 3.3.7 muestra cómo trabaja la función ‘ImprimirDatos()’, luego de ser declarada y definida. La llamada a la función ‘ImprimirDatos()’ envía un argumento por valor al parámetro de la función, la misma que cumple con las tareas de impresión de datos y no retorna ningún valor. En este caso la función ‘ImprimirDatos()’, imprime el valor de la serie numérica utilizando la variable ‘serie’.</p>
+              <img src="./assets/images/Capitulos/III/media/b23.png" style="display:block; margin:auto; "><br>
+              <h5><strong>Figura 3.3.7. </strong>Llamada a la función con dos parámetros y retorno de un valor.</h5>
+              
+              <h4><strong>E) Pruebas </strong></h4>
+              <p>En la Tabla 3.3.2, se muestra un ejemplo de la salida del programa, donde se puede ver que el resultado del programa tiene sentido, comparando este resultado con los datos devueltos por una calculadora científica.</p>
+              <p>En la salida de la Tabla 3.3.2 se puede ver que, al ingresar el número de términos igual a 10 y el valor del ángulo en grados igual a 30, se obtiene el valor de la serie aproximada igual a 0.5.</p>
+              
+              <h5><strong>Tabla 3.3.2:  </strong>Salida del programa.</h5>
+              <img src="./assets/images/Capitulos/III/media/b24.png" style="display:block; margin:auto; "><br>
+              <p>En la Tabla 3.3.3, se muestra la prueba de escritorio del programa, donde se puede comprobar que en cada iteración del bucle for() de la función ‘SerieSeno()’ se acumula en la sumatoria ‘sum’ los valores parciales de la serie llamando a la función ‘Factorial()’, enviando el valor de (2i+1) utilizando un bucle for() que retorna el producto calculado que es el factorial de un número a la sumatoria ‘sum’ y la ejecución del bucle termina cuando la condición de esta sentencia se hace falsa y la función ‘SerieSeno()’, retorna el valor de la variable ‘sum’ a la llamada de la función que lo hace la variable ‘serie’. </p>
+              <h5><strong>Tabla 3.3.3:  </strong>Salida del programa.</h5>
+              <p><strong>a.	Primera iteración</strong></p>
+              <img src="./assets/images/Capitulos/III/media/b25.png" style="display:block; margin:auto; "><br>
+              <p><strong>b.	Segunda iteración</strong></p>
+              <img src="./assets/images/Capitulos/III/media/b26.png" style="display:block; margin:auto; "><br>
+              <p><strong>c.	Tercera iteración</strong></p>
+              <img src="./assets/images/Capitulos/III/media/b27.png" style="display:block; margin:auto; "><br>
+              <p><strong>d.	Cuarta iteración</strong></p>
+              <img src="./assets/images/Capitulos/III/media/b28.png" style="display:block; margin:auto; "><br>
+              <p><strong>e.	Quinta iteración</strong></p>
+              <img src="./assets/images/Capitulos/III/media/b29.png" style="display:block; margin:auto; "><br>
+              </ng-template>
             </mat-tab>
           </mat-tab-group>
         </ng-template>
@@ -851,34 +1005,338 @@
 
       <mat-tab label="Creación de Menús">
         <ng-template matTabContent>
-          <mat-tab-group>
+          <h2><strong>Creación de Menús</strong></h2>
+            <p>El menú de selección en un programa presenta al usuario un menú que lista un grupo de opciones que se pueden seleccionar. Si el usuario ingresa un número o una letra que corresponde a la lista de selección, luego se ejecuta una o más instrucciones en cada selección o caso del switch(). En un menú también se utiliza un bucle while() o do-while(), que permite repetir la selección del código mientras la expresión lógica del bucle sea verdadera (Dawson, M., 2008). El ejercicio 3.15 y el ejercicio 3.16, muestran dos plantillas muy prácticas que se pueden utilizar para crear un menú de opciones con números o con letras.</p>
+            <h4><strong>Ejercicio 3.15: </strong>Escribir un programa que muestre la utilización de un menú con cuatro opciones utilizando números para su selección.</h4>
+            <h5><strong>Programa 3.15: </strong>Programa que muestra el uso de un menú con números.</h5>
+            <pre><code [highlight]="prefTab[0].programa3"  [lineNumbers]="true"></code></pre><br>
+            <p>La sentencia switch() crea cinco posibles puntos de ramificación. Si el usuario ingresa el valor de 1, luego el código asociado con el caso 1 (case 1) se ejecuta y se imprime un mensaje. Si el usuario ingresa el valor de 2, luego el código asociado con el caso 2 (case 2) se ejecuta y se imprime un mensaje. Si el usuario ingresa el valor de 3, luego el código asociado con el caso 3 (case 3) se ejecuta y se imprime un mensaje. Si el usuario ingresa el valor de 4, luego el código asociado con el caso 4 (case 4) se ejecuta y se imprime un mensaje. Si el usuario ingresa el valor de 5, entonces se sale de la aplicación. En este menú se utiliza un bucle do-while(), que permite repetir la selección del código mientras la expresión lógica del bucle sea verdadera.</p>
+            <h5><strong>Ejecución 3.15: </strong>Salida del programa.</h5>
+            <img src="./assets/images/Capitulos/III/media/b30.png" style="display:block; margin:auto; "><br>
+            <h4><strong>Ejercicio 3.16: </strong>Escribir un programa que muestre la utilización de un menú con cuatro opciones utilizando letras para su selección.</h4>
+            <h5><strong>Programa 3.16: </strong>Programa que muestra el uso de un menú con letras.</h5>
+            <pre><code [highlight]="prefTab[0].programa4"  [lineNumbers]="true"></code></pre><br>
+            <p>La sentencia switch() crea cinco posibles puntos de ramificación. Si el usuario ingresa la letra ‘a’, luego el código asociado con el caso ‘a’ (case 'a') se ejecuta y se imprime un mensaje. Si el usuario ingresa la letra ‘b’, luego el código asociado con el caso ‘b’ (case 'b') se ejecuta y se imprime un mensaje. Si el usuario ingresa la letra ‘c’, luego el código asociado con el caso ‘c’ (case 'c') se ejecuta y se imprime un mensaje. Si el usuario ingresa la letra ‘d’, luego el código asociado con el caso ‘d’ (case 'd') se ejecuta y se imprime un mensaje. Si el usuario ingresa la letra ‘s’, entonces se sale de la aplicación. En este menú se utiliza un bucle do-while(), que permite repetir la selección del código mientras la expresión lógica del bucle sea verdadera.</p>
+            <h5><strong>Ejecución 3.16.1: </strong>Salida del programa.</h5>
+            <img src="./assets/images/Capitulos/III/media/b31.png" style="display:block; margin:auto; "><br>
+            <h4><strong>Ejercicio 3.17: </strong>Reescribir el programa del Caso de Estudio 3.1, referente a encontrar la distancia, tiempo de vuelo y la altura alcanzada por un proyectil, utilizando menús y un solo archivo de código fuente.</h4>
+            <h5><strong>Programa 3.17: </strong>Programa que muestra el uso de un menú con letras.</h5>
+            <pre><code [highlight]="prefTab[0].programa5"  [lineNumbers]="true"></code></pre><br>
+            <p>Desde la Tabla 3.17.1, hasta la Tabla 3.17.3, se muestran tres ejemplos de la salida del programa, donde se puede ver que los resultados del programa tienen sentido, comparando estos resultados con los datos devueltos por una calculadora.</p>
+            <p>En la salida de la Tabla 3.17.1 se puede ver que, al seleccionar la opción 1 se puede calcular el valor de la distancia ‘d’, para lo cual se leen los valores de la velocidad ‘v’ y del ángulo de lanzamiento ‘theta’. En la salida de la Tabla 3.17.2 se puede ver que, al seleccionar la opción 2 se puede calcular el valor del tiempo ‘t’, para lo cual se leen los valores de la velocidad ‘v’ y del ángulo de lanzamiento ‘theta’. En la salida de la Tabla 3.17.3 se puede ver que, al seleccionar la opción 3 se puede calcular el valor de la altura ‘h’, para lo cual se leen los valores de la velocidad ‘v’ y del ángulo de lanzamiento ‘theta’.</p>
+            <h5><strong>Ejecución 3.17.1: </strong>Salida del programa.</h5>
+            <img src="./assets/images/Capitulos/III/media/b32.png" style="display:block; margin:auto; "><br>
+            <h5><strong>Ejecución 3.17.2: </strong>Salida del programa.</h5>
+            <img src="./assets/images/Capitulos/III/media/b33.png" style="display:block; margin:auto; "><br>
+            <h5><strong>Ejecución 3.17.3: </strong>Salida del programa.</h5>
+            <img src="./assets/images/Capitulos/III/media/b34.png" style="display:block; margin:auto; "><br>
 
+          <mat-tab-group>
+                   
           </mat-tab-group>
         </ng-template>
       </mat-tab>
 
-      <mat-tab label="3.7. Archivos de Cabecera">
+      <mat-tab label="Archivos de Cabecera">
         <ng-template matTabContent>
           <mat-tab-group>
             <mat-tab  label="Introducción">
-              <ng-template matTabContent></ng-template>
+              <ng-template matTabContent>
+                <h2>Introducción</h2>
+                <p>De acuerdo con (Dawson, M., 2008), una de las metas del lenguaje C/C++ es separar los prototipos de las funciones (la declaración de las funciones) de la implementación de las funciones (definición de las funciones). La motivación de esta práctica de programación se basa en que el desarrollador debería ser capaz de utilizar los prototipos de las funciones sin conocer exactamente como estas funciones trabajan. Esto ocurre cuando el programador utiliza funciones que no han sido hechas por el mismo, como por ejemplo las funciones de la librería math.h o cmath.</p>
+                <p>De acuerdo con (Luna, F., 2004), para separar los prototipos de las funciones de la implementación de las funciones, se utilizan dos archivos por separado: a) archivo de encabezado o header file (.h), para los prototipos de las funciones; b) archivo de código fuente o implementation file (.cpp), para la implementación de las funciones. Eventualmente, el código fuente es compilado en un archivo objeto (.obj) o en un archivo de librería (.lib). Una vez que se hace esto, uno puede distribuir el archivo de encabezado junto con el archivo objeto o el archivo de librería a otros programadores. Con el archivo de encabezado que contiene los prototipos de las funciones y con el archivo objeto o el archivo de librería que contiene la implementación de las funciones, las cuales son enlazadas dentro del proyecto por el enlazador o linker, el programador tiene todos los componentes necesarios para utilizar las funciones sin haber visto el archivo de implementación o código fuente (.cpp). Por ejemplo, usted puede utilizar las funciones de la librería math.h o cmath sin haber visto los archivos de implementación o código fuente (.cpp) que están protegidos.</p>
+              </ng-template>
             </mat-tab>
             <mat-tab  label="3.7.1. Sentencias de Inclusión (Inclusion Guards)">
-              <ng-template matTabContent></ng-template>
+              <ng-template matTabContent>
+                <p>Las sentencias de inclusión (inclusion guards) son sentencias o directivas de preprocesador que ejecuta directamente el compilador al compilar el código del programa (Luna, F., 2004).</p>
+                <p>Cuando se trabaja con funciones, un archivo de cabecera (.h) contiene los prototipos de las funciones que se van a implementar en el archivo de código fuente (.cpp). El archivo de cabecera utiliza sentencias de inclusión como las siguientes:</p>
+                <p>#ifndef ARCHIVO_H <br>
+                  #define ARCHIVO_H <br>
+                  … <br>
+                  #endif // !ARCHIVO_H
+                  </p>
+                <p>La primera línea, #ifndef ARCHIVO_H, hace que el compilador pregunte si un símbolo llamado ARCHIVO_H no ha sido definido. Si no se ha definido, se compilará el código entre el código #ifndef y el código #endif, correspondiente a las sentencias de inclusión.</p>
+
+                <h4><strong>Ejercicio 3.18: </strong>Reescribir el programa del Caso de Estudio 3.1, referente a encontrar la distancia, tiempo de vuelo y la altura alcanzada por un proyectil, utilizando menús, archivos de cabecera y archivos de código fuente.</h4>
+                <p>El Programa 3.18.1, referente al archivo de cabecera “Operaciones.h” contiene los prototipos de las funciones que se van a implementar en el archivo de código fuente “Operaciones.cpp”. Este archivo de cabecera utiliza sentencias de inclusión como son las siguientes:</p>
+                <p>#ifndef OPERACIONES_H <br>
+                  #define OPERACIONES_H <br>
+                  … <br>
+                  #endif // !OPERACIONES_H
+                  </p>
+                <p>La primera línea, #ifndef OPERACIONES_H, hace que el compilador pregunte si un símbolo llamado OPERACIONES_H no ha sido definido. Si no se ha definido, se compilará el código entre el código #ifndef y el código #endif, correspondiente a las sentencias de inclusión.</p>
+                <h5><strong>Programa 3.18.1: </strong>Archivo de cabecera “Operaciones.h”.</h5>
+                <pre><code [highlight]="prefTab[0].programa6"  [lineNumbers]="true"></code></pre><br>
+                <p>El Programa 3.18.2, referente al archivo de código fuente “Operaciones.cpp”, implementa las funciones declaradas en el archivo de cabecera “Operaciones.h”. En este archivo de código fuente se debe incluir el archivo de cabecera utilizando la sentencia #include "Operaciones.h". Luego, se incluyen las librerías (iostream), (cstdlib) y (cmath) para los diferentes cálculos matemáticos que se van a realizar en las diferentes funciones que se implementan en este archivo de código fuente. Además, se incluyen sentencias de preprocesador o macros para el valor de PI y de la gravedad ‘g’. Finalmente, se incluye el espacio de nombre std para utilizar las funciones cout y cin sin incluir el operador de ámbito de resolución (::).</p>
+                <h5><strong>Programa 3.18.2:  </strong>Archivo de código fuente “Operaciones.cpp”.</h5>
+                <pre><code [highlight]="prefTab[0].programa7"  [lineNumbers]="true"></code></pre><br>
+                <p>El Programa 3.18.3, referente al archivo de código fuente “programa.cpp”, llama a las funciones del archivo de encabezado “Operaciones.h” que han sido implementadas dentro del archivo de código fuente “Operaciones.cpp”. El programa principal contiene un menú con seis opciones utilizando números para su selección.</p>
+                <p>La sentencia switch() crea tres posibles puntos de ramificación. Si el usuario ingresa el valor de 1, luego el código asociado con el caso 1 (case 1) se ejecuta, que corresponde a la llamada a la función LeerDatos(), la llamada a la función de ConvertirGradosARadianes(), también se ejecuta la llamada a la función Distancia() y a la llamada a la función de ImprimirDistancia(). Si el usuario ingresa el valor de 2, luego el código asociado con el caso 2 (case 2) se ejecuta, que corresponde a la llamada a la función LeerDatos(), la llamada a la función de ConvertirGradosARadianes(), también se ejecuta la llamada a la función Tiempo() y a la llamada a la función de ImprimirTiempo(). Si el usuario ingresa el valor de 3, luego el código asociado con el caso 3 (case 3) se ejecuta, que corresponde a la llamada a la función LeerDatos(), la llamada a la función de ConvertirGradosARadianes(), también se ejecuta la llamada a la función Altura() y a la llamada a la función de ImprimirAltura(). Si el usuario ingresa el valor de 4, entonces se sale de la aplicación. En este menú se utiliza un bucle do-while(), que permite repetir la selección del código mientras la expresión lógica del bucle sea verdadera.</p>
+                <h5><strong>Programa 3.18.3:  </strong>Archivo de código fuente “programa.cpp”.</h5>
+                <pre><code [highlight]="prefTab[0].programa8"  [lineNumbers]="true"></code></pre><br>
+                <p>Desde la Tabla 3.18.4, hasta la Tabla 3.18.6, se muestran tres ejemplos de la salida del programa, donde se puede ver que los resultados del programa tienen sentido, comparando estos resultados con los datos devueltos por una calculadora.</p>
+                <p>En la salida de la Tabla 3.18.4 se puede ver que, al seleccionar la opción 1 se puede calcular el valor de la distancia ‘d’, para lo cual se leen los valores de la velocidad ‘v’ y del ángulo de lanzamiento ‘theta’. En la salida de la Tabla 3.18.5 se puede ver que, al seleccionar la opción 2 se puede calcular el valor del tiempo ‘t’, para lo cual se leen los valores de la velocidad ‘v’ y del ángulo de lanzamiento ‘theta’. En la salida de la Tabla 3.18.6 se puede ver que, al seleccionar la opción 3 se puede calcular el valor de la altura ‘h’, para lo cual se leen los valores de la velocidad ‘v’ y del ángulo de lanzamiento ‘theta’.</p>
+                <h5><strong>Ejecución 3.18.4: </strong>Salida del programa.</h5>
+                <img src="./assets/images/Capitulos/III/media/b35.png" style="display:block; margin:auto; "><br>
+                <h5><strong>Ejecución 3.18.5: </strong>Salida del programa.</h5>
+                <img src="./assets/images/Capitulos/III/media/b36.png" style="display:block; margin:auto; "><br>
+                <h5><strong>Ejecución 3.18.6: </strong>Salida del programa.</h5>
+                <img src="./assets/images/Capitulos/III/media/b37.png" style="display:block; margin:auto; "><br>
+
+              </ng-template>
             </mat-tab>
             <mat-tab  label="Caso de Estudio 3.4">
-              <ng-template matTabContent></ng-template>
+              <ng-template matTabContent>
+                <h2><strong>Caso de Estudio 3.4: Movimiento básico de una partícula a lo largo del eje ‘x’ con aceleración constante.</strong></h2>
+                <h4><strong>A)   Problema</strong></h4>
+                <p>Escribir un programa con funciones que automatice 5 ecuaciones básicas del movimiento de una partícula a lo largo del eje ‘x’ con aceleración constante, utilizadas en Cinemática Rectilínea. En la Tabla 3.4.1. se muestran estas 6 ecuaciones.</p>
+                <h5><strong>Tabla 3.4.1. </strong>Ecuaciones del desplazamiento, de la velocidad media, de la aceleración media y del tiempo para el movimiento básico de una partícula bajo aceleración constante a lo largo del eje ‘x’.</h5>
+                <TABLE BORDER WIDTH="100%" CELLPADDING=1 CELLSPACING=0 class="mat-elevation-z8">
+                  <TR>
+                    <TH>Número de ecuación</TH>
+                    <TH>Ecuación</TH>
+                    <TH>Información que se conoce por la ecuación</TH>
+                  </TR>
+                  <tbody *ngFor="let item of prefTab[0].tablaDatos2">
+                  <TR style="text-align: left">
+                    <TD>
+                      <ul *ngFor="let i of item.item" style="list-style-type: none;">
+                        <li>{{i}}</li>
+                      </ul>
+                    </TD>
+                    <TD>
+                      <ul *ngFor="let i of item.nota" style="list-style-type: none;">
+                        <li>{{i}}</li>
+                      </ul>
+                    </TD>
+                    <TD>
+                      <ul *ngFor="let i of item.puntos" style="list-style-type: none;">
+                        <li>{{i}}</li>
+                      </ul>
+                    </TD>
+                  </TR>
+                  </tbody>
+                </TABLE><br>
+                <p>En la Figura 3.4.1 se muestra el movimiento de una partícula a lo largo del eje ‘x’ con aceleración constante, tanto hacia adelante como en reversa.</p>
+                <img src="./assets/images/Capitulos/III/media/b38.png" style="display:block; margin:auto; "><br>
+                <h5><strong>Figura 3.4.1. </strong>Un auto va hacia adelante y en reversa a lo largo de una línea recta; a) Representación pictórica del movimiento del auto hacia adelante; b) Representación pictórica del movimiento del auto en reversa (Serway, R., Jewett, J., 2005).</h5>
+
+                <h4><strong>B)   Análisis</strong></h4>
+                <p>Claramente, se puede ver que las entradas del problema son la posición inicial de una partícula (X0), la posición final de una partícula (Xf), la velocidad media (Vm), el tiempo de movimiento de una partícula (t), la velocidad inicial de una partícula (V0), la velocidad final de una partícula (Vf). Hay cinco salidas requeridas: el desplazamiento (s), la posición final de una partícula (Xf), la velocidad media (Vm), el tiempo de movimiento de una partícula (t), la aceleración de una partícula (a). Partiendo de un conocimiento básico de Física, se sabe que hay cinco ecuaciones del desplazamiento, de la velocidad media, de la aceleración media y del tiempo para el movimiento básico de una partícula bajo aceleración constante a lo largo del eje ‘x’. Las fórmulas requeridas se incluyen en el requerimiento de los datos.</p>
+                <h4><strong>B.1)   Requerimiento de los Datos</strong></h4>
+                <p><strong>Entradas del Problema</strong></p>
+                <p>X0 &nbsp; &nbsp; /* posición inicial */</p>
+                <p>Xf &nbsp; &nbsp; /* posición final */</p>
+                <p>Vm &nbsp; &nbsp; /* velocidad media */</p>
+                <p>t &nbsp; &nbsp; /* tiempo */</p>
+                <p>V0 &nbsp; &nbsp; /* velocidad inicial */</p>
+                <p>Vf &nbsp; &nbsp; /* velocidad final */</p>
+                <p>opcion &nbsp; &nbsp; /* opción a ser seleccionada del menú */</p>
+
+                <p><strong>Salidas del Problema</strong></p>
+                <p>s &nbsp; &nbsp; /* desplazamiento */</p>
+                <p>Xf &nbsp; &nbsp; /* posición final */</p>
+                <p>Vm &nbsp; &nbsp; /* velocidad media */</p>
+                <p>t &nbsp; &nbsp; /* tiempo */</p>
+                <p>a &nbsp; &nbsp; /* aceleración */</p>
+
+                <p><strong>Fórmulas Relevantes</strong></p>
+                <img src="./assets/images/Capitulos/III/media/b39.png" style="display:block; margin:auto; "><br>
+
+                <p><strong>B.2) Diagrama de Entrada-Salida</strong></p>
+                <p>En la Figura 3.4.2 se muestra el diagrama de Entrada-Salida del programa donde se identifican y se diagraman las entradas, salidas y auxiliares del problema como son: a) Entradas: la variable ‘X0’ (posición inicial), la variable ‘Xf’ (posición final), la variable ‘Vm’ (velocidad media), la variable ‘t’ (tiempo), la variable ‘V0’ (velocidad inicial), la variable ‘Vf’ (velocidad final), la variable ‘opcion’ (opción a ser seleccionada del menú); b) Salidas: la variable ‘s’ (desplazamiento), la variable ‘Xf’ (posición final), la variable ‘Vm’ (velocidad media), la variable ‘t’ (tiempo), la variable ‘a’ (aceleración).</p>
+                <img src="./assets/images/Capitulos/III/media/b40.png" style="display:block; margin:auto; "><br>
+
+                <p><strong>C)   Diseño</strong></p>
+                <p>Una vez que se conocen las entradas y las salidas del problema, se deben listar los pasos necesarios para resolver el problema, es decir, el algoritmo.</p>
+                <p><strong>C.1)   Algoritmos</strong></p>
+                <p><strong>3.4.1. Algoritmo de la Función LeerDatosDesplazamiento()</strong></p>
+                <p>1.	Leer el valor de la posición inicial en [m], utilizando la referencia ‘X0’.</p>
+                <p>2.	Leer el valor de la posición final en [m], utilizando la referencia ‘Xf’.</p>
+                <p><strong>3.4.2. Algoritmo de la Función LeerDatosDesplazamiento()</strong></p>
+                <p>1.	Leer el valor de la posición inicial en [m], utilizando la referencia ‘X0’.</p>
+                <p>2.	Leer el valor de la velocidad media en [m/s], utilizando la referencia ‘Vm’.</p>
+                <p>3.	Leer el valor del tiempo en [seg], utilizando la referencia ‘t’.</p>
+                <p><strong>3.4.3. Algoritmo de la Función LeerDatosVelocidadMedia()</strong></p>
+                <p>1.	Leer el valor de la posición inicial en [m], utilizando la referencia ‘X0’.</p>
+                <p>2.	Leer el valor de la posición final en [m], utilizando la referencia ‘Xf’.</p>
+                <p>3.	Leer el valor del tiempo en [seg], utilizando la referencia ‘t’.</p>
+                <p><strong>3.4.4. Algoritmo de la Función LeerDatosVelocidadMedia()</strong></p>
+                <p>1.	Leer el valor de la velocidad inicial en [m/s], utilizando la referencia ‘V0’.</p>
+                <p>2.	Leer el valor de la velocidad final en [m/s], utilizando la referencia ‘Vf’.</p>
+
+                <p><strong>3.4.5. Algoritmo de la Función LeerDatosTiempo()</strong></p>
+                <p>1.	Leer el valor de la posición inicial en [m], utilizando la referencia ‘X0’.</p>
+                <p>2.	Leer el valor de la posición final en [m], utilizando la referencia ‘Xf’.</p>
+                <p>3.	Leer el valor de la velocidad media en [m/s], utilizando la referencia ‘Vm’.</p>
+                <p><strong>3.4.6. Algoritmo de la Función LeerDatosAceleracion()</strong></p>
+                <p>1.	Leer el valor de la velocidad inicial en [m/s], utilizando la referencia ‘V0’.</p>
+                <p>2.	Leer el valor de la velocidad final en [m/s], utilizando la referencia ‘Vf’.</p>
+                <p>3.	Leer el valor del tiempo en [seg], utilizando la referencia ‘t’.</p>
+                <p><strong>3.4.7. Algoritmo de la Función Desplazamiento()</strong></p>
+                <p>1.	Calcular el valor del desplazmiento como función de la posición.</p>
+                <p>&nbsp; &nbsp; 1.1.	Retornar el valor de una expresión matemática que cumple con la fórmula del desplazamiento (1), según la Física Clásica.</p>
+                
+                <p><strong>3.4.8. Algoritmo de la Función Desplazamiento()</strong></p>
+                <p>1.	Calcular el valor del desplazmiento como función de la velocidad media y el tiempo.</p>
+                <p>&nbsp; &nbsp; 1.1.	Retornar el valor de una expresión matemática que cumple con la fórmula del desplazamiento (2), según la Física Clásica.</p>
+                
+                <p><strong>3.4.9. Algoritmo de la Función VelocidadMedia()</strong></p>
+                <p>1.	Calcular el valor de la velocidad media como función de la posición y el tiempo.</p>
+                <p>&nbsp; &nbsp; 1.1.	Retornar el valor de una expresión matemática que cumple con la fórmula de la velocidad media (3), según la Física Clásica.</p>
+                <p><strong>3.4.10. Algoritmo de la Función VelocidadMedia()</strong></p>
+                <p>1.	Calcular el valor de la velocidad media como función de la velocidad final y de la velocidad inicial.</p>
+                <p>&nbsp; &nbsp; 1.1.	Retornar el valor de una expresión matemática que cumple con la fórmula de la velocidad media (4), según la Física Clásica.</p>
+                <p><strong>3.4.11. Algoritmo de la Función Tiempo()</strong></p>
+                <p>1.	Calcular el valor del tiempo como función de la posición y de la velocidad media.</p>
+                <p>&nbsp; &nbsp; 1.1.	Retornar el valor de una expresión matemática que cumple con la fórmula del tiempo (5), según la Física Clásica.</p>
+                <p><strong>3.4.12. Algoritmo de la Función Aceleracion()</strong></p>
+                <p>1.	Calcular el valor de la aceleración como función de la velocidad final, de la velocidad inicial y del tiempo.</p>
+                <p>&nbsp; &nbsp; 1.1.	Retornar el valor de una expresión matemática que cumple con la fórmula de la aceleración (6), según la Física Clásica.</p>
+                <p><strong>3.4.13. Algoritmo de la Función ImprimirDatosDesplazamiento()</strong></p>
+                <p>1.	Imprimir el valor de la variable ‘s’ (desplazamiento) en [m].</p>
+                
+                <p><strong>3.4.14. Algoritmo de la Función ImprimirDatosVelocidadMedia()</strong></p>
+                <p>1.	Imprimir el valor de la variable ‘Vm’ (velocidad media) en [m/s].</p>
+                
+                <p><strong>3.4.15. Algoritmo de la Función ImprimirDatosTiempo()</strong></p>
+                <p>1.	Imprimir el valor de la variable ‘t’ (tiempo) en [seg].</p>
+                <p><strong>3.4.16. Algoritmo de la Función ImprimirDatosAceleracion()</strong></p>
+                <p>1.	Imprimir el valor de la variable ‘a’ (aceleración) en [m/seg2].</p>
+                <p><strong>3.4.8. Algoritmo de la Función main()</strong></p>
+                <p>1.	Hacer:</p>
+                <p>&nbsp; &nbsp; 1.1.	Limpiar la pantalla.</p>
+                <p>&nbsp; &nbsp; 1.2.	Presentar el texto del menú que se verá cada vez.</p>
+                <p>&nbsp; &nbsp; 1.3.	Imprimir un salto de línea (INTRO).</p>
+                <p>&nbsp; &nbsp; &nbsp; 1.3.1.	Imprimir el mensaje: “Movimiento básico de una partícula a lo largo del eje 'x'.”.</p>
+                <p>&nbsp; &nbsp; &nbsp; 1.3.2.	Imprimir un salto de línea (INTRO).</p>
+                <p>&nbsp; &nbsp; &nbsp; 1.3.3.	Imprimir el mensaje: “1. Calcular el desplazamiento (s) conociendo: 'X0' y 'Xf'.”.</p>
+                <p>&nbsp; &nbsp; &nbsp; 1.3.4.	Imprimir un salto de línea (INTRO).</p>
+                <p>&nbsp; &nbsp; &nbsp; 1.3.5.	Imprimir el mensaje: “2. Calcular el desplazamiento (Xf) conociendo: 'X0', 'Vm' y 't'.”.</p>
+                <p>&nbsp; &nbsp; &nbsp; 1.3.6.	Imprimir un salto de línea (INTRO).</p>
+                <p>&nbsp; &nbsp; &nbsp; 1.3.7.	Imprimir el mensaje: “3. Calcular la velocidad media (Vm) conociendo: 'X0', 'Xf' y 't'.”.</p>
+                <p>&nbsp; &nbsp; &nbsp; 1.3.8.	Imprimir un salto de línea (INTRO).</p>
+                <p>&nbsp; &nbsp; &nbsp; 1.3.9.	Imprimir el mensaje: “4. Calcular la velocidad media (Vm) conociendo: 'V0' y 'Vf'.”.</p>
+                <p>&nbsp; &nbsp; &nbsp; 1.3.10.	Imprimir un salto de línea (INTRO).</p>
+                <p>&nbsp; &nbsp; &nbsp; 1.3.11.	Imprimir el mensaje: “5. Calcular el tiempo (t) conociendo: 'X0', 'Xf' y 'Vm'.”.</p>
+                <p>&nbsp; &nbsp; &nbsp; 1.3.12.	Imprimir un salto de línea (INTRO).</p>
+                <p>&nbsp; &nbsp; &nbsp; 1.3.13.	Imprimir el mensaje: “6. Calcular la aceleración (a) conociendo: 'V0', 'Vf' y 't'.”.</p>
+                <p>&nbsp; &nbsp; &nbsp; 1.3.14.	Imprimir un salto de línea (INTRO).</p>
+                <p>&nbsp; &nbsp; &nbsp; 1.3.15.	Imprimir el mensaje: “7. SALIR”.</p>
+                <p>&nbsp; &nbsp; &nbsp; 1.3.16.	Imprimir un salto de línea (INTRO).</p>
+                <p>&nbsp; &nbsp; &nbsp; 1.3.17.	Leer una opción del menú, utilizando la variable ‘opcion’.</p>
+                <p>&nbsp; &nbsp; &nbsp; 1.3.18.	Según sea el valor de la variable ‘opcion’, hacer:</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; 1.3.18.1.	Caso 1:</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1.3.18.1.1.	Imprimir un salto de línea (INTRO).</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1.3.18.1.2.	Llamada a la función LeerDatosDesplazamiento(), donde se envían tres argumentos que son la variable 'X0', la variable 'Vm' y la variable 't' y no se retorna ningún valor.</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1.3.18.1.3.	Llamada a la función Desplazamiento(), donde se envían tres argumentos que son la variable 'X0', la variable 'Vm' y la variable 't' y luego retorna a la variable 'Xf' el valor calculado.</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1.3.18.1.4.	Imprimir un salto de línea (INTRO).</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1.3.18.1.5.	Llamada a la función ImprimirDatosDesplazamiento(), que se envía como argumento el valor de la variable 'Xf' e imprime ese valor.</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1.3.18.1.6.	Generar una pausa.</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; 1.3.18.2.	Caso 2:</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1.3.18.2.1.	Imprimir un salto de línea (INTRO).</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1.3.18.2.2.	Llamada a la función LeerDatosDesplazamiento(), donde se  envían dos argumentos que son la variable 'X0' y la variable 'Xf' y no se retorna ningún valor.</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1.3.18.2.3.	Llamada a la función Desplazamiento(), donde se envían dos argumentos que son la variable 'X0' y la variable 'Xf' y luego retorna a la variable 's' el valor calculado.</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1.3.18.2.4.	Imprimir un salto de línea (INTRO).</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1.3.18.2.5.	Llamada a la función ImprimirDatosDesplazamiento(), que se envía como argumento el valor de la variable 's' e imprime ese valor.</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1.3.18.2.6.	Generar una pausa.</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; 1.3.18.3.	Caso 3:</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1.3.18.3.1.	Imprimir un salto de línea (INTRO).</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1.3.18.3.2.	Llamada a la función LeerDatosVelocidadMedia(), donde se  envían tres argumentos que son la variable 'X0', la variable 'Xf' y la variable 't' y no se retorna ningún valor.</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1.3.18.3.3.	Llamada a la función VelocidadMedia(), donde se envían tres argumentos que son la variable 'X0', la variable 'Xf' y la variable 't' y luego retorna a la variable 'Vm' el valor calculado.</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1.3.18.3.4.	Imprimir un salto de línea (INTRO).</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1.3.18.3.5.	Llamada a la función ImprimirDatosVelocidadMedia(), que se envía como argumento el valor de la variable 'Vm' e imprime ese valor.</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1.3.18.3.6.	Generar una pausa.</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; 1.3.18.4.	Caso 4:</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1.3.18.4.1.	Imprimir un salto de línea (INTRO).</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1.3.18.4.2.	Llamada a la función LeerDatosVelocidadMedia(), donde se  envían dos argumentos que son la variable 'V0' y la variable 'Vf' y no se retorna ningún valor.</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1.3.18.4.3.	Llamada a la función VelocidadMedia(), donde se envían dos argumentos que son la variable 'V0' y la variable 'Vf' y luego retorna a la variable 'Vm' el valor calculado.</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1.3.18.4.4.	Imprimir un salto de línea (INTRO).</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1.3.18.4.5.	Llamada a la función ImprimirDatosVelocidadMedia(), que se envía como argumento el valor de la variable 'Vm' e imprime ese valor.</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1.3.18.4.6.	Generar una pausa.</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; 1.3.18.5.	Caso 5:</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1.3.18.5.1.	Imprimir un salto de línea (INTRO).</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1.3.18.5.2.	Llamada a la función LeerDatosTiempo(), donde se envían tres argumentos que son la variable 'X0', la variable 'Xf' y la variable 'Vm' y no se retorna ningún valor.</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1.3.18.5.3.	Llamada a la función Tiempo(), donde se envían tres argumentos que son la variable 'X0', la variable 'Xf' y la variable 'Vm' y luego retorna a la variable 't' el valor calculado.</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1.3.18.5.4.	Imprimir un salto de línea (INTRO).</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1.3.18.5.5.	Llamada a la función ImprimirDatosTiempo(), que se envía como argumento el valor de la variable 't' e imprime ese valor.</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1.3.18.5.6.	Generar una pausa.</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; 1.3.18.6.	Caso 6:</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1.3.18.6.1.	Imprimir un salto de línea (INTRO).</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1.3.18.6.2.	Llamada a la función LeerDatosAceleracion(), donde se envían tres argumentos que son la variable 'V0', la variable 'Vf' y la variable 't' y no se retorna ningún valor.</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1.3.18.6.3.	Llamada a la función AceleracionMedia(), donde se envían tres argumentos que son la variable 'V0', la variable 'Vf' y la variable 't' yluego retorna a la variable 'a' el valor calculado.</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1.3.18.6.4.	Imprimir un salto de línea (INTRO).</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1.3.18.6.5.	Llamada a la función ImprimirDatosAceleracion(), que se envía como argumento el valor de la variable 'a' e imprime ese valor.</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1.3.18.6.6.	Generar una pausa.</p>
+                <p>Mientras el valor de la variable ‘opcion’ sea diferente al valor de siete (opcion != 7).</p>
+
+                <p><strong>D)   Implementación</strong></p>
+                <p>Para implementar la solución, se debe escribir el algoritmo como un programa de C/C++ que contenga toda la información necesaria para completar la traducción a lenguaje máquina. Desde la Tabla 3.4.2 hasta la Tabla 3.4.4, se muestra el código del programa en C/C++ con sus archivos de código fuente y su archivo de encabezado.</p>
+                <p>La Tabla 3.4.2, referente al archivo de cabecera “Operaciones.h” contiene los prototipos de las funciones que se van a implementar en el archivo de código fuente “Operaciones.cpp”. Este archivo de cabecera utiliza sentencias de inclusión como son las siguientes:</p>
+                <p>#ifndef OPERACIONES_H <br>
+                  #define OPERACIONES_H <br>
+                  … <br>
+                  #endif // !OPERACIONES_H
+                  </p>
+                <p>La primera línea, #ifndef OPERACIONES_H, hace que el compilador pregunte si un símbolo llamado OPERACIONES_H no ha sido definido. Si no se ha definido, se compilará el código entre el código #ifndef y el código #endif, correspondiente a las sentencias de inclusión.</p>
+                <h5><strong>Tabla 3.4.2. </strong>Archivo de cabecera “Operaciones.h”.</h5>
+                <pre><code [highlight]="prefTab[0].programa9"  [lineNumbers]="true"></code></pre><br>
+                <p>La Tabla 3.4.3, referente al archivo de código fuente “Operaciones.cpp”, implementa las funciones declaradas en el archivo de cabecera “Operaciones.h”. En este archivo de código fuente se debe incluir el archivo de cabecera utilizando la sentencia #include "Operaciones.h". Luego, se incluyen las librerías (iostream), (cstdlib) y (cmath) para los diferentes cálculos matemáticos que se van a realizar en las diferentes funciones que se implementan en este archivo de código fuente. Finalmente, se incluye el espacio de nombre std para utilizar las funciones cout y cin sin incluir el operador de ámbito de resolución (::).</p>
+                <h5><strong>Tabla 3.4.3. </strong>Archivo de código fuente “Operaciones.cpp”.</h5>
+                <pre><code [highlight]="prefTab[0].programa10"  [lineNumbers]="true"></code></pre><br>
+                <p>La Tabla 3.4.3, referente al archivo de código fuente “programa.cpp”, llama a las funciones del archivo de encabezado “Operaciones.h” que han sido implementadas dentro del archivo de código fuente “Operaciones.cpp”. El programa principal contiene un menú con seis opciones utilizando números para su selección.</p>
+                <p>La sentencia switch() crea seis posibles puntos de ramificación. Si el usuario ingresa el valor de 1, luego el código asociado con el caso 1 (case 1) se ejecuta, que corresponde a la llamada a la función LeerDatosDesplazamiento() con dos argumentos, la llamada a la función de Desplazamiento() con dos argumentos y también se ejecuta la llamada a la función ImprimirDatosDesplazamiento() con un argumento. Si el usuario ingresa el valor de 2, luego el código asociado con el caso 2 (case 2) se ejecuta, que corresponde a la llamada a la función LeerDatosDesplazamiento() con tres argumentos, la llamada a la función de Desplazamiento() con tres argumentos y también se ejecuta la llamada a la función ImprimirDatosDesplazamiento() con un argumento. Si el usuario ingresa el valor de 3, luego el código asociado con el caso 3 (case 3) se ejecuta, que corresponde a la llamada a la función LeerDatosVelocidadMedia() con tres argumentos, la llamada a la función de VelocidadMedia() con tres argumentos y también se ejecuta la llamada a la función ImprimirDatosVelocidadMedia() con un argumento. Si el usuario ingresa el valor de 4, luego el código asociado con el caso 4 (case 4) se ejecuta, que corresponde a la llamada a la función LeerDatosVelocidadMedia() con dos argumentos, la llamada a la función de VelocidadMedia() con dos argumentos y también se ejecuta la llamada a la función ImprimirDatosVelocidadMedia() con un argumento. Si el usuario ingresa el valor de 5, luego el código asociado con el caso 5 (case 5) se ejecuta, que corresponde a la llamada a la función LeerDatosTiempo() con tres argumentos, la llamada a la función de Tiempo() con tres argumentos y también se ejecuta la llamada a la función ImprimirDatosTiempo() con un argumento. Si el usuario ingresa el valor de 6, luego el código asociado con el caso 6 (case 6) se ejecuta, que corresponde a la llamada a la función LeerDatosAceleracion() con tres argumentos, la llamada a la función de AceleracionMedia() con tres argumentos y también se ejecuta la llamada a la función ImprimirDatosAceleracion() con un argumento. Si el usuario ingresa el valor de 7, entonces se sale de la aplicación. En este menú se utiliza un bucle do-while(), que permite repetir la selección del código mientras la expresión lógica del bucle sea verdadera.</p>
+                <h5><strong>Tabla 3.4.3. </strong>Archivo de código fuente “programa.cpp”.</h5>
+                <pre><code [highlight]="prefTab[0].programa11"  [lineNumbers]="true"></code></pre><br>
+
+                <p><strong>E) Pruebas</strong></p>
+                <p>Desde la Tabla 3.4.4, hasta la Tabla 3.4.9, se muestran seis ejemplos de la salida del programa, donde se puede ver que los resultados del programa tienen sentido, comparando estos resultados con los datos devueltos por una calculadora.</p>
+                <p>En la salida de la Tabla 3.4.4 se puede ver que, al seleccionar la opción 1 se puede calcular el valor del desplazamiento ‘s’, para lo cual se leen los valores de la posición inicial ‘X0’ y de la posición final ‘Xf’. En la salida de la Tabla 3.4.5 se puede ver que, al seleccionar la opción 2 se puede calcular el valor del desplazamiento ‘Xf’, para lo cual se leen los valores de la posición inicial ‘X0’, de la velocidad media ‘Vm’ y del tiempo ‘t’. En la salida de la Tabla 3.4.6 se puede ver que, al seleccionar la opción 3 se puede calcular el valor de la velocidad media ‘Vm’, para lo cual se leen los valores de la posición inicial ‘X0’, de la posición final ‘Xf’ y del tiempo ‘t’. En la salida de la Tabla 3.4.7 se puede ver que, al seleccionar la opción 4 se puede calcular el valor de la velocidad media ‘Vm’, para lo cual se leen los valores de la velocidad inicial ‘V0’ y de la velocidad final ‘Vf’. Tabla 3.4.8 se puede ver que, al seleccionar la opción 5 se puede calcular el valor del tiempo ‘t’, para lo cual se leen los valores de la posición inicial ‘X0’, de la posición final ‘Xf’ y de la velocidad media ‘Vm’. Tabla 3.4.9 se puede ver que, al seleccionar la opción 6 se puede calcular el valor de la aceleración ‘a’, para lo cual se leen los valores de la velocidad inicial ‘V0’, de la velocidad final ‘Vf’ y del tiempo ‘t’.</p>
+                <h5><strong>Tabla 3.4.4. </strong>Salida del programa.</h5>
+                <img src="./assets/images/Capitulos/III/media/b41.png" style="display:block; margin:auto; "><br>
+                <h5><strong>Tabla 3.4.5. </strong>Salida del programa.</h5>
+                <img src="./assets/images/Capitulos/III/media/b42.png" style="display:block; margin:auto; "><br>
+                <h5><strong>Tabla 3.4.6. </strong>Salida del programa.</h5>
+                <img src="./assets/images/Capitulos/III/media/b43.png" style="display:block; margin:auto; "><br>
+                <h5><strong>Tabla 3.4.7. </strong>Salida del programa.</h5>
+                <img src="./assets/images/Capitulos/III/media/b44.png" style="display:block; margin:auto; "><br>
+                <h5><strong>Tabla 3.4.8. </strong>Salida del programa.</h5>
+                <img src="./assets/images/Capitulos/III/media/b45.png" style="display:block; margin:auto; "><br>
+                <h5><strong>Tabla 3.4.9. </strong>Salida del programa.</h5>
+                <img src="./assets/images/Capitulos/III/media/b45.png" style="display:block; margin:auto; "><br>
+              </ng-template>
             </mat-tab>
-            <mat-tab  label="3.7.1. Sentencias de Inclusión (Inclusion Guards)">
-              <ng-template matTabContent></ng-template>
-            </mat-tab>
+            
           </mat-tab-group>
         </ng-template>
       </mat-tab>
 
       <mat-tab label="Resumen">
         <ng-template matTabContent>
-
+          <ol>
+            <li>Una función es un mini programa dentro de un programa, que contiene varias sentencias bajo un solo nombre, que un programa puede utilizar una o más veces para ejecutar dichas sentencias, llamando a la función.</li>
+            <li>La estructura de una función contempla los siguientes puntos: a) tipo de retorno; b) nombre de la función; c) lista de parámetros; d) cuerpo de la función.</li>
+            <li>Los problemas más importantes que resuelven las funciones son: a) duplicación de código; b) reutilización del código; c) mantención del código.</li>
+            <li>Para utilizar adecuadamente las funciones dentro de los programas se deben considerar las siguientes observaciones: a) una función debe ser declarada o definidis antes de ser llamada; b) El prototipo de la función debe mantener la estrucutra de una función; c) Una función debe ser implementada después de habers ido definida; d) Una función puede ser definida sin necesidad de ser declarada, antes del programa principal.</li>
+            <li>El paso de parámetros por valor o por copia, significa que una función recibe en sus parámetros una copia de los argumentos enviados, que solo pueden ser utilizados para diferentes cálculos, pero no pueden ser modificados sus valores.</li>
+            <li>Las funciones pueden tener uno o varios parámetros, e incluso no tener parámetros. Una función puede ejecutar una o varias acciones utilizando sus parámetros y retornar al menos un valor, o no retornar ningún valor, en cuyo caso se dice que la función es un procedimiento o void.</li>
+            <li>La Librería de Utilidades Generales Estándar (cstdlib), proporciona una función llamada rand(), que puede ser utilizada para generar números pseudo-aleatorios (pseudorandom). Para generar números aleatorios diferentes cada vez que se ejecuta un programa se utiliza de manera conjunta la función time() con la función srand(), donde el valor retornado por la función time() se pasa como parámetro a la función srand().</li>
+            <li>Para utilizar números aleatorios dentro de un rango específico como por ejemplo [a, b], se debe utilizar la siguiente fórmula: <br> valor = a + rand() % ((b + 1) - a);	Ec. 3.1.</li>  
+            <li>La sobrecarga de funciones se basa en que puede haber varias funciones con el mismo nombre, pero con diferente firma. La firma de la función incluye el nombre de la función y la lista de parámetros, pero no incluye el tipo de retorno.</li>
+            <li>Una referencia es un alias de una variable, donde por ejemplo, dada una referencia R a una variable A, se puede directamente acceder a la variable A con la referencia R, por lo que se dice que la referencia R se refiere a la variable A.</li>
+            <li>Se pueden retornar múltiples valores con referencias, por lo que las referencias permiten manipular las variables originales a las cuales se refieren, lo que se conoce como paso de parámetros por referencias.</li>
+            <li>Un puntero es una variable especial que almacena la dirección de memoria de una variable, para poder manipular el contenido de la variable a la que apunta.</li>
+            <li>El operador de dirección (&) es un operador unario que se utiliza tanto para almacenar la dirección de memoria de una variable, así como también para devolver la dirección de memoria de su operando.</li>
+            <li>El operador de indirección (*) es un operador unario que, a más de ser utilizado como el operador de multiplicación, cumple con otras dos funciones muy importantes: a) Para declarar o crear un puntero; b) Para devolver una expresión equivalente al valor contenido en la dirección apuntada por un puntero.</li>
+            <li>En el lenguaje C/C++, cuando se trabajan con variables y punteros se puede hablar del 'rvalue' y del 'lvalue' de una variable, donde: a) El 'lvalue' de una variable es la dirección de memoria (localidad) donde la variable está almacenada; b) El 'rvalue' de una variable es el dato (contenido real) que la variable tiene. En otras palabras, es el valor de la variable.</li>
+            <li>Se pueden retornar múltiples valores con punteros, por lo que los punteros permiten manipular las variables a las cuales apuntan, lo que se conoce como paso de parámetros por dirección o por punteros.</li>
+            <li>Existe una gran variedad de funciones matemáticas en la librería de Encabezado de Funciones Matemáticas (cmath), sin embargo, este número de funciones son limitadas, por lo que se pueden crear librerías propias de funciones matemáticas aplicadas a la vida real y a otras áreas de las ciencias del saber.</li>
+            <li>El menú de selección en un programa presenta al usuario un menú que lista un grupo de opciones que se pueden seleccionar. Si el usuario ingresa un número o una letra que corresponde a la lista de selección, luego se ejecuta una o más instrucciones en cada selección o caso del switch(). En un menú también se utiliza un bucle while() o do-while(), que permite repetir la selección del código mientras la expresión lógica del bucle sea verdadera.</li>
+            <li>Una de las metas del lenguaje C/C++ es separar los prototipos de las funciones (la declaración de las funciones) de la implementación de las funciones (definición de las funciones). La motivación de esta práctica de programación se basa en que el desarrollador debería ser capaz de utilizar los prototipos de las funciones sin conocer exactamente como estas funciones trabajan.</li>
+            <li>Dado el archivo de cabecera conocido como archivo objeto (.obj) o el archivo de librería (.lib), otros programadores son capaces de utilizar sus funciones sin haber visto como fueron implementadas en el archivo de código fuente (.cpp). Esto cumple con dos tareas: 1) Otros programadores no serán capaces de modificar la implementación de las funciones; 2) Su implementación es protegida como una propiedad intelectual.</li>
+            <li>Las sentencias de inclusión (inclusion guards) son sentencias o directivas de preprocesador que ejecuta directamente el compilador al compilar el código del programa.</li>
+          </ol>
         </ng-template>
       </mat-tab>
     </mat-tab-group>

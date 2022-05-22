@@ -42,7 +42,7 @@ export class ChapterIIIComponent implements OnInit {
       }, 1000);
     });
   */
-    this.prefTabs= [{
+    this.prefTab= [{
       tablaDatos1:[
         {Objeto:'',nota:['Los primeros 200'], puntos:['0.35']},
         {Objeto:'',nota:['Hasta los 500'], puntos:['0.55']},
@@ -50,7 +50,1206 @@ export class ChapterIIIComponent implements OnInit {
         {Objeto:'',nota:['Sobre los 700'], puntos:['1.05']},
         
       ],
-      programa1: ``,
+      programa1: `/*******************************************************
+      WinConsolaCasoEstudio_3_2
+     *******************************************************/
+     
+     // Librerías.
+     #include <iostream>
+     #include <cstdlib>
+     
+     // Macros o sentencias de preporcesador.
+     #define TARIFA1 0.35
+     #define TARIFA2 0.55
+     #define TARIFA3 0.75
+     #define TARIFA4 1.05
+     
+     // Declaración de las funciones (prototipos de las funciones).
+     void ImprimirMensajeInformacion();
+     void LeerDatos(float& c);
+     float GenerarRecibo(float c, float recibo);
+     void ImprimirDatos(float recibo);
+     
+     using namespace std;
+     
+     // Función principal.
+     void main()
+     {
+       // Declaración e inicialización de variables.
+       float c = 0.0;      // Entrada: valor de consumo.		
+       float recibo = 0.0; // Salida: valor del recibo.
+     
+       // Llamada a la ImprimirMensajeInformacion(), donde no se 
+       // envían argumentos y no se retorna ningún valor.
+       ImprimirMensajeInformacion();
+       // Llamada a la función LeerDatos(), donde se envía un
+       // argumento que es la variable 'c' y no se retorna 
+       // ningún valor.
+       LeerDatos(c);
+       // Llamada a la función GenerarRecibo(), donde se envían dos 
+       // argumentos que son la variable 'c' y la variable 'recibo' 
+       // y luego retorna a la variable 'recibo' el valor calculado.
+       recibo = GenerarRecibo(c, recibo);
+       // Llamada a la función ImprimirDatos(), que envía como 
+       // argumentos el valore de las variable 'recibo', e imprime
+       // ese valor.
+       ImprimirDatos(recibo);
+     
+       // Incorporar una pausa en el programa.
+       system("pause");
+     }
+     
+     // Definición de las funciones (implementación de las funciones).
+     
+     // Función ImprimirMensajeInformacion, que no tiene parámetros.
+     // Esta función imprime un mensaje de información y 2 saltos de 
+     // línea y no se retorna ningún valor.
+     void ImprimirMensajeInformacion()
+     {
+       // Imprimir el mensaje de información: Consumo Eléctrico.
+       cout << "Consumo Eléctrico." << endl << endl;
+     }
+     // Función LeerDatos(), que tiene un parámetro que es una referencia
+     // que recibe un argumento. Esta función lee un dato utilizando 
+     // una referencia y no se retorna ningún valor.
+     void LeerDatos(float& c)
+     {
+       // Leer el valor del consumo utilizando la referencia 'c'.
+       cout << "Ingrese el consumo en [KWH]: ";
+       cin >> c;
+     }
+     // Función GenerarRecibo(), que tiene 2 parámetros que reciben 
+     // 2 argumentos, calcula el valor del recibo de acuerdo al valor
+     // del consumo y a una tarifa específica. Finalmente, retorna
+     // el valor calculado.
+     float GenerarRecibo(float c, float recibo)
+     {
+       // Si el valor de 'c' está dentro del intervalo I1: (0≤c)∧(c≤200).
+       if ((0 <= c) && (c <= 200))
+       {
+         // Calcular el valor del recibo con la TARIFA1.
+         recibo = TARIFA1 * c;
+       }
+       // Caso contrario, si el valor de 'c' está dentro del intervalo 
+       // I2: (200<c)∧(c≤500).
+       else if ((200 < c) && (c <= 500))
+       {
+         // Calcular el valor del recibo con la TARIFA2.
+         recibo = TARIFA2 * c;
+       }
+       // Caso contrario, si el valor de 'c' está dentro del intervalo 
+       // I3: (500<c)∧(c≤700).
+       else if ((500 < c) && (c <= 700))
+       {
+         // Calcular el valor del recibo con la TARIFA3.
+         recibo = TARIFA3 * c;
+       }
+       // Caso contrario, si el valor de 'c' está dentro del intervalo 
+       // I4: (c > 700).
+       else if (c > 700)
+       {
+         // Calcular el valor del recibo con la TARIFA4.
+         recibo = TARIFA4 * c;
+       }
+       // Retornar el valor de la variable 'recibo'.
+       return(recibo);
+     }
+     // Función ImprimirDatos(), que tiene un parámetro que recibe
+     // un argumento e imprimime el valor de la variable 'recibo',
+     // y no se retorna ningún valor.
+     void ImprimirDatos(float recibo)
+     {
+       // Imprimir el valor del recibo.
+       cout << "La cuenta total es: $ " << recibo << " USD" << endl;
+     }
+     `,
+      programa2: `/*******************************************************
+      WinConsolaCasoEstudio_3_3
+     *******************************************************/
+     
+     // Librerías.
+     #include <iostream>
+     #include <cstdlib>
+     #include <cmath>
+     
+     // Macros o sentencias de preprocesador.
+     #define PI 3.14159265
+     
+     // Declaración de las funciones (prototipos de las funciones).
+     void ImprimirMensajeInformacion();
+     void LeerDatos(long &n, float &x);
+     float ConvertirGradosARadianes(float x);
+     float Factorial(long n);
+     float SerieSeno(long n, float x);
+     void ImprimirDatos(float serie);
+     
+     using namespace std;
+     
+     // Función principal.
+     void main()
+     {
+       // Declaración de variables.
+       long n;      // Entrada: número de términos de la serie.
+       float x;     // Entrada: valor del ángulo.
+       float serie; // Salida: resultado de la serie aproximada.
+         
+       // Llamada a la ImprimirMensajeInformacion(), donde no se 
+       // envían argumentos no se retorna ningún valor.
+       ImprimirMensajeInformacion();
+       // Llamada a la función LeerDatos(), donde se envían dos
+       // argumentos que son la variable 'n' y la variable 
+       // 'x' y no se retorna ningún valor.
+       LeerDatos(n, x);
+       // Llamada a la función ConvertirGradosARadianes(), donde 
+       // se envía un argumento que es la variable 'x' y luego
+       // retorna a la variable x' el valor calculado.
+       x = ConvertirGradosARadianes(x);
+       // Llamada a la función SerieSeno(), donde se envían dos 
+       // argumentos que son la variable 'n' y la variable 'x' 
+       // y luego retorna a la variable 'erie' el valor calculado.
+       serie = SerieSeno(n, x);
+       // Llamada a la función ImprimirDatos(), que envía como 
+       // argumento el valor de las variable 'serie' e imprime 
+       // ese valor.
+       ImprimirDatos(serie);
+       // Incorporar una pausa en el programa.
+       system("pause");
+     }
+     
+     // Definición de las funciones (implementación de las funciones).
+     
+     // Función ImprimirMensajeInformacion(), que no tiene parámetros. Esta
+     // función imprime un mensaje de información y 2 saltos de línea
+     // y no se retorna ningún valor.
+     void ImprimirMensajeInformacion()
+     {
+       // Imprimir el mensaje de información: Serie del Seno.
+       cout << "Serie del Seno." << endl << endl;
+     }
+     // Función LeerDatos(), que tiene 2 parámetros que son 2 referencias
+     // que reciben 2 argumentos. Esta función lee 2 datos utilizando 
+     // referencias y no se retorna ningún valor.
+     void LeerDatos(long& n, float& x)
+     {
+       // Leer el número de términos de la serie, utilizando la variable 'n'.
+       cout << "Ingrese el número de términos: "; cin >> n;
+       // Leer el valor del ángulo en grados de la función seno, utilizando 
+       // la variable 'x'.
+       cout << "Ingrese el valor de x [grados]: "; cin >> x;
+     }
+     // Función ConvertirGradosARadianes(), que tiene un parámetro
+     // que recibe un argumento, convierte un ángulo de grados a 
+     // radianes y retorna el valor calculado.
+     float ConvertirGradosARadianes(float x)
+     {
+       // Convertir el valor del ángulo 'x' de grados a radianes.
+       return(x * PI / 180);
+     }
+     // Función Factorial(), que tiene un parámetro que recibe un argumento,
+     // la cual permite calcular el factorial de un número y retorna el
+     // valor calculado que es un producto.
+     float Factorial(long n)
+     {
+       long j; // Auxiliar: contador.
+       float prod; // Auxiliar: acumulador de productos.
+       // Inicializar el acumulador de productos 'prod' con el valor de uno.
+       prod = 1;
+       // Para el bucle interno, hacer: 
+       // 1. Inicializar el valor del contador 'j' en uno.
+       // 2. Mientras el valor de la condición (j <= n) sea verdadera  
+       //    ejecutar las sentencias del bucle interno.
+       // 3. Luego de cada iteración incrementar en uno el valor del 
+       //    contador 'j'.
+       for (j = 1; j <= n; j++)
+       {
+         // Asignar al acumulador 'prod' lo que tiene multiplicado por el 
+         // valor del contador 'j'.
+         prod = prod * j;
+       }
+       // retorno del valor del producto calculado.
+       return(prod);
+     }
+     // Función SerieSeno(), que tiene 2 parámetros que reciben 2
+     // argumentos, calcula el valor de la serie aproximada utilizando
+     // un bucle for() y la fórmula del n-ésimo término de la serie de la 
+     // función seno(x) y retorna el valor calculado que es una sumatoria.
+     float SerieSeno(long n, float x)
+     {
+       long i; // Auxiliar: contador.
+       float sum; // Auxiliar: acumulador de sumas.
+       // Inicializar el acumulador de sumas 'sum' con el valor de cero.
+       sum = 0;
+       // Para el bucle externo, hacer: 
+       // 1. Inicializar el valor del contador 'i' en cero.
+       // 2. Mientras el valor de la condición (i <= n - 1) sea verdadera, 
+       //    ejecutar las sentencias del bucle externo.
+       // 3. Luego de cada iteración incrementar en uno el valor del 
+       //    contador 'i'.
+       for (i = 0; i <= n - 1; i++)
+       {
+         // Asignar al acumulador 'sum' lo que tiene sumado más el valor del 
+         // término e-nésimo de la serie calculado en cada iteración.
+         // En esta sentencia se llama a la función Factorial() que retorna
+         // el valor del factorial de un número, para lo cual se envía como
+         // argumento el valor de (2 * i + 1) al parámetro de la función.
+         sum = sum + (pow(-1, i) * pow(x, 2 * i + 1)) / Factorial(2 * i + 1);
+       }
+     
+       // Asignar a la variable serie el valor del acumulador 'sum'.
+       return(sum);
+     }
+     // Función ImprimirDatos(), que tiene un parámetro que recibe
+     // un argumento e imprimime el valor de la variable 'serie'
+     // y no se retorna ningún valor.
+     void ImprimirDatos(float serie)
+     {
+       // Imprimir el valor de la serie aproximada.
+       cout << "Serie: " << serie << endl;
+     }
+     `,
+      programa3: `/*******************************************************
+      WinConsolaPrograma_3_15
+      *******************************************************/
+      
+      // Librerías.
+      #include <iostream>
+      #include <cstdlib>
+      
+      using namespace std;
+      
+      // Función principal.
+      void main()
+      {
+        // Declaración de variables.
+        int opcion; // Entrada: opción a ser seleccionada del menú.
+      
+        // Hacer:
+        do {
+          // Limpiar la pantalla.
+          system("cls");
+          // Texto del menú que se verá cada vez.
+          cout << endl << "Menu de Opciones." << endl;
+          cout << "1. Opcion 1" << endl;
+          cout << "2. Opcion 2" << endl;
+          cout << "3. Opcion 3" << endl;
+          cout << "4. Opcion 4" << endl;
+          cout << "5. SALIR" << endl << endl;
+          // Leer una opción del menú.
+          cout << "Ingrese una opcion: ";
+          cin >> opcion;
+      
+          // Según sea el valor de la variable 'opcion', hacer:
+          switch (opcion) {
+          case 1: // Caso 1
+            cout << endl;
+      
+            // Lista de instrucciones de la opción 1.
+            cout << "Usted selecciono la opcion 1." << endl;
+      
+            system("pause>nul"); // Incorporar una pausa.
+            break;
+          case 2: // Caso 2
+            cout << endl;
+      
+            // Lista de instrucciones de la opción 2.	
+            cout << "Usted selecciono la opcion 2." << endl;
+      
+            system("pause>nul"); // Incorporar una pausa.
+            break;
+          case 3: // Caso 3
+            cout << endl;
+      
+            // Lista de instrucciones de la opción 3.
+            cout << "Usted selecciono la opcion 3." << endl;
+      
+            system("pause>nul"); // Incorporar una pausa.			
+            break;
+          case 4: // Caso 4
+            cout << endl;
+      
+            // Lista de instrucciones de la opción 4.	
+            cout << "Usted selecciono la opcion 4." << endl;
+      
+            system("pause>nul"); // Incorporar una pausa.			
+            break;		
+          }
+          // Mientras la condición sea verdadera.
+          // (En vez del valor de 5 se coloca el número de la opción de SALIDA).
+        } while (opcion != 5);
+      }
+      `,
+        programa4: `/*******************************************************
+        WinConsolaPrograma_3_16
+        *******************************************************/
+        
+        // Librerías.
+        #include <iostream>
+        #include <cstdlib>
+        
+        using namespace std;
+        
+        // Función principal.
+        void main()
+        {
+          char opcion; // Entrada: opción a ser seleccionada del menú.
+        
+          // Hacer:
+          do {
+            // Limpiar la pantalla.
+            system("cls");
+            // Texto del menú que se verá cada vez.
+            cout << endl << "Menu de Opciones." << endl;
+            cout << "a. Opcion 'a'" << endl;
+            cout << "b. Opcion 'b'" << endl;
+            cout << "c. Opcion 'c'" << endl;
+            cout << "d. Opcion 'd'" << endl;
+            cout << "s. SALIR" << endl << endl;
+            // Leer una opción del menú.
+            cout << "Ingrese una opcion: ";
+            cin >> opcion;
+        
+            // Según sea el valor de la variable 'opcion', hacer:
+            switch (opcion) {
+            case 'a': // Caso 1
+              cout << endl;
+        
+              // Lista de instrucciones de la opción 1.	
+              cout << "Usted selecciono la opcion 'a'." << endl;
+        
+              system("pause>nul"); // Incorporar una pausa.
+              break;
+            case 'b': // Caso 2
+              cout << endl;
+        
+              // Lista de instrucciones de la opción 2.
+              cout << "Usted selecciono la opcion 'b'." << endl;
+        
+              system("pause>nul"); // Incorporar una pausa.
+              break;
+            case 'c': // Caso 3
+              cout << endl;
+        
+              // Lista de instrucciones de la opción 3.	
+              cout << "Usted selecciono la opcion 'c'." << endl;
+        
+              system("pause>nul"); // Incorporar una pausa.			
+              break; 
+            case 'd': // Caso 4
+              cout << endl;
+        
+              // Lista de instrucciones de la opción 4.
+              cout << "Usted selecciono la opcion 'd'." << endl;
+        
+              system("pause>nul"); // Incorporar una pausa.			
+              break;
+            }
+          // Mientras la condición sea verdadera.
+          // (En vez del valor de 's' se coloca una letra que representa la opción 
+          //  de SALIDA).
+          } while (opcion != 's'); 	
+        }
+        `,
+          programa5: `/*******************************************************
+          WinConsolaPrograma_3_17
+          *******************************************************/
+          
+          // Librerías.
+          #include <iostream>
+          #include <cstdlib>
+          #include <cmath>
+          
+          // Directivas define o macros.
+          #define PI 3.141593
+          #define g 9.80665
+          
+          using namespace std;
+          
+          // Declaración de las funciones (prototipos de las funciones).
+          void ImprimirMensajeInformacion();
+          void LeerDatos(float& v, float& theta);
+          float ConvertirGradosARadianes(float theta);
+          float Distancia(float v, float theta);
+          float Tiempo(float v, float theta);
+          float Altura(float v, float theta);
+          void ImprimirDistancia(float d);
+          void ImprimirTiempo(float t);
+          void ImprimirAltura(float h);
+          
+          // Función principal.
+          void main()
+          {
+            // Declaración de variables.	
+            float v = 0.0f;     // Entrada: Velocidad inicial.
+            float theta = 0.0f; // Entrada: Ángulo de lanzamiento.
+            float d = 0.0f;     // Salida: Distancia alcanzada.
+            float t = 0.0f;     // Salida: Tiempo de vuelo.
+            float h = 0.0f;     // Salida: Altura máxima.
+            int opcion;         // Entrada: opción a ser seleccionada del menú.
+          
+            // Hacer:
+            do {
+              // Limpiar la pantalla.
+              system("cls");
+              // Texto del menú que se verá cada vez.
+              cout << endl << "Tiro Parabólico." << endl;
+              cout << "1. Calcular la Distancia." << endl;
+              cout << "2. Calcular el Tiempo." << endl;
+              cout << "3. Calcular la Altura." << endl;
+              cout << "4. SALIR" << endl;
+              // Leer una opción del menú.
+              cout << endl << "Ingrese una opcion: ";
+              cin >> opcion;
+          
+              // Según sea el valor de la variable 'opcion', hacer:
+              switch (opcion) {
+              case 1: // Caso 1
+                cout << endl;
+                // Llamada a la función LeerDatos(), donde se envían dos
+                // argumentos que son la variable 'v' y la variable 
+                // 'theta' y no se retorna ningún valor.
+                LeerDatos(v, theta);
+                // Llamada a la función ConvertirGradosARadianes(), donde se 
+                // envía un argumento que es la variable 'theta' y luego
+                // retorna a la variable 'theta' el valor calculado.
+                theta = ConvertirGradosARadianes(theta);
+                // Llamada a la función Distancia(), donde se envían dos 
+                // argumentos que son la variable 'v' y la variable 'theta' 
+                // y luego retorna a la variable 'd' el valor calculado.
+                d = Distancia(v, theta);
+                // Imprimir un salto de línea (INTRO).
+                cout << endl;
+                // Llamada a la función ImprimirDistancia(), que se envía 
+                // como argumento el valor de la variable 'd' e imprime 
+                // ese valor.
+                ImprimirDistancia(d);
+          
+                system("pause>nul"); // Pausa
+                break;
+              case 2: // Caso 2
+                cout << endl;
+                // Llamada a la función LeerDatos(), donde se envían dos
+                // argumentos que son la variable 'v' y la variable 
+                // 'theta' y no se retorna ningún valor.
+                LeerDatos(v, theta);
+                // Llamada a la función ConvertirGradosARadianes(), donde se 
+                // envía un argumento que es la variable 'theta' y luego
+                // retorna a la variable 'theta' el valor calculado.
+                theta = ConvertirGradosARadianes(theta);
+                // Llamada a la función Tiempo(), donde se envían dos 
+                // argumentos que son la variable 'v' y la variable 'theta' 
+                // y luego retorna a la variable 't' el valor calculado.
+                t = Tiempo(v, theta);
+                // Imprimir un salto de línea (INTRO).
+                cout << endl;
+                // Llamada a la función ImprimirTiempo(), que se envía 
+                // como argumento el valor de la variable 't' e imprime 
+                // ese valor.
+                ImprimirTiempo(t);
+          
+                system("pause>nul"); // Pausa
+                break;
+              case 3: // Caso 3
+                cout << endl;
+                // Llamada a la función LeerDatos(), donde se envían dos
+                // argumentos que son la variable 'v' y la variable 
+                // 'theta' y no se retorna ningún valor.
+                LeerDatos(v, theta);
+                // Llamada a la función ConvertirGradosARadianes(), donde se 
+                // envía un argumento que es la variable 'theta' y luego
+                // retorna a la variable 'theta' el valor calculado.
+                theta = ConvertirGradosARadianes(theta);
+                // Llamada a la función Altura(), donde se envían dos 
+                // argumentos que son la variable 'v' y la variable 'theta' 
+                // y luego retorna a la variable 'h' el valor calculado.
+                h = Altura(v, theta);
+                // Imprimir un salto de línea (INTRO).
+                cout << endl;
+                // Llamada a la función ImprimirTiempo(), que se envía 
+                // como argumento el valor de la variable 'h' e imprime 
+                // ese valor.
+                ImprimirAltura(h);
+          
+                system("pause>nul"); // Pausa                
+                break;
+              }
+              // Mientras la condición sea verdadera.
+            } while (opcion != 4);
+          }
+          
+          // Definición de las funciones (implementación de las funciones).
+          
+          // Función ImprimirMensajeInformacion, que no tiene parámetros. Esta
+          // función imprime un mensaje de información y 2 saltos de línea
+          // y no se retorna ningún valor.
+          void ImprimirMensajeInformacion()
+          {
+            // Imprimir un mensaje de información y 2 INTROs.
+            cout << "Tiro Parabólico de un Proyectil." << endl;
+            cout << endl;
+          }
+          // Función LeerDatos(), que tiene 2 parámetros que son 2 referencias
+          // que reciben 2 argumentos. Esta función lee 2 datos utilizando 
+          // referencias y no se retorna ningún valor.
+          void LeerDatos(float& v, float& theta)
+          {
+            // Leer el valor de la velocidad.
+            cout << "Ingrese el valor de la velocidad [m/seg]: ";
+            cin >> v;
+            // Leer el valor del ángulo theta.
+            cout << "Ingrese el valor del ángulo [grados]: ";
+            cin >> theta;
+          }
+          // Función ConvertirGradosARadianes(), que tiene 1 parámetro
+          // que recibe 1 argumento, convierte un ángulo de grados a 
+          // radianes y retorna el valor calculado.
+          float ConvertirGradosARadianes(float theta)
+          {
+            // Convertir el ángulo theta de grados a radianes.
+            return(theta * PI / 180.0);
+          }
+          // Función Distancia(), que tiene 2 parámetros que reciben 
+          // 2 argumentos, calcula la distancia alcanzada por una
+          // particula en el aire y retorna el valor calculado.
+          float Distancia(float v, float theta)
+          {
+            // Calcular la distancia alcanzada.
+            return((pow(v, 2) * sin(2 * theta)) / g);
+          }
+          // Función Tiempo(), que tiene 2 parámetros que reciben 
+          // 2 argumentos, calcula el tiempo de vuelo de una
+          // particula en el aire y retorna el valor calculado.
+          float Tiempo(float v, float theta)
+          {
+            // Calcular el tiempo de vuelo.
+            return((v * sin(theta)) / g);
+          }
+          // Función Altura(), que tiene 2 parámetros que reciben 
+          // 2 argumentos, calcula la altura alcanzada por una
+          // particula en el aire y retorna el valor calculado.
+          float Altura(float v, float theta)
+          {
+            // Calcular la altura máxima.
+            return((pow(v, 2) * pow(sin(theta), 2)) / (2 * g));
+          }
+          // Función ImprimirDistancia(), que tiene un parámetro que recibe
+          // un argumento e imprimime el valor de la variable 'd' y
+          // no se retorna ningún valor.
+          void ImprimirDistancia(float d)
+          {
+            // Imprimir el valor de la distancia.
+            cout << "El valor de la distancia es: " << d << " m" << endl;
+          }
+          // Función ImprimirTiempo(), que tiene un parámetro que recibe
+          // un argumento e imprimime el valor de la variable 't' y
+          // no se retorna ningún valor.
+          void ImprimirTiempo(float t)
+          {
+            // Imprimir el valor del tiempo de vuelo.
+            cout << "El valor del tiempo de vuelo es: " << t << " seg" << endl;
+          }
+          // Función ImprimirAltura(), que tiene un parámetro que recibe
+          // un argumento e imprimime el valor de la variable 'h' y
+          // no se retorna ningún valor.
+          void ImprimirAltura(float h)
+          {
+            // Imprimir el valor de la altura.
+            cout << "El valor de la altura es: " << h << " m" << endl;
+          }
+          `,
+          programa6: `// Operaciones.h
+
+          #ifndef OPERACIONES_H
+          #define OPERACIONES_H
+          
+          void ImprimirMensajeInformacion();
+          void LeerDatos(float &v, float &theta);
+          float ConvertirGradosARadianes(float theta);
+          float Distancia(float v, float theta);
+          float Tiempo(float v, float theta);
+          float Altura(float v, float theta);
+          void ImprimirDistancia(float d);
+          void ImprimirTiempo(float t);
+          void ImprimirAltura(float h);
+          
+          #endif // !OPERACIONES_H
+          `,
+          programa7: `// Operaciones.cpp
+
+          #include "Operaciones.h"
+          #include <iostream>
+          #include <cstdlib>
+          #include <cmath>
+          
+          // Directivas define o macros.
+          #define PI 3.141593
+          #define g 9.80665
+          
+          using namespace std;
+          
+          // Función ImprimirMensajeInformacion, que no tiene parámetros. Esta
+          // función imprime un mensaje de información y 2 saltos de línea
+          // y no se retorna ningún valor.
+          void ImprimirMensajeInformacion()
+          {
+            // Imprimir un mensaje de información y 2 INTROs.
+            cout << "Tiro Parabólico de un Proyectil." << endl;
+            cout << endl;
+          }
+          
+          // Función LeerDatos(), que tiene 2 parámetros que son 2 referencias
+          // que reciben 2 argumentos. Esta función lee 2 datos utilizando 
+          // referencias y no se retorna ningún valor.
+          void LeerDatos(float& v, float& theta)
+          {
+            // Leer el valor de la velocidad.
+            cout << "Ingrese el valor de la velocidad [m/seg]: ";
+            cin >> v;
+            // Leer el valor del ángulo theta.
+            cout << "Ingrese el valor del ángulo [grados]: ";
+            cin >> theta;
+          }
+          
+          // Función ConvertirGradosARadianes(), que tiene 1 parámetro
+          // que recibe 1 argumento, convierte un ángulo de grados a 
+          // radianes y retorna el valor calculado.
+          float ConvertirGradosARadianes(float theta)
+          {
+            // Convertir el ángulo theta de grados a radianes.
+            return(theta * PI / 180.0);
+          }
+          
+          // Función Distancia(), que tiene 2 parámetros que reciben 
+          // 2 argumentos, calcula la distancia alcanzada por una
+          // particula en el aire y retorna el valor calculado.
+          float Distancia(float v, float theta)
+          {
+            // Calcular la distancia alcanzada.
+            return((pow(v, 2) * sin(2 * theta)) / g);
+          }
+          
+          // Función Tiempo(), que tiene 2 parámetros que reciben 
+          // 2 argumentos, calcula el tiempo de vuelo de una
+          // particula en el aire y retorna el valor calculado.
+          float Tiempo(float v, float theta)
+          {
+            // Calcular el tiempo de vuelo.
+            return((v * sin(theta)) / g);
+          }
+          
+          // Función Altura(), que tiene 2 parámetros que reciben 
+          // 2 argumentos, calcula la altura alcanzada por una
+          // particula en el aire y retorna el valor calculado.
+          float Altura(float v, float theta)
+          {
+            // Calcular la altura máxima.
+            return((pow(v, 2) * pow(sin(theta), 2)) / (2 * g));
+          }
+          
+          // Función ImprimirDistancia(), que tiene un parámetro que recibe
+          // un argumento e imprimime el valor de la variable 'd' y
+          // no se retorna ningún valor.
+          void ImprimirDistancia(float d)
+          {
+            // Imprimir el valor de la distancia.
+            cout << "El valor de la distancia es: " << d << " m" << endl;
+          }
+          
+          // Función ImprimirTiempo(), que tiene un parámetro que recibe
+          // un argumento e imprimime el valor de la variable 't' y
+          // no se retorna ningún valor.
+          void ImprimirTiempo(float t)
+          {
+            // Imprimir el valor del tiempo de vuelo.
+            cout << "El valor del tiempo de vuelo es: " << t << " seg" << endl;
+          }
+          
+          // Función ImprimirAltura(), que tiene un parámetro que recibe
+          // un argumento e imprimime el valor de la variable 'h' y
+          // no se retorna ningún valor.
+          void ImprimirAltura(float h)
+          {
+            // Imprimir el valor de la altura.
+            cout << "El valor de la altura es: " << h << " m" << endl;
+          }
+          `,
+          programa8: `/*******************************************************
+          WinConsolaPrograma_3_18
+          *******************************************************/
+          
+          // Librerías.
+          #include <iostream>
+          #include <cstdlib>
+          #include <cmath>
+          #include "Operaciones.h"
+          
+          using namespace std;
+          
+          // Función principal.
+          void main()
+          {
+            // Declaración de variables.	
+            float v = 0.0f;     // Entrada: Velocidad inicial.
+            float theta = 0.0f; // Entrada: Ángulo de lanzamiento.
+            float d = 0.0f;     // Salida: Distancia alcanzada.
+            float t = 0.0f;     // Salida: Tiempo de vuelo.
+            float h = 0.0f;     // Salida: Altura máxima.
+            int opcion;         // Entrada: opción a ser seleccionada del menú.
+          
+            // Hacer:
+            do {
+              // Limpiar la pantalla.
+              system("cls"); 
+              // Texto del menú que se verá cada vez.
+              cout << endl << "Tiro Parabólico." << endl;		
+              cout << "1. Calcular la Distancia." << endl;
+              cout << "2. Calcular el Tiempo." << endl;
+              cout << "3. Calcular la Altura." << endl;			
+              cout << "4. SALIR" << endl;
+          
+              // Leer una opción del menú.
+              cout << endl << "Ingrese una opcion: ";
+              cin >> opcion;
+          
+              // Según sea el valor de la variable 'opcion', hacer:
+              switch (opcion) {
+              case 1: // Caso 1
+                cout << endl;
+                // Llamada a la función LeerDatos(), donde se envían dos
+                // argumentos que son la variable 'v' y la variable 
+                // 'theta' y no se retorna ningún valor.
+                LeerDatos(v, theta);
+                // Llamada a la función ConvertirGradosARadianes(), donde se 
+                // envía un argumento que es la variable 'theta' y luego
+                // retorna a la variable 'theta' el valor calculado.
+                theta = ConvertirGradosARadianes(theta);
+                // Llamada a la función Distancia(), donde se envían dos 
+                // argumentos que son la variable 'v' y la variable 'theta' 
+                // y luego retorna a la variable 'd' el valor calculado.
+                d = Distancia(v, theta);
+                // Imprimir un salto de línea (INTRO).
+                cout << endl;
+                // Llamada a la función ImprimirDistancia(), que se envía 
+                // como argumento el valor de la variable 'd' e imprime 
+                // ese valor.
+                ImprimirDistancia(d);
+          
+                system("pause>nul"); // Pausa
+                break;
+              case 2: // Caso 2
+                cout << endl;
+                // Llamada a la función LeerDatos(), donde se envían dos
+                // argumentos que son la variable 'v' y la variable 
+                // 'theta' y no se retorna ningún valor.
+                LeerDatos(v, theta);
+                // Llamada a la función ConvertirGradosARadianes(), donde se 
+                // envía un argumento que es la variable 'theta' y luego
+                // retorna a la variable 'theta' el valor calculado.
+                theta = ConvertirGradosARadianes(theta);
+                // Llamada a la función Tiempo(), donde se envían dos 
+                // argumentos que son la variable 'v' y la variable 'theta' 
+                // y luego retorna a la variable 't' el valor calculado.
+                t = Tiempo(v, theta);
+                // Imprimir un salto de línea (INTRO).
+                cout << endl;
+                // Llamada a la función ImprimirTiempo(), que se envía 
+                // como argumento el valor de la variable 't' e imprime 
+                // ese valor.
+                ImprimirTiempo(t);	
+          
+                system("pause>nul"); // Pausa
+                break;
+              case 3: // Caso 3
+                cout << endl;
+                // Llamada a la función LeerDatos(), donde se envían dos
+                // argumentos que son la variable 'v' y la variable 
+                // 'theta' y no se retorna ningún valor.
+                LeerDatos(v, theta);
+                // Llamada a la función ConvertirGradosARadianes(), donde se 
+                // envía un argumento que es la variable 'theta' y luego
+                // retorna a la variable 'theta' el valor calculado.
+                theta = ConvertirGradosARadianes(theta);
+                // Llamada a la función Altura(), donde se envían dos 
+                // argumentos que son la variable 'v' y la variable 'theta' 
+                // y luego retorna a la variable 'h' el valor calculado.
+                h = Altura(v, theta);
+                // Imprimir un salto de línea (INTRO).
+                cout << endl;
+                // Llamada a la función ImprimirTiempo(), que se envía 
+                // como argumento el valor de la variable 'h' e imprime 
+                // ese valor.
+                ImprimirAltura(h);
+          
+                system("pause>nul"); // Pausa                
+                break;		
+              }
+            // Mientras la condición sea verdadera.
+            } while (opcion != 4);
+          }
+          `,
+          tablaDatos2:[
+            {Objeto:'',item:['(1)'],nota:['s=x_f-x_0'], puntos:['Desplazamiento como función de la posición.']},
+            {Objeto:'',item:['(2)'],nota:['x_f=x_0+v_m∙t'], puntos:['Desplazamiento como función de la velocidad media y el tiempo.']},
+            {Objeto:'',item:['(3)'],nota:['v_m=(x_f-x_0)/t'], puntos:['Velocidad media como función de la posición y el tiempo. ']},
+            {Objeto:'',item:['(4)'],nota:['v_m=(v_f+v_0)/2'], puntos:['Velocidad media como función de la velocidad final y de la velocidad inicial.']},
+            {Objeto:'',item:['(5)'],nota:['t=(x_f-x_0)/v_m '], puntos:['Tiempo como función de la posición y de la velocidad media.']},
+            {Objeto:'',item:['(6)'],nota:['a_m=(v_f+v_0)/t'], puntos:['Aceleración media como función de la velocidad final, de la velocidad inicial y del tiempo.']},
+            
+          ],
+          programa9: `// Operaciones.h
+
+          #ifndef OPERACIONES_H
+          #define OPERACIONES_H
+          
+          void LeerDatosDesplazamiento(float& X0, float& Xf);
+          void LeerDatosDesplazamiento(float& X0, float& Vm, float& t);
+          void LeerDatosVelocidadMedia(float& X0, float& Xf, float& t);
+          void LeerDatosVelocidadMedia(float& V0, float& Vf);
+          void LeerDatosTiempo(float& X0, float& Xf, float& Vm);
+          void LeerDatosAceleracion(float& V0, float& Vf, float& t);
+          float Desplazamiento(float X0, float Xf);
+          float Desplazamiento(float X0, float Vm, float t);
+          float VelocidadMedia(float X0, float Xf, float t);
+          float VelocidadMedia(float V0, float Vf);
+          float Tiempo(float X0, float Xf, float Vm);
+          float AceleracionMedia(float V0, float Vf, float t);
+          void ImprimirDatosDesplazamiento(float s);
+          void ImprimirDatosVelocidadMedia(float Vm);
+          void ImprimirDatosTiempo(float t);
+          void ImprimirDatosAceleracion(float a);
+          
+          #endif // !OPERACIONES_H
+          `,
+          programa10: `// Operaciones.cpp
+
+          #include "Operaciones.h"
+          #include <iostream>
+          #include <cstdlib>
+          #include <cmath>
+          
+          using namespace std;
+          
+          // Función LeerDatosDesplazamiento(), que tiene 2 parámetros que son 
+          // 2 referencias que reciben 2 argumentos. Esta función lee 2 datos  
+          // utilizando referencias y no se retorna ningún valor.
+          void LeerDatosDesplazamiento(float &X0, float &Xf)
+          {
+            cout << "Ingrese el valor de la posición inicial (X0) en [m]: ";
+            cin >> X0;
+            cout << "Ingrese el valor de la posición final (Xf) en [m]: ";
+            cin >> Xf;
+          }
+          
+          // Función LeerDatosDesplazamiento(), que tiene 3 parámetros que son 
+          // 3 referencias que reciben 3 argumentos. Esta función lee 3 datos  
+          // utilizando referencias y no se retorna ningún valor.
+          void LeerDatosDesplazamiento(float &X0, float &Vm, float &t)
+          {
+            cout << "Ingrese el valor de la posición inicial (X0) en [m]: ";
+            cin >> X0;
+            cout << "Ingrese el valor de la velocidad media (Vm) en [m/s]: ";
+            cin >> Vm;
+            cout << "Ingrese el valor del tiempo (t) en [seg]: ";
+            cin >> t;
+          }
+          
+          // Función LeerDatosVelocidadMedia(), que tiene 3 parámetros que son 
+          // 3 referencias que reciben 3 argumentos. Esta función lee 3 datos  
+          // utilizando referencias y no se retorna ningún valor.
+          void LeerDatosVelocidadMedia(float &X0, float &Xf, float &t)
+          {
+            cout << "Ingrese el valor de la posición inicial (X0) en [m]: ";
+            cin >> X0;
+            cout << "Ingrese el valor de la posición final (Xf) en [m]: ";
+            cin >> Xf;
+            cout << "Ingrese el valor del tiempo (t) en [seg]: ";
+            cin >> t;
+          }
+          
+          // Función LeerDatosVelocidadMedia(), que tiene 2 parámetros que son 
+          // 2 referencias que reciben 2 argumentos. Esta función lee 2 datos  
+          // utilizando referencias y no se retorna ningún valor.
+          void LeerDatosVelocidadMedia(float& V0, float& Vf)
+          {
+            cout << "Ingrese el valor de la velocidad inicial (V0) en [m/s]: ";
+            cin >> V0;
+            cout << "Ingrese el valor de la velocidad final (Vf) en [m/s]: ";
+            cin >> Vf;
+          }
+          
+          // Función LeerDatosTiempo(), que tiene 3 parámetros que son 3
+          // referencias que reciben 3 argumentos. Esta función lee 3  
+          // datos utilizando referencias y no se retorna ningún valor.
+          void LeerDatosTiempo(float& X0, float& Xf, float& Vm)
+          {
+            cout << "Ingrese el valor de la posición inicial (X0) en [m]: ";
+            cin >> X0;
+            cout << "Ingrese el valor de la posición final (Xf) en [m]: ";
+            cin >> Xf;
+            cout << "Ingrese el valor de la velocidad media (Vm) en [m/s]: ";
+            cin >> Vm;
+          }
+          // Función LeerDatosAceleracion(), que tiene 3 parámetros que son 
+          // 3 referencias que reciben 3 argumentos. Esta función lee 3 datos  
+          // utilizando referencias y no se retorna ningún valor.
+          void LeerDatosAceleracion(float& V0, float& Vf, float& t)
+          {
+            cout << "Ingrese el valor de la velocidad inicial (V0) en [m/s]: ";
+            cin >> V0;
+            cout << "Ingrese el valor de la velocidad final (Vf) en [m/s]: ";
+            cin >> Vf;
+            cout << "Ingrese el valor del tiempo (t) en [seg]: ";
+            cin >> t;
+          }
+          
+          // Función Desplazamiento(), que tiene 2 parámetros que reciben 
+          // 2 argumentos, calcula la distancia alcanzada por un móvil
+          // a lo largo del eje 'x' y retorna el valor calculado.
+          float Desplazamiento(float X0, float Xf)
+          {
+            return(Xf - X0);
+          }
+          
+          // Función Desplazamiento(), que tiene 3 parámetros que reciben 
+          // 3 argumentos, calcula la distancia alcanzada por un móvil
+          // a lo largo del eje 'x' y retorna el valor calculado.
+          float Desplazamiento(float X0, float Vm, float t)
+          {
+            return(X0 + Vm * t);
+          }
+          
+          // Función VelocidadMedia(), que tiene 3 parámetros que reciben 
+          // 3 argumentos, calcula la velocidad media alcanzada por un 
+          // móvil a lo largo del eje 'x' y retorna el valor calculado.
+          float VelocidadMedia(float X0, float Xf, float t)
+          {
+            return((Xf - X0) / t);
+          }
+          
+          // Función VelocidadMedia(), que tiene 2 parámetros que reciben 
+          // 2 argumentos, calcula la velocidad media alcanzada por un 
+          // móvil a lo largo del eje 'x' y retorna el valor calculado.
+          float VelocidadMedia(float V0, float Vf)
+          {
+            return((Vf - V0) / 2);
+          }
+          
+          // Función Tiempo(), que tiene 3 parámetros que reciben 3
+          // argumentos, calcula el tiempo transcurrido en el movimiento  
+          // de un móvil a lo largo del eje 'x' y retorna el valor calculado.
+          float Tiempo(float X0, float Xf, float Vm)
+          {
+            return((Xf - X0) / Vm);
+          }
+          
+          // Función AceleracionMedia(), que tiene 3 parámetros que reciben
+          // 3 argumentos, calcula la aceleración promedio de una partícula  
+          // a lo largo del eje 'x' y retorna el valor calculado.
+          float AceleracionMedia(float V0, float Vf, float t)
+          {
+            return((Vf - V0) / t);
+          }
+          
+          // Función ImprimirDatosDesplazamiento(), que tiene un parámetro
+          // que recibe un argumento e imprimime el valor de la variable 's'
+          // y no se retorna ningún valor.
+          void ImprimirDatosDesplazamiento(float s)
+          {
+            cout << "Desplazamiento: " << s << " [m]" << endl;
+          }
+          
+          // Función ImprimirDatosVelocidadMedia(), que tiene un parámetro
+          // que recibe un argumento e imprimime el valor de la variable 'Vm'
+          // y no se retorna ningún valor.
+          void ImprimirDatosVelocidadMedia(float Vm)
+          {
+            cout << "Velocidad Media (Vm): " << Vm << " [m/s]" << endl;
+          }
+          
+          // Función ImprimirDatosTiempo(), que tiene un parámetro que
+          // recibe un argumento e imprimime el valor de la variable 't'
+          // y no se retorna ningún valor.
+          void ImprimirDatosTiempo(float t)
+          {
+            cout << "Tiempo (t): " << t << " [seg]" << endl;
+          }
+          
+          // Función ImprimirDatosAceleracion(), que tiene un parámetro que
+          // recibe un argumento e imprimime el valor de la variable 'a'
+          // y no se retorna ningún valor.
+          void ImprimirDatosAceleracion(float a)
+          {
+            cout << "Aceleración (a): " << a << " [m/seg^2]" << endl;
+          }
+          `,
+          programa11: `// programa.cpp
+
+          // Librerías.
+          #include <iostream>
+          #include <cstdlib>
+          #include <cmath>
+          #include "Operaciones.h"
+          
+          using namespace std;
+          
+          // Función principal.
+          void main()
+          {
+            // Declaración de variables.
+            float s = 0.0f;  // Salida: Desplazamiento.
+            float X0 = 0.0f; // Entrada: Posición inicial.
+            float Xf = 0.0f; // Entrada/Salida: Posición final.
+            float Vm = 0.0f; // Entrada/Salida: Velocidad media.
+            float t = 0.0f;  // Entrada/Salida: Tiempo.
+            float V0 = 0.0f; // Entrada: Velocidad inicial.
+            float Vf = 0.0f; // Entrada: Velocidad final.
+            float a = 0.0f;  // Salida: Aceleración promedio.		
+            int opcion;      // Entrada: opción a ser seleccionada del menú.
+          
+            // Hacer:
+            do {
+              // Limpiar la pantalla.
+              system("cls");
+              // Texto del menú que se verá cada vez.
+              cout << endl << "Movimiento básico de una partícula "
+                         << "a lo largo del eje 'x'." << endl;
+              cout << "1. Calcular el desplazamiento (s) conociendo: 'X0' y 'Xf'." 
+                 << endl;
+              cout << "2. Calcular el desplazamiento (Xf) conociendo: 'X0', 'Vm' y 't'." 
+                 << endl;
+              cout << "3. Calcular la velocidad media (Vm) conociendo: 'X0', 'Xf' y 't'." 
+                 << endl;
+              cout << "4. Calcular la velocidad media (Vm) conociendo: 'V0' y 'Vf'." 
+                 << endl;
+              cout << "5. Calcular el tiempo (t) conociendo: 'X0', 'Xf' y 'Vm'." 
+                 << endl;
+              cout << "6. Calcular la aceleración (a) conociendo: 'V0', 'Vf' y 't'." 
+                 << endl;
+              cout << "7. SALIR" << endl;
+          
+              // Leer una opción del menú.
+              cout << endl << "Ingrese una opcion: ";
+              cin >> opcion;
+          
+              // Según sea el valor de la variable 'opcion', hacer:
+              switch (opcion) {
+              case 1: // Caso 1
+                cout << endl;						
+                // Llamada a la función LeerDatosDesplazamiento(), donde se  
+                // envían dos argumentos que son la variable 'X0' y la variable 
+                // 'Xf' y no se retorna ningún valor.
+                LeerDatosDesplazamiento(X0, Xf);
+                // Llamada a la función Desplazamiento(), donde se envían dos 
+                // argumentos que son la variable 'X0' y la variable 'Xf' 
+                // y luego retorna a la variable 's' el valor calculado.
+                s = Desplazamiento(X0, Xf);
+                // Imprimir un salto de línea.
+                cout << endl;
+                // Llamada a la función ImprimirDatosDesplazamiento(), que se 
+                // envía como argumento el valor de la variable 's' e imprime 
+                // ese valor.
+                ImprimirDatosDesplazamiento(s);
+                system("pause>nul"); // Pausa
+                break;
+              case 2: // Caso 2
+                cout << endl;							
+                // Llamada a la función LeerDatosDesplazamiento(), donde se  
+                // envían tres argumentos que son la variable 'X0', la variable 
+                // 'Vm' y la variable 't' y no se retorna ningún valor.
+                LeerDatosDesplazamiento(X0, Vm, t);
+                // Llamada a la función Desplazamiento(), donde se envían tres 
+                // argumentos que son la variable 'X0', la variable 'Vm' y la
+                // variable 't' y luego retorna a la variable 'Xf' el valor 
+                // calculado.
+                Xf = Desplazamiento(X0, Vm, t);
+                // Imprimir un salto de línea.
+                cout << endl;
+                // Llamada a la función ImprimirDatosDesplazamiento(), que se 
+                // envía como argumento el valor de la variable 'Xf' e imprime 
+                // ese valor.
+                ImprimirDatosDesplazamiento(Xf);
+                system("pause>nul"); // Pausa
+                break;
+              case 3: // Caso 3
+                cout << endl;						
+                // Llamada a la función LeerDatosVelocidadMedia(), donde se  
+                // envían tres argumentos que son la variable 'X0', la variable 
+                // 'Xf' y la variable 't' y no se retorna ningún valor.
+                LeerDatosVelocidadMedia(X0, Xf, t);
+                // Llamada a la función VelocidadMedia(), donde se envían tres 
+                // argumentos que son la variable 'X0', la variable 'Xf' y la
+                // variable 't' y luego retorna a la variable 'Vm' el valor 
+                // calculado.
+                Vm = VelocidadMedia(X0, Xf, t);
+                // Imprimir un salto de línea.
+                cout << endl;
+                // Llamada a la función ImprimirDatosVelocidadMedia(), que se 
+                // envía como argumento el valor de la variable 'Vm' e imprime 
+                // ese valor.
+                ImprimirDatosVelocidadMedia(Vm);
+                system("pause>nul"); // Pausa                
+                break;
+              case 4: // Caso 4
+                cout << endl;			
+                // Llamada a la función LeerDatosVelocidadMedia(), donde se  
+                // envían dos argumentos que son la variable 'V0' y la variable 
+                // 'Vf' y no se retorna ningún valor.
+                LeerDatosVelocidadMedia(V0, Vf);
+                // Llamada a la función VelocidadMedia(), donde se envían dos 
+                // argumentos que son la variable 'V0' y la variable 'Vf' y
+                // luego retorna a la variable 'Vm' el valor calculado.
+                Vm = VelocidadMedia(V0, Vf);
+                // Imprimir un salto de línea.
+                cout << endl;
+                // Llamada a la función ImprimirDatosVelocidadMedia(), que se 
+                // envía como argumento el valor de la variable 'Vm' e imprime 
+                // ese valor.
+                ImprimirDatosVelocidadMedia(Vm);
+                system("pause>nul"); // Pausa                
+                break;
+              case 5: // Caso 5
+                cout << endl;						
+                // Llamada a la función LeerDatosTiempo(), donde se envían 
+                // tres argumentos que son la variable 'X0', la variable 
+                // 'Xf' y la variable 'Vm' y no se retorna ningún valor.
+                LeerDatosTiempo(X0, Xf, Vm);
+                // Llamada a la función Tiempo(), donde se envían tres 
+                // argumentos que son la variable 'X0', la variable 'Xf' y
+                // la variable 'Vm' y luego retorna a la variable 't' el 
+                // valor calculado.
+                t = Tiempo(X0, Xf, Vm);
+                // Imprimir un salto de línea.
+                cout << endl;
+                // Llamada a la función ImprimirDatosTiempo(), que se envía
+                // como argumento el valor de la variable 't' e imprime ese
+                // valor.
+                ImprimirDatosTiempo(t);
+                system("pause>nul"); // Pausa            
+                break;
+              case 6: // Caso 6
+                cout << endl;
+                // Llamada a la función LeerDatosAceleracion(), donde se  
+                // envían tres argumentos que son la variable 'V0', la variable 
+                // 'Vf' y la variable 't' y no se retorna ningún valor.
+                LeerDatosAceleracion(V0, Vf, t);
+                // Llamada a la función AceleracionMedia(), donde se envían tres 
+                // argumentos que son la variable 'V0', la variable 'Vf' y la
+                // variable 't' yluego retorna a la variable 'a' el valor calculado.
+                a = AceleracionMedia(V0, Vf, t);
+                // Imprimir un salto de línea.
+                cout << endl;
+                // Llamada a la función ImprimirDatosAceleracion(), que se 
+                // envía como argumento el valor de la variable 'a' e imprime 
+                // ese valor.
+                ImprimirDatosAceleracion(a);
+                system("pause>nul"); // Pausa                
+                break;
+              }
+              // Mientras la condición sea verdadera.
+            } while (opcion != 7);
+          }
+          `,
+          
+
     },]
     this.prefTabs3=[{
 programa3_12:`/*******************************************************
